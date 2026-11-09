@@ -1,0 +1,101 @@
+{
+  "id": "FIRST_PASS_OUTER_ROUTE_TRIAL_PROMPTS_V1",
+  "status": "paper_outer_route_prompts_frozen_not_administered",
+  "purpose": "在进入翻后p1之前，单独试读L0→L4的局面定位、翻前图表定位、动作身份和范围交接；不考翻后策略。",
+  "sharedScenario": {
+    "players": 6,
+    "cashGame": true,
+    "startingStackBB": 100,
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "heroHole": ["As", "Kd"],
+    "board": ["Kc", "8d", "3s"],
+    "history": [
+      "UTG弃牌",
+      "HJ弃牌",
+      "CO弃牌",
+      "BTN开到2.5BB",
+      "SB弃牌",
+      "BB跟注",
+      "翻牌Kc 8d 3s",
+      "BB过牌"
+    ],
+    "potBB": 5.5,
+    "effectiveStackBB": 97.5,
+    "toCallBB": 0,
+    "currentActor": "BTN"
+  },
+  "administration": {
+    "showOneCaseAtATime": true,
+    "order": ["L0", "L1", "L2", "L3", "L4"],
+    "firstAnswerBeforeHelp": true,
+    "hideTechnicalAliases": true,
+    "allowUnknown": true,
+    "unknownCountsAsError": true,
+    "noStrategyJudgment": true,
+    "doNotRevealNextAnswer": true
+  },
+  "cases": [
+    {
+      "id": "OL01",
+      "routeNode": "L0",
+      "question": "先看桌面提示：这是几人桌、有效筹码多少、这次练习要建立哪条顺序？",
+      "centerVisual": ["six_max_table", "100BB_badge", "route_strip"],
+      "allowedResponseShape": ["table", "startingStackBB", "trainingGoal"],
+      "primaryAction": "确认桌面与训练目标",
+      "handoffCardTemplate": "桌型｜有效筹码｜这次练习的顺序目标",
+      "next": "L1",
+      "errorReturn": "L0",
+      "noStrategy": true
+    },
+    {
+      "id": "OL02",
+      "routeNode": "L1",
+      "question": "沿着座位和历史指出：自己和对手在哪、前面发生了什么、现在轮到谁、底池和待补金额是多少？",
+      "centerVisual": ["seat_map", "action_history", "actor_pointer", "pot_and_to_call"],
+      "allowedResponseShape": ["heroSeat", "villainSeat", "actionHistory", "actor", "potBB", "effectiveStackBB", "toCallBB"],
+      "primaryAction": "点出行动者并确认金额",
+      "handoffCardTemplate": "自己/对手位置｜前序动作｜行动者｜底池｜待补金额",
+      "next": "L2",
+      "errorReturn": "L1",
+      "noStrategy": true
+    },
+    {
+      "id": "OL03",
+      "routeNode": "L2",
+      "question": "先不讨论翻后打法：这手牌应该进入哪张翻前图、图上的哪一个坐标、这张图属于谁？",
+      "centerVisual": ["named_preflop_chart", "fixed_169_grid", "hero_hand_highlight"],
+      "allowedResponseShape": ["chartIdentity", "gridCell", "rangeOwner"],
+      "primaryAction": "点击固定坐标格",
+      "handoffCardTemplate": "图表名称｜坐标格｜范围属于谁",
+      "next": "L3",
+      "errorReturn": "L2",
+      "noStrategy": true
+    },
+    {
+      "id": "OL04",
+      "routeNode": "L3",
+      "question": "这个格子在这张图里表示什么课程动作？先说动作身份和权重，不延伸到翻后。",
+      "centerVisual": ["selected_grid_cell", "action_legend"],
+      "allowedResponseShape": ["preflopActionIdentity", "actionWeight"],
+      "primaryAction": "确认格子动作",
+      "handoffCardTemplate": "课程动作身份｜该动作权重",
+      "next": "L4",
+      "errorReturn": "L3",
+      "noStrategy": true
+    },
+    {
+      "id": "OL05",
+      "routeNode": "L4",
+      "question": "把翻前结果交给翻后：范围从哪张图来、先做什么物理排除、分母是否明确？如果资料不全，应该停在哪里？",
+      "centerVisual": ["range_before", "known_cards", "physical_filter", "denominator_card"],
+      "allowedResponseShape": ["rangeSnapshotHash", "rangeBefore", "physicalFilter", "denominator", "stopReason"],
+      "primaryAction": "确认范围交接或指出资料缺口",
+      "handoffCardTemplate": "范围来源｜物理排除｜同一分母｜缺资料时的停止位置",
+      "next": "p1",
+      "errorReturn": "L4",
+      "noStrategy": true
+    }
+  ],
+  "leakage": "公开结构试读题，不是策略考试；练过后不能把同一题当成陌生迁移。"
+}

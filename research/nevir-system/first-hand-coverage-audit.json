@@ -1,0 +1,43 @@
+{
+  "id": "FIRST_HAND_COVERAGE_AUDIT_V1",
+  "status": "missing_p3_range_handoff_frame",
+  "sourcePacket": "first-hand-lesson-packet.json",
+  "frameCount": 18,
+  "canonicalParentOrder": ["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "frameMap": [
+    {"frame":"S01","identity":"preflop_bridge","parent":"p1_context","core":false},
+    {"frame":"S02","identity":"preflop_bridge","parent":"p5_execute","core":false},
+    {"frame":"S03","identity":"postflop_context","parent":"p1_context","core":true},
+    {"frame":"S04","identity":"hand_read","parent":"p2_board","core":true},
+    {"frame":"S05","identity":"unopened_comparison","parent":"p4_compare","core":true},
+    {"frame":"S06","identity":"given_amount","parent":"p5_execute","core":true},
+    {"frame":"S07","identity":"response_amount","parent":"p6_update","core":true},
+    {"frame":"S08","identity":"turn_update","parent":"p6_update","core":true},
+    {"frame":"S09","identity":"turn_comparison","parent":"p4_compare","core":true},
+    {"frame":"S10","identity":"given_amount","parent":"p5_execute","core":true},
+    {"frame":"S11","identity":"response_and_pot","parent":"p6_update","core":true},
+    {"frame":"S12","identity":"river_context","parent":"p1_context","core":true},
+    {"frame":"S13","identity":"river_comparison","parent":"p4_compare","core":true},
+    {"frame":"S14","identity":"allin_response","parent":"p6_update","core":true},
+    {"frame":"S15","identity":"settlement_transition","parent":"p7_close","core":true},
+    {"frame":"S16","identity":"showdown_hand_fact","parent":"p7_close","secondaryParent":"p2_board","core":true},
+    {"frame":"S17","identity":"settlement_ledger","parent":"p7_close","core":true},
+    {"frame":"S18","identity":"post_route_transfer","parent":null,"core":false}
+  ],
+  "coverageCounts":{"p1_context":3,"p2_board":1,"p3_range":0,"p4_compare":3,"p5_execute":3,"p6_update":4,"p7_close":3},
+  "requiredInsertion":{
+    "id":"RANGE_HANDOFF_AFTER_S04",
+    "insertAfter":"S04",
+    "insertBefore":"S05",
+    "parent":"p3_range",
+    "question":"翻前动作、公共牌和我的底牌，让双方哪些组合不可能、变少或留下？",
+    "visible":["startingRanges","physicalRemoval","beforeAfterSameCoordinate","comboDetail","statusLabels"],
+    "statusLabels":["impossible","lower_but_possible","insufficient_reference"],
+    "answerIdentity":"fact_or_demonstration",
+    "returnTo":"p4_compare",
+    "requiredForFirstPassRelease":true,
+    "added":false
+  },
+  "hardRules":{"allSevenParentsNeedCoreFrame":true,"p3CannotBeSkipped":true,"rangeFactDoesNotAnswerAction":true,"missingReferenceStopsExactGrade":true,"transferFrameIsNotCoreRouteEvidence":true},
+  "currentStatus":{"coreCoverageComplete":false,"p3RangeHandoffPresent":false,"firstPassReleaseReady":false,"learnerTrial":false,"NL50Evidence":false}
+}

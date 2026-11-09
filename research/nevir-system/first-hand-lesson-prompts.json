@@ -1,0 +1,3209 @@
+{
+  "status": "first_hand_structure_paper_trial_not_strategy_lesson_or_learner_result",
+  "scope": "一手牌的流程、牌力与金额跟练；不是最优动作课。按当前帧展示，不提前显示后面的帧。",
+  "administration": {
+    "showOneFrameAtATime": true,
+    "guidedResponsesNotUnaidedScores": true,
+    "unknownCountsAsError": true,
+    "firstResponseBeforeCorrection": true,
+    "immediateFeedback": true,
+    "correctCanAdvance": true,
+    "publicExamplesNotFrozenHoldout": true,
+    "persistence": "none; author research files only"
+  },
+  "frames": [
+    {
+      "id": "S01",
+      "title": "先找到自己",
+      "state": {
+        "street": "preflop",
+        "potBB": 1.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 100,
+          "SB": 99.5,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0.5,
+          "BB": 1
+        },
+        "board": [],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "UTG",
+        "mode": "active",
+        "foldedSeats": [],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          }
+        ]
+      },
+      "task": {
+        "prompt": "这一手你坐在哪里？",
+        "options": [
+          "SB",
+          "BTN",
+          "BB",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "read.context",
+      "notice": "先跟着观察这手牌的流程与金额；本次先练完整流程，老师示范的下注不作为你的最佳策略考试。",
+      "afterAnswer": {
+        "nextFrame": "S02",
+        "ledgerEvents": [
+          "pf01",
+          "pf02",
+          "pf03",
+          "pf04"
+        ]
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "UTG",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_own_seat",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S02",
+      "title": "把动作中的总额与新增分开",
+      "state": {
+        "street": "preflop",
+        "potBB": 4,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 2.5,
+          "SB": 0.5,
+          "BB": 1
+        },
+        "board": [],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          }
+        ]
+      },
+      "task": {
+        "prompt": "示范加到10BB。自己已贴0.5，这次新增多少？",
+        "options": [
+          9.5,
+          10,
+          7.5,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "execute.amount",
+      "afterAnswer": {
+        "nextFrame": "S03",
+        "ledgerEvents": [
+          "pf05",
+          "pf06",
+          "pf07"
+        ],
+        "dealStreet": "flop"
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "execute_given_own_amount",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S03",
+      "title": "翻牌发出后，谁先动",
+      "state": {
+        "street": "flop",
+        "potBB": 21,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 90,
+          "SB": 90,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          }
+        ]
+      },
+      "task": {
+        "prompt": "现在先轮到谁行动？",
+        "options": [
+          "SB",
+          "BTN",
+          "已经摊牌",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "read.context",
+      "afterAnswer": {
+        "nextFrame": "S04",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_next_actor",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S04",
+      "title": "先把牌看对",
+      "state": {
+        "street": "flop",
+        "potBB": 21,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 90,
+          "SB": 90,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          }
+        ]
+      },
+      "task": {
+        "prompt": "自己的两张与公共牌合起来，现在是什么牌？",
+        "options": [
+          "高牌",
+          "一对",
+          "两对",
+          "三条",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "read.cards",
+      "afterAnswer": {
+        "nextFrame": "S05",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "read_own_cards",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S05",
+      "title": "现在比较哪一组选择",
+      "state": {
+        "street": "flop",
+        "potBB": 21,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 90,
+          "SB": 90,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          }
+        ]
+      },
+      "task": {
+        "prompt": "本街还没人下注，自己可以先比较什么？",
+        "options": [
+          "过牌与下注",
+          "只能弃牌或跟注",
+          "直接摊牌",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "compare.unopened",
+      "afterAnswer": {
+        "nextFrame": "S06",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_available_comparison",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S06",
+      "title": "执行示范给定的下注",
+      "state": {
+        "street": "flop",
+        "potBB": 21,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 90,
+          "SB": 90,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          }
+        ]
+      },
+      "task": {
+        "prompt": "这一轮示范给定下注20%底池。21BB的20%是多少？",
+        "options": [
+          4.2,
+          5.25,
+          21,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "execute.amount",
+      "afterAnswer": {
+        "nextFrame": "S07",
+        "ledgerEvents": [
+          "f01"
+        ]
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "execute_given_own_amount",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S07",
+      "title": "对手回应也要真正发生",
+      "state": {
+        "street": "flop",
+        "potBB": 25.2,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 90,
+          "SB": 85.8,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 4.2,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "BTN",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          }
+        ]
+      },
+      "task": {
+        "prompt": "BTN本次选择跟注，需要放入多少？",
+        "options": [
+          4.2,
+          21,
+          0,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.response",
+      "afterAnswer": {
+        "nextFrame": "S08",
+        "ledgerEvents": [
+          "f02"
+        ],
+        "dealStreet": "turn"
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "BTN",
+        "ownCardOwner": "SB",
+        "taskKind": "observe_opponent_amount",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S08",
+      "title": "带着前序看第四张牌",
+      "state": {
+        "street": "turn",
+        "potBB": 29.4,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 85.8,
+          "SB": 85.8,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          }
+        ]
+      },
+      "task": {
+        "prompt": "转牌来了。现在应怎样继续？",
+        "options": [
+          "带着刚才的行动和金额重新看清",
+          "重新发自己的两张牌",
+          "恢复翻前所有范围不看中间行动",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.card",
+      "afterAnswer": {
+        "nextFrame": "S09",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_update_step",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S09",
+      "title": "这一轮重新比较",
+      "state": {
+        "street": "turn",
+        "potBB": 29.4,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 85.8,
+          "SB": 85.8,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          }
+        ]
+      },
+      "task": {
+        "prompt": "比较转牌选择，应该看哪一组信息？",
+        "options": [
+          "当前范围、新牌、池与后手及各方案后续",
+          "只沿用翻牌按钮",
+          "只看自己是不是顶对",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "compare.unopened",
+      "afterAnswer": {
+        "nextFrame": "S10",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_needed_inputs",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S10",
+      "title": "执行第二轮给定动作",
+      "state": {
+        "street": "turn",
+        "potBB": 29.4,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 85.8,
+          "SB": 85.8,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          }
+        ]
+      },
+      "task": {
+        "prompt": "这一轮示范给定下注75%底池。29.4BB的75%是多少？",
+        "options": [
+          22.05,
+          29.4,
+          4.2,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "execute.amount",
+      "afterAnswer": {
+        "nextFrame": "S11",
+        "ledgerEvents": [
+          "t01"
+        ]
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "execute_given_own_amount",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S11",
+      "title": "跟完，才能进入下一街",
+      "state": {
+        "street": "turn",
+        "potBB": 51.45,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 85.8,
+          "SB": 63.75,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 22.05,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "BTN",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          }
+        ]
+      },
+      "task": {
+        "prompt": "对手跟22.05以后，池会变成多少？",
+        "options": [
+          73.5,
+          51.45,
+          201,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.response",
+      "afterAnswer": {
+        "nextFrame": "S12",
+        "ledgerEvents": [
+          "t02"
+        ],
+        "dealStreet": "river"
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "BTN",
+        "ownCardOwner": "SB",
+        "taskKind": "observe_opponent_call_and_pot",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S12",
+      "title": "第五张牌不自动结束牌局",
+      "state": {
+        "street": "river",
+        "potBB": 73.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          }
+        ]
+      },
+      "task": {
+        "prompt": "河牌发出了，现在是什么情况？",
+        "options": [
+          "SB还要行动",
+          "已经自动摊牌",
+          "BTN已经全下",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "read.context",
+      "afterAnswer": {
+        "nextFrame": "S13",
+        "ledgerEvents": []
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_next_actor",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S13",
+      "title": "河牌仍要比较选择",
+      "state": {
+        "street": "river",
+        "potBB": 73.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          }
+        ]
+      },
+      "task": {
+        "prompt": "这一轮先比较什么，再决定怎样行动？",
+        "options": [
+          "过牌与下注的当前后果",
+          "到了河牌就自动摊牌",
+          "只要顶对就一定全下",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "compare.unopened",
+      "afterAnswer": {
+        "nextFrame": "S14",
+        "ledgerEvents": [
+          "r01"
+        ],
+        "narration": "本次示范选择全下63.75。观察筹码移入，行动交给BTN。"
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "SB",
+        "ownCardOwner": "SB",
+        "taskKind": "identify_available_comparison",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S14",
+      "title": "自己全下，还得等回应",
+      "state": {
+        "street": "river",
+        "potBB": 137.25,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 63.75,
+          "SB": 0,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 63.75,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "BTN",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          }
+        ]
+      },
+      "task": {
+        "prompt": "自己已经没有后手，这手现在结束了吗？",
+        "options": [
+          "还没有，等待BTN回应",
+          "已经自动获胜",
+          "立即给双方再发一张牌",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.response",
+      "afterAnswer": {
+        "nextFrame": "S15",
+        "ledgerEvents": [
+          "r02"
+        ]
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": "BTN",
+        "ownCardOwner": "SB",
+        "taskKind": "wait_for_opponent",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S15",
+      "title": "确认行动真正结束",
+      "state": {
+        "street": "river",
+        "potBB": 201,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": null,
+        "mode": "showdown",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          }
+        ]
+      },
+      "task": {
+        "prompt": "本次BTN已跟完，双方无后手。现在做什么？",
+        "options": [
+          "摊牌并结算",
+          "再下注一次",
+          "发第六张公共牌",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.end",
+      "afterAnswer": {
+        "nextFrame": "S16",
+        "ledgerEvents": [],
+        "revealOnNextFrame": true
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": null,
+        "ownCardOwner": "SB",
+        "taskKind": "identify_settlement_transition",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    },
+    {
+      "id": "S16",
+      "title": "此时才揭开对手底牌",
+      "state": {
+        "street": "river",
+        "potBB": 201,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": true,
+        "actor": null,
+        "mode": "showdown",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          }
+        ],
+        "opponentHole": [
+          "Ad",
+          "Js"
+        ]
+      },
+      "task": {
+        "prompt": "比较双方最佳五张，这次谁赢？",
+        "options": [
+          "SB",
+          "BTN",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "read.cards",
+      "afterAnswer": {
+        "nextFrame": "S17",
+        "ledgerEvents": [],
+        "settlement": "Award gross pot201 to SB; no rake in this ledger"
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": null,
+        "ownCardOwner": "SB",
+        "taskKind": "compare_revealed_showdown",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "revealed"
+      }
+    },
+    {
+      "id": "S17",
+      "title": "收回总池与净赢多少分开",
+      "state": {
+        "street": "river",
+        "potBB": 0,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 0,
+          "SB": 201,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": true,
+        "actor": null,
+        "mode": "settled",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "gross_award",
+            "addedBB": 201
+          }
+        ],
+        "opponentHole": [
+          "Ad",
+          "Js"
+        ]
+      },
+      "task": {
+        "prompt": "忽略抽水，自己从100BB开始、现在收回201BB，整手毛利润多少？",
+        "options": [
+          101,
+          201,
+          100,
+          "我不知道"
+        ]
+      },
+      "navigationLabel": "update.end",
+      "afterAnswer": {
+        "nextFrame": "S18",
+        "ledgerEvents": [],
+        "resetToNewScenario": true
+      },
+      "perspective": {
+        "handSegment": "H01",
+        "viewerSeat": "SB",
+        "actingSeat": null,
+        "ownCardOwner": "SB",
+        "taskKind": "account_settled_result",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "revealed"
+      }
+    },
+    {
+      "id": "S18",
+      "title": "上一手结束，换个短局面找下一步",
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 7.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 95.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 2
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB"
+        ],
+        "heroSeat": "BB",
+        "heroHole": [
+          "As",
+          "Kd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "mode": "new_structure_candidate"
+      },
+      "scenario": {
+        "players": 6,
+        "initialBB": 100,
+        "ante": 0,
+        "preflop": "UTG/HJ/CO弃，BTN开到2.5BB，SB弃，BB跟；SB死盲0.5BB留池。",
+        "flopStartingPotBB": 5.5,
+        "activeStartingStacksBB": {
+          "BTN": 97.5,
+          "BB": 97.5
+        },
+        "moneyScope": "抽水前账本；终局毛额，未指定净抽水"
+      },
+      "task": {
+        "prompt": "下一步先处理谁的决定？",
+        "options": [
+          "自己",
+          "对手",
+          "发公共牌",
+          "结算",
+          "我不知道"
+        ]
+      },
+      "navigationLabel": null,
+      "notice": "这是另一手牌，现在你从SB换到BB。公开的结构候选题，不是已冻结的陌生测试，也不是最佳动作题。",
+      "perspective": {
+        "handSegment": "H02",
+        "viewerSeat": "BB",
+        "actingSeatHiddenForThisTask": true,
+        "ownCardOwner": "BB",
+        "taskKind": "new_hand_identify_next_actor",
+        "selectsOpponentPolicy": false,
+        "gradesIndependentStrategy": false,
+        "actualOpponentCards": "hidden"
+      }
+    }
+  ],
+  "branches": [
+    {
+      "id": "B01",
+      "originFrame": "S05",
+      "notice": "另一条路线，结束后恢复原快照；不接着当作主线历史。",
+      "state": {
+        "street": "flop",
+        "potBB": 25.2,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 85.8,
+          "SB": 90,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 4.2,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "check"
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "bet",
+            "addedBB": 4.2
+          }
+        ]
+      },
+      "task": {
+        "prompt": "SB改过牌、BTN下注4.2后，现在要补多少才能跟？",
+        "options": [
+          4.2,
+          0,
+          "我不知道"
+        ]
+      },
+      "returnFrame": "S05",
+      "grade": "facts_only_not_strategy"
+    },
+    {
+      "id": "B02",
+      "originFrame": "S07",
+      "notice": "另一条路线，结束后恢复原快照；不接着当作主线历史。",
+      "state": {
+        "street": "flop",
+        "potBB": 37.8,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 77.4,
+          "SB": 85.8,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 12.6,
+          "SB": 4.2,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "totalStreetPaidBB": 12.6,
+            "addedBB": 12.6
+          }
+        ]
+      },
+      "task": {
+        "prompt": "BTN改为加到12.6，SB现在待补多少？",
+        "options": [
+          8.4,
+          0,
+          "我不知道"
+        ]
+      },
+      "returnFrame": "S07",
+      "grade": "facts_only_not_strategy"
+    },
+    {
+      "id": "B03",
+      "originFrame": "S14",
+      "notice": "另一条路线，结束后恢复原快照；不接着当作主线历史。",
+      "state": {
+        "street": "river",
+        "potBB": 0,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 63.75,
+          "SB": 137.25,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 63.75,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": null,
+        "mode": "settled",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB",
+          "BTN"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75,
+            "totalStreetPaidBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "BTN",
+            "action": "fold"
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "refund",
+            "addedBB": 63.75
+          },
+          {
+            "street": "river",
+            "actor": "SB",
+            "action": "gross_award",
+            "addedBB": 73.5
+          }
+        ]
+      },
+      "task": {
+        "prompt": "BTN改弃牌，先退还SB多少未匹配筹码？",
+        "options": [
+          63.75,
+          0,
+          "我不知道"
+        ]
+      },
+      "returnFrame": "S14",
+      "grade": "facts_only_not_strategy"
+    },
+    {
+      "id": "B04",
+      "originFrame": "S12",
+      "notice": "另一条路线，结束后恢复原快照；不接着当作主线历史。",
+      "state": {
+        "street": "river",
+        "potBB": 73.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 63.75,
+          "SB": 63.75,
+          "BB": 99
+        },
+        "streetPaidBB": {
+          "UTG": 0,
+          "HJ": 0,
+          "CO": 0,
+          "BTN": 0,
+          "SB": 0,
+          "BB": 0
+        },
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4h"
+        ],
+        "heroSeat": "SB",
+        "heroHole": [
+          "Ac",
+          "Qd"
+        ],
+        "opponentSeat": "BTN",
+        "opponentHoleVisible": false,
+        "actor": "SB",
+        "mode": "active",
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 0
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5,
+            "totalStreetPaidBB": 2.5
+          },
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0,
+            "totalStreetPaidBB": 1
+          },
+          {
+            "street": "preflop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5,
+            "totalStreetPaidBB": 10
+          },
+          {
+            "street": "flop",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "flop",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2,
+            "totalStreetPaidBB": 4.2
+          },
+          {
+            "street": "turn",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          },
+          {
+            "street": "turn",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05,
+            "totalStreetPaidBB": 22.05
+          }
+        ]
+      },
+      "task": {
+        "prompt": "河牌改成4♥，对手是否在实体牌上可能有同花？",
+        "options": [
+          "可能",
+          "不可能",
+          "我不知道"
+        ]
+      },
+      "returnFrame": "S12",
+      "grade": "facts_only_not_strategy"
+    }
+  ]
+}

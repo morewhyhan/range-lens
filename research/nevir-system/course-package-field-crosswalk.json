@@ -1,0 +1,194 @@
+{
+  "id": "COURSE_PACKAGE_FIELD_CROSSWALK_V1",
+  "status": "field_crosswalk_compiled_reference_and_runtime_missing",
+  "purpose": "把C0-C9课包输出、postflop-solver原始字段、独立校验、用户可见位置和发布阻断绑定在同一张表中，防止把求解器事实直接偷换成课程答案。",
+  "sources": [
+    "reference-to-course-closure-contract.json",
+    "solver-snapshot-to-lesson-package.json",
+    "static-course-package-contract.json",
+    "range-delta-visual-closure.json",
+    "course-simplification-calibration.json",
+    "external-repo-current-capability-report.json",
+    "reference-snapshot-intake-and-match-contract.json",
+    "material-policy-classification.json",
+    "material-unit-crosswalk.json",
+    "course-policy-candidate-ledger.json",
+    "course-policy-candidate-ledger-audit.json"
+  ],
+  "sourceRoleBoundaries": {
+    "fact_equity": {
+      "sources": ["gto-wizard/equity-calculator"],
+      "mayPopulate": ["equityAndRunouts", "win", "tie", "potShareEquity", "deadCards"],
+      "mayNotPopulate": ["actionFrequency", "actionEV", "coursePolicy", "rangeAfterByAction", "successorPolicy"],
+      "visibleStops": ["p2_board", "p4_compare_fact_only"]
+    },
+    "fact_hand_rank": {
+      "sources": ["b-inary/holdem-hand-evaluator"],
+      "mayPopulate": ["bestFive", "handCategory", "showdownOrder"],
+      "mayNotPopulate": ["rangePolicy", "actionFrequency", "actionEV", "courseAnswer"],
+      "visibleStops": ["p2_board"]
+    },
+    "reference_strategy": {
+      "sources": ["b-inary/postflop-solver"],
+      "mayPopulate": ["referenceActionFrequencyByCombo", "referenceActionValueByCombo", "reachWeight", "referenceAfterByAction", "successorIdentity"],
+      "mayNotPopulate": ["courseAction", "beginnerMastery", "NL50Readiness"],
+      "visibleStops": ["p3_range", "p4_compare", "p6_update"]
+    },
+    "solver_ui_reference": {
+      "sources": ["b-inary/wasm-postflop", "b-inary/desktop-postflop"],
+      "mayPopulate": ["nodeNavigationReference", "rangeChartReference", "comboViewReference"],
+      "mayNotPopulate": ["trainingRoute", "gradingPolicy", "learnerEvidence"],
+      "visibleStops": ["author_only"]
+    },
+    "algorithm_reference": {
+      "sources": ["b-inary/poker-cfr"],
+      "mayPopulate": ["smallGameRegression", "algorithmComparison"],
+      "mayNotPopulate": ["completePostflopReference", "courseAnswer", "targetBenchmark"],
+      "visibleStops": ["author_only"]
+    },
+    "course_compiler": {
+      "sources": ["course-policy compiler", "course source material"],
+      "mayPopulate": ["coursePolicy", "courseAfterByAction", "differenceLedger", "lessonFrames", "releaseDecision", "policyIdentity", "sourceKind", "policyScope", "populationModel", "courseSourceReference"],
+      "mayNotPopulate": ["rawReferenceFields", "unverifiedStrategy", "missingSuccessor", "unlabeledPopulationExploit"],
+      "visibleStops": ["p4_compare", "p5_execute", "p6_update", "p7_close"]
+    },
+    "course_policy_material": {
+      "sources": ["笔记 Nevir source notes", "course source material"],
+      "mayPopulate": ["policyIdentity", "sourceKind", "policyScope", "populationModel", "triggerCondition", "courseSourceReference"],
+      "mayNotPopulate": ["rawReferenceActionFrequency", "referenceEV", "matchedReferencePolicy", "learnerMastery"],
+      "visibleStops": ["author_only", "p4_compare", "p7_close"]
+    }
+  },
+  "outputContract": [
+    {
+      "courseOutput": "inputFingerprint",
+      "stage": "C0_identity",
+      "rawInputs": ["sourceCommit", "cardConfig", "treeConfig", "actionHistory", "rangeFingerprint", "licenseRecord"],
+      "independentChecks": ["allCardsLegal", "sixMaxContextDeclared", "potStackRakeDeclared", "actionMenuDeclared"],
+      "visibleAt": ["p1_context"],
+      "exactGradeBlockedBy": ["missingInputFingerprint"],
+      "unknownRendering": "停止卡：无法确认这道题属于哪一个固定局面"
+    },
+    {
+      "courseOutput": "factSnapshot",
+      "stage": "C1_physical_facts",
+      "rawInputs": ["currentBoard", "privateCards", "possibleCards", "totalBetAmount"],
+      "independentChecks": ["bestFive", "handClass", "legalRunouts", "amountLedger", "entityCombos"],
+      "visibleAt": ["p2_board"],
+      "exactGradeBlockedBy": ["physicalFactMismatch"],
+      "unknownRendering": "停止卡：只能练牌面或金额事实，不能继续推动作"
+    },
+    {
+      "courseOutput": "referenceSnapshot",
+      "stage": "C2_reference_solve",
+      "rawInputs": ["strategy", "expectedValues", "expectedValuesDetail", "normalizedWeights", "availableActions", "solverQuality", "policyIdentity", "policyScope"],
+      "independentChecks": ["solvedGame", "nonChanceNonTerminalForStrategy", "reloadPreservesRawValues", "menuMatchesIdentity", "policyIdentityMatchesSource"],
+      "visibleAt": ["p3_range", "p4_compare"],
+      "exactGradeBlockedBy": ["missingMatchedReference", "unsolvedGame", "qualityNotRecorded"],
+      "unknownRendering": "资料未知：显示参考缺口，不显示0%或默认动作"
+    },
+    {
+      "courseOutput": "coursePolicy",
+      "stage": "C4_course_policy",
+      "rawInputs": ["rawActionMenu", "keptActions", "removedActions", "quantizationRule", "courseSource", "policyIdentity", "sourceKind", "policyScope", "populationModel", "triggerCondition"],
+      "independentChecks": ["policyReferenceSeparated", "finitePolicySpace", "scopeDeclared", "unknownRuleClosed", "policyIdentityMatchesSource", "populationModelDeclaredWhenNeeded"],
+      "visibleAt": ["p4_compare", "p5_execute"],
+      "exactGradeBlockedBy": ["missingCoursePolicy", "policyChangedWithoutAncestorRecompile"],
+      "unknownRendering": "课程规则未闭合：可以看示范，不能判唯一策略"
+    },
+    {
+      "courseOutput": "differenceLedger",
+      "stage": "C5_difference",
+      "rawInputs": ["referenceActionFrequencyByCombo", "courseActionWeightByCombo", "referenceEV", "courseEV", "referenceAfter", "courseAfter"],
+      "independentChecks": ["sameInputFingerprint", "sameActionMenuWhenCompared", "sameDenominator", "affectedAncestorsRecompiled"],
+      "visibleAt": ["p3_range", "p4_compare", "p7_close"],
+      "exactGradeBlockedBy": ["missingReferenceOrCourseSide", "uncomputedPolicyLoss", "uncomputedRangeDelta"],
+      "unknownRendering": "差异未知：显示两边资料缺什么，不把其中一边冒充另一边"
+    },
+    {
+      "courseOutput": "rangeSnapshots",
+      "stage": "C1_to_C6",
+      "rawInputs": ["weights", "normalizedWeights", "strategy", "courseActionWeightByCombo", "physicalFilter", "successorGraph"],
+      "independentChecks": ["fixedDenominator", "physicalConflictSeparate", "beforeAfterRecomputable", "comboIndexRoundTrip"],
+      "visibleAt": ["p3_range", "p6_update"],
+      "exactGradeBlockedBy": ["missingRangeBefore", "missingActionAfter", "missingSuccessorRange"],
+      "unknownRendering": "四态图：物理不可能、行动筛选、相对占比变化、资料不足分开显示"
+    },
+    {
+      "courseOutput": "successorGraph",
+      "stage": "C6_successor_closure",
+      "rawInputs": ["history", "availableActions", "possibleCards", "isomorphicChanceMap", "successorNodeIdentity"],
+      "independentChecks": ["actualAmountStored", "chanceCardsExpanded", "nextPlayerLegal", "nextRangeStateOrStop"],
+      "visibleAt": ["p5_execute", "p6_update", "p7_close"],
+      "exactGradeBlockedBy": ["missingPositiveActionSuccessor", "unexpandedChanceRepresentative", "missingStopReason"],
+      "unknownRendering": "停止在当前父层：没有真实后继就不模拟下一街"
+    },
+    {
+      "courseOutput": "lessonFrames",
+      "stage": "C7_lesson_compile",
+      "rawInputs": ["parentFrame", "factSnapshot", "coursePolicy", "differenceLedger", "successorGraph"],
+      "independentChecks": ["oneQuestion", "onePrimaryAction", "publicPromptNoAnswer", "parentRestore", "errorReturn"],
+      "visibleAt": ["p1_context", "p2_board", "p3_range", "p4_compare", "p5_execute", "p6_update", "p7_close"],
+      "exactGradeBlockedBy": ["flatHomeEntry", "multiplePrimaryQuestions", "missingReturnPoint"],
+      "unknownRendering": "当前层保留为停止或示范，不生成隐藏的精确答案"
+    },
+    {
+      "courseOutput": "heldoutTransfer",
+      "stage": "C8_transfer_compile",
+      "rawInputs": ["releasedUnit", "singleChangedField", "heldoutSourceIdentity", "answerIdentity"],
+      "independentChecks": ["exactlyOneChangedField", "firstAttemptBeforeExplanation", "sameMechanismOrDeclaredChange", "noAnswerExposure"],
+      "visibleAt": ["p7_close", "nextPracticeEntry"],
+      "exactGradeBlockedBy": ["multipleChangedFields", "sourceLeak", "noParentContinuity"],
+      "unknownRendering": "迁移题无效：回到同一父题修订题面，不归因给学习者"
+    },
+    {
+      "courseOutput": "releaseDecision",
+      "stage": "C9_release_audit",
+      "rawInputs": ["allC0ToC8Outputs", "versionHashes", "learnerTrial"],
+      "independentChecks": ["allRequiredFieldsPresent", "sourcePolicySeparation", "successorCompleteness", "trialStatusExplicit"],
+      "visibleAt": ["authorOnly"],
+      "exactGradeBlockedBy": ["anyHardGateFailure"],
+      "unknownRendering": "发布身份降级为fact、demonstration或blocked；不删除缺口"
+    }
+  ],
+  "solverFieldRules": {
+    "equityDoesNotImplyAction": true,
+    "strategyDoesNotEqualCoursePolicy": true,
+    "normalizedWeightsDoNotEqualActionAfter": true,
+    "actionIndexRequiresActualAmount": true,
+    "isomorphicChanceRepresentativeRequiresExpansion": true,
+    "courseAfterRequiresExplicitCoursePolicy": true,
+    "successorRangeRequiresRealSuccessorOrStop": true,
+    "policyIdentityMustBeDeclaredBeforeActionGrade": true,
+    "rawReferenceCannotBecomeCoursePolicyByLabel": true,
+    "populationExploitRequiresOpponentModelAndTrigger": true,
+    "illustrationCannotBecomeIndependentAnswer": true,
+    "unknownPolicyIdentityIsStop": true
+  },
+  "formulaContract": {
+    "physicalWeight": "w_before(h) * f_physical(h)",
+    "referenceAfter": "w_physical(h) * p_ref(a|h)",
+    "courseAfter": "w_physical(h) * q_course(a|h)",
+    "referenceCourseDelta": "courseAfter(h,a) - referenceAfter(h,a)",
+    "viewShare": "after(h,a) / sum_h(after(h,a))",
+    "policyLoss": "sum_h w(h) * (EV_ref(h,best_ref) - sum_a(q_course(h,a) * EV_ref(h,a)))"
+  },
+  "releaseGates": {
+    "factPractice": ["inputFingerprint", "factSnapshot"],
+    "referenceDemonstration": ["referenceSnapshot", "referenceQuality"],
+    "coursePolicyPractice": ["coursePolicy", "policyIdentity", "policyScope", "differenceLedger", "rangeSnapshots"],
+    "continuousPractice": ["successorGraph", "nextRangeStateOrStop", "ledgerHandoff"],
+    "beginnerClaim": ["lessonFrames", "heldoutTransfer", "learnerTrial"]
+  },
+  "currentEvidence": {
+    "crosswalkWritten": true,
+    "allOutputsMapped": true,
+    "repoRoleMapLinked": true,
+    "fieldLineageAndVisibleStopsLinked": true,
+    "matchedA72Reference": false,
+    "coursePackageCompiled": false,
+    "runtimeTrainingIntegrated": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

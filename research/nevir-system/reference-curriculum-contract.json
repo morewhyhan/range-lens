@@ -1,0 +1,1156 @@
+{
+  "status": "declarative35_unit_reference_to_curriculum_contract_not_generated_course",
+  "sourceSHA256": "e29419ae93a3ab4a25f37e8bc367d31a14709777c1f0602602deb2e78bdf3514",
+  "compilerStages": [
+    "Validate exact reference/configuration and raw supported nodes",
+    "Compile a separately named course policy with unresolved branches visible",
+    "Re-evaluate policy and all compared deviations before using its ranges/answers",
+    "Select candidate relations and useful controlled comparisons",
+    "Build one demonstration, one partial completion, then exposure-separated independent use",
+    "Attach only to the current four-step parent; restore full state on return",
+    "Publish only the question domain whose required inputs passed"
+  ],
+  "dataObjects": {
+    "referenceSpec": [
+      "game configuration",
+      "ranges",
+      "action tree",
+      "solver version",
+      "raw strategy and EV",
+      "supported successors"
+    ],
+    "coursePolicy": [
+      "explicit source rule",
+      "allowed actions",
+      "frequency transform",
+      "continuation policy",
+      "recomputed value and range outputs"
+    ],
+    "rangeSnapshot": [
+      "owner",
+      "viewpoint",
+      "known cards",
+      "public board",
+      "full history",
+      "input fingerprint",
+      "per-hand raw mass",
+      "action probability",
+      "unnormalized mass",
+      "normalization denominator",
+      "parent snapshot",
+      "change reason",
+      "successor boundary"
+    ],
+    "lessonFrame": [
+      "frame id",
+      "parent and return target",
+      "status",
+      "visible facts",
+      "question kind",
+      "answer set",
+      "help state",
+      "range snapshots",
+      "explanation",
+      "successors"
+    ]
+  },
+  "policyTransforms": {
+    "visual_only": "Hide or progressively reveal information; strategy identity remains unchanged.",
+    "frequency_quantization": "Map mixed frequencies to an explicit discrete policy and recompute affected ancestors.",
+    "menu_restriction": "Remove actions only with a new policy evaluation and a declared continuation.",
+    "route_packaging": "Reorder help and independent practice without changing the underlying policy; mark demonstrated steps as assisted."
+  },
+  "frameStatuses": [
+    "fact",
+    "demonstration",
+    "course_policy",
+    "reference_policy",
+    "not_open"
+  ],
+  "rangeUpdateFormula": "q_after(h,a)=q_before(h)*p(a|h,node); normalize by the total branch mass. For unknown opponents, apply the action probabilities to legal joint private-hand pairs before marginalizing.",
+  "sequenceContract": "First pass follows one parent route: identify board and hand strength, compare ranges, choose current action, update pot and ranges, deal next street, act again, then settle. Child explanations open on demand and return to the exact parent snapshot; 35 units are coverage checks, not a flat learner menu.",
+  "publicationChecks": {
+    "sourceQuality": "Saved strategy, raw numeric/export consistency and actual convergence are separate checks; no global metric is a per-action EV tolerance.",
+    "natureSampling": "Use supported joint private pairs followed by uniform physical cards, or the matching conditional chance law; do not replace weighted-range conditioning with uniform public-card sampling.",
+    "perTaskScope": "Distinguish physical fact, explicit course prescription, single-step strategic proposal, given demonstration, and actually committed continuous play.",
+    "continuousClosure": "Every accepted committed action and supported future card requires a matched continuation/reference or a separately validated query path. Selected node exports alone are not a complete trainer.",
+    "zeroReach": "A legal deviation with zero reference support is not learner illegality and its reported zero EV is not a usable answer; require an explicit counterfactual completion or suspend strategic grading.",
+    "packaging": "Keep full author references separate from compiled lesson packets; document runtime memory and reference identity for any full-tree query service. No learner-facing solver settings or database are implied.",
+    "currentCounterexample": "sb-bb-qqq-export-closure.json",
+    "implementationReady": false
+  },
+  "contracts": [
+    {
+      "id": "1.1",
+      "label": "差牌能付钱",
+      "parent": "compare.unopened",
+      "selectRelation": "对手更差成牌继续且实际支付；连同更强继续部分重算",
+      "learnerOperation": "点出会付款的具体候选，再比较过牌与下注",
+      "contrastContract": "改变差牌继续政策，保持其它声明输入",
+      "forbiddenInference": "差牌会跟就一定应下注",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.2",
+      "label": "领先但可能被反超",
+      "parent": "compare.unopened",
+      "selectRelation": "基准继续中存在反超路径；比较其退出与继续的整条收益",
+      "learnerOperation": "标出反超的实体跑牌，再看两种动作后果",
+      "contrastContract": "对照对手退出与继续的明确政策",
+      "forbiddenInference": "能赶走差牌就自动有正总收益",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.3",
+      "label": "落后但能赶走赢家",
+      "parent": "compare.unopened",
+      "selectRelation": "存在当前领先于自己的候选会弃；完整动作EV仍需核对",
+      "learnerOperation": "点出被赶走的赢家，并比较继续成本",
+      "contrastContract": "保持牌钱，改变该类候选的实际弃牌政策",
+      "forbiddenInference": "存在弃牌收益就适合诈唬",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.4",
+      "label": "当前弱但能改善",
+      "parent": "compare.unopened",
+      "selectRelation": "存在改善路径及未改善终点；动作含完整后续",
+      "learnerOperation": "先分改善后赢或输，再选有依据动作",
+      "contrastContract": "相同当前牌力，变化后续改善或承压条件",
+      "forbiddenInference": "有听牌就应下注",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "parent": "compare.unopened",
+      "selectRelation": "过牌有正摊牌机会；下注改变被继续范围和后续",
+      "learnerOperation": "先看过牌结果，再比较下注是否增收",
+      "contrastContract": "改变较差牌是否继续，重算双方路线",
+      "forbiddenInference": "有摊牌价值就永远过牌",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.6",
+      "label": "强牌考虑先过牌",
+      "parent": "compare.unopened",
+      "selectRelation": "强成牌在过牌与下注路线中的付款和风险可比较",
+      "learnerOperation": "点出先过后谁可能主动支付",
+      "contrastContract": "改变对手过后下注政策，保留完整后继",
+      "forbiddenInference": "强牌适合慢打是固定手牌属性",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.7",
+      "label": "暂无合算进攻",
+      "parent": "compare.unopened",
+      "selectRelation": "给定完整比较域内所有进攻不优于替代动作",
+      "learnerOperation": "比较实际EV并说明菜单边界",
+      "contrastContract": "改变关键回应条件，检验是否仍放弃进攻",
+      "forbiddenInference": "没有本节点好进攻就整手必弃",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "1.8",
+      "label": "同目的，不同尺寸",
+      "parent": "compare.unopened",
+      "selectRelation": "相同根条件，至少两个实际不同下注尺寸及后继齐备",
+      "learnerOperation": "比较各尺寸赶走谁、留下谁、以后怎样",
+      "contrastContract": "共同动作树内比较，不删尺寸后冒充原比较",
+      "forbiddenInference": "某尺寸是唯一下注选项就最优",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "parent": "compare.bet",
+      "selectRelation": "当前下注范围中有自己能赢的取值部分；未来完整",
+      "learnerOperation": "区分自己能赢的取值牌与诈唬，再比较弃跟加",
+      "contrastContract": "改变取值部分质量，保留完整参考",
+      "forbiddenInference": "能赢部分取值牌就必须加注",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.2",
+      "label": "主要只能赢诈唬",
+      "parent": "compare.bet",
+      "selectRelation": "获胜主要来自对手未改善或诈唬部分；份额与价格完整",
+      "learnerOperation": "点出实际能赢谁，再算跟注与其它选择",
+      "contrastContract": "改变明确诈唬组成而非只换玩家标签",
+      "forbiddenInference": "抓诈只需看是否有一对",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "parent": "compare.bet",
+      "selectRelation": "改善、反向改善、未来收费与自己的回应均可计算",
+      "learnerOperation": "点出干净与脏改善，再比较当前选择",
+      "contrastContract": "同样听牌名，改变对手继续范围或后续收费",
+      "forbiddenInference": "补张比例等于完整跟注收益",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "parent": "compare.bet",
+      "selectRelation": "当前领先和落后改善路径共同存在，终点互斥计数",
+      "learnerOperation": "分出已经能赢、改善才赢和改善仍输的结果",
+      "contrastContract": "保持当前牌面，改变候选组成",
+      "forbiddenInference": "当前胜率加听牌胜率可直接相加",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.5",
+      "label": "加注让差牌多付钱",
+      "parent": "compare.bet",
+      "selectRelation": "加注后有更差继续支付，也有弃或再加的完整分支",
+      "learnerOperation": "看差牌付款以后，合并全部回应",
+      "contrastContract": "改变差牌继续或再加政策",
+      "forbiddenInference": "加注能被差牌跟就一定优于跟",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.6",
+      "label": "加注希望赶走更好牌",
+      "parent": "compare.bet",
+      "selectRelation": "加注有更好牌弃，所有继续与反击终点可评估",
+      "learnerOperation": "先看弃、跟、再加三支，再选动作",
+      "contrastContract": "同牌钱改变该类牌退出的条件",
+      "forbiddenInference": "对手总体过弃足以确定每手加注",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "2.7",
+      "label": "继续没有足够收益",
+      "parent": "compare.bet",
+      "selectRelation": "弃跟加按同一当前基点评估，完整菜单中的继续均不优",
+      "learnerOperation": "先核待补与当前范围，再比较所有被支持选择",
+      "contrastContract": "改变价格或范围后重新判断",
+      "forbiddenInference": "低权益数字本身就能判弃",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.1",
+      "label": "算清新价格",
+      "parent": "compare.raise",
+      "selectRelation": "真实加到总额与自己本街已投可得",
+      "learnerOperation": "点出待补而非对方总额",
+      "contrastContract": "同加到额、不同自己已投；或同待补、不同池",
+      "forbiddenInference": "加到30等于再多投30",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "parent": "compare.raise",
+      "selectRelation": "先前价值下注之后，观察加注并筛选新范围",
+      "learnerOperation": "重画当前加注范围，再比较弃跟再加",
+      "contrastContract": "相同自己牌，改变已观察加注的条件政策",
+      "forbiddenInference": "原来是价值牌所以现在自动继续",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.3",
+      "label": "听牌被加注",
+      "parent": "compare.raise",
+      "selectRelation": "被加后仍有改善或承压分支，价格与后续齐备",
+      "learnerOperation": "核干净补张、未来收费和再加风险",
+      "contrastContract": "同听牌改变加注范围或有效后手",
+      "forbiddenInference": "听牌名称能代替价格与后续",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.4",
+      "label": "再加可以多收钱",
+      "parent": "compare.raise",
+      "selectRelation": "再加后差牌仍支付，全部回应及新增金额齐备",
+      "learnerOperation": "点出继续付钱的差牌，并计算再加与跟注",
+      "contrastContract": "改变差牌面对再加是否继续",
+      "forbiddenInference": "强牌永远再加到最大",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.5",
+      "label": "再加用于诈唬",
+      "parent": "compare.raise",
+      "selectRelation": "实体移除改变当前加注范围及其回应，所有再加后继齐备",
+      "learnerOperation": "点具体被移除的价值与弃牌候选，再算行动",
+      "contrastContract": "持牌组合或给定回应对照；变化因素逐项披露",
+      "forbiddenInference": "有A或同花阻挡就必须诈唬",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "3.6",
+      "label": "后手与合法动作变化",
+      "parent": "compare.raise",
+      "selectRelation": "有效筹码、最小加注、全下及行动权有真实规则",
+      "learnerOperation": "选择当前合法按钮与金额",
+      "contrastContract": "足额与不足额全下、是否重开行动分别验证",
+      "forbiddenInference": "还有筹码就永远能再加",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.1",
+      "label": "对手跟我的下注",
+      "parent": "update.response",
+      "selectRelation": "按实际跟注概率更新双方联合质量与状态",
+      "learnerOperation": "在同坐标图中标出留下部分",
+      "contrastContract": "同下注下不同明确跟注政策",
+      "forbiddenInference": "跟注意味着强牌全部退出",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.2",
+      "label": "双方过牌",
+      "parent": "update.response",
+      "selectRelation": "实际两次过牌的概率与正支持历史完整",
+      "learnerOperation": "沿两次观察筛选，指出仍可保留的强牌",
+      "contrastContract": "不同过牌政策；保持与改变均需例证",
+      "forbiddenInference": "过牌就排除所有强牌",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.3",
+      "label": "我的下注范围不同",
+      "parent": "update.response",
+      "selectRelation": "自己的完整行动政策不同，观察者视角明确",
+      "learnerOperation": "比较自己公开范围与已知底牌后的对手范围",
+      "contrastContract": "相同已知牌下自己动作不凭空新增对手信息",
+      "forbiddenInference": "自己点按钮就让两边候选都减少",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.4",
+      "label": "前面尺寸或路线不同",
+      "parent": "update.response",
+      "selectRelation": "不同真实历史各有对应根、政策和当前条件",
+      "learnerOperation": "从各自前序追到当前范围再比较",
+      "contrastContract": "同当前牌钱但不同历史；不借用另一线后验",
+      "forbiddenInference": "当前牌钱相同就参考身份相同",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.5",
+      "label": "账本与行动顺序更新",
+      "parent": "update.response",
+      "selectRelation": "观察事件可合法重放，街与终局转换明确",
+      "learnerOperation": "移动筹码一次，确认谁行动或结算",
+      "contrastContract": "下注未回应、轮闭合、全下跑完分别检查",
+      "forbiddenInference": "执行按钮点击即自动发下一街",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "4.6",
+      "label": "结果不倒推上步正确性",
+      "parent": "update.response",
+      "selectRelation": "行动前信息、给定参考与本次随机结果分别冻结",
+      "learnerOperation": "区分这次输赢与动作前比较",
+      "contrastContract": "同策略不同终点；不同策略可碰巧同结果",
+      "forbiddenInference": "赢了就证明之前正确",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.1",
+      "label": "自己改善",
+      "parent": "update.card",
+      "selectRelation": "新牌后自己最佳五张改变，当前范围和价格仍保留",
+      "learnerOperation": "点出新最佳五张，再重回比较",
+      "contrastContract": "改善却仍输与改善后领先都要保留",
+      "forbiddenInference": "自己改善就必加大下注",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.2",
+      "label": "对手留下的牌改善",
+      "parent": "update.card",
+      "selectRelation": "先前留下的候选在新牌后逐实体重评",
+      "learnerOperation": "点出对手哪些仍可能改善",
+      "contrastContract": "新牌相同但前序范围不同",
+      "forbiddenInference": "所有可能手牌都在当前范围",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": false,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.3",
+      "label": "听牌完成或新增",
+      "parent": "update.card",
+      "selectRelation": "现成牌、直接听牌和后门按当前街重算",
+      "learnerOperation": "分清成牌、听牌和已失去机会",
+      "contrastContract": "同花色标签但实体张数不同；成牌兼听牌不抹去",
+      "forbiddenInference": "听牌完成就必获胜",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.4",
+      "label": "公共牌配对",
+      "parent": "update.card",
+      "selectRelation": "公共牌配对后的最佳五张和候选逐项重算",
+      "learnerOperation": "点出配对如何改变两边具体关系",
+      "contrastContract": "同样公共牌配对但所留候选不同",
+      "forbiddenInference": "配对对所有手牌影响相同",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.5",
+      "label": "来更高牌",
+      "parent": "update.card",
+      "selectRelation": "更高新牌对具体两方手牌和范围的影响可计算",
+      "learnerOperation": "指出谁的相对位置变了",
+      "contrastContract": "高牌改变与高牌不改当前胜负均保留",
+      "forbiddenInference": "高牌天然总利于加注者",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.6",
+      "label": "看似空白",
+      "parent": "update.card",
+      "selectRelation": "被称空白的牌仍经实体移除、改善和机会概率检查",
+      "learnerOperation": "检验哪项没变、哪项实际改变",
+      "contrastContract": "近似空白与实质变化，以及不改动作的变化",
+      "forbiddenInference": "空白就原样复制前街策略",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.7",
+      "label": "新牌移除组合",
+      "parent": "update.card",
+      "selectRelation": "给定新牌的合法配对与机会模型明确",
+      "learnerOperation": "在具体花色格移除冲突组合并重归一",
+      "contrastContract": "质量减少与占比上升区分；视角保持",
+      "forbiddenInference": "按格名删除就完成新牌更新",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    },
+    {
+      "id": "5.8",
+      "label": "到河牌，未来机会结束",
+      "parent": "update.card",
+      "selectRelation": "河牌已发，无下一张；下注是否结束另判",
+      "learnerOperation": "确认未来改善结束，再看当前谁行动",
+      "contrastContract": "未回应、全下跟完、弃牌结算分别检查",
+      "forbiddenInference": "发河牌就自动摊牌",
+      "selectorResult": "Candidate relation requiring author/reference checks; not an exclusive hand class and not an action answer.",
+      "prerequisiteForFactQuestion": [
+        "Legal exact cards and current public state",
+        "Declared learner perspective and required observed history",
+        "Independent physical/legal computation appropriate to the question"
+      ],
+      "prerequisiteForStrategyQuestion": [
+        "Complete matched configuration and raw reference",
+        "Explicit course-policy version and compared candidate menu",
+        "Positive support or explicitly separate counterfactual policy completion",
+        "Current action values with common payoff origin and declared continuation",
+        "No answer-bearing help if claimed independent"
+      ],
+      "standaloneMechanicalFocusIdentified": true,
+      "factQuestionRule": "Any unit may contain a fact question if its inputs are independently sufficient; label it as facts, not as optimal strategy.",
+      "factPassDoesNotImplyActionPass": true,
+      "leafAccounting": "Opponent folds / own folds / showdown win / tie / loss are mutually exclusive; compute all actual investments and refunds once.",
+      "feedback": "Point to the specific current difference and restore the full parent question/reference. Correct source-rule execution is not independent optimal strategy proof.",
+      "generationImplementationReady": false,
+      "fullTargetReferenceReady": false,
+      "learnerVerified": false
+    }
+  ],
+  "responseToInsufficientInput": {
+    "factQuestion": "Allow only if its mechanical inputs are independently sufficient.",
+    "courseRuleQuestion": "Allow only under the explicit sourced adopted rule and precision.",
+    "optimalActionQuestion": "Do not publish without matched complete strategy evidence.",
+    "mechanismCauseClaim": "Frequency/EV correlation alone is insufficient; require a declared intervention or restrict wording to observed relation.",
+    "missingContinuation": "Stop this route strategy grading or explicitly enter teaching; do not invent an opponent response or count the missing author reference as a learner error."
+  },
+  "nonGoals": [
+    "No new35-tile home screen",
+    "No invented missing policies",
+    "No backend learner database",
+    "No new training questions from this specification alone",
+    "No automatic identification of unique strategic cause from a solver frequency"
+  ],
+  "counts": {
+    "unitsSpecified": 35,
+    "implementedSelectors": 0,
+    "newGeneratedQuestions": 0,
+    "fullTargetReferences": 0,
+    "learnerTrials": 0
+  },
+  "appChanged": false
+}

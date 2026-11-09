@@ -1,0 +1,214 @@
+{
+  "status": "author_remediation_walkthrough_not_app_or_learner_trial",
+  "origin": {
+    "firstQuestionId": "MX0020",
+    "nextQuestionId": "MX0004",
+    "sourceReview": "R06"
+  },
+  "snapshot": {
+    "questionId": "MX0020",
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "hole": [
+      "Qc",
+      "Kc"
+    ],
+    "context": {
+      "players": 6,
+      "activeSeats": [
+        "BTN",
+        "BB"
+      ],
+      "initialEffectiveBB": 100,
+      "anteBB": 0,
+      "street": "flop",
+      "potType": "single_raised",
+      "openToBB": 2.5,
+      "heroSeat": "BTN",
+      "villainSeat": "BB",
+      "preflop": "UTG/HJ/CO fold; BTN open to2.5; SB fold; BB call",
+      "observedFlopAction": "BB check",
+      "actor": "BTN",
+      "toCallBB": 0,
+      "money": {
+        "potBB": 5.5,
+        "heroStackBB": 97.5,
+        "villainStackBB": 97.5,
+        "foldedStacksBB": 399.5
+      },
+      "sourceDepth": "The cited2.1 paragraph does not specify a full solver configuration;6max/100BB are declared training conditions, not recovered solver metadata."
+    },
+    "adoptedReference": "A72_base",
+    "decisionParent": "compare.unopened",
+    "money": {
+      "potBB": 5.5,
+      "heroStackBB": 97.5,
+      "villainStackBB": 97.5,
+      "foldedStacksBB": 399.5
+    }
+  },
+  "resumeHash": "442f2a25c982d735d3eda0142c1be636f5a16a0a49a343d7b6ee691e939294e9",
+  "mainValue": [
+    0,
+    14,
+    13,
+    12,
+    7,
+    2
+  ],
+  "physicalComparison": {
+    "villainIllustration": [
+      "Qh",
+      "Td"
+    ],
+    "scope": "Current five-card comparison only; not an inferred action-conditioned opponent range."
+  },
+  "optionalPreview": {
+    "board": [
+      "As",
+      "Kh",
+      "2d"
+    ],
+    "mainValue": [
+      1,
+      13,
+      14,
+      12,
+      2
+    ],
+    "scope": "Illustrative replacement, never a legal turn or current-hand mutation."
+  },
+  "firstAnswer": {
+    "proposed": "bet",
+    "correctUnderAdoptedRule": "check",
+    "legality": "bet is legal but differs from this adopted course rule",
+    "commit": false
+  },
+  "feedback": "这题按基础简化过牌。现在最佳五张是A、K、Q、7、2，属于A高；K是随后比较的踢脚。",
+  "nextQuestion": {
+    "id": "MX0004",
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "hole": [
+      "3c",
+      "Qc"
+    ],
+    "answer": {
+      "status": "course_rule",
+      "action": "bet",
+      "betFrequency": 100,
+      "sourceReview": "R07"
+    }
+  },
+  "traces": [
+    {
+      "useHelp": false,
+      "events": [
+        {
+          "event": "first_answer",
+          "action": "bet",
+          "correct": false,
+          "pokerActionCommitted": false
+        },
+        {
+          "event": "duplicate_answer_ignored",
+          "action": "unknown"
+        },
+        {
+          "event": "continue_to_next_independent_question",
+          "nextQuestionId": "MX0004",
+          "nextHole": [
+            "3c",
+            "Qc"
+          ],
+          "notAContinuationOfCurrentHand": true
+        },
+        {
+          "event": "next_question_first_answer",
+          "action": "bet",
+          "correct": true
+        }
+      ],
+      "counts": {
+        "correct": 1,
+        "wrong": 1
+      },
+      "originalStateRestored": true
+    },
+    {
+      "useHelp": true,
+      "events": [
+        {
+          "event": "first_answer",
+          "action": "bet",
+          "correct": false,
+          "pokerActionCommitted": false
+        },
+        {
+          "event": "duplicate_answer_ignored",
+          "action": "unknown"
+        },
+        {
+          "event": "open_optional_reading_help",
+          "resumeHash": "442f2a25c982d735d3eda0142c1be636f5a16a0a49a343d7b6ee691e939294e9"
+        },
+        {
+          "event": "show_preview",
+          "board": [
+            "As",
+            "Kh",
+            "2d"
+          ],
+          "countsAsIndependentAnswer": false
+        },
+        {
+          "event": "close_help_restore_same_decision",
+          "restoredHash": "442f2a25c982d735d3eda0142c1be636f5a16a0a49a343d7b6ee691e939294e9",
+          "returnSurface": "feedback",
+          "firstAnswerStillLocked": true,
+          "countsAsNewCorrect": false
+        },
+        {
+          "event": "continue_to_next_independent_question",
+          "nextQuestionId": "MX0004",
+          "nextHole": [
+            "3c",
+            "Qc"
+          ],
+          "notAContinuationOfCurrentHand": true
+        },
+        {
+          "event": "next_question_first_answer",
+          "action": "bet",
+          "correct": true
+        }
+      ],
+      "counts": {
+        "correct": 1,
+        "wrong": 1
+      },
+      "originalStateRestored": true
+    }
+  ],
+  "requirements": {
+    "correctAutoAdvances": true,
+    "wrongOrUnknownShowsExplanation": true,
+    "optionalHelpNotMandatoryGate": true,
+    "repairDoesNotEraseFirstError": true,
+    "referenceReplayMustBeExplicit": true,
+    "invalidQuestionNotLearnerError": true,
+    "allCountersInMemoryOnly": true,
+    "unknownCountsAsWrongOnValidQuestion": true
+  },
+  "limits": [
+    "No whole-hand strategy continuation is supplied by this pair.",
+    "Second question is already public course practice, not unseen transfer.",
+    "No UI, database, user results or NL50 validation created."
+  ]
+}

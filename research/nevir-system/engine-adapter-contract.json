@@ -1,0 +1,480 @@
+{
+  "status": "pinned_source_review_and_local_oracles_not_engine_runtime_validation",
+  "engine": {
+    "repository": "https://github.com/b-inary/postflop-solver",
+    "requestedRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "commitPage": "https://github.com/b-inary/postflop-solver/commit/9d1509fe5077d019825f833eed04b16d342dfda1",
+    "pinMeaning": "A readable immutable source candidate, not a claim of current remote HEAD or a built binary revision.",
+    "sourceReview": [
+      {
+        "path": "src/card.rs",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/9d1509fe5077d019825f833eed04b16d342dfda1/src/card.rs",
+        "lines": "6-14",
+        "finding": "Card IDs use ascending ranks and cdhs suits; NOT_DEALT255."
+      },
+      {
+        "path": "src/game/interpreter.rs",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/9d1509fe5077d019825f833eed04b16d342dfda1/src/game/interpreter.rs",
+        "lines": "639-738",
+        "finding": "Action-major layout; cache and solved checks; fold rows forced0 and other EV entries rescaled and biased. Runtime EV convention still must be calibrated."
+      },
+      {
+        "path": "src/action_tree.rs",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/9d1509fe5077d019825f833eed04b16d342dfda1/src/action_tree.rs",
+        "lines": "547-645",
+        "finding": "Pot/previous-bet relative sizes rounded; amounts clamped and may become all-in. Requested text alone is not the generated legal tree."
+      },
+      {
+        "path": "src/bet_size.rs",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/9d1509fe5077d019825f833eed04b16d342dfda1/src/bet_size.rs",
+        "lines": "222-228",
+        "finding": "All-in token a is parsed; this is source inspection, not an executed parser test."
+      }
+    ],
+    "downloadedSourceTree": false,
+    "builtBinary": false
+  },
+  "mapping": [
+    {
+      "card": "2s",
+      "localIndex": 0,
+      "engineId": 3
+    },
+    {
+      "card": "2h",
+      "localIndex": 1,
+      "engineId": 2
+    },
+    {
+      "card": "2d",
+      "localIndex": 2,
+      "engineId": 1
+    },
+    {
+      "card": "2c",
+      "localIndex": 3,
+      "engineId": 0
+    },
+    {
+      "card": "3s",
+      "localIndex": 4,
+      "engineId": 7
+    },
+    {
+      "card": "3h",
+      "localIndex": 5,
+      "engineId": 6
+    },
+    {
+      "card": "3d",
+      "localIndex": 6,
+      "engineId": 5
+    },
+    {
+      "card": "3c",
+      "localIndex": 7,
+      "engineId": 4
+    },
+    {
+      "card": "4s",
+      "localIndex": 8,
+      "engineId": 11
+    },
+    {
+      "card": "4h",
+      "localIndex": 9,
+      "engineId": 10
+    },
+    {
+      "card": "4d",
+      "localIndex": 10,
+      "engineId": 9
+    },
+    {
+      "card": "4c",
+      "localIndex": 11,
+      "engineId": 8
+    },
+    {
+      "card": "5s",
+      "localIndex": 12,
+      "engineId": 15
+    },
+    {
+      "card": "5h",
+      "localIndex": 13,
+      "engineId": 14
+    },
+    {
+      "card": "5d",
+      "localIndex": 14,
+      "engineId": 13
+    },
+    {
+      "card": "5c",
+      "localIndex": 15,
+      "engineId": 12
+    },
+    {
+      "card": "6s",
+      "localIndex": 16,
+      "engineId": 19
+    },
+    {
+      "card": "6h",
+      "localIndex": 17,
+      "engineId": 18
+    },
+    {
+      "card": "6d",
+      "localIndex": 18,
+      "engineId": 17
+    },
+    {
+      "card": "6c",
+      "localIndex": 19,
+      "engineId": 16
+    },
+    {
+      "card": "7s",
+      "localIndex": 20,
+      "engineId": 23
+    },
+    {
+      "card": "7h",
+      "localIndex": 21,
+      "engineId": 22
+    },
+    {
+      "card": "7d",
+      "localIndex": 22,
+      "engineId": 21
+    },
+    {
+      "card": "7c",
+      "localIndex": 23,
+      "engineId": 20
+    },
+    {
+      "card": "8s",
+      "localIndex": 24,
+      "engineId": 27
+    },
+    {
+      "card": "8h",
+      "localIndex": 25,
+      "engineId": 26
+    },
+    {
+      "card": "8d",
+      "localIndex": 26,
+      "engineId": 25
+    },
+    {
+      "card": "8c",
+      "localIndex": 27,
+      "engineId": 24
+    },
+    {
+      "card": "9s",
+      "localIndex": 28,
+      "engineId": 31
+    },
+    {
+      "card": "9h",
+      "localIndex": 29,
+      "engineId": 30
+    },
+    {
+      "card": "9d",
+      "localIndex": 30,
+      "engineId": 29
+    },
+    {
+      "card": "9c",
+      "localIndex": 31,
+      "engineId": 28
+    },
+    {
+      "card": "Ts",
+      "localIndex": 32,
+      "engineId": 35
+    },
+    {
+      "card": "Th",
+      "localIndex": 33,
+      "engineId": 34
+    },
+    {
+      "card": "Td",
+      "localIndex": 34,
+      "engineId": 33
+    },
+    {
+      "card": "Tc",
+      "localIndex": 35,
+      "engineId": 32
+    },
+    {
+      "card": "Js",
+      "localIndex": 36,
+      "engineId": 39
+    },
+    {
+      "card": "Jh",
+      "localIndex": 37,
+      "engineId": 38
+    },
+    {
+      "card": "Jd",
+      "localIndex": 38,
+      "engineId": 37
+    },
+    {
+      "card": "Jc",
+      "localIndex": 39,
+      "engineId": 36
+    },
+    {
+      "card": "Qs",
+      "localIndex": 40,
+      "engineId": 43
+    },
+    {
+      "card": "Qh",
+      "localIndex": 41,
+      "engineId": 42
+    },
+    {
+      "card": "Qd",
+      "localIndex": 42,
+      "engineId": 41
+    },
+    {
+      "card": "Qc",
+      "localIndex": 43,
+      "engineId": 40
+    },
+    {
+      "card": "Ks",
+      "localIndex": 44,
+      "engineId": 47
+    },
+    {
+      "card": "Kh",
+      "localIndex": 45,
+      "engineId": 46
+    },
+    {
+      "card": "Kd",
+      "localIndex": 46,
+      "engineId": 45
+    },
+    {
+      "card": "Kc",
+      "localIndex": 47,
+      "engineId": 44
+    },
+    {
+      "card": "As",
+      "localIndex": 48,
+      "engineId": 51
+    },
+    {
+      "card": "Ah",
+      "localIndex": 49,
+      "engineId": 50
+    },
+    {
+      "card": "Ad",
+      "localIndex": 50,
+      "engineId": 49
+    },
+    {
+      "card": "Ac",
+      "localIndex": 51,
+      "engineId": 48
+    }
+  ],
+  "notDealt": {
+    "engine": 255,
+    "local": null,
+    "notARealCard": true
+  },
+  "roundingOracle": {
+    "kind": "static_expected_ledger_not_engine_output",
+    "unitsPerBB": 100,
+    "events": [
+      "BB checks",
+      "BTN bets182",
+      "BB raises to455",
+      "BTN calls273"
+    ],
+    "bet33": 182,
+    "exactOneThirdRounded": 183,
+    "raiseTo": 455,
+    "toCall": 273,
+    "matchedPot": 1460,
+    "eachStackAfter": 9295,
+    "sourceRoundingPositiveCasesOnly": true,
+    "legalTreeRuntimeVerified": false
+  },
+  "sentinel": {
+    "kind": "synthetic_index_labels_not_strategy",
+    "actionCount": 3,
+    "handCount": 2,
+    "flat": [
+      100,
+      101,
+      200,
+      201,
+      300,
+      301
+    ]
+  },
+  "evOracles": [
+    {
+      "id": "win",
+      "hero": [
+        "As",
+        "Ah"
+      ],
+      "villain": [
+        "Qc",
+        "Qd"
+      ],
+      "share": 1,
+      "expected": 732,
+      "board": [
+        "Ks",
+        "7h",
+        "2d",
+        "3c",
+        "9h"
+      ],
+      "context": {
+        "potBeforeBet": 550,
+        "bet": 182,
+        "currentPot": 732,
+        "toCall": 182,
+        "menu": [
+          "fold",
+          "call"
+        ],
+        "unitsPerBB": 100,
+        "rake": 0
+      },
+      "expectedCurrentFoldEV": 0,
+      "expectedCurrentCallEV": 732,
+      "expectedCurrentCallEVBB": 7.32,
+      "runtimeEngineObserved": null,
+      "status": "independent_expected_value_only_not_engine_result"
+    },
+    {
+      "id": "lose",
+      "hero": [
+        "Qs",
+        "Qh"
+      ],
+      "villain": [
+        "As",
+        "Ah"
+      ],
+      "share": 0,
+      "expected": -182,
+      "board": [
+        "Ks",
+        "7h",
+        "2d",
+        "3c",
+        "9h"
+      ],
+      "context": {
+        "potBeforeBet": 550,
+        "bet": 182,
+        "currentPot": 732,
+        "toCall": 182,
+        "menu": [
+          "fold",
+          "call"
+        ],
+        "unitsPerBB": 100,
+        "rake": 0
+      },
+      "expectedCurrentFoldEV": 0,
+      "expectedCurrentCallEV": -182,
+      "expectedCurrentCallEVBB": -1.82,
+      "runtimeEngineObserved": null,
+      "status": "independent_expected_value_only_not_engine_result"
+    },
+    {
+      "id": "tie",
+      "hero": [
+        "As",
+        "Qc"
+      ],
+      "villain": [
+        "Ah",
+        "Qd"
+      ],
+      "share": 0.5,
+      "expected": 275,
+      "board": [
+        "Ks",
+        "7h",
+        "2d",
+        "3c",
+        "9h"
+      ],
+      "context": {
+        "potBeforeBet": 550,
+        "bet": 182,
+        "currentPot": 732,
+        "toCall": 182,
+        "menu": [
+          "fold",
+          "call"
+        ],
+        "unitsPerBB": 100,
+        "rake": 0
+      },
+      "expectedCurrentFoldEV": 0,
+      "expectedCurrentCallEV": 275,
+      "expectedCurrentCallEVBB": 2.75,
+      "runtimeEngineObserved": null,
+      "status": "independent_expected_value_only_not_engine_result"
+    }
+  ],
+  "requiredRuntimeChecks": [
+    "Pin and record actual built revision plus dependency resolution",
+    "Parse both full range strings and compare all1326 physical weights",
+    "Compare52 card IDs and undealt sentinel with runtime",
+    "Generate actual root/check/bet/raise actions including clamp, merge and all-in behavior",
+    "Run named win/lose/tie EV oracles before converting real exported EV units or baselines",
+    "Export ordered hands/actions, correct current player, cache state and street storage depth",
+    "Record convergence definition and actual value rather than iteration target alone"
+  ],
+  "attempts": {
+    "gitLsRemote": {
+      "command": "git ls-remote public repository HEAD",
+      "outcome": "failed before obtaining a revision",
+      "error": "getaddrinfo() thread failed to start",
+      "approvalRejection": false
+    },
+    "webApi": {
+      "outcome": "commit API not accessible via web tool; commit history page and pinned raw source readable"
+    },
+    "localRust": {
+      "cargo": "1.96.0 (30a34c682 2026-05-25)",
+      "rustc": "1.96.0 (ac68faa20 2026-05-25)",
+      "compiledThisEngine": false
+    }
+  },
+  "release": {
+    "runtimeAdapterValidated": false,
+    "solveStarted": false,
+    "newStrategyAnswers": 0,
+    "NL50Reference": false,
+    "appChanged": false
+  }
+}

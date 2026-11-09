@@ -1,0 +1,321 @@
+{
+  "status": "public_author_demo_not_frozen_holdout",
+  "selfRange": {
+    "flop": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "turn": "Qh",
+    "actualHero": [
+      "Qc",
+      "3c"
+    ],
+    "own": [
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qs",
+          "3s"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qh",
+          "3h"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qd",
+          "3d"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "mass": 1
+      }
+    ],
+    "other": [
+      {
+        "id": "AT",
+        "hole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "id": "QT",
+        "hole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "id": "76",
+        "hole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      }
+    ],
+    "jointPriorDefinition": "mass=own.mass×other.mass for physically compatible pairs, zero otherwise; normalize after the observed actions. Fixed turn likelihood1/45 when compatible.",
+    "versions": [
+      {
+        "id": "selective",
+        "ownBetPolicy": "OnlyQ3s bets"
+      },
+      {
+        "id": "wide",
+        "ownBetPolicy": "BothKQ andQ3s bet; only within this restricted20-hand teaching population"
+      }
+    ],
+    "tasks": [
+      "只执行自己的下注筛选，先不动对手",
+      "再执行题设跟注筛选，比较两边留下什么",
+      "Qh发出后划掉双方冲突底牌",
+      "回到实际Qc3c这一行，不把整批范围平均当当前手牌赢面"
+    ]
+  },
+  "outcomes": {
+    "context": {
+      "players": 6,
+      "initialBB": 100,
+      "heroSeat": "SB",
+      "villainSeat": "BTN",
+      "board": [
+        "Ks",
+        "9h",
+        "2d",
+        "3c",
+        "7h"
+      ],
+      "hero": [
+        "9c",
+        "9d"
+      ],
+      "history": [
+        "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+        "Flop Ks9h2d: SB bets7; BTN calls7",
+        "Turn3c: SB checks; BTN checks",
+        "River7h: SB to act"
+      ],
+      "start": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1
+      },
+      "rake": "none",
+      "priorScope": "Given current river masses; not recovered from a complete preflop/flop/turn policy."
+    },
+    "profileInputs": {
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": false
+    },
+    "policy": {
+      "afterHeroCheck": "KK/77 bet17.5; AK uses weakBet; QT uses airBet; QQ checks",
+      "afterHeroBet17_5": "KK/77 raise to45; AK calls; QQ calls half and folds half; QT folds",
+      "afterHeroCheckRaise45": "KK/77 jam83; AK calls; QQ/QT fold",
+      "afterHeroJam83": "KK calls;77 calls unless profile explicitly folds77ToHeroJam; other hands fold",
+      "information": "Only own holding and public history; no access to hero hidden cards"
+    },
+    "menu": {
+      "heroRoot": [
+        "check",
+        "bet17.5"
+      ],
+      "afterVillainBet": [
+        "fold",
+        "call17.5",
+        "raise45",
+        "jam83"
+      ],
+      "afterVillainRaise": [
+        "fold",
+        "call27.5",
+        "jam83"
+      ],
+      "afterVillainJam": [
+        "fold",
+        "call38"
+      ],
+      "omitted": "All other legal sizes and opponent responses are omitted. Optimality is only against the declared fixed policies in this menu, not full-game equilibrium."
+    },
+    "sequence": [
+      "按给定模型作决定",
+      "先按动作前信息显示比较结果",
+      "再播放所选合法分支并亮牌",
+      "判断一次输赢能否更改刚才的依据"
+    ],
+    "interpretationOptions": [
+      "仍按动作前信息与参考比较",
+      "输就是选错",
+      "赢就是选对",
+      "我不知道"
+    ]
+  },
+  "administration": "Show one stage at a time; later reveals and evidence file are teacher-side. All unknown answers on valid questions count as wrong; no persistence."
+}

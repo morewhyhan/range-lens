@@ -1,0 +1,790 @@
+{
+  "status": "complete_gross_ledger_and_structure_candidate_not_complete_strategy_lesson",
+  "reference": {
+    "article": "https://blog.gtowizard.com/dominate-the-river-in-3-bet-pots-oop/",
+    "solutionLink": "https://app.gtowizard.com/solutions?board=Ah9c2h7s4d&cussol_id=4ed7caa0-8447-4b2b-9348-697f4d8279a2&custree_id=8d398892-575c-45f0-9f37-bb826916b21d&depth=100&flop_actions=R4.2-C&gametype=Cash6m500zGeneral3betV2&gmff_depth=100&gmff_favorite=false&gmff_opening_size=gto&gmff_rake=NL500&gmff_type=general&gmfft_sort_key=0&gmfft_sort_order=desc&gmfs_solution_tab=ai_sols&history_spot=11&preflop_actions=F-F-F-R2.5-R10-F-C&ref=blog.gtowizard.com&soltab=strategy&solution_type=gwiz&stratab=strategy&turn_actions=R22.05-C",
+    "checkedOn": "2026-10-21",
+    "origin": "Public caption/link and actual inspection of two original static river charts; raw per-combo solver output unavailable.",
+    "sourceConfig": "NL500; six-player cash; 100BB",
+    "boardFromLink": [
+      "Ah",
+      "9c",
+      "2h",
+      "7s",
+      "4d"
+    ],
+    "conflict": "Prose differs in suits. Original chart color partitions support the link two-tone flop and flush-completing alternate river; no exact suit glyph transcription or per-combo policy claim.",
+    "visualReview": {
+      "file": "source-river-chart-visual-review.json",
+      "sha256": "01de3b3069c8d22f3c3e0e73fa4450c4925612387ca9fad00bfdebe379591238",
+      "originalChartsInspected": 2
+    }
+  },
+  "selectedHands": {
+    "hero": [
+      "Ac",
+      "Qd"
+    ],
+    "villain": [
+      "Ad",
+      "Js"
+    ],
+    "origin": "Author-selected legal cards for reading/showdown tasks only; no source claim about exact combination frequencies."
+  },
+  "ledger": {
+    "unit": "integer hundredths of a BB internally",
+    "rake": "Gross pot before rake; no net-rake claim",
+    "rows": [
+      {
+        "id": "post_sb",
+        "actor": "SB",
+        "action": "post",
+        "addedBB": 0.5,
+        "origin": "rule_gross_ledger",
+        "before": {
+          "street": "preflop",
+          "potBB": 0,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 100,
+            "BB": 100
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 0.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 100
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "post_bb",
+        "actor": "BB",
+        "action": "post",
+        "addedBB": 1,
+        "origin": "rule_gross_ledger",
+        "before": {
+          "street": "preflop",
+          "potBB": 0.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 100
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf01",
+        "actor": "UTG",
+        "action": "fold",
+        "addedBB": 0,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf02",
+        "actor": "HJ",
+        "action": "fold",
+        "addedBB": 0,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf03",
+        "actor": "CO",
+        "action": "fold",
+        "addedBB": 0,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf04",
+        "actor": "BTN",
+        "action": "raise_to",
+        "addedBB": 2.5,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 1.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 100,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0.5,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 4,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 0.5,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf05",
+        "actor": "SB",
+        "action": "raise_to",
+        "addedBB": 9.5,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 4,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 99.5,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 0.5,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 13.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 10,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf06",
+        "actor": "BB",
+        "action": "fold",
+        "addedBB": 0,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 13.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 10,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 13.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 10,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "pf07",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 7.5,
+        "origin": "public_link_history",
+        "before": {
+          "street": "preflop",
+          "potBB": 13.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 97.5,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 2.5,
+            "SB": 10,
+            "BB": 1
+          }
+        },
+        "after": {
+          "street": "preflop",
+          "potBB": 21,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 90,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 10,
+            "SB": 10,
+            "BB": 1
+          }
+        }
+      },
+      {
+        "id": "f01",
+        "actor": "SB",
+        "action": "bet",
+        "addedBB": 4.2,
+        "origin": "public_link_history",
+        "before": {
+          "street": "flop",
+          "potBB": 21,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 90,
+            "SB": 90,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "flop",
+          "potBB": 25.2,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 90,
+            "SB": 85.8,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 4.2,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "f02",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 4.2,
+        "origin": "public_link_history",
+        "before": {
+          "street": "flop",
+          "potBB": 25.2,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 90,
+            "SB": 85.8,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 4.2,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "flop",
+          "potBB": 29.4,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 85.8,
+            "SB": 85.8,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 4.2,
+            "SB": 4.2,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "t01",
+        "actor": "SB",
+        "action": "bet",
+        "addedBB": 22.05,
+        "origin": "public_link_history",
+        "before": {
+          "street": "turn",
+          "potBB": 29.4,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 85.8,
+            "SB": 85.8,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "turn",
+          "potBB": 51.45,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 85.8,
+            "SB": 63.75,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 22.05,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "t02",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 22.05,
+        "origin": "public_link_history",
+        "before": {
+          "street": "turn",
+          "potBB": 51.45,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 85.8,
+            "SB": 63.75,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 22.05,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "turn",
+          "potBB": 73.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 63.75,
+            "SB": 63.75,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 22.05,
+            "SB": 22.05,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "r01",
+        "actor": "SB",
+        "action": "allin",
+        "addedBB": 63.75,
+        "origin": "article_river_large_size_plus_ledger",
+        "before": {
+          "street": "river",
+          "potBB": 73.5,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 63.75,
+            "SB": 63.75,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 0,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "river",
+          "potBB": 137.25,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 63.75,
+            "SB": 0,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 63.75,
+            "BB": 0
+          }
+        }
+      },
+      {
+        "id": "r02",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 63.75,
+        "origin": "author_selected_legal_response_not_source_combo_policy",
+        "before": {
+          "street": "river",
+          "potBB": 137.25,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 63.75,
+            "SB": 0,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 0,
+            "SB": 63.75,
+            "BB": 0
+          }
+        },
+        "after": {
+          "street": "river",
+          "potBB": 201,
+          "stacksBB": {
+            "UTG": 100,
+            "HJ": 100,
+            "CO": 100,
+            "BTN": 0,
+            "SB": 0,
+            "BB": 99
+          },
+          "streetPaidBB": {
+            "UTG": 0,
+            "HJ": 0,
+            "CO": 0,
+            "BTN": 63.75,
+            "SB": 63.75,
+            "BB": 0
+          }
+        }
+      }
+    ],
+    "riverSPR": 0.8673469387755102,
+    "riverJamPotFraction": 0.8673469387755102,
+    "showdownPayout": {
+      "grossPotBB": 201,
+      "SBReceivesBB": 201,
+      "netFromHandStartBB": 101,
+      "rakeBB": null,
+      "scope": "Gross pre-rake arithmetic only; illustrative chosen showdown, not source opponent policy or net solver payout."
+    },
+    "foldPayout": {
+      "uncalledReturnedBB": 63.75,
+      "matchedPotAwardBB": 73.5,
+      "SBEndingBB": 137.25,
+      "BTNEndingBB": 63.75,
+      "BBEndingBB": 99,
+      "otherThreeEndingBB": 300,
+      "grossHandProfitSB": 37.25
+    }
+  },
+  "currentHandComparisons": [
+    {
+      "street": "flop",
+      "winner": "SB",
+      "heroCategory": "一对"
+    },
+    {
+      "street": "turn",
+      "winner": "SB",
+      "heroCategory": "一对"
+    },
+    {
+      "street": "river",
+      "winner": "SB",
+      "heroCategory": "一对"
+    }
+  ],
+  "grading": {
+    "facts": "Cards, street, actors, legal observed amounts, gross pot/stacks, price, action/terminal route.",
+    "strategy": "Not enabled for all combo decisions. Public action history does not prove best action at every prior node.",
+    "NL50": "Not a matching NL50 baseline."
+  },
+  "pending": [
+    "Exact per-combo policies/EVs and complete alternatives on each street",
+    "Matching user course and target configuration",
+    "Learner trial of the scripted first walkthrough"
+  ]
+}

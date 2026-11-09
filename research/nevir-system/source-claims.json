@@ -1,0 +1,5120 @@
+{
+  "scope": "逐行来源句段与首批人工语义复核。flags是检索提示，不是正确性判定；未审核句段不直接进入判分。",
+  "authorityContract": {
+    "purpose": "区分用户产品要求、附加课程材料、外部研究和生成设计，防止证据材料被误读成产品指令或精确答案。",
+    "precedence": ["user_requirement", "attached_course_material", "verified_runtime_evidence", "external_reference", "generated_design", "unclassified"],
+    "classes": {
+      "user_requirement": {
+        "canDecide": ["product_goal", "learner_route", "ui_complexity", "scope_inclusion", "explicitly_accepted_constraints"],
+        "cannotProve": ["strategy_correctness", "learning_outcome", "NL50_readiness"],
+        "conflictRule": "explicit_user_requirement_overrides_generated_design_but_does_not_create_missing_strategy_evidence"
+      },
+      "attached_course_material": {
+        "canDecide": ["declared_course_rule_when_text_is_explicit", "source_example_identity", "requested_simplification_candidate"],
+        "cannotDecide": ["unwritten_action", "complete_range", "GTO_equivalence", "runtime_behavior"],
+        "conflictRule": "unresolved_or_contradictory_material_is_marked_unknown_and_stops_exact_grade"
+      },
+      "verified_runtime_evidence": {
+        "canDecide": ["what_current_runtime_actually_does", "test_or_trial_observation"],
+        "cannotDecide": ["whether_current_behavior_is_the_desired_product", "strategy_truth_without_reference"],
+        "conflictRule": "runtime_observation_updates_implementation_status_not_product_goal"
+      },
+      "external_reference": {
+        "canDecide": ["algorithm_capability", "general_mechanism_support", "reference_snapshot_when_inputs_match"],
+        "cannotDecide": ["user_route", "course_policy", "license_to_copy_when_unclear", "learner_mastery"],
+        "conflictRule": "external_output_requires_matching_input_identity_and_separate_course_policy"
+      },
+      "generated_design": {
+        "canDecide": ["proposed_schema", "planned_gate", "teaching_hypothesis"],
+        "cannotDecide": ["user_preference", "source_fact", "runtime_success", "NL50"],
+        "conflictRule": "design_contract_must_name_its_evidence_and_remain_revisable"
+      },
+      "unclassified": {
+        "canDecide": [],
+        "cannotDecide": ["anything_released_to_grading"],
+        "conflictRule": "stop_and_classify_before_use"
+      }
+    },
+    "hardRules": [
+      "attached_document_instruction_is_not_user_requirement",
+      "external_repository_capability_is_not_course_answer",
+      "generated_contract_is_not_runtime_evidence",
+      "missing_or_conflicting_source_does_not_get_filled_by_plausibility",
+      "only_matching_reference_can_open_exact_strategy_grade"
+    ],
+    "currentStatus": "authority_layers_written_source_fragments_not_all_semantically_revalidated"
+  },
+  "sourceFiles": 7,
+  "sourceSections": 52,
+  "fragments": [
+    {
+      "id": "N1-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "翻后策略导论",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "本视频主要讲解如何高效学习GTO（博弈论最优）翻后策略。主讲人Neville指出，初学者在学习GTO时最容易犯两个错误：一是试图记忆所有牌面的频率和组合细节，二是只关注自己的策略而忽略对手的策略。正确的做法是简化策略，包括选择一个统一的翻牌圈下注尺寸、简化组合选择（找到启发式规则），并始终观察对手是否偏离GTO玩法。通过分析三个典型牌面（T85彩虹、J95有同花听牌、A72彩虹），展示了如何先根据GTO求解结果找出主尺寸和大致频率，然后根据对手的实际玩法（通常过牌-加注不足且弃牌过多）来调整自己的下注频率，往往可以比GTO更激进地持续下注。视频强调：使用一个次优但执行正确的尺寸，远好于使用最优尺寸但执行错误。核心结论是：不要死记硬背，要建立整体策略框架，并针对低级别玩家（NL5-NL25）的常见偏差进行加注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L7",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 7,
+        "section": "3.1 学习GTO的常见错误与正确目标",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 初学者学习GTO的常见错误：花费大量时间研究无关紧要的微小细节。例如，花太多时间试图理解为什么在某个随机牌面上应该用K8o（非同花K8）过牌-加注而不用K7o。这些细节在低级别游戏中并不重要，浪费时间和精力。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 8,
+        "section": "3.1 学习GTO的常见错误与正确目标",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 正确目标：尽可能简化策略，使其易于记忆和执行。为每种类型的牌面确定理论最优的下注尺寸，简化频率和组合选择。不需要知道为什么在某个特定情况下应该用带黑桃10的KTo过牌-加注而不用带红桃10的KTo，如果这个差异不重要的话。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 9,
+        "section": "3.1 学习GTO的常见错误与正确目标",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 总体思路：拥有一个整体概念，知道应该做什么，然后执行这个策略，而不是试图记住所有东西然后搞砸具体牌面。",
+      "flags": [
+        "绝对表述需核定作用范围"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L11",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 11,
+        "section": "3.2 第一个错误：试图记忆所有频率和组合",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 拿一个单次加注底池的例子：按钮位加注，大盲位跟注。翻牌面随机选T85彩虹（10-8-5不同花）。从按钮位看，GTO结果已经是一团乱麻：有1/3底池、2/3底池和超池下注三种尺寸，根本无法记住。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L12",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 12,
+        "section": "3.2 第一个错误：试图记忆所有频率和组合",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 正确做法：简化，找出一个单一的尺寸。看到有小注、超池注和中注时，选择中间值，比如66%底池的持续下注尺寸。重要的是：如果你用一个不好的尺寸但正确执行策略，永远好于用一个好尺寸但错误执行策略。例如，想用1/3底池持续下注策略且执行得很好，就比用超池注但不知道怎么做要好。选择哪个尺寸并不太重要，中间值通常不错且容易执行。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 13,
+        "section": "3.2 第一个错误：试图记忆所有频率和组合",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 对于T85这种干燥牌面，选择66%持续下注，并且对大多数类似牌面（如T74、T72）使用相同策略。对于T56（连牌），会略有不同，但很接近。对于T92，因为有很多KQ等牌，也会不同，但依然接近。不要试图记忆每个牌面，看到T85就知道如何玩所有类似干燥牌面。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 15,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 使用66%持续下注策略，查看频率和组合。发现应该60%的时间持续下注。找出哪些组合强烈想下注，哪些强烈想过牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 16,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 所有两手高牌（KQ、KJ等）强烈想下注，因为它们虽然有摊牌价值不高，但是很好的诈唬候选：可以对倒对手的牌（如口袋对2），迫使对手弃掉更好的牌（如A9），并且自己面对顶对（10X、8X、5X）有权益。所有这样的牌都强烈想下注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 17,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- A高牌也强烈想下注。很多人教练时发现学员倾向于过牌A高，认为有摊牌价值不需要诈唬。但实际上A高是很好的诈唬候选：阻断A10、A8、A5，另一张牌提供权益，还有后门听牌。例如用A4下注大注，可以让对手弃掉口袋对2和A7o（胜过你的牌），却让对手跟注QJ、J9、97等更差的牌。能让对手弃掉更好的牌并跟注更差的牌，通常意味着这手牌很喜欢下注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 18,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 同花手牌：更倾向于下注一张高牌加上后门顺子和后门同花。例如Q7总是下注，但可以简化：如果Q7是黑桃（没有后门同花），就永远不下注；如果是红桃（有后门同花和后门顺子），就是很好的下注候选。不要纠结于为什么Q7黑桃和Q6黑桃不同，这类细节不重要。简化成：总是下注有后门同花的，永远不下注没有后门同花的。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L19",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 19,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 此外，6X和7X也强烈想下注，可能是因为对手会用很多67、69、68、64等牌跟注（漂浮），下注可以阻断这些组合。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 20,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 也有很多直观的过牌牌，比如口袋对7，显然应该过牌。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 21,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 通过上述简化，避免了第一个错误：没有试图记忆所有频率和组合，而是有了整体概念并找到了启发式规则。现在知道了如何玩所有干燥的10高点牌面，知道主要尺寸和大多数想下注/想过牌的组合。",
+      "flags": [
+        "绝对表述需核定作用范围"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 23,
+        "section": "3.4 第二个错误：只关注自己策略，忽略对手策略",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 在掌握了干燥T85牌面后，不能就此满足。必须始终观察对手对你的策略的反应。设想你在NL5/NL10/NL25级别打牌，你在T85翻牌下注2/3底池。你的对手会按照GTO那样行动吗？他会用Q9o、QJo、65o、64、74等牌过牌-加注吗？永远不可能达到GTO要求的10%过牌-加注频率。他不会用QTs过牌-加注，可能会用A10，但总体不会。他可能不会用KQ漂浮，而是过度弃牌KQ、AJ、口袋对6等。因为当你对10高牌面下大注时，手持口袋对6跟注并不直观。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 24,
+        "section": "3.4 第二个错误：只关注自己策略，忽略对手策略",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 核心问题：你的对手是否这样玩？大多数情况下不。这意味着什么？如果对手弃牌过多且过牌-加注不足，你就不应该只下注60%的持续下注，而应该下注更多。在NL5和NL10/25级别，针对普通玩家，你应该明显下注超过60%。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 25,
+        "section": "3.4 第二个错误：只关注自己策略，忽略对手策略",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 证明方法：不需要AI求解器来节点锁定（因为大多数人没有），但可以通过猜测。看看对手的策略，问自己“普通玩家会这样玩吗？”大多数时候答案是否。于是你可以增加持续下注频率。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 26,
+        "section": "3.4 第二个错误：只关注自己策略，忽略对手策略",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 尝试手动模拟节点锁定：假设他过度弃牌（多弃掉KQ、KJ、AJ等），并且过牌-加注更少（从不使用Q9、Q10、J7、65、64等过牌-加注）。只做了轻微调整（弃牌多3%，过牌-加注少2%），结果按钮位的持续下注频率从60%上升到80%。这说明在对手偏差下，你可以大幅增加下注频率。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 28,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 翻牌J95有同花听牌，按钮位对大盲位。同样GTO结果混乱：有低频1/3、66%和超池注。为了简化，仍使用66%尺寸。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 29,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 简化组合：所有KQ、K10等卡顺牌喜欢下注。AJo总是价值下注，偶尔过牌但大多可下注。对于J7，处于中间，可以简化成：J9、J8及以上价值下注，J7及以下总是过牌。这更容易记忆。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 30,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 看诈唬牌：K7、K8。应该总是用带方片的（后门同花）下注，没有方片的总是过牌。即使GTO要求K7红桃黑桃20%下注，但忽略也不会有问题。同样简化：有方片就下注，没有就过牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L31",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 31,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 确定组合后，观察对手反应。当使用66%持续下注时，GTO要求对手过牌-加注9%，跟注46%。但实际中，对手会用54s或5X跟注吗？如果下注66%，他拿着54s会直接弃牌。他可能过度弃牌这些牌，也可能弃掉一些AQ。可能大部分A10也会弃掉，除非是带A方片的A10。同花听牌手牌（方片）总是跟注。他过牌-加注不足：可能不会用108、Q8、K10、QJ等牌过牌-加注。总体感觉他弃牌略多，过牌-加注略少，但偏离不太大。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 32,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 在简化后（只使用66%尺寸），GTO要求过牌50%、下注50%。但猜测对手偏差后，可以增加持续下注频率10-20%，比如从过牌50%改为过牌30%。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 33,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 然后使用AI求解验证：在大盲位检查、按钮位下注的情况下，GTO平衡下注约50%。调整对手后（让他多弃牌3%、少过牌-加注2%），按钮位下注频率上升到68%。再次证明可以增加下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 34,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 结论：所有牌面都可以简化组合、简化尺寸和简化频率，因为对手偏差让你可以更激进地下注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L36",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 36,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 翻牌A72彩虹（无同花），按钮位开池，大盲位跟注。主要尺寸是1/3底池，也有大尺寸，但简化成1/3（甚至25%底池可能更好）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L37",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 37,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 组合分析：大多数A高喜欢下注。KQ、KJ、QT等不特别喜欢下注，但牌力越低越喜欢下注，因为需要保护。例如口袋对10，能让对手弃掉K9o是很好的结果（剥夺权益），所以口袋对8、9喜欢下注，但口袋K不需要保护。一些极低踢脚牌喜欢下注：比如Q3有后门顺子可能性，而下注Q3可以让对手弃掉QTo等更好的牌。高踢脚牌（比如QJ）反而倾向于过牌，因为它们的摊牌价值更高。7X为了保护而下注，可以被差牌跟注（很多口袋对和K高）。但宽牌（broadway）不太想下注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 38,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 所有带后门顺子和后门同花的手牌喜欢下注：例如J9、J8带后门同花。如果转牌是10、9、7，你有卡顺，可以超池下注效果很好。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 39,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 简化规则：手持KQ永远不下注，手持Q3永远下注。这完全没问题。",
+      "flags": [
+        "绝对表述需核定作用范围"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 40,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 现在观察对手在NL10级别是否这样玩。他会用89s过牌-加注吗？不会发生。他会用85吗？不会。67？不会。65？绝对不会。64？一点也不。所有卡顺牌也不会足够多地过牌-加注。对2（如22）作为诈唬过牌-加注（有阻断和权益）也不大可能。GTO要求过牌-加注约9%，实际不会发生。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L41",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 41,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 对手会过度弃牌哪些手牌？GTO要求飘浮（跟注）95s。这手牌你永远不会跟注。甚至85s也是。可能96s会，但你会过度弃牌。Q5s有后门同花和后门顺子，你也不会跟注。K5可能会跟注，但Q3、Q4、Q5不会。总体对手过牌-加注不足且漂浮不足。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 42,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 因此可以猜测：你可以比GTO更宽地下注。GTO平衡时下注约50%（针对1/3底池）。使用AI求解验证：A72彩虹面，大盲位应该用20%甚至40%下注，但简化用1/3。GTO平衡下注约50%。但对手实际上不会用K5等牌漂浮，过牌-加注也更小。调整节点：让对手过牌-加注更小（75%底池而不是90%），频率更低，并且过度弃牌某些牌。结果按钮位几乎可以范围下注（接近100%）。所以对A72彩虹面，你可以用1/3底池下注整个范围。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L44",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 44,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "本视频的核心价值在于转变学习GTO的思维模式：从死记硬背转向建立简化框架，并根据实战对手的偏差进行动态调整。易错点主要有两个：一是沉溺于微小细节（如某手牌某花色的一点点频率差异），二是忽略对手实际玩法。适用场景是低级别线上扑克（NL5-NL25），因为该级别玩家往往过度弃牌且过牌-加注不足，使得更激进的持续下注策略有利可图。关键步骤总结如下：",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L45",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 45,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 第一步：为所选翻牌面确定一个主下注尺寸（如1/3、66%或超池），并坚持使用它。尺寸不是最重要的，执行正确才重要。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 46,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 第二步：根据GTO求解结果或经验，识别出哪些组合强烈想下注（如高牌诈唬候选、后门听牌、需要保护的中等牌），哪些组合强烈想过牌（如顶对顶踢脚有时需要保护但高牌摊牌价值高的可过牌）。建立启发式规则（如：带后门同花的才下注，否则过牌）。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L47",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 47,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 第三步：主动思考你的对手（普通玩家）是否会按照GTO行动。通常他们不会：他们漂浮不足、过牌-加注不足、弃牌过多。因此你可以大幅增加自己的下注频率，甚至可以范围下注某些牌面。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L48",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 48,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "- 第四步：在实战中尝试调整，并利用复盘工具（如AI求解器）验证你的猜测是否合理。不需要精确节点锁定，估算偏差方向即可。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N1-L49",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 49,
+        "section": "4. 总结与补充",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "text": "这种方法既节省学习时间，又能针对低级别玩家获得更高的期望收益。记住，在低级别游戏中，一个执行良好的简化策略远胜于一个理论最优但执行糟糕的复杂策略。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "有利位置3bet底池的理论打法——第一部分",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "本视频主要讲解在3bet底池中，作为有利位置（in position）的玩家应该如何制定翻牌圈的下注策略。视频首先指出了两个常见错误：一是在各种牌面结构上滥用小尺寸范围下注（比如1/3底池），导致翻牌后范围过弱、容易被加注、转牌和河牌失去攻击性；二是错误地在湿润牌面上下大注以求“保护”，而在干燥牌面上却下小注。随后，视频通过GTO Wizard的数据展示了在不同牌面结构下应该采用的最优下注尺寸（如25%、40%、67%等），并指出在干燥的高牌面（如K高、Q高）上通常可以小尺寸高频下注，而在连接性弱的中低牌面（如10高干燥面）上反而应该使用大尺寸下注，因为持有高对时拥有坚果优势。视频还提出了两个核心问题来帮助玩家自行判断下注尺寸：第一，在这个牌面上我是极化下注还是范围下注？第二，如果我下大注并得到跟注，我是否感到高兴？通过回答这两个问题，玩家可以理解为什么在湿润牌面上应该下小尺寸以迫使对手保留低胜率牌，而在干燥牌面上可以下大尺寸因为对手不得不跟注许多被主导的牌。视频最后通过多个例子进行了快速测试，并预告下一部分将讨论如何针对鱼玩家进行剥削以及转牌圈的打法。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L7",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 7,
+        "section": "3.1 常见错误一：在所有牌面上都使用小尺寸范围下注",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 很多玩家无论是位置还是位置外，都会在几乎所有翻牌圈下注1/3底池。这是一个严重错误，因为这会导致你的范围在翻牌下注后变得非常弱，很容易被对手过牌加注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 8,
+        "section": "3.1 常见错误一：在所有牌面上都使用小尺寸范围下注",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 当你使用小尺寸范围下注后，你的转牌范围会变弱，你会缺乏攻击性，不知道该如何处理。结果就是在转牌你过多地过牌，河牌也不会进行足够的诈唬，最终输给对手的小对子（比如口袋对）。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 9,
+        "section": "3.1 常见错误一：在所有牌面上都使用小尺寸范围下注",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 你需要寻找其他线路和下注尺寸，而不是仅仅依赖1/3。此外，小下注让对手太容易实现其权益。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L11",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 11,
+        "section": "3.2 常见错误二：在湿润牌面上大下注，在干燥牌面上小下注",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 许多玩家在像 J-9-8 带同花听牌的湿润翻牌上会下注很大，因为他们认为需要保护自己的牌；而在像 10-4-2 彩虹的干燥牌面上却下注很小，因为他们觉得不需要保护。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L12",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 12,
+        "section": "3.2 常见错误二：在湿润牌面上大下注，在干燥牌面上小下注",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 基于“保护”理由来下注通常不是一个好论据，会导致很多错误。不要试图在大多数底池中为了保护而下大注，否则你会犯很多错误。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 14,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 以按钮对抗关煞位的3bet底池（100bb深）为例。在高牌面上，大多数时候你应该使用小尺寸下注（25%或1/3底池），并且频率非常高（接近范围下注）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 15,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例如，干燥的K高牌面（如K-5-2彩虹），按钮应该以高频小尺寸下注，比如25%底池。即使你拿的是AQ或口袋对J这种中等牌力，也可以用这个尺寸下注，因为你能被更差的牌跟注（如AJ、AT、JT、口袋10、口袋9等），同时还能拒绝一些权益（比如对手的A5s有后门听牌）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 16,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 对于K-10点牌面，下注尺寸并不重要，1/3、25%或40%都可以，频率可以接近100%。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 17,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 对于Q高牌面，策略与K高类似，但频率略低一些。例如Q-10-5，可以用25%下注且接近范围下注。Q-5点牌面（较干燥）则需要40%下注，并且仍有不少过牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 18,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 对于J高牌面，你会看到更多40%下注而非25%。例如J-8彩虹，应该使用40%下注且接近范围下注。而J-8带同花听牌时则变成25%小下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 20,
+        "section": "3.4 下注尺寸选择：10高牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 在10高且连接性弱的干燥牌面上（如10-7-2彩虹），你应该使用大尺寸下注（如66%或2/3底池），频率依然很高。因为你有所有的高对（JJ+）和顶对（A10）等坚果牌，对手多数时候只有中对或底对，你的优势巨大。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 21,
+        "section": "3.4 下注尺寸选择：10高牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 但一旦牌面变得有连接性或带同花听牌，下注尺寸就会变小。例如10-9-8这种连接面，应该用25%下注；10-8-2彩虹是40%下注；10-7-2彩虹则是66%大下注。如果加上同花听牌（10-7-2带同花），下注尺寸又会降到40%左右。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 23,
+        "section": "3.5 下注尺寸选择：低连接干燥牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 对于低连接性干燥牌面（如8-4-2彩虹、9-5-2彩虹、6-4-4等），你应该使用大尺寸下注（如67%），因为你有高对优势，对手极少有两对、顺子等强牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 24,
+        "section": "3.5 下注尺寸选择：低连接干燥牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 原因是你持有口袋J+时几乎总是坚果（仅偶尔遇到暗三条），你可以大下注榨取价值。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 25,
+        "section": "3.5 下注尺寸选择：低连接干燥牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 但若牌面有同花听牌，例如8-5-2带同花听牌，下注尺寸就会变小（如40%），因为对手听牌有很高权益。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L27",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 27,
+        "section": "3.6 下注尺寸选择：低连接湿润牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 对于低连接湿润牌面如9-8-5带同花、7-4-3带同花、6-4-5带同花，情况完全不同。对手有大量成牌+听牌组合（对子加卡顺、对子加同花听牌、两对、三条、顺子等），你既不能下大注（否则会孤立自己面对强牌），也不能过高频率下注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 28,
+        "section": "3.6 下注尺寸选择：低连接湿润牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例如翻牌4-6-7（低连接湿润），按钮应该过牌100%（假设关煞位非常频繁过牌）。因为如果开始下注，对手会频繁过牌加注，你不得不放弃很多牌，无法实现权益。正确的做法是全部过牌，等待转牌，例如转牌来J，你有时会击中顶对，对手也会继续过牌，你可以用KQ等再次过牌，最终实现权益。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 30,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- **第一个问题：在这个牌面上，我是极化下注还是范围下注？** 要回答这个问题，你需要可视化你的整个范围，问自己：“这里有没有一些中等牌力的牌仍然想为了价值和保护而下注？”",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L31",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 31,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例子：K-Q-2彩虹。你有AQ、口袋J等中等牌力牌，它们可以用小尺寸下注被更差的牌跟注，同时拒绝对手的权益，因此你可以用25%小尺寸进行范围下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 32,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例子：8-4-2彩虹。你几乎没有中等牌力牌：要么是超强牌（口袋10+），要么是纯高牌（AK、AQ等）。因此你应该极化下注，用大尺寸（67%）下注超强牌，用高牌作为诈唬，同时中等牌力牌（如口袋6、口袋7、A4）则高频过牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 33,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- **第二个问题：如果我下大注并得到跟注，我是否感到高兴？** 这个问题关乎你的权益。如果你下大注，对手会弃掉低权益牌，只跟注高权益牌，那么你的权益在跟注后会大幅下降，你就不应该下大注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 34,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例子：J-9-8带同花听牌。如果你用AA下大注（75%），对手会弃掉口袋4等几乎没有权益的牌，只跟注JT、K10、109等有大量听牌的牌，AA的权益会下降很多（例如对109只有55%左右）。因此你应该下小注（25%），让对手不得不跟注一些低权益的牌（如口袋6），从而保持你的权益优势。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 35,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 例子：10-5-2彩虹。如果你用AA下大注（75%），对手仍然必须跟注很多被主导的牌（如J10、口袋9、口袋8、A5s等），因为这些牌没有听牌可以弃牌，否则会过度弃牌。你很高兴被这些牌跟注，因此你可以下大注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L36",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 36,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 因此，为什么在10-7-2彩虹上下大注，而在10-7-2带同花听牌上下小注？答案在于你的权益：当牌面有同花听牌时，下大注会让对手只跟注听牌，它们有38%的权益，而你更希望对手跟注口袋4等低权益牌，所以需要用小尺寸迫使对手跟注这些牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 38,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- J-10-2（高牌连接）：应该用小尺寸25%进行范围下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 40,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 10-10-5彩虹（对子牌面）：不太确定，但GTO显示40%中等大小。如果下太大，对手可能会太多10x牌，对你不利。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L41",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 10-6-2彩虹：67%大下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 2-5-8（单调牌面）：总是25%小下注，因为如果你用AA下大注并得到跟注，对手的听牌有很高权益。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L44",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 44,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- K-Q-J（高牌连接，有很多卡顺）：应该用25%小尺寸范围下注，因为如果下大注，对手只会跟注高权益牌如顶对+听牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L45",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 45,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 3-5-6带同花听牌（低连接湿润）：由于关煞位很少donk，按钮应该过牌全部范围，不建议下注。如果真的想下注，应该用大尺寸低频下注（如用10s、Jacks进行保护）。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 46,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 10-9-5彩虹：接近40%或67%，但GTO显示40%中等尺寸，因为你用KJ、KQ等牌下注时，它们有50%权益，不需要下太大来获得全权益。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L48",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 48,
+        "section": "4. 总结与补充",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 本视频的核心价值在于打破了许多玩家“湿润牌面下大注保护、干燥牌面下小注”的直觉误区，提供了基于GTO的实用下注框架。通过记住两种典型场景（可范围下注的小尺寸 vs 极化下注的大尺寸）以及两个自问问题，你可以在不依赖GTO Wizard的情况下快速判断大多数翻牌面的最佳下注尺寸。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L49",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 49,
+        "section": "4. 总结与补充",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 易错点：一是忽略自己范围的构成，以为所有牌面都能用同一个尺寸；二是错误地将“保护”作为下注理由，实际上应该在湿润牌面下小注以诱导对手保留低权益牌，在干燥牌面下大注因为对手不得不用被主导牌跟注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N2-L50",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 50,
+        "section": "4. 总结与补充",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "text": "- 适用场景：主要适用于有利位置（按钮）对抗关煞位或更早位置的3bet底池，筹码深度100bb。对于不利位置或更深/更浅筹码，需要调整。此外，本视频仅讨论翻牌圈，转牌和河牌策略将在下一部分（以及剥削性打法）中讲解。练习时可以先记住常见牌面的参考尺寸（如K/Q高25%、10高干燥67%、低连接干燥67%、低连接湿润小尺寸或过牌），然后在实战中结合两个问题微调。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "2.3 有利位置3bet底池—第二部分：如何利用人群倾向剥削3bet底池",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "本视频延续上一部分的内容，聚焦于在3bet底池中按钮位对阵cutoff位的场景（有效筹码100BB），利用Mobius Poker提供的人群统计数据，分析不同持续下注尺寸下对手cutoff位的错误模式。视频指出，人群在3bet底池中处于不利位置时，面对任何持续下注尺寸都偏离了GTO策略，尤其是面对大尺寸下注时错误更明显——他们过多地跟注而严重缺乏过牌加注。基于这一发现，视频展示了如何利用GTO Wizard在多种翻牌结构上实施范围式持续下注（即使GTO仅建议部分下注），从而轻松实现权益并剥削对手。核心结论是：只要翻牌结构对自己有利（不涉及极低连接性面如4-5-6彩虹），就可以采用大尺寸（约67%底池）的范围下注，或者小尺寸的范围下注，而无需过多思考阻挡牌，将思考压力转移到转牌圈。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L7",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 7,
+        "section": "3.1 人群统计数据揭示的错误模式",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 使用的统计数据来源：Mobius Poker，针对cutoff位在3bet底池中面对按钮位持续下注的反应。数据展示了cutoff位根据下注尺寸的不同而犯下的最大错误。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 8,
+        "section": "3.1 人群统计数据揭示的错误模式",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 关于130%底池下注（超池下注）：GTO要求cutoff位在40%的情况下过牌弃牌，但实际只做到了37%。这意味着你不能过于宽泛地持续下注，因为对手弃牌不够多。但需要同时检查过牌加注频率：如果对手过牌跟注过多但过牌加注不足，你仍然可以宽泛下注。实际情况是：对手过牌跟注50%（GTO为42%，多8%），过牌加注5%（GTO少5%），导致每次下注时被过牌加注的概率降低27%，这使得你能够非常容易地实现权益。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 9,
+        "section": "3.1 人群统计数据揭示的错误模式",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 关于50%底池下注（半池下注）：对手过牌弃牌比GTO多1%，近似GTO；过牌跟注48%（GTO 41%，多7%）；过牌加注11%（GTO 18%，少7%，即减少近40%）。这是一个非常大的错误，需要加以利用。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L10",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 10,
+        "section": "3.1 人群统计数据揭示的错误模式",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 关于70%底池下注（约2/3底池）：对手过牌弃牌过多4%，过牌跟注多6%，过牌加注少9%。具体来说，对手的过牌加注频率降低了54%！这意味着你可以用所有牌持续下注，对手要么跟注（你看到转牌并继续施加压力），要么弃牌（你直接拿下底池）。人群在面对大尺寸下注时犯的错误更大。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L12",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 12,
+        "section": "3.2 利用GTO Wizard制定剥削策略",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 通过GTO Wizard展示按钮位对阵cutoff位的3bet底池，翻牌为10-2-2彩虹面。GTO均衡下，使用67%的大尺寸下注，你可以用90%的范围下注（接近范围下注）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 13,
+        "section": "3.2 利用GTO Wizard制定剥削策略",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 关键是要观察对手面对大尺寸下注时的策略：GTO中对手应该宽泛地过牌加注，并且过度弃掉所有口袋对（如66），而用所有两高张（如KJ红心，即使没有后门同花听牌）过牌加注。但现实中，没有人会这样打——他们会让口袋对跟注太多，而让随机两高张过牌加注不足（即使GTO要求7%的过牌加注频率，实际远低于此）。因此，你可以对翻牌进行范围下注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 14,
+        "section": "3.2 利用GTO Wizard制定剥削策略",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 若没有GTO Wizard，只需观察对手反应：对手会100%用JT同花、QT同花在10-2-2面面对大尺寸下注时过牌加注吗？不会。会频率性过牌加注10X吗？不会。会用所有诈唬牌过牌加注吗？不会。会过多跟注口袋对但过牌加注不足吗？100%正确。据此你可以提高下注频率。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 16,
+        "section": "3.3 具体翻牌结构示例一：8-3-2彩虹面",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- GTO建议使用大尺寸下注，但只下注50%的频率。观察cutoff反应：他会用8-T同花过牌加注吗？不会。会用A-5过牌加注吗？不会。会用口袋9过牌加注吗？不会。总之，对手过牌加注不足，而他应该只弃牌40%的时间。在调整中，让对手多弃牌5%，并且过牌加注少了8个百分点（已经很乐观）。因此，这里可以接近范围下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 18,
+        "section": "3.4 具体翻牌结构示例二：9-7-3彩虹面",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 同样，对手应该过牌加注和过牌跟注两高张，应该过牌加注口袋6、8-9同花等。但现实中他们从不这样做。调整后，让对手多弃牌3%（很少），过牌加注少9%。对手仍然过牌跟注过多，但因为过牌加注不足，你可以轻松实现权益。比如你拿着KJ红心，对手本该用口袋6过牌加注迫使你弃牌，但他却选择跟注，转牌发出10、J、K、Q、A，你再次下注，他就得弃牌。因此，你可以把下注频率从GTO的57%提高到接近90%。结论：在这种纹理上，直接范围下注2/3底池，然后开始在转牌思考。在翻牌不需要浪费精力思考阻挡牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 20,
+        "section": "3.5 关于小尺寸持续下注的翻牌",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 前三个翻牌（10-2-2、8-3-2、9-7-3）即使在均衡下也是高频下注面，你可以直接范围下注，即使面对强对手也不是错误。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 21,
+        "section": "3.5 关于小尺寸持续下注的翻牌",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 考虑A-K-2彩虹面：GTO建议用小尺寸高频下注。观察cutoff反应：GTO中他应该90%的时候过牌加注。但现实中他绝不会用卡顺听牌、A-X、K-X过牌加注，比如K-9同花、A-J同花等奇怪组合。因此，让对手过牌加注不足后，按钮位可以范围下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 23,
+        "section": "3.6 示例三：J-9-7带同花听牌面",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- GTO建议下注40%底池（频率72%）。观察对手反应：GTO要求过牌加注21%，但现实中他不会过度弃牌（只有口袋对会弃，其他多少有点东西），但过牌加注肯定不足。比如他不会用K-Q、8-9同花、7-8、A-8同花等过牌加注。设置对手过牌加注减少至10%左右，然后你就可以范围下注。这与统计数据一致：对手跟注过多，过牌加注不足。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 25,
+        "section": "3.7 总结思路与后续预告",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 除非翻牌是4-5-6这样的低连接彩虹面（需要高频率过牌），否则只要你拥有翻牌优势，就直接范围下注整个翻牌，无论是小尺寸还是大尺寸。这是游戏中最简单的剥削方式。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 26,
+        "section": "3.7 总结思路与后续预告",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "- 下一视频将讲解如何在转牌圈游戏：当你在翻牌范围下注后被跟注，很多学生不知道如何处理转牌，感觉被剥削（因为放弃太多手牌）。下期将展示在3bet底池中利用翻牌剥削后，如何正确地打转牌。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N3-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+        "line": 28,
+        "section": "4. 总结与补充",
+        "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368"
+      },
+      "text": "本视频的核心价值在于提供了一个简单而高效的翻牌剥削策略：在3bet底池中，当作为有利位置（按钮位）时，基于人群普遍缺乏过牌加注的倾向，你可以在大量翻牌结构上实施范围式大尺寸或小尺寸持续下注，从而最大化权益实现并减少决策复杂度。易错点在于：不能盲目用于所有翻牌——比如极低连接性面（4-5-6彩虹）需要谨慎，此时对手的过牌加注频率可能更高或结构不利于你。另外，即使采用范围下注，转牌圈的计划必须跟上，否则容易陷入被动。适用场景：中高额现金局或锦标赛中，面对普通玩家或常规reg时效果显著；对于极高水平对手，需要调整策略。建议结合下一期转牌技巧使用，形成完整的3bet底池剥削体系。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "3bet底池的转牌打法",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "本视频延续前两集内容，重点讲解在3bet底池中，当我们在翻牌采用范围下注（range c-bet）后，转牌圈应该如何调整策略。核心原因是：对手在翻牌不会足够多地过牌加注（check raise）也不会足够多地浮牌（float），导致我们翻牌下注后已经赚取了大量EV，但对手跟注后他的范围变得更强，而我们的范围依然包含大量未提升的垃圾牌。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L5",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 5,
+        "section": "2. 核心摘要",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "因此，理论上对手应该在转牌大量进行领先下注（donk），但实际中他们几乎从不这样做。这意味着我们应该在转牌提高过牌频率，并采用极化下注（polarized betting）策略，主要使用大尺寸下注。同时，我们可以利用对手在转牌过度弃牌（over fold）的漏洞，在空白牌（brick）上高频第二枪（second barrel）。视频还通过Mopius Poker的统计数据展示了不同下注尺寸下对手的弃牌率变化，并给出了简化策略：翻牌用1/3底池范围下注后，转牌遇到高牌（J、Q、K、A）就第二枪，遇到低牌（3-10）就100%过牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 8,
+        "section": "翻牌范围下注带来的问题",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 由于对手在翻牌不会充分过牌加注和不会充分浮牌，我们可以在翻牌使用范围下注（即用全部手牌下注）。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 9,
+        "section": "翻牌范围下注带来的问题",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 但问题在于：对手跟注后，他已经弃掉了所有垃圾牌（如AJo、KQo等），而我们的范围仍然保持100%——包括大量未击中牌面的高张、垃圾牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L10",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 10,
+        "section": "翻牌范围下注带来的问题",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 举例：翻牌T♠ 2♠ 2♦，我们下注后，对手跟注的范围包含顶对、中对、带卡顺听牌的对子等，而我们还剩下很多Q♥ 7♣之类的牌。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L11",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 11,
+        "section": "翻牌范围下注带来的问题",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 结果：对手在转牌拥有巨大的胜率优势。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 13,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 推论一：对手应该在转牌大量领先下注（donk），尤其是低牌，以惩罚我们的翻牌范围下注。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 14,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 举例：小盲对关煞位的3bet底池，翻牌T♠ 2♠ 2♦，小盲下注66%底池，关煞位跟注，转牌7♦。理论上关煞位应该用几乎整个范围进行小尺寸领先下注，因为小盲有很多高张需要弃牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 15,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 但实际上，对手永远不会这样打。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 16,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 推论二：既然对手不领先下注，我们必须在转牌高频过牌，因为我们有许多未提升的垃圾牌，而对手有大量顶对、对子+卡顺等。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 17,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 此时应采用极化下注：我们的强牌（超对以上）仍然想下注，但需要配合一些诈唬牌，通常使用大尺寸（例如70%-100%底池）。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 18,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 推论三：我们应该在转牌做大量过牌（check back）。因为对手不donk，我们就应该高频过牌。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 20,
+        "section": "实际对手行为与调整（Mopius Poker数据）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 统计数据来自Mopius Poker，展示了关煞位在转牌面对小盲第二次下注时的策略。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 21,
+        "section": "实际对手行为与调整（Mopius Poker数据）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 以小盲视角：小盲翻牌范围下注1/3底池，转牌再次下注1/3底池，对手理论上应该只有26%的过牌-弃牌率，但实际上达到了35%（过度弃牌9%）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L22",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 22,
+        "section": "实际对手行为与调整（Mopius Poker数据）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 当转牌下注尺寸为50%时，对手仍然过度弃牌；当转牌下注70%时，过度弃牌12%；当转牌下注100%时，过度弃牌5%。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 23,
+        "section": "实际对手行为与调整（Mopius Poker数据）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 结论：在空白牌上应该高频第二枪，因为对手过度弃牌严重。1/3下注是可行的，但作者更倾向于使用极化策略（大尺寸）。50%也很好，70%则是最佳尺寸（获得最多弃牌）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 24,
+        "section": "实际对手行为与调整（Mopius Poker数据）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 但注意：对手的过牌-加注频率偏高（比如理论上应为17%，实际21%），他们会快速玩强牌。因此我们需要极化策略——如果拿到不错的同花听牌，可能更适合过牌，因为再次下注会被加注而被迫弃牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 26,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 在大多数空白牌（如K♠ T♥ 5♣翻牌，转牌2♦）上，应该高频大尺寸第二枪（接近GTO）。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L27",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 27,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 例子：K♠ T♥ 5♣翻牌，转牌2♦，GTO也会高频第二枪。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 28,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 同样，Q♠ T♥ 5♠翻牌（同花听牌面），转牌2♦，也适用。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 29,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 对于A♠ 7♥ 2♦翻牌，转牌2♦，我们大尺寸下注，对手会弃掉所有非A牌，我们可以在河牌放弃，利润来自翻牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 30,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 当听牌（同花或顺子）在转牌完成时，需要降低第二枪频率，并用小尺寸。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L31",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 31,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 原因：我们翻牌范围下注时，包括所有同花听牌组合（比如A9s），但对手会弃掉这些牌。他跟注后，当转牌完成听牌时，他拥有同花的比例远高于我们（因为他只保留了能跟注的牌）。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 32,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 数据验证：K♠ T♠ 5♠翻牌，转牌9♠（完成同花），我们只能以40%频率第二枪，尺寸较小；而转牌8♣（空白）则可以以66%频率大尺寸下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 33,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 另一例：J♥ T♠ 2♦翻牌，转牌9♦（完成顺子听牌），对手应donk但不会，我们只能以40%频率小尺寸下注；而转牌5♣（空白）则可以高频大尺寸。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 35,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 当翻牌使用大尺寸（如2/3底池）范围下注时，转牌策略不同。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L36",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 36,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 例如：9♦ 6♠ 2♣彩虹翻牌，我们大尺寸下注，对手应该过牌-加注15%，但实际只有10%左右且弃牌过多。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L37",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 37,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 转牌J♣（高牌），我们应该高频大尺寸第二枪。对手本应加注一些组合（如KQ、Jx），但不会，而且应该100%跟注65s，但实际会过度弃牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 38,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 在空白牌（如转牌2♦）上，对手仍应donk，但不会，所以我们应该降低第二枪频率。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 39,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 在低牌（如5、6、7、8、T）上，对手应该高频donk，甚至范围donk。我们此时应该100%过牌，让对手在河牌继续过牌，我们可以选择诈唬或摊牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 40,
+        "section": "翻牌大尺寸下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 这些低牌为对手提供了很多卡顺、两对、暗三条等，我们的胜率劣势很大，因此过牌是最佳选择。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 42,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 作者给出一个简单易行的策略（针对翻牌1/3范围下注）：",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 43,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 当转牌是高牌（J、Q、K、A）时，100%第二枪。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L44",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 44,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 当转牌是低牌（3、4、5、6、7、8、9、10）时，100%过牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L45",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 45,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 这个策略非常有效，因为翻牌已经赚到了钱，不需要在转牌想太多。河牌则凭直觉偶尔诈唬。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 46,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 核心观点：你的EV主要来自翻牌。对手在翻牌不充分过牌加注和不充分跟注已经犯了巨大错误，所以翻牌下注已经为你创造了大部分利润。转牌和河牌不需要过度诈唬，尤其是当你面对一个很强的范围时。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L48",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 48,
+        "section": "4. 总结与补充",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 本视频的核心价值在于揭示了3bet底池中翻牌范围下注后的转牌攻防逻辑：由于对手的被动错误，我们翻牌已经盈利，转牌应更多利用对手的过度弃牌和缺乏领先下注来调整。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L49",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 49,
+        "section": "4. 总结与补充",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 易错点：不要在听牌完成的转牌上盲目攻击，因为对手范围中听成牌的比例可能比你高；也不要因为害怕被剥削而在所有转牌上放弃，实际上对手过度弃牌严重，可用大尺寸第二枪获取额外利润。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L50",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 50,
+        "section": "4. 总结与补充",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 适用场景：适用于线上低级别或中级别常规桌，对手普遍翻牌过少过牌加注、翻牌跟注过多垃圾牌、转牌不会领先下注。高级别或更激进的对手可能需要调整。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N4-L51",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 51,
+        "section": "4. 总结与补充",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 补充建议：结合前两集视频（翻牌尺寸选择、提高翻牌下注频率的原因）一起学习效果更好；实际打牌时可以借助软件（如Mopius Poker）或自身数据查看对手在转牌的弃牌率，确认是否存在过度弃牌漏洞。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "不利位置3bet底池的玩法",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "本视频系统讲解了在3bet底池中，处于不利位置（例如小盲位对抗按钮位）时如何调整下注策略。核心观点是：由于位置劣势，必须使用比有利位置更大的下注尺寸，否则会被对手轻松跟注并剥夺自身权益。视频提供了不同牌面结构对应的具体下注尺寸建议，并指出高频过牌-加注（check-raise）才是应对对手常见漏洞的有效手段。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L5",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 5,
+        "section": "2. 核心摘要",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "视频通过大量统计数据分析，揭示了普通玩家（包括鱼、紧弱玩家、常规玩家）在面对过牌-加注时的普遍行为模式——过度弃牌（overfold）。这意味着不利位置玩家可以利用这一漏洞，大量采用过牌-加注来制造盈利。同时，视频也讨论了当翻牌圈双方都过牌时，转牌圈领先下注同样能利用对手的过度弃牌倾向。结论是：在不利位置，应大幅减少持续下注（cbet）频率，转而采用高频率的过牌-加注，并在被跟注后适时放弃，因为对手在翻牌圈的失误已经足以补偿后续损失。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 8,
+        "section": "3.1 常见错误：不利位置沿用有利位置的下注尺寸",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 在低级别游戏中，许多玩家在不利位置时仍使用与有利位置相同的下注尺寸，这是一个重大错误。例如，在A高牌面上，有利位置使用25%底池下注，不利位置同样可以使用25%底池，但这是唯一情况。在其他牌面上必须增加下注尺寸。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 9,
+        "section": "3.1 常见错误：不利位置沿用有利位置的下注尺寸",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 具体调整示例：K高牌面，有利位置下注25%-50%底池，不利位置上升到40%-2/3底池。Q高牌面，有利位置25%-50%，不利位置提高到1/2-2/3。J高牌面，有利位置不超过1/2，不利位置提高到2/3-100%底池。例如小盲对按钮，翻牌J-9-3彩虹，你应当100%持续下注，并且必须增大尺寸。10高牌面用2/3底池。低连张牌面用1/2-2/3底池。低连接牌面（如7-4-3）则需要非常大的尺寸，但下注频率很低——80%时间过牌，只有20%时间下注且尺寸很大。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L10",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 10,
+        "section": "3.1 常见错误：不利位置沿用有利位置的下注尺寸",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 原因：不利位置需要更大尺寸来最大化剥夺对手的权益。如果只用1/3底池下注，对手会有很多轻松跟注的手牌，例如K9s、A8s、AJ等；但如果下注1/2到2/3，这些手牌就会陷入艰难局面。因此必须放弃1/3底池的持续下注范围——即使在有利位置某些牌面上也属错误，不利位置更严重。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L12",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 12,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 视频引用了Mobius Poker提供的统计（来自Hand2Notes软件），数据展示了当不利位置玩家在翻牌圈过牌-加注时，有利位置玩家的反应。第一组数据来自所有类型玩家（任何位置），显示：当不利位置玩家过牌，有利位置玩家下注（lead）后，遭遇3.5倍过牌-加注时，对手的弃牌率比理论平衡（GTO）多出10%（实际弃牌45%，理论应为35%）。如果过牌-加注尺寸为2.5倍，则对手多弃牌7%。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 13,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 当对手下注50%底池时，他们弃牌更少，并且全下（jam）更多（理论应该只有16%的3bet，实际达到21%）。这意味着下注50%的玩家范围更强，因此你应该减少过牌-加注频率，并且更倾向于弃牌。相反，当对手下注1/3时，其范围较弱。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 14,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 即便对手下注1/3并遭遇过牌-加注，他们仍会以略高于GTO的频率快玩（fast play，即过度3bet）。这与之前讨论的转牌圈第二条街（second barrel）概念一致：如果对手快玩过多，你应该采用极度两极化的下注策略，只下注那些不介意被3bet的手牌（例如坚果或纯粹的诈唬）。例如，翻牌10-5-2，你有A8s，过牌-加注后若被3bet可以直接弃牌；但如果持有A4s，过牌-加注后被3bet就会损失更多权益，因此更应选择极化下注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 16,
+        "section": "3.3 按钮位置对小盲过牌-加注的具体反应",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 第二组数据专门针对小盲位对按钮位的3bet底池。当小盲过牌，按钮下注，小盲过牌-加注后，按钮同样存在过度弃牌现象：面对3.5倍过牌-加注，按钮多弃牌12%-13%。因此你应当大量使用过牌-加注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 17,
+        "section": "3.3 按钮位置对小盲过牌-加注的具体反应",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 视频还区分了不同类型玩家：鱼和紧弱玩家（nits）同样过度弃牌；而常规玩家（regs）弃牌更多，样本量虽小（约10000手），但趋势一致（全为蓝色，表示过度弃牌）。原因在于常规玩家知道小盲位会由于位置劣势而过度过牌，当他们下注时，小盲的过牌-加注被解读为强范围，但实际上小盲大部分时候是在诈唬——即便如此，常规玩家仍过度弃牌约20%。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 18,
+        "section": "3.3 按钮位置对小盲过牌-加注的具体反应",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 结论：因为整体玩家面对过牌-加注都过度弃牌，所以持续下注（cbet）可能不如过牌-加注有效。你应该高频过牌，然后进行过牌-加注。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 20,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 在3bet底池小盲对按钮，翻牌10-8-3彩虹，理论上小盲仍应以高频率大尺寸持续下注。但若让按钮面对过牌-加注过度弃牌，小盲可以改为更频繁过牌。设置：按钮下注1/3底池（8bb），小盲过牌-加注到22bb（混合2.5和3.5倍）。此时按钮的正常反应应包含一些跟注手牌，如KJs（带后门同花）、89s、78s，以及AQs等——但实际中玩家会过度弃牌这些手牌。例如KJs只有10%的概率跟注（理论14%）。通过调整，小盲可以100%过牌-加注任何手牌，比如66也会过牌-加注，并且盈利。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 21,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 后续问题：小盲是否因此会大幅提高过牌频率？模拟显示，小盲原本在翻牌持续下注70%时间，但一旦将按钮的漏洞加入模型，小盲就不再持续下注，转而近乎100%过牌-加注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L22",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 22,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 当被跟注后怎么办？翻牌被跟注后，转牌圈小盲100%过牌。例如转牌是一张空白牌，你完全可以选择放弃。但你也可能诱导对手诈唬，而自己可以用好牌价值下注。例如转牌是K时，你甚至可以全下（pot-size bet）。总之，被跟注后只需过牌，并在好的牌上继续诈唬或价值下注。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 24,
+        "section": "3.5 翻牌过牌-过牌后的转牌策略",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 视频补充了一个重要统计：当翻牌圈双方都过牌，不利位置玩家在转牌圈领先下注时，对手同样过度弃牌。具体数据：转牌下注1/3底池，对手多弃牌4%；下注50%，多弃牌9%；下注70%，多弃牌14%；下注100%底池，对手弃牌率低于理论值（实际弃牌50%？原文说“he will fold by 50%”，可能指弃牌率比理论高，但需谨慎解读）。总体而言，对手在各种尺寸下都过度弃牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 25,
+        "section": "3.5 翻牌过牌-过牌后的转牌策略",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 因此，你的策略应包含有时在转牌上大尺寸下注，但也可以利用过牌后转牌诈唬。注意，这里的数据是针对按钮位在翻牌过牌后的反应，同样显示显著过度弃牌。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 26,
+        "section": "3.5 翻牌过牌-过牌后的转牌策略",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 此外，统计显示对手在翻牌的下注频率略低于GTO（少2%），并且1/3底池的小注使用更少，大注使用更多。这意味着玩家倾向用强牌下大注、弱牌下小注（且小注频率低）。因此，每当看到对手翻牌下注1/3（即使次数少），其范围偏弱，你可以放心过牌-加注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 28,
+        "section": "3.6 其他牌面实例：9-5-2带听花",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 翻牌9-5-2有同花听牌，理论上小盲应40%时间大尺寸下注。按钮应53%时间下注。小盲理论过牌-加注频率为20%。面对过牌-加注，对手理论应跟注一些AJo带同花牌、KQo带同花牌等。但实际上玩家会过度弃牌AQs、KQ、AJo等。但因为存在听花，对手有大量同花听牌组合可以跟注，所以不能过于激进。但依然可以让他略微过度弃牌（例如AJ、AQ），然后小盲就可以近乎100%过牌-加注。视频指出，鱼玩家尤其会过度下注（lead太多手牌），你过牌-加注他们就会大量弃牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 30,
+        "section": "3.7 牌面J-9-4彩虹的意外结果",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 翻牌J-9-4彩虹，理论上小盲应以极高频率持续下注，但模拟显示当按钮下注1/3时，唯一可用的过牌-加注尺寸竟然是全下（jam）。例如你持有KQ，可以直接全下对抗AJ（你有40%权益，带顺子听牌）。这很有趣且反直觉，但策略仍然有效：对手会过度弃牌对抗全下。你也可以尝试较小的过牌-加注尺寸，对手理论应跟注一些口袋对A、ATs、K9、78s、55、A4s、AQ等，但实际仍会过度弃牌。最终过牌-加注成为最佳选择。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 32,
+        "section": "3.8 整体策略总结",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 你的不利位置策略：对于不同牌面，你可以选择高频大尺寸持续下注或小尺寸，但必须保持高频率过牌。如果选择过牌，则应当要么过牌-加注，要么过牌-弃牌。最大的错误是过牌-跟注，因为那样你几乎每次都会在转牌圈过牌-弃牌，损失大量资金。而采用过牌-加注后，对手在翻牌过度弃牌，即使你在转牌放弃，也因翻牌的巨大失误而盈利。这类似于有利位置3bet底池中，你翻牌下大注后放弃，但这里是用过牌-加注替代大注，效果依然很好。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 34,
+        "section": "4. 总结与补充",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 本视频的核心价值在于揭示了不利位置3bet底池中一个被广泛忽视的漏洞：普通玩家在面对过牌-加注时普遍过度弃牌，且比例相当可观（10%-20%）。利用这一漏洞，你可以大量采用过牌-加注来替代传统持续下注，从而在不利位置创造正向期望值。同时，当翻牌圈双方都过牌后，转牌圈的领先下注同样能利用对手的过度弃牌，尤其适合半诈唬。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 35,
+        "section": "4. 总结与补充",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 易错点：不要盲目照搬有利位置的下注尺寸；不要在不利位置使用1/3底池的cbet；不要过度依赖过牌-跟注，因为后续转牌很难处理；注意区分对手的下注尺寸——面对1/3的小注可大胆过牌-加注，面对50%以上的大注需谨慎并减少加注频率，因为对手范围偏强。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N5-L36",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 36,
+        "section": "4. 总结与补充",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "text": "- 适用场景：主要适用于小盲位对抗按钮位的3bet底池，翻牌结构以干燥牌面或低连接牌面效果最佳（如10-8-3彩虹、J-9-4彩虹）。在湿润牌面（有听花）时，对手跟注组合更多，需适当控制过牌-加注频率，但仍可利用其过度弃牌倾向。建议在实际游戏中结合样本量（如HUD数据）验证对手是否确实过度弃牌，再调整策略。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "2.6 有利位置单次加注底池策略",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "本视频主要探讨了在100大盲注深度、有利位置（按钮位对阵大盲注）的单次加注底池中，如何制定并执行简化且高效的策略。视频指出，这类底池是扑克中最复杂的部分，因为双方范围极宽且剩余筹码很多。因此，玩家需要尽可能简化策略，而不是盲目模仿求解器给出的复杂GTO（博弈论最优策略）下注尺度与路线。视频的核心观点是，对于人类玩家而言，一个易于执行且失误率低的简化策略，往往比理论上完美但难以记住和执行的GTO策略在实际对局中赚取更多利润。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L5",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 5,
+        "section": "2. 核心摘要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "视频通过分析翻牌圈的具体牌面（如A-K-2彩虹面），展示了GTO策略中可能存在的“奇怪”过牌和下注组合，并指出在低级别游戏中，对手（尤其是娱乐玩家和普通玩家）的普遍行为模式（如过度弃牌、加注不足）使得简单的策略更有效。视频还引入了“冰球原理”（Ice Skating Concept），即通过在翻牌圈使用小额持续下注，迫使对手用强牌加注而被动弃掉边缘牌，从而在转牌圈利用对手范围被“封顶”的劣势，施加巨大压力。最终结论是，找到一个适合特定翻牌面的单一最佳下注尺度（小、中、大三类），并专注于理解每次下注所达到的目的，比记忆无数个具体组合的下注行为更为重要。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L6",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 6,
+        "section": "2. 核心摘要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "此外，视频还利用软件数据验证了低级别玩家的普遍倾向：他们在翻牌圈普遍弃牌过多、加注不足。据此，视频给出了针对不同类型对手（娱乐玩家/普通玩家 vs 职业玩家）的具体剥削策略，例如对基本功较差的玩家可以高频率小额下注，而对职业玩家则可尝试使用大小注码分离的策略（用强牌下小注引诱加注，用诈唬牌下大注施加压力）。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 9,
+        "section": "3.1 单次加注底池的复杂性与简化的重要性",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 单次加注底池在100大盲注深度下是游戏中最复杂的部分，因为双方起手牌范围非常宽，且剩余筹码较多，后续街的行动空间很大。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L10",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 10,
+        "section": "3.1 单次加注底池的复杂性与简化的重要性",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 因此，我们需要在策略中尽可能地寻找简化方案。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L11",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 11,
+        "section": "3.1 单次加注底池的复杂性与简化的重要性",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 如果你曾用求解器学习，可能会看到一些非常奇怪的路线和下注尺度。虽然从GTO角度看，这些可能是好策略，但对于人类玩家来说，可能有其他更容易执行且同样能盈利的路线。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 13,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频以一个具体例子开始：按钮位对阵大盲注，翻牌为A、K、2，彩虹面（无同花可能）。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 14,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- GTO策略显示，在这个牌面上，你应该有一个非常大的下注（超池下注）策略，频率约为30%。同时，你也需要一个很好的过牌策略。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 15,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频分析对手（大盲注）在面对按钮位超池下注时的可能反应。GTO要求大盲注用一些非常低张的连牌（如T5s）进行跟注，但视频认为在现实中这不会发生。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 16,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频认为，大盲注可能会用一些Kx牌（顶对）过度弃牌，用Q2这种牌一定会弃牌。但大多数低级别玩家至少会用顶对（如顶对A）跟注一条街，不会直接弃掉A6o（非同花A6）。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 17,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 基于这些对对手行为的假设，视频调整了对手的模型，使其更符合现实：让对手弃掉Kx、弃掉卡顺听牌、只跟注后门同花听牌（不含其他牌力）、但稍微多跟注一些A6o。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 18,
+        "section": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 经过调整后，视频自己的策略变成了50%的时间做超池下注，50%的时间过牌。但视频认为，在实际游戏中，这种50/50的混合策略非常难以执行，并且会让转牌圈的行动变得非常棘手。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 20,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 现在测试另一种策略：大盲注过牌后，按钮位使用一个非常小的下注尺度，25%底池。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 21,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频观察大盲注面对小额下注的反应。以Q9s（带后门同花）为例，视频认为在低级别现场现金局中，对手绝对不会跟注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L22",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 22,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 再以T5s（非同花T5）为例，视频认为对手更是“TMD永远不可能”跟注，尽管它有后门双卡顺听牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 23,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频假设对手会跟注卡顺听牌，但不会足够地加注。对手的加注频率大概只有7%，而GTO要求可能更高，视频将其调整为5%，并认为实际可能更低。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 24,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频还假设对手会过度弃牌，比如弃掉T4s、所有Q9等，但会给对手一些面子，让他们在低级别里有时会跟注低对。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 25,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 经过这些调整，按钮位现在可以用一个较小的尺度（25%底池）进行非常高频的翻牌持续下注。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 26,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频让观众思考一个问题：在低级别中，哪种策略最容易执行？是之前复杂的50%超池50%过牌策略，还是现在这个简单的“小额高频持续下注”策略？视频认为后者明显更易执行，因为它甚至在翻牌圈都不需要过多思考，只需持续下注即可。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L27",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 27,
+        "section": "3.3 替代策略：使用小额下注（25%底池）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 简化策略之所以能赚更多钱，是因为你能做到零失误。而复杂的策略在转牌和河牌上很容易犯错，导致非常棘手的情况。理论上的优化策略（GTO）并不总是实践中最赚钱的，因为它可能太复杂，人类无法准确执行，而且对手也会犯错。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 29,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频建议，你应该为每张翻牌只找到一个主要的下注尺度，并努力执行这个策略，而不是试图拥有两三个翻牌圈的下注尺度。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 30,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频认为，在翻牌圈使用多个尺度和组合并不能让你赢得更多钱，只会浪费时间和精力去记忆一切，并且这些记忆和执行的策略本身就很困难。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L31",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 31,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 不要试图记忆所有特定场合的具体组合。正如在翻牌后策略入门中所说，你应该对整体规划有一个概念：你范围中的哪一部分想下注，哪一部分想过牌。但不要去记忆具体某个组合（比如KQ）有多想下注，因为它阻挡了跟注范围之类的细节。",
+      "flags": [
+        "绝对表述需核定作用范围"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 32,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 在低级别游戏中，关于“阻挡牌”和“不阻挡牌”的区别并不重要。你应该专注的是，在游戏时可视化你的下注尺度所要达成的目的。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 33,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 你应该反复问自己这些问题：",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 34,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 我下注后，什么类型的牌会继续（跟注）？",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 35,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 在我拿着我目前的这手牌时，什么类型的牌会弃牌？",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L36",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 36,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 我希望他继续跟注哪些牌？我希望他弃掉哪些牌？",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L37",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 37,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 考虑到他会继续跟注的牌型，在哪些转牌上我会继续诈唬？在哪些转牌上我会放弃？",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 38,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 当你在翻牌圈下注时，你选择的下注尺度本身并不那么重要。如果你有一个不太好的下注尺度，但你对策略理解透彻、执行得当，它依然能帮你赚很多钱。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 39,
+        "section": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 当你到达转牌圈时，你要思考：对手之前已经弃掉了什么牌？他用什么牌跟注了？哪些转牌对你有利（如高牌、完成了同花等），哪些对你可能不利。你在翻牌圈游戏时就必须开始思考这些。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L41",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 41,
+        "section": "3.5 简化三大下注尺度及牌面分类",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 虽然GTO Wizard上有很多奇怪的超池下注，但你可以简化成三个主要尺度：小（1/3底池）、中（1/2底池）、大（3/4底池）。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 42,
+        "section": "3.5 简化三大下注尺度及牌面分类",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 你需要判断：哪一类翻牌结构适合用小下注（1/3），哪一类适合用中下注（1/2），哪一类需要用大下注（3/4甚至更大）。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 43,
+        "section": "3.5 简化三大下注尺度及牌面分类",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 这样做会容易得多。你不需要去记“J95这种牌面应该超池，但J84应该用66%下注，而J62应该用50%下注”等等这些极其细分且含义不明的路线。你可以简化成“J95这种牌面，我用3/4底池下注，J85和J95很接近，所以J85也直接用3/4底池下注”。这种简化能让策略更易执行。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L44",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 44,
+        "section": "3.5 简化三大下注尺度及牌面分类",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频认为，在有利位置时，在翻牌圈使用2.53倍或160%底池的超池下注并非必要。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 46,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频展示了一些翻牌结构，并尝试为每种结构找到最佳下注尺度。小注1/3，中注1/2，大注3/4。你也可以自定义，比如小注用25%，中注用40%-60%，大注用100%底池，这都不要紧。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L47",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 47,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **类似K-2-2这种牌面**：GTO建议超池下注，但视频认为在低级别中，小额下注（1/3）效果会非常好。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L48",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 48,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **Q-T-5（有同花听牌）**：这是一个使用大注（如75%底池）的典型牌面。原因是，你的范围中存在大量高张牌（如AK、AJ、KJ、J9、AQ、AK等），这些牌在牌面上有很强的潜力或已成牌。你的对手面对大注时，会过度弃掉一些牌，比如口袋对7。你在这个牌面有很强的过牌范围优势，可以施加巨大压力。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L49",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 49,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **Q-T-5使用小注（1/3）的情况**：如果你在这个牌面上使用1/3底池的小注，通常你可以进行非常高频率的下注，甚至可以用整个范围下注，包括口袋对8、口袋对7。但问题在于，当对手持有K9o这种听牌时，跟注你1/3的注码，他的胜率和你差不多，甚至可能领先，所以你不能认为是价值下注。因此，在小注策略下，你必须放弃或混合使用范围中较弱的边缘牌。而对**像Q-T-5这样的结构，由于你无法用范围的中部牌（如TT、99、T6）进行价值下注，你必须使用极化的大注策略**。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L50",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 50,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **A-8-5单色牌面（M表示单色）**：当翻牌出现同花面时，几乎总是应该使用小注。原因很简单，如果你下注太大，对手会弃掉所有非红心的牌；而当他跟注时，他的范围里有40%的胜率，你不想让自己孤立对抗太强的牌。如果你下注25%底池，对手甚至会用无红心的口袋对5跟注，这对你非常有利。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L51",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 51,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **4-5-6彩虹面**：你可能会认为这是一个糟糕的牌面，应该高频率过牌。但请记住，你是按钮位，你的范围里有很多小牌。当你持有口袋对7、8甚至T、有6x（如66）或听牌时，你很想下注。如果你下注一半底池，对手的KTo+以上的牌会直接弃牌，你会有很多弃牌收益。很多玩家直接在这里过牌，但视频认为按钮位应该有不错的持续下注频率（约40%），使用中等尺度（一半底池）是完全没问题的。下注的范围会倾向于6x、7x、8x的顶对，以及卡顺和好的听牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L52",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 52,
+        "section": "3.6 不同翻牌结构的典型下注策略与原因",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **9-8-7彩虹面**：这个牌面你应该使用大注策略。虽然翻牌较低，对手容易击中顶对，但你的范围中有大量高对（TT+）。请记住，翻牌越低，你拥有高对的数量优势越大。你还有像QJo、QTo、JTo这样的听牌或后门听牌，可以施加巨大压力。如果你下注75%底池，对手持有的A-高牌（如AQ、AJ、AT）很可能会弃牌，而KJo是绝对弃牌，口袋对5会处于非常难受的位置。如果你在这里使用1/3小注，对手会用这些牌跟注过多，导致你无法有效施压。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L54",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 54,
+        "section": "3.7 下注尺度本身不重要，理解其目的才重要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频强调，下注尺度本身并不那么重要。即使你用了错误的尺度，但只要你知道你下注是为了达到什么目的（比如让特定牌弃牌、获取价值等），并且你的策略逻辑通顺，它就会很有效。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L55",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 55,
+        "section": "3.7 下注尺度本身不重要，理解其目的才重要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 因为我们在低级别游戏，对手会犯很多错误。即使本应用50%下注的地方你用了1/3下注，也不会改变你的盈利能力。当然，你最终需要研究这些细节，但现在是循序渐进，不要总想着现在就要记住一切。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L56",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 56,
+        "section": "3.7 下注尺度本身不重要，理解其目的才重要",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 与其记忆一切，不如尝试可视化你下注要完成的目标，并尝试猜测最佳尺度。即使不是最优，只要你以坚实的策略去执行，你依然能赚钱。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L58",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 58,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频引用了Mobius Poker的数据，展示大盲注在翻牌圈面对持续下注时的行为统计。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L59",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 59,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 数据1：**面对所有玩家（包括所有位置和所有类型玩家）**。数据显示，整体玩家面对1/3尺度会过度弃牌6%（GTO弃牌31%，实际弃牌37%）；面对1/2尺度过度弃牌5%；面对3/4尺度过度弃牌6-7%。同时，面对各种尺度的过牌加注频率都低于GTO。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L60",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 60,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **结论1**：因为整体玩家过度弃牌且加注不足，我们可以大幅提高我们的翻牌持续下注频率。如果GTO建议下注50%，我们完全可以下注80%，因为每手我们下注的牌都不太会被加注，我们的权益更容易实现。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L61",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 61,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 数据2：**大盲注是任何玩家，但只针对按钮位玩家下注**。结果和整体数据类似，按钮位玩家可以获得6-8%的过度弃牌率，且过牌加注频率略低于GTO。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L62",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 62,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **结论2**：按钮位玩家可以比GTO更频繁地下注。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L63",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 63,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 数据3：**大盲注是娱乐玩家或普通玩家，面对任何位置下注**。数据显示他们过度弃牌，明显过牌加注不足。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L64",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 64,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **结论3**：对娱乐玩家和普通玩家，使用1/3的小额持续下注会非常有效。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L65",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 65,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 数据4：**大盲注是职业玩家，面对任何位置下注**。数据显示职业玩家的过牌加注频率（18%）高于GTO，他们知道当对手用1/3小额下注时，他们可以高频率地过牌加注。但尽管如此，他们仍然过度弃牌（8%）。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L66",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 66,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **结论4**：针对职业玩家，不应该用整个范围小额下注，因为他们会过牌加注太多。一个可能的有效策略是：用强牌（如Aces）下小注（1/3），诱使对手加注；用诈唬牌（如J7o）下大注（70%），因为对手对大注的过牌加注频率不会增加太多，且依然会过度弃牌。这种“价值下小，诈唬下大”的双尺度策略可能对职业玩家更有效。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L67",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 67,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **总体策略建议**：对娱乐玩家和普通玩家，可以在翻牌圈用任意牌小额下注（1/3），然后专注思考转牌圈策略。对职业玩家，则可以考虑更精细化的尺度和牌型分离。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L69",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 69,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频推荐了一个名为“冰球原理”的概念。这个概念由Charlie Caroll（高额玩家）在一些低级别资金挑战视频中首次被观察到。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L70",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 70,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **核心概念**：在翻牌圈用非常小的尺度（如1/3底池）持续下注，然后当对手只是跟注时，由于他的范围在过牌-跟注后被认为是“封顶的”（即不太可能有超强牌），你就可以在转牌圈用超池下注进行诈唬。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L71",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 71,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **理论依据**：即使在GTO理论中，当翻牌下注很小时，处于不利位置的玩家也应该用他的强牌（如两对、三条）进行过牌加注来构建底池。如果他不这样做，他的范围就只能包含一些中等牌力的牌，因此是“封顶的”。这就给了你在转牌圈使用超池下注施压的机会。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L72",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 72,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **实践中的优势**：在低级别游戏中，这个概念效果更好。例如，在9-8-6同花听牌面，你用1/3下注，对手只是跟注。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L73",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 73,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 他不可能持有顺子（如T7、75），因为他大概率会快速游戏这些强牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L74",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 74,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 他也有可能持有两对或三条，但出于保护或价值，他很有可能加注。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L75",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 75,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 因此，当他跟注时，他的范围里几乎没有什么强牌。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L76",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 76,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 与之对比，如果你在翻牌用大注（如75%），对手可能会用强牌“慢打”，因为他们害怕撞上坚果，认为你的大注代表了强牌，从而降低了他们加注的意愿。这会导致你无法准确判断他转牌圈的范围。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L77",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 77,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **冰球原理的执行步骤**：",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L78",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 78,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "1. 在翻牌圈小额下注（如1/3）。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L79",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 79,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "2. 对手只是跟注。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L80",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 80,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "3. 对手的范围极度封顶，没有超强牌。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L81",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 81,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "4. 在转牌圈：",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L82",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 82,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 如果转牌是空白牌，你进行超池下注（甚至三倍、五倍底池）。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L83",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 83,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 如果转牌是听牌完成牌（如顺子或同花），你可以再次小额下注。",
+      "flags": [
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L84",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 84,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "5. 当对手连续跟注两次，他几乎没有可能持有强牌，你可以在河牌超池下注，对手会过度弃牌。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L85",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 85,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **适用场景**：虽然GTO在某些特定牌面（如9-8-6）也会使用大注，但视频认为在低级别游戏中，小额下注策略更有效，因为对手不会足够地过牌加注。因此，推荐在低级别游戏中，对于9-8-6这种理论上应该大注的牌面，也可以考虑使用冰球原理中的小额下注策略。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L86",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 86,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **数据佐证**：翻牌圈小额下注后，对手在转牌圈面对任何尺度的下注，都会出现5%左右的过度弃牌。这使得冰球原理在转牌圈大注时更加有效。对手在翻牌圈会快速玩好牌，而在转牌圈则更容易过度弃牌。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L88",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 88,
+        "section": "4. 总结与补充",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 视频的核心价值在于提供了一个在复杂单次加注底池中，将理论（GTO）与实践（低级别对手行为）相结合的实用框架。它明确指出，盲从求解器的复杂路线对于人类玩家并不可行，尤其是在时间有限、精力不足的情况下。相反，通过理解“简化”原则（为每张翻牌选择一个主要尺度）和“逻辑推演”（思考下注的目的），能建立一个更稳健、更易执行的盈利策略。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L89",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 89,
+        "section": "4. 总结与补充",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- 一个常见的易错点是过于纠结于GTO频率和具体组合的“阻挡牌”效应。视频反复强调，在低级别中，专注于可视化下注效果（“我想让什么牌弃牌？”、“什么牌会跟注？”、“后续如何行动？”）远比记忆这些微观细节重要。另一个易错点是试图在翻牌圈使用多个复杂尺度导致自己迷惑。建议优先尝试“小额高频”策略，直到你熟悉对手的常见反应，再逐步引入更精细化的调整（如对职业玩家用大小注分离）。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N6-L90",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 90,
+        "section": "4. 总结与补充",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "text": "- **适用场景**：本笔记的策略主要针对线上和线下低级别现金游戏中的单次加注底池。对于高级别游戏或锦标赛后期，对手水平更高，更接近GTO，可能需要调整。但“冰球原理”尤其适用于那些翻牌圈范围较平衡、但对手普遍加注不足且弃牌过多的低级别常规局。在任何时候，遇到翻牌圈持续下注被频繁加注的对手，应立即停止盲目小额下注，并重新评估对手策略。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L2",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 2,
+        "section": "1. 视频标题",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "不利位置单次加注底池策略",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L4",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 4,
+        "section": "2. 核心摘要",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "本视频讲解了在德州扑克中，处于不利位置（如小盲对盲、枪口位加注后按钮位跟注）时，如何应对单次加注底池。核心原因是：不利位置下，高频使用1/3底池的持续下注（c-bet）不再像有利位置那样有效，因为对手会跟注过多，导致转牌局面难以处理。视频的目标是简化策略，使其易于记忆和执行，同时避免陷入过于复杂的GTO平衡分析。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L5",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 5,
+        "section": "2. 核心摘要",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "通过分析GTO Wizard的翻牌报告以及Mobius Poker的玩家数据，视频揭示了不同玩家类型（紧弱玩家、鱼、常规玩家）在特定线路上的过度弃牌倾向。结论是：不利位置下，虽然不能对所有翻牌进行范围c-bet，但c-bet仍然比GTO策略更有效。更重要的是，当对手在翻牌过牌后，他们会在后续每条街都过度弃牌，因此玩家应激进地施加压力，大量使用诈唬，而无需过于关注阻断牌或权益。针对不同玩家类型，需要调整策略：对紧弱玩家和鱼应快速玩牌，对常规玩家则宜慢玩并利用其过度攻击的倾向。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L8",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 8,
+        "section": "3.1 不利位置单次加注底池的挑战",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 不利位置的场景包括：盲注对盲注（小盲开池、大盲跟注），以及玩家在枪口位加注后按钮位跟注等情况。这些场景统称为单次加注底池，且位置不利。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L9",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 9,
+        "section": "3.1 不利位置单次加注底池的挑战",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 在有利位置时，高频使用1/3底池的c-bet非常有效，可以简化转牌决策。但在不利位置，如果仍用1/3尺度对全范围下注，对手会跟注过多，导致转牌几乎每张牌都难打，因为位置劣势难以弥补。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L10",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 10,
+        "section": "3.1 不利位置单次加注底池的挑战",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 单次加注底池极为复杂，即使花数年也难以精通。因此视频不追求完美GTO，而是先观察GTO的整体趋势，再结合玩家倾向寻找剥削机会。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L11",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 11,
+        "section": "3.1 不利位置单次加注底池的挑战",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 学习新场景时，建议先进入GTO软件的翻牌报告（Report Flops），查看每种翻牌结构的下注频率和尺度。例如，在盲对盲场景中，有些牌面（如高牌面、对子牌面）可以100%下注，但大部分牌面需要高频过牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 13,
+        "section": "3.2 GTO翻牌报告分析",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 以盲对盲（小盲开池、大盲跟注）为例，在翻牌报告中有两种颜色代表不同下注尺度：浅红代表1/3底池，深红代表2/3底池。可以快速了解每种翻牌应该采取什么行动。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 14,
+        "section": "3.2 GTO翻牌报告分析",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 部分牌面（如QQQ）因为小盲拥有超对优势和更多葫芦，可以高频甚至100%下注。但大多数牌面（如K-T-6听花）建议过牌频率高达55%左右。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 15,
+        "section": "3.2 GTO翻牌报告分析",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 对比有利位置（如大盲对抗小盲，此时大盲在位置）会看到极高频率的下注，但不利位置无法这样玩。虽然某些纹理（如A高牌面）可以使用超池下注，但多数情况下仍然使用小尺度（1/3）下注，只是不能全范围下注，必须高频过牌。",
+      "flags": [
+        "绝对表述需核定作用范围"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 16,
+        "section": "3.2 GTO翻牌报告分析",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 在低牌面（如10高或J高干燥牌面）有时会使用超池下注，但更多低连接牌面（如10-8-3等）应直接范围过牌，即完全放弃c-bet。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 18,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 数据来自Mobius Poker网站和YouTube频道，记录了位置内玩家对c-bet和过牌加注的反应。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L19",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 19,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 当小盲选择c-bet（例如翻牌J-5-3，下注25%底池），大盲的应对：无论尺度大小，大盲都会过度弃牌约6%（例如对1/3下注，GTO应跟注更多，实际弃牌更多），且加注频率接近GTO。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 20,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 当小盲过牌，大盲下注，小盲再过牌加注时，大盲的应对：大盲会低于GTO频率弃牌（即under fold）。例如大盲下注1/3，小盲大尺度过牌加注，大盲应弃牌48%，实际只弃牌46%，少弃牌了2%。如果大盲下注70%底池，小盲过牌加注，大盲under fold高达7%。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 21,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 含义：当对手使用大尺度下注时，他的手牌范围更强（因为大尺度通常代表价值加注），此时小盲不应试图用诈唬过牌加注，因为对手弃牌不够多，且会快速玩强牌。数据也显示，当大盲下注大尺度时，他们的加注频率（对过牌加注的再加注）高达14%（GTO仅为7%），说明他们几乎都是坚果。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 23,
+        "section": "3.4 针对紧弱玩家和鱼的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 针对紧弱玩家和鱼，无论小盲是否在不利位置，他们都会对c-bet过度弃牌。例如翻牌Q-10-5，小盲用25%尺度高频下注，大盲会弃掉A8o（不同花）、A9o、口袋对22、K8o带后门听花等牌。实际上GTO要求大盲用这些牌跟注或加注，但玩家不会。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L24",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 24,
+        "section": "3.4 针对紧弱玩家和鱼的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 如果大盲过度弃牌达到5%，小盲就可以在翻牌100%下注，尤其是高牌面（如A-7-2），小盲应下注76%，实际对手会弃掉Q6o带后门听花、66s（同花）等牌，且加注频率不足（GTO要求20%加注，实际不到）。因此可以全范围c-bet并获利。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 25,
+        "section": "3.4 针对紧弱玩家和鱼的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 当鱼或紧弱玩家自己领先下注时（尤其是大尺度），他们同样拥有过强的范围，小盲不应以诈唬为目的进行过牌加注。无论下注尺度大于半池还是小于半池，都不宜诈唬过牌加注。可以价值过牌加注，但绝不可诈唬。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L27",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 27,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 常规玩家（regs）会思考更多，他们观察到小盲过牌时通常弱，因此会过度攻击（即高频下注）。这导致当小盲选择过牌加注时，常规玩家会过度弃牌（因为他们的下注范围包含了过多诈唬）。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 28,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 数据表明，常规玩家对大尺度下注（70%底池）也会过度弃牌6-7%。这意味小盲可以频繁过牌加注诈唬，因为他们弃牌过多。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 29,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 关于c-bet策略：常规玩家仍然过度被动（over fold against CBET），无论尺度大小，他们都会弃牌过多。因此小盲可以继续高频c-bet，但需要调整：对常规玩家，小盲应该更多慢玩（slow play），比如拿到AA时先过牌，因为他们一旦领先下注就会变弱（范围中包含很多诈唬），后续会过度诈唬转牌和河牌。快玩反而让他们弃牌浪费价值。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 30,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 与紧弱玩家相反：对紧弱玩家应该快速玩（fast play），因为他们坚持用强牌跟注，且不会轻易弃牌。对大尺度下注尤其要快玩，争取尽早全下。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 32,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 如果小盲过牌翻牌，大盲也过牌，那么小盲在转牌领先下注时，大盲会过度弃牌约10%（紧弱玩家和鱼）。因此每当对手在翻牌示弱（过牌），小盲就可以在转牌施加极大压力，大量过度诈唬，即使没有好的阻断牌或权益。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 33,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 河牌线路数据（紧弱玩家和鱼）：大部分线路（如小盲flop bet→turn check→river bet并导致大盲弃牌）中，大盲过度弃牌10-20%。唯一不显著过度弃牌的线路是：小盲在翻牌c-bet、转牌第二次下注、河牌第三次下注（三条街连续下注）。此时紧弱玩家和鱼会在转牌做出决策：如果跟注转牌，河牌通常也会跟注（因为他们持有顶对），因此弃牌率接近GTO。但对常规玩家，即使三条街下注，他们仍然过度弃牌10%。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 34,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 因此对紧弱玩家和鱼，应避免在河牌第三次下注诈唬；而对常规玩家，可以大胆三条街诈唬。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 35,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 总结：几乎所有线路（c-bet后各种后续）对手都会过度弃牌，唯一例外是紧弱玩家和鱼面对三条街下注时弃牌正常。所以整体策略是：积极施加压力，尤其是在对手过牌后。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L37",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 37,
+        "section": "3.7 对抗按钮位跟注的特殊情况",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 当玩家在枪口位开池，按钮位跟注时，按钮位的范围比盲注玩家更强（有更多口袋对和好牌，不会轻易弃牌）。因此不利位置的小盲（或原开池者）应该高频过牌，而不是盲目c-bet。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 38,
+        "section": "3.7 对抗按钮位跟注的特殊情况",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 如果按钮位在翻牌后也过牌，说明他可能已经弃掉了弱牌，且他的范围被限制（cap），因为多数好牌他会选择下注。此时小盲可以在转牌和河牌使用大尺度下注，按钮位会过度弃牌。这与盲对盲不同：盲对盲中有些牌面可以高频小尺度c-bet，而对抗按钮位更依赖过牌陷阱。",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 40,
+        "section": "3.8 整体策略执行建议",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 不要过于关注GTO的精确尺度和频率，因为记不住。重点在于找到玩家过度弃牌的线路，然后忽略阻断牌和权益，直接施加压力。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L41",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 41,
+        "section": "3.8 整体策略执行建议",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 当对手过牌翻牌后，无论用什么尺度（1/3、50%、75%或超池），他们都会过度弃牌，所以可以混合使用各种尺度，甚至用垃圾牌诈唬。",
+      "flags": [
+        "需区分动作频率与尺寸及数据身份",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 42,
+        "section": "3.8 整体策略执行建议",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 具体执行：翻牌选择过牌还是c-bet，需要基于翻牌纹理和玩家类型。对常规玩家可以更多过牌加注诈唬；对紧弱玩家可以更多c-bet价值并快速玩牌。但总体方向是：过牌后对手弃牌过多，因此过牌之后的下注（转牌或河牌）非常有利可图。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 43,
+        "section": "3.8 整体策略执行建议",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 不必担心诈唬了错误的牌（如阻断对手跟注范围的牌），因为对手弃牌太多，即使错误诈唬仍然盈利。如果玩家因为害怕而放弃太多诈唬，反而损失更大。所以必须过度诈唬。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L45",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 45,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- **核心价值**：视频提供了一个基于玩家类型和常见线路的简化剥削框架，避免了复杂GTO计算。核心洞察在于：不利位置下，对手在大多数后续街都会过度弃牌，尤其是翻牌过牌之后。因此玩家应激进地利用这一点，大量使用诈唬，而非执着于平衡。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 46,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- **易错点**：",
+      "flags": [],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L47",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 47,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 不要对鱼或紧弱玩家的大尺度领先下注进行诈唬过牌加注，因为他们范围太强，弃牌不够。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L48",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 48,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 对紧弱玩家和鱼，避免三条街连续下注诈唬河牌，因为他们在转牌跟注后河牌会跟注。但对常规玩家，三条街诈唬仍然盈利。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L49",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 49,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 面对按钮位跟注时，不应像盲对盲那样高频c-bet，应优先过牌，利用对手过牌后的过度弃牌。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L50",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 50,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- 不要因为担心阻断牌或权益而减少诈唬，对手的整体弃牌偏差远大于这些细节。",
+      "flags": [
+        "可能包含对手假设或人群判断",
+        "可能需牌张或概率复算"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    {
+      "id": "N7-L51",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 51,
+        "section": "4. 总结与补充",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "text": "- **适用场景**：低级别线上扑克中的单次加注底池，尤其是盲注对盲注和枪口位加注后按钮位跟注的局面。对于更高级别的平衡型对手，这些剥削可能失效，但视频的方法仍可作为基础分析思路。",
+      "flags": [
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "R01",
+      "title": "842中等牌更多过牌",
+      "fragment": "N2-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 32,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "842 rainbow",
+        "hands": [
+          "66",
+          "77",
+          "A4"
+        ],
+        "conclusion": "更多过牌",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "该段明确含A4；此前结构化手牌仅列66/77，不能把未导入等同原文未写",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R02",
+      "title": "KQ2中等牌小注空间",
+      "fragment": "N2-L31",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 31,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "KQ2 rainbow",
+        "hands": [
+          "AQ",
+          "JJ"
+        ],
+        "conclusion": "可用小尺寸下注；该例25%",
+        "precision": "candidate_with_size",
+        "frequency": null
+      },
+      "limit": "不推所有花色的求解频率，不自动变成全范围或纯动作",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R03",
+      "title": "K52的AQ/JJ小注例",
+      "fragment": "N2-L15",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 15,
+        "section": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "K52 rainbow",
+        "hands": [
+          "AQ",
+          "JJ"
+        ],
+        "conclusion": "有小注空间；本例25%",
+        "precision": "candidate_with_size",
+        "frequency": null
+      },
+      "limit": "逐手频率未给；段落中的所有付款候选需逐手验证，不整体继承",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R04",
+      "title": "T85两高张进攻候选",
+      "fragment": "N1-L16",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 16,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "T85 rainbow",
+        "hands": [
+          "KQ",
+          "KJ"
+        ],
+        "conclusion": "强烈倾向下注的候选",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "不补造完整手牌范围或逐手混合比例",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R05",
+      "title": "T85的A4理由",
+      "fragment": "N1-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 17,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "T85 rainbow",
+        "hands": [
+          "A4"
+        ],
+        "conclusion": "下注候选，需综合移除、改善与回应",
+        "precision": "candidate",
+        "frequency": null
+      },
+      "limit": "物理移除可复算；对手响应是课程讨论，不是普遍事实",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R06",
+      "title": "A72的KQ执行简化",
+      "fragment": "N1-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 39,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "A72 rainbow",
+        "hands": [
+          "KQ"
+        ],
+        "conclusion": "该段简化为过牌",
+        "precision": "explicit_course_simplification",
+        "frequency": 0
+      },
+      "limit": "限定为调整前的该课程简化，不当成所有对手的唯一最优",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R07",
+      "title": "A72的Q3执行简化",
+      "fragment": "N1-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 39,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "A72 rainbow",
+        "hands": [
+          "Q3"
+        ],
+        "conclusion": "该段简化为下注，主尺寸约1/3",
+        "precision": "explicit_course_simplification",
+        "frequency": 100
+      },
+      "limit": "不与随后基于对手偏差的扩大版本混用",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R08",
+      "title": "J95的卡顺候选",
+      "fragment": "N1-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 29,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "J95 two-tone; complete original suit assignment not recovered",
+        "hands": [
+          "KQ",
+          "KT"
+        ],
+        "conclusion": "下注候选",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "牌张结构可核验，不能给其他未列组合补答案",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R09",
+      "title": "J95的AJ取值",
+      "fragment": "N1-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 29,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "J95 two-tone; complete original suit assignment not recovered",
+        "hands": [
+          "AJo"
+        ],
+        "conclusion": "主要价值下注，原文同时保留偶尔过牌",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "同一段有“总是”和“偶尔过牌”，不擅自升级为100%",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R10",
+      "title": "转牌高低牌总结作用范围",
+      "fragment": "N4-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 42,
+        "section": "简化策略与最后建议",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "与前段小注后空白低牌例存在范围冲突",
+        "precision": "unresolved_scope",
+        "frequency": null
+      },
+      "limit": "不能作为通用可执行规则，需回原视频或设置核实",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R11",
+      "title": "962彩虹的课程主尺寸",
+      "fragment": "N2-L39",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "962 rainbow",
+        "hands": [],
+        "conclusion": "主要较大下注约67%",
+        "precision": "main_size",
+        "size": 67,
+        "frequency": null
+      },
+      "limit": "可补转牌962路线的具体翻牌尺寸来源，但未给完整选牌",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R12",
+      "title": "JT2的课程小注",
+      "fragment": "N2-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 38,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "JT2, exact suit context not fully stated in this bullet",
+        "hands": [],
+        "conclusion": "主要小注25%，范围下注方向",
+        "precision": "main_size",
+        "size": 25,
+        "frequency": null
+      },
+      "limit": "不能与导入T05固定33%前序静默当成完全同一版本",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R13",
+      "title": "TT5彩虹的课程主尺寸",
+      "fragment": "N2-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 40,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "TT5 rainbow",
+        "hands": [],
+        "conclusion": "40%底池",
+        "precision": "main_size",
+        "size": 40,
+        "frequency": null
+      },
+      "limit": "不补整张选牌与频率",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R14",
+      "title": "T62两同花的课程主尺寸",
+      "fragment": "N2-L41",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T62 two-tone",
+        "hands": [],
+        "conclusion": "40%底池",
+        "precision": "main_size",
+        "size": 40,
+        "frequency": null
+      },
+      "limit": "牌面特征与场景保留，不外推所有T高两同花",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R15",
+      "title": "T62彩虹的课程主尺寸",
+      "fragment": "N2-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T62 rainbow",
+        "hands": [],
+        "conclusion": "67%底池",
+        "precision": "main_size",
+        "size": 67,
+        "frequency": null
+      },
+      "limit": "可与两同花作尺寸对照，不等于已给逐手动作",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R16",
+      "title": "258单色的课程主尺寸",
+      "fragment": "N2-L43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "258 monotone",
+        "hands": [],
+        "conclusion": "25%底池",
+        "precision": "main_size",
+        "size": 25,
+        "frequency": null
+      },
+      "limit": "未列完整动作频率，不变为单色全打",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R17",
+      "title": "T95彩虹的课程主尺寸",
+      "fragment": "N2-L46",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 46,
+        "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T95 rainbow",
+        "hands": [],
+        "conclusion": "40%底池",
+        "precision": "main_size",
+        "size": 40,
+        "frequency": null
+      },
+      "limit": "原段的单手50%权益说法缺完整条件，不能作为该尺寸的数学证明",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R18",
+      "title": "KT52的小注后继续方向",
+      "fragment": "N4-L26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 26,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": "Ks Th 5c / 2d",
+        "hands": [],
+        "conclusion": "该小注前序章节给出高频大尺寸第二枪方向",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "需匹配前序与对手假设；不给任意手牌填纯动作，也不沿用有冲突的高低牌总口诀",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R19",
+      "title": "QT52的小注后继续方向",
+      "fragment": "N4-L28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 28,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": "Qs Th 5s / 2d",
+        "hands": [],
+        "conclusion": "该段将同样的空白牌继续方向用于QT5两同花",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "不与单加注底池QT5的75%翻牌策略混成同一条线",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R20",
+      "title": "单色翻牌后第四张同花色与空白对照",
+      "fragment": "N4-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 32,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": "Ks Ts 5s / 9s versus 8c",
+        "hands": [],
+        "conclusion": "原文报告9s约40%较小下注；8c约66%较大下注",
+        "precision": "reported_range_frequencies",
+        "frequency": null,
+        "rangeBranches": [
+          {
+            "turn": "9s",
+            "betFrequency": 40,
+            "size": "small_unspecified"
+          },
+          {
+            "turn": "8c",
+            "betFrequency": 66,
+            "size": "large_unspecified"
+          }
+        ]
+      },
+      "limit": "翻牌已经单色，9s是第四张黑桃；不把总频率当逐手概率，不声称已取得原解算设置",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R21",
+      "title": "JT2转牌9与5的对照",
+      "fragment": "N4-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 33,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": "Jh Ts 2d / 9d versus 5c",
+        "hands": [],
+        "conclusion": "原文报告9d约40%小注，5c高频大注",
+        "precision": "reported_range_frequencies",
+        "frequency": null,
+        "rangeBranches": [
+          {
+            "turn": "9d",
+            "betFrequency": 40,
+            "size": "small_unspecified"
+          },
+          {
+            "turn": "5c",
+            "betFrequency": null,
+            "size": "large_unspecified"
+          }
+        ]
+      },
+      "limit": "9d改变可成顺组合；总频率与手牌动作不同，翻牌25/33版本冲突仍需核实",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R22",
+      "title": "T83过牌加注的条件锁定模型",
+      "fragment": "N5-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 20,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "claim": {
+        "board": "T83 rainbow",
+        "hands": [
+          "66"
+        ],
+        "conclusion": "在所述BTN过弃调整模型中，给出22BB过牌加注并扩到任意手牌的结果",
+        "precision": "conditional_model_report",
+        "frequency": 100,
+        "executionStatus": "requires_matched_model"
+      },
+      "limit": "8BB约为三分之一意味着例中池约24BB，不能接到另一个21BB前序；完整范围与锁定参数未取得，不开放任意发牌100%XR题",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R23",
+      "title": "T83加注被跟后的过牌方向",
+      "fragment": "N5-L22",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 22,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "claim": {
+        "board": "T83 rainbow / brick",
+        "hands": [],
+        "conclusion": "该分支描述被跟后在空白转牌回到过牌；K转牌另有激进讨论",
+        "precision": "conditional_preference",
+        "frequency": null,
+        "executionStatus": "requires_matched_model"
+      },
+      "limit": "同段100%与K例应分支处理，尚无完整实体转牌和逐手处方，不把过牌自动变成弃牌",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R24",
+      "title": "对特定常规玩家的双尺度候选",
+      "fragment": "N6-L66",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 66,
+        "section": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "claim": {
+        "board": null,
+        "hands": [
+          "AA",
+          "J7o"
+        ],
+        "conclusion": "在所述常规玩家小注加注偏高、大注仍过弃假设下，讨论价值小注/诈唬大注的可能策略",
+        "precision": "conditional_candidate",
+        "frequency": null,
+        "sizeExamples": [
+          33,
+          70
+        ]
+      },
+      "limit": "原文为可能策略，不是所有常规玩家处方；没有花色/牌面/参考时不生成逐手唯一答案",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R25",
+      "title": "第三枪与其他河牌线路的对手差异",
+      "fragment": "N7-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 33,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "原文将紧弱/娱乐玩家对第三枪的反应与其他线路、常规玩家作区别",
+        "precision": "conditional_population_report",
+        "frequency": null
+      },
+      "limit": "人群历史统计不是已知当前对手；不能由过弃百分数反解逐组合响应或自动三枪",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R26",
+      "title": "紧弱与娱乐玩家下注后的XR调整",
+      "fragment": "N7-L25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 25,
+        "section": "3.4 针对紧弱玩家和鱼的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "在该章节对手下注范围偏强的假设下，减少/避免诈唬XR，价值XR另判断",
+        "precision": "conditional_course_adjustment",
+        "frequency": null
+      },
+      "limit": "不与3bet底池T83的锁定模型混用；价值门槛、逐手频率和跟注选择仍未由此给齐",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R27",
+      "title": "SB对CO示例的行动顺序冲突",
+      "fragment": "N4-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 14,
+        "section": "理论上的转牌策略（三个推论）",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "claim": {
+        "board": "Ts 2s 2d / 7d",
+        "hands": [],
+        "conclusion": "若座位如文中所述，SB翻后先动，CO不可能在SB行动前领先下注；也不可能SB对CO拥有位置",
+        "precision": "unresolved_scope",
+        "frequency": null
+      },
+      "limit": "需回原视频确定座位/行为身份；不通过交换座位默默修复为课程原例",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R28",
+      "title": "禁止所有过牌跟注的总结不能生成防守表",
+      "fragment": "N5-L32",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 32,
+        "section": "3.8 整体策略总结",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "条件剥削总结未给完整防守范围，不能排除所有合法XC",
+        "precision": "unresolved_scope",
+        "frequency": null
+      },
+      "limit": "需完整匹配策略及对手响应，不把一句概括升级为任意手牌X/R或X/F",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R29",
+      "title": "快玩倾向不足以删除慢打强牌",
+      "fragment": "N6-L73",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+        "line": 73,
+        "section": "3.9 冰球原理（Ice Skating Concept）",
+        "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680"
+      },
+      "claim": {
+        "board": "986 two-tone",
+        "hands": [
+          "T7",
+          "75"
+        ],
+        "conclusion": "大概率快玩不推出跟注概率为0；该绝对删除缺依据",
+        "precision": "unresolved_scope",
+        "frequency": null
+      },
+      "limit": "T7/75在986可成顺，问题是响应推断；没有各组慢打参数就保留未定，不将其删除",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R30",
+      "title": "翻牌过牌没有发生弃牌",
+      "fragment": "N7-L38",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 38,
+        "section": "3.7 对抗按钮位跟注的特殊情况",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "当前过牌动作不等于本轮弃牌；范围弱化或强牌减少需分别依据前序与下注策略",
+        "precision": "unresolved_scope",
+        "frequency": null
+      },
+      "limit": "不从过牌动画中自动删除弱牌，也不据此断言强端归零",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R31",
+      "title": "T85的Q7s后门简化",
+      "fragment": "N1-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 18,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "T85 rainbow, source suit relationship: hearts backdoor present; spades absent",
+        "hands": [
+          "Q7s"
+        ],
+        "conclusion": "该段以有后门同花下注、无后门同花过牌来简化Q7s选择",
+        "precision": "explicit_course_simplification",
+        "frequency": null,
+        "ruleBranches": [
+          {
+            "condition": "source-described Q7s with backdoor flush",
+            "betFrequency": 100
+          },
+          {
+            "condition": "source-described Q7s without backdoor flush",
+            "betFrequency": 0
+          }
+        ],
+        "executionStatus": "stated_rule_application_only"
+      },
+      "limit": "限于该66%单加注底池选牌示例；原图未取得，不恢复全实体求解频率，不扩成任意手牌或任意牌面有后门就下注",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R32",
+      "title": "T72彩虹的较大主尺寸",
+      "fragment": "N2-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 20,
+        "section": "3.4 下注尺寸选择：10高牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T72 rainbow",
+        "hands": [],
+        "conclusion": "该有利位置3bet课程例采用约2/3的较大主尺寸",
+        "precision": "approximate_main_size",
+        "frequency": null,
+        "sizeApproximatePercent": 66
+      },
+      "limit": "近似主尺寸不是任意手牌下注100%；训练若统一为67需标为执行取值，不冒称原文求解唯一精确数",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R33",
+      "title": "T高连接与花色的尺寸对照",
+      "fragment": "N2-L21",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 21,
+        "section": "3.4 下注尺寸选择：10高牌面",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T98 versus T82 rainbow versus T72 rainbow/two-tone",
+        "hands": [],
+        "conclusion": "原文以连接与花色变化对照25、40及约66的主尺寸",
+        "precision": "main_size_comparison",
+        "frequency": null,
+        "branches": [
+          {
+            "board": "T98",
+            "size": 25
+          },
+          {
+            "board": "T82 rainbow",
+            "size": 40
+          },
+          {
+            "board": "T72 rainbow",
+            "sizeApproximatePercent": 66
+          },
+          {
+            "board": "T72 two-tone",
+            "sizeApproximatePercent": 40
+          }
+        ]
+      },
+      "limit": "按课程具体例子匹配，不能数出有花听就推所有牌面40；第三张花色未明确的例子不擅自恢复原图",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R34",
+      "title": "T52的AA大注付款对象",
+      "fragment": "N2-L35",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 35,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "T52 rainbow",
+        "hands": [
+          "AA"
+        ],
+        "conclusion": "该段用75%大注仍有较差牌继续来解释取值空间",
+        "precision": "conditional_mechanism_example",
+        "frequency": null,
+        "size": 75
+      },
+      "limit": "未给完整响应与权益，不把所有列出的JTx/99/88/A5s统一成同一频率，也不由此求任意尺寸最优",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R35",
+      "title": "J98听花的AA小注讨论",
+      "fragment": "N2-L34",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 34,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": "J98 two-tone",
+        "hands": [
+          "AA"
+        ],
+        "conclusion": "该段讨论小注25以保留较弱继续对象",
+        "precision": "conditional_mechanism_example",
+        "frequency": null,
+        "size": 25
+      },
+      "limit": "55%等单手权益仍缺花色及完整条件；这一解释是该例讨论，不是“被跟权益降低则不准大注”的通用证明",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R36",
+      "title": "被跟权益下降不足以单独否决大注",
+      "fragment": "N2-L33",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 33,
+        "section": "3.7 两个关键问题帮你确定最佳下注尺寸",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "该自问帮助观察继续范围，但不能仅据被跟权益下降推出大注EV更低",
+        "precision": "unresolved_scope",
+        "frequency": null,
+        "blockingReason": "insufficient_general_decision_rule",
+        "counterexample": {
+          "file": "size-comparison-evidence.json",
+          "pointer": "/examples/equityFallsButLargeWins"
+        }
+      },
+      "limit": "完整给定模型可同时出现被跟权益5/7降至2/3、大注EV从小注9.5提高到10；不据此断言原视频具体例子错误，但禁止将概括写成全局if/then",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R37",
+      "title": "A72调整后采用范围小注的课程简化",
+      "fragment": "N1-L42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 42,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "A72 rainbow",
+        "hands": [],
+        "conclusion": "在该段过弃与过少过牌加注假设下，结尾允许采用约1/3范围下注简化",
+        "precision": "explicit_conditional_course_simplification",
+        "frequency": 100,
+        "frequencyScope": "adopted_final_course_simplification_not_reported_solver_combo_frequency",
+        "reportedSolverFrequency": "near_100_not_exact",
+        "executionStatus": "stated_rule_application_only"
+      },
+      "limit": "须明确采用后段条件与简化版本；不覆盖基础版KQ过牌规则，不将接近100的模型报告改称真实每个组合纯下注，更不凭级别或玩家称呼自动应用",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R38",
+      "title": "J95弱顶对过牌简化的受限子集",
+      "fragment": "N1-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 29,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "J95 two-tone, original complete suit assignment unavailable",
+        "hands": [
+          "J7 and lower kicker within one-pair J"
+        ],
+        "conclusion": "采用该段基础简化；编译单对J、另一张不高于7且无直接顺/花听牌的子集为过牌",
+        "precision": "explicit_course_simplification_subset",
+        "frequency": 0,
+        "executionStatus": "stated_rule_application_only",
+        "authorRestriction": "Require current top pair J and no direct draw; do not classify J5 two pair or99 set by kicker threshold"
+      },
+      "limit": "原文未逐项列明这些排除条件；这是为避免扩大短句而保守取出的执行子集，不声称恢复完整弱顶对或组合听牌策略",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R39",
+      "title": "J95的J8价值下注方向",
+      "fragment": "N1-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 29,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "J95 two-tone",
+        "hands": [
+          "J8"
+        ],
+        "conclusion": "该段将J8列在价值下注一侧",
+        "precision": "preference",
+        "frequency": null
+      },
+      "limit": "不把价值端描述推成真实100%逐组合频率；AJ同段保留偶尔过牌，也不因踢脚顺序给所有更高J补纯动作",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R40",
+      "title": "J95方片后门措辞需要完整花色与同花身份",
+      "fragment": "N1-L30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 30,
+        "section": "3.5 第二个例子：J95有同花听牌面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "J95 two-tone",
+        "hands": [
+          "K7",
+          "K8"
+        ],
+        "conclusion": "仅凭有方片不能恢复完整实体手牌与后门/直接听花关系，暂不发布这些组合的精确动作",
+        "precision": "unresolved_scope",
+        "frequency": null,
+        "blockingReason": "incomplete_suit_and_suitedness_metadata",
+        "counterexample": {
+          "file": "j95-hand-role-evidence.json",
+          "pointer": "/suitDiagnostics"
+        }
+      },
+      "limit": "两张方片公共牌上，一张方片底牌与两张方片底牌分别是后门和直接听花；原图未取得，不据此认定原讲师错误",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R41",
+      "title": "A72的22诈唬标签需要核实",
+      "fragment": "N1-L40",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 40,
+        "section": "3.6 第三个例子：A72彩虹面",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      },
+      "claim": {
+        "board": "A72 rainbow",
+        "hands": [
+          "22"
+        ],
+        "conclusion": "22在该翻牌已成暗三条，原句不得编成弱一对转诈唬样本；具体行动和原讲师意图仍需参考",
+        "precision": "unresolved_scope",
+        "frequency": null,
+        "blockingReason": "made_hand_role_label_conflicts_with_literal_board",
+        "counterexample": {
+          "file": "a72-course-comparison-request.json",
+          "pointer": "/physicalReview/22"
+        }
+      },
+      "limit": "三种合法22实体组合都由独立点数计数及五张评估核对为三条；不据此推导22必须加注，也不将笔记措辞问题归咎原视频",
+      "status": "requires_source_resolution",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R42",
+      "title": "OOP3bet面对不同下注尺度的条件报告",
+      "fragment": "N5-L13",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 13,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "该段报告半池下注分支更强、再加更多，相对于小注倾向减少XR；仅保留该统计条件下的比较方向",
+        "precision": "conditional_population_report",
+        "frequency": null,
+        "actorRole": "last_preflop_raiser_after_check",
+        "executionStatus": "requires_matched_response_model"
+      },
+      "limit": "不把半池这一数字直接编成所有牌面弃牌或禁止XR的规则；不把历史群体统计当当前对手策略",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R43",
+      "title": "A8与A4的被再加代价对照",
+      "fragment": "N5-L14",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 14,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "claim": {
+        "board": "T52; exact suits not specified",
+        "hands": [
+          "A8s",
+          "A4s"
+        ],
+        "conclusion": "原文用再加压力下损失的改善机会解释不同XR候选；支持比较后续代价，不给统一纯动作",
+        "precision": "conditional_preference",
+        "frequency": null,
+        "actorRole": "last_preflop_raiser_after_check",
+        "executionStatus": "requires_matched_response_model"
+      },
+      "limit": "需具体花色、范围、金额与再加后的政策；不能只按A高或卡顺名称判跟弃加，也不能把A4从所有XR里永久删除",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R44",
+      "title": "盲对盲SRP的XR少弃统计条件",
+      "fragment": "N7-L20",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 20,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "该段报告其统计样本中面对XR少弃，并按先前下注尺度区分；不与3bet过弃报告混成一条规则",
+        "precision": "conditional_population_report",
+        "frequency": null,
+        "actorRole": "SB_opener_after_check",
+        "executionStatus": "requires_matched_response_model"
+      },
+      "limit": "未取得当前数据库或逐手策略；不把总体少弃等同每个候选必跟，更不覆盖后文另述常规玩家条件",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    },
+    {
+      "id": "R45",
+      "title": "SRP过度刺探与XR过弃的调整条件",
+      "fragment": "N7-L27",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 27,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "claim": {
+        "board": null,
+        "hands": [],
+        "conclusion": "后文单列常规玩家在SB过牌后过度下注、面对XR过弃的条件，支持与前段总体或其他人群分版本",
+        "precision": "conditional_course_adjustment",
+        "frequency": null,
+        "actorRole": "SB_opener_after_check",
+        "executionStatus": "requires_matched_response_model"
+      },
+      "limit": "玩家称呼不直接生成动作概率；只有具体题设或匹配参考支持相应回应时才能用于精确比较，不补出完整手牌表",
+      "status": "reviewed_text_entailment_only",
+      "notProven": "No new solver validation, full-range completion, human learning outcome or NL50 performance"
+    }
+  ],
+  "summary": {
+    "fragments": 275,
+    "absoluteScopeFlags": 70,
+    "reviewedTextClaims": 37,
+    "unresolvedReviewedClaims": 8
+  }
+}

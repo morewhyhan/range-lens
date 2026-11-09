@@ -1,0 +1,204 @@
+{
+  "status": "public_given_model_practice_not_frozen_holdout",
+  "position": [
+    {
+      "id": "POS_IP",
+      "heroSeat": "BTN",
+      "villainSeat": "CO",
+      "heroPreflopRole": "last_raiser",
+      "preflop": "CO opens2.5; BTN raises to8.25; CO calls; both blinds fold",
+      "flop": [
+        "Ts",
+        "8h",
+        "3d"
+      ],
+      "hero": [
+        "Kc",
+        "Kd"
+      ],
+      "history": [
+        "CO check"
+      ],
+      "actor": "BTN",
+      "potBB": 18,
+      "heroStackBB": 91.75,
+      "villainStackBB": 91.75,
+      "foldedStacksBB": 398.5
+    },
+    {
+      "id": "POS_OOP",
+      "heroSeat": "SB",
+      "villainSeat": "BTN",
+      "heroPreflopRole": "last_raiser",
+      "preflop": "BTN opens2.5; SB raises to10; BB folds; BTN calls",
+      "flop": [
+        "Ts",
+        "8h",
+        "3d"
+      ],
+      "hero": [
+        "Kc",
+        "Kd"
+      ],
+      "history": [],
+      "actor": "SB",
+      "potBB": 21,
+      "heroStackBB": 90,
+      "villainStackBB": 90,
+      "foldedStacksBB": 399
+    }
+  ],
+  "positionPrompt": "如果我现在过牌，是马上等转牌，还是还要等对手行动？",
+  "history": {
+    "context": {
+      "players": 6,
+      "initialBB": 100,
+      "heroSeat": "SB",
+      "villainSeat": "BTN",
+      "preflop": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+      "flopPotBB": 21,
+      "flopStacksBB": 90,
+      "rake": "none",
+      "candidatePrior": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+      "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+    },
+    "candidates": [
+      {
+        "id": "88",
+        "hole": [
+          "8c",
+          "8d"
+        ],
+        "priorMass": 1,
+        "heroShowdownShare": 0
+      },
+      {
+        "id": "QQ",
+        "hole": [
+          "Qc",
+          "Qd"
+        ],
+        "priorMass": 2,
+        "heroShowdownShare": 1
+      },
+      {
+        "id": "JT",
+        "hole": [
+          "Js",
+          "Tc"
+        ],
+        "priorMass": 2,
+        "heroShowdownShare": 1
+      }
+    ],
+    "fixedResponse": {
+      "afterCheck": "BTN always checks; showdown",
+      "afterBet17_5": {
+        "88": {
+          "call": 1,
+          "fold": 0
+        },
+        "QQ": {
+          "call": 0.5,
+          "fold": 0.5
+        },
+        "JT": {
+          "call": 0,
+          "fold": 1
+        }
+      },
+      "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+    },
+    "paths": [
+      {
+        "id": "HC_A",
+        "events": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "likelihoods": [
+          [
+            0.2,
+            0.8,
+            1
+          ],
+          [
+            1,
+            0.5,
+            0.1
+          ]
+        ],
+        "currentState": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        }
+      },
+      {
+        "id": "HC_B",
+        "events": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "likelihoods": [
+          [
+            1,
+            0.5,
+            0.1
+          ],
+          [
+            0.8,
+            0.8,
+            1
+          ]
+        ],
+        "currentState": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        }
+      }
+    ],
+    "task": "先按两次已观察回应筛选候选，再在完整给定的河牌模型内比较过牌与下注17.5。",
+    "options": [
+      "过牌",
+      "下注17.5",
+      "我不知道"
+    ]
+  },
+  "persistence": "none; research content only"
+}

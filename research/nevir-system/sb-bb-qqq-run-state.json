@@ -1,0 +1,28 @@
+{
+  "achievedMetricUnits": 5.33961296081543,
+  "additionalReserve": 536870912,
+  "budget": 4023622041,
+  "compressedEstimate": 2597630848,
+  "diskFreeBytes": 67353526272,
+  "elapsedSeconds": 1216.0018982,
+  "initialAvailablePhysical": 6706036736,
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "iterations": 240,
+  "locksApplied": false,
+  "originalA72Changed": false,
+  "peakWorkingSet": 110903296,
+  "pid": 10788,
+  "progress": {
+    "availablePhysical": 4261752832,
+    "elapsedSeconds": 1207.4118233,
+    "iteration": 240,
+    "metricUnits": 5.33961296081543,
+    "peakWorkingSet": 2548580352
+  },
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "finished_candidate_saved",
+  "stoppingReason": "wall_clock_limit",
+  "strategyAllocated": true,
+  "targetReached": false,
+  "threadsRequested": 2
+}

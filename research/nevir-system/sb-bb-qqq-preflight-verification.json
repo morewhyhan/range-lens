@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "status": "separate_full_graph_and_roots_verified_not_strategy",
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "checkedRootWeights": 912,
+  "abstractHistories": 2559,
+  "rootActions": [
+    "Check",
+    "Bet(198)",
+    "Bet(402)",
+    "AllIn(9700)"
+  ],
+  "estimatedCompressedBytes": 2597630848,
+  "memory": {
+    "observedUtc": "2026-10-21T09:18:02.5322611Z",
+    "source": "Windows GlobalMemoryStatusEx; instantaneous, not a future reservation",
+    "totalPhysicalBytes": 16962281472,
+    "availablePhysicalBytes": 6801666048,
+    "loadPercent": 59,
+    "budgetBytes": 4080999628,
+    "compressedFits": true,
+    "notReserved": true,
+    "notWholeProcessPeak": true
+  },
+  "originalA72Preserved": true,
+  "sourceHashes": {
+    "request": "cd2ad5c2504628415a4399af8999fcc2bd610fd1f576d10b5a0b93100ff8fb8c",
+    "preflight": "7d734c67d74f7c82ee6f8ed86c064bc8fb180dc82d301fc16baaf2ab524e1e13",
+    "memory": "26797bb6b8296ead31d78323d4fcef45feda409d76793be5f58d34b879bb38cb"
+  },
+  "solveStarted": false,
+  "NL50Reference": false
+}

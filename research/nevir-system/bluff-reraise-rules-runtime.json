@@ -1,0 +1,28 @@
+{
+  "NL50Reference": false,
+  "afterMinRaiseActions": "[Fold, Call, AllIn(8300)]",
+  "afterOpponentShortAllinActions": "[Fold, Call]",
+  "facingRaiseActions": "[Fold, Call, Raise(7250), AllIn(8300)]",
+  "heroToCallAfterShortAllIn": 1050,
+  "history": [
+    "Bet1750",
+    "Raise4500"
+  ],
+  "legalMinRaiseTo": 7250,
+  "maxAllInTo": 8300,
+  "opponentShortRaiseIncrement": 1050,
+  "previousFullRaiseIncrement": 2750,
+  "rejectedBelowMinimum": {
+    "amount": 7249,
+    "engineError": "Invalid bet amount: 7249 (min: 7250, max: 8300)"
+  },
+  "riverStart": {
+    "eachStack": 8300,
+    "pot": 3500
+  },
+  "solveStarted": false,
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "river_reraise_amounts_runtime_checked_not_solved",
+  "strategyAllocated": false,
+  "unitsPerBB": 100
+}

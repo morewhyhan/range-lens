@@ -1,0 +1,261 @@
+{
+  "id": "ANSWER_PROVENANCE_AND_GRADING_IDENTITY_CONTRACT_V1",
+  "status": "paper_answer_identity_and_source_lineage_closed_runtime_package_missing",
+  "purpose": "为每道题固定答案身份、可见标签、允许判分、字段来源和资料不足停止，防止权益或局部求解结果冒充完整GTO。",
+  "sources": [
+    "reference-course-policy-ledger-contract.json",
+    "solver-snapshot-to-lesson-package.json",
+    "solver-course-visual-compiler-contract.json",
+    "strategy-to-course-compiler-contract.json",
+    "session-question-queue-contract.json",
+    "full-course-coverage-and-release-contract.json"
+  ],
+  "identities": [
+    {
+      "id": "fact",
+      "userLabel": "牌面事实",
+      "requiredBlocks": [
+        "identity",
+        "physical"
+      ],
+      "allowedOutputs": [
+        "bestFive",
+        "handClass",
+        "improvementCards",
+        "physicalFilter",
+        "potOdds",
+        "ledgerFormula"
+      ],
+      "forbiddenOutputs": [
+        "referenceFrequency",
+        "courseActionGrade"
+      ],
+      "grade": "independent_fact_or_formula",
+      "sourceRule": "牌力评估器、实体组合枚举和明确公式；事实不选择下注动作。"
+    },
+    {
+      "id": "demonstration",
+      "userLabel": "示范讲解",
+      "requiredBlocks": [
+        "identity",
+        "physical",
+        "teaching"
+      ],
+      "allowedOutputs": [
+        "declaredExample",
+        "reasoningSkeleton",
+        "parentReturn"
+      ],
+      "forbiddenOutputs": [
+        "independent_mastery",
+        "targetStrategyClaim"
+      ],
+      "grade": "demonstration_only",
+      "sourceRule": "局部课程例子可用于展示结构，但不能作为未见题精确策略答案。"
+    },
+    {
+      "id": "course_rule",
+      "userLabel": "本课程规则",
+      "requiredBlocks": [
+        "identity",
+        "physical",
+        "course",
+        "difference",
+        "teaching"
+      ],
+      "allowedOutputs": [
+        "courseDecision",
+        "courseAmount",
+        "courseRangeAfter",
+        "courseSuccessorOrStop"
+      ],
+      "forbiddenOutputs": [
+        "rawGTOClaim",
+        "unlabeledReferenceFrequency"
+      ],
+      "grade": "declared_course_policy_only",
+      "sourceRule": "必须有版本化课程政策和简化差异账本；政策缺失就停止。"
+    },
+    {
+      "id": "reference_frequency",
+      "userLabel": "参考频率",
+      "requiredBlocks": [
+        "identity",
+        "physical",
+        "reference"
+      ],
+      "allowedOutputs": [
+        "referenceActionFrequencyByCombo",
+        "referenceActionValueByCombo"
+      ],
+      "forbiddenOutputs": [
+        "courseDecision",
+        "learnerMastery"
+      ],
+      "grade": "reference_frequency_display_only",
+      "sourceRule": "必须有匹配输入指纹、固定求解快照、动作菜单和质量证据；频率不是课程动作。"
+    },
+    {
+      "id": "reference_policy",
+      "userLabel": "匹配参考策略",
+      "requiredBlocks": [
+        "identity",
+        "physical",
+        "reference",
+        "course",
+        "difference",
+        "range",
+        "successor",
+        "teaching"
+      ],
+      "allowedOutputs": [
+        "referencePolicy",
+        "referenceRangeAfter",
+        "differenceLedger",
+        "legalSuccessors"
+      ],
+      "forbiddenOutputs": [
+        "unmatchedSolverClaim",
+        "equityAsAction"
+      ],
+      "grade": "matched_reference_and_course_policy",
+      "sourceRule": "输入配置、范围、行动菜单、求解快照和后继全部匹配后才可开放。"
+    },
+    {
+      "id": "not_open",
+      "userLabel": "资料不足，暂不开放",
+      "requiredBlocks": [
+        "identity"
+      ],
+      "allowedOutputs": [
+        "stopReason",
+        "returnToParent",
+        "missingField"
+      ],
+      "forbiddenOutputs": [
+        "zeroFrequency",
+        "defaultFold",
+        "inventedRange",
+        "inventedSuccessor"
+      ],
+      "grade": "unknown_is_error_and_stop",
+      "sourceRule": "缺身份、政策、范围、后继或许可证时，显示停止卡，不生成动作答案。"
+    }
+  ],
+  "lineage": {
+    "inputIdentity": [
+      "sourceFingerprint",
+      "configurationFingerprint",
+      "nodeIdentity",
+      "actionMenu"
+    ],
+    "physicalFacts": [
+      "equity-calculator",
+      "holdem-hand-evaluator",
+      "entityEnumeration"
+    ],
+    "referencePolicy": [
+      "matchedSolverSnapshot",
+      "perComboStrategy",
+      "solverQuality",
+      "legalSuccessors"
+    ],
+    "coursePolicy": [
+      "versionedCoursePolicy",
+      "simplificationTransform",
+      "differenceLedger"
+    ],
+    "rangeAfter": [
+      "rangeBefore",
+      "physicalFilter",
+      "referenceOrCourseActionFrequency",
+      "fixedDenominator"
+    ],
+    "successorOrStop": [
+      "realSuccessorNode",
+      "explicitStopReason"
+    ],
+    "teachingFrame": [
+      "plainPrompt",
+      "primaryAction",
+      "requiredOutput",
+      "errorReturn",
+      "transferSpec"
+    ]
+  },
+  "formulas": {
+    "physicalWeight": "w_before(h)=entityWeight(h)*physicalFilter(h)",
+    "referenceAfter": "w_reference_after(h,a)=w_before(h)*P_reference(a|h,node)",
+    "courseAfter": "w_course_after(h,a)=w_before(h)*P_course(a|h,node)",
+    "viewAfter": "view_after(h,a)=w_after(h,a)/sum_h(w_after(h,a))",
+    "actionDelta": "P_course(a|h,node)-P_reference(a|h,node)",
+    "rangeDelta": "view_course_after(h,a)-view_reference_after(h,a)"
+  },
+  "releaseGates": [
+    "input_fingerprint_matches",
+    "physical_facts_independently_checked",
+    "reference_policy_present_or_explicit_course_rule",
+    "difference_ledger_present_when_simplified",
+    "range_after_uses_fixed_denominator",
+    "successor_or_stop_present",
+    "teaching_frame_and_parent_return_present",
+    "source_license_and_provenance_clear"
+  ],
+  "questionPackageRequired": [
+    "questionId",
+    "routeParent",
+    "parentSnapshotHash",
+    "unitId",
+    "sourceIdentity",
+    "configurationFingerprint",
+    "questionMode",
+    "visibleInputs",
+    "plainPrompt",
+    "primaryAction",
+    "requiredOutput",
+    "answerIdentity",
+    "gradingRule",
+    "explanation",
+    "rangeViewOrStop",
+    "successorOrStop",
+    "transferSpec"
+  ],
+  "visibleBoundary": {
+    "mustShow": [
+      "answerIdentityLabel",
+      "sourceScope",
+      "courseOrReferenceBadge",
+      "rangeOrStop",
+      "returnToParent"
+    ],
+    "mustHide": [
+      "teacherAnswer",
+      "hiddenReferenceFrequency",
+      "futureOpponentAction",
+      "unresolvedPolicy"
+    ],
+    "colorCannotBeOnlyMeaning": true,
+    "courseAndReferenceMustBeSeparate": true
+  },
+  "rules": {
+    "unknownIsNotZero": true,
+    "equityIsNotAction": true,
+    "solverIsNotCoursePolicy": true,
+    "referenceFrequencyIsNotCourseDecision": true,
+    "coursePolicyRequiresVersionAndDifference": true,
+    "rangeAfterRequiresFixedDenominator": true,
+    "successorRequiresRealNodeOrExplicitStop": true,
+    "missingLicenseOrProvenanceStopsPackage": true,
+    "noExactGradeWithoutReleaseGates": true,
+    "provenanceDoesNotEqualLearnerMastery": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "all35PackagesCompiled": false,
+    "matchedReference": false,
+    "runtimeReadsIdentity": false,
+    "runtimeGradesByIdentity": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

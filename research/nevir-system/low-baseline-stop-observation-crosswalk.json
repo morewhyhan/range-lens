@@ -1,0 +1,1006 @@
+{
+  "id": "LOW_BASELINE_STOP_OBSERVATION_CROSSWALK_V1",
+  "status": "paper_stop_observation_crosswalk_closed_trial_missing",
+  "purpose": "把“逐停点、逐通道观察低基础用户是否看懂并能继续”绑定到唯一12停点路线，防止总分或走完按钮替代学习证据。",
+  "sources": [
+    "cross-age-low-baseline-acceptance.json",
+    "first-pass-state-evidence-crosswalk.json",
+    "first-pass-full-guided-administration-audit.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "channels": [
+    "language",
+    "visual",
+    "memory",
+    "operation"
+  ],
+  "observationFieldRegistry": {
+    "firstAnswer": {
+      "channel": "language",
+      "timing": "before_help",
+      "meaning": "用户第一次自己给出的回答或明确不知道。"
+    },
+    "currentLayerSelfLocated": {
+      "channel": "memory",
+      "timing": "before_help",
+      "meaning": "用户自己指出当前路线停点。"
+    },
+    "visualAnchorPointed": {
+      "channel": "visual",
+      "timing": "before_help",
+      "meaning": "用户指出本停点的中心视觉锚点。"
+    },
+    "primaryActionCompleted": {
+      "channel": "operation",
+      "timing": "after_answer",
+      "meaning": "用户完成本停点唯一主要动作。"
+    },
+    "nextLayerSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "非终点停点中用户自己找到下一层。"
+    },
+    "nextOrStopSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户自己找到下一停点，或在终点说出停止。"
+    },
+    "returnPointSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户自己指出答错或关闭子层后回到哪里。"
+    },
+    "handoffRestated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户用自己的话复述交给下一层的字段。"
+    },
+    "hostPromptCount": {
+      "channel": "language",
+      "timing": "throughout",
+      "meaning": "主持者在首答前后的提示次数。"
+    },
+    "hostPromptContent": {
+      "channel": "language",
+      "timing": "throughout",
+      "meaning": "提示属于重复问题、指向事实、指向标记、揭示事实还是引导答案。"
+    },
+    "errorLayer": {
+      "channel": "operation",
+      "timing": "after_error",
+      "meaning": "错误归因到哪一层；未知也要记录。"
+    },
+    "parentRestore": {
+      "channel": "memory",
+      "timing": "after_child_close_or_error",
+      "meaning": "回到父帧并恢复父帧字段。"
+    },
+    "changedField": {
+      "channel": "visual",
+      "timing": "transfer_only",
+      "meaning": "迁移题中唯一改变的字段。"
+    },
+    "retryWithoutRouteReset": {
+      "channel": "operation",
+      "timing": "after_error",
+      "meaning": "错误后能在原路线继续，而不是被迫重新开始。"
+    },
+    "exitPoint": {
+      "channel": "operation",
+      "timing": "terminal_or_stop",
+      "meaning": "用户退出、停止或完成的位置。"
+    }
+  },
+  "rows": [
+    {
+      "stateId": "L0",
+      "frameId": "G0_welcome",
+      "parentStateId": null,
+      "nextState": "L1",
+      "stopCondition": "桌面、目标或有效筹码未确认时停在当前层。",
+      "errorReturn": "L0",
+      "centerVisual": "六人桌、有效筹码和训练目标",
+      "plainQuestion": "这是一张什么桌，今天只练哪一条路线？",
+      "primaryAction": "确认桌面并开始",
+      "memoryToken": "tableFrame",
+      "channelBindings": {
+        "language": {
+          "question": "这是一张什么桌，今天只练哪一条路线？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "六人桌、有效筹码和训练目标",
+          "fields": [
+            "visualAnchorPointed"
+          ]
+        },
+        "memory": {
+          "token": "tableFrame",
+          "next": "L1",
+          "return": "L0",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "确认桌面并开始",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "L1",
+      "frameId": "G1_context",
+      "parentStateId": null,
+      "nextState": "L2",
+      "stopCondition": "位置、历史、行动者、底池或待补金额不完整时停在当前层。",
+      "errorReturn": "L1",
+      "centerVisual": "座位、行动箭头、历史、底池和待补金额",
+      "plainQuestion": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "primaryAction": "点行动者并确认待补",
+      "memoryToken": "contextFrame",
+      "channelBindings": {
+        "language": {
+          "question": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "座位、行动箭头、历史、底池和待补金额",
+          "fields": [
+            "visualAnchorPointed"
+          ]
+        },
+        "memory": {
+          "token": "contextFrame",
+          "next": "L2",
+          "return": "L1",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "点行动者并确认待补",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "L2",
+      "frameId": "G2_preflop_chart",
+      "parentStateId": null,
+      "nextState": "L3",
+      "stopCondition": "图表身份或格子坐标未确定时停在当前层，不猜动作。",
+      "errorReturn": "L2",
+      "centerVisual": "固定翻前图表与169格坐标",
+      "plainQuestion": "我的牌在这张图的哪一格？先只找到坐标。",
+      "primaryAction": "点击固定坐标格",
+      "memoryToken": "preflopCell",
+      "channelBindings": {
+        "language": {
+          "question": "我的牌在这张图的哪一格？先只找到坐标。",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "固定翻前图表与169格坐标",
+          "fields": [
+            "visualAnchorPointed"
+          ]
+        },
+        "memory": {
+          "token": "preflopCell",
+          "next": "L3",
+          "return": "L2",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "点击固定坐标格",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "L3",
+      "frameId": "G3_preflop_action",
+      "parentStateId": null,
+      "nextState": "L4",
+      "stopCondition": "动作身份、权重或来源缺失时停在当前层。",
+      "errorReturn": "L3",
+      "centerVisual": "选中格、动作图例和动作权重",
+      "plainQuestion": "这个格子代表什么翻前课程动作？权重是多少？",
+      "primaryAction": "确认格子动作和权重",
+      "memoryToken": "preflopAction",
+      "channelBindings": {
+        "language": {
+          "question": "这个格子代表什么翻前课程动作？权重是多少？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "选中格、动作图例和动作权重",
+          "fields": [
+            "visualAnchorPointed"
+          ]
+        },
+        "memory": {
+          "token": "preflopAction",
+          "next": "L4",
+          "return": "L3",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "确认格子动作和权重",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "L4",
+      "frameId": "G4_range_bridge",
+      "parentStateId": null,
+      "nextState": "p1",
+      "stopCondition": "范围来源、物理过滤或分母缺失时停在当前层。",
+      "errorReturn": "L4",
+      "centerVisual": "动作前范围、已知牌物理过滤和范围分母",
+      "plainQuestion": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "primaryAction": "标记一组物理排除并确认分母",
+      "memoryToken": "startingRangeFrame",
+      "channelBindings": {
+        "language": {
+          "question": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "动作前范围、已知牌物理过滤和范围分母",
+          "fields": [
+            "visualAnchorPointed"
+          ]
+        },
+        "memory": {
+          "token": "startingRangeFrame",
+          "next": "p1",
+          "return": "L4",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "标记一组物理排除并确认分母",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p1",
+      "frameId": "G5_p1_context",
+      "parentStateId": "L4",
+      "nextState": "p2",
+      "stopCondition": "翻后行动者、历史、价格或前序范围没有确认时停在当前层。",
+      "errorReturn": "p1",
+      "centerVisual": "翻后牌桌、行动箭头、底池、后手和待补",
+      "plainQuestion": "翻牌后现在轮到谁？继续需要多少钱？",
+      "primaryAction": "确认行动权和价格",
+      "memoryToken": "contextCard",
+      "channelBindings": {
+        "language": {
+          "question": "翻牌后现在轮到谁？继续需要多少钱？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "翻后牌桌、行动箭头、底池、后手和待补",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "contextCard",
+          "next": "p2",
+          "return": "p1",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "确认行动权和价格",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p2",
+      "frameId": "G6_p2_hand",
+      "parentStateId": "L4",
+      "nextState": "p3",
+      "stopCondition": "牌面、底牌、最佳五张、牌型或改善牌未确认时停在当前层。",
+      "errorReturn": "p2",
+      "centerVisual": "公共牌、底牌、最佳五张和牌力顺序",
+      "plainQuestion": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "primaryAction": "拼最佳五张并点牌型",
+      "memoryToken": "handCard",
+      "channelBindings": {
+        "language": {
+          "question": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "公共牌、底牌、最佳五张和牌力顺序",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "handCard",
+          "next": "p3",
+          "return": "p2",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "拼最佳五张并点牌型",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p3",
+      "frameId": "G7_p3_range",
+      "parentStateId": "L4",
+      "nextState": "p4",
+      "stopCondition": "范围分母、物理过滤或行动筛选身份不完整时停在当前层。",
+      "errorReturn": "p3",
+      "centerVisual": "同坐标范围前后图、物理排除和分母",
+      "plainQuestion": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "primaryAction": "点一个组合并选择变化身份",
+      "memoryToken": "rangeDeltaCard",
+      "channelBindings": {
+        "language": {
+          "question": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "同坐标范围前后图、物理排除和分母",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "rangeDeltaCard",
+          "next": "p4",
+          "return": "p3",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "点一个组合并选择变化身份",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p4",
+      "frameId": "G8_p4_compare",
+      "parentStateId": "L4",
+      "nextState": "p5",
+      "stopCondition": "没有匹配参考或明确课程政策时停在当前层，不伪造精确答案。",
+      "errorReturn": "p4",
+      "centerVisual": "价格、合法动作、动作目的和政策身份",
+      "plainQuestion": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "primaryAction": "选择一个有依据的动作或停止",
+      "memoryToken": "choiceCard",
+      "channelBindings": {
+        "language": {
+          "question": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "价格、合法动作、动作目的和政策身份",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "choiceCard",
+          "next": "p5",
+          "return": "p4",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "选择一个有依据的动作或停止",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p5",
+      "frameId": "G9_p5_execute",
+      "parentStateId": "L4",
+      "nextState": "p6",
+      "stopCondition": "动作金额、底池、后手或下一行动者不守恒时停在当前层。",
+      "errorReturn": "p5",
+      "centerVisual": "动作按钮、金额、底池后变化和下一行动者",
+      "plainQuestion": "实际点什么？投入多少？接下来轮到谁？",
+      "primaryAction": "点击动作并确认金额",
+      "memoryToken": "ledgerCard",
+      "channelBindings": {
+        "language": {
+          "question": "实际点什么？投入多少？接下来轮到谁？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "动作按钮、金额、底池后变化和下一行动者",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "ledgerCard",
+          "next": "p6",
+          "return": "p5",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "点击动作并确认金额",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p6",
+      "frameId": "G10_p6_update",
+      "parentStateId": "L4",
+      "nextState": "p7",
+      "stopCondition": "变化字段、动作后范围、账本或真实后继缺失时停在当前层。",
+      "errorReturn": "p6",
+      "centerVisual": "一个变化高亮、动作后范围和真实后继",
+      "plainQuestion": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "primaryAction": "确认变化并进入真实后继",
+      "memoryToken": "changeCard",
+      "channelBindings": {
+        "language": {
+          "question": "回应或新牌只改变了哪一项？下一步接哪里？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "一个变化高亮、动作后范围和真实后继",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "changeCard",
+          "next": "p7",
+          "return": "p6",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "确认变化并进入真实后继",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    },
+    {
+      "stateId": "p7",
+      "frameId": "G11_p7_close",
+      "parentStateId": "L4",
+      "nextState": "exit_or_review",
+      "stopCondition": "结束原因、错误层或单变量迁移字段未表达时停在当前层。",
+      "errorReturn": "p7",
+      "centerVisual": "结算账本、决策与结果分栏和路线回放",
+      "plainQuestion": "这手牌到哪里结束？如果错了，错在第几层？",
+      "primaryAction": "确认结算并选择回退层",
+      "memoryToken": "reviewCard",
+      "channelBindings": {
+        "language": {
+          "question": "这手牌到哪里结束？如果错了，错在第几层？",
+          "fields": [
+            "firstAnswer",
+            "hostPromptCount",
+            "hostPromptContent"
+          ]
+        },
+        "visual": {
+          "anchor": "结算账本、决策与结果分栏和路线回放",
+          "fields": [
+            "visualAnchorPointed",
+            "changedField"
+          ]
+        },
+        "memory": {
+          "token": "reviewCard",
+          "next": "exit_or_review",
+          "return": "p7",
+          "fields": [
+            "currentLayerSelfLocated",
+            "nextLayerSelfLocated",
+            "nextOrStopSelfLocated",
+            "returnPointSelfLocated",
+            "handoffRestated",
+            "parentRestore"
+          ]
+        },
+        "operation": {
+          "action": "确认结算并选择回退层",
+          "fields": [
+            "primaryActionCompleted",
+            "errorLayer",
+            "retryWithoutRouteReset",
+            "exitPoint"
+          ]
+        }
+      },
+      "requiredBeforeHelp": [
+        "firstAnswer",
+        "currentLayerSelfLocated",
+        "visualAnchorPointed"
+      ],
+      "requiredAfterAnswer": [
+        "primaryActionCompleted",
+        "nextOrStopSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ],
+      "requiredOnError": [
+        "errorLayer",
+        "retryWithoutRouteReset",
+        "parentRestore"
+      ],
+      "requiredOnTransfer": [
+        "changedField"
+      ],
+      "requiredAtExit": [
+        "exitPoint"
+      ],
+      "independentPassRule": "主持者不得替用户指出当前层、答案或下一步；首答未知按错误处理并保留原路线。"
+    }
+  ],
+  "rules": {
+    "allCanonicalStopsMapped": true,
+    "allFourChannelsBoundAtEveryStop": true,
+    "firstAnswerBeforeHelp": true,
+    "averageScoreCannotMaskCoreFailure": true,
+    "hostLeadingAnswerIsNotIndependentPass": true,
+    "slowReadingOrOperationIsNotFailure": true,
+    "p7UsesNextOrStopInsteadOfNextLayer": true,
+    "parentRestoreRequiredWhenParentExists": true,
+    "missingObservationIsUnknownNotPass": true
+  },
+  "currentEvidence": {
+    "paperCrosswalk": true,
+    "runtimeObservationAttached": false,
+    "participantObserved": false,
+    "routeComprehensionObserved": false,
+    "parentRestoreObserved": false,
+    "unseenTransferObserved": false
+  }
+}

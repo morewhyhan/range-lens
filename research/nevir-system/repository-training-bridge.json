@@ -1,0 +1,16 @@
+{
+  "id": "REPOSITORY_TRAINING_BRIDGE_V1",
+  "status": "paper_bridge_not_integrated",
+  "route": [
+    {"stage":"source_identity","output":["repo","commit","license","readmeFacts"]},
+    {"stage":"input_compile","output":["positions","history","ranges","board","potBB","stacksBB","rake","actionTree"]},
+    {"stage":"physical_check","engine":"equity-calculator+holdem-hand-evaluator","output":["handClass","legalRunouts","win","tie","equity"]},
+    {"stage":"reference_solve","engine":"postflop-solver","output":["actionFrequency","actionEV","reachWeight","rangeAfter","successors"]},
+    {"stage":"policy_compile","engine":"course-policy","output":["courseAction","quantization","simplificationDiff","boundary"]},
+    {"stage":"exercise_compile","engine":"lesson-compiler","output":["visibleInputs","oneQuestion","onePrimaryAction","answerKey","explanation","rangeBefore","courseAfter","referenceAfter"]}
+  ],
+  "runtimeRule": "read_immutable_snapshots_only",
+  "gradingRule": "grade_course_policy; show_reference_after_answer",
+  "forbiddenShortcuts": ["equity_to_action", "ui_rounding_to_answer", "neighbor_node_as_missing_reference", "solver_convergence_to_nl50", "flat_solver_controls_as_beginner_home"],
+  "evidence": {"schemaWritten":true,"snapshotProduced":false,"runtimeImplemented":false,"learnerTrial":false}
+}

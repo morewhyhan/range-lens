@@ -1,0 +1,168 @@
+{
+  "status": "inventory_and_directory_leads_not_full_content_verification",
+  "checkedOn": "2026-10-19",
+  "root": "C:/Users/why/Desktop/笔记 Nevir",
+  "counts": {
+    "totalFiles": 15,
+    "postflopNotes": 7,
+    "otherNotes": 5,
+    "workbooks": 3,
+    "standaloneVideos": 0,
+    "standaloneImages": 0,
+    "standaloneSolverExports": 0
+  },
+  "files": [
+    {
+      "relativePath": "1-翻牌前策略导论_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\1-翻牌前策略导论_中文笔记.md",
+      "kind": "other_note",
+      "bytes": 11916,
+      "sha256": "d7bdacb66350bbb41a5ae331fad2e8bb8f4f131f6e34cf1bd44405284c8ef0c8",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2-开牌范围_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2-开牌范围_中文笔记.md",
+      "kind": "other_note",
+      "bytes": 9987,
+      "sha256": "303802973034fcb05b3c18e81c48f6ccb496170e685d17daec586faefde52e55",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.1- 翻后策略导论_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 12183,
+      "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.2-有利位置3bet底池—第一部分_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 10019,
+      "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.3-有利位置3bet底池—第二部分_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 7099,
+      "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.4-3bet底池的转牌_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 7559,
+      "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.5-不利位置3bet底池_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 10284,
+      "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.6-有利位置单次加注底池_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 18117,
+      "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "2.7-不利位置单次加注底池_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+      "kind": "postflop_note",
+      "bytes": 10214,
+      "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "3-掌握3bet范围_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\3-掌握3bet范围_中文笔记.md",
+      "kind": "other_note",
+      "bytes": 11538,
+      "sha256": "901b5317d13d748d60e41d9101c187b5ae6748906b6b1e6391fb80271b82d269",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "4-应对3bet_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\4-应对3bet_中文笔记.md",
+      "kind": "other_note",
+      "bytes": 9427,
+      "sha256": "563d889273fd5b102d5e5d6ba3ff923d5fa93058fb438b6544d626c26e75fd29",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "5-大盲防守_中文笔记.md",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\5-大盲防守_中文笔记.md",
+      "kind": "other_note",
+      "bytes": 8128,
+      "sha256": "5c914e4aef3adc7ac5fef74b4e817c02c80a5c6eecbbbd477261327ea476cc37",
+      "contentAudit": "Inventory identity only; semantic review remains separately recorded."
+    },
+    {
+      "relativePath": "翻前GTO_整理版.xlsx",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\翻前GTO_整理版.xlsx",
+      "kind": "workbook",
+      "bytes": 1679639,
+      "sha256": "80c35c635edd62938c79dc5b8eb4e52d72c096e68760975dab6a599af4b95cef",
+      "contentAudit": "Workbook content and embedded assets are NOT inspected by this file inventory."
+    },
+    {
+      "relativePath": "翻前策略整合版_六工作表.xlsx",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\翻前策略整合版_六工作表.xlsx",
+      "kind": "workbook",
+      "bytes": 135050,
+      "sha256": "25e7acaba5b8bbd15d2bc5c1985a6852be358c218b88ae2eebb603c1147ace34",
+      "contentAudit": "Workbook content and embedded assets are NOT inspected by this file inventory."
+    },
+    {
+      "relativePath": "翻后策略_分支与推理版.xlsx",
+      "absolutePath": "C:\\Users\\why\\Desktop\\笔记 Nevir\\翻后策略_分支与推理版.xlsx",
+      "kind": "workbook",
+      "bytes": 1915753,
+      "sha256": "0386f3c0a077291617605f10e3b3b1670c013cf055f91b06e05d2409774a5d8a",
+      "contentAudit": "Workbook content and embedded assets are NOT inspected by this file inventory."
+    }
+  ],
+  "officialDirectory": {
+    "url": "https://nevirpoker.com/en/sale/1",
+    "evidenceKind": "First-party page content returned by web search index; direct web open returned no extractable body in this run.",
+    "indexedLevel": "intermediate_advanced",
+    "localMatch": "First seven postflop titles and order align with the seven supplied notes; video content itself not compared.",
+    "additionalIndexedTopics": [
+      "recap",
+      "BB_vs_BTN_cbet_defense",
+      "play_and_explain_including_NL50"
+    ],
+    "currentAvailability": "not_verified",
+    "videoOrStrategyContentAcquired": false
+  },
+  "workbookContentAudit": {
+    "file": "翻前GTO_整理版.xlsx",
+    "status": "read_only_audit_matches_current_source",
+    "evidence": "original-workbook-audit.json",
+    "scope": "Two sheets and ten WPS embedded images inspected. Complete opener call-vs-3bet policy not recovered; no frequencies digitized."
+  },
+  "conclusionsAllowed": [
+    "The local folder contains seven postflop note files and other material listed here.",
+    "No standalone videos or usual solver-file extensions were found in this folder snapshot.",
+    "File extensions do not exclude embedded workbook diagrams, ranges or other useful information.",
+    "Directory topics guide further source verification; they do not supply strategy answers."
+  ],
+  "notClaimed": [
+    "Official course videos were read",
+    "All course material is supplied locally",
+    "Workbook embedded content is absent",
+    "The complete caller policy is absent from every provided workbook",
+    "NL50 competence or teaching effectiveness is proven"
+  ]
+}

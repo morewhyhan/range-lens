@@ -1,0 +1,97 @@
+{
+  "status": "two_original_static_charts_visually_inspected_not_per_combo_reference",
+  "reviewDate": "2026-10-21",
+  "method": "In-app browser direct public PNG pages and rendered screenshots; not page titles alone",
+  "article": "https://blog.gtowizard.com/dominate-the-river-in-3-bet-pots-oop/",
+  "originalChartsInspected": 2,
+  "screenshotsSavedLocally": false,
+  "charts": [
+    {
+      "id": "brick",
+      "url": "https://blog.gtowizard.com/content/wp-content/uploads/2024/12/gto-wizard-dominate-the-river-in-3-bet-pots-oop-image-4.png",
+      "imageDimensions": [
+        1914,
+        1074
+      ],
+      "rankSequence": [
+        "A",
+        "9",
+        "2",
+        "7",
+        "4"
+      ],
+      "sameColorGroups": [
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "nodeAggregatePercent": {
+        "allin87": 57.5,
+        "bet61": 0,
+        "bet35": 7.4,
+        "bet10": 0,
+        "check": 35.1
+      }
+    },
+    {
+      "id": "flush_complete",
+      "url": "https://blog.gtowizard.com/content/wp-content/uploads/2024/12/gto-wizard-dominate-the-river-in-3-bet-pots-oop-image-7.png",
+      "imageDimensions": [
+        1914,
+        1074
+      ],
+      "rankSequence": [
+        "A",
+        "9",
+        "2",
+        "7",
+        "4"
+      ],
+      "sameColorGroups": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "nodeAggregatePercent": {
+        "allin87": 37.8,
+        "bet61": 0,
+        "bet35": 4.3,
+        "bet10": 35,
+        "check": 22.9
+      }
+    }
+  ],
+  "suitObservation": "Image card-color partitions support the link two-tone flop and flush-completing alternate river. Exact suit glyphs were not transcribed from these color-only tiles; retain public link metadata and prose discrepancy separately.",
+  "configuration": "Public article/link NL500 six-max100BB; not NL50",
+  "perComboFrequenciesObtained": false,
+  "perActionEVsObtained": false,
+  "completeEarlierStreetPoliciesObtained": false,
+  "appSolutionObservation": {
+    "attemptedOriginalPublicLink": true,
+    "authoritativeObservedURL": "https://app.gtowizard.com/login",
+    "title": "Login - GTO Wizard",
+    "accountLoginPerformed": false,
+    "dataObtained": false
+  },
+  "preciseFirstLessonGatesReady": 0,
+  "learnerTrials": 0,
+  "originalImageFilesSavedLocally": false
+}

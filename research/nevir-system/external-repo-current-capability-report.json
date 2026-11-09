@@ -1,0 +1,261 @@
+{
+  "id": "EXTERNAL_REPO_CURRENT_CAPABILITY_REPORT_V1",
+  "status": "current_repo_capabilities_mapped_license_and_runtime_gates_open",
+  "reviewDate": "2026-10-22",
+  "sources": [
+    {
+      "repo": "gto-wizard/equity-calculator",
+      "layer": "fact_equity",
+      "outputs": [
+        "exact_runout_enumeration",
+        "win",
+        "tie",
+        "pot_share_equity",
+        "dead_cards"
+      ],
+      "doesNotProvide": [
+        "weighted_ranges",
+        "action_tree",
+        "betting_strategy",
+        "action_ev"
+      ],
+      "useFor": [
+        "p2_best_five_fact",
+        "call_equity_fact",
+        "independent_settlement_check"
+      ],
+      "licenseStatus": "not_confirmed_from_public_repo_page",
+      "runtimeStatus": "not_integrated"
+    },
+    {
+      "repo": "b-inary/postflop-solver",
+      "layer": "reference_strategy",
+      "outputs": [
+        "per_hand_strategy",
+        "action_ev",
+        "equity",
+        "reach_weights",
+        "history",
+        "successor_cards",
+        "exploitability"
+      ],
+      "inputs": [
+        "weighted_ranges",
+        "board",
+        "pot",
+        "effective_stack",
+        "rake",
+        "street_bet_sizes",
+        "raise_sizes",
+        "donk_sizes",
+        "allin_thresholds"
+      ],
+      "algorithm": "discounted_cfr",
+      "supports": [
+        "multithreading",
+        "isomorphic_chance_combining",
+        "bunching_up_to_four_folded_players_in_six_max"
+      ],
+      "doesNotMean": [
+        "six_active_player_postflop_equilibrium",
+        "course_policy",
+        "beginner_training"
+      ],
+      "licenseStatus": "AGPL-3.0",
+      "upstreamStatus": "development_suspended",
+      "useFor": [
+        "offline_reference_generation",
+        "range_delta_export",
+        "successor_closure_audit"
+      ],
+      "runtimeStatus": "not_integrated"
+    },
+    {
+      "repo": "b-inary/wasm-postflop",
+      "layer": "browser_solver_shell",
+      "outputs": [
+        "browser_solver_ui",
+        "solver_result_visualization"
+      ],
+      "useFor": [
+        "browser_runtime_reference",
+        "node_and_range_visual_reference"
+      ],
+      "doesNotProvide": [
+        "completed_gto_training_mode",
+        "our_nested_learning_route"
+      ],
+      "licenseStatus": "AGPL-3.0",
+      "upstreamStatus": "development_suspended",
+      "runtimeStatus": "not_integrated"
+    },
+    {
+      "repo": "b-inary/desktop-postflop",
+      "layer": "desktop_solver_shell",
+      "outputs": [
+        "Tauri_desktop_app",
+        "same_solver_and_ui_as_wasm",
+        "higher_memory_runtime"
+      ],
+      "useFor": [
+        "desktop_runtime_reference",
+        "range_and_node_display_reference"
+      ],
+      "doesNotProvide": [
+        "completed_training_mode",
+        "beginner_course_flow"
+      ],
+      "licenseStatus": "AGPL-3.0",
+      "upstreamStatus": "development_suspended",
+      "runtimeStatus": "not_integrated"
+    },
+    {
+      "repo": "b-inary/holdem-hand-evaluator",
+      "layer": "hand_fact",
+      "outputs": [
+        "five_to_seven_card_rank",
+        "hand_category"
+      ],
+      "useFor": [
+        "p2_best_five",
+        "hand_rank_ladder",
+        "showdown_fact_check"
+      ],
+      "doesNotProvide": [
+        "range",
+        "action",
+        "ev",
+        "blocker_explanation"
+      ],
+      "licenseStatus": "MIT",
+      "runtimeStatus": "not_integrated"
+    },
+    {
+      "repo": "b-inary/poker-cfr",
+      "layer": "algorithm_reference",
+      "outputs": [
+        "cfr_plus",
+        "multithreading",
+        "precomputed_heads_up_equity",
+        "kuhn_nash_test",
+        "heads_up_push_fold_solver",
+        "restricted_heads_up_preflop_solver",
+        "cui_preflop_viewer"
+      ],
+      "useFor": [
+        "algorithm_learning",
+        "small_game_regression_tests",
+        "preflop_cfr_comparison"
+      ],
+      "doesNotProvide": [
+        "complete_postflop_three_street_reference",
+        "six_max_postflop_reference",
+        "course_policy",
+        "beginner_training"
+      ],
+      "licenseStatus": "BSD-2-Clause",
+      "runtimeStatus": "not_integrated",
+      "scope": [
+        "algorithm_reference",
+        "small_game_regression",
+        "restricted_heads_up_preflop_experiment"
+      ],
+      "upstreamStatus": "public_older_reference"
+    }
+  ],
+  "integrationPipeline": [
+    "freeze_source_and_license",
+    "freeze_matching_solver_inputs",
+    "solve_offline",
+    "cross_check_hand_facts_and_settlement",
+    "compile_course_simplification",
+    "export_before_after_ranges_and_successors",
+    "run_training_from_verified_package"
+  ],
+  "guards": {
+    "equityDoesNotImplyAction": true,
+    "solverDoesNotEqualCourse": true,
+    "sixMaxBunchingDoesNotEqualSixActivePlayers": true,
+    "uiDoesNotEqualTraining": true,
+    "unlicensedRepoCannotBeCopiedWithoutReview": true,
+    "missingSuccessorBlocksContinuousPractice": true
+  },
+  "currentEvidence": {
+    "onlineReview": true,
+    "sourceCodeIntegrated": false,
+    "runtimeTrainingImplemented": false,
+    "matchedCourseReferenceReady": false,
+    "learnerTrial": false,
+    "nl50Evidence": false
+  },
+  "publicPageReview": {
+    "reviewDate": "2026-10-22",
+    "sources": [
+      "https://github.com/gto-wizard/equity-calculator",
+      "https://github.com/b-inary/postflop-solver",
+      "https://github.com/b-inary/wasm-postflop",
+      "https://github.com/b-inary/desktop-postflop",
+      "https://github.com/b-inary/holdem-hand-evaluator",
+      "https://github.com/b-inary/poker-cfr"
+    ],
+    "observations": {
+      "gtoWizardEquityCalculator": "public_repository_reviewed; report remains limited to equity/runout facts",
+      "postflopSolver": "public page labels development suspended; does not invalidate fixed-commit source inspection",
+      "wasmPostflop": "public page labels development suspended; browser shell remains a reference only",
+      "desktopPostflop": "public page labels development suspended; desktop shell remains a reference only",
+      "holdemHandEvaluator": "public repository reviewed as hand-fact evaluator",
+      "pokerCfr": "public repository reviewed as algorithm reference"
+    },
+    "guards": {
+      "publicPageDoesNotEqualBuiltRuntime": true,
+      "developmentSuspendedDoesNotEqualSourceInvalid": true,
+      "repositoryPageDoesNotEqualMatchedCourseStrategy": true
+    }
+  },
+  "sourceEvidence": {
+    "reviewDate": "2026-10-22",
+    "exactFacts": [
+      {
+        "repo": "gto-wizard/equity-calculator",
+        "evidence": "README exact runout enumeration; win/tie/equity/dead cards; no duplicate cards; Holdem up to 12 hands; build via CMake/Python extension",
+        "url": "https://raw.githubusercontent.com/gto-wizard/equity-calculator/main/README.md"
+      },
+      {
+        "repo": "b-inary/postflop-solver",
+        "evidence": "README Discounted CFR, no abstraction, isomorphic turn/river grouping, f32/f64 precision, bunching up to four folded players in 6-max, AGPL-3.0, development suspended",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/main/README.md"
+      },
+      {
+        "repo": "b-inary/postflop-solver/Cargo.toml",
+        "evidence": "crate declares AGPL-3.0-or-later; bincode/rayon/zstd features",
+        "url": "https://raw.githubusercontent.com/b-inary/postflop-solver/main/Cargo.toml"
+      },
+      {
+        "repo": "b-inary/wasm-postflop",
+        "evidence": "browser solver; WebAssembly; multithreading; benchmark; AGPL-3.0; development suspended",
+        "url": "https://raw.githubusercontent.com/b-inary/wasm-postflop/main/README.md"
+      },
+      {
+        "repo": "b-inary/desktop-postflop",
+        "evidence": "Tauri native desktop port; Windows 10/11; same solver/UI; roadmap lists GTO training mode as future item; AGPL-3.0",
+        "url": "https://raw.githubusercontent.com/b-inary/desktop-postflop/main/README.md"
+      },
+      {
+        "repo": "b-inary/holdem-hand-evaluator",
+        "evidence": "5-7-card rank/category evaluator, small lookup tables, MIT license",
+        "url": "https://raw.githubusercontent.com/b-inary/holdem-hand-evaluator/main/Readme.md"
+      },
+      {
+        "repo": "b-inary/poker-cfr",
+        "evidence": "CFR+, multithread, precomputed heads-up equity; Kuhn/push-fold/restricted preflop binaries; BSD-2-Clause",
+        "url": "https://raw.githubusercontent.com/b-inary/poker-cfr/main/Readme.md"
+      }
+    ],
+    "licenseBoundary": {
+      "equityCalculator": "public tree/README reviewed; no LICENSE file visible in current tree, keep research-only until explicit permission/license is confirmed",
+      "agplRepos": "postflop-solver, wasm-postflop, desktop-postflop require AGPL-3.0-or-later compliance before source/binary redistribution",
+      "mitRepo": "holdem-hand-evaluator may be reused with MIT notice retained",
+      "bsdRepo": "poker-cfr may be reused with BSD-2-Clause notice/disclaimer retained"
+    }
+  }
+}

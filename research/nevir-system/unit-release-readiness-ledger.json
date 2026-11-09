@@ -1,0 +1,4719 @@
+{
+  "id": "UNIT_RELEASE_READINESS_LEDGER_V1",
+  "status": "paper_35_unit_readiness_ledger_complete_not_released",
+  "purpose": "把35项的父层、身份、必需输出、三张练习卡、参考策略、动作后范围、后继、运行时和学习者证据合并为逐项发布账本；列出什么已经存在、什么只能做事实/示范、什么必须停。",
+  "sources": [
+    "unit-course-manifest.json",
+    "unit-three-card-compilation-frontier.json",
+    "unit-canonical-route-bridge.json",
+    "unit-execution-field-audit.json",
+    "unit-c0-c9-release-crosswalk.json",
+    "material-unit-crosswalk.json"
+  ],
+  "hardRules": {
+    "all35UnitsMustBeListed": true,
+    "exactlyThreeCardsPerUnit": true,
+    "cardsStayInsideDeclaredParent": true,
+    "missingCanonicalFieldStops": true,
+    "missingReferenceDoesNotBecomeCourseAnswer": true,
+    "missingRangeAfterOrSuccessorStopsExactPractice": true,
+    "runtimeAndLearnerTrialAreSeparateGates": true,
+    "aggregateScoreCannotPromoteUnit": true
+  },
+  "counts": {
+    "units": 35,
+    "byCurrentLevel": {
+      "fact_frame": 35
+    },
+    "canonicalFieldsComplete": 0,
+    "unitsWithCompiledCards": 0,
+    "unitsWithMatchedReference": 0,
+    "unitsWithRangeAfter": 0,
+    "unitsWithSuccessor": 0,
+    "runtimeAttached": 0,
+    "learnerTrial": 0,
+    "exactStrategyReady": 0,
+    "releaseReady": 0,
+    "failures": 0
+  },
+  "rows": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.1:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.1:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.1:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.2:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.2:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.2:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.3:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.3:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.3:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.4:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.4:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.4:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.5:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.5:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.5:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.6:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.6:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.6:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.7:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.7:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.7:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P08",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "1.8:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "1.8:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "1.8:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.1:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.1:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.1:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P08",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.2:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.2:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.2:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.3:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.3:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.3:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.4:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.4:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.4:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.5:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.5:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.5:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.6:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.6:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.6:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "2.7:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "2.7:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "2.7:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P02",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.1:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "3.1:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.1:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.2:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "3.2:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.2:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P08",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.3:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "3.3:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.3:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.4:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "3.4:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.4:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.5:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "3.5:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.5:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P07",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "street",
+              "role",
+              "heroSeat",
+              "villainSeat",
+              "board",
+              "potBB",
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "3.6:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "3.6:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "3.6:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P05",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.1:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "4.1:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.1:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P06",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.2:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "4.2:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.2:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P05",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role",
+              "heroSeat",
+              "villainSeat",
+              "history",
+              "potBB",
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.3:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "4.3:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.3:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P05",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.4:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "4.4:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.4:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P01",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role",
+              "villainSeat",
+              "board"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.5:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "4.5:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.5:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P05",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role",
+              "heroSeat",
+              "villainSeat",
+              "history",
+              "potBB",
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "4.6:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "4.6:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "4.6:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P03",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.1:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.1:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.1:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P11",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.2:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "5.2:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.2:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P04",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.3:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.3:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.3:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P03",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.4:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.4:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.4:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P03",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.5:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.5:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.5:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_complete",
+      "primaryPrinciple": "P03",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "fact_frame",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.6:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "demonstration_candidate"
+        },
+        {
+          "cardId": "5.6:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.6:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "fact_frame",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P06",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.7:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.7:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.7:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceIdentity": "identity_candidate_partial",
+      "primaryPrinciple": "P11",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "readiness": {
+        "currentLevel": "fact_frame",
+        "missingCanonicalFields": [
+          "street",
+          "role",
+          "actionState",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "firstMissingMinimumPhase": "identity_canonical",
+        "allCardsRegistered": true,
+        "allCardsSameParent": true,
+        "factFieldsPresent": true,
+        "canonicalFieldsPresent": false,
+        "cardAnswersCompiled": false,
+        "referenceReady": false,
+        "rangeReady": false,
+        "successorReady": false,
+        "exactStrategyReady": false,
+        "runtimeAttached": false,
+        "learnerTrial": false,
+        "blockingEvidence": [
+          "matched_reference_or_explicit_fact_boundary",
+          "legal_successor_or_stop"
+        ],
+        "blockers": [
+          {
+            "kind": "identity",
+            "fields": [
+              "role",
+              "heroSeat",
+              "villainSeat",
+              "history",
+              "potBB",
+              "stacksBB"
+            ]
+          },
+          {
+            "kind": "canonical_fields",
+            "fields": [
+              "street",
+              "role",
+              "actionState",
+              "coursePolicy",
+              "referencePolicy",
+              "rangeBefore",
+              "rangeAfter",
+              "legalSuccessors",
+              "explanation",
+              "transferVariant",
+              "releaseStatus"
+            ]
+          },
+          {
+            "kind": "matched_reference",
+            "reason": "fullMatchingTargetPolicyVerified=false"
+          },
+          {
+            "kind": "runtime",
+            "reason": "unit learner runtime not attached"
+          },
+          {
+            "kind": "learner_trial",
+            "reason": "learner trial not administered"
+          },
+          {
+            "kind": "principle_cards",
+            "fields": [
+              "base",
+              "contrast",
+              "transfer"
+            ]
+          }
+        ]
+      },
+      "cards": [
+        {
+          "cardId": "5.8:base",
+          "mode": "base",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "reference_policy",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "fact_or_ledger_candidate"
+        },
+        {
+          "cardId": "5.8:contrast",
+          "mode": "contrast",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "contrast_candidate"
+        },
+        {
+          "cardId": "5.8:transfer",
+          "mode": "transfer",
+          "firstMissingMinimumPhase": "identity_canonical",
+          "exactGradeBlockedBy": [
+            "course_policy",
+            "reference_policy",
+            "range_snapshots",
+            "successors",
+            "teaching_transfer"
+          ],
+          "cardStatus": "queued_not_compiled",
+          "answerContentPresent": false,
+          "releaseIdentity": "heldout_transfer_candidate"
+        }
+      ]
+    }
+  ],
+  "currentEvidence": {
+    "allUnitsJoined": true,
+    "allCardsRegistered": true,
+    "allCardsParentSafe": true,
+    "exactStrategyReady": false,
+    "runtimeObserved": false,
+    "learnerTrialObserved": false,
+    "NL50Evidence": false
+  },
+  "releaseGate": {
+    "status": "blocked_until_unit_identity_reference_policy_range_successor_and_trial_gates_close",
+    "nextOrder": [
+      "identity_source",
+      "identity_canonical",
+      "fact_frame",
+      "course_policy",
+      "reference_policy",
+      "range_snapshots",
+      "successors",
+      "teaching_transfer",
+      "release"
+    ]
+  }
+}

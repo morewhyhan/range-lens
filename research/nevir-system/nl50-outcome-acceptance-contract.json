@@ -1,0 +1,49 @@
+{
+  "id": "NL50_OUTCOME_ACCEPTANCE_CONTRACT_V1",
+  "status": "target_defined_not_verified",
+  "outcomeLayers": [
+    {"id":"T1","name":"structure_learned","evidence":["order_recall","layer_location","error_recovery","one_variable_transfer"]},
+    {"id":"T2","name":"strategy_execution","evidence":["matched_course_package","independent_first_answers","continuous_successors"]},
+    {"id":"T3","name":"target_transfer","evidence":["unseen_routes","delayed_recall","interleaved_roles"]},
+    {"id":"T4","name":"NL50_readiness","evidence":["complete_reference","external_benchmark","real_hand_decision_audit","risk_management"]}
+  ],
+  "t1ToT4SubstitutionForbidden": true,
+  "frozenConfigurationRequired": [
+    "tableType","effectiveStack","rake","positions","preflopHistory",
+    "betSizes","opponentModel","actionMenu","sampleDistribution","gradingRules","realHandExclusions"
+  ],
+  "courseGatesRequired": ["preflopSourceFrozen","matchedThreeStreetReference","simplificationEvaluated","successorsReplayable","routeRuntime","beginnerTrial","unseenTransfer","packageReproducible"],
+  "learnerLevels": [
+    {"id":"R1","requires":"assisted_route"},
+    {"id":"R2","requires":"unseen_single_step_without_title"},
+    {"id":"R3","requires":"unseen_continuous_three_street_route"},
+    {"id":"R4","requires":"interleaved_delayed_transfer"},
+    {"id":"R5","requires":"multi_role_multi_history_execution"},
+    {"id":"R6","requires":"external_target_benchmark_and_real_hand_audit"}
+  ],
+  "realHandEvidence": {
+    "decisionAuditRequired": true,
+    "shortTermWinLossCannotProveSkill": true,
+    "outOfPackageBranchesMustBeMarked": true,
+    "helpUsageMustBeSeparated": true
+  },
+  "allowedClaimsBeforeT4": [
+    "route_and_nested_structure",
+    "declared_course_rule_execution",
+    "verified_local_fact_or_reference",
+    "session_only_practice"
+  ],
+  "forbiddenClaimsBeforeT4": [
+    "guaranteed_profit",
+    "complete_GTO_for_all_hands",
+    "question_accuracy_equals_NL50_winrate",
+    "zero_rake_slice_equals_real_platform"
+  ],
+  "currentStatus": {
+    "T1Specification": true,
+    "T2Complete": false,
+    "T3Verified": false,
+    "T4NL50Ready": false,
+    "goalCompletionVerified": false
+  }
+}

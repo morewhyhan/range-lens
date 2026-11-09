@@ -1,0 +1,334 @@
+{
+  "id": "A72_C0_C5_EXECUTION_RUNBOOK_V1",
+  "status": "runbook_written_resource_guard_stops_before_C2",
+  "purpose": "把A72从输入冻结到连续三街参考的获取过程变成可执行、可独立复核、可停止的顺序。",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "sourceDocuments": [
+    "114_A72完整参考获取与验收规格.md",
+    "a72-reference-acquisition-spec.json",
+    "reference-request-btn-bb-a72.json",
+    "flop-tree-preflight.json",
+    "flop-tree-preflight-verification.json",
+    "repo-to-course-first-hand-bridge.json",
+      "a72-c1-independent-physical-snapshot.json",
+      "194_A72_C0本地引擎源码适配审计.md",
+      "a72-c0-source-build-audit.json"
+  ],
+  "repositoryRoles": {
+    "gtoWizardEquityCalculator": {
+      "role": "independent_concrete_hand_equity_checker",
+      "outputs": [
+        "win",
+        "tie",
+        "equity",
+        "runout_distribution"
+      ],
+      "cannotProve": [
+        "action_frequency",
+        "range_update",
+        "solver_convergence",
+        "course_policy"
+      ]
+    },
+    "binaryPostflopSolver": {
+      "role": "weighted_range_action_tree_reference_solver",
+      "outputs": [
+        "per_hand_action_frequency",
+        "action_ev",
+        "reach_weight",
+        "successor_index",
+        "solver_metrics"
+      ],
+      "cannotBeAssumed": [
+        "matched_course_policy",
+        "beginner_teaching_sequence",
+        "NL50_readiness"
+      ]
+    },
+    "wasmAndDesktopPostflop": {
+      "role": "expression_and_inspection_reference",
+      "cannotBeUsedAs": [
+        "proof_of_A72_strategy",
+        "learner_grading_source_without_fingerprint"
+      ]
+    }
+  },
+  "executionOrder": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "gates": [
+    {
+      "id": "C0",
+      "name": "configuration_identity_freeze",
+      "inputs": [
+        "reference-request-btn-bb-a72.json",
+        "engine_commit",
+        "adapter_config"
+      ],
+      "outputs": [
+        "builtEngineRevision",
+        "testedActionAdapter",
+        "actualActionIdsAndAmounts",
+        "inputFingerprint",
+        "licenseIdentity"
+      ],
+      "independentChecks": [
+        "reload_same_input_same_hash",
+        "actual_amounts_match_requested_menu",
+        "no_automatic_action_merge",
+        "source_build_reproducible_with_recorded_flag",
+        "root_action_amount_probe"
+      ],
+      "stopConditions": [
+        "source_hash_changed",
+        "engine_unpinned",
+        "adapter_merges_actions",
+        "amount_rounding_unrecorded"
+      ],
+      "currentStatus": "history_menu_adapter_verified_reload_pending",
+      "canOpen": [
+        "input_preflight",
+        "adapter_test"
+      ],
+      "cannotOpen": [
+        "exact_reference_policy"
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "independent_physical_snapshot",
+      "inputs": [
+        "literal_simplified_ranges",
+        "public_board",
+        "hero_hole_cards_if_any"
+      ],
+      "outputs": [
+        "ordered_entity_hands",
+        "class_weights",
+        "known_card_filter",
+        "distinct_private_card_filter",
+        "joint_prior",
+        "coordinate_identity"
+      ],
+      "independentChecks": [
+        "recompute_compatible_pairs",
+        "recompute_unnormalized_mass",
+        "duplicate_cards_zero",
+        "physical_filter_separate_from_action_filter",
+        "artifact_hash_and_role_chart_match"
+      ],
+      "knownCandidateFacts": {
+        "compatiblePairs": 164251,
+        "unnormalizedMass": 124335.25
+      },
+      "stopConditions": [
+        "entity_mismatch",
+        "joint_denominator_mismatch",
+        "physical_filter_labeled_as_action_filter",
+        "preflop_weight_labeled_as_solver_frequency"
+      ],
+      "currentStatus": "independent_fact_snapshot_verified",
+      "canOpen": [
+        "starting_range_fact",
+        "physical_filter_demonstration"
+      ],
+      "cannotOpen": [
+        "flop_reference_policy"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "flop_reference_policy",
+      "inputs": [
+        "C0_identity",
+        "C1_snapshot",
+        "built_action_tree",
+        "solver_budget"
+      ],
+      "outputs": [
+        "per_hand_action_frequency",
+        "per_action_ev",
+        "both_player_reach_weights",
+        "convergence_metric",
+        "stopping_reason",
+        "successor_index",
+        "zero_reach_nodes"
+      ],
+      "independentChecks": [
+        "equity_calculator_concrete_hand_cross_check",
+        "independent_money_replay",
+        "raw_rows_preserved_before_rounding",
+        "supported_rows_separated_from_zero_support"
+      ],
+      "stopConditions": [
+        "no_per_hand_policy",
+        "no_reach_weights",
+        "no_convergence_definition",
+        "tree_mismatch",
+        "memory_guard_fails"
+      ],
+      "currentStatus": "reference_missing",
+      "resourceGuard": {
+        "preflightFile": "flop-tree-preflight-verification.json",
+        "compressedEstimateBytes": 5189681440,
+        "conservativeBudgetBytes": 4080999628,
+        "compressedFits": false,
+        "solveStarted": false
+      },
+      "canOpen": [
+        "resource_block_record",
+        "solver_adapter_test"
+      ],
+      "cannotOpen": [
+        "exact_action_grading"
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "action_conditioned_range_update",
+      "inputs": [
+        "C2_per_hand_frequency",
+        "C1_physical_snapshot",
+        "parent_node_snapshot"
+      ],
+      "outputs": [
+        "range_before",
+        "range_after_by_action",
+        "fixed_normalization_denominator",
+        "physical_filter",
+        "action_filter",
+        "zero_support_hands",
+        "parent_snapshot"
+      ],
+      "independentChecks": [
+        "q_after_equals_q_before_times_frequency",
+        "same_coordinate_and_scale",
+        "denominator_recomputed",
+        "reference_and_course_views_separate"
+      ],
+      "stopConditions": [
+        "no_per_hand_frequency",
+        "denominator_undeclared",
+        "same_view_for_different_actions",
+        "unknown_painted_as_zero"
+      ],
+      "currentStatus": "reference_missing",
+      "canOpen": [
+        "visual_contract_only"
+      ],
+      "cannotOpen": [
+        "action_after_range_lesson"
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "turn_successor_closure",
+      "inputs": [
+        "open_flop_nodes",
+        "C3_range_snapshots",
+        "remaining_deck"
+      ],
+      "outputs": [
+        "legal_turn_cards",
+        "conditional_card_denominator",
+        "turn_range_snapshot",
+        "turn_actions",
+        "turn_policy",
+        "successor_index"
+      ],
+      "independentChecks": [
+        "rank_and_suit_identity_preserved",
+        "new_card_physical_filter",
+        "every_open_node_has_successor_or_stop_reason"
+      ],
+      "stopConditions": [
+        "parent_unresolved",
+        "wrong_card_denominator",
+        "missing_successor",
+        "rank_only_card_identity"
+      ],
+      "currentStatus": "reference_missing",
+      "canOpen": [
+        "physical_turn_structure_only"
+      ],
+      "cannotOpen": [
+        "continuous_turn_strategy"
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "river_terminal_and_ledger_closure",
+      "inputs": [
+        "C4_turn_successors",
+        "river_cards",
+        "terminal_action_tree"
+      ],
+      "outputs": [
+        "river_policy",
+        "terminal_actions",
+        "board_and_hole_cards",
+        "action_ledger",
+        "pot_stack_conservation",
+        "showdown_result",
+        "reference_identity",
+        "terminal_successor"
+      ],
+      "independentChecks": [
+        "ledger_conservation",
+        "independent_showdown_evaluation",
+        "hidden_information_dependency_declared",
+        "terminal_policy_present",
+        "result_not_used_to_infer_action"
+      ],
+      "stopConditions": [
+        "no_terminal_policy",
+        "ledger_failure",
+        "hidden_history",
+        "result_used_to_infer_action",
+        "missing_terminal_successor"
+      ],
+      "currentStatus": "reference_missing",
+      "canOpen": [
+        "ledger_demonstration"
+      ],
+      "cannotOpen": [
+        "continuous_three_street_lesson",
+        "NL50_claim"
+      ]
+    }
+  ],
+  "currentEvidence": {
+    "inputPrepared": true,
+    "preflightStructureChecked": true,
+    "sourceBuildVerified": true,
+    "rootActionProbeVerified": true,
+    "independentC1Recompute": true,
+    "solverStarted": false,
+    "testedActionAdapter": true,
+    "reloadSameInputSameHash": false,
+    "matchedFlopPolicy": false,
+    "actionConditionedRanges": false,
+    "turnSuccessors": false,
+    "riverTerminalClosure": false,
+    "continuousThreeStreetReference": false,
+    "coursePolicyCompiled": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "releaseIdentity": "starting_range_fact_or_postflop_demonstration_candidate",
+  "releaseRules": {
+    "missingC2BlocksExactActionPractice": true,
+    "missingC3BlocksActionConditionedRangePractice": true,
+    "missingC4BlocksContinuousTurnPractice": true,
+    "missingC5BlocksContinuousThreeStreetPractice": true,
+    "resourceGuardFailureDoesNotBecomePartialGTO": true,
+    "equityCheckDoesNotBecomeStrategyProof": true,
+    "noNL50Claim": true
+  },
+  "nextPriority": "complete_C0_reload_and_serialization_proof_then_reassess_memory_guard"
+}

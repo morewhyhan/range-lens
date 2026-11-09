@@ -1,0 +1,1010 @@
+{
+  "status": "guided_made_draw_paper_sequence_not_UI_or_learner_verified",
+  "parentLink": {
+    "source": "guided-draw-sequence-packet.json",
+    "frame": "D06",
+    "mode": "review_after_draw_episode",
+    "notice": "原听牌段完成后回看D06，换另一手有当前对子兼听花的给定全下模型；关闭恢复原AsQs的全部D06参考，不混用范围和胜率。",
+    "snapshotHash": "07380306e369e15e6bd75e788b62c8926f58133259e290e62a56cb45decd937b",
+    "returnHash": "07380306e369e15e6bd75e788b62c8926f58133259e290e62a56cb45decd937b",
+    "independentAssessment": false
+  },
+  "modelInput": {
+    "source": "made-plus-draw-evidence.json",
+    "context": {
+      "players": 6,
+      "startingEffectiveBB": 100,
+      "initialStackPerSeatBB": 100,
+      "rake": 0,
+      "observedAuthorHistory": [
+        "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+        "Flop Js9d5d: SB bets30; BTN calls30",
+        "Turn2c: SB checks; BTN jams60 into81"
+      ],
+      "priorIdentity": "Author-given current conditional range, not derived from user simplified charts or real-player observations. Historical actions are legal, not recommendations.",
+      "sourceConnection": "J95 notes motivate distinguishing made hand and draw. Exact turn, range, weights and allin history are an isolated author mechanism model; no course action prescribed."
+    },
+    "candidates": [
+      {
+        "id": "AA",
+        "hole": [
+          "Ah",
+          "Ac"
+        ],
+        "weight": 2,
+        "currentWinner": "villain",
+        "wins": 14,
+        "losses": 30,
+        "winCards": [
+          "2d",
+          "3d",
+          "4d",
+          "6d",
+          "7c",
+          "7h",
+          "7s",
+          "8d",
+          "Ad",
+          "Jc",
+          "Jh",
+          "Kd",
+          "Qd",
+          "Td"
+        ],
+        "lossCards": [
+          "2s",
+          "2h",
+          "3s",
+          "3h",
+          "3c",
+          "4s",
+          "4h",
+          "4c",
+          "5s",
+          "5h",
+          "5c",
+          "6s",
+          "6h",
+          "6c",
+          "8s",
+          "8h",
+          "8c",
+          "9s",
+          "9h",
+          "9c",
+          "Ts",
+          "Th",
+          "Tc",
+          "Qs",
+          "Qh",
+          "Qc",
+          "Ks",
+          "Kh",
+          "Kc",
+          "As"
+        ]
+      },
+      {
+        "id": "98",
+        "hole": [
+          "9c",
+          "8c"
+        ],
+        "weight": 1,
+        "currentWinner": "hero",
+        "wins": 40,
+        "losses": 4,
+        "winCards": [
+          "2s",
+          "2h",
+          "2d",
+          "3s",
+          "3h",
+          "3d",
+          "3c",
+          "4s",
+          "4h",
+          "4d",
+          "4c",
+          "5s",
+          "5h",
+          "5c",
+          "6s",
+          "6h",
+          "6d",
+          "6c",
+          "7s",
+          "7h",
+          "7c",
+          "8d",
+          "Ts",
+          "Th",
+          "Td",
+          "Tc",
+          "Jh",
+          "Jc",
+          "Qs",
+          "Qh",
+          "Qd",
+          "Qc",
+          "Ks",
+          "Kh",
+          "Kd",
+          "Kc",
+          "As",
+          "Ah",
+          "Ad",
+          "Ac"
+        ],
+        "lossCards": [
+          "8h",
+          "8s",
+          "9h",
+          "9s"
+        ]
+      },
+      {
+        "id": "55",
+        "hole": [
+          "5c",
+          "5h"
+        ],
+        "weight": 1,
+        "currentWinner": "villain",
+        "wins": 8,
+        "losses": 36,
+        "winCards": [
+          "3d",
+          "4d",
+          "6d",
+          "8d",
+          "Ad",
+          "Kd",
+          "Qd",
+          "Td"
+        ],
+        "lossCards": [
+          "2s",
+          "2h",
+          "2d",
+          "3s",
+          "3h",
+          "3c",
+          "4s",
+          "4h",
+          "4c",
+          "5s",
+          "6s",
+          "6h",
+          "6c",
+          "7s",
+          "7h",
+          "7c",
+          "8s",
+          "8h",
+          "8c",
+          "9s",
+          "9h",
+          "9c",
+          "Ts",
+          "Th",
+          "Tc",
+          "Jh",
+          "Jc",
+          "Qs",
+          "Qh",
+          "Qc",
+          "Ks",
+          "Kh",
+          "Kc",
+          "As",
+          "Ah",
+          "Ac"
+        ]
+      }
+    ],
+    "comparison": {
+      "currentAheadShare": 0.25,
+      "eventualWinShare": 0.4318181818181818,
+      "winningDiamondShare": 0.19886363636363635,
+      "wrongAddCurrentAndDiamond": 0.44886363636363635,
+      "correctUpdateIdentity": "finalWin = currentAhead - currentlyAheadButOutdrawn + currentlyBehindButImproved",
+      "menu": [
+        "fold",
+        "call60"
+      ],
+      "foldEVFromCurrentBB": 0,
+      "callEVFromCurrentBB": 26.795454545454547,
+      "finalPotBB": 201,
+      "callPrice": 0.29850746268656714,
+      "evScope": "Facing an effective allin; one river remains, no further betting, no rake, uniform legal dealing within each conditional candidate."
+    }
+  },
+  "navigation": {
+    "core": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14"
+    ],
+    "optional": [],
+    "events": [
+      {
+        "from": "F08",
+        "to": "F09",
+        "event": "Actual SB call60 once"
+      },
+      {
+        "from": "F10",
+        "to": "F11",
+        "event": "Actual river8s only"
+      },
+      {
+        "from": "F11",
+        "to": "F12",
+        "event": "Reveal9c8c only now"
+      },
+      {
+        "from": "F12",
+        "to": "F13",
+        "event": "Award201 to BTN once"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "F01",
+      "title": "成牌与改善同时保留",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "Jd7d现在有一对J，还能同时听方片吗？",
+        "options": [
+          "能，两件事同时存在",
+          "不能，有对子就不是听牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F02",
+      "title": "当前赢面看具体对象",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "当前面对AA、98、55，自己领先哪组？",
+        "options": [
+          "98",
+          "AA和55",
+          "三组都领先",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidates": [
+          {
+            "id": "AA",
+            "hole": [
+              "Ah",
+              "Ac"
+            ],
+            "weight": 2
+          },
+          {
+            "id": "98",
+            "hole": [
+              "9c",
+              "8c"
+            ],
+            "weight": 1
+          },
+          {
+            "id": "55",
+            "hole": [
+              "5c",
+              "5h"
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F03",
+      "title": "名义成花不等于赢",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "只作候选预演：若河牌2d、对手55，自己成花就赢了吗？",
+        "options": [
+          "没有，55成葫芦",
+          "赢，成花一定大",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "preview": {
+          "replaceOrAppend": "one hypothetical river only",
+          "river": "2d",
+          "candidate": "55",
+          "actualHistoryMutated": false
+        }
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F04",
+      "title": "已经领先也会被反超",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "只作候选预演：河牌9h、对手98，自己原先领先就保证赢吗？",
+        "options": [
+          "不保证，98成三条9",
+          "保证，已有顶对",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "preview": {
+          "river": "9h",
+          "candidate": "98",
+          "actualHistoryMutated": false
+        }
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F05",
+      "title": "把未来结果分开",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "当前领先组以后输掉的结果，要怎样处理？",
+        "options": [
+          "从保留的赢面中扣掉",
+          "仍算赢，再额外加听牌概率",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "disjoint": {
+          "denominator": 176,
+          "meaning": "Weighted outcome units, not176 distinct physical river cards or separate decks.",
+          "currentAheadThenWin": 40,
+          "currentAheadThenLose": 4,
+          "currentBehindThenWin": 36,
+          "currentBehindThenLose": 96
+        }
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F06",
+      "title": "赢面只合并一次",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按全部合法河牌，最终赢面是哪项？",
+        "options": [
+          "76/176＝19/44",
+          "当前25%直接加成花概率",
+          "当前25%完全不变",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "winCounts": [
+          {
+            "id": "AA",
+            "wins": 14,
+            "losses": 30,
+            "weight": 2
+          },
+          {
+            "id": "98",
+            "wins": 40,
+            "losses": 4,
+            "weight": 1
+          },
+          {
+            "id": "55",
+            "wins": 8,
+            "losses": 36,
+            "weight": 1
+          }
+        ]
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F07",
+      "title": "全下价格看跟后池",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "对手已经全下，补60后的匹配池是多少？",
+        "options": [
+          201,
+          141,
+          81,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F08",
+      "title": "按完整条件比较",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "toCall": 60,
+        "phase": "facing_effective_allin",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定范围与全部跑牌结果，现在在跟弃之间选什么？",
+        "options": [
+          "跟60",
+          "弃牌",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "callEVBB": 26.795454545454547,
+        "foldEVBB": 0,
+        "scope": "Given full comparison is answer help; no claim of unaided inference or real opponent accuracy."
+      },
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F09",
+      "title": "这次才实际跟注",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "toCall": 0,
+        "phase": "allin_matched_wait_river",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己补完60以后，还能再下注吗？",
+        "options": [
+          "不能，双方有效全下已匹配",
+          "能，等河牌再下",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F10",
+      "title": "先完成剩余发牌",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "toCall": 0,
+        "phase": "allin_matched_wait_river",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "现在公共牌只有四张，下一步是什么？",
+        "options": [
+          "发河牌",
+          "立即按四张结算",
+          "继续叫对手下注",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F11",
+      "title": "实际新牌与预演分开",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c",
+          "8s"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "toCall": 0,
+        "phase": "showdown_pending",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这次实际发8s，刚才预演的2d和9h是否也留在桌上？",
+        "options": [
+          "不留，只用实际五张",
+          "全部一起保留",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F12",
+      "title": "最后才揭真实候选",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c",
+          "8s"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "toCall": 0,
+        "phase": "showdown",
+        "opponentVisible": true,
+        "opponentHole": [
+          "9c",
+          "8c"
+        ]
+      },
+      "task": {
+        "prompt": "实际9c8c成两对9与8，谁赢？",
+        "options": [
+          "对手",
+          "自己",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F13",
+      "title": "一次损失的基点",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c",
+          "8s"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 0,
+        "heroStack": 0,
+        "villainStack": 201,
+        "toCall": 0,
+        "phase": "settled",
+        "opponentVisible": true,
+        "opponentHole": [
+          "9c",
+          "8c"
+        ]
+      },
+      "task": {
+        "prompt": "这手从100到0，整手净变化多少？",
+        "options": [
+          -100,
+          -60,
+          201,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "F14",
+      "title": "正确比较仍可能输这一次",
+      "state": {
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c",
+          "8s"
+        ],
+        "hero": [
+          "Jd",
+          "7d"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "pot": 0,
+        "heroStack": 0,
+        "villainStack": 201,
+        "toCall": 0,
+        "phase": "settled",
+        "opponentVisible": true,
+        "opponentHole": [
+          "9c",
+          "8c"
+        ]
+      },
+      "task": {
+        "prompt": "能因为这次被反超，就把事前给定模型内较高EV的跟注改判成错吗？",
+        "options": [
+          "不能，只能按事前条件比较",
+          "能，输了就说明不能跟",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_made_draw_allin_model_not_target_policy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "answers": [
+    {
+      "id": "F01",
+      "expected": "能，两件事同时存在",
+      "explanation": "JdJs成一对J，自己两张方片加9d5d共有四张方片。不是在对子与听牌两个标签中只能选一个。"
+    },
+    {
+      "id": "F02",
+      "expected": "98",
+      "explanation": "当前一对J赢一对9，输一对A和三条5。权重2:1:1时，当前领先组占1/4。"
+    },
+    {
+      "id": "F03",
+      "expected": "没有，55成葫芦",
+      "explanation": "对手5c5h加5d与2c2d组成葫芦；自己的方片同花仍输。2d是本例失效补牌。"
+    },
+    {
+      "id": "F04",
+      "expected": "不保证，98成三条9",
+      "explanation": "自己成为J和9两对仍输三条9。这个预演不是已发出的真实河牌。"
+    },
+    {
+      "id": "F05",
+      "expected": "从保留的赢面中扣掉",
+      "explanation": "按互斥格子计：当前领先后赢40、后输4；当前落后后赢36、仍输96。176是按权重缩放的份额，不是176张河牌。"
+    },
+    {
+      "id": "F06",
+      "expected": "76/176＝19/44",
+      "explanation": "合并40与36份获胜结果。也可从44份当前领先中扣4份反超，再加36份改善；不能把重叠结果重复算。"
+    },
+    {
+      "id": "F07",
+      "expected": 201,
+      "explanation": "眼前141已含对手60，自己补60后201。只有一张河牌，匹配后不再有后街下注。"
+    },
+    {
+      "id": "F08",
+      "expected": "跟60",
+      "explanation": "19/44约43.18%高于60/201约29.85%；当前EV约+26.795，对比弃牌0。只限这个明确给定模型。"
+    },
+    {
+      "id": "F09",
+      "expected": "不能，双方有效全下已匹配",
+      "explanation": "双方0后手、池201；预演没有扣钱，这次才真正支付60。"
+    },
+    {
+      "id": "F10",
+      "expected": "发河牌",
+      "explanation": "投入匹配后还需发完合法公共牌；没有新下注决定。"
+    },
+    {
+      "id": "F11",
+      "expected": "不留，只用实际五张",
+      "explanation": "实际牌面Js9d5d2c8s；前面的2d与9h互斥预演已经关闭。"
+    },
+    {
+      "id": "F12",
+      "expected": "对手",
+      "explanation": "自己仍是一对J，输两对。不是看最高一对J大于9就判自己赢。"
+    },
+    {
+      "id": "F13",
+      "expected": -100,
+      "explanation": "当前决定只再付60，但整手早已投入40，整手净输100；派给对手201不等于自己净输201。"
+    },
+    {
+      "id": "F14",
+      "expected": "不能，只能按事前条件比较",
+      "explanation": "这是作者选定的正概率失败分支。它不改变模型平均值，也不证明现实对手范围正确。"
+    }
+  ],
+  "returnFrame": {
+    "id": "D06",
+    "title": "分别比较再合并",
+    "state": {
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "pot": 31.5,
+      "heroStack": 90,
+      "villainStack": 79.5,
+      "heroPut": 0,
+      "villainPut": 10.5,
+      "actor": "SB",
+      "scope": "actual_current_turn",
+      "opponentVisible": false
+    },
+    "task": {
+      "prompt": "给定完整跑牌枚举，整体自由摊牌份额是哪项？",
+      "options": [
+        "约27.92%",
+        "9张所以必跟",
+        "100%",
+        "我不知道"
+      ]
+    },
+    "given": {
+      "wins": [
+        {
+          "id": "KK",
+          "wins": 7,
+          "total": 44
+        },
+        {
+          "id": "KJ",
+          "wins": 12,
+          "total": 44
+        },
+        {
+          "id": "JT",
+          "wins": 38,
+          "total": 44
+        }
+      ],
+      "weights": [
+        4,
+        16,
+        1
+      ],
+      "equity": 0.2792207792207792,
+      "scope": "Given enumeration support, not independent mental calculation or clean-out count."
+    },
+    "unknownCountsAsWrong": true,
+    "assessment": "guided_given_model_not_unaided_strategy"
+  },
+  "verification": {
+    "totalBB": 600,
+    "firstActualOpponentReveal": "F12",
+    "wholeParentFrameRestored": true
+  },
+  "release": {
+    "fullTargetPolicy": false,
+    "unseenAssessment": false,
+    "learnerVerified": false,
+    "NL50Verified": false
+  }
+}

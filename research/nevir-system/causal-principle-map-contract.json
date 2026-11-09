@@ -1,0 +1,38 @@
+{
+  "id": "CAUSAL_PRINCIPLE_MAP_CONTRACT_V1",
+  "status": "declarative_visual_principle_contract_not_trialed",
+  "layers": [
+    {"id":"state","question":"现在轮到谁，面对什么？","visual":"table_history_money","cannotInfer":["action_from_position_only"]},
+    {"id":"board","question":"这张牌面给了哪些公共关系？","visual":"board_structure","cannotInfer":["action_from_wetness_only"]},
+    {"id":"hand","question":"我现在是什么牌，能改善什么？","visual":"hero_best_five_and_outs","cannotInfer":["action_from_pair_or_draw_label_only"]},
+    {"id":"range","question":"谁保留了哪些强牌和可弃牌？","visual":"before_after_range_matrices","cannotInfer":["pure_action_from_range_advantage_only"]},
+    {"id":"action","question":"在这些后续中哪个方案更好？","visual":"legal_action_menu_and_successors","cannotInfer":["complete_optimum_without_future_policy"]}
+  ],
+  "cycle": ["state","board","hand","range","action","update","state"],
+  "visualRules": {
+    "oneQuestionPerScreen": true,
+    "onePrimaryActionPerScreen": true,
+    "rangeUsesFixedDenominator": true,
+    "rangeHasNonColorCue": true,
+    "actionAfterViewUsesSameScale": true,
+    "updateHighlightsOneChangedField": true,
+    "parentFrameIsPreserved": true
+  },
+  "teachingRules": {
+    "boardTextureIsIndexNotAction": true,
+    "blockerIsFactAndRangeModifierNotButton": true,
+    "backdoorNeedsRangeAndFutureBeforeAction": true,
+    "handLabelDoesNotReplaceEntityCards": true,
+    "physicalRemovalDoesNotEqualActionFilter": true,
+    "actionNeedsLegalSuccessors": true,
+    "missingLayerStopsExactGrade": true
+  },
+  "answerIdentities": ["fact","demonstration","course_rule","reference_frequency","reference_policy"],
+  "currentStatus": {
+    "visualContractWritten": true,
+    "implementedInApp": false,
+    "beginnerTrial": false,
+    "completeStrategyCoverage": false,
+    "NL50Evidence": false
+  }
+}

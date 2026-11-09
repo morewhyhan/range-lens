@@ -1,0 +1,12545 @@
+{
+  "status": "compiled_stated_course_prescriptions_not_verified_GTO_or_NL50_policy",
+  "context": {
+    "players": 6,
+    "activeSeats": [
+      "BTN",
+      "BB"
+    ],
+    "initialEffectiveBB": 100,
+    "anteBB": 0,
+    "street": "flop",
+    "potType": "single_raised",
+    "openToBB": 2.5,
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "preflop": "UTG/HJ/CO fold; BTN open to2.5; SB fold; BB call",
+    "observedFlopAction": "BB check",
+    "actor": "BTN",
+    "toCallBB": 0,
+    "money": {
+      "potBB": 5.5,
+      "heroStackBB": 97.5,
+      "villainStackBB": 97.5,
+      "foldedStacksBB": 399.5
+    },
+    "sourceDepth": "The cited2.1 paragraph does not specify a full solver configuration;6max/100BB are declared training conditions, not recovered solver metadata."
+  },
+  "profiles": {
+    "baseline": {
+      "label": "原文基础简化",
+      "assumptions": [
+        "使用原文调整之前的基础简化",
+        "不附加后段过弃/少XR调整"
+      ]
+    },
+    "adjusted": {
+      "label": "原文后段调整简化",
+      "assumptions": [
+        "题设明确采用原文的弃牌偏多、过牌加注偏少假设",
+        "采用该段最后给出的范围小注简化",
+        "不依据当前级别或玩家称呼自行推断"
+      ]
+    }
+  },
+  "task": {
+    "prompt": "按本题采用的课程简化，现在选择什么？",
+    "options": [
+      "过牌",
+      "小注约1/3",
+      "我不知道"
+    ],
+    "scope": "课程规则执行；不是自行求解最佳动作。"
+  },
+  "cases": [
+    {
+      "id": "CP0001",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0002",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0003",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0004",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0005",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0006",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0007",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0008",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0009",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0010",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0011",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0012",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0013",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0014",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0015",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0016",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0017",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0018",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0019",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0020",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0021",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0022",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0023",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0024",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0025",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0026",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0027",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0028",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0029",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0030",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0031",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0032",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0033",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0034",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0035",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0036",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0037",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0038",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0039",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0040",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0041",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0042",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0043",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0044",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0045",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0046",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0047",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0048",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0049",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0050",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0051",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0052",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0053",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0054",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0055",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0056",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0057",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0058",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0059",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0060",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0061",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0062",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0063",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0064",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0065",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0066",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0067",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0068",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0069",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0070",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0071",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0072",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0073",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0074",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0075",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0076",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0077",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0078",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0079",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0080",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0081",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0082",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0083",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0084",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0085",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0086",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0087",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0088",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0089",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0090",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0091",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0092",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0093",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0094",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0095",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0096",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0097",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0098",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0099",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0100",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0101",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0102",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0103",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0104",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0105",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0106",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0107",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0108",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0109",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0110",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0111",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0112",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0113",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0114",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0115",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0116",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0117",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0118",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0119",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0120",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0121",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0122",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0123",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0124",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0125",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0126",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0127",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0128",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0129",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0130",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0131",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0132",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0133",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0134",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0135",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0136",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0137",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0138",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0139",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0140",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0141",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0142",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0143",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0144",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0145",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0146",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0147",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0148",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0149",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0150",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0151",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0152",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0153",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0154",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0155",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0156",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0157",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0158",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0159",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0160",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0161",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0162",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0163",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0164",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0165",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0166",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0167",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0168",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0169",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0170",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0171",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0172",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0173",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0174",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0175",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0176",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0177",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0178",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0179",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0180",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0181",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0182",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0183",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0184",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0185",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0186",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0187",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0188",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0189",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0190",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0191",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0192",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0193",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0194",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0195",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0196",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0197",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0198",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0199",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0200",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0201",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0202",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0203",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0204",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0205",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0206",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0207",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0208",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0209",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0210",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0211",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0212",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0213",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0214",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0215",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0216",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0217",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0218",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0219",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0220",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0221",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0222",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0223",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0224",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0225",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0226",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0227",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0228",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0229",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0230",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0231",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0232",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0233",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0234",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0235",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0236",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0237",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0238",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0239",
+      "profile": "baseline",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0240",
+      "profile": "adjusted",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0241",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0242",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0243",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0244",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0245",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0246",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0247",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0248",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0249",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0250",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0251",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0252",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0253",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0254",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0255",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0256",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0257",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0258",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0259",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0260",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0261",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0262",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0263",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0264",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0265",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0266",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0267",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0268",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0269",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0270",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0271",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0272",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0273",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0274",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0275",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0276",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0277",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0278",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0279",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0280",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0281",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0282",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0283",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0284",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0285",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0286",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0287",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0288",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0289",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0290",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0291",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0292",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0293",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0294",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0295",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0296",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0297",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0298",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0299",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0300",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0301",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0302",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0303",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0304",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0305",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0306",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0307",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0308",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0309",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0310",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0311",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0312",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0313",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0314",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0315",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0316",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0317",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0318",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0319",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0320",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0321",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0322",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0323",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0324",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0325",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0326",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0327",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0328",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0329",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0330",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0331",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0332",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0333",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0334",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0335",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0336",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0337",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0338",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0339",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0340",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0341",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0342",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0343",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0344",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0345",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0346",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0347",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0348",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0349",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0350",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0351",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0352",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0353",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0354",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0355",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0356",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0357",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0358",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0359",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0360",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0361",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0362",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0363",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0364",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0365",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0366",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0367",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0368",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0369",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0370",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0371",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0372",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0373",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0374",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0375",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0376",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0377",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0378",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0379",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0380",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0381",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0382",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0383",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0384",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0385",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0386",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0387",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0388",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0389",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0390",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0391",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0392",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0393",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0394",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0395",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0396",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0397",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0398",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0399",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0400",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0401",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0402",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0403",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0404",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0405",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0406",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0407",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0408",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0409",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0410",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0411",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0412",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0413",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0414",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0415",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0416",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0417",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0418",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0419",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0420",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0421",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0422",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0423",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0424",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0425",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0426",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0427",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0428",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0429",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0430",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0431",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0432",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0433",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0434",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0435",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0436",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0437",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0438",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0439",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0440",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0441",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0442",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0443",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0444",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0445",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0446",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0447",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0448",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0449",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0450",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0451",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0452",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0453",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0454",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0455",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0456",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0457",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0458",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0459",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0460",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0461",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0462",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0463",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0464",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0465",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0466",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0467",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0468",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0469",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0470",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0471",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0472",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0473",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0474",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0475",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0476",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0477",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0478",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0479",
+      "profile": "baseline",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0480",
+      "profile": "adjusted",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0481",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0482",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0483",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0484",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0485",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0486",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0487",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0488",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0489",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0490",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0491",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0492",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0493",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0494",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0495",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0496",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0497",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0498",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0499",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0500",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0501",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0502",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0503",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0504",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0505",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0506",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0507",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0508",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0509",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0510",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0511",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0512",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0513",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0514",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0515",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0516",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0517",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0518",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0519",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0520",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0521",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0522",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0523",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0524",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0525",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0526",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0527",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0528",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0529",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0530",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0531",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0532",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0533",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0534",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0535",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0536",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0537",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0538",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0539",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0540",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0541",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0542",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0543",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0544",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0545",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0546",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0547",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0548",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0549",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0550",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0551",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0552",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0553",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0554",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0555",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0556",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0557",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0558",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0559",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0560",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0561",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0562",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0563",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0564",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0565",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0566",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0567",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0568",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0569",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0570",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0571",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0572",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0573",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0574",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0575",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0576",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0577",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0578",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0579",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0580",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0581",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0582",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0583",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0584",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0585",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0586",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0587",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0588",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0589",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0590",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0591",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0592",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0593",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0594",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0595",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0596",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0597",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0598",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0599",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0600",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0601",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0602",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0603",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0604",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0605",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0606",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0607",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0608",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0609",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0610",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0611",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0612",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0613",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0614",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0615",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0616",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0617",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0618",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0619",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0620",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0621",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0622",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0623",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0624",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0625",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0626",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0627",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0628",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0629",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0630",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0631",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0632",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0633",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0634",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0635",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0636",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0637",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0638",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0639",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0640",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0641",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0642",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0643",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0644",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0645",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0646",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0647",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0648",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0649",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0650",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0651",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0652",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0653",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0654",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0655",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0656",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0657",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0658",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0659",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0660",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0661",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0662",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0663",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0664",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0665",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0666",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0667",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0668",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0669",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0670",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0671",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0672",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0673",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0674",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0675",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0676",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0677",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0678",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0679",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0680",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0681",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0682",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0683",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0684",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0685",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0686",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0687",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0688",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0689",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0690",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0691",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0692",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0693",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0694",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0695",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0696",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0697",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0698",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0699",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0700",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0701",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0702",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0703",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0704",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0705",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0706",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0707",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0708",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0709",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0710",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0711",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0712",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0713",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0714",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0715",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0716",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0717",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0718",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0719",
+      "profile": "baseline",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0720",
+      "profile": "adjusted",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0721",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0722",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0723",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0724",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0725",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0726",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0727",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0728",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0729",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0730",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0731",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0732",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0733",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0734",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0735",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0736",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0737",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0738",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0739",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0740",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0741",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0742",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0743",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0744",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0745",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0746",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0747",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0748",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0749",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0750",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0751",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0752",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0753",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0754",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0755",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0756",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0757",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0758",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0759",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0760",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0761",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0762",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0763",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0764",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0765",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0766",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0767",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0768",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0769",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0770",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0771",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0772",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0773",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0774",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0775",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0776",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0777",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0778",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0779",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0780",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0781",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0782",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0783",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0784",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0785",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0786",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0787",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0788",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0789",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0790",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0791",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0792",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0793",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0794",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0795",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0796",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0797",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0798",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0799",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0800",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0801",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0802",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0803",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0804",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0805",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0806",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0807",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0808",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0809",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0810",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0811",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0812",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0813",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0814",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0815",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0816",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0817",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0818",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0819",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0820",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0821",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0822",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0823",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0824",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0825",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0826",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0827",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0828",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0829",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0830",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0831",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0832",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0833",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0834",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0835",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0836",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0837",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0838",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0839",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0840",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0841",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0842",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0843",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0844",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0845",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0846",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0847",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0848",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0849",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0850",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0851",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0852",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0853",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0854",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0855",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0856",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0857",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0858",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0859",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0860",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0861",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0862",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0863",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0864",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0865",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0866",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0867",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0868",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0869",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0870",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0871",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0872",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0873",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0874",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0875",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0876",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0877",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0878",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0879",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0880",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0881",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0882",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0883",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0884",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0885",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0886",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0887",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0888",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0889",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0890",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0891",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0892",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0893",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0894",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0895",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0896",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0897",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0898",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0899",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0900",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0901",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0902",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0903",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0904",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0905",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0906",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0907",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0908",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0909",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0910",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0911",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0912",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0913",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0914",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0915",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0916",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0917",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0918",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0919",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0920",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0921",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0922",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "CP0923",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0924",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "CP0925",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0926",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "CP0927",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0928",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "CP0929",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0930",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0931",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0932",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0933",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0934",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0935",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0936",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0937",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0938",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0939",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0940",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0941",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0942",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0943",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0944",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0945",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0946",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0947",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0948",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0949",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0950",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0951",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0952",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0953",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0954",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "CP0955",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0956",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "CP0957",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0958",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "CP0959",
+      "profile": "baseline",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "CP0960",
+      "profile": "adjusted",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    }
+  ],
+  "administration": {
+    "unknownCountsAsError": true,
+    "profileVisibleBeforeAnswer": true,
+    "noProfileSelectionFromStakeLabel": true,
+    "deterministicAnswers": true,
+    "answerSource": "stated_course_prescription",
+    "notUnseenHoldout": true,
+    "noLearnerPersistence": true
+  }
+}

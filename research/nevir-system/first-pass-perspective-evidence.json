@@ -1,0 +1,634 @@
+{
+  "status": "first_pass_perspective_and_declared_entry_checks_not_UI_or_learner_validation",
+  "sourceHashes": {
+    "first-hand-lesson-packet.json": "cea0521393a0b5246f0aba150aebec788ec3ee1bff5679d44f989c1fba6be8b6",
+    "first-hand-lesson-prompts.json": "19009044c8e3850905670d937c0820dded292dd260dd19cdf88973d91b2fde79",
+    "guided-course-itinerary.json": "5f77c36e194e0163fb2666a858b55a37f9231743bc999477b73c27870ccd6cba"
+  },
+  "checks": {
+    "firstPassFrames": 18,
+    "originalHandFramesWithFixedSB": 17,
+    "explicitNewHandChanges": 1,
+    "opponentAmountObservationFrames": 2,
+    "givenOwnAmountFrames": 3,
+    "opponentCardsHiddenBeforeS16": true,
+    "S18ActorAnswerStillHidden": true,
+    "declaredEpisodeSwitches": 11,
+    "episodeSeatChanges": 5
+  },
+  "rows": [
+    {
+      "frame": "S01",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_own_seat",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S02",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "execute_given_own_amount",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S03",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_next_actor",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S04",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "read_own_cards",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S05",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_available_comparison",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S06",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "execute_given_own_amount",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S07",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "observe_opponent_amount",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S08",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_update_step",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S09",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_needed_inputs",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S10",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "execute_given_own_amount",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S11",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "observe_opponent_call_and_pot",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S12",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_next_actor",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S13",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_available_comparison",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S14",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "wait_for_opponent",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S15",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "identify_settlement_transition",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S16",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "compare_revealed_showdown",
+      "actualOpponentCards": "revealed",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S17",
+      "viewerSeat": "SB",
+      "ownCards": [
+        "Ac",
+        "Qd"
+      ],
+      "taskKind": "account_settled_result",
+      "actualOpponentCards": "revealed",
+      "actingSeatShown": true,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    },
+    {
+      "frame": "S18",
+      "viewerSeat": "BB",
+      "ownCards": [
+        "As",
+        "Kd"
+      ],
+      "taskKind": "new_hand_identify_next_actor",
+      "actualOpponentCards": "hidden",
+      "actingSeatShown": false,
+      "selectsOpponentPolicy": false,
+      "independentStrategyGrading": false
+    }
+  ],
+  "switches": [
+    {
+      "from": "outer/S05",
+      "to": "size",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ]
+      },
+      "after": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "seatChanged": true,
+      "userNotice": "换另一手：你从SB换到BTN，手牌是Q♠ Q♣。完成后回原题。"
+    },
+    {
+      "from": "size/B09",
+      "to": "protection",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "seatChanged": true,
+      "userNotice": "换另一手：你从BTN换到SB，手牌是Q♠ Q♣。完成后回原题。"
+    },
+    {
+      "from": "size/B09",
+      "to": "weakLead",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "seatChanged": true,
+      "userNotice": "换另一手：你从BTN换到SB，手牌是A♠ Q♠。完成后回原题。"
+    },
+    {
+      "from": "outer/S08",
+      "to": "update",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ]
+      },
+      "after": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qc",
+          "3c"
+        ],
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ]
+      },
+      "seatChanged": true,
+      "userNotice": "换另一手：你从SB换到BTN，手牌是Q♣ 3♣。完成后回原题。"
+    },
+    {
+      "from": "outer/S09",
+      "to": "history",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Kc",
+          "Kd"
+        ],
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "换另一手：你仍坐SB，手牌是K♣ K♦。完成后回原题。"
+    },
+    {
+      "from": "outer/S13",
+      "to": "value",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "换另一手：你仍坐SB，手牌是9♣ 9♦。完成后回原题。"
+    },
+    {
+      "from": "value/V07",
+      "to": "reraise",
+      "kind": "response_model_change",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "仍坐SB，手牌不变；换一种明确给定的对手回应，原例不改。"
+    },
+    {
+      "from": "outer/S13",
+      "to": "bluff",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qc"
+        ],
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "换另一手：你仍坐SB，手牌是A♣ Q♣。完成后回原题。"
+    },
+    {
+      "from": "outer/S18",
+      "to": "draw",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "BB",
+        "ownCards": [
+          "As",
+          "Kd"
+        ],
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "seatChanged": true,
+      "userNotice": "换另一手：你从BB换到SB，手牌是A♠ Q♠。完成后回原题。"
+    },
+    {
+      "from": "draw/D06",
+      "to": "madeDraw",
+      "kind": "different_hand",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Jd",
+          "7d"
+        ],
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "换另一手：你仍坐SB，手牌是J♦ 7♦。完成后回原题。"
+    },
+    {
+      "from": "draw/D13",
+      "to": "semibluff",
+      "kind": "response_model_change",
+      "before": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "after": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "seatChanged": false,
+      "userNotice": "仍坐SB，手牌不变；换一种明确给定的对手回应，原例不改。"
+    }
+  ],
+  "limits": [
+    "Only the18 first-pass frames and11 declared episode entries were audited here.",
+    "Full internal episode information flow and future UI display still require validation.",
+    "A hidden check answer is intentional; removing the actor from the problem does not remove it from the underlying poker world.",
+    "All materials are public and answer-bearing in places, not a frozen unseen examination.",
+    "No real beginner trial or new strategy reference."
+  ],
+  "appChanged": false,
+  "learnerTrials": 0
+}

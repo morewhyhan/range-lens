@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "status": "synthetic_grader_and_continuation_checks_not_learning_evidence",
+  "rootCases": 60,
+  "referenceActionDistribution": {
+    "foldOnly": 15,
+    "raiseOnly": 41,
+    "tied": 4
+  },
+  "legalRaiseAmountChecks": 63060,
+  "scriptedActionReplyTransitions": 480,
+  "checks": {
+    "promptNoDerivedAnswerFields": true,
+    "terminal600BB": true,
+    "unknownWrongWithoutCommittingAction": true,
+    "firstAnswerLocked": true,
+    "modesMemoryIsolated": true,
+    "invalidAuthorInputNotLearnerError": true,
+    "legalWrongActionNotSilentlyCorrected": true,
+    "feedbackContaminatedContinuationMarked": true,
+    "tiedActionsBothAccepted": true,
+    "wholePlanValueNotInferredFromFirstCorrectMove": true
+  },
+  "limits": [
+    "Only one authored mechanism family; call and allin are never uniquely best in this bank.",
+    "Parameter grid is not the distribution of real poker hands or an EV-to-bb/100 estimate.",
+    "Published profiles and new parameter cases are public practice, not frozen unseen transfer evidence.",
+    "Immediate explanations can expose later decisions; no full independent sequence claim.",
+    "Scripted traces are validator inputs, not real learners or measured learning outcomes."
+  ],
+  "sourceHashes": {
+    "research/nevir-system/bluff-reraise-model.json": "6d75e00a962491317e93c263dee2936909c5d3243729291274cfd11e4a279953",
+    "scripts/nevir-practice-grader.mjs": "664473e82524ee0e4d90857e33b5ac55ae6922e285e72214349b4b1a2b25c7f4"
+  },
+  "linkedPolicyCounterexample": {
+    "kind": "author_mathematical_counterexample_not_observed_learner",
+    "heroVariant": "hearts",
+    "KQoFoldProbability": 0.55,
+    "firstMinRaiseWithOptimalContinuationEV": 0.9166666666666714,
+    "minRaiseThenAlwaysCallShortJamEV": -5.733333333333334,
+    "reason": "The lost option to fold after a continuation is weighted by the continuation probability. Do not sum unweighted local errors."
+  }
+}

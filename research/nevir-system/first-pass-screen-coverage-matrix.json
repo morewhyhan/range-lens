@@ -1,0 +1,347 @@
+{
+  "id": "FIRST_PASS_SCREEN_COVERAGE_MATRIX_V1",
+  "status": "paper_screen_coverage_matrix_canonical_surface_not_runtime",
+  "purpose": "逐屏检查13帧学习者主线的必要输入、单一问题、主要动作、交接、父帧返回和停止原因；旧L5–L8只保留为作者宏观合同，不再成为学习者首页路线。",
+  "outerRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "innerRoute": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "rows": [
+    {
+      "id": "L0",
+      "parent": null,
+      "prompt": "这是什么桌、当前训练要做什么？",
+      "primaryAction": "确认桌面并开始",
+      "requiredInputs": [
+        "seats",
+        "effectiveStack",
+        "mode"
+      ],
+      "output": "tableFrame",
+      "returnPoint": "L0",
+      "stop": "missing_table_fact"
+    },
+    {
+      "id": "L1",
+      "parent": "L0",
+      "prompt": "现在轮到谁、前面发生了什么、要付多少钱？",
+      "primaryAction": "选择行动者和待补",
+      "requiredInputs": [
+        "position",
+        "actor",
+        "history",
+        "pot",
+        "toCall"
+      ],
+      "output": "contextFrame",
+      "returnPoint": "L1",
+      "stop": "missing_context"
+    },
+    {
+      "id": "L2",
+      "parent": "L1",
+      "prompt": "在这张翻前图里，我的牌在哪一格？",
+      "primaryAction": "点击固定169格",
+      "requiredInputs": [
+        "chartId",
+        "cell",
+        "action",
+        "weight"
+      ],
+      "output": "preflopCell",
+      "returnPoint": "L2",
+      "stop": "missing_chart_identity"
+    },
+    {
+      "id": "L3",
+      "parent": "L2",
+      "prompt": "这手牌怎样进入翻后的起始范围？",
+      "primaryAction": "确认物理过滤后的范围",
+      "requiredInputs": [
+        "rangeBefore",
+        "heroCards",
+        "knownCards",
+        "physicalFilter"
+      ],
+      "output": "startingRangeFrame",
+      "returnPoint": "L3",
+      "stop": "missing_starting_range"
+    },
+    {
+      "id": "L4",
+      "parent": "L3",
+      "prompt": "翻牌来了，接下来先从哪一步开始？",
+      "primaryAction": "进入当前局面",
+      "requiredInputs": [
+        "startingRangeFrame",
+        "board",
+        "holeCards",
+        "history"
+      ],
+      "output": "p1Frame",
+      "returnPoint": "L4",
+      "stop": "missing_flop_state"
+    },
+    {
+      "id": "p1",
+      "parent": "L4",
+      "prompt": "现在轮到谁，继续要付多少钱？",
+      "primaryAction": "确认行动者和价格",
+      "requiredInputs": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "output": "contextCard",
+      "returnPoint": "p1",
+      "stop": "missing_state"
+    },
+    {
+      "id": "p2",
+      "parent": "L4",
+      "prompt": "我用这些牌组成的最好五张是什么？",
+      "primaryAction": "选择牌型和改善牌",
+      "requiredInputs": [
+        "board",
+        "holeCards",
+        "bestFive",
+        "improvements"
+      ],
+      "output": "handCard",
+      "returnPoint": "p2",
+      "stop": "missing_hand_fact"
+    },
+    {
+      "id": "p3",
+      "parent": "L4",
+      "prompt": "哪些组合不可能、变少或留下？",
+      "primaryAction": "标记范围变化身份",
+      "requiredInputs": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "output": "rangeDeltaCard",
+      "returnPoint": "p3",
+      "stop": "missing_range_evidence"
+    },
+    {
+      "id": "p4",
+      "parent": "L4",
+      "prompt": "当前合法的选择和价格是什么？",
+      "primaryAction": "选择课程允许的动作",
+      "requiredInputs": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "output": "choiceCard",
+      "returnPoint": "p4",
+      "stop": "missing_policy_or_reference"
+    },
+    {
+      "id": "p5",
+      "parent": "L4",
+      "prompt": "点哪个动作、投入多少、接下来轮到谁？",
+      "primaryAction": "点击动作并确认金额",
+      "requiredInputs": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "output": "ledgerCard",
+      "returnPoint": "p5",
+      "stop": "illegal_amount_or_actor"
+    },
+    {
+      "id": "p6",
+      "parent": "L4",
+      "prompt": "回应或新牌只改变了哪一个关键字段？",
+      "primaryAction": "确认变化并打开真实后继",
+      "requiredInputs": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfter",
+        "successor"
+      ],
+      "output": "changeCard",
+      "returnPoint": "p6",
+      "stop": "missing_successor"
+    },
+    {
+      "id": "p7",
+      "parent": "L4",
+      "prompt": "结果是什么，刚才错在哪一层？",
+      "primaryAction": "确认结算和回退层",
+      "requiredInputs": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer"
+      ],
+      "output": "reviewCard",
+      "returnPoint": "p7",
+      "stop": "missing_close_fields"
+    },
+    {
+      "id": "recall",
+      "parent": "p7",
+      "prompt": "把路线复述一遍，并指出单变量改变后要回哪层。",
+      "primaryAction": "完成结构回放和迁移",
+      "requiredInputs": [
+        "routeMap",
+        "changedField",
+        "preservedFields",
+        "nextEntry"
+      ],
+      "output": "migrationEvidence",
+      "returnPoint": "recall",
+      "stop": "structure_not_ready"
+    }
+  ],
+  "invariants": {
+    "onePrimaryQuestionPerRow": true,
+    "onePrimaryActionPerRow": true,
+    "allRequiredInputsVisibleBeforeAnswer": true,
+    "everyOutputReadBySuccessor": true,
+    "childOpensInsideParent": true,
+    "childReturnsToSameParent": true,
+    "missingEvidenceStops": true,
+    "noDefaultSuccessor": true,
+    "flat35ItemHomeForbidden": true,
+    "canonicalRouteMatchesGoldenPath": true,
+    "legacyMacroRouteNotLearnerSurface": true,
+    "recallIsAfterP7": true
+  },
+  "coverageChecks": [
+    "outerRouteComplete",
+    "innerRouteComplete",
+    "requiredInputsNonEmpty",
+    "outputNonEmpty",
+    "stopReasonNonEmpty",
+    "parentReturnPresent",
+    "singlePrimaryQuestion",
+    "singlePrimaryAction",
+    "canonicalRouteMatchesGoldenPath",
+    "legacyMacroRouteScoped",
+    "recallAfterP7",
+    "canonicalRouteMatchesGoldenPath",
+    "legacyMacroRouteScoped",
+    "recallAfterP7"
+  ],
+  "release": {
+    "paperComplete": true,
+    "runtimeReady": false,
+    "learnerTrialReady": false,
+    "strategyReady": false,
+    "NL50Evidence": false
+  },
+  "canonicalSource": "first-pass-golden-path.json",
+  "canonicalStructuralRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "legacyMacroRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8"
+  ],
+  "legacyMacroRows": [
+    {
+      "id": "L5",
+      "parent": "L4",
+      "prompt": "范围和牌力确认后，现在比较什么？",
+      "primaryAction": "进入当前动作比较",
+      "requiredInputs": [
+        "contextCard",
+        "handCard",
+        "rangeDeltaCard"
+      ],
+      "output": "p4Frame",
+      "returnPoint": "L5",
+      "stop": "missing_comparison_frame"
+    },
+    {
+      "id": "L6",
+      "parent": "L5",
+      "prompt": "动作完成后，回应或新牌怎样接上？",
+      "primaryAction": "进入状态更新",
+      "requiredInputs": [
+        "choiceCard",
+        "ledgerCard",
+        "nextActor"
+      ],
+      "output": "p6Frame",
+      "returnPoint": "L6",
+      "stop": "missing_update_frame"
+    },
+    {
+      "id": "L7",
+      "parent": "L6",
+      "prompt": "这手牌走到哪里结束，怎样回看？",
+      "primaryAction": "进入收束和回放",
+      "requiredInputs": [
+        "changeCard",
+        "successor"
+      ],
+      "output": "p7Frame",
+      "returnPoint": "L7",
+      "stop": "missing_close_frame"
+    },
+    {
+      "id": "L8",
+      "parent": "L7",
+      "prompt": "把路线复述一遍，并指出单变量改变后要回哪层。",
+      "primaryAction": "完成结构回放和迁移",
+      "requiredInputs": [
+        "routeMap",
+        "changedField",
+        "preservedFields",
+        "nextEntry"
+      ],
+      "output": "migrationEvidence",
+      "returnPoint": "L8",
+      "stop": "structure_not_ready"
+    }
+  ]
+}

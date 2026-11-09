@@ -1,0 +1,114 @@
+{
+  "ok": true,
+  "status": "legal_trajectory_and_fact_checks_not_learner_pass",
+  "questions": 38,
+  "scenarios": 4,
+  "initialHandFamilies": 3,
+  "sharedPrefixScenarios": [
+    "B",
+    "B2"
+  ],
+  "answerCounts": {
+    "hero": 7,
+    "free": 3,
+    "opponent": 9,
+    "bet": 3,
+    "deal": 3,
+    "raise": 1,
+    "showdown": 3,
+    "ended": 4,
+    "allin": 1,
+    "runout": 3,
+    "wait": 1
+  },
+  "goldenCheckpoints": [
+    {
+      "scenario": "A",
+      "name": "river_raise",
+      "expected": {
+        "pot": 2950,
+        "stacks": [
+          9050,
+          8050
+        ],
+        "paid": [
+          500,
+          1500
+        ],
+        "actor": 0
+      }
+    },
+    {
+      "scenario": "A",
+      "name": "river_call",
+      "expected": {
+        "pot": 3950,
+        "stacks": [
+          8050,
+          8050
+        ],
+        "phase": "showdown"
+      }
+    },
+    {
+      "scenario": "B",
+      "name": "facing_jam",
+      "expected": {
+        "pot": 12775,
+        "stacks": [
+          7375,
+          0
+        ],
+        "paid": [
+          1800,
+          9175
+        ],
+        "actor": 0
+      }
+    },
+    {
+      "scenario": "B",
+      "name": "allin_matched",
+      "expected": {
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "phase": "allin_runout"
+      }
+    },
+    {
+      "scenario": "B2",
+      "name": "own_allin_still_waits",
+      "expected": {
+        "pot": 11575,
+        "stacks": [
+          0,
+          8575
+        ],
+        "actor": 1,
+        "phase": "action"
+      }
+    },
+    {
+      "scenario": "C",
+      "name": "refund_and_end",
+      "expected": {
+        "pot": 0,
+        "stacks": [
+          10700,
+          9300
+        ],
+        "phase": "ended"
+      }
+    }
+  ],
+  "all600BB": true,
+  "hiddenActorAndAnswersRemoved": true,
+  "knownHeroCardsNeverRedealt": true,
+  "sourceRoleCoverage": "Observed caller roles only; no caller strategy established.",
+  "independentStrategicTransfer": false,
+  "participantExposureVerified": false,
+  "learnerTrials": 0
+}

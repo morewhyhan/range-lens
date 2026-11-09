@@ -1,0 +1,39 @@
+{
+  "status": "declarative_final_goal_acceptance_not_complete",
+  "source": "60_最终目标逐项验收与完成闸门.md",
+  "requirements": [
+    {"id":"G1","label":"single_non_flat_route","evidence":"single-path-course-contract.json","current":"spec_only"},
+    {"id":"G2","label":"nested_parent_child_recovery","evidence":"first-pass-gates.json+single-path-course-contract.json","current":"paper_only"},
+    {"id":"G3","label":"first_pass_structure_recall","evidence":"learner-trial-loop-contract.json","current":"not_trialed"},
+    {"id":"G4","label":"complete_step_role_street_coverage","evidence":"curriculum-release-contract.json+street-role-coverage-contract.json","current":"partial"},
+    {"id":"G5","label":"low_baseline_readability","evidence":"learner-trial-loop-contract.json","current":"not_trialed"},
+    {"id":"G6","label":"slow_think_execution","evidence":"learner-slow-think-card.json+capability-readiness-contract.json","current":"not_trialed"},
+    {"id":"G7","label":"independent_math_and_code_correctness","evidence":"verify-nevir-system-docs.mjs","current":"partial"},
+    {"id":"G8","label":"simplification_matches_reference","evidence":"simplification-evaluation-contract.json","current":"partial_reference_only"},
+    {"id":"G9","label":"continuous_real_hand_transfer","evidence":"learner-trial-loop-contract.json+street-role-coverage-contract.json","current":"not_trialed"},
+    {"id":"G10","label":"NL50_target_benchmark","evidence":"capability-readiness-contract.json+04_正确性与NL50验收方案.md","current":"not_established"}
+  ],
+  "necessaryConditions": [
+    "routeRuntimeImplementedAndTested",
+    "nestedParentRecoveryTested",
+    "adultBeginnerFirstAnswerAndTransferEvidence",
+    "allApplicableCoverageCellsReleasedOrExplicitlyBlocked",
+    "factModelPolicyReferenceIdentitiesSeparated",
+    "matchedReferenceSimplificationReport",
+    "unseenContinuousRouteEvidence",
+    "frozenTargetConfigAndExternalBenchmark",
+    "reproducibleVersionsAndNoLongTermAppDatabase"
+  ],
+  "nonSubstitutionRules": [
+    "docsDoNotProveRuntime",
+    "runtimeDoesNotProveLearnerUnderstanding",
+    "localReferenceDoesNotProveFullCourse",
+    "shortAccuracyDoesNotProveNL50",
+    "shortTermWinningsDoNotProveCapability"
+  ],
+  "gates": {
+    "goalCompletionVerified": false,
+    "partialEvidenceCannotPromoteGlobalGoal": true,
+    "missingEvidenceRequiresStatusNotVerified": true
+  }
+}

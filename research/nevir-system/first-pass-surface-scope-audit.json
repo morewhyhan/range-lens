@@ -1,0 +1,42 @@
+{
+  "id": "FIRST_PASS_SURFACE_SCOPE_AUDIT_V1",
+  "status": "paper_surface_scope_separated_not_runtime",
+  "purpose": "把13帧结构主线与18帧叙事示范明确分层，防止原始手牌连续性材料再次变成平铺首页或被误当成18个策略决定。",
+  "sources": [
+    "guided-course-itinerary.json",
+    "first-pass-golden-path.json",
+    "first-pass-golden-path-alignment-audit.json"
+  ],
+  "structuralRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "structuralFrameCount": 13,
+  "narrativeFrameCount": 18,
+  "checks": {
+    "canonicalSurfaceDeclared": true,
+    "structuralRouteMatchesGoldenPath": true,
+    "narrativeFramesNotCanonicalHomepage": true,
+    "compressionRulePresent": true,
+    "outerStepsCannotBeSkipped": true,
+    "goldenPathAlignmentPassed": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "narrativeRouteTrial": false,
+    "structureMastery": false,
+    "NL50Evidence": false
+  }
+}

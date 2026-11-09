@@ -1,0 +1,49 @@
+{
+  "id": "COURSE_UNIT_FIELD_SCHEMA_MAP_V1",
+  "status": "schema_mapping_written_not_migrated",
+  "canonicalRequired": [
+    "unitId","parentFrame","street","role","actionState","sourceIdentity","factInputs","coursePolicy","referencePolicy","rangeBefore","rangeAfter","legalSuccessors","question","explanation","errorReturn","transferVariant","releaseStatus"
+  ],
+  "compilerAliases": {
+    "parentFrame": ["parentRouteNode","returnTo"],
+    "street": ["gameFrame.street"],
+    "role": ["gameFrame.role"],
+    "actionState": ["gameFrame.actionState","allowedActions"],
+    "sourceIdentity": ["sourceIdentity","SourceSpec"],
+    "factInputs": ["entryCondition","gameFrame","visibleInputs"],
+    "coursePolicy": ["coursePolicyIdentity","policyAnswer"],
+    "referencePolicy": ["referenceIdentity","referenceAnswer"],
+    "rangeBefore": ["rangeBefore"],
+    "rangeAfter": ["rangeAfterByAction"],
+    "legalSuccessors": ["successorIds","SuccessorGraph"],
+    "question": ["question","questionKinds"],
+    "explanation": ["explanation"],
+    "errorReturn": ["errorLayer","returnTo"],
+    "transferVariant": ["transferVariants"],
+    "releaseStatus": ["releaseStatus"]
+  },
+  "runtimeProjection": {
+    "O1_context": ["street","role","actionState","factInputs"],
+    "O2_board": ["factInputs"],
+    "O3_hand": ["factInputs"],
+    "O4_range": ["rangeBefore","rangeAfter","sourceIdentity"],
+    "O5_compare": ["actionState","coursePolicy","referencePolicy","legalSuccessors"],
+    "O6_execute": ["coursePolicy","referencePolicy","factInputs"],
+    "O7_update": ["rangeAfter","legalSuccessors","factInputs"],
+    "O8_close": ["errorReturn","transferVariant","releaseStatus"]
+  },
+  "requiredCompilerAdditions": ["gameFrame.street","gameFrame.role","gameFrame.actionState","explanation","stopReason_when_successorIds_empty"],
+  "compatibility": {
+    "legacyAbbreviationsMayBeAdapted": true,
+    "adapterMayInferMissingStrategy": false,
+    "adapterFailureDowngradesIdentity": true,
+    "unknownFieldBlocksExactStrategy": true
+  },
+  "currentEvidence": {
+    "mappingWritten": true,
+    "compilerMigrated": false,
+    "all35CanonicalRecords": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

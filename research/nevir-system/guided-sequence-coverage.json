@@ -1,0 +1,1158 @@
+{
+  "status": "author_semantic_pointer_audit_not_mastery_evidence",
+  "scope": "35 existing ability units; only explicitly asked frame tasks counted. Candidate menu presence or reused words alone do not count.",
+  "counts": {
+    "withExplicitPartialFrames": 35,
+    "withoutLinkedSequence": 0,
+    "fullSequenceOrLearnerPasses": 0
+  },
+  "units": [
+    {
+      "id": "1.1",
+      "label": "差牌能付钱",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B03",
+          "title": "差牌两种都付款",
+          "prompt": "给定JJ两种都跟，下10比下5多收到多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B04",
+          "title": "差牌可能嫌贵",
+          "prompt": "66跟5、弃10；面对这一组，哪种收益更高？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "size-comparison-evidence.json",
+      "priorGap": "补匹配真实范围、后续与完整动作菜单",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.2",
+      "label": "领先但可能被反超",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P02",
+          "title": "只看AJ这组",
+          "prompt": "QQ当前对AsJc，谁领先？",
+          "optional": false
+        },
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P03",
+          "title": "找到真正的反超牌",
+          "prompt": "固定AJ后，44张合法河牌中哪组会让它反超？",
+          "optional": false
+        },
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P04",
+          "title": "承认保护确实有好处",
+          "prompt": "若这组AJ现在弃牌，能消除它反超的机会吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P07",
+          "title": "按份额计算强端成本",
+          "prompt": "KK占1/4，损失10.5对平均收益贡献多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P08",
+          "title": "合并收益与成本",
+          "prompt": "保护贡献约+1.074，强端成本−2.625，合计怎样？",
+          "optional": false
+        },
+        {
+          "packet": "guided-protection-sequence-packet.json",
+          "frame": "P09",
+          "title": "比较完整计划",
+          "prompt": "按给定全部计划，当前选哪条？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "active-plan-models.json",
+      "priorGap": "已有17帧局部保护跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.3",
+      "label": "落后但能赶走赢家",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B05",
+          "title": "更好的牌也可能退出",
+          "prompt": "KJ跟5、弃10；面对这一组，下10带来什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "size-comparison-evidence.json",
+      "priorGap": "有限河牌模型不能代表所有前街诈唬",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.4",
+      "label": "当前弱但能改善",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W01",
+          "title": "先认无人下注的起点",
+          "prompt": "现在对手还没下注，自己比较什么？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W02",
+          "title": "改善机会与当前成牌分开",
+          "prompt": "AsQs有直接听花，现在已经是同花吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W03",
+          "title": "找真正的退出目标",
+          "prompt": "给定KJ面对10.5一半弃，它是怎样的牌？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W05",
+          "title": "反击会让改善机会付不起",
+          "prompt": "题设KK／JT再全下后，自己必须因有听花就跟吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W06",
+          "title": "被跟的未来也要带上",
+          "prompt": "KJ跟完后，是否保证不用再花钱就能看到结果？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "W08",
+          "title": "合并后才选计划",
+          "prompt": "给定全部后续比较，选哪条？",
+          "optional": false
+        },
+        {
+          "packet": "guided-weak-lead-sequence-packet.json",
+          "frame": "N01",
+          "title": "可选：只改对下注的回应",
+          "prompt": "若KK、KJ、JT全部再全下，完整比较哪条更高？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "active-plan-models.json",
+      "priorGap": "已有17帧主动弱牌局部跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B07",
+          "title": "本来就能赢的退出",
+          "prompt": "AJ在两种下注下都弃；河牌过牌也能赢它，下10比过牌多赚吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "size-comparison-evidence.json",
+      "priorGap": "A72 KQ仅补一条课程规则，仍缺跨情境完整策略",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.6",
+      "label": "强牌考虑先过牌",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V04",
+          "title": "看AK多放了什么",
+          "prompt": "给定后续下，哪条路线从AK多收到钱？",
+          "optional": false
+        },
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V07",
+          "title": "合起来选计划",
+          "prompt": "按完整给定比较，现在选哪条计划？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "value-trap-tree-evidence.json",
+      "priorGap": "已有河牌强牌有限树，仍缺前街风险及匹配目标策略",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.7",
+      "label": "暂无合算进攻",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "O03",
+          "title": "可选：只改给定候选权重",
+          "prompt": "若明确只剩两种都跟的KK，选什么？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "size-comparison-evidence.json",
+      "priorGap": "补更广的牌力和后续；未取得参考的动作不能自动排除",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "1.8",
+      "label": "同目的，不同尺寸",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B03",
+          "title": "差牌两种都付款",
+          "prompt": "给定JJ两种都跟，下10比下5多收到多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B08",
+          "title": "把互斥结果合起来",
+          "prompt": "判断整体大小注，能只看JJ多付的钱吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B09",
+          "title": "用完整比较选方案",
+          "prompt": "按本模型完整比较，当前选什么？",
+          "optional": false
+        },
+        {
+          "packet": "guided-size-sequence-packet.json",
+          "frame": "B10",
+          "title": "别只盯被跟时胜率",
+          "prompt": "大注被跟时胜出份额更低，是否就能否定它？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "size-comparison-evidence.json",
+      "priorGap": "4095权重模型不是4095个真实策略节点",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V09",
+          "title": "不是只赢诈唬",
+          "prompt": "除了QT，自己还能赢题设中哪些主动下注的成牌？",
+          "optional": false
+        },
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V10",
+          "title": "比较跟、加与全下",
+          "prompt": "按给定全部后续，哪项条件收益最高？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "value-trap-tree-evidence.json",
+      "priorGap": "三条9能赢77/AK而输KK的有限比较已补，仍缺完整范围与其他情境",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.2",
+      "label": "主要只能赢诈唬",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D10",
+          "title": "预演河牌再次承压",
+          "prompt": "预演4c后自己过、对手下21，只赢JT占1/21，此时跟注EV是哪项？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "补更多价格与匹配下注参考，不能从牌型推诈唬比例",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D04",
+          "title": "看一个失效补牌",
+          "prompt": "假设河牌2s、对手是KhKd，自己的A高花赢吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D08",
+          "title": "换回真正要比较的未来",
+          "prompt": "本题实际压力树里，跟后河牌一定能免费摊牌吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D13",
+          "title": "看完整未来而非一张河牌",
+          "prompt": "按所有候选、所有河牌和给定后续汇总，本菜单选什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "有限44张跑牌比较尚不覆盖所有听牌和未来菜单",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-made-draw-sequence-packet.json",
+          "frame": "F01",
+          "title": "成牌与改善同时保留",
+          "prompt": "Jd7d现在有一对J，还能同时听方片吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-made-draw-sequence-packet.json",
+          "frame": "F02",
+          "title": "当前赢面看具体对象",
+          "prompt": "当前面对AA、98、55，自己领先哪组？",
+          "optional": false
+        },
+        {
+          "packet": "guided-made-draw-sequence-packet.json",
+          "frame": "F05",
+          "title": "把未来结果分开",
+          "prompt": "当前领先组以后输掉的结果，要怎样处理？",
+          "optional": false
+        },
+        {
+          "packet": "guided-made-draw-sequence-packet.json",
+          "frame": "F06",
+          "title": "赢面只合并一次",
+          "prompt": "按全部合法河牌，最终赢面是哪项？",
+          "optional": false
+        },
+        {
+          "packet": "guided-made-draw-sequence-packet.json",
+          "frame": "F08",
+          "title": "按完整条件比较",
+          "prompt": "给定范围与全部跑牌结果，现在在跟弃之间选什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "made-plus-draw-evidence.json",
+      "priorGap": "已有Jd7d给定转牌全下模型和14帧局部跟练；仍缺非全下未来菜单、目标范围及独立迁移",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.5",
+      "label": "加注让差牌多付钱",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V10",
+          "title": "比较跟、加与全下",
+          "prompt": "按给定全部后续，哪项条件收益最高？",
+          "optional": false
+        },
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V11",
+          "title": "加到额不是新增两次",
+          "prompt": "自己加到45后，接下来等谁行动？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "value-trap-tree-evidence.json",
+      "priorGap": "已补受限价值树而非借听花模型，仍需匹配参考及更广菜单",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.6",
+      "label": "加注希望赶走更好牌",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A01",
+          "title": "先认真正的退出目标",
+          "prompt": "自己AsQs目前面对KJ，谁领先？",
+          "optional": false
+        },
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A02",
+          "title": "只改一项回应",
+          "prompt": "本版本KJ面对加到30，有一半退出；它是什么目标？",
+          "optional": false
+        },
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A05",
+          "title": "必须把回应算全",
+          "prompt": "能只看对手弃牌这条好结果吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A12",
+          "title": "三种后果合起来比较",
+          "prompt": "按给定全部后续，受限菜单选择什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "模型只覆盖给定半诈唬树，不自动适用小注或任意人群",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "2.7",
+      "label": "继续没有足够收益",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D13",
+          "title": "看完整未来而非一张河牌",
+          "prompt": "按所有候选、所有河牌和给定后续汇总，本菜单选什么？",
+          "optional": false
+        },
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D14",
+          "title": "这次才真实执行",
+          "prompt": "自己弃牌后，对手10.5的未匹配部分怎样处理？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "须接匹配防守参考，不把一个模型的弃牌推广",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.1",
+      "label": "算清新价格",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R04",
+          "title": "加到额与待补分开",
+          "prompt": "对手加到45，自己还补多少才能跟？",
+          "optional": false
+        },
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R08",
+          "title": "全下总额不是新增额",
+          "prompt": "自己总投入到83，刚才17.5之后新增多少？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "还需覆盖其他金额与合法再加状态，价格本身不定策略",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R05",
+          "title": "换成真正加注的候选",
+          "prompt": "本题实际加注分支留下哪些？",
+          "optional": false
+        },
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "C03",
+          "title": "可选：加注范围更强",
+          "prompt": "若当前KK:77为8:2，跟相对弃EV−2.5，应怎样选？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "value-trap-tree-evidence.json",
+      "priorGap": "已补KK/77加注比例变化的三条9比较，真实加注范围与其他牌力仍缺",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.3",
+      "label": "听牌被加注",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A08",
+          "title": "再加分支换成当前范围",
+          "prompt": "本版本对手再全下后，候选还含KJ吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A09",
+          "title": "面对再全下重算价格",
+          "prompt": "对手全下到90，自己已下30，还补多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-semibluff-sequence-packet.json",
+          "frame": "A10",
+          "title": "当前增量与旧基点分开",
+          "prompt": "给定胜出份额30%，相对现在弃牌，补60的增量是多少？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "defense-tree-evidence.json",
+      "priorGap": "既有AsQs分支仍属一套限制树，其他尺寸和组合待补",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.4",
+      "label": "再加可以多收钱",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R07",
+          "title": "比较跟注与再加",
+          "prompt": "按给定全部回应，这个受限菜单选什么？",
+          "optional": false
+        },
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R08",
+          "title": "全下总额不是新增额",
+          "prompt": "自己总投入到83，刚才17.5之后新增多少？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "value-trap-tree-evidence.json",
+      "priorGap": "已补77继续或弃牌的受限再加比较，仍缺完整目标策略",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.5",
+      "label": "再加用于诈唬",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z01",
+          "title": "先看当前牌力和街数",
+          "prompt": "现在AcQc是A高，河牌已发满，还能靠下一张改善吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z04",
+          "title": "先删除本来就不可能的牌",
+          "prompt": "只排除公共牌时，AKs能包含AhKh吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z05",
+          "title": "点A查看删除的继续牌",
+          "prompt": "自己Ac占掉哪手本来合法的AKs？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z06",
+          "title": "点Q查看删除的另一组",
+          "prompt": "自己Qc在KQo中删掉几手？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z07",
+          "title": "把剩余候选接上回应",
+          "prompt": "剩7手KQo，能把它们都算作一定弃牌吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z09",
+          "title": "只预演较小再加",
+          "prompt": "再加到72.5，自己本次新增多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z12",
+          "title": "别因之前投入而被迫跟",
+          "prompt": "给定继续候选全赢自己，还应因已投入55而补最后10.5吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-bluff-reraise-sequence-packet.json",
+          "frame": "Z14",
+          "title": "合并全部选择与金额",
+          "prompt": "按本模型全部合法再加区间比较，当前选什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "bluff-reraise-model.json",
+      "priorGap": "已有21帧局部跟练和给定再加区间比较；仍缺目标匹配范围、真实响应与独立迁移",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "3.6",
+      "label": "后手与合法动作变化",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V11",
+          "title": "加到额不是新增两次",
+          "prompt": "自己加到45后，接下来等谁行动？",
+          "optional": false
+        },
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V12",
+          "title": "面对全下重算价格",
+          "prompt": "对手全下到83，自己还需补多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V14",
+          "title": "行动已经匹配",
+          "prompt": "双方已全下并匹配，现在做什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "first-pass-structure-packet.json",
+      "priorGap": "14卡不等于通用规则引擎，不足额全下等完整边界待实现验证",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.1",
+      "label": "对手跟我的下注",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U05",
+          "title": "跟注改变钱和候选",
+          "prompt": "BB跟1.83后，池是多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U06",
+          "title": "自己的范围也保留到后面",
+          "prompt": "宽打版本被跟以后，自己的候选只剩Q3s了吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "H07",
+          "title": "连续回应继续筛",
+          "prompt": "BTN跟7后，哪组份额符合本题？",
+          "optional": false
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "H12",
+          "title": "实际回应后再更新",
+          "prompt": "BTN这次跟了，原来必弃的JT还在跟注支吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "history-contrast-evidence.json",
+      "priorGap": "作者给定回应可复算，仍缺匹配真实逐手响应",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.2",
+      "label": "双方过牌",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "H02",
+          "title": "自己过牌仍要等回应",
+          "prompt": "自己过牌以后，能直接发转牌吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "H03",
+          "title": "强牌也可能过牌",
+          "prompt": "BTN也过牌，模型中的88是不是全没了？",
+          "optional": false
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "H04",
+          "title": "让候选实际变淡",
+          "prompt": "QQ原有20份、题设80%会过牌，过牌支留下多少？",
+          "optional": false
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "J03",
+          "title": "转牌先过还要等人",
+          "prompt": "2c后自己过牌，转牌是否结束？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "J04",
+          "title": "后过才关闭街并筛选",
+          "prompt": "BTN也过，88原10份按80%留下多少？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "history-contrast-evidence.json",
+      "priorGap": "不能由一次过牌推演模型中的具体百分比",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.3",
+      "label": "我的下注范围不同",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U03",
+          "title": "按题设执行自己的筛选",
+          "prompt": "宽打版本规定两组都下注，下注后KQ是否仍可能在这条线？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U06",
+          "title": "自己的范围也保留到后面",
+          "prompt": "宽打版本被跟以后，自己的候选只剩Q3s了吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U07",
+          "title": "换一个打法作比较",
+          "prompt": "若另一个版本只有Q3s下注，这条下注线还有KQ吗？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "self-range-outcome-evidence.json",
+      "priorGap": "已有两版合法联合配对和实际手牌条件化；仍缺完整双方范围与真实响应",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.4",
+      "label": "前面尺寸或路线不同",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "J02",
+          "title": "先下注被跟的筛选",
+          "prompt": "这次翻牌先下7被跟，候选留下哪组？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "J05",
+          "title": "眼前一样不代表信息一样",
+          "prompt": "两条路线河牌、钱和座位一样，候选也必须一样吗？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "J06",
+          "title": "另一历史重新比较",
+          "prompt": "本对照完整比较选什么？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "history-contrast-evidence.json",
+      "priorGap": "有限同价异序例不覆盖所有尺寸/加注路线",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.5",
+      "label": "账本与行动顺序更新",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "first-hand-lesson-packet.json",
+          "frame": "S07",
+          "title": "对手回应也要真正发生",
+          "prompt": "BTN本次选择跟注，需要放入多少？",
+          "optional": false
+        },
+        {
+          "packet": "first-hand-lesson-packet.json",
+          "frame": "S08",
+          "title": "带着前序看第四张牌",
+          "prompt": "转牌来了。现在应怎样继续？",
+          "optional": false
+        },
+        {
+          "packet": "first-hand-lesson-packet.json",
+          "frame": "S11",
+          "title": "跟完，才能进入下一街",
+          "prompt": "对手跟22.05以后，池会变成多少？",
+          "optional": false
+        },
+        {
+          "packet": "first-hand-lesson-packet.json",
+          "frame": "S12",
+          "title": "第五张牌不自动结束牌局",
+          "prompt": "河牌发出了，现在是什么情况？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "first-hand-lesson-packet.json",
+      "priorGap": "固定脚本正确不等于通用金额引擎和界面通过",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "4.6",
+      "label": "结果不倒推上步正确性",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V16",
+          "title": "结果不能改写原依据",
+          "prompt": "本段起点83，最后0。能仅因这次输牌，就改判起点过牌错了吗？",
+          "optional": false
+        },
+        {
+          "packet": "guided-reraise-sequence-packet.json",
+          "frame": "R12",
+          "title": "这次赢不证明所有局面",
+          "prompt": "能只因赢了，就说同样三条永远该再加全下吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "self-range-outcome-evidence.json",
+      "priorGap": "已有四条答后示例与动作前判断分离，仍缺真人理解与陌生迁移验证",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.1",
+      "label": "自己改善",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U09",
+          "title": "新牌同时占用双方候选",
+          "prompt": "Qh发出，含Qh的候选怎么处理？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U10",
+          "title": "再读自己的五张",
+          "prompt": "实际Qc3c现在是什么成牌？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U11",
+          "title": "自己改善不等于领先所有人",
+          "prompt": "现在面对AT和76，哪项对？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "自己的成牌改善不等于策略或相对权益必改善",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.2",
+      "label": "对手留下的牌改善",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K02",
+          "title": "只替换这一张河牌",
+          "prompt": "假设最后一张换Qh，候选QQ成什么？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K03",
+          "title": "看对手改善而非只看自己",
+          "prompt": "在Qh预演上，自己KK面对这手QQ还领先吗？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "明示模型不是目标玩家后验或全部后街参考",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.3",
+      "label": "听牌完成或新增",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D04",
+          "title": "看一个失效补牌",
+          "prompt": "假设河牌2s、对手是KhKd，自己的A高花赢吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "相关源路线花色有绑定差异，不能搬用精确动作",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.4",
+      "label": "公共牌配对",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-draw-sequence-packet.json",
+          "frame": "D04",
+          "title": "看一个失效补牌",
+          "prompt": "假设河牌2s、对手是KhKd，自己的A高花赢吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "需匹配真实候选与响应才能判断行动",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.5",
+      "label": "来更高牌",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K02",
+          "title": "只替换这一张河牌",
+          "prompt": "假设最后一张换Qh，候选QQ成什么？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K03",
+          "title": "看对手改善而非只看自己",
+          "prompt": "在Qh预演上，自己KK面对这手QQ还领先吗？",
+          "optional": true
+        },
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K04",
+          "title": "事实变化不自动生成策略",
+          "prompt": "换Qh后，能直接沿用原4s牌面的EV数字判下注吗？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "不能生成高牌必利于进攻方的规则",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.6",
+      "label": "看似空白",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-history-sequence-packet.json",
+          "frame": "K01",
+          "title": "可选：空白不是完全没变",
+          "prompt": "4s出现后，四手牌的最佳五张完全没变吗？",
+          "optional": true
+        }
+      ],
+      "priorMaterial": "history-contrast-evidence.json",
+      "priorGap": "同最终牌钱模型仅作历史机制对照，不是通用空白牌策略",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.7",
+      "label": "新牌移除组合",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U09",
+          "title": "新牌同时占用双方候选",
+          "prompt": "Qh发出，含Qh的候选怎么处理？",
+          "optional": false
+        },
+        {
+          "packet": "guided-update-sequence-packet.json",
+          "frame": "U12",
+          "title": "切回实际手牌这一行",
+          "prompt": "给定自己Qc3c后，原QhTd还能在对手手里吗？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "turn-transfer-evidence.json",
+      "priorGap": "不把物理删除自动称为确定策略或任意后验",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    },
+    {
+      "id": "5.8",
+      "label": "到河牌，未来机会结束",
+      "status": "partial_explicit_frame_evidence",
+      "linkedFrames": [
+        {
+          "packet": "guided-value-sequence-packet.json",
+          "frame": "V14",
+          "title": "行动已经匹配",
+          "prompt": "双方已全下并匹配，现在做什么？",
+          "optional": false
+        }
+      ],
+      "priorMaterial": "blocker-teaching-evidence.json",
+      "priorGap": "同花移除例不补全河牌所有动作参考",
+      "fullTeachingSequenceVerified": false,
+      "independentUnseenPerformanceVerified": false,
+      "fullMatchingTargetPolicyVerified": false,
+      "learnerTrialVerified": false
+    }
+  ],
+  "limits": [
+    "Pointers are author semantic judgments; script checks existence and route status, not independent educational validity.",
+    "One frame may illustrate prerequisites of several abilities without completing them.",
+    "Optional frames are not presumed seen.",
+    "An existing local math model does not imply an ordered teaching sequence, matched target policy or learner transfer."
+  ]
+}

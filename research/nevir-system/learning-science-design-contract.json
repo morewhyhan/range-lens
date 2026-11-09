@@ -1,0 +1,42 @@
+{
+  "id": "LEARNING_SCIENCE_DESIGN_CONTRACT_V1",
+  "status": "evidence_mapped_not_poker_or_NL50_validated",
+  "principles": [
+    {"id":"worked_example_first","routeUse":"first_complete_hand","claim":"novices need a visible solution structure before open problem solving"},
+    {"id":"guidance_fading","routeUse":"map_to_guided_to_independent","claim":"remove one support at a time"},
+    {"id":"retrieval_with_feedback","routeUse":"first_answer_retry_unseen","claim":"retrieval requires corrective feedback for reliable learning"},
+    {"id":"contrast_and_spacing","routeUse":"single_variable_adjacent_and_delayed","claim":"comparison and spacing expose portable relations"},
+    {"id":"near_to_far_transfer","routeUse":"adjacent_to_continuous_route","claim":"transfer must be tested across increasing structural distance"},
+    {"id":"contiguous_visual_inputs","routeUse":"same_parent_frame_and_fixed_range_grid","claim":"reduce split attention and unnecessary search"}
+  ],
+  "routeRules": {
+    "firstPassIsWorkedExample": true,
+    "oneSupportRemovedPerStage": true,
+    "feedbackAfterEveryAnswer": true,
+    "firstAnswerSeparatedFromRetry": true,
+    "singleVariableBeforeMultiVariableTransfer": true,
+    "nearTransferBeforeContinuousUnseen": true,
+    "technicalTermsCannotBeOnlyCue": true
+  },
+  "evidenceBoundaries": [
+    "learning_science_does_not_validate_poker_strategy",
+    "route_recall_does_not_validate_NL50",
+    "near_transfer_does_not_validate_far_transfer",
+    "answer_accuracy_does_not_validate_live_profit",
+    "worked_examples_do_not_replace_matched_solver_reference"
+  ],
+  "sourceReferences": [
+    "https://journals.sagepub.com/doi/10.1177/0963721420922183",
+    "https://eric.ed.gov/?id=EJ732331",
+    "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+    "https://pubmed.ncbi.nlm.nih.gov/29733621/",
+    "https://pubmed.ncbi.nlm.nih.gov/18578849/"
+  ],
+  "currentStatus": {
+    "principlesMapped": true,
+    "runtimeImplementation": false,
+    "lowBaselineTrial": false,
+    "strategyReferenceComplete": false,
+    "NL50Evidence": false
+  }
+}

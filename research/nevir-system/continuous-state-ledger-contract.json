@@ -1,0 +1,24 @@
+{
+  "id": "CONTINUOUS_STATE_LEDGER_CONTRACT_V1",
+  "status": "ledger_invariants_written_runtime_unverified",
+  "purpose": "约束翻牌到河牌连续路线的状态、金额、范围、行动权和后继传递。",
+  "stateVector": ["street","board","heroHole","history","actor","decisionState","pot","stacks","committed","rangeSnapshots","denominator","sourceIdentity","coursePolicyIdentity","successorIdentity"],
+  "eventKinds": {
+    "action": {"mayChange":["history","actor","decisionState","pot","stacks","committed","successorIdentity"],"mustPreserve":["street","board","heroHole"]},
+    "response": {"mayChange":["history","actor","decisionState","pot","stacks","committed","rangeSnapshots","successorIdentity"],"mustPreserve":["street","board","heroHole"]},
+    "new_card": {"mayChange":["street","board","actor","decisionState","rangeSnapshots","denominator","successorIdentity"],"mustPreserve":["history","heroHole","pot","stacks","committed"]},
+    "settlement": {"mayChange":["decisionState","pot","stacks","committed","successorIdentity"],"mustPreserve":["street","board","heroHole","history"]}
+  },
+  "formulas": {
+    "potAfter": "pot_before + moneyAddedToPot - uncalledRefund",
+    "stackAfter": "stack_before(actor) - moneyAddedByActor + refund",
+    "historyAppend": "history_after = history_before + one_real_event",
+    "newCard": "board_after = board_before + one_legal_card",
+    "rangeAfter": "w_after(h,a)=w_before(h)*policy(a|h,node)"
+  },
+  "invariants": ["card_conservation","history_monotonic","money_conservation","nonnegative_stacks","legal_actor","declared_denominator","source_identity_stable","successor_exists_or_stop_reason"],
+  "displayContract": {"previousStateRetained":true,"oneDeltaHighlighted":true,"actorAndMoneyVisible":true,"rangeDenominatorVisible":true,"missingSuccessorStops":true,"childCloseRestoresParent":true},
+  "errorReturns": {"ledger":"p5_execute","actor":"p1_context","range":"p3_range","successor":"p6_update","settlement":"p7_close","parentRestore":"current_parent_frame"},
+  "releaseRules": {"ledgerDoesNotProveStrategy":true,"missingSuccessorBlocksContinuousLesson":true,"resultDoesNotInferAction":true,"physicalFilterDistinctFromActionFilter":true,"runtimeRequiredForLearnerClaim":true},
+  "currentEvidence": {"paperContract":true,"paperContinuityAudit":true,"runtimeImplemented":false,"completeA72Successors":false,"learnerTrial":false,"NL50Evidence":false}
+}

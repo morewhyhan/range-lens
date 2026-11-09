@@ -1,0 +1,249 @@
+{
+  "id": "LEARNER_EVIDENCE_RELEASE_GATES_V1",
+  "status": "release_gates_written_not_trialed",
+  "purpose": "把低基础用户的一遍结构、慢速执行、迁移、连续路线和目标级别评估按证据逐级开放，防止页面题量或解析数量制造完成感。",
+  "principle": "每一层只在上一层有当前会话或冻结评估证据后开放；错误返回最近缺失层，不能通过更多平铺题目绕过。",
+  "gates": [
+    {
+      "id": "E0",
+      "name": "paper_route",
+      "learnerExperience": "用户只看到一条从定位到结算的嵌套主线，子层完成后返回父题。",
+      "requiredArtifacts": [
+        "single_path_course_contract",
+        "first_pass_experience_map",
+        "parent_frame_state_machine",
+        "full-nested-learning-route.json",
+        "first-pass-visual-structure-contract.json",
+        "outcome-release-crosswalk.json",
+        "first-pass-mental-model-contract.json",
+        "first-pass-screen-coverage-matrix.json",
+        "low-cognitive-load-contract.json"
+      ],
+      "observableChecks": [
+        "oneQuestionPerScreen",
+        "onePrimaryActionPerScreen",
+        "parentRestoresAfterChild",
+        "unknownCountsAsError"
+      ],
+      "opens": [
+        "paper_walkthrough"
+      ],
+      "blocks": [
+        "runtime_release",
+        "strategy_practice"
+      ],
+      "failureReturn": "修复路线和父帧，不增加题量"
+    },
+    {
+      "id": "E1",
+      "name": "runtime_guided_route",
+      "learnerExperience": "用户在真实页面按地图提示完成一手，系统保留首答、帮助等级、返回点和当前账本。",
+      "requiredArtifacts": [
+        "runtime_route",
+        "fact_or_reference_answer_identity",
+        "ledger_replay"
+      ],
+      "observableChecks": [
+        "allOuterAnchorsVisited",
+        "allSevenInnerStepsVisited",
+        "noHostAnswerBeforeFirstResponse",
+        "stopReasonVisible"
+      ],
+      "opens": [
+        "guided_first_hand"
+      ],
+      "blocks": [
+        "structure_claim",
+        "independent_action_practice"
+      ],
+      "failureReturn": "回到最近一个未完成的父步骤，并重新显示该层必需输入"
+    },
+    {
+      "id": "E2",
+      "name": "first_pass_structure",
+      "learnerExperience": "隐藏步骤标题后，用户仍能说出顺序、定位当前层、指出下一步，并完成一次单变量迁移。",
+      "requiredArtifacts": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer",
+        "full-nested-learning-route.json",
+        "first-pass-visual-structure-contract.json",
+        "outcome-release-crosswalk.json",
+        "low-baseline-trial-revision-contract.json",
+        "first-pass-mental-model-contract.json",
+        "first-pass-screen-coverage-matrix.json",
+        "first-pass-architecture-goal-contract.json",
+        "structure-formation-acceptance-contract.json",
+        "low-cognitive-load-contract.json"
+      ],
+      "observableChecks": [
+        "firstAnswerRecorded",
+        "noAnswerExposure",
+        "delayedRecallAttempt",
+        "transferFieldExactlyOne"
+      ],
+      "opens": [
+        "slow_single_step"
+      ],
+      "blocks": [
+        "structure_mastery",
+        "continuous_route"
+      ],
+      "failureReturn": "回到对应父层；顺序错回路线，层定位错回地图，迁移错回单变量对照"
+    },
+    {
+      "id": "E3",
+      "name": "slow_single_step",
+      "learnerExperience": "在资料充分的节点，用户能慢慢读输入、选合法动作、填金额、说出一个可核对的因果，并看到动作后范围或停止原因。",
+      "requiredArtifacts": [
+        "matched_or_declared_course_policy",
+        "range_before_after_or_stop",
+        "amount_formula",
+        "answer_provenance",
+        "visual_range_bridge",
+        "range-delta-visual-closure.json",
+        "principle-practice-queue.json",
+        "unit-learner-release-matrix.json",
+        "all35-reference-request-matrix.json",
+        "unit-error-feedback-matrix.json",
+        "automatic-question-generation-contract.json",
+        "slow-single-step-execution-contract.json",
+        "reference-to-course-closure-contract.json",
+        "a72-resource-tier-contract.json",
+        "tiered-reference-lesson-bridge.json"
+      ],
+      "observableChecks": [
+        "unseenSingleStep",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "ledgerAfterConserved"
+      ],
+      "opens": [
+        "adjacent_transfer"
+      ],
+      "blocks": [
+        "continuous_route",
+        "target_readiness"
+      ],
+      "failureReturn": "事实错回牌面/手牌层，范围错回范围层，动作错回比较层，金额错回执行层，账本错回金额循环"
+    },
+    {
+      "id": "E4",
+      "name": "single_variable_transfer",
+      "learnerExperience": "只改变位置、牌面、价格、回应或新牌中的一个字段，用户能主动指出需要重新检查的层并完成同类判断。",
+      "requiredArtifacts": [
+        "heldout_item",
+        "changed_field_manifest",
+        "same_parent_schema",
+        "independent_first_attempt",
+        "principle-practice-queue.json",
+        "unit-learner-release-matrix.json",
+        "all35-reference-request-matrix.json",
+        "unit-error-feedback-matrix.json",
+        "automatic-question-generation-contract.json",
+        "low-baseline-trial-revision-contract.json",
+        "slow-single-step-execution-contract.json",
+        "tiered-reference-lesson-bridge.json"
+      ],
+      "observableChecks": [
+        "noOriginalLabelShown",
+        "exactlyOneChangedField",
+        "firstAttemptBeforeExplanation",
+        "errorLayerClassified"
+      ],
+      "opens": [
+        "continuous_three_street"
+      ],
+      "blocks": [
+        "multi_variable_route",
+        "target_readiness"
+      ],
+      "failureReturn": "保留原父帧，只回放被改变的那一层和一个对照，不重新平铺全部专题"
+    },
+    {
+      "id": "E5",
+      "name": "continuous_three_street",
+      "learnerExperience": "用户在未见路线中从翻牌走到河牌，持续保留前序、范围分母、底池、后手、行动权和新牌后的后继。",
+      "requiredArtifacts": [
+        "complete_successor_chain",
+        "street_snapshots",
+        "range_deltas",
+        "range-delta-visual-closure.json",
+        "ledger_conservation",
+        "decision_review",
+        "visual_navigation_contract",
+        "reference-to-course-closure-contract.json",
+        "a72-resource-tier-contract.json",
+        "tiered-reference-lesson-bridge.json"
+      ],
+      "observableChecks": [
+        "allOpenNodesHaveSuccessorOrStop",
+        "noHiddenOpponentAction",
+        "newCardLegality",
+        "settlementIndependentOfResult"
+      ],
+      "opens": [
+        "target_condition_holdout"
+      ],
+      "blocks": [
+        "target_readiness_claim"
+      ],
+      "failureReturn": "回到发生断裂的街次；若是上游范围分母错误，退回范围交接而不是继续看后街答案"
+    },
+    {
+      "id": "E6",
+      "name": "target_condition_holdout",
+      "learnerExperience": "用户在冻结目标配置和未曝光题包中完成连续路线，并由独立复核检查动作、金额、范围和错误定位。",
+      "requiredArtifacts": [
+        "matched_target_reference",
+        "course_simplification_boundary",
+        "frozen_holdout",
+        "independent_review",
+        "real_decision_audit"
+      ],
+      "observableChecks": [
+        "configIdentityMatches",
+        "heldoutNotPreviouslyShown",
+        "policyAndReferenceSeparated",
+        "reviewerCanReconstruct"
+      ],
+      "opens": [
+        "target_readiness_assessment"
+      ],
+      "blocks": [
+        "NL50_claim",
+        "profit_claim"
+      ],
+      "failureReturn": "按独立复核定位到事实、范围、动作、金额或连续路线层；不以总分掩盖局部断点"
+    }
+  ],
+  "lowBaselineExperienceRules": {
+    "promptLanguage": "生活语言优先，技术词只在答后解释",
+    "visibleComplexity": "当前父层的一张桌面、一组牌、一个问题和一个主要动作",
+    "helpRemoval": "一次只撤一种帮助；错误恢复到最近一级",
+    "feedback": "先显示对/错/不知道，再显示当前层原因，再显示范围或账本变化",
+    "navigation": "子层关闭后恢复原牌面、历史、首答和父问题",
+    "storage": "只保留当前会话证据，不要求账号、数据库或长期学习记录"
+  },
+  "notSubstitutes": [
+    "paper_gate_is_not_runtime_evidence",
+    "runtime_completion_is_not_structure_mastery",
+    "structure_recall_is_not_strategy_correctness",
+    "strategy_correctness_is_not_continuous_route",
+    "continuous_route_is_not_NL50_readiness",
+    "short_term_win_rate_is_not_target_benchmark"
+  ],
+  "currentEvidence": {
+    "E0": "paper_contract_only",
+    "E1": "runtime_not_verified",
+    "E2": "learner_trial_missing",
+    "E3": "35_units_not_fully_reference_closed",
+    "E4": "heldout_trial_missing",
+    "E5": "complete_successor_chain_missing",
+    "E6": "matched_target_and_real_audit_missing",
+    "allGatesOpen": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

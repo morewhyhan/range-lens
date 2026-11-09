@@ -1,0 +1,132 @@
+{
+  "id": "FIRST_PASS_EXPERIENCE_MAP_V1",
+  "status": "paper_experience_map_not_trialed",
+  "purpose": "把首遍外层翻前路径、七步翻后父帧和嵌套补帧变成学习者可观察的输入、动作、认知结果和状态交接。",
+  "outerPath": ["L0_table_goal","L1_preflop_context","L2_preflop_grid","L3_preflop_action","L4_range_handoff"],
+  "mainPath": ["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "nestedInsertions": [
+    {"id":"I03","parent":"p2_board","after":"S04","before":"R01","principle":"P03","returnsTo":"R01","identity":"fact"},
+    {"id":"I05","parent":"p3_range","after":"I03","before":"R01","principle":"P05","returnsTo":"R01","identity":"range_or_stop"},
+    {"id":"I07","parent":"p4_compare","after":"S05","before":"S06","principle":"P07","returnsTo":"S06","identity":"course_rule_or_stop"},
+    {"id":"I08","parent":"p4_compare","after":"I07","before":"S06","principle":"P08","returnsTo":"S06","identity":"ledger_or_course_rule"},
+    {"id":"I10","parent":"p6_update","after":"S07","before":"S08","principle":"P10","returnsTo":"S08","identity":"matched_reference_or_stop"},
+    {"id":"I11","parent":"p6_update","after":"S08","before":"S09","principle":"P11","returnsTo":"S09","identity":"successor_or_stop"}
+  ],
+  "principleCoverageSource": "first-pass-principle-coverage.json",
+  "practiceQueueSource": "principle-practice-queue.json",
+  "steps": [
+    {
+      "id": "p1_context",
+      "userSees": ["六人桌", "座位和仍在牌局中的玩家", "行动线", "底池、后手、待补金额"],
+      "userDoes": "指出当前行动者、前序动作和继续所需金额",
+      "requiredOutput": ["actor", "history", "toCallOrZero", "pot", "stack"],
+      "mentalStructure": "先摆清楚人、动作和钱，再谈牌。",
+      "opensNext": "p2_board",
+      "nestedChildFrames": [],
+      "childEntry": "只有行动者或金额不清时打开行动顺序/账本子层",
+      "returnPayload": ["actor", "history", "pot", "stack", "toCallOrZero"],
+      "errorReturn": "p1_context",
+      "notAllowedToInfer": ["actionPolicy", "rangeAdvantage"]
+    },
+    {
+      "id": "p2_board",
+      "userSees": ["实体底牌", "公共牌", "最佳五张候选", "牌力顺序", "合法改善牌"],
+      "userDoes": "拼出当前最佳五张并指出改善牌或没有改善",
+      "requiredOutput": ["bestFive", "handClass", "improvementCards"],
+      "mentalStructure": "先确认自己现在是什么牌，再看未来会怎么变。",
+      "opensNext": "p3_range",
+      "nestedChildFrames": ["I03"],
+      "childEntry": "只有最佳五张或牌力顺序不清时打开牌力子层",
+      "returnPayload": ["bestFive", "handClass", "improvementCards"],
+      "errorReturn": "p2_board",
+      "notAllowedToInfer": ["betOrCheck", "opponentRange"]
+    },
+    {
+      "id": "p3_range",
+      "userSees": ["行动前同坐标范围", "物理移除后的范围", "行动筛选后的范围（若有）", "组合明细和固定分母"],
+      "userDoes": "指出一组组合为什么不可能、变少或留下",
+      "requiredOutput": ["physicalFilterReason", "actionFilterReasonOrUnknown", "rangeOwner", "denominator"],
+      "mentalStructure": "先看双方可能拿什么，不能把一张牌的物理排除当成对手主动弃牌。",
+      "opensNext": "p4_compare",
+      "nestedChildFrames": ["I05"],
+      "childEntry": "只有组合变化不清时打开同坐标前后图",
+      "returnPayload": ["rangeBefore", "rangeAfterOrStopReason", "denominator", "rangeView"],
+      "errorReturn": "p3_range",
+      "notAllowedToInfer": ["completeActionPolicy", "solverOptimality"]
+    },
+    {
+      "id": "p4_compare",
+      "userSees": ["合法动作菜单", "价格和后手", "课程政策或参考身份", "动作后续分支"],
+      "userDoes": "在当前资料身份允许的范围内比较一个动作问题",
+      "requiredOutput": ["action", "price", "purpose", "allowedIdentity"],
+      "mentalStructure": "动作不是从牌型直接跳出来的，要同时看价格、范围和后续。",
+      "opensNext": "p5_execute",
+      "nestedChildFrames": ["I07","I08"],
+      "childEntry": "只打开当前一个比较子题",
+      "returnPayload": ["selectedAction", "actionIdentity", "comparisonReason", "successorOrStopReason"],
+      "errorReturn": "p4_compare",
+      "notAllowedToInfer": ["unprovidedResponse", "unprovidedFrequency"]
+    },
+    {
+      "id": "p5_execute",
+      "userSees": ["选定按钮", "实际新增投入", "更新后底池", "更新后后手", "下一个行动者"],
+      "userDoes": "把动作和金额执行完整，并确认行动权移动",
+      "requiredOutput": ["legalAction", "amount", "potAfter", "stackAfter", "nextActor"],
+      "mentalStructure": "想做的动作只有在金额和行动顺序都落到账本里，才算真的做了。",
+      "opensNext": "p6_update",
+      "nestedChildFrames": [],
+      "childEntry": "只有金额或合法按钮不清时打开账本子层",
+      "returnPayload": ["historyAfter", "ledgerAfter", "nextActor", "successorState"],
+      "errorReturn": "p5_execute",
+      "notAllowedToInfer": ["opponentResponse", "futureBoard"]
+    },
+    {
+      "id": "p6_update",
+      "userSees": ["动作前快照", "对手实际回应或一张新牌", "更新后的范围", "更新后的账本和行动权"],
+      "userDoes": "只更新发生变化的字段，不重置整手牌",
+      "requiredOutput": ["changedField", "rangeUpdate", "ledgerUpdate", "futureOpportunityOrClosed"],
+      "mentalStructure": "新信息来了，保留旧信息，只把变化的那一项重新算一遍。",
+      "opensNext": "p7_close",
+      "nestedChildFrames": ["I10","I11"],
+      "childEntry": "只打开回应筛选或新牌变化中的一个子层",
+      "returnPayload": ["history", "rangeView", "ledger", "nextActor", "successorOrStopReason"],
+      "errorReturn": "p6_update",
+      "notAllowedToInfer": ["previousActionWasCorrectFromOutcome", "missingSuccessor"]
+    },
+    {
+      "id": "p7_close",
+      "userSees": ["最终牌面和最佳五张", "完整账本", "决策前快照", "结果", "错误层和迁移题"],
+      "userDoes": "把结果和决策分开，并指出下一次要回到哪一层",
+      "requiredOutput": ["result", "decisionReview", "errorLayerOrNone", "oneVariableTransferTarget"],
+      "mentalStructure": "输赢只是结果；真正要记住的是当时按什么信息走哪一层。",
+      "opensNext": "one_variable_transfer_or_parent_return",
+      "nestedChildFrames": [],
+      "childEntry": "只打开回看或单变量迁移中的一个子层",
+      "returnPayload": ["routeSummary", "errorLayer", "transferField", "firstAnswerPreserved"],
+      "errorReturn": "nearest_missing_layer",
+      "notAllowedToInfer": ["longTermSkill", "NL50Readiness"]
+    }
+  ],
+  "completionChecks": [
+    {"id":"order_recall","prompt":"隐藏步骤名后，按正确顺序说出七步。","requires":"allStepsVisited"},
+    {"id":"layer_location","prompt":"给一张未见局面，指出现在该进入哪一步。","requires":"noAnswerExposure"},
+    {"id":"error_recovery","prompt":"答错后指出最近缺失层，并回到同一父帧重答。","requires":"sameParentRestored"},
+    {"id":"one_variable_transfer","prompt":"只改一个字段，指出需要重新检查的层并完成一次慢速判断。","requires":"exactlyOneChangedField"}
+  ],
+  "rules": {
+    "oneQuestionPerStep": true,
+    "onePrimaryActionPerStep": true,
+    "childReturnsExactParent": true,
+    "statePayloadMustBePreserved": true,
+    "firstAnswerPreserved": true,
+    "missingEvidenceStopsRatherThanInvents": true,
+    "firstPassDoesNotClaimNL50": true
+  },
+  "currentEvidence": {
+    "paperMap": true,
+    "runtimeImplemented": false,
+    "beginnerTrial": false,
+    "unseenTransfer": false,
+    "NL50Evidence": false
+  }
+}

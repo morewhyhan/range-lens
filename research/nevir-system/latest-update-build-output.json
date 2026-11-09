@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "frames": 14,
+  "calledSnapshotRestored": true,
+  "actualHeroTurnsPair": true,
+  "stopsBeforeBBTurnAction": true,
+  "parentRestored": true,
+  "status": "guided_update_sequence_not_full_strategy_or_learner_result"
+}

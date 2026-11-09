@@ -1,0 +1,329 @@
+{
+  "packageId": "gto-tiny-river-calibration-v1",
+  "version": "1.0.0",
+  "config": {
+    "tableSize": 2,
+    "activePlayers": 2,
+    "stackBb": 50,
+    "potBb": 10,
+    "board": [
+      "2d",
+      "7h",
+      "Ks",
+      "3c",
+      "9h"
+    ],
+    "rake": 0,
+    "actionTree": {
+      "flop": [],
+      "turn": [],
+      "river": [
+        "Check",
+        "Bet(500)"
+      ],
+      "facingBet": [
+        "Fold",
+        "Call"
+      ]
+    },
+    "scope": "作者侧精确河牌校准，不是用户100BB课程配置",
+    "configFingerprint": "54d410d6e6f46d4f948881861409d61e305638a9e472f766e8b1416659ee8a39"
+  },
+  "nodes": {
+    "calibration-river-K7329-root": {
+      "nodeId": "calibration-river-K7329-root",
+      "evidenceKind": "matched",
+      "sourceRefs": [
+        "research/nevir-system/policy-rollout-calibration-metadata.json",
+        "research/nevir-system/policy-rollout-calibration-verification.json",
+        "research/solver-probe/src/bin/policy_rollout_probe.rs"
+      ],
+      "gtoBinding": {
+        "status": "matched",
+        "claim": "fixed_tree_exact_reference",
+        "matched": true,
+        "configFingerprint": "54d410d6e6f46d4f948881861409d61e305638a9e472f766e8b1416659ee8a39",
+        "solver": {
+          "name": "b-inary/postflop-solver",
+          "commit": "9d1509fe5077d019825f833eed04b16d342dfda1",
+          "outputHash": "c7a895584582350853d712d6d7c3a5595217fd2c2ff1af204fbf1381f2eb5236"
+        },
+        "views": [
+          "policy",
+          "reach_before",
+          "reach_after",
+          "delta",
+          "successor"
+        ],
+        "independentValidation": {
+          "method": "independent exhaustive best-response inequalities plus exact terminal settlement",
+          "source": "scripts/build-tiny-matched-package.mjs",
+          "verificationStatus": "tiny_river_exact_policy_and_sampler_calibration_not_full_tree",
+          "allActiveStrategiesBestResponse": true
+        }
+      },
+      "chartEvidence": {
+        "available": [
+          "policy",
+          "reach_before",
+          "reach_after",
+          "delta",
+          "successor"
+        ],
+        "note": "固定河牌校准树；可显示逐组合策略、动作后范围、EV和后继。"
+      },
+      "successor": {
+        "status": "solver_tree",
+        "edges": [
+          {
+            "action": "Check",
+            "nextNodeId": "calibration-river-K7329-after-check"
+          },
+          {
+            "action": "Bet(500)",
+            "nextNodeId": "calibration-river-K7329-after-bet"
+          }
+        ]
+      },
+      "policy": {
+        "actor": "OOP",
+        "actions": [
+          "Check",
+          "Bet(500)"
+        ],
+        "hands": [
+          {
+            "hole": [
+              "Qs",
+              "Qh"
+            ],
+            "mix": {
+              "Check": 0,
+              "Bet(500)": 1
+            },
+            "ev": {
+              "Check": 750,
+              "Bet(500)": 931.612879037857
+            }
+          },
+          {
+            "hole": [
+              "As",
+              "Ah"
+            ],
+            "mix": {
+              "Check": 0,
+              "Bet(500)": 1
+            },
+            "ev": {
+              "Check": 1000,
+              "Bet(500)": 1136.774241924286
+            }
+          }
+        ]
+      },
+      "rangeBefore": {
+        "owners": [
+          [
+            {
+              "hole": [
+                "Qs",
+                "Qh"
+              ],
+              "weight": 1
+            },
+            {
+              "hole": [
+                "As",
+                "Ah"
+              ],
+              "weight": 1
+            }
+          ],
+          [
+            {
+              "hole": [
+                "Qd",
+                "Qc"
+              ],
+              "weight": 1
+            },
+            {
+              "hole": [
+                "As",
+                "Qc"
+              ],
+              "weight": 1
+            }
+          ]
+        ],
+        "denominator": "根节点正权重物理组合"
+      },
+      "rangeAfter": {
+        "byAction": {
+          "Check": {
+            "owners": [
+              [
+                {
+                  "hole": [
+                    "Qs",
+                    "Qh"
+                  ],
+                  "weight": 0
+                },
+                {
+                  "hole": [
+                    "As",
+                    "Ah"
+                  ],
+                  "weight": 0
+                }
+              ],
+              [
+                {
+                  "hole": [
+                    "Qd",
+                    "Qc"
+                  ],
+                  "weight": 1
+                },
+                {
+                  "hole": [
+                    "As",
+                    "Qc"
+                  ],
+                  "weight": 1
+                }
+              ]
+            ],
+            "denominator": "同一物理组合分母；动作后按逐组合策略乘到达权重"
+          },
+          "Bet(500)": {
+            "owners": [
+              [
+                {
+                  "hole": [
+                    "Qs",
+                    "Qh"
+                  ],
+                  "weight": 1
+                },
+                {
+                  "hole": [
+                    "As",
+                    "Ah"
+                  ],
+                  "weight": 1
+                }
+              ],
+              [
+                {
+                  "hole": [
+                    "Qd",
+                    "Qc"
+                  ],
+                  "weight": 1
+                },
+                {
+                  "hole": [
+                    "As",
+                    "Qc"
+                  ],
+                  "weight": 1
+                }
+              ]
+            ],
+            "denominator": "同一物理组合分母；动作后按逐组合策略乘到达权重"
+          }
+        }
+      },
+      "differences": [],
+      "independentChecks": {
+        "rootEV": [
+          {
+            "Check": 750,
+            "Bet(500)": 931.612879037857
+          },
+          {
+            "Check": 1000,
+            "Bet(500)": 1136.774241924286
+          }
+        ],
+        "afterBetEV": [
+          {
+            "Fold": 0,
+            "Call": 0
+          },
+          {
+            "Fold": 0,
+            "Call": -500
+          }
+        ],
+        "afterCheckEV": [
+          {
+            "Check": 250,
+            "Bet(500)": 0
+          },
+          {
+            "Check": 0,
+            "Bet(500)": -500
+          }
+        ],
+        "afterCheckBetEV": [
+          {
+            "Fold": 0,
+            "Call": 1000
+          },
+          {
+            "Fold": 0,
+            "Call": 1500
+          }
+        ],
+        "policyBestResponse": true,
+        "exactTerminalSettlement": true
+      }
+    }
+  },
+  "questions": [
+    {
+      "instanceKey": "calibration-river-K7329-root:oop-qq",
+      "nodeId": "calibration-river-K7329-root",
+      "evidenceKind": "matched",
+      "prompt": "河牌 K♠7♥2♦3♣9♥，你拿 Q♠Q♥，在这个固定参考树中选择动作。",
+      "options": [
+        {
+          "id": "Bet(500)",
+          "label": "下注 5 BB"
+        },
+        {
+          "id": "Check",
+          "label": "过牌"
+        }
+      ],
+      "interaction": "single",
+      "available": true
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionKey": "calibration-river-K7329-root:oop-qq",
+      "accepted": "Bet(500)",
+      "sourceRefs": [
+        "research/nevir-system/policy-rollout-calibration-metadata.json",
+        "research/nevir-system/policy-rollout-calibration-verification.json",
+        "research/solver-probe/src/bin/policy_rollout_probe.rs"
+      ],
+      "precision": {
+        "kind": "exact_reference_policy",
+        "expectedMix": {
+          "Bet(500)": 1,
+          "Check": 0
+        }
+      },
+      "explanation": {
+        "text": "在固定两手范围、固定河牌和固定行动树下，Q♠Q♥的参考策略为100%下注5BB。"
+      },
+      "nextNodeOrStop": "calibration-river-K7329-after-bet"
+    }
+  ]
+}

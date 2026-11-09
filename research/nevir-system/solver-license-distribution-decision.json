@@ -1,0 +1,17 @@
+{
+  "id": "SOLVER_LICENSE_DISTRIBUTION_DECISION_V1",
+  "source": "research/solver-source/LICENSE",
+  "license": "AGPL-3.0-or-later",
+  "decision": "current_user_app_does_not_distribute_solver_binary_or_solver_runtime",
+  "currentRelease": {
+    "electronBundle": "只包含前端、课程数据、事实计算器和作者侧静态校准课包，不包含 postflop-solver 源码、动态库或可执行求解器",
+    "matchedPreview": "只读取已审计的 JSON 结果，不在用户机上调用求解器",
+    "learnerPolicy": "没有匹配输入、逐组合策略、范围变化和后继的节点保持 course_only 或 closed"
+  },
+  "futureDistributionRequirements": [
+    "若分发求解器源码、修改版或与其形成衍生作品，随包提供 AGPL 许可证文本、版权声明和对应源代码获取方式",
+    "将求解器与用户应用的链接、调用和派生数据边界交给发布前许可证审查，不以本文件替代法律意见",
+    "任何外部预计算快照必须保留输入指纹、求解器提交、输出哈希、来源许可和逐组合原始行"
+  ],
+  "status": "distribution_boundary_fixed_solver_runtime_not_in_current_exe"
+}

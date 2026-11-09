@@ -1,0 +1,183 @@
+{
+  "id": "FIRST_PASS_TRIAL_COVERAGE_AUDIT_V1",
+  "status": "paper_trial_coverage_audited_outer_route_mapped_not_observed",
+  "purpose": "把“首遍”拆成可审计的外层L0→L4与内层p1→p7，防止只做翻后案例就误称完成了首遍。",
+  "sources": [
+    "low-baseline-first-pass-trial-packet.json",
+    "cross-age-low-baseline-acceptance.json",
+    "first-lesson-visible-state-machine.json",
+    "handoff-consumption-audit.json",
+    "first-pass-outer-route-trial-prompts.json",
+    "first-pass-outer-route-trial-key.json",
+    "first-pass-outer-route-validation.json"
+  ],
+  "requiredOuterOrder": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+  ],
+  "requiredInnerOrder": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "outerRoute": {
+    "declared": true,
+    "contract": "first-lesson-visible-state-machine.json",
+    "order": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "orderExact": true,
+    "trialOrderBeforeInnerRoute": true,
+    "requiredInputsFollowStateMachine": true,
+    "mappedCaseIds": {
+      "L0": [
+        "OL01"
+      ],
+      "L1": [
+        "OL02"
+      ],
+      "L2": [
+        "OL03"
+      ],
+      "L3": [
+        "OL04"
+      ],
+      "L4": [
+        "OL05"
+      ]
+    },
+    "mappedOuterCaseCount": 5,
+    "missingOuterCaseStates": [],
+    "promptCaseCount": 5,
+    "answerCaseCount": 5,
+    "missingMappedPromptCases": [],
+    "missingMappedKeyCases": [],
+    "mappedCaseRouteMismatches": [],
+    "missingStateDefinitions": [],
+    "minimumPromptContract": {
+      "firstAnswerBeforeHelp": true,
+      "onePrimaryQuestion": true,
+      "oneChangedField": true,
+      "handoffToNextStateVisible": true,
+      "parentSnapshotRestorable": true
+    },
+    "structureReplay": {
+      "order": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "administration": "after_outer_and_inner_guided_route_before_holdout",
+      "hideStateLabels": true,
+      "checks": [
+        "outer_inner_nesting",
+        "handoff_consumption",
+        "error_return",
+        "parent_restore"
+      ],
+      "notStrategyAccuracy": true
+    },
+    "structureReplayOrderExact": true,
+    "structureReplayChecks": [
+      "outer_inner_nesting",
+      "handoff_consumption",
+      "error_return",
+      "parent_restore"
+    ],
+    "status": "outer_cases_mapped_not_administered"
+  },
+  "innerRoute": {
+    "declared": true,
+    "coverage": {
+      "p1": [
+        "C01"
+      ],
+      "p2": [
+        "C08",
+        "C10"
+      ],
+      "p3": [
+        "R01"
+      ],
+      "p4": [
+        "C01",
+        "C03",
+        "C05"
+      ],
+      "p5": [
+        "C03",
+        "C05"
+      ],
+      "p6": [
+        "C08",
+        "C10"
+      ],
+      "p7": [
+        "C12"
+      ]
+    },
+    "missingInnerCoverage": [],
+    "handoffCards": 7,
+    "handoffEdges": 7,
+    "handoffOrphanFields": 0
+  },
+  "firstPassAcceptance": {
+    "outerTaskRequiredByContract": true,
+    "outerTaskHasCases": true,
+    "allFirstPassTasksDeclared": true,
+    "fullGuidedOrderExact": true,
+    "outerPrefixBeforeInner": true,
+    "crossAgeTrialObserved": false,
+    "packetParticipantObserved": false
+  },
+  "semanticValidation": {
+    "status": "outer_trial_packet_semantically_valid_paper_only",
+    "routeOrderExact": true,
+    "stateOutputShapesAligned": true,
+    "noStrategyLeakage": true,
+    "handoffCardsComplete": true,
+    "chartCoordinateAndActionMatch": true,
+    "l4DoesNotInventExactRange": true,
+    "participantObserved": false
+  },
+  "releaseRules": {
+    "missingOuterCaseBlocksCompleteFirstPassClaim": true,
+    "missingOuterObservationBlocksRuntimeRelease": true,
+    "semanticMismatchBlocksTrial": true,
+    "innerHandoffOrphansBlockTrial": true,
+    "paperCoverageDoesNotProveLearnerMastery": true,
+    "paperCoverageDoesNotProveNL50": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "outerRouteCasesMapped": true,
+    "outerRouteObserved": false,
+    "innerRouteDeclared": true,
+    "innerRouteObserved": false,
+    "fullGuidedOrderReady": true,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

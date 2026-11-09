@@ -1,0 +1,28 @@
+{
+  "status": "four_final_static_author_figures_actually_opened_not_learner_readability_validation",
+  "reviewedOn": "2026-10-21",
+  "packetSHA256": "71b894a456603e77477bbe9e35f1bab1298eb69eac5f415c410611b8557a5c6f",
+  "rendererSHA256": "a4e71d810a84914c02979148cd49ee3ef78fdd8835a234a16772c85dc7e6b699",
+  "dimensions": [1540, 1180],
+  "figures": [
+    {"file": "figures/qqq-range-sequence-1.png", "sha256": "834780f878d5417b10f28766b9ca32b5f9d850a300554ff24a6622222ed66b42", "visuallyOpened": true},
+    {"file": "figures/qqq-range-sequence-2.png", "sha256": "b052e7e0bba740a8f704a32c563736f9b1ff12723ff4bdca0ea218b1d9f2c7e8", "visuallyOpened": true},
+    {"file": "figures/qqq-range-sequence-3.png", "sha256": "bcded704d0aed7cb2bc515c925c268adb1ce0a9e5d40498b32d220afc6835111", "visuallyOpened": true},
+    {"file": "figures/qqq-range-sequence-4.png", "sha256": "e70378d2d05c25223b077498c3beafb79b18773ea6c98fa82fc4ccea8ddee8b2", "visuallyOpened": true}
+  ],
+  "observations": [
+    "Same 169-cell coordinates, board and own hand across all four figures; no visible clipping or overlap.",
+    "First frame explicitly labels literal input before own-card removal, not an actual joint posterior.",
+    "Known-card removal crosses only the exact held As or Kd; the other card in that candidate is not marked physically dead.",
+    "A legal hand leaving the given call branch is not crossed out as a physically impossible holding.",
+    "Third matrix remains identical to the second; pot and stacks update while opponent response is pending.",
+    "Positive masses below 0.1 show <0.1, preserving the distinction from exact zero.",
+    "Root scale, single-player weight meaning and unconverged source limitation are visibly stated."
+  ],
+  "limitations": [
+    "Static author diagrams, not app screenshots or implemented navigation.",
+    "Small matrix labels need actual adult novice and display-scale testing.",
+    "No strategy-quality, real opponent behavior, transfer learning or NL50 certification."
+  ],
+  "learnerTrials": 0
+}

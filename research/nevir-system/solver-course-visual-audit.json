@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "status": "paper_visual_compiler_contract_not_implemented",
+  "layers": 8,
+  "userVisibleSequence": [
+    "context",
+    "physicalFacts",
+    "rangeBefore",
+    "compareChoices",
+    "executeLedger",
+    "rangeAfter",
+    "successorOrStop",
+    "restatementAndTransfer"
+  ],
+  "formulas": 6,
+  "releaseGates": 6,
+  "handoffEdges": 9,
+  "fieldLineageFields": 47,
+  "rangeChartRules": {
+    "sameCoordinate": true,
+    "sameDenominator": true,
+    "unknownDistinctFromZero": true
+  },
+  "fieldReaderAudit": true,
+  "fieldLineageAudit": true,
+  "runtimeImplemented": false,
+  "learnerTrial": false
+}

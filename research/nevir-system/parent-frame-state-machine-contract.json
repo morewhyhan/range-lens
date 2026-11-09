@@ -1,0 +1,53 @@
+{
+  "id": "PARENT_FRAME_STATE_MACHINE_CONTRACT_V1",
+  "status": "declarative_state_machine_not_runtime_tested",
+  "parentFrameRequiredFields": [
+    "routeNode","parentFrameId","returnTo","gameFrame","publicCards","heroCards",
+    "visibleInformation","history","actor","actionState","pot","stacks","streetPaid",
+    "rangeOwner","rangeView","sourceIdentity","coursePolicyIdentity","question",
+    "answerPrecision","assistanceLevel","firstAnswer","retryAnswer"
+  ],
+  "events": [
+    {"id":"open_child","preserves":["parentSnapshot"],"changes":["visibleContent","currentQuestion","temporaryChoice"]},
+    {"id":"close_child","restores":["cards","money","history","range","source","policy"],"writesParentAnswer":false},
+    {"id":"show_help","preserves":["firstAnswer","parentFrame"],"changes":["assistanceLevel"]},
+    {"id":"answer","preserves":["allInputs","version"],"records":["firstAnswer"]},
+    {"id":"retry","preserves":["firstAnswer"],"records":["retryAnswer"]},
+    {"id":"next","requires":["answer","legalAction","ledger","rangeUpdate","successor"],"preserves":["routeIdentity"]},
+    {"id":"backtrack","preserves":["originalParentFrame","errorLayer"],"changes":["currentLayer"]},
+    {"id":"reset_session","preserves":["staticCoursePackage"],"clears":["sessionState"]}
+  ],
+  "immutableWhileChildOpen": [
+    "parentPublicCards","parentHeroCards","parentHistory","parentPot","parentStacks",
+    "parentStreetPaid","parentRangeOwner","parentRangeView","parentSourceIdentity",
+    "parentCoursePolicy","parentFirstAnswer","parentErrorLayer"
+  ],
+  "nextGates": [
+    "questionAnswered","answerPrecisionAllowed","legalAction","ledgerConserved",
+    "rangeViewUpdated","successorExists","newCardLegal","sameParentRoute"
+  ],
+  "branchIsolationTests": [
+    "comparisonCardDoesNotRewriteHeroCards",
+    "rangeOwnerReturnsToParent",
+    "priceHelpPreservesFirstAnswer",
+    "turnReturnPreservesFlopHistoryAndMoney",
+    "foldTerminalDoesNotLeakToActionBranch",
+    "missingSuccessorDoesNotInventNewCard",
+    "sessionCloseDoesNotWriteLongTermState"
+  ],
+  "hardRules": {
+    "childCloseDoesNotCompleteParent": true,
+    "helpCannotChangeAnswerOrPolicy": true,
+    "unknownCountsAsWrong": true,
+    "missingSuccessorBlocksNext": true,
+    "noCrossBranchStateLeak": true,
+    "noLearnerDatabase": true
+  },
+  "currentStatus": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "branchTestsExecuted": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

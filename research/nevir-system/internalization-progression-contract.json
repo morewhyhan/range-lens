@@ -1,0 +1,35 @@
+{
+  "status": "declarative_internalization_progression_not_trialed",
+  "source": "62_结构内化与练习递进合同.md",
+  "rounds": [
+    {"id":"R1","label":"demonstration_map","help":"full","evidence":"route_seen"},
+    {"id":"R2","label":"guided_local","help":"one_conclusion_hidden","evidence":"local_operation"},
+    {"id":"R3","label":"untitled_local","help":"necessary_facts_only","evidence":"unseen_same_mechanism"},
+    {"id":"R4","label":"adjacent_interleaving","help":"no_target_label","evidence":"one_field_change"},
+    {"id":"R5","label":"delayed_recall","help":"necessary_input_only","evidence":"later_relation_recall"},
+    {"id":"R6","label":"continuous_unseen","help":"facts_tools_only","evidence":"continuous_route"}
+  ],
+  "helpFadeOrder": [
+    "hide_answer_color",
+    "hide_step_title",
+    "hide_one_known_conclusion",
+    "learner_selects_needed_view",
+    "hide_target_mechanism"
+  ],
+  "variantKinds": ["surface","adjacent","mechanism","strategy"],
+  "queuePattern": ["current_mechanism","action_unchanged_contrast","action_changed_contrast","continuous_route"],
+  "sessionOnlyState": ["parentFrame","firstAnswer","helpUsed","retryAnswer"],
+  "noLongTermDatabase": true,
+  "evidenceSeparation": {
+    "firstAnswerSeparateFromRetry": true,
+    "helpedCorrectIsNotIndependent": true,
+    "speedIsNotFirstGate": true,
+    "unseenInstanceRequiredForNextRound": true
+  },
+  "currentStatus": {
+    "paperSequence": true,
+    "r1ToR6LearnerEvidence": false,
+    "calibratedSpacing": false,
+    "nl50Evidence": false
+  }
+}

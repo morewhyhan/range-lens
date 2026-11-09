@@ -1,0 +1,795 @@
+{
+  "status": "finite_value_and_trap_teaching_tree_not_Nash_or_NL50_policy",
+  "context": {
+    "players": 6,
+    "initialBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "board": [
+      "Ks",
+      "9h",
+      "2d",
+      "3c",
+      "7h"
+    ],
+    "hero": [
+      "9c",
+      "9d"
+    ],
+    "history": [
+      "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "Flop Ks9h2d: SB bets7; BTN calls7",
+      "Turn3c: SB checks; BTN checks",
+      "River7h: SB to act"
+    ],
+    "start": {
+      "pot": 35,
+      "heroStack": 83,
+      "villainStack": 83,
+      "heroPut": 0,
+      "villainPut": 0,
+      "minRaise": 1
+    },
+    "rake": "none",
+    "priorScope": "Given current river masses; not recovered from a complete preflop/flop/turn policy."
+  },
+  "holdings": [
+    {
+      "id": "KK",
+      "hole": [
+        "Kc",
+        "Kd"
+      ],
+      "heroShare": 0
+    },
+    {
+      "id": "77",
+      "hole": [
+        "7c",
+        "7d"
+      ],
+      "heroShare": 1
+    },
+    {
+      "id": "AK",
+      "hole": [
+        "Ac",
+        "Kh"
+      ],
+      "heroShare": 1
+    },
+    {
+      "id": "QQ",
+      "hole": [
+        "Qc",
+        "Qd"
+      ],
+      "heroShare": 1
+    },
+    {
+      "id": "QT",
+      "hole": [
+        "Qh",
+        "Tc"
+      ],
+      "heroShare": 1
+    }
+  ],
+  "profiles": [
+    {
+      "id": "passive",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 0,
+      "airBet": 0,
+      "fold77ToHeroJam": false,
+      "rootGolden": [
+        39.8,
+        45.925
+      ],
+      "best": "bet17.5",
+      "rootEVBB": 45.925,
+      "nodes": [
+        {
+          "id": "after_xraise_villain_jam",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 163,
+            "heroStack": 38,
+            "villainStack": 0,
+            "heroPut": 45,
+            "villainPut": 83,
+            "minRaise": 38
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -45,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call38",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 96
+            }
+          ],
+          "best": "call38",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_check_villain_bet17.5",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 52.5,
+            "heroStack": 83,
+            "villainStack": 65.5,
+            "heroPut": 0,
+            "villainPut": 17.5,
+            "minRaise": 17.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": 0,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call17.5",
+              "evFromRiverRootBB": 29.166666666666668,
+              "relativeToCurrentFoldBB": 29.166666666666668
+            },
+            {
+              "action": "raise45",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 51
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 51
+            }
+          ],
+          "best": "raise45",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_lead_villain_raise45",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 97.5,
+            "heroStack": 65.5,
+            "villainStack": 38,
+            "heroPut": 17.5,
+            "villainPut": 45,
+            "minRaise": 27.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -17.5,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call27.5",
+              "evFromRiverRootBB": 38.333333333333336,
+              "relativeToCurrentFoldBB": 55.833333333333336
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 68.5
+            }
+          ],
+          "best": "jam83",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "river_start",
+          "observedMass": 10,
+          "posterior": {
+            "77": 0.2,
+            "KK": 0.1,
+            "AK": 0.3,
+            "QQ": 0.1,
+            "QT": 0.3
+          },
+          "state": {
+            "pot": 35,
+            "heroStack": 83,
+            "villainStack": 83,
+            "heroPut": 0,
+            "villainPut": 0,
+            "minRaise": 1
+          },
+          "actions": [
+            {
+              "action": "check",
+              "evFromRiverRootBB": 39.8,
+              "relativeToCurrentFoldBB": null
+            },
+            {
+              "action": "bet17.5",
+              "evFromRiverRootBB": 45.925,
+              "relativeToCurrentFoldBB": null
+            }
+          ],
+          "best": "bet17.5",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        }
+      ]
+    },
+    {
+      "id": "induces",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": false,
+      "rootGolden": [
+        58.55,
+        45.925
+      ],
+      "best": "check",
+      "rootEVBB": 58.55,
+      "nodes": [
+        {
+          "id": "after_xraise_villain_jam",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 163,
+            "heroStack": 38,
+            "villainStack": 0,
+            "heroPut": 45,
+            "villainPut": 83,
+            "minRaise": 38
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -45,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call38",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 96
+            }
+          ],
+          "best": "call38",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_check_villain_bet17.5",
+          "observedMass": 9,
+          "posterior": {
+            "77": 0.2222222222222222,
+            "KK": 0.1111111111111111,
+            "AK": 0.3333333333333333,
+            "QQ": 0,
+            "QT": 0.3333333333333333
+          },
+          "state": {
+            "pot": 52.5,
+            "heroStack": 83,
+            "villainStack": 65.5,
+            "heroPut": 0,
+            "villainPut": 17.5,
+            "minRaise": 17.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": 0,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call17.5",
+              "evFromRiverRootBB": 44.72222222222222,
+              "relativeToCurrentFoldBB": 44.72222222222222
+            },
+            {
+              "action": "raise45",
+              "evFromRiverRootBB": 61.166666666666664,
+              "relativeToCurrentFoldBB": 61.166666666666664
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 52,
+              "relativeToCurrentFoldBB": 52
+            }
+          ],
+          "best": "raise45",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_lead_villain_raise45",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 97.5,
+            "heroStack": 65.5,
+            "villainStack": 38,
+            "heroPut": 17.5,
+            "villainPut": 45,
+            "minRaise": 27.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -17.5,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call27.5",
+              "evFromRiverRootBB": 38.333333333333336,
+              "relativeToCurrentFoldBB": 55.833333333333336
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 68.5
+            }
+          ],
+          "best": "jam83",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "river_start",
+          "observedMass": 10,
+          "posterior": {
+            "77": 0.2,
+            "KK": 0.1,
+            "AK": 0.3,
+            "QQ": 0.1,
+            "QT": 0.3
+          },
+          "state": {
+            "pot": 35,
+            "heroStack": 83,
+            "villainStack": 83,
+            "heroPut": 0,
+            "villainPut": 0,
+            "minRaise": 1
+          },
+          "actions": [
+            {
+              "action": "check",
+              "evFromRiverRootBB": 58.55,
+              "relativeToCurrentFoldBB": null
+            },
+            {
+              "action": "bet17.5",
+              "evFromRiverRootBB": 45.925,
+              "relativeToCurrentFoldBB": null
+            }
+          ],
+          "best": "check",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        }
+      ]
+    },
+    {
+      "id": "worse_folds_to_jam",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": true,
+      "rootGolden": [
+        58.55,
+        42.125
+      ],
+      "best": "check",
+      "rootEVBB": 58.55,
+      "nodes": [
+        {
+          "id": "after_xraise_villain_jam",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 163,
+            "heroStack": 38,
+            "villainStack": 0,
+            "heroPut": 45,
+            "villainPut": 83,
+            "minRaise": 38
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -45,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call38",
+              "evFromRiverRootBB": 51,
+              "relativeToCurrentFoldBB": 96
+            }
+          ],
+          "best": "call38",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_check_villain_bet17.5",
+          "observedMass": 9,
+          "posterior": {
+            "77": 0.2222222222222222,
+            "KK": 0.1111111111111111,
+            "AK": 0.3333333333333333,
+            "QQ": 0,
+            "QT": 0.3333333333333333
+          },
+          "state": {
+            "pot": 52.5,
+            "heroStack": 83,
+            "villainStack": 65.5,
+            "heroPut": 0,
+            "villainPut": 17.5,
+            "minRaise": 17.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": 0,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call17.5",
+              "evFromRiverRootBB": 44.72222222222222,
+              "relativeToCurrentFoldBB": 44.72222222222222
+            },
+            {
+              "action": "raise45",
+              "evFromRiverRootBB": 61.166666666666664,
+              "relativeToCurrentFoldBB": 61.166666666666664
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 37.44444444444444,
+              "relativeToCurrentFoldBB": 37.44444444444444
+            }
+          ],
+          "best": "raise45",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_lead_villain_raise45",
+          "observedMass": 3,
+          "posterior": {
+            "77": 0.6666666666666666,
+            "KK": 0.3333333333333333,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 97.5,
+            "heroStack": 65.5,
+            "villainStack": 38,
+            "heroPut": 17.5,
+            "villainPut": 45,
+            "minRaise": 27.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -17.5,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call27.5",
+              "evFromRiverRootBB": 38.333333333333336,
+              "relativeToCurrentFoldBB": 55.833333333333336
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": 25.666666666666668,
+              "relativeToCurrentFoldBB": 43.16666666666667
+            }
+          ],
+          "best": "call27.5",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "river_start",
+          "observedMass": 10,
+          "posterior": {
+            "77": 0.2,
+            "KK": 0.1,
+            "AK": 0.3,
+            "QQ": 0.1,
+            "QT": 0.3
+          },
+          "state": {
+            "pot": 35,
+            "heroStack": 83,
+            "villainStack": 83,
+            "heroPut": 0,
+            "villainPut": 0,
+            "minRaise": 1
+          },
+          "actions": [
+            {
+              "action": "check",
+              "evFromRiverRootBB": 58.55,
+              "relativeToCurrentFoldBB": null
+            },
+            {
+              "action": "bet17.5",
+              "evFromRiverRootBB": 42.125,
+              "relativeToCurrentFoldBB": null
+            }
+          ],
+          "best": "check",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        }
+      ]
+    },
+    {
+      "id": "strong_raise",
+      "weights": [
+        8,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": false,
+      "rootGolden": [
+        18.529411764705884,
+        7.720588235294118
+      ],
+      "best": "check",
+      "rootEVBB": 18.529411764705884,
+      "nodes": [
+        {
+          "id": "after_xraise_villain_jam",
+          "observedMass": 10,
+          "posterior": {
+            "77": 0.2,
+            "KK": 0.8,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 163,
+            "heroStack": 38,
+            "villainStack": 0,
+            "heroPut": 45,
+            "villainPut": 83,
+            "minRaise": 38
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -45,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call38",
+              "evFromRiverRootBB": -42.8,
+              "relativeToCurrentFoldBB": 2.200000000000003
+            }
+          ],
+          "best": "call38",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_check_villain_bet17.5",
+          "observedMass": 16,
+          "posterior": {
+            "77": 0.125,
+            "KK": 0.5,
+            "AK": 0.1875,
+            "QQ": 0,
+            "QT": 0.1875
+          },
+          "state": {
+            "pot": 52.5,
+            "heroStack": 83,
+            "villainStack": 65.5,
+            "heroPut": 0,
+            "villainPut": 17.5,
+            "minRaise": 17.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": 0,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call17.5",
+              "evFromRiverRootBB": 17.5,
+              "relativeToCurrentFoldBB": 17.5
+            },
+            {
+              "action": "raise45",
+              "evFromRiverRootBB": -1.90625,
+              "relativeToCurrentFoldBB": -1.90625
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": -7.0625,
+              "relativeToCurrentFoldBB": -7.0625
+            }
+          ],
+          "best": "call17.5",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "after_lead_villain_raise45",
+          "observedMass": 10,
+          "posterior": {
+            "77": 0.2,
+            "KK": 0.8,
+            "AK": 0,
+            "QQ": 0,
+            "QT": 0
+          },
+          "state": {
+            "pot": 97.5,
+            "heroStack": 65.5,
+            "villainStack": 38,
+            "heroPut": 17.5,
+            "villainPut": 45,
+            "minRaise": 27.5
+          },
+          "actions": [
+            {
+              "action": "fold",
+              "evFromRiverRootBB": -17.5,
+              "relativeToCurrentFoldBB": 0
+            },
+            {
+              "action": "call27.5",
+              "evFromRiverRootBB": -20,
+              "relativeToCurrentFoldBB": -2.5
+            },
+            {
+              "action": "jam83",
+              "evFromRiverRootBB": -42.8,
+              "relativeToCurrentFoldBB": -25.299999999999997
+            }
+          ],
+          "best": "fold",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        },
+        {
+          "id": "river_start",
+          "observedMass": 17,
+          "posterior": {
+            "77": 0.11764705882352941,
+            "KK": 0.47058823529411764,
+            "AK": 0.17647058823529413,
+            "QQ": 0.058823529411764705,
+            "QT": 0.17647058823529413
+          },
+          "state": {
+            "pot": 35,
+            "heroStack": 83,
+            "villainStack": 83,
+            "heroPut": 0,
+            "villainPut": 0,
+            "minRaise": 1
+          },
+          "actions": [
+            {
+              "action": "check",
+              "evFromRiverRootBB": 18.529411764705884,
+              "relativeToCurrentFoldBB": null
+            },
+            {
+              "action": "bet17.5",
+              "evFromRiverRootBB": 7.720588235294118,
+              "relativeToCurrentFoldBB": null
+            }
+          ],
+          "best": "check",
+          "scope": "One common action for this public history; no separate optimum per hidden holding. Relative-fold figures appear only when fold is in the current menu."
+        }
+      ]
+    }
+  ],
+  "opponentPolicy": {
+    "afterHeroCheck": "KK/77 bet17.5; AK uses weakBet; QT uses airBet; QQ checks",
+    "afterHeroBet17_5": "KK/77 raise to45; AK calls; QQ calls half and folds half; QT folds",
+    "afterHeroCheckRaise45": "KK/77 jam83; AK calls; QQ/QT fold",
+    "afterHeroJam83": "KK calls;77 calls unless profile explicitly folds77ToHeroJam; other hands fold",
+    "information": "Only own holding and public history; no access to hero hidden cards"
+  },
+  "treeScope": {
+    "heroRoot": [
+      "check",
+      "bet17.5"
+    ],
+    "afterVillainBet": [
+      "fold",
+      "call17.5",
+      "raise45",
+      "jam83"
+    ],
+    "afterVillainRaise": [
+      "fold",
+      "call27.5",
+      "jam83"
+    ],
+    "afterVillainJam": [
+      "fold",
+      "call38"
+    ],
+    "omitted": "All other legal sizes and opponent responses are omitted. Optimality is only against the declared fixed policies in this menu, not full-game equilibrium."
+  },
+  "terminalChecks": 270,
+  "sourceBoundary": {
+    "localNote": "Nevir2.7§3.5 supplies conditional slow-play direction, none of these hands/masses/frequencies/EVs",
+    "externalMechanismSources": [
+      "https://blog.gtowizard.com/slow-playing/",
+      "https://blog.gtowizard.com/river-refinements-when-your-opponent-wont-check-raise/"
+    ],
+    "externalConfiguration": "Second article uses40BB MTT for its worked experiment; no frequencies transferred to this100BB cash model."
+  },
+  "release": {
+    "authorMechanism": true,
+    "completeTargetPolicy": false,
+    "learnerTrial": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "ok": true,
+  "status": "exact_closed_allin_comparison_map_not_full_postflop_policy",
+  "prerequisites": [
+    "heads_up_no_other_live_players",
+    "opponent_allin",
+    "call_closes_all_betting",
+    "known_conditional_equity_including_ties",
+    "no_rake_in_this_formula",
+    "exclude_uncalled_excess_from_contested_pot"
+  ],
+  "formula": "callEV = equityShare * (contestedCurrentPot + toCall) - toCall; foldEV =0",
+  "riverSourceChecks": [
+    {
+      "sourceProfile": "passive",
+      "currentPot": 163,
+      "toCall": 38,
+      "equityShare": 0.6666666666666666,
+      "price": 0.1890547263681592,
+      "currentCallEV": 96,
+      "referenceEV": 96
+    },
+    {
+      "sourceProfile": "induces",
+      "currentPot": 163,
+      "toCall": 38,
+      "equityShare": 0.6666666666666666,
+      "price": 0.1890547263681592,
+      "currentCallEV": 96,
+      "referenceEV": 96
+    },
+    {
+      "sourceProfile": "worse_folds_to_jam",
+      "currentPot": 163,
+      "toCall": 38,
+      "equityShare": 0.6666666666666666,
+      "price": 0.1890547263681592,
+      "currentCallEV": 96,
+      "referenceEV": 96
+    },
+    {
+      "sourceProfile": "strong_raise",
+      "currentPot": 163,
+      "toCall": 38,
+      "equityShare": 0.2,
+      "price": 0.1890547263681592,
+      "currentCallEV": 2.200000000000003,
+      "referenceEV": 2.200000000000003
+    }
+  ],
+  "uniqueRiverEquityCases": 2,
+  "turnSourceCheck": {
+    "currentPot": 141,
+    "toCall": 60,
+    "equityShare": 0.3,
+    "price": 0.29850746268656714,
+    "currentCallEV": 0.29999999999999716,
+    "referenceEV": 0.29999999999999716
+  },
+  "rejectedNonAllin": {
+    "currentRawEquity": 0.2792207792207792,
+    "immediatePrice": 0.25,
+    "actualCallEV": -0.15909090909091006,
+    "reason": "Future betting remains; the allin map is not a complete action reference."
+  },
+  "displayCase": {
+    "sourceProfile": "passive",
+    "currentPot": 163,
+    "toCall": 38,
+    "equityShare": 0.6666666666666666,
+    "price": 0.1890547263681592,
+    "currentCallEV": 96,
+    "referenceEV": 96,
+    "hero": [
+      "9c",
+      "9d"
+    ],
+    "board": [
+      "Ks",
+      "9h",
+      "2d",
+      "3c",
+      "7h"
+    ],
+    "winningCandidate": "77",
+    "losingCandidate": "KK",
+    "givenWeights": {
+      "77": 2,
+      "KK": 1
+    }
+  },
+  "sourceHashes": {
+    "value-trap-tree-evidence.json": "a95b04ff7f2be61fbcacac473882162a3a25722762467d1508fbd21afabb07c2",
+    "defense-tree-evidence.json": "db355b5749822b2acdb71cfdbc742ef0b0fbe8c6a2ba1c7105ed0ab61a792df6"
+  },
+  "completePostflopCoverage": false,
+  "realLearners": 0,
+  "NL50Verified": false
+}

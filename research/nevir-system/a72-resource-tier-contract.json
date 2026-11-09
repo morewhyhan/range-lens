@@ -1,0 +1,39 @@
+{
+  "id": "A72_RESOURCE_TIER_CONTRACT_V1",
+  "status": "paper_resource_tiers_defined_reference_missing",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "tiers": [
+    {"id":"T0","identity":"input_fact","canGrade":["board_fact","physical_conflict","ledger_legality"],"blocks":["exact_action","continuous_route"]},
+    {"id":"T1","identity":"exact_single_node_reference_slice","canGrade":["current_parent_action","action_range_delta"],"blocks":["unresolved_successor","continuous_three_street"]},
+    {"id":"T2","identity":"exact_parent_subtree_reference_slice","canGrade":["current_parent_action","specified_successor","single_variable_transfer"],"blocks":["outside_boundary_continuous_route"]},
+    {"id":"T3","identity":"complete_target_tree_reference","canGrade":["single_step","single_variable_transfer","continuous_three_street","frozen_target_holdout"],"blocks":["NL50_profit_claim"]}
+  ],
+  "invariantInputFields":["candidateId","inputFingerprint","engineRevision","actionAdapterRevision","rangeSnapshotHash","boardAndStreet","historyAndActor","potAndStacks","rakeAndBunching","actualActionIdsAndAmounts"],
+  "allowedSliceFields":["solveBoundary","resourceChunking","sliceId"],
+  "requiredSliceFields":["sliceId","parentSnapshotHash","solveBoundary","inputFingerprint","actualActionIdsAndAmounts","perHandActionFrequency","perActionEV","reachWeight","normalizationDenominator","rangeBefore","rangeAfterByAction","convergenceMetric","stoppingReason","successorIds","resourceUsage","artifactHash","releaseIdentity"],
+  "mergeRules": {
+    "sameInputFingerprint": true,
+    "sameActionIdsAndAmounts": true,
+    "sameParentSnapshotHash": true,
+    "sameRangeDenominator": true,
+    "sameBoardSuitIdentity": true,
+    "boundaryStopRequired": true,
+    "rawSlicesPreserved": true,
+    "failedBoundaryCannotMerge": true
+  },
+  "courseRelease": {
+    "T0":"fact_or_demonstration_only",
+    "T1":"current_parent_strategy_only",
+    "T2":"specified_successor_only",
+    "T3":"continuous_route_candidate",
+    "allRequireC0C9": true
+  },
+  "currentEvidence": {
+    "T0InputPrepared": true,
+    "T1ReferenceSlice": false,
+    "T2SuccessorSlice": false,
+    "T3CompleteA72": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

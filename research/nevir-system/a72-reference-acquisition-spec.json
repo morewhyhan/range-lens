@@ -1,0 +1,182 @@
+{
+  "id": "A72_REFERENCE_ACQUISITION_SPEC_V1",
+  "status": "request_and_acceptance_spec_C0_source_build_verified_C1_snapshot_verified_reference_missing",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "sourceInputs": {
+    "requestFile": "reference-request-btn-bb-a72.json",
+    "sourceRangeFile": "src/data/ranges.json",
+    "bbMapping": "src/preflop.js BTN2.5→普通中",
+    "bbMappingSHA256": "d324c140deb0aa75c28edc4c61bd558ef5ee9d9b78cbe37a6b9ce906f75fc973",
+    "playersAtDeal": 6,
+    "postflopPlayers": 2,
+    "effectiveStackBB": 100,
+    "oopSeat": "BB",
+    "ipSeat": "BTN",
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "firstActor": "BB",
+    "startingPotBB": 5.5,
+    "eachStackBB": 97.5,
+    "rake": 0,
+    "bunching": false,
+    "preflopRangesAreLiteralSimplifiedWeights": true
+  },
+  "requestedActionTree": {
+    "flopBets": [
+      "33%",
+      "all_in"
+    ],
+    "turnBets": [
+      "75%",
+      "all_in"
+    ],
+    "riverBets": [
+      "75%",
+      "all_in"
+    ],
+    "raises": [
+      "2.5x",
+      "all_in"
+    ],
+    "bothPlayersCanLead": true,
+    "automaticActionMerge": false,
+    "actualAmountsMustBeReadFromBuiltTree": true
+  },
+  "gates": [
+    {
+      "id": "C0",
+      "name": "identity_and_adapter",
+      "mustReturn": [
+        "builtEngineRevision",
+        "testedActionAdapter",
+        "actualActionIdsAndAmounts",
+        "inputHash"
+      ],
+      "acceptance": [
+        "sourceHashMatches",
+        "engineRevisionPinned",
+        "noActionMerge",
+        "amountRoundingRecorded"
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "independent_physical_snapshot",
+      "mustReturn": [
+        "orderedEntityHands",
+        "classWeights",
+        "knownCardFilter",
+        "distinctPrivateCardFilter",
+        "jointPrior",
+        "coordinateIdentity"
+      ],
+      "knownCandidateFacts": {
+        "compatiblePairs": 164251,
+        "unnormalizedMass": 124335.25
+      },
+      "acceptance": [
+        "independentRecomputeMatches",
+        "duplicateCardsZero",
+        "physicalFilterSeparatedFromActionFilter"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "flop_reference_policy",
+      "mustReturn": [
+        "perHandActionFrequency",
+        "perActionEV",
+        "bothPlayerReachWeights",
+        "convergenceMetric",
+        "stoppingReason",
+        "successorIndex",
+        "zeroReachNodes"
+      ],
+      "acceptance": [
+        "rawValuesPreserved",
+        "actualLegalAmountsPresent",
+        "supportedRowsSeparated",
+        "convergenceDefinitionExplicit"
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "action_conditioned_range_update",
+      "mustReturn": [
+        "rangeBefore",
+        "rangeAfterByAction",
+        "normalizationDenominator",
+        "physicalFilter",
+        "actionFilter",
+        "zeroSupportHands",
+        "parentSnapshot"
+      ],
+      "acceptance": [
+        "fixedDenominator",
+        "perHandFrequencyUsed",
+        "courseAndReferenceViewsSeparate"
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "turn_successor_closure",
+      "mustReturn": [
+        "legalTurnCards",
+        "conditionalCardDenominator",
+        "turnRangeSnapshot",
+        "turnActions",
+        "turnPolicy",
+        "successorIndex"
+      ],
+      "acceptance": [
+        "rankAndSuitIdentityPreserved",
+        "everyOpenedTurnNodeHasSuccessorOrStopReason",
+        "newCardFilterSeparated"
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "river_terminal_and_ledger_closure",
+      "mustReturn": [
+        "riverPolicy",
+        "terminalActions",
+        "boardAndHoleCards",
+        "actionLedger",
+        "potStackConservation",
+        "showdownResult",
+        "referenceIdentity",
+        "terminalSuccessor"
+      ],
+      "acceptance": [
+        "ledgerConserves",
+        "terminalPolicyPresent",
+        "resultDoesNotInferAction",
+        "hiddenInformationDependencyDeclared"
+      ]
+    }
+  ],
+  "releaseRules": {
+    "beforeC2": "fact_or_demonstration_only",
+    "beforeC3": "no_action_conditioned_range_lesson",
+    "beforeC5": "no_continuous_three_street_lesson",
+    "missingSuccessorBlocksExactLesson": true,
+    "localFiniteModelDoesNotBecomeFullGTO": true,
+    "zeroRakeResearchDoesNotBecomeNL50PlatformReference": true
+  },
+  "currentEvidence": {
+    "C0": "source_build_verified_root_menu_probe_history_adapter_missing",
+    "C1": "independent_fact_snapshot_verified",
+    "C2": "reference_missing",
+    "C3": "reference_missing",
+    "C4": "physical_turn_structure_only",
+    "C5": "ledger_contract_only",
+    "solveStarted": false,
+    "completeThreeStreetReference": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

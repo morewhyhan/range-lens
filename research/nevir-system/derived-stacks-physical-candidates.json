@@ -1,0 +1,57 @@
+{
+  "id": "DERIVED_STACKS_PHYSICAL_CANDIDATES_V1",
+  "status": "derived_physical_candidate_not_canonical_not_strategy",
+  "purpose": "把明确记录的完整投入历史换算成双人剩余筹码候选，供身份审查使用；不把单个activeStack字段冒充已冻结目标配置。",
+  "source": {
+    "file": "size-comparison-evidence.json",
+    "sha256": "f0f8408d1f39b3facd9798906fe97642fcb735c5420176d204046dd0fd5e9f7f",
+    "scope": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal."
+  },
+  "formula": {
+    "startingStackBB": 100,
+    "commitments": {
+      "BTN": 4.75,
+      "BB": 4.75
+    },
+    "remaining": "remaining[player] = startingStackBB - explicitGrossCommitment[player]",
+    "deadSeatHandling": "SB dead 0.5 is already in the pot/history and is not subtracted from BTN or BB stacks."
+  },
+  "candidate": {
+    "units": [
+      "1.1",
+      "1.3",
+      "1.5",
+      "1.7",
+      "1.8"
+    ],
+    "stacksBB": {
+      "BTN": 95.25,
+      "BB": 95.25
+    },
+    "identityClass": "derived_physical_candidate",
+    "sourceScope": "source_local_context"
+  },
+  "checks": {
+    "sourceActiveStackMatchesDerivedHero": true,
+    "bothPlayersSameStartingStack": true,
+    "noMissingCommitmentInFormula": true,
+    "noStrategyPromotion": true,
+    "noTargetConfigurationPromotion": true
+  },
+  "release": {
+    "allowed": [
+      "identity_audit",
+      "physical_stack_conservation",
+      "author_side_crosswalk"
+    ],
+    "blocked": [
+      "course_policy",
+      "reference_strategy",
+      "range_after",
+      "successor",
+      "learner_grade",
+      "NL50_benchmark"
+    ],
+    "reason": "公式只恢复剩余筹码；它没有恢复双方起始范围、行动树或课程答案。"
+  }
+}

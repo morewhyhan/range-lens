@@ -1,0 +1,88 @@
+{
+  "id": "REPOSITORY_CURRENT_CAPABILITY_V1",
+  "status": "web_recheck_2026_10_22_not_integrated",
+  "sources": {
+    "equityCalculator": {
+      "repo": "gto-wizard/equity-calculator",
+      "role": "exact_physical_equity",
+      "strategy": false,
+      "rangeInput": false,
+      "actionTree": false,
+      "runtime": "author_side_candidate"
+    },
+    "postflopSolver": {
+      "repo": "b-inary/postflop-solver",
+      "role": "finite_tree_reference_solver",
+      "strategy": true,
+      "rangeInput": true,
+      "actionTree": true,
+      "development": "suspended",
+      "license": "AGPL-3.0",
+      "runtime": "author_side_only_pending_legal_review",
+      "technicalFacts": {
+        "algorithm": "Discounted CFR",
+        "abstraction": false,
+        "isomorphism": "turn_and_river_isomorphic_runouts_combined",
+        "precision": "mostly_f32_with_f64_summation; optional_16bit_compression",
+        "bunching": "supports_up_to_four_folded_players_in_6max",
+        "versioning": "breaking_changes_without_version_changes"
+      }
+    },
+    "wasmPostflop": {
+      "repo": "b-inary/wasm-postflop",
+      "role": "browser_solver_presentation",
+      "strategy": true,
+      "development": "suspended",
+      "license": "AGPL-3.0",
+      "runtime": "expression_reference_only",
+      "technicalFacts": {
+        "engine": "same_postflop_solver_engine",
+        "execution": "WebAssembly_in_browser",
+        "purpose": "accessible_solver_viewer_not_training_curriculum"
+      }
+    },
+    "desktopPostflop": {
+      "repo": "b-inary/desktop-postflop",
+      "role": "desktop_solver_presentation",
+      "strategy": true,
+      "development": "suspended",
+      "license": "AGPL-3.0",
+      "runtime": "expression_reference_only",
+      "technicalFacts": {
+        "engine": "same_postflop_solver_engine",
+        "framework": "Tauri_native_desktop_port",
+        "purpose": "serious_solver_viewer_not_training_curriculum",
+        "roadmapTrainingMode": "listed_as_future_item"
+      }
+    },
+    "holdemHandEvaluator": {
+      "repo": "b-inary/holdem-hand-evaluator",
+      "role": "hand_rank_fact",
+      "strategy": false,
+      "license": "MIT",
+      "runtime": "physical_fact_candidate"
+    },
+    "pokerCfr": {
+      "repo": "b-inary/poker-cfr",
+      "role": "cfr_algorithm_reference",
+      "strategy": "restricted_heads_up_examples_only",
+      "currentPageEvidence": "CFR+; multithread; precomputed heads-up equity; Kuhn, push-fold and restricted preflop binaries",
+      "runtime": "not_formal_postflop_source",
+      "license": "BSD-2-Clause"
+    }
+  },
+  "hardRules": {
+    "equityIsNotStrategy": true,
+    "displayIsNotGradingSource": true,
+    "solverSnapshotRequiresInputIdentity": true,
+    "coursePolicySeparateFromReference": true,
+    "missingSuccessorBlocksPractice": true,
+    "fixedCommitRequired": true
+  },
+  "evidence": {
+    "webPagesRechecked": true,
+    "fullRuntimeIntegration": false,
+    "A72CompleteReference": false,
+    "licenseReviewComplete": false
+  }
+}

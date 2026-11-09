@@ -1,0 +1,184 @@
+{
+  "id": "REPO_TO_COURSE_FIRST_HAND_BRIDGE_V1",
+  "status": "repository_capabilities_mapped_bridge_contract_not_runtime",
+  "purpose": "把公开仓库的计算职责、课程的简化政策和首手翻前到翻后交接放进同一条可追溯链；不把仓库现有界面直接当训练器。",
+  "repositories": [
+    {
+      "name": "gto-wizard/equity-calculator",
+      "source": "https://github.com/gto-wizard/equity-calculator",
+      "role": "exact_equity_layer",
+      "confirmedCapabilities": [
+        "接受具体手牌、公共牌、死牌并枚举合法跑牌",
+        "返回win、tie和分池equity",
+        "拒绝重复牌、非法牌面和不一致的手牌输入"
+      ],
+      "cannotProvide": [
+        "带权重起始范围",
+        "下注历史或行动树",
+        "下注频率、动作EV或对手回应策略"
+      ],
+      "courseUse": "复核牌力、听牌跑牌、分池权益和独立结算；不能由权益数字反推下注策略。"
+    },
+    {
+      "name": "b-inary/postflop-solver",
+      "source": "https://github.com/b-inary/postflop-solver",
+      "role": "author_reference_strategy_layer",
+      "confirmedCapabilities": [
+        "在明确双方加权范围、公共牌、底池、后手、抽水和有限行动树上求解",
+        "返回逐手动作频率、动作EV、到达权重、历史和后继牌",
+        "使用Discounted CFR并支持多线程；对同构发牌做合并",
+        "可处理六人桌背景下最多四个已弃牌玩家的bunching"
+      ],
+      "cannotBeAssumed": [
+        "不是六个仍在底池玩家的同时求解器",
+        "没有输入的下注尺寸不会自动被比较",
+        "求解收敛不等于课程简化无损",
+        "当前仓库标明development suspended，版本接口可能在不改版本号时变化"
+      ],
+      "licenseAndStatus": "公开README标为AGPL-3.0且开发暂停；正式复制、修改或分发前必须单独完成许可证评估。",
+      "courseUse": "作者侧生成冻结参考，再从同一节点编译简化课包；学习者端读取已验证结果，不在答题时临时求解。"
+    },
+    {
+      "name": "b-inary/wasm-postflop",
+      "source": "https://github.com/b-inary/wasm-postflop",
+      "role": "browser_expression_reference",
+      "confirmedCapabilities": [
+        "同一翻后引擎的浏览器WebAssembly运行形态",
+        "范围、节点和结果的交互展示参考"
+      ],
+      "limits": [
+        "项目README标明开发暂停",
+        "界面显示的舍入、缩放或到达权重截断不能直接作为判分数据",
+        "不能把其路线图中的训练模式当作已经存在的教学系统"
+      ],
+      "courseUse": "借鉴桌面/浏览器的范围查看和节点导航，不复制参数森林。"
+    },
+    {
+      "name": "b-inary/desktop-postflop",
+      "source": "https://github.com/b-inary/desktop-postflop",
+      "role": "desktop_expression_reference",
+      "confirmedCapabilities": [
+        "Tauri桌面壳和求解结果浏览",
+        "范围、具体组合、节点和新牌报告的表达参考"
+      ],
+      "courseUse": "借鉴成熟桌面训练器的可视化层；本项目仍只显示当前一步、前后范围和必要解释。"
+    },
+    {
+      "name": "b-inary/holdem-hand-evaluator",
+      "source": "https://github.com/b-inary/holdem-hand-evaluator",
+      "role": "hand_rank_fact_layer",
+      "confirmedCapabilities": [
+        "对五至七张牌计算最佳牌力类别和可比较等级",
+        "可用于牌型顺序、最佳五张和摊牌事实核对",
+        "README标明MIT许可"
+      ],
+      "cannotProvide": [
+        "权益或跑牌概率",
+        "加权范围、下注动作或动作EV",
+        "翻后连续后继策略"
+      ],
+      "courseUse": "作为p2读牌和牌力顺序短练习的事实核；牌型事实通过后才进入范围和策略层。"
+    },
+    {
+      "name": "b-inary/poker-cfr",
+      "source": "https://github.com/b-inary/poker-cfr",
+      "role": "algorithm_reference_only",
+      "confirmedCapabilities": [
+        "提供CFR+、Kuhn、推弃和受限翻前示例",
+        "可用于验证小型博弈的策略迭代和权益预计算概念",
+        "README标明BSD-2-Clause许可"
+      ],
+      "cannotProvide": [
+        "本项目完整翻后三街策略",
+        "课程指定配置的动作后范围",
+        "可直接发布给学习者的目标答案"
+      ],
+      "courseUse": "只作为作者侧算法说明和小型单元测试参考，不进入正式翻后策略数据源。"
+    }
+  ],
+  "licenseAndProvenanceGuards": {
+    "sourceCommitRequired": true,
+    "readmeAndLicenseSnapshotRequired": true,
+    "unlicensedOrUnclearSourceCannotBeCopied": true,
+    "agplSourceRequiresSeparateDistributionDecision": true,
+    "solverOutputMustBeStoredAsReferenceSnapshot": true,
+    "runtimeMustReadCompiledPackageInsteadOfFloatingMain": true
+  },
+  "integrationPipeline": [
+    {"id":"R0","label":"freeze_input","output":"位置、前序、底池、后手、抽水、牌面、动作菜单和范围指纹"},
+    {"id":"R1","label":"solve_reference","output":"参考策略、逐手频率、EV、到达权重、后继清单"},
+    {"id":"R2","label":"cross_check_equity","output":"具体跑牌、牌力和分池权益的独立核对"},
+    {"id":"R3","label":"compile_course_policy","output":"只保留课程允许的动作和确定的0/50/100或区间规则"},
+    {"id":"R4","label":"compute_range_delta","output":"R_before、动作筛选后的R_after、公共牌物理排除和delta分类"},
+    {"id":"R5","label":"release_lesson","output":"一屏一个任务、答后解析、范围图、后继或明确停止原因"}
+  ],
+  "firstHandBridge": {
+    "route": ["preflop_chart_cell","selected_action","starting_snapshot","flop_physical_filter","postflop_p1_context"],
+    "requiredSnapshotFields": ["chartIdentity","scenarioIdentity","fullHistory","selectedAction","rangeOwner","perComboWeights","normalizationDenominator","knownCards","physicalFilterStatus","parentSnapshot","inputFingerprint"],
+    "formulas": {
+      "physicalLegalWeight": "w_legal(h)=w_pre(h)*I(noKnownCardConflict)",
+      "actionConditionedWeight": "w_after(h|a)=w_before(h)*p(a|h,node)",
+      "conditionalRange": "q_after(h|a)=w_after(h|a)/sum_h(w_after(h|a))",
+      "jointCompatibility": "先在合法双方组合上应用物理和行动条件，再按视角边际化"
+    },
+    "observableSteps": [
+      {"id":"B1","userSees":"翻前图表坐标、位置、前序和自己的格子","userDoes":"确认格子来自哪张表并读出声明动作","stopIf":"图表身份或格子来源不明确"},
+      {"id":"B2","userSees":"当前格子的动作/权重标签","userDoes":"选择并保存本次动作；课程动作与参考动作分开标注","stopIf":"没有匹配参考或课程规则未声明"},
+      {"id":"B3","userSees":"动作前范围与动作后起始快照","userDoes":"确认谁的范围被更新、分母是什么、父快照指纹是什么","stopIf":"没有逐组合权重或分母"},
+      {"id":"B4","userSees":"自己的底牌和翻牌从同一张范围图划掉实体冲突组合","userDoes":"指出物理不可能组合；不把划掉解释成对手行动弃牌","stopIf":"只剩物理事实而没有行动筛选"},
+      {"id":"B5","userSees":"翻后第一帧的桌面、位置、底池、后手和行动者","userDoes":"从交接快照进入p1_context，不重新猜翻前历史","stopIf":"快照哈希或金额账本不能恢复"}
+    ],
+    "sameRouteCheck": {
+      "a72RangeHandoff": {
+        "source": "a72-range-handoff-candidate.json",
+        "scenario": "BTN_open_SB_3bet_BTN_call",
+        "hero": "SB",
+        "opponent": "BTN",
+        "heroHole": ["Ac","Qd"],
+        "flop": ["Ah","9c","2h"],
+        "initialEffectiveStackBB": 100,
+        "identity": "physical_fact_candidate_only"
+      },
+      "firstHandFlopFrame": {
+        "source": "first-hand-lesson-packet.json:S03",
+        "scenario": "BTN_open_2.5BB_SB_3bet_to_10BB_BTN_call_to_10BB",
+        "hero": "SB",
+        "opponent": "BTN",
+        "heroHole": ["Ac","Qd"],
+        "flop": ["Ah","9c","2h"],
+        "postPreflopStackBB": 90,
+        "potBB": 21,
+        "derivedRelation": "initial_100BB_minus_10BB_preflop_contribution_equals_90BB_postflop_stack",
+        "identity": "fact_demonstration_route_not_strategy"
+      },
+      "result": "structurally_same_preflop_line_and_cards_but_not_yet_attached",
+      "attachmentRequirements": [
+        "same_full_history_and_amounts",
+        "same_chart_identity_and_input_fingerprint",
+        "matched_action_conditioned_ranges",
+        "parent_snapshot_hash_restores_S03",
+        "successor_reference_or_explicit_fact_stop"
+      ]
+    }
+  },
+  "hardRules": [
+    "equity_is_not_strategy",
+    "physical_filter_is_not_action_filter",
+    "a_button_label_is_not_a_snapshot",
+    "a_preflop_pass_does_not_prove_postflop_pass",
+    "a_solver_display_is_not_raw_grading_data",
+    "a_locked_or_partial_reference_does_not_prove_simplification_is_lossless",
+    "missing_reference_or_successor_closes_exact_strategy_practice"
+  ],
+  "currentEvidence": {
+    "repositoryResearch": true,
+    "bridgeSchemaWritten": true,
+    "firstHandStructuralMatchDerived": true,
+    "matchedActionConditionedRange": false,
+    "fullReferenceForFirstHand": false,
+    "courseCompilerImplemented": false,
+    "runtimeAttached": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

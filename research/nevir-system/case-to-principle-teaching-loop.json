@@ -1,0 +1,86 @@
+{
+  "id": "CASE_TO_PRINCIPLE_TEACHING_LOOP_V1",
+  "status": "principle_loop_compiled_reference_and_trial_missing",
+  "sourceDocument": "189_从案例到可迁移原理的教学闭环合同.md",
+  "parentDocument": "188_跨年龄低基础可理解性与操作验收合同.md",
+  "loop": [
+    "observe_concrete_state",
+    "isolate_decisive_variable",
+    "state_plain_language_principle",
+    "show_one_variable_contrast",
+    "show_state_delta",
+    "learner_restates_handoff",
+    "apply_to_unseen_case"
+  ],
+  "minimumCards": ["baseCase", "contrastCase", "transferCase"],
+  "contrastRules": {
+    "exactlyOneChangedField": true,
+    "allOtherInputsHeld": true,
+    "rangeDenominatorHeld": true,
+    "actionMenuHeld": true,
+    "sourceIdentityHeld": true,
+    "changeAndHoldFieldsMustBeDeclared": true
+  },
+  "requiredLessonFields": [
+    "principleId",
+    "parentFrame",
+    "plainPrinciple",
+    "visibleFacts",
+    "decisiveVariables",
+    "baseCase",
+    "contrastCase",
+    "transferCase",
+    "changedField",
+    "heldFields",
+    "visibleDelta",
+    "handoffPayload",
+    "errorReturn",
+    "successorOrStop",
+    "sourceIdentity"
+  ],
+  "sourceIdentities": {
+    "fact": ["hand_category", "best_five", "physical_conflict", "ledger_legality"],
+    "course_rule": ["declared_simplified_action", "declared_size_policy"],
+    "matched_reference": ["action_frequency", "action_ev", "reach_weight", "range_after", "successor_node"],
+    "transfer_observation": ["unseen_first_attempt", "changed_layer", "handoff_recall"]
+  },
+  "explanationOrder": [
+    "answer_or_state",
+    "changed_variable",
+    "why_current_layer_is_affected",
+    "range_ledger_or_successor_delta",
+    "next_similar_spot_first_check",
+    "technical_formula_or_reference_after_plain_reason"
+  ],
+  "queuePolicy": [
+    "same_mechanism_different_surface",
+    "same_surface_different_price_or_history",
+    "delayed_recall",
+    "unseen_parent_frame",
+    "cross_street_successor"
+  ],
+  "releaseGate": {
+    "allRequired": true,
+    "requirements": [
+      "parent_and_plain_question",
+      "base_contrast_and_transfer_cards",
+      "decisive_and_held_fields",
+      "source_consistent_delta",
+      "learner_handoff_and_error_return",
+      "successor_or_stop",
+      "simplification_calibration_when_reference_is_used"
+    ],
+    "missingEvidenceBehavior": "publish_fact_demo_or_stop_only",
+    "caseAccuracyDoesNotEqualTransfer": true,
+    "principlePassDoesNotEqualNl50": true
+  },
+  "currentEvidence": {
+    "paperLoop": true,
+    "allPrinciplesHaveThreeCards": false,
+    "matchedReference": false,
+    "crossAgeTrial": false,
+    "unseenTransfer": false,
+    "runtime": false,
+    "nl50Evidence": false
+  }
+}

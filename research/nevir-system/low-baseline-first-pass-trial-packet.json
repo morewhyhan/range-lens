@@ -1,0 +1,127 @@
+{
+  "id": "LOW_BASELINE_FIRST_PASS_TRIAL_PACKET_V1",
+  "status": "paper_trial_packet_frozen_not_administered",
+  "purpose": "用一段低负荷首遍和一段单变量未见复测，验证用户能否恢复路线、定位当前层并在错误后回退。",
+  "sourcePublicPacket": "first-pass-structure-prompts.json",
+  "sourceAnswerPacket": "first-pass-structure-packet.json",
+  "outerRoutePublicPacket": "first-pass-outer-route-trial-prompts.json",
+  "outerRouteAnswerPacket": "first-pass-outer-route-trial-key.json",
+  "closureContract": "first-pass-step-closure-contract.json",
+  "architectureReplayContract": "architecture-replay-contract.json",
+  "architectureReplayRubric": "architecture-replay-rubric.json",
+  "architectureGoalContract": "first-pass-architecture-goal-contract.json",
+  "audience": {
+    "adultLowBaseline": true,
+    "speedMeasured": false,
+    "strategyJudged": false,
+    "noLongTermStorage": true
+  },
+  "administration": {
+    "showOneCaseAtATime": true,
+    "hideStepNames": true,
+    "firstAnswerBeforeHelp": true,
+    "allowPauseAndHistoryReview": true,
+    "unknownCountsAsError": true,
+    "assistedRetrySeparate": true,
+    "sameParentAfterError": true,
+    "noHostAnswerLeading": true
+  },
+  "guidedOrder": ["C01", "R01", "C03", "C05", "C08", "C10", "C12"],
+  "fullGuidedOrder": ["OL01", "OL02", "OL03", "OL04", "OL05", "C01", "R01", "C03", "C05", "C08", "C10", "C12"],
+  "fullGuidedOrderScope": {
+    "outerRoute": ["OL01", "OL02", "OL03", "OL04", "OL05"],
+    "innerRoute": ["C01", "R01", "C03", "C05", "C08", "C10", "C12"],
+    "outerMustFinishBeforeInner": true,
+    "oneCaseAtATime": true,
+    "firstAnswerBeforeHelp": true
+  },
+  "guidedCoverage": {
+    "p1_context": ["C01"],
+    "p2_board": ["C08", "C10"],
+    "p3_range": ["R01"],
+    "p4_compare": ["C01", "C03", "C05"],
+    "p5_execute": ["C03", "C05"],
+    "p6_update": ["C08", "C10"],
+    "p7_close": ["C12"]
+  },
+  "outerRouteCoverage": {
+    "contract": "first-lesson-visible-state-machine.json",
+    "requiredOrder": ["L0", "L1", "L2", "L3", "L4"],
+    "trialOrderBeforeInnerRoute": true,
+    "requiredInputsFollowStateMachine": true,
+    "caseMapping": {
+      "L0": ["OL01"],
+      "L1": ["OL02"],
+      "L2": ["OL03"],
+      "L3": ["OL04"],
+      "L4": ["OL05"]
+    },
+    "minimumPromptContract": {
+      "firstAnswerBeforeHelp": true,
+      "onePrimaryQuestion": true,
+      "oneChangedField": true,
+      "handoffToNextStateVisible": true,
+      "parentSnapshotRestorable": true
+    },
+    "structureReplay": {
+      "order": ["L0", "L1", "L2", "L3", "L4", "p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+      "administration": "after_outer_and_inner_guided_route_before_holdout",
+      "hideStateLabels": true,
+      "checks": ["outer_inner_nesting", "handoff_consumption", "error_return", "parent_restore"],
+      "notStrategyAccuracy": true
+    },
+    "status": "outer_cases_mapped_not_administered",
+    "releaseRule": "没有L0→L4的独立首答记录，不得把p1→p7的引导完成称为完整首遍。"
+  },
+  "architectureReplay": {
+    "order": ["A1","A2","A3","A4","A5","A6","A7","A8"],
+    "checks": ["node_identification","edge_recall","state_handoff"],
+    "administration": "after_guided_route_before_holdout",
+    "hideNodeLabels": true,
+    "sameParent": true,
+    "notActionAccuracy": true
+  },
+  "onePassArchitecture": {
+    "minimumModel": ["routeMap", "currentFrame", "changeArrow"],
+    "requiredChecks": ["orderRecall", "layerLocation", "errorRecovery", "oneVariableTransfer"],
+    "allParentHandoffsConsumedByNextStep": true,
+    "buttonOnlyDoesNotPass": true,
+    "firstAnswerBeforeHelp": true
+  },
+  "trialFactCases": [
+    {
+      "id":"R01",
+      "stateRef":"C01",
+      "routeNode":"p3_range",
+      "answerIdentity":"physical_fact",
+      "prompt":"先不选下注。已知自己拿A♠K♦、公共牌是K♣8♦3♠，下面哪一组牌在对手手里已经不可能？",
+      "options":["A♠Q♥","Q♥J♥","所有带A的牌都不可能","我不知道"],
+      "correctOption":"A♠Q♥",
+      "explanation":"A♠已经在自己手里，所以A♠Q♥是实体冲突；Q♥J♥没有与已知牌冲突。这个答案只说明物理不可能，不说明对手会不会因为行动弃牌。"
+    }
+  ],
+  "holdoutOrder": ["H01", "H02", "H03", "H04", "H05", "H06", "H07"],
+  "holdoutCases": [
+    {"id":"H01","sourceCase":"C01","changedField":"board","sourcePath":"cases.C01.state.board","override":{"board":["Qc","8h","3d"]},"task":"确认仍是自己先行动，并进入未下注比较层"},
+    {"id":"H02","sourceCase":"C03","changedField":"board","sourcePath":"cases.C03.state.board","override":{"board":["Jc","8h","3d"]},"task":"确认仍然面对下注，并重新看价格与合法动作"},
+    {"id":"H03","sourceCase":"C05","changedField":"board","sourcePath":"cases.C05.state.board","override":{"board":["Qc","8h","3d"]},"task":"确认仍然面对加注，不能沿用下注节点理由"},
+    {"id":"H04","sourceCase":"C08","changedField":"board","sourcePath":"cases.C08.state.board","override":{"board":["Jc","7h","4d"]},"task":"确认本街已经结束，等待下一张公共牌"},
+    {"id":"H05","sourceCase":"C10","changedField":"board","sourcePath":"cases.C10.state.board","override":{"board":["Qc","8h","3d","6c"]},"task":"确认全下跟注完成后只走发牌与摊牌"},
+    {"id":"H06","sourceCase":"C12","changedField":"board","sourcePath":"cases.C12.state.board","override":{"board":["Qc","8s","3d","6c","2h"]},"task":"确认行动结束后进入摊牌结算"},
+    {"id":"H07","sourceCase":"R01","sourceStateCase":"C01","changedField":"board","sourcePath":"cases.C01.state.board","override":{"board":["Qc","8d","3s"]},"task":"确认仍然只做物理冲突过滤，不把行动筛选混进来"}
+  ],
+  "recordFields": [
+    "sessionVersion","caseId","firstAnswer","helpLevelUsed","retryAnswer","errorLayer","returnTo","enteredWrongChild","verbalizedNextLayer","changedField","structureRecall","layerLocation","errorRecovery","oneVariableTransfer","architectureNodeRecall","architectureEdgeRecall","architectureStateHandoff","outerRouteRecall","outerHandoffRecall","innerRouteNesting","stopReason"
+  ],
+  "passChecks": ["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "stopConditions": ["host_fills_answer","multiple_questions_on_one_screen","changed_field_count_not_one","hidden_input_required","repeated_or_isomorphic_case","wrong_route_without_parent"],
+  "currentEvidence": {
+    "packetFrozen": true,
+    "answerKeySeparated": true,
+    "closureContractCrossChecked": true,
+    "participantObserved": false,
+    "routeReadabilityVerified": false,
+    "unseenTransferVerified": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "id": "FIRST_PASS_PRINCIPLE_COVERAGE_V1",
+  "status": "paper_coverage_contract_not_trialed",
+  "purpose": "把首遍路线中的不可省略原理原子映射到唯一首次父步骤，防止顺序完整但概念遗漏。",
+  "route": [
+    "L1_preflop_context",
+    "L2_preflop_grid",
+    "L3_preflop_action",
+    "L4_range_handoff",
+    "p1_context",
+    "p2_board",
+    "p3_range",
+    "p4_compare",
+    "p5_execute",
+    "p6_update",
+    "p7_close"
+  ],
+  "principles": [
+    {
+      "id": "P01",
+      "name": "定位与行动者",
+      "firstStep": "L1_preflop_context",
+      "recheckStep": "p1_context",
+      "architectureNode": "A1",
+      "question": "现在谁在决定，轮到谁行动？",
+      "visible": "six_max_table_and_actor_arrow",
+      "handoff": [
+        "actor",
+        "seat",
+        "history"
+      ],
+      "allowedIdentity": "fact",
+      "mustNotInfer": "hero_seat_alone_defines_action",
+      "transferField": "actor"
+    },
+    {
+      "id": "P02",
+      "name": "价格与账本起点",
+      "firstStep": "L1_preflop_context",
+      "recheckStep": "p1_context",
+      "architectureNode": "A1",
+      "question": "现在要付多少，底池和双方后手是多少？",
+      "visible": "pot_to_call_and_stacks",
+      "handoff": [
+        "potBB",
+        "toCallBB",
+        "stacksBB"
+      ],
+      "allowedIdentity": "ledger",
+      "mustNotInfer": "hand_strength_without_price",
+      "transferField": "toCallBB"
+    },
+    {
+      "id": "P03",
+      "name": "牌面结构",
+      "firstStep": "p2_board",
+      "architectureNode": "A2",
+      "question": "这几张公共牌在花色、连接和配对上属于什么结构？",
+      "visible": "board_texture_six_class_visual",
+      "handoff": [
+        "boardTexture",
+        "newBoardEffect"
+      ],
+      "allowedIdentity": "fact",
+      "mustNotInfer": "board_texture_to_action",
+      "transferField": "board"
+    },
+    {
+      "id": "P04",
+      "name": "手牌、牌力与改善牌",
+      "firstStep": "p2_board",
+      "architectureNode": "A3",
+      "question": "自己的最佳五张是什么，哪些牌会改善？",
+      "visible": "best_five_hand_class_and_improvement_cards",
+      "handoff": [
+        "bestFive",
+        "handClass",
+        "draws",
+        "improvementCards"
+      ],
+      "allowedIdentity": "fact",
+      "mustNotInfer": "draw_equals_made_hand",
+      "transferField": "heroHole"
+    },
+    {
+      "id": "P05",
+      "name": "行动前范围",
+      "firstStep": "p3_range",
+      "architectureNode": "A4",
+      "question": "进入这一节点前，双方有哪些合法组合？",
+      "visible": "fixed_denominator_range_grid",
+      "handoff": [
+        "rangeBefore",
+        "normalizationDenominator"
+      ],
+      "allowedIdentity": "range_or_stop",
+      "mustNotInfer": "one_hand_equals_whole_range",
+      "transferField": "rangeBefore"
+    },
+    {
+      "id": "P06",
+      "name": "物理过滤与行动过滤",
+      "firstStep": "p3_range",
+      "architectureNode": "A4",
+      "question": "哪些组合因为实体冲突移除，哪些才是动作造成的筛选？",
+      "visible": "physical_filter_then_action_filter_layers",
+      "handoff": [
+        "physicalFilter",
+        "actionFilterStatus",
+        "filterIdentity"
+      ],
+      "allowedIdentity": "fact",
+      "mustNotInfer": "physical_conflict_equals_fold",
+      "transferField": "board"
+    },
+    {
+      "id": "P07",
+      "name": "动作目的与比较维度",
+      "firstStep": "p4_compare",
+      "architectureNode": "A5",
+      "question": "现在比较动作时，目标是价值、保护、实现权益还是拒绝权益？",
+      "visible": "one_action_purpose_card",
+      "handoff": [
+        "actionPurpose",
+        "decisionState",
+        "policyIdentity"
+      ],
+      "allowedIdentity": "course_rule_or_stop",
+      "mustNotInfer": "hand_label_to_action",
+      "transferField": "actionPurpose"
+    },
+    {
+      "id": "P08",
+      "name": "价格、尺寸与阈值",
+      "firstStep": "p4_compare",
+      "architectureNode": "A5",
+      "question": "这个尺寸带来的价格和所需权益是什么？",
+      "visible": "size_price_threshold_visual",
+      "handoff": [
+        "legalActions",
+        "price",
+        "sizeCondition"
+      ],
+      "allowedIdentity": "ledger_or_course_rule_or_stop",
+      "mustNotInfer": "memorized_size_without_price",
+      "transferField": "size"
+    },
+    {
+      "id": "P09",
+      "name": "执行动作与账本更新",
+      "firstStep": "p5_execute",
+      "architectureNode": "A6",
+      "question": "选择动作后，金额、底池、后手和下一行动者怎样变化？",
+      "visible": "action_button_with_chip_ledger",
+      "handoff": [
+        "selectedAction",
+        "amountBB",
+        "potAfterBB",
+        "stacksAfterBB",
+        "nextActor"
+      ],
+      "allowedIdentity": "ledger",
+      "mustNotInfer": "button_without_ledger",
+      "transferField": "selectedAction"
+    },
+    {
+      "id": "P10",
+      "name": "行动后范围变化",
+      "firstStep": "p6_update",
+      "architectureNode": "A7",
+      "question": "这个动作之后，范围具体留下和移除了什么？",
+      "visible": "same_coordinate_before_after_range",
+      "handoff": [
+        "rangeAfter",
+        "rangeAfterIdentity",
+        "normalizationDenominator"
+      ],
+      "allowedIdentity": "matched_reference_or_stop",
+      "mustNotInfer": "course_after_equals_raw_reference_after",
+      "transferField": "selectedAction"
+    },
+    {
+      "id": "P11",
+      "name": "新牌效果与后继",
+      "firstStep": "p6_update",
+      "architectureNode": "A7",
+      "question": "新牌改变了什么，下一步真实后继是什么？",
+      "visible": "new_card_delta_and_successor_arrow",
+      "handoff": [
+        "newCardEffect",
+        "nextActor",
+        "successorOrTerminal"
+      ],
+      "allowedIdentity": "successor_or_stop",
+      "mustNotInfer": "missing_successor_is_random_next_street",
+      "transferField": "board"
+    },
+    {
+      "id": "P12",
+      "name": "结算、错误层与下一手",
+      "firstStep": "p7_close",
+      "architectureNode": "A8",
+      "question": "结果是什么，哪一层出错，下一手从哪里重新开始？",
+      "visible": "settlement_and_error_layer_replay",
+      "handoff": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextRoundEntry"
+      ],
+      "allowedIdentity": "ledger",
+      "mustNotInfer": "result_proves_decision",
+      "transferField": "errorLayer"
+    }
+  ],
+  "rules": {
+    "eachPrincipleHasOneFirstStep": true,
+    "firstStepsFollowRoute": true,
+    "onePrimaryQuestionPerPrinciple": true,
+    "oneCentralVisualPerPrinciple": true,
+    "childOpensOnlyFromParent": true,
+    "physicalFilterSeparatedFromActionFilter": true,
+    "missingEvidenceStopsAtCurrentPrinciple": true,
+    "firstPassDoesNotClaimStrategyMastery": true,
+    "firstPassDoesNotClaimNL50": true
+  },
+  "coverageCounts": {
+    "firstIntroductionTotal": 12,
+    "L1": 2,
+    "p2": 2,
+    "p3": 2,
+    "p4": 2,
+    "p5": 1,
+    "p6": 2,
+    "p7": 1
+  },
+  "recheckCounts": {
+    "p1": 2
+  },
+  "transferBlueprints": [
+    {
+      "principleId": "P01",
+      "changedField": "actor",
+      "returnStep": "L1_preflop_context",
+      "prompt": "只改变当前行动者，先指出谁在决定，再回到同一局面问题。"
+    },
+    {
+      "principleId": "P02",
+      "changedField": "toCallBB",
+      "returnStep": "L1_preflop_context",
+      "prompt": "只改变待补金额，先重新算价格、底池和后手，再决定下一层。"
+    },
+    {
+      "principleId": "P03",
+      "changedField": "board",
+      "returnStep": "p2_board",
+      "prompt": "只改变一张公共牌，先重新判断花色、连接和配对，不直接推出动作。"
+    },
+    {
+      "principleId": "P04",
+      "changedField": "heroHole",
+      "returnStep": "p2_board",
+      "prompt": "只改变自己的两张底牌，重新拼最佳五张并列出改善牌。"
+    },
+    {
+      "principleId": "P05",
+      "changedField": "rangeBefore",
+      "returnStep": "p3_range",
+      "prompt": "只改变行动前范围快照，重新确认固定分母和合法组合。"
+    },
+    {
+      "principleId": "P06",
+      "changedField": "board",
+      "returnStep": "p3_range",
+      "prompt": "只改变一张公共牌，先分开实体冲突和动作筛选，再说明分母变化。"
+    },
+    {
+      "principleId": "P07",
+      "changedField": "opponentResponse",
+      "returnStep": "p4_compare",
+      "prompt": "只改变一次对手回应，重新说清现在比较的动作目的。"
+    },
+    {
+      "principleId": "P08",
+      "changedField": "size",
+      "returnStep": "p4_compare",
+      "prompt": "只改变下注尺寸，重新计算价格和所需权益，不凭记忆套动作。"
+    },
+    {
+      "principleId": "P09",
+      "changedField": "selectedAction",
+      "returnStep": "p5_execute",
+      "prompt": "只改变选择的动作，重新交付金额、底池、后手和下一行动者。"
+    },
+    {
+      "principleId": "P10",
+      "changedField": "selectedAction",
+      "returnStep": "p6_update",
+      "prompt": "只改变动作，重新查看同坐标动作后范围和其来源身份。"
+    },
+    {
+      "principleId": "P11",
+      "changedField": "board",
+      "returnStep": "p6_update",
+      "prompt": "只改变一张新牌，指出它改变了什么以及真实后继或停止原因。"
+    },
+    {
+      "principleId": "P12",
+      "changedField": "errorLayer",
+      "returnStep": "p7_close",
+      "prompt": "只改变错误位置或结算反馈，指出结果与决策的区别以及下一手回到哪里。"
+    }
+  ],
+  "transferRules": {
+    "everyPrincipleHasOneBlueprint": true,
+    "exactlyOneChangedField": true,
+    "returnStepMustMatchFirstIntroductionOrRecheck": true,
+    "blueprintDoesNotInventMissingStrategy": true
+  },
+  "currentEvidence": {
+    "paperMapping": true,
+    "runtimeImplemented": false,
+    "lowBaselineTrial": false,
+    "unseenTransfer": false,
+    "completeMatchedStrategy": false,
+    "continuousRoute": false,
+    "NL50Evidence": false,
+    "allPrinciplesHaveFrameOrStop": true
+  },
+  "stopCardSource": "first-hand-gap-frame-cards.json"
+}

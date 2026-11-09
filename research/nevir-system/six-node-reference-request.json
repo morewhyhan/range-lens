@@ -1,0 +1,757 @@
+{
+  "status": "six_node_acquisition_request_not_received_strategy",
+  "purpose": "Reconstruct the original public-source NL500 lesson candidate only; separate target NL50 reference still required.",
+  "sourceLedgerSHA256": "bad514e414a1791ef9699d8cb96fe30883209ae9381e7813be6490d9ac085cd9",
+  "sourceIdentity": {
+    "article": "https://blog.gtowizard.com/dominate-the-river-in-3-bet-pots-oop/",
+    "solutionLink": "https://app.gtowizard.com/solutions?board=Ah9c2h7s4d&cussol_id=4ed7caa0-8447-4b2b-9348-697f4d8279a2&custree_id=8d398892-575c-45f0-9f37-bb826916b21d&depth=100&flop_actions=R4.2-C&gametype=Cash6m500zGeneral3betV2&gmff_depth=100&gmff_favorite=false&gmff_opening_size=gto&gmff_rake=NL500&gmff_type=general&gmfft_sort_key=0&gmfft_sort_order=desc&gmfs_solution_tab=ai_sols&history_spot=11&preflop_actions=F-F-F-R2.5-R10-F-C&ref=blog.gtowizard.com&soltab=strategy&solution_type=gwiz&stratab=strategy&turn_actions=R22.05-C",
+    "sourcePresetLabel": "NL500 six-player100BB",
+    "exactRakeParameters": null,
+    "exactRootRanges": null,
+    "errorStatistic": null,
+    "immutableSourceVersion": null
+  },
+  "lessonsHandsAreAuthorSelected": true,
+  "requiredSharedConfiguration": [
+    "root ranges and both seats",
+    "exact rake and cap convention",
+    "starting depth/pot and currency unit",
+    "actual finite action tree and rounding",
+    "source version and lawful use",
+    "convergence/error definition and achieved value"
+  ],
+  "nodes": [
+    {
+      "gate": "G_FLOP_HERO",
+      "lessonFrame": "S05",
+      "observedEvent": "f01",
+      "expectedContext": {
+        "street": "flop",
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "actor": "SB",
+        "potBB": 21,
+        "stacksBB": {
+          "SB": 90,
+          "BTN": 90
+        },
+        "streetPaidBB": {
+          "SB": 0,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          }
+        ]
+      },
+      "contextFingerprint": "51090f75baacc1e9316ac6f076bf020dc0e608b1200cf6926edbd84da2cd0533",
+      "actingPhysicalHand": [
+        "Ac",
+        "Qd"
+      ],
+      "observedAction": {
+        "action": "bet",
+        "totalStreetPaidAfterBB": 4.2,
+        "addedBB": 4.2
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    },
+    {
+      "gate": "G_FLOP_RESPONSE",
+      "lessonFrame": "S07",
+      "observedEvent": "f02",
+      "expectedContext": {
+        "street": "flop",
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ],
+        "actor": "BTN",
+        "potBB": 25.2,
+        "stacksBB": {
+          "SB": 85.8,
+          "BTN": 90
+        },
+        "streetPaidBB": {
+          "SB": 4.2,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          },
+          {
+            "id": "f01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2
+          }
+        ]
+      },
+      "contextFingerprint": "16fb0a8ec808505d2ea632e3425ca21f1b252bc0e75488d7dbb63b1d573582ff",
+      "actingPhysicalHand": [
+        "Ad",
+        "Js"
+      ],
+      "observedAction": {
+        "action": "call_to",
+        "totalStreetPaidAfterBB": 4.2,
+        "addedBB": 4.2
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    },
+    {
+      "gate": "G_TURN_HERO",
+      "lessonFrame": "S09",
+      "observedEvent": "t01",
+      "expectedContext": {
+        "street": "turn",
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "actor": "SB",
+        "potBB": 29.4,
+        "stacksBB": {
+          "SB": 85.8,
+          "BTN": 85.8
+        },
+        "streetPaidBB": {
+          "SB": 0,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          },
+          {
+            "id": "f01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2
+          },
+          {
+            "id": "f02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2
+          }
+        ]
+      },
+      "contextFingerprint": "f9363f286c1649600373bf51bcafd141de674fdcc6792fee568c4cfb7355f1c2",
+      "actingPhysicalHand": [
+        "Ac",
+        "Qd"
+      ],
+      "observedAction": {
+        "action": "bet",
+        "totalStreetPaidAfterBB": 22.05,
+        "addedBB": 22.05
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    },
+    {
+      "gate": "G_TURN_RESPONSE",
+      "lessonFrame": "S11",
+      "observedEvent": "t02",
+      "expectedContext": {
+        "street": "turn",
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ],
+        "actor": "BTN",
+        "potBB": 51.45,
+        "stacksBB": {
+          "SB": 63.75,
+          "BTN": 85.8
+        },
+        "streetPaidBB": {
+          "SB": 22.05,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          },
+          {
+            "id": "f01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2
+          },
+          {
+            "id": "f02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2
+          },
+          {
+            "id": "t01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05
+          }
+        ]
+      },
+      "contextFingerprint": "45fbfff09791c8221054ae66774aa093e1a5bb901d2a051eb315c4aa6f6ba44e",
+      "actingPhysicalHand": [
+        "Ad",
+        "Js"
+      ],
+      "observedAction": {
+        "action": "call_to",
+        "totalStreetPaidAfterBB": 22.05,
+        "addedBB": 22.05
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    },
+    {
+      "gate": "G_RIVER_HERO",
+      "lessonFrame": "S13",
+      "observedEvent": "r01",
+      "expectedContext": {
+        "street": "river",
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "actor": "SB",
+        "potBB": 73.5,
+        "stacksBB": {
+          "SB": 63.75,
+          "BTN": 63.75
+        },
+        "streetPaidBB": {
+          "SB": 0,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          },
+          {
+            "id": "f01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2
+          },
+          {
+            "id": "f02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2
+          },
+          {
+            "id": "t01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05
+          },
+          {
+            "id": "t02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05
+          }
+        ]
+      },
+      "contextFingerprint": "963bda9e25ea25e476930553285c9a745f55b33e26ff85d8997fc6132dab61bd",
+      "actingPhysicalHand": [
+        "Ac",
+        "Qd"
+      ],
+      "observedAction": {
+        "action": "allin",
+        "totalStreetPaidAfterBB": 63.75,
+        "addedBB": 63.75
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    },
+    {
+      "gate": "G_RIVER_RESPONSE",
+      "lessonFrame": "S15",
+      "observedEvent": "r02",
+      "expectedContext": {
+        "street": "river",
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ],
+        "actor": "BTN",
+        "potBB": 137.25,
+        "stacksBB": {
+          "SB": 0,
+          "BTN": 63.75
+        },
+        "streetPaidBB": {
+          "SB": 63.75,
+          "BTN": 0
+        },
+        "normalizedPriorEvents": [
+          {
+            "id": "post_sb",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5
+          },
+          {
+            "id": "post_bb",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1
+          },
+          {
+            "id": "pf01",
+            "actor": "UTG",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf02",
+            "actor": "HJ",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf03",
+            "actor": "CO",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf04",
+            "actor": "BTN",
+            "action": "raise_to",
+            "addedBB": 2.5
+          },
+          {
+            "id": "pf05",
+            "actor": "SB",
+            "action": "raise_to",
+            "addedBB": 9.5
+          },
+          {
+            "id": "pf06",
+            "actor": "BB",
+            "action": "fold",
+            "addedBB": 0
+          },
+          {
+            "id": "pf07",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 7.5
+          },
+          {
+            "id": "f01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 4.2
+          },
+          {
+            "id": "f02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 4.2
+          },
+          {
+            "id": "t01",
+            "actor": "SB",
+            "action": "bet",
+            "addedBB": 22.05
+          },
+          {
+            "id": "t02",
+            "actor": "BTN",
+            "action": "call_to",
+            "addedBB": 22.05
+          },
+          {
+            "id": "r01",
+            "actor": "SB",
+            "action": "allin",
+            "addedBB": 63.75
+          }
+        ]
+      },
+      "contextFingerprint": "13b2b1052c84abeb8a6b157d70927702a0c367f92e27126909560d35ea30ffc7",
+      "actingPhysicalHand": [
+        "Ad",
+        "Js"
+      ],
+      "observedAction": {
+        "action": "call_to",
+        "totalStreetPaidAfterBB": 63.75,
+        "addedBB": 63.75
+      },
+      "requiredReferenceFields": [
+        "sourceIdentity",
+        "configurationId",
+        "actualContext",
+        "rootRangeIdentity",
+        "bothOrderedPrivateHandLists",
+        "bothRawReachWeights",
+        "actorStrategyByPhysicalHandAndAction",
+        "actorEVByPhysicalHandAndAction",
+        "actualMenuWithAmounts",
+        "continuationIdentityAndCoverage",
+        "errorAndUnits",
+        "selectedHandPathSupport"
+      ],
+      "suppliedReference": null,
+      "gateStatus": "not_received_not_gradeable"
+    }
+  ],
+  "perHandSupportRule": "Verify selected pair compatibility, positive joint reach at every observed node, and positive policy probability for every chosen observed action. Failure requires revising the demonstration, not inventing a frequency.",
+  "alternativeExecutionRule": "Per-action EV can assess a proposal only within the declared menu; replaying a different action requires its actual continuation reference, not the main-line next snapshot.",
+  "receivedNodes": 0,
+  "preciseStrategyReadyNodes": 0,
+  "newNL50Reference": false,
+  "learnerTrials": 0
+}

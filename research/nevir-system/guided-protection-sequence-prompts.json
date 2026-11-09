@@ -1,0 +1,1685 @@
+{
+  "status": "guided_protection_plan_paper_sequence_not_UI_or_learner_verified",
+  "parentLink": {
+    "source": "guided-size-sequence-packet.json",
+    "frame": "B09",
+    "mode": "review_after_size_episode",
+    "notice": "尺寸段结束后回看B09，换另一手转牌QQ及其完整给定计划。关闭恢复原河牌QQ的完整比较，不移植过牌答案。",
+    "snapshotHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0",
+    "returnHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0",
+    "independentAssessment": false
+  },
+  "modelInput": {
+    "source": "active-plan-models.json",
+    "context": {
+      "players": 6,
+      "startingEffectiveBB": 100,
+      "heroSeat": "SB",
+      "villainSeat": "BTN",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d"
+      ],
+      "potBB": 21,
+      "heroStackBB": 90,
+      "villainStackBB": 90,
+      "history": "Author legal observed history: BTN opens2.5, SB raises_to10, BB folds, BTN calls; flop Ks7s2d both check; turn3d before SB first action.",
+      "prior": "Current conditional candidates and weights are authored, not recovered from course or user full action-conditioned ranges.",
+      "comparisonMenu": [
+        "check_with_declared_continuation",
+        "bet10.5_with_declared_continuation"
+      ],
+      "future": "All44 legal rivers represented per candidate. Fold/call/jam responses specified; other lead sizes and river hero bets/raises omitted explicitly."
+    },
+    "protection": {
+      "hero": [
+        "Qs",
+        "Qc"
+      ],
+      "candidates": [
+        {
+          "id": "AJ",
+          "hole": [
+            "As",
+            "Jc"
+          ],
+          "weight": 3,
+          "currentWinner": "hero",
+          "rivers": [
+            {
+              "river": "2s",
+              "share": 1
+            },
+            {
+              "river": "2h",
+              "share": 1
+            },
+            {
+              "river": "2c",
+              "share": 1
+            },
+            {
+              "river": "3s",
+              "share": 1
+            },
+            {
+              "river": "3h",
+              "share": 1
+            },
+            {
+              "river": "3c",
+              "share": 1
+            },
+            {
+              "river": "4s",
+              "share": 1
+            },
+            {
+              "river": "4h",
+              "share": 1
+            },
+            {
+              "river": "4d",
+              "share": 1
+            },
+            {
+              "river": "4c",
+              "share": 1
+            },
+            {
+              "river": "5s",
+              "share": 1
+            },
+            {
+              "river": "5h",
+              "share": 1
+            },
+            {
+              "river": "5d",
+              "share": 1
+            },
+            {
+              "river": "5c",
+              "share": 1
+            },
+            {
+              "river": "6s",
+              "share": 1
+            },
+            {
+              "river": "6h",
+              "share": 1
+            },
+            {
+              "river": "6d",
+              "share": 1
+            },
+            {
+              "river": "6c",
+              "share": 1
+            },
+            {
+              "river": "7h",
+              "share": 1
+            },
+            {
+              "river": "7d",
+              "share": 1
+            },
+            {
+              "river": "7c",
+              "share": 1
+            },
+            {
+              "river": "8s",
+              "share": 1
+            },
+            {
+              "river": "8h",
+              "share": 1
+            },
+            {
+              "river": "8d",
+              "share": 1
+            },
+            {
+              "river": "8c",
+              "share": 1
+            },
+            {
+              "river": "9s",
+              "share": 1
+            },
+            {
+              "river": "9h",
+              "share": 1
+            },
+            {
+              "river": "9d",
+              "share": 1
+            },
+            {
+              "river": "9c",
+              "share": 1
+            },
+            {
+              "river": "Ts",
+              "share": 1
+            },
+            {
+              "river": "Th",
+              "share": 1
+            },
+            {
+              "river": "Td",
+              "share": 1
+            },
+            {
+              "river": "Tc",
+              "share": 1
+            },
+            {
+              "river": "Js",
+              "share": 1
+            },
+            {
+              "river": "Jh",
+              "share": 1
+            },
+            {
+              "river": "Jd",
+              "share": 1
+            },
+            {
+              "river": "Qh",
+              "share": 1
+            },
+            {
+              "river": "Qd",
+              "share": 1
+            },
+            {
+              "river": "Kh",
+              "share": 1
+            },
+            {
+              "river": "Kd",
+              "share": 1
+            },
+            {
+              "river": "Kc",
+              "share": 1
+            },
+            {
+              "river": "Ah",
+              "share": 0
+            },
+            {
+              "river": "Ad",
+              "share": 0
+            },
+            {
+              "river": "Ac",
+              "share": 0
+            }
+          ],
+          "winCards": [
+            "2s",
+            "2h",
+            "2c",
+            "3s",
+            "3h",
+            "3c",
+            "4s",
+            "4h",
+            "4d",
+            "4c",
+            "5s",
+            "5h",
+            "5d",
+            "5c",
+            "6s",
+            "6h",
+            "6d",
+            "6c",
+            "7h",
+            "7d",
+            "7c",
+            "8s",
+            "8h",
+            "8d",
+            "8c",
+            "9s",
+            "9h",
+            "9d",
+            "9c",
+            "Ts",
+            "Th",
+            "Td",
+            "Tc",
+            "Js",
+            "Jh",
+            "Jd",
+            "Qh",
+            "Qd",
+            "Kh",
+            "Kd",
+            "Kc"
+          ],
+          "equity": 0.9318181818181818
+        },
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "weight": 1,
+          "currentWinner": "villain",
+          "rivers": [
+            {
+              "river": "2s",
+              "share": 0
+            },
+            {
+              "river": "2h",
+              "share": 0
+            },
+            {
+              "river": "2c",
+              "share": 0
+            },
+            {
+              "river": "3s",
+              "share": 0
+            },
+            {
+              "river": "3h",
+              "share": 0
+            },
+            {
+              "river": "3c",
+              "share": 0
+            },
+            {
+              "river": "4s",
+              "share": 0
+            },
+            {
+              "river": "4h",
+              "share": 0
+            },
+            {
+              "river": "4d",
+              "share": 0
+            },
+            {
+              "river": "4c",
+              "share": 0
+            },
+            {
+              "river": "5s",
+              "share": 0
+            },
+            {
+              "river": "5h",
+              "share": 0
+            },
+            {
+              "river": "5d",
+              "share": 0
+            },
+            {
+              "river": "5c",
+              "share": 0
+            },
+            {
+              "river": "6s",
+              "share": 0
+            },
+            {
+              "river": "6h",
+              "share": 0
+            },
+            {
+              "river": "6d",
+              "share": 0
+            },
+            {
+              "river": "6c",
+              "share": 0
+            },
+            {
+              "river": "7h",
+              "share": 0
+            },
+            {
+              "river": "7d",
+              "share": 0
+            },
+            {
+              "river": "7c",
+              "share": 0
+            },
+            {
+              "river": "8s",
+              "share": 0
+            },
+            {
+              "river": "8h",
+              "share": 0
+            },
+            {
+              "river": "8d",
+              "share": 0
+            },
+            {
+              "river": "8c",
+              "share": 0
+            },
+            {
+              "river": "9s",
+              "share": 0
+            },
+            {
+              "river": "9h",
+              "share": 0
+            },
+            {
+              "river": "9d",
+              "share": 0
+            },
+            {
+              "river": "9c",
+              "share": 0
+            },
+            {
+              "river": "Ts",
+              "share": 0
+            },
+            {
+              "river": "Th",
+              "share": 0
+            },
+            {
+              "river": "Td",
+              "share": 0
+            },
+            {
+              "river": "Tc",
+              "share": 0
+            },
+            {
+              "river": "Js",
+              "share": 0
+            },
+            {
+              "river": "Jh",
+              "share": 0
+            },
+            {
+              "river": "Jd",
+              "share": 0
+            },
+            {
+              "river": "Jc",
+              "share": 0
+            },
+            {
+              "river": "Qh",
+              "share": 0
+            },
+            {
+              "river": "Qd",
+              "share": 0
+            },
+            {
+              "river": "Kc",
+              "share": 0
+            },
+            {
+              "river": "As",
+              "share": 0
+            },
+            {
+              "river": "Ah",
+              "share": 0
+            },
+            {
+              "river": "Ad",
+              "share": 0
+            },
+            {
+              "river": "Ac",
+              "share": 0
+            }
+          ],
+          "winCards": [],
+          "equity": 0
+        }
+      ],
+      "checkPolicy": "Turn SB checks; BTN checks. River both always check. This is a fixed plan restriction, not guaranteed by the rules.",
+      "checkEV": 14.676136363636363,
+      "weakFolds": {
+        "bet": 10.5,
+        "branches": [
+          {
+            "id": "AJ",
+            "probability": 0.75,
+            "response": {
+              "fold": 1,
+              "call": 0,
+              "jam": 0
+            },
+            "foldEVContribution": 15.75,
+            "callEVContribution": 0,
+            "jamEVContribution": 0,
+            "conditionalCallEV": null,
+            "riverRows": []
+          },
+          {
+            "id": "KK",
+            "probability": 0.25,
+            "response": {
+              "fold": 0,
+              "call": 0,
+              "jam": 1
+            },
+            "foldEVContribution": 0,
+            "callEVContribution": 0,
+            "jamEVContribution": -2.625,
+            "conditionalCallEV": null,
+            "riverRows": []
+          }
+        ],
+        "jamMass": 0.25,
+        "jamShare": 0,
+        "jamCallNetFromRoot": -90,
+        "jamFoldNetFromRoot": -10.5,
+        "jamChoice": "fold",
+        "evFromRootBB": 13.125,
+        "riverPolicy": "both_check"
+      },
+      "weakCalls": {
+        "bet": 10.5,
+        "branches": [
+          {
+            "id": "AJ",
+            "probability": 0.75,
+            "response": {
+              "fold": 0,
+              "call": 1,
+              "jam": 0
+            },
+            "foldEVContribution": 0,
+            "callEVContribution": 21.477272727272727,
+            "jamEVContribution": 0,
+            "conditionalCallEV": 28.636363636363637,
+            "riverRows": [
+              {
+                "river": "2s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "2h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "2c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "3s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "3h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "3c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "4s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "4h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "4d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "4c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "5s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "5h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "5d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "5c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "6s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "6h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "6d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "6c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "7h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "7d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "7c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "8s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "8h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "8d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "8c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "9s",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "9h",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "9d",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "9c",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Ts",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Th",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Td",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Tc",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Js",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Jh",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Jd",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Qh",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Qd",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Kh",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Kd",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Kc",
+                "share": 1,
+                "action": "check_check",
+                "heroNetFromCurrent": 31.5
+              },
+              {
+                "river": "Ah",
+                "share": 0,
+                "action": "check_check",
+                "heroNetFromCurrent": -10.5
+              },
+              {
+                "river": "Ad",
+                "share": 0,
+                "action": "check_check",
+                "heroNetFromCurrent": -10.5
+              },
+              {
+                "river": "Ac",
+                "share": 0,
+                "action": "check_check",
+                "heroNetFromCurrent": -10.5
+              }
+            ]
+          },
+          {
+            "id": "KK",
+            "probability": 0.25,
+            "response": {
+              "fold": 0,
+              "call": 0,
+              "jam": 1
+            },
+            "foldEVContribution": 0,
+            "callEVContribution": 0,
+            "jamEVContribution": -2.625,
+            "conditionalCallEV": null,
+            "riverRows": []
+          }
+        ],
+        "jamMass": 0.25,
+        "jamShare": 0,
+        "jamCallNetFromRoot": -90,
+        "jamFoldNetFromRoot": -10.5,
+        "jamChoice": "fold",
+        "evFromRootBB": 18.852272727272727,
+        "riverPolicy": "both_check"
+      },
+      "denialGainContribution": 1.0738636363636371,
+      "strongRangeCostContribution": 2.625,
+      "lesson": "Against AJ, denying its3 winning rivers helps. Across the full declared range that benefit can be smaller than the cost of betting into KK."
+    }
+  },
+  "navigation": {
+    "core": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15",
+      "P16",
+      "P17"
+    ],
+    "optional": [
+      {
+        "openAt": "P09",
+        "label": "如果AJ愿意付钱",
+        "frames": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "returnTo": "P09",
+        "surface": "feedback",
+        "then": "P10"
+      }
+    ],
+    "events": [
+      {
+        "from": "P09",
+        "to": "P10",
+        "event": "Actual SB turn check"
+      },
+      {
+        "from": "P10",
+        "to": "P11",
+        "event": "Observed BTN turn check"
+      },
+      {
+        "from": "P11",
+        "to": "P12",
+        "event": "Actual riverAh only"
+      },
+      {
+        "from": "P12",
+        "to": "P13",
+        "event": "Given SB river check"
+      },
+      {
+        "from": "P13",
+        "to": "P14",
+        "event": "Observed BTN river check"
+      },
+      {
+        "from": "P14",
+        "to": "P15",
+        "event": "RevealAsJc only now"
+      },
+      {
+        "from": "P15",
+        "to": "P16",
+        "event": "Award21 to BTN once"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "P01",
+      "title": "先回当前未下注决定",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "转牌刚开始，自己没有待补，现在比较什么？",
+        "options": [
+          "过牌与下注",
+          "跟注与弃牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P02",
+      "title": "只看AJ这组",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "QQ当前对AsJc，谁领先？",
+        "options": [
+          "自己的一对Q",
+          "对方A高",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P03",
+      "title": "找到真正的反超牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "固定AJ后，44张合法河牌中哪组会让它反超？",
+        "options": [
+          "剩余3张A",
+          "所有高于7的牌",
+          "所有方片",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "lossCards": [
+          "Ac",
+          "Ad",
+          "Ah"
+        ],
+        "riverCount": 44
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P04",
+      "title": "承认保护确实有好处",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "若这组AJ现在弃牌，能消除它反超的机会吗？",
+        "options": [
+          "能，但只说明这一组的好处",
+          "不能，保护永远没用",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P05",
+      "title": "补回全部候选",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "原给定范围除了3份AJ，还有什么？",
+        "options": [
+          "1份KK",
+          "没有其它候选",
+          "3份QQ",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidates": [
+          {
+            "id": "AJ",
+            "hole": [
+              "As",
+              "Jc"
+            ],
+            "weight": 3
+          },
+          {
+            "id": "KK",
+            "hole": [
+              "Kh",
+              "Kd"
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P06",
+      "title": "把被反击的成本算回去",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定KK面对10.5再全下，自己按新范围弃，首注10.5会回来吗？",
+        "options": [
+          "不会，首注已匹配",
+          "会，自己最后弃牌就全退",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "scope": "Response and continuation are fixed author inputs; only this limited menu is compared."
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P07",
+      "title": "按份额计算强端成本",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "KK占1/4，损失10.5对平均收益贡献多少？",
+        "options": [
+          -2.625,
+          -10.5,
+          0,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P08",
+      "title": "合并收益与成本",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "保护贡献约+1.074，强端成本−2.625，合计怎样？",
+        "options": [
+          "约−1.551",
+          "约+3.699",
+          "保护有效所以必然为正",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "denialGain": 1.0738636363636371,
+        "strongCost": 2.625
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P09",
+      "title": "比较完整计划",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按给定全部计划，当前选哪条？",
+        "options": [
+          "过牌计划",
+          "下注10.5计划",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "checkEV": 14.676136363636363,
+        "betEV": 13.125,
+        "scope": "Displayed EVs are answer support; not unaided strategy."
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P10",
+      "title": "这次才实际过牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "BTN",
+        "phase": "actual_wait_turn_response",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己过牌以后，是否直接发河牌？",
+        "options": [
+          "不，先等BTN",
+          "是，没下注就换街",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P11",
+      "title": "对手也过才关闭街",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": null,
+        "phase": "actual_turn_closed",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN按给定计划过牌后，下一步是什么？",
+        "options": [
+          "发河牌",
+          "直接结算四张牌",
+          "自己在转牌再下",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P12",
+      "title": "坏牌来了仍要认行动者",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "actual_river_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "实际来Ah，下一步先是谁？",
+        "options": [
+          "SB自己",
+          "直接结算",
+          "BTN直接拿池",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P13",
+      "title": "执行已给定的后续计划",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "BTN",
+        "phase": "actual_wait_river_response",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按给定河牌过牌计划执行后，现在等谁？",
+        "options": [
+          "BTN对手",
+          "自己再下注",
+          "直接派彩",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P14",
+      "title": "河牌行动关闭",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": null,
+        "phase": "actual_showdown_pending",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN也过了，接下来是什么？",
+        "options": [
+          "摊牌比五张",
+          "再发第六张",
+          "继续下注",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P15",
+      "title": "此时才亮AJ",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": null,
+        "phase": "actual_showdown",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": true,
+        "opponentHole": [
+          "As",
+          "Jc"
+        ]
+      },
+      "task": {
+        "prompt": "对手实际AsJc，谁赢？",
+        "options": [
+          "对手一对A",
+          "自己一对Q",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P16",
+      "title": "当前净额与整手净额",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 90,
+        "villainStack": 111,
+        "actor": null,
+        "phase": "actual_settled",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": true,
+        "opponentHole": [
+          "As",
+          "Jc"
+        ]
+      },
+      "task": {
+        "prompt": "自己从整手100到90，整手净变化多少？",
+        "options": [
+          -10,
+          0,
+          -21,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "P17",
+      "title": "不能从坏结果倒推下注",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "Ah"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 90,
+        "villainStack": 111,
+        "actor": null,
+        "phase": "actual_settled",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": true,
+        "opponentHole": [
+          "As",
+          "Jc"
+        ]
+      },
+      "task": {
+        "prompt": "能只因这次AJ配A，就改判之前一定该下注保护吗？",
+        "options": [
+          "不能，仍要比较事前全部候选和成本",
+          "能，出现坏牌说明过牌错了",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "T01",
+      "title": "可选：只改AJ愿不愿付钱",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "preview_response_change",
+        "modelIdentity": "AJ_calls_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "另一版本AJ全跟10.5、KK仍再全下，给定计划选什么？",
+        "options": [
+          "下注10.5",
+          "过牌",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "version": "AJ_calls_KK_jams",
+        "checkEV": 14.676136363636363,
+        "betEV": 18.852272727272727
+      },
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "T02",
+      "title": "指出改变的原因",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "preview_response_change",
+        "modelIdentity": "AJ_calls_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这个反转来自什么变化？",
+        "options": [
+          "AJ愿意付钱",
+          "自己的QQ变成更大对子",
+          "河牌已知安全",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "T03",
+      "title": "关闭后恢复原参考",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "actor": "SB",
+        "phase": "turn_unopened",
+        "modelIdentity": "AJ_folds_KK_jams",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭对照，实际主模型AJ面对10.5又怎样？",
+        "options": [
+          "全弃",
+          "全跟",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_protection_plan_comparison_not_full_target_strategy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "release": {
+    "actualOpponentPolicy": false,
+    "fullActionOptimum": false,
+    "unseenAssessment": false,
+    "learnerVerified": false,
+    "NL50Verified": false
+  }
+}

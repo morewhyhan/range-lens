@@ -1,0 +1,46 @@
+{
+  "id": "RANGE_DELTA_VISUAL_CLOSURE_V1",
+  "status": "paper_range_delta_visual_contract_not_runtime",
+  "purpose": "使动作前、物理过滤、动作筛选和后继范围在同一父帧中可读、可复算、可返回。",
+  "sourceDocuments": [
+    "124_p3到p4范围视觉交接合同.md",
+    "43_行动后范围怎么变_具体图表与开源参考.md",
+    "61_视觉导航与范围图语义统一合同.md",
+    "158_动作后范围变化视觉闭合合同.md"
+  ],
+  "stateSequence": ["rangeBefore","physicalAfter","actionAfter","successorAfter"],
+  "viewRules": {
+    "onePrimaryChart": true,
+    "same13x13Coordinate": true,
+    "sameScaleBeforeAfter": true,
+    "sameDenominator": true,
+    "sideBySideOnlyOnActiveComparison": true,
+    "cellDrilldownRequired": true,
+    "parentRestoredAfterClose": true
+  },
+  "semanticStates": ["physicalImpossible","actionFiltered","relativeShareIncrease","unknownReference"],
+  "requiredCellFields": ["combo","beforeWeight","physicalWeight","actionProbability","afterWeight","share","changeReason","sourceFingerprint"],
+  "formulaFields": {
+    "physicalWeight": "w_before * f_physical",
+    "referenceAfter": "w_physical * p_ref",
+    "courseAfter": "w_physical * q_course",
+    "delta": "courseAfter - referenceAfter"
+  },
+  "releaseGates": {
+    "physicalLegalityChecked": true,
+    "rangeBeforeHasSource": true,
+    "policyHasSource": true,
+    "sameCoordinateAndDenominator": true,
+    "successorRegistered": true,
+    "unknownDistinctFromZero": true,
+    "physicalDistinctFromAction": true
+  },
+  "currentEvidence": {
+    "contractWritten": true,
+    "staticFiguresReviewed": true,
+    "matchedReference": false,
+    "rangeRuntime": false,
+    "beginnerTrial": false,
+    "NL50Evidence": false
+  }
+}

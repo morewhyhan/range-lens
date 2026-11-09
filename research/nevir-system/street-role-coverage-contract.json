@@ -1,0 +1,62 @@
+{
+  "status": "declarative_street_role_coverage_matrix_not_complete",
+  "source": "57_逐街角色与行动分支完整覆盖矩阵.md",
+  "axes": {
+    "streets": ["preflop","flop","turn","river","settlement"],
+    "roles": ["preflop_last_raiser","preflop_caller","bb_defender","current_actor","observer"],
+    "decisionStates": ["free","facing_bet","facing_raise","facing_allin","terminal"],
+    "positionRelations": ["IP","OOP","blind_vs_blind","other_declared"]
+  },
+  "requiredPerApplicableCell": [
+    "completeHistory",
+    "roleAndPosition",
+    "startingRanges",
+    "actionAfterRanges",
+    "physicalJointFilter",
+    "legalActionMenu",
+    "amountsAndRake",
+    "actionFrequencyOrCoursePolicy",
+    "evOrDeclaredPrecision",
+    "successorsAndTerminals",
+    "beforeAfterRangeViews",
+    "guidedIndependentTransfer",
+    "errorAndReturnRule"
+  ],
+  "streetRequirements": [
+    {"id":"preflop","routeStops":["L1","L2","L3","L4"],"minimumIdentity":"chartAndStartingRange"},
+    {"id":"flop","routeStops":["L5","L6","L7"],"minimumIdentity":"historyBoardRangeDecision"},
+    {"id":"turn","routeStops":["L7"],"minimumIdentity":"inheritedHistoryNewCardResponse"},
+    {"id":"river","routeStops":["L7","L8"],"minimumIdentity":"noFutureImprovementCurrentAction"},
+    {"id":"settlement","routeStops":["L8"],"minimumIdentity":"terminalLedgerAndReview"}
+  ],
+  "roleAuditSnapshot": {
+    "originalCoarseCells": 48,
+    "roleAwareCells": 96,
+    "existingQuestions": 85,
+    "lastRaiserQuestions": 85,
+    "callerQuestions": 0,
+    "partialLocalModelCells": 6,
+    "completeTargetPolicyCells": 0
+  },
+  "releaseStates": ["fact","demonstration","course_policy","reference_policy_ready","not_open"],
+  "rules": {
+    "currentResponseDoesNotProvePreflopCallerPolicy": true,
+    "physicalFilterDoesNotMeanActionFilter": true,
+    "staticOverallChartDoesNotProvePerHandStrategy": true,
+    "missingSuccessorStopsExactContinuousLesson": true,
+    "resultDoesNotRewriteFirstAnswer": true,
+    "notApplicableCellsAreNotMissingEvidence": true
+  },
+  "currentCoverage": {
+    "preflopChartFacts": true,
+    "preflopStartingRangeBridgePartial": true,
+    "flopLastRaiserPartial": true,
+    "flopCallerComplete": false,
+    "turnCompleteResponses": false,
+    "riverCompleteResponses": false,
+    "settlementRuleChecksPartial": true,
+    "completeMultiStreetSuccessors": false,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  }
+}

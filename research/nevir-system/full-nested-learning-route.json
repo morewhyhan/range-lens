@@ -1,0 +1,2112 @@
+{
+  "id": "FULL_NESTED_LEARNING_ROUTE_V1",
+  "status": "paper_full_sequence_compiled_not_trialed",
+  "purpose": "把外层顺序、首遍代表题和35项完整熟练路线编成同一个可返回的嵌套路由。",
+  "sources": [
+    "learner-goal-route-canonical.json",
+    "unit-architecture-bridge.json",
+    "first-pass-representative-units.json",
+    "principle-practice-queue.json"
+  ],
+  "outerRoute": [
+    {
+      "id": "L0",
+      "next": "L1",
+      "output": "table_goal"
+    },
+    {
+      "id": "L1",
+      "next": "L2",
+      "output": "preflop_context"
+    },
+    {
+      "id": "L2",
+      "next": "L3",
+      "output": "grid_cell"
+    },
+    {
+      "id": "L3",
+      "next": "L4",
+      "output": "preflop_action_identity"
+    },
+    {
+      "id": "L4",
+      "next": "p1",
+      "output": "range_handoff_snapshot"
+    },
+    {
+      "id": "p1",
+      "next": "p2",
+      "output": "postflop_context"
+    },
+    {
+      "id": "p2",
+      "next": "p3",
+      "output": "hand_strength_and_improvement"
+    },
+    {
+      "id": "p3",
+      "next": "p4",
+      "output": "range_delta"
+    },
+    {
+      "id": "p4",
+      "next": "p5",
+      "output": "course_action_selection"
+    },
+    {
+      "id": "p5",
+      "next": "p6",
+      "output": "ledger_and_actor"
+    },
+    {
+      "id": "p6",
+      "next": "p7",
+      "output": "state_update"
+    },
+    {
+      "id": "p7",
+      "next": "exit_or_review",
+      "output": "settlement_error_layer_transfer"
+    }
+  ],
+  "mainRoute": [
+    "p1_context",
+    "p2_board",
+    "p3_range",
+    "p4_compare",
+    "p5_execute",
+    "p6_update",
+    "p7_close"
+  ],
+  "innerRoute": [
+    {
+      "id": "p1_context",
+      "plainLabel": "先确认现在是什么局面",
+      "question": "谁在什么位置、前面发生了什么、现在轮到谁？",
+      "handoff": "contextSnapshot",
+      "childGroups": []
+    },
+    {
+      "id": "p2_board",
+      "plainLabel": "再看牌面和自己的牌",
+      "question": "我现在组成了什么牌，下一张可能怎样改变？",
+      "handoff": "handAndBoardFacts",
+      "childGroups": [
+        "board_texture_six_class",
+        "hand_rank_ladder"
+      ]
+    },
+    {
+      "id": "p3_range",
+      "plainLabel": "看双方还可能有什么牌",
+      "question": "哪些牌仍然可能存在，哪些只是被我手里的牌拿走了？",
+      "handoff": "rangeBeforeAndPhysicalRemoval",
+      "childGroups": []
+    },
+    {
+      "id": "p4_compare",
+      "plainLabel": "比较当前选择",
+      "question": "在这些牌、这个价格和这个历史下，哪个合法选择更合算？",
+      "handoff": "courseDecisionCandidate",
+      "childGroups": [
+        "compare.unopened",
+        "compare.bet",
+        "compare.raise"
+      ]
+    },
+    {
+      "id": "p5_execute",
+      "plainLabel": "执行动作并记清金额",
+      "question": "我要按哪个动作、多少金额，把行动权交给谁？",
+      "handoff": "actionLedgerAndActor",
+      "childGroups": []
+    },
+    {
+      "id": "p6_update",
+      "plainLabel": "更新局面和范围",
+      "question": "动作、回应或新牌具体改变了哪一件事？",
+      "handoff": "rangeAfterAndSuccessorOrStop",
+      "childGroups": [
+        "update.response",
+        "update.card"
+      ]
+    },
+    {
+      "id": "p7_close",
+      "plainLabel": "收口并准备迁移",
+      "question": "我能用一句话说明这一步为什么结束、下一次改哪个字段吗？",
+      "handoff": "closeAndTransferField",
+      "childGroups": []
+    }
+  ],
+  "innerRouteContract": {
+    "oneQuestionAtATime": true,
+    "onePrimaryActionAtATime": true,
+    "childOpensOnlyFromParent": true,
+    "parentRestoredBeforeNextChild": true,
+    "missingEvidenceStopsAtCurrentParent": true,
+    "strategyIsNeverInferredFromBoardFactAlone": true,
+    "rangeAndLedgerMustTravelTogether": true
+  },
+  "firstPass": {
+    "rule": "先走完整外层和七个翻后父步骤；每个后台组只打开一个代表子题，建立“进入—判断—返回”的结构。",
+    "sequence": [
+      "1.5",
+      "2.1",
+      "3.1",
+      "4.5",
+      "5.7"
+    ],
+    "representativePerGroup": true,
+    "groupCounts": {
+      "compare.unopened": 8,
+      "compare.bet": 7,
+      "compare.raise": 6,
+      "update.response": 6,
+      "update.card": 8
+    },
+    "afterEachChild": "restore_parent_and_continue_main_route",
+    "doesNotClaim": [
+      "all35_mastery",
+      "matched_strategy",
+      "NL50"
+    ]
+  },
+  "masteryPass": {
+    "rule": "沿用首遍已经建立的父帧顺序，在同一父帧内按组和组内顺序逐项开放35个子题；不建立35项首页。",
+    "sequence": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7",
+      "1.8",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "5.7",
+      "5.8"
+    ],
+    "groupOrder": [
+      "compare.unopened",
+      "compare.bet",
+      "compare.raise",
+      "update.response",
+      "update.card"
+    ],
+    "allUnitsCount": 35,
+    "afterEachChild": "restore_parent_before_next_child",
+    "noFlatHome": true
+  },
+  "progression": [
+    {
+      "id": "map",
+      "purpose": "展示当前父步骤、唯一问题和返回点",
+      "independent": false
+    },
+    {
+      "id": "guided",
+      "purpose": "保留必要事实和一个对照",
+      "independent": false
+    },
+    {
+      "id": "independent",
+      "purpose": "隐藏提示，只保留必要输入",
+      "independent": true
+    },
+    {
+      "id": "adjacent",
+      "purpose": "只改变一个字段，检查结构迁移",
+      "independent": true
+    },
+    {
+      "id": "delayed",
+      "purpose": "隔开目标机制后重新召回",
+      "independent": true
+    },
+    {
+      "id": "continuous",
+      "purpose": "串起动作、范围、账本和后继",
+      "independent": true
+    }
+  ],
+  "unitFrameContract": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "oneOpenChildAtATime": true,
+    "parentRestoredBeforeNextChild": true,
+    "firstAnswerPreserved": true,
+    "unknownCountsAsWrong": true,
+    "missingEvidenceStopsAtUnit": true,
+    "missingSuccessorStopsContinuousRoute": true,
+    "strategyIdentityMustBeExplicit": true,
+    "rangeAfterMustUseSameDenominator": true
+  },
+  "units": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 1,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "先点出较差而愿意跟的一组，再移动它支付的钱",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 2,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "点出会反超的实际跑牌，再比较退出或继续",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "active-plan-models.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 3,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "先指出本来赢自己且会退出的候选",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 4,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "分别点出过牌、被跟、被加后还保留什么机会",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "active-plan-models.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 5,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "同一手比较差牌付款还是全部退出",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": true,
+      "firstPassRole": "representative",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 6,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "固定强牌，比较直接下注与诱发弱牌投入",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 7,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "把所有候选分支合起来看是否值得继续投入",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 8,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "只改金额及对应响应，再比较差额",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 1,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "把可赢价值与可赢诈唬分开，再比较跟和加",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": true,
+      "firstPassRole": "representative",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 2,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "固定价格改变诈唬份量，再固定范围改价格",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 3,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "先看成花仍输，再打开未来承压分支",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 4,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "点当前可赢与当前落后两组，合并去重后的终局份额，再比较全下跟弃",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "made-plus-draw-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 5,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "固定强牌，看差牌跟加与只继续下注的差异",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 6,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "只改对加注的弃牌分支，重新比较",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 7,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "把跟/加所有后续计完，允许直接弃牌",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 1,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "在原筹码上摆出新的待补与跟后池",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": true,
+      "firstPassRole": "representative",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 2,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "保留原差牌付款者作对照，再看谁真正加注",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 3,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "把再加后的未来和剩余投入重新展开",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 4,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "看更差牌是否仍付钱，是否失去后续诈唬",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 5,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "分别点被移除的继续牌与弃牌，再算整条再加线",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "bluff-reraise-model.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "childOrder": 6,
+      "primaryArchitectureNode": "A5",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "oneQuestion": "只点合法菜单；区分自己全下仍待回应",
+      "onePrimaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "outputProjection": [
+        "courseDecision",
+        "amountOrNoBet",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "evidence": "first-pass-structure-packet.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 1,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "按实际响应留下候选，保留慢打可能",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 2,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "不删除所有弱牌，按有依据的过牌概率更新",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 3,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "两边分别保留实际走该线的候选",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "self-range-outcome-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 4,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "同牌钱换历史，重新筛选并比较",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 5,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "筹码进池、后手减少、移动行动者",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "first-hand-lesson-packet.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": true,
+      "firstPassRole": "representative",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 6,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "并排比较当时的依据和某一次输赢，不倒推",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "self-range-outcome-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 1,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "只亮出新加入最佳五张的实体牌",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 2,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "只在实际留下的候选里看改善",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 3,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "分别点成顺/成花者及仍在听者",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 4,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "公共牌成对后重新拼五张",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 5,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "同一高牌让某组降级、另一组配到",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 6,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "先指出没变的关系，再带回历史与价格",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 7,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "含新牌的组合划除，其余继承权重",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": true,
+      "firstPassRole": "representative",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "childOrder": 8,
+      "primaryArchitectureNode": "A7",
+      "prerequisites": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "oneQuestion": "关闭未来补牌理由，转向当前胜负与付款/退出",
+      "onePrimaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "outputProjection": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "evidence": "blocker-teaching-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "releaseIdentity": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReason": "no_complete_range_or_successor_reference",
+      "opensOnlyFromParent": true,
+      "flatHomeVisible": false,
+      "firstPassVisible": false,
+      "firstPassRole": "deferred_child",
+      "practiceLanes": [
+        "same_mechanism",
+        "adjacent_contrast",
+        "delayed_recall",
+        "continuous_integration"
+      ],
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    }
+  ],
+  "completionEvidence": [
+    {
+      "id": "order_recall",
+      "evidence": "能在隐藏标题后说出L0→L4和p1→p7顺序",
+      "required": "firstPass"
+    },
+    {
+      "id": "parent_return",
+      "evidence": "每个子题完成后回到正确父帧，不跳到首页",
+      "required": "firstPass"
+    },
+    {
+      "id": "all35_route",
+      "evidence": "35项都在同一父帧链中逐项开放且各自有停止原因",
+      "required": "masteryPass"
+    },
+    {
+      "id": "one_variable_transfer",
+      "evidence": "只改一个字段时能指出需重查的层",
+      "required": "adjacent"
+    },
+    {
+      "id": "continuous_integration",
+      "evidence": "动作、范围、账本、后继和结果分离地连续传递",
+      "required": "continuous"
+    },
+    {
+      "id": "unseen_transfer",
+      "evidence": "陌生牌面能沿同一路由找到当前步骤并完成慢速判断",
+      "required": "release"
+    }
+  ],
+  "currentEvidence": {
+    "routeCompiled": true,
+    "all35Mapped": true,
+    "runtimeImplemented": false,
+    "completeMatchedStrategy": false,
+    "lowBaselineTrial": false,
+    "unseenTransfer": false,
+    "NL50Evidence": false
+  }
+}

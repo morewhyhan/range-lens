@@ -1,0 +1,17 @@
+{
+  "id": "A72_RANGE_HANDOFF_CANDIDATE_V1",
+  "status": "fact_candidate_not_attached_to_first_hand",
+  "insertAfter":"S04",
+  "insertBefore":"S05",
+  "parent":"p3_range",
+  "context":{"players":6,"effectiveStackBB":100,"preflop":"BTN_open_SB_3bet_BTN_call","board":["Ah","9c","2h"],"heroHole":["Ac","Qd"],"hero":"SB","opponent":"BTN"},
+  "sourceRangeIds":["open-BTN","threebet-SB"],
+  "sourceRole":"starting_range_coordinate_only",
+  "task":{"prompt":"先不选下注。已知公共牌和我的底牌后，下面哪一组牌在对手手里已经不可能？","options":["AcKc","KsQs","所有带A的牌都不可能","我不知道"],"correctOption":"AcKc","answerIdentity":"physical_fact"},
+  "teacherExplanation":"Ac is already held by hero, so AcKc is physically impossible. KsQs has no known-card conflict and remains a physical candidate. This does not infer BTN action frequency or a post-action posterior.",
+  "visualContract":{"rangeBefore":"show open-BTN and threebet-SB same coordinate","physicalFilter":"cross exact conflicting combo","rangeAfter":"show physical candidate status only","actionFilter":"not_available","unknownLabel":"insufficient_reference"},
+  "returnTo":"p4_compare",
+  "requiredNextEvidence":["matched_action_filter","fixed_denominator_after_range","unseen_physical_vs_action_transfer"],
+  "releaseRules":{"physicalFactMayPublishAsFact":true,"physicalFactMayNotPublishAsStrategy":true,"missingReferenceStopsExactGrade":true,"candidateDoesNotCompleteP3":true},
+  "currentStatus":{"candidateCheckedForKnownCardConflict":true,"attachedToFirstHand":false,"completeP3RangeHandoff":false,"matchedReference":false,"learnerTrial":false}
+}

@@ -1,0 +1,279 @@
+{
+  "sha": "1d34a02c8e67fa5274d10620a74b6844472028fb",
+  "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/1d34a02c8e67fa5274d10620a74b6844472028fb",
+  "tree": [
+    {
+      "path": ".clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc1a4e88ee30c57ed969651f63d04154ab79fc24",
+      "size": 2598,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/cc1a4e88ee30c57ed969651f63d04154ab79fc24"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79e2a74710ca728855c17e4f1b2da99f50273211",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/79e2a74710ca728855c17e4f1b2da99f50273211"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daa76b50dad44a11b5bb3b1590ab849db4356d7d",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/daa76b50dad44a11b5bb3b1590ab849db4356d7d"
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a23449a6480f384ca320c65d64363eb26c837d80",
+      "size": 2326,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/a23449a6480f384ca320c65d64363eb26c837d80"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83a9658e990e9ee6ec6180dbe764d43b0c0b5f08",
+      "size": 97,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/83a9658e990e9ee6ec6180dbe764d43b0c0b5f08"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a90eb86150542c0283e6e7a9c45ceef1ec376b0c",
+      "size": 86,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/a90eb86150542c0283e6e7a9c45ceef1ec376b0c"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72cfa4c18f12e154b66ece4cc49ab64e910f49a6",
+      "size": 1790,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/72cfa4c18f12e154b66ece4cc49ab64e910f49a6"
+    },
+    {
+      "path": "CMakePresets.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f63b195e4cf998fd4d769417efbe91a6bf39cde",
+      "size": 264,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/7f63b195e4cf998fd4d769417efbe91a6bf39cde"
+    },
+    {
+      "path": "MANIFEST.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5182490085f55b08a1413ef186b197934500970",
+      "size": 161,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/d5182490085f55b08a1413ef186b197934500970"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b474bc0ba51353211a58384213f91fc6962beef4",
+      "size": 1020,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/b474bc0ba51353211a58384213f91fc6962beef4"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b028dfb7bf4b07c83bc74392a202a52fdeb1b9e",
+      "size": 4313,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/6b028dfb7bf4b07c83bc74392a202a52fdeb1b9e"
+    },
+    {
+      "path": "benchmark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eed196299fde063aa3a0a1073a1d2197ddfc70b5",
+      "size": 3356,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/eed196299fde063aa3a0a1073a1d2197ddfc70b5"
+    },
+    {
+      "path": "eqcalc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ae545d054240b2ebb2a827ca90271f8a41bbd89",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/1ae545d054240b2ebb2a827ca90271f8a41bbd89"
+    },
+    {
+      "path": "eqcalc/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c929a73c0a52b14a6fd8cddee530aa8bb239b7d",
+      "size": 360,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/6c929a73c0a52b14a6fd8cddee530aa8bb239b7d"
+    },
+    {
+      "path": "pybind11",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "a2e59f0e7065404b44dfe92a28aca47ba1378dc4"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68ab813ba7c28b380dac132b14e1633ee626b6b",
+      "size": 266,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/a68ab813ba7c28b380dac132b14e1633ee626b6b"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf1411bbc5daa217db1014ff2f0aeabe5890852f",
+      "size": 2843,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/bf1411bbc5daa217db1014ff2f0aeabe5890852f"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b09befcf2893a8f58a3bbb8886ca8846d2fd364",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/9b09befcf2893a8f58a3bbb8886ca8846d2fd364"
+    },
+    {
+      "path": "src/eqcalc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5ec31fef09d3ca1a96757ce9b2647c2fc0cf3fa",
+      "size": 27011,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/c5ec31fef09d3ca1a96757ce9b2647c2fc0cf3fa"
+    },
+    {
+      "path": "src/holdem_preflop.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44b1481b683c4ca05b4324625c1847bba75ef071",
+      "size": 2988,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/44b1481b683c4ca05b4324625c1847bba75ef071"
+    },
+    {
+      "path": "src/holdem_preflop_table.inc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93ebd237ca6a4fa1f5b923ba3f5b147ec503299c",
+      "size": 1349661,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/93ebd237ca6a4fa1f5b923ba3f5b147ec503299c"
+    },
+    {
+      "path": "src/poker_hand.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7457cf8609b5045de4f8cee834cf84d88bddc4b1",
+      "size": 8605,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/7457cf8609b5045de4f8cee834cf84d88bddc4b1"
+    },
+    {
+      "path": "src/precalculated_tables.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2db25fe9af17c0bf23bbe03ad58b8a53b4489600",
+      "size": 778165,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/2db25fe9af17c0bf23bbe03ad58b8a53b4489600"
+    },
+    {
+      "path": "test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "643ff16c6230e37b55557317cb8af1e7c6219828",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/643ff16c6230e37b55557317cb8af1e7c6219828"
+    },
+    {
+      "path": "test/reference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2fcde050516d0f872b5e4c6ba9720cb98dc4ef7",
+      "size": 4899,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/a2fcde050516d0f872b5e4c6ba9720cb98dc4ef7"
+    },
+    {
+      "path": "test/test_against_reference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5816a11d2246a779c442a6ed510dc97e00e72489",
+      "size": 2781,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/5816a11d2246a779c442a6ed510dc97e00e72489"
+    },
+    {
+      "path": "test/test_float_api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "581647b4f89174f767321fcc06b16c3594777ed2",
+      "size": 2041,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/581647b4f89174f767321fcc06b16c3594777ed2"
+    },
+    {
+      "path": "test/test_gil.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59744233dc77aa20cab78081379f9f41207c31cb",
+      "size": 2616,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/59744233dc77aa20cab78081379f9f41207c31cb"
+    },
+    {
+      "path": "test/test_hold_em_equities.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6191feb5ffec63c40718373c31b35ecf446328ea",
+      "size": 3485,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/6191feb5ffec63c40718373c31b35ecf446328ea"
+    },
+    {
+      "path": "test/test_holdem_preflop_table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05d04086ee7bde50916cac5919ce9e38df3cf018",
+      "size": 3873,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/05d04086ee7bde50916cac5919ce9e38df3cf018"
+    },
+    {
+      "path": "test/test_plo_equities.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c77d5690de8724ae57e510ced115078bc42624a8",
+      "size": 5042,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/c77d5690de8724ae57e510ced115078bc42624a8"
+    },
+    {
+      "path": "test/test_validation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80878b099b30ec526213d9b1e896020fa7ed271b",
+      "size": 5599,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/80878b099b30ec526213d9b1e896020fa7ed271b"
+    },
+    {
+      "path": "test/util.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "542c7dbc1b57c62c20c384258106133ce1f79330",
+      "size": 331,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/542c7dbc1b57c62c20c384258106133ce1f79330"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b13f6331e1e90584d51845ebe7a8fb1cb60f55c3",
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/trees/b13f6331e1e90584d51845ebe7a8fb1cb60f55c3"
+    },
+    {
+      "path": "tools/generate_holdem_preflop_table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "029eba53a6fae4d49e64a0dfbc3a5fc51a31de49",
+      "size": 2998,
+      "url": "https://api.github.com/repos/gto-wizard/equity-calculator/git/blobs/029eba53a6fae4d49e64a0dfbc3a5fc51a31de49"
+    }
+  ],
+  "truncated": false
+}

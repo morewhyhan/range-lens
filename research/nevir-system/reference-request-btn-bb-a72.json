@@ -1,0 +1,7401 @@
+{
+  "status": "prepared_reference_inputs_not_solved",
+  "id": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "sourceHash": "3f262b0064bf83ddb581f4f268c7b6521acc86aac8e0571dade43ef6caa8d56a",
+  "sourceFiles": {
+    "ranges": "src/data/ranges.json",
+    "bbMapping": "src/preflop.js BTN2.5→普通中",
+    "bbMappingSHA256": "d324c140deb0aa75c28edc4c61bd558ef5ee9d9b78cbe37a6b9ce906f75fc973"
+  },
+  "context": {
+    "playersAtDeal": 6,
+    "postflopPlayers": 2,
+    "initialEffectiveBB": 100,
+    "oopSeat": "BB",
+    "ipSeat": "BTN",
+    "openToBB": 2.5,
+    "preflop": "UTG/HJ/CO fold; BTN opens2.5; SB folds; BB calls",
+    "flop": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "turn": null,
+    "river": null,
+    "firstActor": "BB",
+    "startingPotBB": 5.5,
+    "eachStackBB": 97.5,
+    "foldedStacksBB": 399.5,
+    "conditionTime": "Before BB first flop action; BB check not yet observed or imposed."
+  },
+  "ranges": {
+    "oop": {
+      "id": "bb-普通中",
+      "action": "call",
+      "source": "大盲防守",
+      "classWeights": {
+        "22": 1,
+        "33": 1,
+        "44": 1,
+        "55": 1,
+        "66": 0.5,
+        "77": 1,
+        "88": 1,
+        "99": 1,
+        "AA": 0,
+        "AKs": 0,
+        "AQs": 0,
+        "AJs": 1,
+        "ATs": 1,
+        "A9s": 1,
+        "A8s": 1,
+        "A7s": 1,
+        "A6s": 1,
+        "A5s": 0.5,
+        "A4s": 0.5,
+        "A3s": 1,
+        "A2s": 0.5,
+        "AKo": 0,
+        "KK": 0,
+        "KQs": 0.5,
+        "KJs": 0.5,
+        "KTs": 0.5,
+        "K9s": 1,
+        "K8s": 1,
+        "K7s": 1,
+        "K6s": 0.5,
+        "K5s": 0.5,
+        "K4s": 0.5,
+        "K3s": 1,
+        "K2s": 1,
+        "AQo": 1,
+        "KQo": 1,
+        "QQ": 0,
+        "QJs": 0,
+        "QTs": 0.5,
+        "Q9s": 0.5,
+        "Q8s": 0.5,
+        "Q7s": 1,
+        "Q6s": 0.5,
+        "Q5s": 1,
+        "Q4s": 1,
+        "Q3s": 0,
+        "Q2s": 0,
+        "AJo": 1,
+        "KJo": 1,
+        "QJo": 1,
+        "JJ": 0,
+        "JTs": 0.5,
+        "J9s": 0.5,
+        "J8s": 0.5,
+        "J7s": 0.5,
+        "J6s": 0,
+        "J5s": 0,
+        "J4s": 0,
+        "J3s": 0,
+        "J2s": 0,
+        "ATo": 1,
+        "KTo": 0.5,
+        "QTo": 0.5,
+        "JTo": 1,
+        "TT": 0.5,
+        "T9s": 0.5,
+        "T8s": 1,
+        "T7s": 1,
+        "T6s": 0,
+        "T5s": 0,
+        "T4s": 0,
+        "T3s": 0,
+        "T2s": 0,
+        "A9o": 1,
+        "K9o": 0,
+        "Q9o": 0,
+        "J9o": 0,
+        "T9o": 0.5,
+        "98s": 1,
+        "97s": 1,
+        "96s": 1,
+        "95s": 0,
+        "94s": 0,
+        "93s": 0,
+        "92s": 0,
+        "A8o": 0.5,
+        "K8o": 0,
+        "Q8o": 0,
+        "J8o": 0,
+        "T8o": 0,
+        "98o": 0,
+        "87s": 0.5,
+        "86s": 1,
+        "85s": 1,
+        "84s": 0,
+        "83s": 0,
+        "82s": 0,
+        "A7o": 0,
+        "K7o": 0,
+        "Q7o": 0,
+        "J7o": 0,
+        "T7o": 0,
+        "97o": 0,
+        "87o": 0,
+        "76s": 0.5,
+        "75s": 1,
+        "74s": 1,
+        "73s": 0,
+        "72s": 0,
+        "A6o": 0,
+        "K6o": 0,
+        "Q6o": 0,
+        "J6o": 0,
+        "T6o": 0,
+        "96o": 0,
+        "86o": 0,
+        "76o": 0,
+        "65s": 0.5,
+        "64s": 1,
+        "63s": 1,
+        "62s": 0,
+        "A5o": 0,
+        "K5o": 0,
+        "Q5o": 0,
+        "J5o": 0,
+        "T5o": 0,
+        "95o": 0,
+        "85o": 0,
+        "75o": 0,
+        "65o": 0,
+        "54s": 0.5,
+        "53s": 1,
+        "52s": 1,
+        "A4o": 0,
+        "K4o": 0,
+        "Q4o": 0,
+        "J4o": 0,
+        "T4o": 0,
+        "94o": 0,
+        "84o": 0,
+        "74o": 0,
+        "64o": 0,
+        "54o": 0,
+        "43s": 1,
+        "42s": 0,
+        "A3o": 0,
+        "K3o": 0,
+        "Q3o": 0,
+        "J3o": 0,
+        "T3o": 0,
+        "93o": 0,
+        "83o": 0,
+        "73o": 0,
+        "63o": 0,
+        "53o": 0,
+        "43o": 0,
+        "32s": 0,
+        "A2o": 0,
+        "K2o": 0,
+        "Q2o": 0,
+        "J2o": 0,
+        "T2o": 0,
+        "92o": 0,
+        "82o": 0,
+        "72o": 0,
+        "62o": 0,
+        "52o": 0,
+        "42o": 0,
+        "32o": 0
+      },
+      "rangeStringDraft": "22:1,33:1,44:1,55:1,66:0.5,77:1,88:1,99:1,AJs:1,ATs:1,A9s:1,A8s:1,A7s:1,A6s:1,A5s:0.5,A4s:0.5,A3s:1,A2s:0.5,KQs:0.5,KJs:0.5,KTs:0.5,K9s:1,K8s:1,K7s:1,K6s:0.5,K5s:0.5,K4s:0.5,K3s:1,K2s:1,AQo:1,KQo:1,QTs:0.5,Q9s:0.5,Q8s:0.5,Q7s:1,Q6s:0.5,Q5s:1,Q4s:1,AJo:1,KJo:1,QJo:1,JTs:0.5,J9s:0.5,J8s:0.5,J7s:0.5,ATo:1,KTo:0.5,QTo:0.5,JTo:1,TT:0.5,T9s:0.5,T8s:1,T7s:1,A9o:1,T9o:0.5,98s:1,97s:1,96s:1,A8o:0.5,87s:0.5,86s:1,85s:1,76s:0.5,75s:1,74s:1,65s:0.5,64s:1,63s:1,54s:0.5,53s:1,52s:1,43s:1",
+      "rootHands": [
+        {
+          "hole": [
+            "2s",
+            "2h"
+          ],
+          "hand": "22",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2s",
+            "2c"
+          ],
+          "hand": "22",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2s",
+            "5s"
+          ],
+          "hand": "52s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2s",
+            "Ks"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "2c"
+          ],
+          "hand": "22",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "5h"
+          ],
+          "hand": "52s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "Kh"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "Ah"
+          ],
+          "hand": "A2s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "2c",
+            "5c"
+          ],
+          "hand": "52s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2c",
+            "Kc"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2c",
+            "Ac"
+          ],
+          "hand": "A2s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3s",
+            "3h"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "3d"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "4s"
+          ],
+          "hand": "43s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "5s"
+          ],
+          "hand": "53s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "6s"
+          ],
+          "hand": "63s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "Ks"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "3d"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "4h"
+          ],
+          "hand": "43s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "5h"
+          ],
+          "hand": "53s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "6h"
+          ],
+          "hand": "63s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Kh"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Ah"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "4d"
+          ],
+          "hand": "43s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "5d"
+          ],
+          "hand": "53s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "6d"
+          ],
+          "hand": "63s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Kd"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Ad"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "4c"
+          ],
+          "hand": "43s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "5c"
+          ],
+          "hand": "53s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "6c"
+          ],
+          "hand": "63s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "Kc"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "Ac"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4h"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4d"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "5s"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4s",
+            "6s"
+          ],
+          "hand": "64s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "7s"
+          ],
+          "hand": "74s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Qs"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Ks"
+          ],
+          "hand": "K4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4h",
+            "4d"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "5h"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4h",
+            "6h"
+          ],
+          "hand": "64s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Qh"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Kh"
+          ],
+          "hand": "K4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4h",
+            "Ah"
+          ],
+          "hand": "A4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4d",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "5d"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4d",
+            "6d"
+          ],
+          "hand": "64s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "7d"
+          ],
+          "hand": "74s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Qd"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Kd"
+          ],
+          "hand": "K4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4d",
+            "Ad"
+          ],
+          "hand": "A4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4c",
+            "5c"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4c",
+            "6c"
+          ],
+          "hand": "64s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "7c"
+          ],
+          "hand": "74s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Qc"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Kc"
+          ],
+          "hand": "K4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4c",
+            "Ac"
+          ],
+          "hand": "A4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5s",
+            "5h"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "5d"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "6s"
+          ],
+          "hand": "65s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5s",
+            "7s"
+          ],
+          "hand": "75s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "8s"
+          ],
+          "hand": "85s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Qs"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Ks"
+          ],
+          "hand": "K5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5h",
+            "5d"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "6h"
+          ],
+          "hand": "65s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5h",
+            "8h"
+          ],
+          "hand": "85s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Qh"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Kh"
+          ],
+          "hand": "K5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5h",
+            "Ah"
+          ],
+          "hand": "A5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5d",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "6d"
+          ],
+          "hand": "65s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5d",
+            "7d"
+          ],
+          "hand": "75s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "8d"
+          ],
+          "hand": "85s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Qd"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Kd"
+          ],
+          "hand": "K5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5d",
+            "Ad"
+          ],
+          "hand": "A5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5c",
+            "6c"
+          ],
+          "hand": "65s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5c",
+            "7c"
+          ],
+          "hand": "75s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "8c"
+          ],
+          "hand": "85s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Qc"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Kc"
+          ],
+          "hand": "K5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5c",
+            "Ac"
+          ],
+          "hand": "A5s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "6h"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "6d"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "7s"
+          ],
+          "hand": "76s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "8s"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "9s"
+          ],
+          "hand": "96s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Qs"
+          ],
+          "hand": "Q6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "Ks"
+          ],
+          "hand": "K6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "6d"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "8h"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "9h"
+          ],
+          "hand": "96s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Qh"
+          ],
+          "hand": "Q6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "Kh"
+          ],
+          "hand": "K6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "Ah"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6d",
+            "7d"
+          ],
+          "hand": "76s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6d",
+            "8d"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "9d"
+          ],
+          "hand": "96s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Qd"
+          ],
+          "hand": "Q6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6d",
+            "Kd"
+          ],
+          "hand": "K6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6d",
+            "Ad"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "7c"
+          ],
+          "hand": "76s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6c",
+            "8c"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "9c"
+          ],
+          "hand": "96s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Qc"
+          ],
+          "hand": "Q6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6c",
+            "Kc"
+          ],
+          "hand": "K6s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6c",
+            "Ac"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "7d"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "7c"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "8s"
+          ],
+          "hand": "87s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7s",
+            "9s"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ts"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Js"
+          ],
+          "hand": "J7s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7s",
+            "Qs"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ks"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "7c"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "8d"
+          ],
+          "hand": "87s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7d",
+            "9d"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Td"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Jd"
+          ],
+          "hand": "J7s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7d",
+            "Qd"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Kd"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Ad"
+          ],
+          "hand": "A7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "8c"
+          ],
+          "hand": "87s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7c",
+            "9c"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Tc"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Jc"
+          ],
+          "hand": "J7s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "7c",
+            "Qc"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Kc"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Ac"
+          ],
+          "hand": "A7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8h"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8d"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "9s"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ts"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Js"
+          ],
+          "hand": "J8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Qs"
+          ],
+          "hand": "Q8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Ks"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "8d"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "9h"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Th"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Jh"
+          ],
+          "hand": "J8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Qh"
+          ],
+          "hand": "Q8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Kh"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ah"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "9d"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Td"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Jd"
+          ],
+          "hand": "J8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Qd"
+          ],
+          "hand": "Q8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Kd"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Ad"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "9c"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Tc"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Jc"
+          ],
+          "hand": "J8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Qc"
+          ],
+          "hand": "Q8s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Kc"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Ac"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9h"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9d"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ts"
+          ],
+          "hand": "T9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Js"
+          ],
+          "hand": "J9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Qs"
+          ],
+          "hand": "Q9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9s",
+            "Ks"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "9d"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Th"
+          ],
+          "hand": "T9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Jh"
+          ],
+          "hand": "J9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Qh"
+          ],
+          "hand": "Q9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9h",
+            "Kh"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ah"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Td"
+          ],
+          "hand": "T9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Jd"
+          ],
+          "hand": "J9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Qd"
+          ],
+          "hand": "Q9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9d",
+            "Kd"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ad"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Tc"
+          ],
+          "hand": "T9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Jc"
+          ],
+          "hand": "J9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Qc"
+          ],
+          "hand": "Q9s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "9c",
+            "Kc"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ac"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Th"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Td"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Js"
+          ],
+          "hand": "JTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qs"
+          ],
+          "hand": "QTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ks"
+          ],
+          "hand": "KTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Td"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Jh"
+          ],
+          "hand": "JTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Qh"
+          ],
+          "hand": "QTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Kh"
+          ],
+          "hand": "KTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Th",
+            "Ah"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Jd"
+          ],
+          "hand": "JTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Qd"
+          ],
+          "hand": "QTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Kd"
+          ],
+          "hand": "KTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Td",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ad"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jc"
+          ],
+          "hand": "JTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qc"
+          ],
+          "hand": "QTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kc"
+          ],
+          "hand": "KTs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ac"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ks"
+          ],
+          "hand": "KJs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Js",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kh"
+          ],
+          "hand": "KJs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ah"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kd"
+          ],
+          "hand": "KJs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ad"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kc"
+          ],
+          "hand": "KJs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ac"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ks"
+          ],
+          "hand": "KQs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kh"
+          ],
+          "hand": "KQs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kd"
+          ],
+          "hand": "KQs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kc"
+          ],
+          "hand": "KQs",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        }
+      ],
+      "summary": {
+        "positivePreflopHands": 402,
+        "preflopMass": 328,
+        "positiveAfterFlop": 358,
+        "massAfterFlop": 289
+      },
+      "validation": "Local enumeration and independent rank/suit count agree; official solver parser not executed yet."
+    },
+    "ip": {
+      "id": "open-BTN",
+      "action": "raise",
+      "source": "开池图表",
+      "classWeights": {
+        "22": 0.5,
+        "33": 1,
+        "44": 1,
+        "55": 1,
+        "66": 1,
+        "77": 1,
+        "88": 1,
+        "99": 1,
+        "AA": 1,
+        "AKs": 1,
+        "AQs": 1,
+        "AJs": 1,
+        "ATs": 1,
+        "A9s": 1,
+        "A8s": 1,
+        "A7s": 1,
+        "A6s": 1,
+        "A5s": 1,
+        "A4s": 1,
+        "A3s": 1,
+        "A2s": 1,
+        "AKo": 1,
+        "KK": 1,
+        "KQs": 1,
+        "KJs": 1,
+        "KTs": 1,
+        "K9s": 1,
+        "K8s": 1,
+        "K7s": 1,
+        "K6s": 1,
+        "K5s": 1,
+        "K4s": 1,
+        "K3s": 1,
+        "K2s": 1,
+        "AQo": 1,
+        "KQo": 1,
+        "QQ": 1,
+        "QJs": 1,
+        "QTs": 1,
+        "Q9s": 1,
+        "Q8s": 1,
+        "Q7s": 1,
+        "Q6s": 1,
+        "Q5s": 1,
+        "Q4s": 1,
+        "Q3s": 1,
+        "Q2s": 0,
+        "AJo": 1,
+        "KJo": 1,
+        "QJo": 1,
+        "JJ": 1,
+        "JTs": 1,
+        "J9s": 1,
+        "J8s": 1,
+        "J7s": 1,
+        "J6s": 1,
+        "J5s": 1,
+        "J4s": 0.5,
+        "J3s": 0,
+        "J2s": 0,
+        "ATo": 1,
+        "KTo": 1,
+        "QTo": 1,
+        "JTo": 1,
+        "TT": 1,
+        "T9s": 1,
+        "T8s": 1,
+        "T7s": 1,
+        "T6s": 1,
+        "T5s": 0,
+        "T4s": 0,
+        "T3s": 0,
+        "T2s": 0,
+        "A9o": 1,
+        "K9o": 1,
+        "Q9o": 1,
+        "J9o": 1,
+        "T9o": 1,
+        "98s": 1,
+        "97s": 1,
+        "96s": 0.5,
+        "95s": 0,
+        "94s": 0,
+        "93s": 0,
+        "92s": 0,
+        "A8o": 1,
+        "K8o": 0.5,
+        "Q8o": 0,
+        "J8o": 0.5,
+        "T8o": 0.5,
+        "98o": 0,
+        "87s": 1,
+        "86s": 1,
+        "85s": 0,
+        "84s": 0,
+        "83s": 0,
+        "82s": 0,
+        "A7o": 1,
+        "K7o": 0,
+        "Q7o": 0,
+        "J7o": 0,
+        "T7o": 0,
+        "97o": 0,
+        "87o": 0,
+        "76s": 1,
+        "75s": 0.5,
+        "74s": 0,
+        "73s": 0,
+        "72s": 0,
+        "A6o": 1,
+        "K6o": 0,
+        "Q6o": 0,
+        "J6o": 0,
+        "T6o": 0,
+        "96o": 0,
+        "86o": 0,
+        "76o": 0,
+        "65s": 1,
+        "64s": 0,
+        "63s": 0,
+        "62s": 0,
+        "A5o": 1,
+        "K5o": 0,
+        "Q5o": 0,
+        "J5o": 0,
+        "T5o": 0,
+        "95o": 0,
+        "85o": 0,
+        "75o": 0,
+        "65o": 0,
+        "54s": 0.5,
+        "53s": 0,
+        "52s": 0,
+        "A4o": 1,
+        "K4o": 0,
+        "Q4o": 0,
+        "J4o": 0,
+        "T4o": 0,
+        "94o": 0,
+        "84o": 0,
+        "74o": 0,
+        "64o": 0,
+        "54o": 0,
+        "43s": 0,
+        "42s": 0,
+        "A3o": 0.5,
+        "K3o": 0,
+        "Q3o": 0,
+        "J3o": 0,
+        "T3o": 0,
+        "93o": 0,
+        "83o": 0,
+        "73o": 0,
+        "63o": 0,
+        "53o": 0,
+        "43o": 0,
+        "32s": 0,
+        "A2o": 0,
+        "K2o": 0,
+        "Q2o": 0,
+        "J2o": 0,
+        "T2o": 0,
+        "92o": 0,
+        "82o": 0,
+        "72o": 0,
+        "62o": 0,
+        "52o": 0,
+        "42o": 0,
+        "32o": 0
+      },
+      "rangeStringDraft": "22:0.5,33:1,44:1,55:1,66:1,77:1,88:1,99:1,AA:1,AKs:1,AQs:1,AJs:1,ATs:1,A9s:1,A8s:1,A7s:1,A6s:1,A5s:1,A4s:1,A3s:1,A2s:1,AKo:1,KK:1,KQs:1,KJs:1,KTs:1,K9s:1,K8s:1,K7s:1,K6s:1,K5s:1,K4s:1,K3s:1,K2s:1,AQo:1,KQo:1,QQ:1,QJs:1,QTs:1,Q9s:1,Q8s:1,Q7s:1,Q6s:1,Q5s:1,Q4s:1,Q3s:1,AJo:1,KJo:1,QJo:1,JJ:1,JTs:1,J9s:1,J8s:1,J7s:1,J6s:1,J5s:1,J4s:0.5,ATo:1,KTo:1,QTo:1,JTo:1,TT:1,T9s:1,T8s:1,T7s:1,T6s:1,A9o:1,K9o:1,Q9o:1,J9o:1,T9o:1,98s:1,97s:1,96s:0.5,A8o:1,K8o:0.5,J8o:0.5,T8o:0.5,87s:1,86s:1,A7o:1,76s:1,75s:0.5,A6o:1,65s:1,A5o:1,54s:0.5,A4o:1,A3o:0.5",
+      "rootHands": [
+        {
+          "hole": [
+            "2s",
+            "2h"
+          ],
+          "hand": "22",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "2s",
+            "2c"
+          ],
+          "hand": "22",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "2s",
+            "Ks"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "2c"
+          ],
+          "hand": "22",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "2h",
+            "Kh"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2h",
+            "Ah"
+          ],
+          "hand": "A2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2c",
+            "Kc"
+          ],
+          "hand": "K2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "2c",
+            "Ac"
+          ],
+          "hand": "A2s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "3h"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "3d"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "Qs"
+          ],
+          "hand": "Q3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "Ks"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3s",
+            "Ah"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3s",
+            "Ad"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3s",
+            "Ac"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3h",
+            "3d"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Qh"
+          ],
+          "hand": "Q3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Kh"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Ah"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3h",
+            "Ad"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3h",
+            "Ac"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3d",
+            "3c"
+          ],
+          "hand": "33",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Qd"
+          ],
+          "hand": "Q3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Kd"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Ah"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3d",
+            "Ad"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3d",
+            "Ac"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3c",
+            "Qc"
+          ],
+          "hand": "Q3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "Kc"
+          ],
+          "hand": "K3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "3c",
+            "Ah"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3c",
+            "Ad"
+          ],
+          "hand": "A3o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "3c",
+            "Ac"
+          ],
+          "hand": "A3s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4h"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4d"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "5s"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4s",
+            "Js"
+          ],
+          "hand": "J4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4s",
+            "Qs"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Ks"
+          ],
+          "hand": "K4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Ah"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Ad"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4s",
+            "Ac"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "4d"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "5h"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4h",
+            "Jh"
+          ],
+          "hand": "J4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4h",
+            "Qh"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Kh"
+          ],
+          "hand": "K4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Ah"
+          ],
+          "hand": "A4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Ad"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4h",
+            "Ac"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "4c"
+          ],
+          "hand": "44",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "5d"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4d",
+            "Jd"
+          ],
+          "hand": "J4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4d",
+            "Qd"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Kd"
+          ],
+          "hand": "K4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Ah"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Ad"
+          ],
+          "hand": "A4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4d",
+            "Ac"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "5c"
+          ],
+          "hand": "54s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4c",
+            "Jc"
+          ],
+          "hand": "J4s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "4c",
+            "Qc"
+          ],
+          "hand": "Q4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Kc"
+          ],
+          "hand": "K4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Ah"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Ad"
+          ],
+          "hand": "A4o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "4c",
+            "Ac"
+          ],
+          "hand": "A4s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "5h"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "5d"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "6s"
+          ],
+          "hand": "65s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "7s"
+          ],
+          "hand": "75s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5s",
+            "Js"
+          ],
+          "hand": "J5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Qs"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Ks"
+          ],
+          "hand": "K5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Ah"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Ad"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5s",
+            "Ac"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "5d"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "6h"
+          ],
+          "hand": "65s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Jh"
+          ],
+          "hand": "J5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Qh"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Kh"
+          ],
+          "hand": "K5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Ah"
+          ],
+          "hand": "A5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Ad"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5h",
+            "Ac"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "5c"
+          ],
+          "hand": "55",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "6d"
+          ],
+          "hand": "65s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "7d"
+          ],
+          "hand": "75s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5d",
+            "Jd"
+          ],
+          "hand": "J5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Qd"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Kd"
+          ],
+          "hand": "K5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Ah"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Ad"
+          ],
+          "hand": "A5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5d",
+            "Ac"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "6c"
+          ],
+          "hand": "65s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "7c"
+          ],
+          "hand": "75s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "5c",
+            "Jc"
+          ],
+          "hand": "J5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Qc"
+          ],
+          "hand": "Q5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Kc"
+          ],
+          "hand": "K5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Ah"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Ad"
+          ],
+          "hand": "A5o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "5c",
+            "Ac"
+          ],
+          "hand": "A5s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "6h"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "6d"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "7s"
+          ],
+          "hand": "76s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "8s"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "9s"
+          ],
+          "hand": "96s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6s",
+            "Ts"
+          ],
+          "hand": "T6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Js"
+          ],
+          "hand": "J6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Qs"
+          ],
+          "hand": "Q6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Ks"
+          ],
+          "hand": "K6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Ah"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Ad"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6s",
+            "Ac"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "6d"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "8h"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "9h"
+          ],
+          "hand": "96s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6h",
+            "Th"
+          ],
+          "hand": "T6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Jh"
+          ],
+          "hand": "J6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Qh"
+          ],
+          "hand": "Q6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Kh"
+          ],
+          "hand": "K6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Ah"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Ad"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6h",
+            "Ac"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "6c"
+          ],
+          "hand": "66",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "7d"
+          ],
+          "hand": "76s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "8d"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "9d"
+          ],
+          "hand": "96s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6d",
+            "Td"
+          ],
+          "hand": "T6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Jd"
+          ],
+          "hand": "J6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Qd"
+          ],
+          "hand": "Q6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Kd"
+          ],
+          "hand": "K6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Ah"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Ad"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6d",
+            "Ac"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "7c"
+          ],
+          "hand": "76s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "8c"
+          ],
+          "hand": "86s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "9c"
+          ],
+          "hand": "96s",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "6c",
+            "Tc"
+          ],
+          "hand": "T6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Jc"
+          ],
+          "hand": "J6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Qc"
+          ],
+          "hand": "Q6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Kc"
+          ],
+          "hand": "K6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Ah"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Ad"
+          ],
+          "hand": "A6o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "6c",
+            "Ac"
+          ],
+          "hand": "A6s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "7d"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "7c"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "8s"
+          ],
+          "hand": "87s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "9s"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ts"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Js"
+          ],
+          "hand": "J7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Qs"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ks"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ah"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ad"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7s",
+            "Ac"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "7c"
+          ],
+          "hand": "77",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "8d"
+          ],
+          "hand": "87s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "9d"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Td"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Jd"
+          ],
+          "hand": "J7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Qd"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Kd"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Ah"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Ad"
+          ],
+          "hand": "A7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7d",
+            "Ac"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "8c"
+          ],
+          "hand": "87s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "9c"
+          ],
+          "hand": "97s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Tc"
+          ],
+          "hand": "T7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Jc"
+          ],
+          "hand": "J7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Qc"
+          ],
+          "hand": "Q7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Kc"
+          ],
+          "hand": "K7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Ah"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Ad"
+          ],
+          "hand": "A7o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "7c",
+            "Ac"
+          ],
+          "hand": "A7s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8h"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8d"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "9s"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ts"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Th"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Td"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Tc"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Js"
+          ],
+          "hand": "J8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Jh"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Jd"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Jc"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Qs"
+          ],
+          "hand": "Q8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ks"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Kh"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Kd"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Kc"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8s",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8s",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "8d"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "9h"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ts"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Th"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Td"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Tc"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Js"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Jh"
+          ],
+          "hand": "J8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Jd"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Jc"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Qh"
+          ],
+          "hand": "Q8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ks"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Kh"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Kd"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Kc"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8h",
+            "Ah"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8h",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "8c"
+          ],
+          "hand": "88",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "9d"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ts"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Th"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Td"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Tc"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Js"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Jh"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Jd"
+          ],
+          "hand": "J8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Jc"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Qd"
+          ],
+          "hand": "Q8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ks"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Kh"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Kd"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Kc"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8d",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ad"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8d",
+            "Ac"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "9c"
+          ],
+          "hand": "98s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ts"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Th"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Td"
+          ],
+          "hand": "T8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Tc"
+          ],
+          "hand": "T8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Js"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Jh"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Jd"
+          ],
+          "hand": "J8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Jc"
+          ],
+          "hand": "J8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Qc"
+          ],
+          "hand": "Q8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ks"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Kh"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Kd"
+          ],
+          "hand": "K8o",
+          "weight": 0.5
+        },
+        {
+          "hole": [
+            "8c",
+            "Kc"
+          ],
+          "hand": "K8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ah"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ad"
+          ],
+          "hand": "A8o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "8c",
+            "Ac"
+          ],
+          "hand": "A8s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9h"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9d"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ts"
+          ],
+          "hand": "T9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Js"
+          ],
+          "hand": "J9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Jh"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Jd"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Jc"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Qs"
+          ],
+          "hand": "Q9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Qh"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Qd"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Qc"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ks"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Kh"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Kd"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Kc"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9s",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "9d"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Th"
+          ],
+          "hand": "T9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Js"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Jh"
+          ],
+          "hand": "J9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Jd"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Jc"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Qs"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Qh"
+          ],
+          "hand": "Q9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Qd"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Qc"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ks"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Kh"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Kd"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Kc"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ah"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9h",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "9c"
+          ],
+          "hand": "99",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Td"
+          ],
+          "hand": "T9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Tc"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Js"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Jh"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Jd"
+          ],
+          "hand": "J9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Jc"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Qs"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Qh"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Qd"
+          ],
+          "hand": "Q9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Qc"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ks"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Kh"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Kd"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Kc"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ad"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9d",
+            "Ac"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ts"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Th"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Td"
+          ],
+          "hand": "T9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Tc"
+          ],
+          "hand": "T9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Js"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Jh"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Jd"
+          ],
+          "hand": "J9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Jc"
+          ],
+          "hand": "J9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Qs"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Qh"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Qd"
+          ],
+          "hand": "Q9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Qc"
+          ],
+          "hand": "Q9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ks"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Kh"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Kd"
+          ],
+          "hand": "K9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Kc"
+          ],
+          "hand": "K9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ah"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ad"
+          ],
+          "hand": "A9o",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "9c",
+            "Ac"
+          ],
+          "hand": "A9s",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Th"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Td"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Js"
+          ],
+          "hand": "JTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qs"
+          ],
+          "hand": "QTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ks"
+          ],
+          "hand": "KTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ts",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Td"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Jh"
+          ],
+          "hand": "JTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Qh"
+          ],
+          "hand": "QTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Kh"
+          ],
+          "hand": "KTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ah"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Th",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Tc"
+          ],
+          "hand": "TT",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Jd"
+          ],
+          "hand": "JTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Jc"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Qd"
+          ],
+          "hand": "QTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Qc"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Kd"
+          ],
+          "hand": "KTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Kc"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ad"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Td",
+            "Ac"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Js"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jh"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jd"
+          ],
+          "hand": "JTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Jc"
+          ],
+          "hand": "JTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qs"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qh"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qd"
+          ],
+          "hand": "QTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Qc"
+          ],
+          "hand": "QTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ks"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kh"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kd"
+          ],
+          "hand": "KTo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Kc"
+          ],
+          "hand": "KTs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ah"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ad"
+          ],
+          "hand": "ATo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Tc",
+            "Ac"
+          ],
+          "hand": "ATs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Jh"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Jd"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Jc"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qs"
+          ],
+          "hand": "QJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ks"
+          ],
+          "hand": "KJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Js",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Jd"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Jc"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qh"
+          ],
+          "hand": "QJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kh"
+          ],
+          "hand": "KJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ah"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jh",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Jc"
+          ],
+          "hand": "JJ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qd"
+          ],
+          "hand": "QJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Qc"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kd"
+          ],
+          "hand": "KJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Kc"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ad"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jd",
+            "Ac"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qs"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qh"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qd"
+          ],
+          "hand": "QJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Qc"
+          ],
+          "hand": "QJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ks"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kh"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kd"
+          ],
+          "hand": "KJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Kc"
+          ],
+          "hand": "KJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ah"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ad"
+          ],
+          "hand": "AJo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Jc",
+            "Ac"
+          ],
+          "hand": "AJs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Qh"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Qd"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Qc"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ks"
+          ],
+          "hand": "KQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qs",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Qd"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Qc"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kh"
+          ],
+          "hand": "KQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ah"
+          ],
+          "hand": "AQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qh",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Qc"
+          ],
+          "hand": "QQ",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kd"
+          ],
+          "hand": "KQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Kc"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ad"
+          ],
+          "hand": "AQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qd",
+            "Ac"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ks"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kh"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kd"
+          ],
+          "hand": "KQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Kc"
+          ],
+          "hand": "KQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ah"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ad"
+          ],
+          "hand": "AQo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Qc",
+            "Ac"
+          ],
+          "hand": "AQs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Kh"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Kd"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Kc"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Ah"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Ad"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ks",
+            "Ac"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kh",
+            "Kc"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kh",
+            "Ah"
+          ],
+          "hand": "AKs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kh",
+            "Ad"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kh",
+            "Ac"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kd",
+            "Kc"
+          ],
+          "hand": "KK",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kd",
+            "Ah"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kd",
+            "Ad"
+          ],
+          "hand": "AKs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kd",
+            "Ac"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kc",
+            "Ah"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kc",
+            "Ad"
+          ],
+          "hand": "AKo",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Kc",
+            "Ac"
+          ],
+          "hand": "AKs",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ah",
+            "Ad"
+          ],
+          "hand": "AA",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ah",
+            "Ac"
+          ],
+          "hand": "AA",
+          "weight": 1
+        },
+        {
+          "hole": [
+            "Ad",
+            "Ac"
+          ],
+          "hand": "AA",
+          "weight": 1
+        }
+      ],
+      "summary": {
+        "positivePreflopHands": 574,
+        "preflopMass": 539,
+        "positiveAfterFlop": 507,
+        "massAfterFlop": 475.5
+      },
+      "validation": "Local enumeration and independent rank/suit count agree; official solver parser not executed yet."
+    }
+  },
+  "jointPrior": {
+    "compatiblePairs": 164251,
+    "unnormalizedMass": 124335.25,
+    "definition": "Product of the declared simplified player weights, conditioned on flop and distinct private cards; no folded-card bunching model."
+  },
+  "moneyUnits": {
+    "unitsPerBB": 100,
+    "startingPot": 550,
+    "effectiveStack": 9750,
+    "foldedStacks": 39950,
+    "totalTableUnits": 60000,
+    "rounding": "Use and record actual engine integer rounding. Do not infer exact percentage after rounding."
+  },
+  "researchAssumptions": {
+    "rakeRate": 0,
+    "rakeCap": 0,
+    "rakeIdentity": "Author zero-rake pipeline reference; not a verified NL50 platform rake.",
+    "foldedCardModel": "No bunching; not a full6-player solve.",
+    "preflopWeights": "User simplified0/50/100 chart weights treated literally; not recovered original solver frequencies."
+  },
+  "requestedTree": {
+    "identity": "Finite author draft, not full continuous-action poker",
+    "bothPlayers": {
+      "flopBets": [
+        "33%",
+        "all-in"
+      ],
+      "turnBets": [
+        "75%",
+        "all-in"
+      ],
+      "riverBets": [
+        "75%",
+        "all-in"
+      ],
+      "raises": [
+        "2.5x",
+        "all-in"
+      ]
+    },
+    "oopLeads": "Allow according to declared menu on each street; do not force BB check to copy a lesson.",
+    "automaticMerge": "Requested disabled; exact engine tree must be inspected.",
+    "adapterStatus": "Not built or parser-tested; actual generated actions and all-in/rounding rules must be verified before solve."
+  },
+  "requiredOutput": [
+    "Pinned engine revision and complete input hash",
+    "Both ordered private-hand lists and board-blocked hand handling",
+    "Actual legal action identifiers and amounts at each exported node",
+    "Per-hand strategy and per-action EV with declared index ordering and units",
+    "Both player reach weights or sufficient branch reconstruction",
+    "Full reachable turn/river storage needed for the selected lesson and previews",
+    "Actual achieved convergence statistic, stopping reason and definition",
+    "Node lock identities and any unresolved or zero-reach nodes",
+    "Reproducible route events, money and source-kind labels"
+  ],
+  "solve": {
+    "started": false,
+    "engineRevision": null,
+    "iterations": null,
+    "achievedMetric": null,
+    "route": null
+  },
+  "release": {
+    "courseReplacement": false,
+    "NL50Benchmark": false,
+    "preciseActionGrading": false,
+    "completeThreeStreetLesson": false
+  },
+  "next": "Pin and inspect a lawful engine and adapter, verify range parsing and tree, then solve and independently validate. Do not fabricate answers from the input manifest.",
+  "requestedEngineCandidate": {
+    "repository": "https://github.com/b-inary/postflop-solver",
+    "revision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "scope": "Pinned source candidate only; actual built/solved revision remains null",
+    "review": "engine-adapter-contract.json"
+  },
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf"
+}

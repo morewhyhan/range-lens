@@ -1,0 +1,40 @@
+{
+  "id": "BOARD_TEXTURE_SIX_CLASS_EXERCISE_V1",
+  "status": "paper_fact_child_exercise_classifier_and_trial_missing",
+  "parentFrame": "p2_board",
+  "childOnly": true,
+  "categories": [
+    {"id":"high_card_dry","label":"高张干燥","focus":"高牌、是否命中、坚果端"},
+    {"id":"high_card_flush_relation","label":"高张带同花","focus":"同花关系、阻挡、可改善牌"},
+    {"id":"mid_low_connected","label":"中低张连接","focus":"顺子、两对、强听牌分布"},
+    {"id":"paired_board","label":"成对牌面","focus":"三条、葫芦、踢脚和范围覆盖"},
+    {"id":"monotone_board","label":"单色牌面","focus":"同花等级、阻挡、非同花组合"},
+    {"id":"dynamic_connected","label":"多连接动态牌面","focus":"当前成牌、未来反超、连续后继"}
+  ],
+  "classificationMode": {
+    "overlapAllowed": true,
+    "requiresAcceptedTagSet": true,
+    "primaryTagOptionalUntilRuleFrozen": true,
+    "wetDryLabelCannotBeSoleAnswer": true,
+    "boardTextureIsIndexNotAction": true
+  },
+  "rounds": [
+    {"id":"R1_tag_set","visible":"board_and_six_tag_cards","task":"select_all_applicable_tags","output":"boardTextureTags"},
+    {"id":"R2_primary_focus","visible":"board_and_focus_cards","task":"select_first_observation_focus_when_frozen","output":"primaryFocus"},
+    {"id":"R3_one_card_contrast","visible":"before_after_board","task":"name_changed_tag_and_effect","output":"newBoardEffect"}
+  ],
+  "handoff": {
+    "outputToParent": ["boardTextureTags","primaryFocus","newBoardEffect"],
+    "returnTo": "p2_board",
+    "nextParent": "p2_board",
+    "parentStatePreserved": ["board","heroHole","history","firstAnswer"]
+  },
+  "scoring": {
+    "acceptedTagSetRequired": true,
+    "ambiguousPrimaryTagStopsUniqueGrade": true,
+    "strategyIsNotGradedHere": true,
+    "unknownCountsAsError": true,
+    "firstAnswerBeforeExplanation": true
+  },
+  "currentEvidence": {"paperSpec": true, "classifierFrozen": false, "runtime": false, "lowBaselineTrial": false, "learnerMastery": false}
+}

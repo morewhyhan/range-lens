@@ -1,0 +1,144 @@
+{
+  "id": "GOAL_EVIDENCE_STAGE_AUDIT_V1",
+  "status": "paper_goal_evidence_stages_separated_runtime_and_target_evidence_missing",
+  "purpose": "把“跟完一遍”“慢速可执行”“单变量迁移”“连续三街”“独立复核”和“NL50目标”拆成不可互相替代的证据阶段。",
+  "sources": [
+    "target-readiness-and-nl50-benchmark-contract.json",
+    "final-goal-observable-acceptance.json",
+    "goal-trial-and-target-benchmark-protocol.json",
+    "target-standard-sequential-teaching-and-nl50-closure-contract.json",
+    "first-pass-learner-architecture-audit.json",
+    "low-baseline-visual-language-audit.json",
+    "unit-release-readiness-ledger.json",
+    "reference-course-closure-ledger.json"
+  ],
+  "stages": [
+    {
+      "id": "T0_structure",
+      "requires": [
+        "firstPassCompleted",
+        "outerInnerRecall",
+        "errorRecovery",
+        "singleFieldTransfer"
+      ],
+      "paperEvidence": true,
+      "runtimeEvidence": false,
+      "learnerEvidence": false,
+      "proves": "路线结构证据",
+      "cannotProve": [
+        "strategyAccuracy",
+        "NL50Readiness"
+      ],
+      "status": "paper_only",
+      "releaseReady": false
+    },
+    {
+      "id": "T1_matched_course_package",
+      "requires": [
+        "targetConfigFrozen",
+        "matchedInputFingerprint",
+        "coursePolicyLedger",
+        "rangeAndSuccessor"
+      ],
+      "paperEvidence": true,
+      "runtimeEvidence": false,
+      "learnerEvidence": false,
+      "proves": "指定配置下的课包可判分",
+      "cannotProve": [
+        "learnerMastery",
+        "NL50Readiness"
+      ],
+      "status": "paper_only",
+      "releaseReady": false
+    },
+    {
+      "id": "T2_heldout_execution",
+      "requires": [
+        "unexposedCases",
+        "dedupeByStructure",
+        "firstAnswerBeforeHelp",
+        "allScoreDimensions"
+      ],
+      "paperEvidence": true,
+      "runtimeEvidence": false,
+      "learnerEvidence": false,
+      "proves": "未曝光题中的可执行表现",
+      "cannotProve": [
+        "realTableWinRate",
+        "universalNL50"
+      ],
+      "status": "paper_only",
+      "releaseReady": false
+    },
+    {
+      "id": "T3_independent_review",
+      "requires": [
+        "frozenPackage",
+        "independentReconstruction",
+        "differenceLedgerReview",
+        "unknownNodesReported"
+      ],
+      "paperEvidence": true,
+      "runtimeEvidence": false,
+      "learnerEvidence": false,
+      "proves": "答案和来源可被外部复核",
+      "cannotProve": [
+        "longTermProfitability"
+      ],
+      "status": "paper_only",
+      "releaseReady": false
+    },
+    {
+      "id": "T4_real_decision_audit",
+      "requires": [
+        "coveredConfigurationOnly",
+        "decisionLog",
+        "helpAndUnknownLog",
+        "longitudinalSample",
+        "externalBenchmark"
+      ],
+      "paperEvidence": true,
+      "runtimeEvidence": false,
+      "learnerEvidence": false,
+      "proves": "已覆盖配置下的真实决策表现",
+      "cannotProve": [
+        "uncoveredSpots",
+        "guaranteedProfit"
+      ],
+      "status": "paper_only",
+      "releaseReady": false
+    }
+  ],
+  "counts": {
+    "stages": 5,
+    "paperOnly": 5,
+    "runtimeOnly": 0,
+    "observed": 0,
+    "blocked": 0,
+    "releaseReady": 0,
+    "failures": 0
+  },
+  "currentEvidence": {
+    "paperStageMap": true,
+    "runtimeInstrumentation": false,
+    "lowBaselineTrial": false,
+    "heldoutExecution": false,
+    "independentReview": false,
+    "realDecisionAudit": false,
+    "NL50Evidence": false,
+    "goalCompletionVerified": false
+  },
+  "forbiddenSubstitutions": [
+    "docs_or_green_tests_equal_NL50",
+    "training_accuracy_equal_real_win_rate",
+    "short_term_profit_equal_strategy_mastery",
+    "equity_calculator_equal_action_policy",
+    "local_solver_slice_equal_complete_reference",
+    "average_score_hides_critical_layer",
+    "unknown_node_treated_as_correct_action"
+  ],
+  "releaseGate": {
+    "passed": false,
+    "reason": "阶段地图已闭合，但没有任何学习者观察、未曝光执行、外部重建或真实决策证据；不能从文档或绿灯审计推导NL50。"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "id": "NESTED_RELEASE_ARCHITECTURE_CONTRACT_V1",
+  "status": "paper_architecture_invariant_runtime_and_learner_trial_missing",
+  "purpose": "把一次完整首遍、后台35项覆盖、帮助撤除、迁移、连续三街和目标级审计固定为同一条递归学习结构，防止前台平铺和阶段跳跃。",
+  "sourceDocument": "187_一遍到目标级的嵌套释放总架构合同.md",
+  "parentDocument": "186_课程简化损失校准与发布阈值合同.md",
+  "visibleRoute": [
+    "L0_goal_and_six_max_table",
+    "L1_position_and_preflop_history",
+    "L2_preflop_chart_entry",
+    "L3_starting_range_handoff",
+    "L4_postflop_entry",
+    "p1_context",
+    "p2_board",
+    "p3_range",
+    "p4_compare",
+    "p5_execute",
+    "p6_update",
+    "p7_close"
+  ],
+  "canonicalInnerRoute": [
+    "p1_context",
+    "p2_board",
+    "p3_range",
+    "p4_compare",
+    "p5_execute",
+    "p6_update",
+    "p7_close"
+  ],
+  "macroStateAlignment": {
+    "purpose": "把旧的九停点验收摘要映射到首课十二状态运行机，避免出现两套用户导航",
+    "role": "author_only_coverage_summary",
+    "macroRoute": ["L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
+    "expandedVisibleRoute": ["L0", "L1", "L2", "L3", "L4", "p1_context", "p2_board", "p3_range", "p4_compare", "p5_execute", "p6_update", "p7_close"],
+    "mapping": {
+      "L0": ["L0"],
+      "L1": ["L1"],
+      "L2": ["L2"],
+      "L3": ["L3"],
+      "L4": ["L4"],
+      "L5": ["p1_context"],
+      "L6": ["p2_board", "p3_range", "p4_compare"],
+      "L7": ["p5_execute", "p6_update"],
+      "L8": ["p7_close"]
+    },
+    "onlyOneUserNavigation": true
+  },
+  "allowedChildParents": ["p4_compare", "p6_update"],
+  "firstPassRepresentativeUnits": ["1.5", "2.1", "3.1", "4.5", "5.7"],
+  "unitGroups": {
+    "compare.unopened": 8,
+    "compare.bet": 7,
+    "compare.raise": 6,
+    "update.response": 6,
+    "update.card": 8
+  },
+  "frameGrammar": {
+    "required": [
+      "frameId",
+      "parentFrameId",
+      "visibleInputs",
+      "plainQuestion",
+      "primaryAction",
+      "requiredOutput",
+      "handoffPayload",
+      "returnTo",
+      "successorOrStop"
+    ],
+    "maxActiveParentFrames": 1,
+    "maxActiveChildFrames": 1,
+    "childMustRestoreParentSnapshot": true,
+    "emptyRequiredFieldStops": true,
+    "onePrimaryActionPerScreen": true
+  },
+  "invariants": [
+    "canonical_next_chain_controls_progression",
+    "child_enters_from_parent_and_returns_to_same_parent",
+    "handoff_output_becomes_next_input",
+    "one_teaching_field_changes_per_migration",
+    "facts_and_strategy_have_separate_identity",
+    "strategy_requires_matched_reference_or_declared_course_policy",
+    "open_node_requires_real_successor_or_auditable_stop",
+    "one_error_has_one_error_layer_and_one_return_layer",
+    "coverage_does_not_equal_learner_mastery",
+    "continuous_pass_does_not_equal_nl50_readiness"
+  ],
+  "releaseLadder": [
+    {
+      "id": "P0_first_pass_guided",
+      "newLoad": "route_and_handoff",
+      "requiredEvidence": ["all_visible_route_states_visited", "representative_children_return_to_parent"]
+    },
+    {
+      "id": "P1_structure_replay",
+      "newLoad": "retrieval_without_step_titles",
+      "requiredEvidence": ["route_recall", "layer_location", "parent_restore", "error_return"]
+    },
+    {
+      "id": "P2_same_parent_units",
+      "newLoad": "within_parent_unit_variation",
+      "requiredEvidence": ["first_answer_before_help", "required_output_complete", "error_layer_classified"]
+    },
+    {
+      "id": "P3_adjacent_transfer",
+      "newLoad": "one_changed_field",
+      "requiredEvidence": ["exactly_one_changed_field", "affected_layer_identified", "same_unit_output_complete"]
+    },
+    {
+      "id": "P4_delayed_recall",
+      "newLoad": "spacing_and_retrieval",
+      "requiredEvidence": ["return_point_recalled", "handoff_recalled", "no_title_dependency"]
+    },
+    {
+      "id": "P5_unseen_slow_single_step",
+      "newLoad": "new_spot_with_one_open_node",
+      "requiredEvidence": ["first_attempt_before_explanation", "canonical_layer_entry", "matched_or_declared_policy"]
+    },
+    {
+      "id": "P6_continuous_three_street",
+      "newLoad": "time_continuity_and_successors",
+      "requiredEvidence": ["range_conservation", "ledger_conservation", "actor_conservation", "successor_or_stop_for_every_open_node"]
+    },
+    {
+      "id": "P7_target_audit",
+      "newLoad": "frozen_configuration_and_external_review",
+      "requiredEvidence": ["unseen_holdout", "independent_review", "real_decision_audit"]
+    }
+  ],
+  "firstPassStructureGate": {
+    "allRequired": true,
+    "checks": [
+      "recite_seven_inner_steps_without_titles",
+      "locate_current_layer_in_three_unseen_parent_frames",
+      "restore_parent_snapshot_after_child_close",
+      "return_to_nearest_missing_layer_for_two_injected_errors",
+      "identify_affected_layer_on_one_field_change",
+      "state_where_to_stop_when_evidence_is_missing"
+    ],
+    "doesNotUse": ["aggregate_score", "speed", "number_of_completed_questions", "post_explanation_accuracy"]
+  },
+  "handoffCards": {
+    "p1_context": "contextFrame",
+    "p2_board": "handFrame",
+    "p3_range": "rangeFrame",
+    "p4_compare": "decisionFrame",
+    "p5_execute": "ledgerFrame",
+    "p6_update": "updateFrame",
+    "p7_close": "reviewFrame"
+  },
+  "requiredEvidenceCardFields": [
+    "firstAnswer",
+    "helpLevel",
+    "errorLayer",
+    "returnTo",
+    "successorOrStop",
+    "releaseStage"
+  ],
+  "stopReasons": [
+    "missing_input_identity",
+    "missing_range_denominator",
+    "missing_matched_reference_or_declared_policy",
+    "missing_amount_or_action_right",
+    "missing_real_successor",
+    "simplification_threshold_not_calibrated"
+  ],
+  "currentEvidence": {
+    "paperContract": true,
+    "routeRuntimeImplemented": false,
+    "parentRestoreRuntimeVerified": false,
+    "beginnerTrial": false,
+    "matchedReference": false,
+    "completeSuccessorChain": false,
+    "targetLevelEvidence": false,
+    "goalCompletionVerified": false
+  },
+  "acceptance": {
+    "paper": "all frame grammar, invariants, release stages and stop reasons are registered",
+    "runtime": "one real session follows visibleRoute and restores parent snapshots exactly",
+    "learner": "low_baseline learner passes all firstPassStructureGate checks before P2",
+    "strategy": "matched reference and simplification calibration exist before precise strategy grading",
+    "target": "P7 evidence exists without converting it into a profit guarantee"
+  }
+}

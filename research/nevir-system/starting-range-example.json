@@ -1,0 +1,2807 @@
+{
+  "context": {
+    "players": 6,
+    "initialEffectiveBB": 100,
+    "hero": "BTN",
+    "villain": "BB",
+    "openSizeBB": 2.5,
+    "observedPreflopAction": "BB call",
+    "postflopObservation": [],
+    "state": "Flop dealt, before BB first postflop action",
+    "board": [
+      "Qs",
+      "Th",
+      "5s"
+    ],
+    "heroHole": [
+      "Ac",
+      "Qh"
+    ]
+  },
+  "assumption": "BB follows the user-provided simplified chart in this exact preflop context. This is a scoped baseline, not an observed fact about any real player.",
+  "source": {
+    "chart": "bb-普通中",
+    "name": "普通中",
+    "sheet": "大盲防守"
+  },
+  "beforeKnownCards": {
+    "positiveCombos": 402,
+    "totalMass": 328
+  },
+  "afterKnownCards": {
+    "positiveCombos": 306,
+    "totalMass": 252,
+    "normalizedTotal": 0.9999999999999969
+  },
+  "currentFiveCardComparison": {
+    "heroAhead": {
+      "mass": 237.5,
+      "combos": 287
+    },
+    "tie": {
+      "mass": 5,
+      "combos": 5
+    },
+    "heroBehind": {
+      "mass": 9.5,
+      "combos": 14
+    }
+  },
+  "scope": "Current five-card comparison only. Not runout equity, not EV, not a strategy recommendation. Postflop responses and future tree remain unknown.",
+  "combos": [
+    {
+      "cards": [
+        "2s",
+        "2h"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2s",
+        "2d"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2s",
+        "2c"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2s",
+        "Ks"
+      ],
+      "handClass": "K2s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2s",
+        "As"
+      ],
+      "handClass": "A2s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "2h",
+        "2d"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2h",
+        "2c"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2h",
+        "5h"
+      ],
+      "handClass": "52s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2h",
+        "Kh"
+      ],
+      "handClass": "K2s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2h",
+        "Ah"
+      ],
+      "handClass": "A2s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "2d",
+        "2c"
+      ],
+      "handClass": "22",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2d",
+        "5d"
+      ],
+      "handClass": "52s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2d",
+        "Kd"
+      ],
+      "handClass": "K2s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2d",
+        "Ad"
+      ],
+      "handClass": "A2s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "2c",
+        "5c"
+      ],
+      "handClass": "52s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "2c",
+        "Kc"
+      ],
+      "handClass": "K2s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "3h"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "3d"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "3c"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "4s"
+      ],
+      "handClass": "43s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "6s"
+      ],
+      "handClass": "63s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "Ks"
+      ],
+      "handClass": "K3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3s",
+        "As"
+      ],
+      "handClass": "A3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "3d"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "3c"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "4h"
+      ],
+      "handClass": "43s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "5h"
+      ],
+      "handClass": "53s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "6h"
+      ],
+      "handClass": "63s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "Kh"
+      ],
+      "handClass": "K3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3h",
+        "Ah"
+      ],
+      "handClass": "A3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "3c"
+      ],
+      "handClass": "33",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "4d"
+      ],
+      "handClass": "43s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "5d"
+      ],
+      "handClass": "53s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "6d"
+      ],
+      "handClass": "63s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "Kd"
+      ],
+      "handClass": "K3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3d",
+        "Ad"
+      ],
+      "handClass": "A3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3c",
+        "4c"
+      ],
+      "handClass": "43s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3c",
+        "5c"
+      ],
+      "handClass": "53s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3c",
+        "6c"
+      ],
+      "handClass": "63s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "3c",
+        "Kc"
+      ],
+      "handClass": "K3s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "4h"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "4d"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "4c"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "6s"
+      ],
+      "handClass": "64s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "7s"
+      ],
+      "handClass": "74s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4s",
+        "Ks"
+      ],
+      "handClass": "K4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4s",
+        "As"
+      ],
+      "handClass": "A4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4h",
+        "4d"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4h",
+        "4c"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4h",
+        "5h"
+      ],
+      "handClass": "54s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4h",
+        "6h"
+      ],
+      "handClass": "64s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4h",
+        "7h"
+      ],
+      "handClass": "74s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4h",
+        "Kh"
+      ],
+      "handClass": "K4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4h",
+        "Ah"
+      ],
+      "handClass": "A4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4d",
+        "4c"
+      ],
+      "handClass": "44",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4d",
+        "5d"
+      ],
+      "handClass": "54s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4d",
+        "6d"
+      ],
+      "handClass": "64s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4d",
+        "7d"
+      ],
+      "handClass": "74s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4d",
+        "Qd"
+      ],
+      "handClass": "Q4s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4d",
+        "Kd"
+      ],
+      "handClass": "K4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4d",
+        "Ad"
+      ],
+      "handClass": "A4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4c",
+        "5c"
+      ],
+      "handClass": "54s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "4c",
+        "6c"
+      ],
+      "handClass": "64s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4c",
+        "7c"
+      ],
+      "handClass": "74s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4c",
+        "Qc"
+      ],
+      "handClass": "Q4s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "4c",
+        "Kc"
+      ],
+      "handClass": "K4s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5h",
+        "5d"
+      ],
+      "handClass": "55",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5h",
+        "5c"
+      ],
+      "handClass": "55",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5h",
+        "6h"
+      ],
+      "handClass": "65s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5h",
+        "7h"
+      ],
+      "handClass": "75s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5h",
+        "8h"
+      ],
+      "handClass": "85s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5h",
+        "Kh"
+      ],
+      "handClass": "K5s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5h",
+        "Ah"
+      ],
+      "handClass": "A5s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5d",
+        "5c"
+      ],
+      "handClass": "55",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5d",
+        "6d"
+      ],
+      "handClass": "65s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5d",
+        "7d"
+      ],
+      "handClass": "75s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5d",
+        "8d"
+      ],
+      "handClass": "85s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5d",
+        "Qd"
+      ],
+      "handClass": "Q5s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5d",
+        "Kd"
+      ],
+      "handClass": "K5s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5d",
+        "Ad"
+      ],
+      "handClass": "A5s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5c",
+        "6c"
+      ],
+      "handClass": "65s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "5c",
+        "7c"
+      ],
+      "handClass": "75s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5c",
+        "8c"
+      ],
+      "handClass": "85s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5c",
+        "Qc"
+      ],
+      "handClass": "Q5s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "5c",
+        "Kc"
+      ],
+      "handClass": "K5s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "6h"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "6d"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "6c"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "7s"
+      ],
+      "handClass": "76s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "8s"
+      ],
+      "handClass": "86s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6s",
+        "9s"
+      ],
+      "handClass": "96s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6s",
+        "Ks"
+      ],
+      "handClass": "K6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6s",
+        "As"
+      ],
+      "handClass": "A6s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6h",
+        "6d"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6h",
+        "6c"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6h",
+        "7h"
+      ],
+      "handClass": "76s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6h",
+        "8h"
+      ],
+      "handClass": "86s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6h",
+        "9h"
+      ],
+      "handClass": "96s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6h",
+        "Kh"
+      ],
+      "handClass": "K6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6h",
+        "Ah"
+      ],
+      "handClass": "A6s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6d",
+        "6c"
+      ],
+      "handClass": "66",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6d",
+        "7d"
+      ],
+      "handClass": "76s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6d",
+        "8d"
+      ],
+      "handClass": "86s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6d",
+        "9d"
+      ],
+      "handClass": "96s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6d",
+        "Qd"
+      ],
+      "handClass": "Q6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6d",
+        "Kd"
+      ],
+      "handClass": "K6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6d",
+        "Ad"
+      ],
+      "handClass": "A6s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6c",
+        "7c"
+      ],
+      "handClass": "76s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6c",
+        "8c"
+      ],
+      "handClass": "86s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6c",
+        "9c"
+      ],
+      "handClass": "96s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "6c",
+        "Qc"
+      ],
+      "handClass": "Q6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "6c",
+        "Kc"
+      ],
+      "handClass": "K6s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7s",
+        "7h"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "7d"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "7c"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "8s"
+      ],
+      "handClass": "87s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7s",
+        "9s"
+      ],
+      "handClass": "97s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "Ts"
+      ],
+      "handClass": "T7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "Js"
+      ],
+      "handClass": "J7s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7s",
+        "Ks"
+      ],
+      "handClass": "K7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7s",
+        "As"
+      ],
+      "handClass": "A7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7h",
+        "7d"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7h",
+        "7c"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7h",
+        "8h"
+      ],
+      "handClass": "87s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7h",
+        "9h"
+      ],
+      "handClass": "97s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7h",
+        "Jh"
+      ],
+      "handClass": "J7s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7h",
+        "Kh"
+      ],
+      "handClass": "K7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7h",
+        "Ah"
+      ],
+      "handClass": "A7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "7c"
+      ],
+      "handClass": "77",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "8d"
+      ],
+      "handClass": "87s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7d",
+        "9d"
+      ],
+      "handClass": "97s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "Td"
+      ],
+      "handClass": "T7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "Jd"
+      ],
+      "handClass": "J7s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7d",
+        "Qd"
+      ],
+      "handClass": "Q7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "Kd"
+      ],
+      "handClass": "K7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7d",
+        "Ad"
+      ],
+      "handClass": "A7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7c",
+        "8c"
+      ],
+      "handClass": "87s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7c",
+        "9c"
+      ],
+      "handClass": "97s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7c",
+        "Tc"
+      ],
+      "handClass": "T7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7c",
+        "Jc"
+      ],
+      "handClass": "J7s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "7c",
+        "Qc"
+      ],
+      "handClass": "Q7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "7c",
+        "Kc"
+      ],
+      "handClass": "K7s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "8h"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "8d"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "8c"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "9s"
+      ],
+      "handClass": "98s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "Ts"
+      ],
+      "handClass": "T8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "Js"
+      ],
+      "handClass": "J8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8s",
+        "Ks"
+      ],
+      "handClass": "K8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "As"
+      ],
+      "handClass": "A8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8s",
+        "Ah"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8s",
+        "Ad"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8h",
+        "8d"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8h",
+        "8c"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8h",
+        "9h"
+      ],
+      "handClass": "98s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8h",
+        "Jh"
+      ],
+      "handClass": "J8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8h",
+        "Kh"
+      ],
+      "handClass": "K8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8h",
+        "As"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8h",
+        "Ah"
+      ],
+      "handClass": "A8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8h",
+        "Ad"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8d",
+        "8c"
+      ],
+      "handClass": "88",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8d",
+        "9d"
+      ],
+      "handClass": "98s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8d",
+        "Td"
+      ],
+      "handClass": "T8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8d",
+        "Jd"
+      ],
+      "handClass": "J8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8d",
+        "Qd"
+      ],
+      "handClass": "Q8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8d",
+        "Kd"
+      ],
+      "handClass": "K8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8d",
+        "As"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8d",
+        "Ah"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8d",
+        "Ad"
+      ],
+      "handClass": "A8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8c",
+        "9c"
+      ],
+      "handClass": "98s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8c",
+        "Tc"
+      ],
+      "handClass": "T8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8c",
+        "Jc"
+      ],
+      "handClass": "J8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8c",
+        "Qc"
+      ],
+      "handClass": "Q8s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8c",
+        "Kc"
+      ],
+      "handClass": "K8s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "8c",
+        "As"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8c",
+        "Ah"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "8c",
+        "Ad"
+      ],
+      "handClass": "A8o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9s",
+        "9h"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "9d"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "9c"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "Ts"
+      ],
+      "handClass": "T9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9s",
+        "Td"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9s",
+        "Tc"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9s",
+        "Js"
+      ],
+      "handClass": "J9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9s",
+        "Ks"
+      ],
+      "handClass": "K9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "As"
+      ],
+      "handClass": "A9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "Ah"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9s",
+        "Ad"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "9d"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "9c"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "Ts"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9h",
+        "Td"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9h",
+        "Tc"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9h",
+        "Jh"
+      ],
+      "handClass": "J9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9h",
+        "Kh"
+      ],
+      "handClass": "K9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "As"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "Ah"
+      ],
+      "handClass": "A9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9h",
+        "Ad"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9d",
+        "9c"
+      ],
+      "handClass": "99",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9d",
+        "Ts"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9d",
+        "Td"
+      ],
+      "handClass": "T9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9d",
+        "Tc"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9d",
+        "Jd"
+      ],
+      "handClass": "J9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9d",
+        "Qd"
+      ],
+      "handClass": "Q9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9d",
+        "Kd"
+      ],
+      "handClass": "K9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9d",
+        "As"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9d",
+        "Ah"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9d",
+        "Ad"
+      ],
+      "handClass": "A9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9c",
+        "Ts"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9c",
+        "Td"
+      ],
+      "handClass": "T9o",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9c",
+        "Tc"
+      ],
+      "handClass": "T9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9c",
+        "Jc"
+      ],
+      "handClass": "J9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9c",
+        "Qc"
+      ],
+      "handClass": "Q9s",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "9c",
+        "Kc"
+      ],
+      "handClass": "K9s",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9c",
+        "As"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9c",
+        "Ah"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "9c",
+        "Ad"
+      ],
+      "handClass": "A9o",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Td"
+      ],
+      "handClass": "TT",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Tc"
+      ],
+      "handClass": "TT",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Js"
+      ],
+      "handClass": "JTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Jh"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Jd"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Jc"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Qd"
+      ],
+      "handClass": "QTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Qc"
+      ],
+      "handClass": "QTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Ks"
+      ],
+      "handClass": "KTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Kh"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Kd"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "Kc"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Ts",
+        "As"
+      ],
+      "handClass": "ATs",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Ah"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Ts",
+        "Ad"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Tc"
+      ],
+      "handClass": "TT",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Js"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Jh"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Jd"
+      ],
+      "handClass": "JTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Jc"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Qd"
+      ],
+      "handClass": "QTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Qc"
+      ],
+      "handClass": "QTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Ks"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Kh"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Kd"
+      ],
+      "handClass": "KTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "Kc"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Td",
+        "As"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Ah"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Td",
+        "Ad"
+      ],
+      "handClass": "ATs",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Js"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Jh"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Jd"
+      ],
+      "handClass": "JTo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Jc"
+      ],
+      "handClass": "JTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Qd"
+      ],
+      "handClass": "QTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Qc"
+      ],
+      "handClass": "QTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Ks"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Kh"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Kd"
+      ],
+      "handClass": "KTo",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "Kc"
+      ],
+      "handClass": "KTs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Tc",
+        "As"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Ah"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Tc",
+        "Ad"
+      ],
+      "handClass": "ATo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Qd"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Qc"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Ks"
+      ],
+      "handClass": "KJs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Js",
+        "Kh"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Kd"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Kc"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "As"
+      ],
+      "handClass": "AJs",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Ah"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Js",
+        "Ad"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Qd"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Qc"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Ks"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Kh"
+      ],
+      "handClass": "KJs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Jh",
+        "Kd"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Kc"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "As"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Ah"
+      ],
+      "handClass": "AJs",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jh",
+        "Ad"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Qc"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Ks"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Kh"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Kd"
+      ],
+      "handClass": "KJs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Jd",
+        "Kc"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "As"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Ah"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jd",
+        "Ad"
+      ],
+      "handClass": "AJs",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Qd"
+      ],
+      "handClass": "QJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Ks"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Kh"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Kd"
+      ],
+      "handClass": "KJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Kc"
+      ],
+      "handClass": "KJs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Jc",
+        "As"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Ah"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Jc",
+        "Ad"
+      ],
+      "handClass": "AJo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qd",
+        "Ks"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qd",
+        "Kh"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qd",
+        "Kd"
+      ],
+      "handClass": "KQs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Qd",
+        "Kc"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qd",
+        "As"
+      ],
+      "handClass": "AQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qd",
+        "Ah"
+      ],
+      "handClass": "AQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Ks"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Kh"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Kd"
+      ],
+      "handClass": "KQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Kc"
+      ],
+      "handClass": "KQs",
+      "mass": 0.5,
+      "weight": 0.001984126984126984
+    },
+    {
+      "cards": [
+        "Qc",
+        "As"
+      ],
+      "handClass": "AQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Ah"
+      ],
+      "handClass": "AQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    },
+    {
+      "cards": [
+        "Qc",
+        "Ad"
+      ],
+      "handClass": "AQo",
+      "mass": 1,
+      "weight": 0.003968253968253968
+    }
+  ]
+}

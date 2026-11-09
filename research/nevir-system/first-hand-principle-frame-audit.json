@@ -1,0 +1,204 @@
+{
+  "id": "FIRST_HAND_PRINCIPLE_FRAME_AUDIT_V1",
+  "status": "paper_crosswalk_all_principles_have_frame_or_stop_not_strategy_ready",
+  "source": "first-hand-continuity-audit.json",
+  "frameSequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "principles": [
+    {
+      "id": "P01",
+      "status": "covered",
+      "frames": [
+        "S01",
+        "S03"
+      ],
+      "evidenceIdentity": "fact"
+    },
+    {
+      "id": "P02",
+      "status": "covered",
+      "frames": [
+        "S02",
+        "S06",
+        "S10",
+        "S11"
+      ],
+      "evidenceIdentity": "ledger"
+    },
+    {
+      "id": "P03",
+      "status": "partial",
+      "frames": [
+        "S08",
+        "S12"
+      ],
+      "missing": "explicit_board_texture_classification",
+      "requiredInsertion": {
+        "parent": "p2_board",
+        "kind": "board_texture_fact",
+        "answerIdentity": "fact"
+      }
+    },
+    {
+      "id": "P04",
+      "status": "covered",
+      "frames": [
+        "S04",
+        "S16"
+      ],
+      "evidenceIdentity": "fact"
+    },
+    {
+      "id": "P05",
+      "status": "partial",
+      "frames": [
+        "R01"
+      ],
+      "missing": "fixed_denominator_range_before_snapshot",
+      "requiredInsertion": {
+        "parent": "p3_range",
+        "kind": "range_before_snapshot",
+        "answerIdentity": "range_or_stop"
+      }
+    },
+    {
+      "id": "P06",
+      "status": "covered",
+      "frames": [
+        "R01"
+      ],
+      "evidenceIdentity": "physical_fact"
+    },
+    {
+      "id": "P07",
+      "status": "partial",
+      "frames": [
+        "S05",
+        "S09",
+        "S13"
+      ],
+      "missing": "action_purpose_comparison",
+      "requiredInsertion": {
+        "parent": "p4_compare",
+        "kind": "action_purpose_fact_or_course_rule",
+        "answerIdentity": "course_rule_or_stop"
+      }
+    },
+    {
+      "id": "P08",
+      "status": "partial",
+      "frames": [
+        "S06",
+        "S10"
+      ],
+      "missing": "price_and_required_equity_link",
+      "requiredInsertion": {
+        "parent": "p4_compare",
+        "kind": "price_threshold",
+        "answerIdentity": "ledger_or_course_rule"
+      }
+    },
+    {
+      "id": "P09",
+      "status": "covered",
+      "frames": [
+        "S06",
+        "S07",
+        "S10",
+        "S11",
+        "S14"
+      ],
+      "evidenceIdentity": "ledger"
+    },
+    {
+      "id": "P10",
+      "status": "partial",
+      "frames": [
+        "I10"
+      ],
+      "missing": "matched_action_after_range_reference",
+      "requiredInsertion": {
+        "parent": "p6_update",
+        "kind": "action_after_range",
+        "answerIdentity": "matched_reference_or_stop"
+      }
+    },
+    {
+      "id": "P11",
+      "status": "partial",
+      "frames": [
+        "S08",
+        "S12"
+      ],
+      "missing": "successor_policy_or_explicit_stop",
+      "requiredInsertion": {
+        "parent": "p6_update",
+        "kind": "new_card_successor_or_stop",
+        "answerIdentity": "successor_or_stop"
+      }
+    },
+    {
+      "id": "P12",
+      "status": "covered",
+      "frames": [
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "evidenceIdentity": "ledger"
+    }
+  ],
+  "counts": {
+    "totalPrinciples": 12,
+    "covered": 6,
+    "partial": 6,
+    "missing": 0
+  },
+  "releaseRules": {
+    "allTwelveMustBeCoveredBeforeCompleteFirstPassClaim": true,
+    "partialDoesNotCountAsCovered": true,
+    "missingReferenceStopsAtCurrentParent": true,
+    "factFrameReturnsToOriginalParent": true,
+    "frameCountDoesNotProvePrincipleCoverage": true,
+    "structurePaperDoesNotProveStrategy": true,
+    "everyPrincipleHasFrameOrStop": true,
+    "nestedCardsAreInsideParent": true
+  },
+  "currentEvidence": {
+    "paperCrosswalk": true,
+    "allTwelveCovered": false,
+    "matchedStrategyReference": false,
+    "runtimeAttached": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "nestedCardSource": "first-hand-gap-frame-cards.json",
+  "nestedCards": [
+    "I03",
+    "I05",
+    "I07",
+    "I08",
+    "I10",
+    "I11"
+  ]
+}

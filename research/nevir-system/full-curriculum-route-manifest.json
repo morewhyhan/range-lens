@@ -1,0 +1,43 @@
+{
+  "id": "FULL_CURRICULUM_ROUTE_MANIFEST_V1",
+  "status": "declarative_full_route_inventory_not_implemented",
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7","replay_transfer"],
+  "canonicalLearnerRouteRole": "runtime_surface",
+  "outerStopsRole": "legacy_author_macro_inventory_only",
+  "outerStops": [
+    {"id":"L0","name":"table_goal","children":["table_context"],"next":"L1"},
+    {"id":"L1","name":"preflop_context","children":["chart_locator","scenario_locator"],"next":"L2"},
+    {"id":"L2","name":"preflop_grid","children":["grid_reading","entity_combo","edge_boundary"],"next":"L3"},
+    {"id":"L3","name":"preflop_action","children":["exact_action","weight_identity","bb_size"],"next":"L4"},
+    {"id":"L4","name":"range_handoff","children":["physical_filter","collision_filter","joint_prior","range_view"],"next":"L5"},
+    {"id":"L5","name":"postflop_context","children":["table","history","money","decision_state"],"next":"L6"},
+    {"id":"L6","name":"postflop_compare","children":["board_class","hand_strength_order","blocker_backdoor","range_relation","price","decision_units"],"next":"L7"},
+    {"id":"L7","name":"postflop_update","children":["action_after_range","response","turn","river","ledger"],"next":"L8"},
+    {"id":"L8","name":"close_transfer","children":["settlement","error_layer","order_recall","layer_location","error_recovery","one_variable_transfer"],"next":"exit"}
+  ],
+  "requiredCoverage": {
+    "preflopStages": ["context","grid","action","range_handoff"],
+    "postflopStages": ["context","board","hand","range","compare","execute","update","settlement"],
+    "boardClasses": 6,
+    "handStrengthOrderPractice": ["high_card","pair","two_pair","trips","straight","flush","full_house","quads","straight_flush"],
+    "decisionStates": ["unopened","facing_bet","facing_raise","allin","terminal"],
+    "streets": ["flop","turn","river"]
+  },
+  "routingRules": {
+    "oneOuterPath": true,
+    "runtimeReadsCanonicalLearnerRouteOnly": true,
+    "childOpenedOnlyFromParent": true,
+    "childReturnsToSameParent": true,
+    "noFlatHomeMenu": true,
+    "missingEvidenceStopsAtCurrentIdentity": true,
+    "postflopKeepsPreflopRange": true
+  },
+  "currentStatus": {
+    "routeInventoryComplete": true,
+    "pageImplemented": false,
+    "allCoverageCellsTargetReady": false,
+    "fullStrategyReference": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

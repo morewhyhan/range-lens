@@ -1,0 +1,74 @@
+{
+  "id": "A72_C1_INDEPENDENT_PHYSICAL_SNAPSHOT_V1",
+  "status": "independent_physical_snapshot_verified_action_filter_not_applied",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "sourceFiles": {
+    "ranges": "src/data/ranges.json",
+    "bbMapping": "src/preflop.js BTN2.5→普通中",
+    "bbMappingSHA256": "d324c140deb0aa75c28edc4c61bd558ef5ee9d9b78cbe37a6b9ce906f75fc973"
+  },
+  "coordinateIdentity": {
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "oop": "BB",
+    "ip": "BTN",
+    "firstActor": "BB",
+    "preflop": "UTG/HJ/CO fold; BTN opens2.5; SB folds; BB calls"
+  },
+  "roleSnapshots": {
+    "oop": {
+      "chartId": "bb-普通中",
+      "action": "call",
+      "classCount": 169,
+      "nonZeroClasses": 72,
+      "combos": 358,
+      "classWeightHash": "c9bf8fa84fc93b70999f2696a5d8d985159137764cc5df1a127f062bac1871b2",
+      "comboHash": "cf007b172d59e21e389a381f4377397029075e2e0c1b354fef55ebc634cd1c59"
+    },
+    "ip": {
+      "chartId": "open-BTN",
+      "action": "raise",
+      "classCount": 169,
+      "nonZeroClasses": 89,
+      "combos": 507,
+      "classWeightHash": "854f888a4e9990da6f90ea61f2048ade63bdd48bd12c88870289fae872e73c0b",
+      "comboHash": "7220be16485d696162d1e3f5d411a5b3d5fea6a9bf6cd8e2d3ef5c2d0c584858"
+    }
+  },
+  "counts": {
+    "oopRootHands": 358,
+    "ipRootHands": 507,
+    "compatiblePairs": 164251,
+    "overlapPairs": 17255
+  },
+  "jointPrior": {
+    "compatiblePairs": 164251,
+    "unnormalizedMass": 124335.25,
+    "definition": "Product of the declared simplified player weights, conditioned on flop and distinct private cards; no folded-card bunching model."
+  },
+  "hashes": {
+    "orderedPrivateHandsHash": "b5a8306c3c75129c0a4a1aa26e15e12d053227e706df685d034ad10ddbe32d62"
+  },
+  "checks": {
+    "classWeightsMatchSourceCharts": true,
+    "allPrivateCardsValid": true,
+    "boardConflictsZero": true,
+    "duplicatePrivateCombosZero": true,
+    "overlapPairsExcluded": true,
+    "jointPriorMatchesManifest": true,
+    "physicalFilterSeparatedFromActionFilter": true
+  },
+  "releaseBoundary": "starting_range_fact_and_physical_filter_only",
+  "currentEvidence": {
+    "independentRecompute": true,
+    "matchedActionPolicy": false,
+    "actionConditionedRange": false,
+    "successorClosure": false,
+    "learnerTrial": false,
+    "nl50Evidence": false
+  }
+}

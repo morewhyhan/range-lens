@@ -1,0 +1,565 @@
+{
+  "id": "FIRST_PASS_STATE_EVIDENCE_CROSSWALK_V1",
+  "status": "paper_state_frame_memory_evidence_crosswalk_closed",
+  "sources": [
+    "first-lesson-visible-state-machine.json",
+    "first-pass-golden-path.json",
+    "first-pass-mental-model-contract.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "initialFrameInputs": [
+    "board",
+    "heroHole",
+    "knownCards",
+    "street",
+    "legalActions",
+    "price"
+  ],
+  "routeClosure": {
+    "rule": "每个状态的必需输入必须来自初始牌局输入或此前状态的requiredOutput；nextState必须沿canonicalRoute前进，终点只能是exit_or_review。",
+    "allStateIdsUnique": true,
+    "everyRequiredInputHasDeclaredSource": true,
+    "nextChainExact": true,
+    "status": "paper_route_field_closure_consistent_not_runtime",
+    "runtimeObserved": false,
+    "learnerTrialObserved": false
+  },
+  "rows": [
+    {
+      "stateId": "L0",
+      "frameId": "G0_welcome",
+      "memoryToken": "tableFrame",
+      "parentStateId": null,
+      "plainQuestion": "这是一张什么桌，今天只练哪一条路线？",
+      "centerVisual": "六人桌、有效筹码和训练目标",
+      "primaryAction": "确认桌面并开始",
+      "requiredInputs": [],
+      "requiredOutput": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "nextState": "L1",
+      "errorReturn": "L0",
+      "stopReasons": [
+        "table_unknown",
+        "goal_unknown"
+      ],
+      "stopCondition": "桌面、目标或有效筹码未确认时停在当前层。",
+      "memoryRequired": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "L1",
+      "frameId": "G1_context",
+      "memoryToken": "contextFrame",
+      "parentStateId": null,
+      "plainQuestion": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "centerVisual": "座位、行动箭头、历史、底池和待补金额",
+      "primaryAction": "点行动者并确认待补",
+      "requiredInputs": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "requiredOutput": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "nextState": "L2",
+      "errorReturn": "L1",
+      "stopReasons": [
+        "identity_incomplete",
+        "actor_unknown"
+      ],
+      "stopCondition": "位置、历史、行动者、底池或待补金额不完整时停在当前层。",
+      "memoryRequired": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "currentLayerSelfLocated"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "L2",
+      "frameId": "G2_preflop_chart",
+      "memoryToken": "preflopCell",
+      "parentStateId": null,
+      "plainQuestion": "我的牌在这张图的哪一格？先只找到坐标。",
+      "centerVisual": "固定翻前图表与169格坐标",
+      "primaryAction": "点击固定坐标格",
+      "requiredInputs": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "requiredOutput": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "nextState": "L3",
+      "errorReturn": "L2",
+      "stopReasons": [
+        "chart_unknown",
+        "cell_unknown"
+      ],
+      "stopCondition": "图表身份或格子坐标未确定时停在当前层，不猜动作。",
+      "memoryRequired": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "currentLayerSelfLocated"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "L3",
+      "frameId": "G3_preflop_action",
+      "memoryToken": "preflopAction",
+      "parentStateId": null,
+      "plainQuestion": "这个格子代表什么翻前课程动作？权重是多少？",
+      "centerVisual": "选中格、动作图例和动作权重",
+      "primaryAction": "确认格子动作和权重",
+      "requiredInputs": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "requiredOutput": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "nextState": "L4",
+      "errorReturn": "L3",
+      "stopReasons": [
+        "action_identity_unknown",
+        "source_missing"
+      ],
+      "stopCondition": "动作身份、权重或来源缺失时停在当前层。",
+      "memoryRequired": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "L4",
+      "frameId": "G4_range_bridge",
+      "memoryToken": "startingRangeFrame",
+      "parentStateId": null,
+      "plainQuestion": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "centerVisual": "动作前范围、已知牌物理过滤和范围分母",
+      "primaryAction": "标记一组物理排除并确认分母",
+      "requiredInputs": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "requiredOutput": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "nextState": "p1",
+      "errorReturn": "L4",
+      "stopReasons": [
+        "range_source_missing",
+        "denominator_missing"
+      ],
+      "stopCondition": "范围来源、物理过滤或分母缺失时停在当前层。",
+      "memoryRequired": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete",
+        "parentBoundaryUnderstood"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p1",
+      "frameId": "G5_p1_context",
+      "memoryToken": "contextCard",
+      "parentStateId": "L4",
+      "plainQuestion": "翻牌后现在轮到谁？继续需要多少钱？",
+      "centerVisual": "翻后牌桌、行动箭头、底池、后手和待补",
+      "primaryAction": "确认行动权和价格",
+      "requiredInputs": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator",
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "requiredOutput": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "heroSeat",
+        "villainSeat",
+        "toCallBB"
+      ],
+      "nextState": "p2",
+      "errorReturn": "p1",
+      "stopReasons": [
+        "identity_incomplete",
+        "actor_unknown"
+      ],
+      "stopCondition": "翻后行动者、历史、价格或前序范围没有确认时停在当前层。",
+      "memoryRequired": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "currentLayerSelfLocated",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p2",
+      "frameId": "G6_p2_hand",
+      "memoryToken": "handCard",
+      "parentStateId": "L4",
+      "plainQuestion": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "centerVisual": "公共牌、底牌、最佳五张和牌力顺序",
+      "primaryAction": "拼最佳五张并点牌型",
+      "requiredInputs": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB",
+        "heroSeat",
+        "villainSeat",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "requiredOutput": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "nextState": "p3",
+      "errorReturn": "p2",
+      "stopReasons": [
+        "card_read_error",
+        "best_five_unknown"
+      ],
+      "stopCondition": "牌面、底牌、最佳五张、牌型或改善牌未确认时停在当前层。",
+      "memoryRequired": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p3",
+      "frameId": "G7_p3_range",
+      "memoryToken": "rangeDeltaCard",
+      "parentStateId": "L4",
+      "plainQuestion": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "centerVisual": "同坐标范围前后图、物理排除和分母",
+      "primaryAction": "点一个组合并选择变化身份",
+      "requiredInputs": [
+        "board",
+        "heroHole",
+        "bestFive",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "rangeBefore"
+      ],
+      "requiredOutput": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "rangeBeforeDenominator",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator"
+      ],
+      "nextState": "p4",
+      "errorReturn": "p3",
+      "stopReasons": [
+        "range_source_missing",
+        "physical_filter_unverified"
+      ],
+      "stopCondition": "范围分母、物理过滤或行动筛选身份不完整时停在当前层。",
+      "memoryRequired": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p4",
+      "frameId": "G8_p4_compare",
+      "memoryToken": "choiceCard",
+      "parentStateId": "L4",
+      "plainQuestion": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "centerVisual": "价格、合法动作、动作目的和政策身份",
+      "primaryAction": "选择一个有依据的动作或停止",
+      "requiredInputs": [
+        "rangeBefore",
+        "blockedCombos",
+        "rangeBeforeDenominator",
+        "physicalRemovalReason",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator",
+        "legalActions",
+        "price"
+      ],
+      "requiredOutput": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "nextState": "p5",
+      "errorReturn": "p4",
+      "stopReasons": [
+        "no_matching_strategy_reference",
+        "illegal_action",
+        "price_missing"
+      ],
+      "stopCondition": "没有匹配参考或明确课程政策时停在当前层，不伪造精确答案。",
+      "memoryRequired": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p5",
+      "frameId": "G9_p5_execute",
+      "memoryToken": "ledgerCard",
+      "parentStateId": "L4",
+      "plainQuestion": "实际点什么？投入多少？接下来轮到谁？",
+      "centerVisual": "动作按钮、金额、底池后变化和下一行动者",
+      "primaryAction": "点击动作并确认金额",
+      "requiredInputs": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "policyIdentity",
+        "reason"
+      ],
+      "requiredOutput": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "nextState": "p6",
+      "errorReturn": "p5",
+      "stopReasons": [
+        "amount_mismatch",
+        "actor_mismatch",
+        "ledger_break"
+      ],
+      "stopCondition": "动作金额、底池、后手或下一行动者不守恒时停在当前层。",
+      "memoryRequired": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p6",
+      "frameId": "G10_p6_update",
+      "memoryToken": "changeCard",
+      "parentStateId": "L4",
+      "plainQuestion": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "centerVisual": "一个变化高亮、动作后范围和真实后继",
+      "primaryAction": "确认变化并进入真实后继",
+      "requiredInputs": [
+        "action",
+        "amountOrNoBet",
+        "potAfterBB",
+        "stacksAfterBB",
+        "nextActor",
+        "ledgerAfter"
+      ],
+      "requiredOutput": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "nextState": "p7",
+      "errorReturn": "p6",
+      "stopReasons": [
+        "successor_missing",
+        "range_after_missing",
+        "ledger_not_conserved"
+      ],
+      "stopCondition": "变化字段、动作后范围、账本或真实后继缺失时停在当前层。",
+      "memoryRequired": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "independentEvidence": [
+        "primaryActionCompleted",
+        "handoffPayloadComplete",
+        "successorOrStopSelfLocated"
+      ],
+      "missing": []
+    },
+    {
+      "stateId": "p7",
+      "frameId": "G11_p7_close",
+      "memoryToken": "reviewCard",
+      "parentStateId": "L4",
+      "plainQuestion": "这手牌到哪里结束？如果错了，错在第几层？",
+      "centerVisual": "结算账本、决策与结果分栏和路线回放",
+      "primaryAction": "确认结算并选择回退层",
+      "requiredInputs": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "requiredOutput": [
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField",
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "nextState": "exit_or_review",
+      "errorReturn": "p7",
+      "stopReasons": [
+        "reason_not_expressed",
+        "transfer_field_not_isolated"
+      ],
+      "stopCondition": "结束原因、错误层或单变量迁移字段未表达时停在当前层。",
+      "memoryRequired": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "independentEvidence": [
+        "oneSentenceReason",
+        "errorLayer",
+        "singleTransferField"
+      ],
+      "missing": []
+    }
+  ],
+  "checks": {
+    "routeExact": true,
+    "stateCount": 12,
+    "allStatesMapped": true,
+    "oneFramePerState": true,
+    "everyStateHasMemoryToken": true,
+    "everyStateHasIndependentEvidence": true,
+    "everyStateHasStopCondition": true
+  },
+  "currentEvidence": {
+    "paperCrosswalk": true,
+    "runtimeAttached": false,
+    "learnerTrialObserved": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "status": "declarative_single_path_contract_not_implemented",
+  "source": "53_单一路径总装与首次全图导航合同.md",
+  "goal": {
+    "firstPassOutcome": "learner can locate the next layer and describe the recurring loop",
+    "target": "NL50-level decision capability",
+    "targetEvidenceVerified": false
+  },
+  "route": {
+    "root": "L0",
+    "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7"],
+    "canonicalLearnerRouteRole": "runtime_surface",
+    "primaryPath": ["L0","L1","L2","L3","L4","L5","L6","L7","L8"],
+    "primaryPathRole": "legacy_author_macro_inventory_only",
+    "stops": [
+      {"id":"L0","label":"进入","children":["orientation"]},
+      {"id":"L1","label":"翻前定位","children":["F1"]},
+      {"id":"L2","label":"翻前读格","children":["F2"]},
+      {"id":"L3","label":"翻前执行","children":["F3","F4"]},
+      {"id":"L4","label":"起始范围","children":["physical_filter","range_snapshot"]},
+      {"id":"L5","label":"翻牌定位","children":["p1_context","p2_board"]},
+      {"id":"L6","label":"当前决定","children":["p3_range","p4_compare","p5_execute"]},
+      {"id":"L7","label":"继续推进","children":["p6_update"]},
+      {"id":"L8","label":"结算回看","children":["p7_close","order_recall","layer_location","error_recovery","one_variable_transfer"]}
+    ]
+  },
+  "nestedRules": {
+    "maxOpenTeachingChildren": 1,
+    "childMustHaveParentAndReturnTo": true,
+    "mutuallyExclusiveBranchesAreSnapshots": true,
+    "restoreFields": [
+      "publicCards",
+      "heroCards",
+      "history",
+      "actor",
+      "pot",
+      "stacks",
+      "streetPaid",
+      "referenceVersion",
+      "coursePolicy",
+      "rangeView"
+    ],
+    "noFlatHomeMenu": true,
+    "noLongTermStorage": true
+  },
+  "screenContract": {
+    "visibleAtOnce": ["currentRouteNode","oneQuestion","onePrimaryAction","returnTo"],
+    "visualAnchor": "one_table_or_one_range_view",
+    "explanation": "one_plain_language_sentence_then_optional_detail",
+    "mustShowNextLayer": true,
+    "mustNotShow": ["all35UnitsAsHomeMenu","allBranchesAtOnce","dashboardMetrics"]
+  },
+  "assistanceLevels": [
+    {"id":"demonstration","independentEvidence":false},
+    {"id":"guided","independentEvidence":false},
+    {"id":"independent","independentEvidence":true}
+  ],
+  "errorRecovery": {
+    "order": ["identifyLayer","highlightOneFact","showOneContrast","retrySameParent","returnToOriginalNextStep"],
+    "unknownIsWrong": true,
+    "retryDoesNotOverwriteFirstAnswer": true,
+    "wrongActionDoesNotSilentlyReplaceHistory": true
+  },
+  "firstPassChecks": [
+    {"id":"order_recall","checks":"restore the route order"},
+    {"id":"layer_location","checks":"choose the next layer in an unseen short hand"},
+    {"id":"error_recovery","checks":"return to the nearest missing layer after an error"},
+    {"id":"one_variable_transfer","checks":"identify one changed field before a local action"}
+  ],
+  "entryAndExit": {
+    "preflopToPostflopRequiresSnapshot": true,
+    "missingMatchedPostflopReference": "fact_or_demonstration_only",
+    "firstPassDoesNotGrantNL50": true,
+    "exitAfterFirstPass": "eligible_for_unseen_same_mechanism_practice"
+  },
+  "currentStatus": {
+    "routeImplemented": false,
+    "nestedUIImplemented": false,
+    "completeStrategyCoverage": false,
+    "learnerTrial": false,
+    "nl50Evidence": false
+  }
+}

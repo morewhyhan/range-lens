@@ -1,0 +1,16 @@
+{
+  "id":"GAP_FRAME_REFERENCE_CLOSURE_V1",
+  "status":"reference_closure_matrix_written_not_received",
+  "source":"first-hand-gap-frame-insertions.json",
+  "requiredSharedConfiguration":["position","preflopHistory","boardOrder","rootRanges","potBB","stacksBB","rake","actionTree","sourceCommit","errorDefinition"],
+  "rows":[
+    {"insertion":"I03","principle":"P03","factEvidence":["board","suits","rank_connectivity","pairing"],"strategyEvidence":[],"referenceGate":"physical_board_fact","requiredFields":["board","boardTextureRule"],"status":"fact_open_strategy_not_applicable","stop":"none_for_fact_classification"},
+    {"insertion":"I05","principle":"P05","factEvidence":["knownCardCollision","legalComboFilter"],"strategyEvidence":["rootRangeIdentity","orderedPrivateHandLists","rawReachWeights","fixedDenominator"],"referenceGate":"A72_RANGE_HANDOFF","requiredFields":["sourceIdentity","configurationId","rootRangeIdentity","bothOrderedPrivateHandLists","bothRawReachWeights","normalizationDenominator"],"status":"reference_missing","stop":"missing_complete_starting_range"},
+    {"insertion":"I07","principle":"P07","factEvidence":["legalActionMenu"],"strategyEvidence":["coursePurposeField_or_referencePurpose","actionMenuIdentity"],"referenceGate":"G_FLOP_HERO","requiredFields":["actualContext","actualMenuWithAmounts","policyIdentity","actionPurpose"],"status":"policy_missing","stop":"missing_course_policy_or_matched_reference"},
+    {"insertion":"I08","principle":"P08","factEvidence":["potBB","size","toCallBB","priceFormula"],"strategyEvidence":["thresholdPolicy_or_actionEV"],"referenceGate":"G_FLOP_HERO","requiredFields":["actualContext","potBB","size","toCallBB","thresholdIdentity"],"status":"ledger_open_policy_missing","stop":"missing_threshold_policy"},
+    {"insertion":"I10","principle":"P10","factEvidence":["actionOccurred","historyAfter","physicalFilter"],"strategyEvidence":["rangeBefore","referenceAfter","courseAfter","actionFrequency","comboReachWeights","fixedDenominator"],"referenceGate":"G_FLOP_RESPONSE","requiredFields":["sourceIdentity","configurationId","bothRawReachWeights","actorStrategyByPhysicalHandAndAction","continuationIdentityAndCoverage"],"status":"reference_missing","stop":"missing_matched_action_reference"},
+    {"insertion":"I11","principle":"P11","factEvidence":["newCardLegal","boardDelta"],"strategyEvidence":["successorNode","nextActor","nextMenu","rangeSnapshot","continuationIdentity"],"referenceGate":"G_TURN_HERO","requiredFields":["actualContext","continuationIdentityAndCoverage","successorIdentity","rangeAfter"],"status":"reference_missing","stop":"missing_successor_reference"}
+  ],
+  "rules":{"allRowsUseSharedConfiguration":true,"factAndStrategyIdentitiesSeparate":true,"aggregateFrequencyNotEnoughForRangeDelta":true,"missingReferenceStops":true,"differentContextCannotSubstitute":true,"zeroReceivedNodesCurrent":true},
+  "currentEvidence":{"matrixWritten":true,"receivedRows":0,"strategyReadyRows":0,"learnerTrial":false,"NL50Evidence":false}
+}

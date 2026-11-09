@@ -1,0 +1,5178 @@
+{
+  "status": "public_answers_hidden_same_mechanism_practice_not_frozen_test",
+  "familyCount": 1,
+  "source": "bluff-reraise-model.json",
+  "total": 60,
+  "administration": {
+    "showCurrentQuestionOnly": true,
+    "noCorrectHighlights": true,
+    "requiredInputsRemainAccessible": true,
+    "defaultTrainingFeedback": "immediate_after_answer",
+    "laterAnswersAfterFeedbackNotIndependent": true,
+    "notHeldout": true,
+    "noActualLearnerResponsesCollected": true,
+    "noDatabase": true
+  },
+  "questions": [
+    {
+      "id": "Q-17838d06c6aec31e",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 40,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-86791d3b0b4bae66",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 45,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-b8c38e58220ccba7",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 48,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-faa597db1f0e7ab0",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 50,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-f6aa784210c514ad",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 52,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-3689211a7d2a08f8",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 54,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-7144d9baad76f88e",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 55,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-9620c4836ebf7dbe",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 57,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-d7e05bbddc841d65",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 60,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-585c0e0fce68bc8b",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 65,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-66c68254d5fe7eeb",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 70,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-2e0a56a31da3fa24",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 80,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-cd825cd910adfbdf",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 90,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-51701dee78359518",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 100,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-bbb9606043db283e",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 33,
+            "denominator": 61
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-3431d74610938ab5",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 40,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-9a74b404b45fa680",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 45,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-33f9d5459aed9b35",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 48,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-0c137ea1b478852e",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 50,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-412eeb2c77121b4a",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 52,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-7407bb1dfd9ab916",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 54,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-95499751e19da499",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 55,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-adc0fb757c1dd616",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 57,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-91be3d10aef7a12a",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 60,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-4ffadcf56ca1a2cb",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 65,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-39e84e4692e1a699",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 70,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-6ecf9913d1420718",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 80,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-fcb6a7fb3fab00bd",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 90,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-eb6b610f2941e234",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 100,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-db0ad00ccfb460c8",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 198,
+            "denominator": 427
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-dbaeb993b23c31d9",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 40,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-bb1655ac9cf41ff2",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 45,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-55c4e534318d8640",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 48,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-6781f06917838fef",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 50,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-9ec0425f761316e8",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 52,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-21c20ec1084a45f7",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 54,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-bf1e434d4e513235",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 55,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-6cf9d7473e7dc200",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 57,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-acd8ec7f32935193",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 60,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-851148e10635796a",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 65,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-432a4f62633006b5",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 70,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-f4315ab56fd6bcb7",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 80,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-589434518ff639bb",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 90,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-7d6abbefe4f9b8ef",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 100,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-43e70951724dd13d",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 220,
+            "denominator": 427
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-0f447b21219b4df1",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 40,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-aa758623ec781d86",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 45,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-1fd5abb034e0775c",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 48,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-c467e7fc4f54745a",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 50,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-5c424f71ee9b8742",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 52,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-30aa94c6a30f68ed",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 54,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-c9f8a1f9379450b7",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 55,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-fc5d70bc2460f59f",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 57,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-cac47499c0f5b5e1",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 60,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-57833a9773fb6b67",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 65,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-17f82066f04e1f83",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 70,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-abc05a7cb9541b44",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 80,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-f23af51710a63050",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 90,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-abf51af38ca848f0",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 100,
+            "denominator": 100
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    },
+    {
+      "id": "Q-1054ad06f53e51c3",
+      "body": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399,
+        "observedHistory": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "currentRange": {
+          "classes": [
+            "AKs",
+            "KQo"
+          ],
+          "physicalHoldingWeight": 1,
+          "removeBoardAndHeroCards": true
+        },
+        "responseModel": {
+          "AKs": "Always continue",
+          "KQoFoldProbability": {
+            "numerator": 88,
+            "denominator": 183
+          },
+          "otherKQo": "Continue",
+          "continueMeaning": "Jam_to83 after any hero raise below83; call38 if hero allin83",
+          "sameProbabilitiesAtEveryLegalRaiseSize": true
+        },
+        "legalActions": {
+          "fold": true,
+          "callAmount": 27.5,
+          "raiseToInterval": [
+            72.5,
+            83
+          ],
+          "practiceChipUnitBB": 0.01,
+          "chipUnitMeaning": "Author arithmetic grid, not a platform denomination claim."
+        },
+        "prompt": "轮到你了。按题设比较当前选择。",
+        "options": [
+          {
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "action": "call",
+            "label": "跟27.5"
+          },
+          {
+            "action": "raise",
+            "to": 72.5,
+            "label": "再加到72.5"
+          },
+          {
+            "action": "raise",
+            "to": 83,
+            "label": "全下83"
+          },
+          {
+            "action": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "notice": "当前范围与回应是完整给定的作者模型，不是现实对手频率。其它合法再加金额也可按题设检验。"
+      }
+    }
+  ]
+}

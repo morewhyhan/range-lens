@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "inputFingerprint": "c818957b797454741d4de929e6883258952ba88a53c24e4dce486d40b27b200b",
+  "solverReportedExploitabilityBB": 0.005898857116699218,
+  "scope": "用户简化翻前范围；SB开池3BB、BB跟注；A72普通牌面；零抽水；每街一个下注尺度、面对下注可弃牌/跟注/全下加注。有限动作树训练参考。",
+  "verifiedNodes": 103,
+  "physicalWeightChecks": 97335,
+  "edges": 137,
+  "independentTerminalChecks": 16,
+  "completeCheckAndBetCallRoutes": true,
+  "hiddenCardTrials": 12,
+  "allRuntimeHistoriesAvailable": true,
+  "independentSecondSolver": false,
+  "files": {
+    "request.json": "969807aed4f75c422aedaa51dc8101e6e29f2bf50fa1bb37c278b14ead0f4c77",
+    "result.json": "b816336c5bb81661ffcf63cacd0eb6eaee0f455c49066bfab19502cb0632875f",
+    "strategy.bin": "2166554c99f294f0d6f9c1ddba65909a905d62a3c9c010a4195c0418ad2cde71"
+  },
+  "engineSHA256": "4adf872e5f45ebe8d4c2a102af9b05688d7ceec911182cb484dbbff60331ae20"
+}

@@ -1,0 +1,2808 @@
+{
+  "id": "UNIT_LEARNER_RELEASE_MATRIX_V1",
+  "status": "paper_unit_release_matrix_compiled_not_trialed",
+  "purpose": "为35项建立统一的学习者可见释放层级，禁止局部资料直接升级为独立策略题。",
+  "sources": [
+    "unit-field-completion-queue.json",
+    "unit-architecture-bridge.json",
+    "full-nested-learning-route.json",
+    "first-pass-representative-units.json"
+  ],
+  "levels": [
+    {
+      "id": "identity_only",
+      "label": "只确认身份",
+      "canDo": [
+        "read_source_identity",
+        "physical_fact_if_available"
+      ],
+      "cannotDo": [
+        "exact_action_grade",
+        "independent_transfer"
+      ]
+    },
+    {
+      "id": "fact_frame",
+      "label": "事实题",
+      "canDo": [
+        "read_legal_cards",
+        "read_best_five",
+        "check_ledger"
+      ],
+      "cannotDo": [
+        "course_action_grade",
+        "range_policy_grade"
+      ]
+    },
+    {
+      "id": "demonstration",
+      "label": "教师示范",
+      "canDo": [
+        "watch_declared_comparison",
+        "repeat_parent_return"
+      ],
+      "cannotDo": [
+        "claim_independent_mastery",
+        "claim_target_strategy"
+      ]
+    },
+    {
+      "id": "guided",
+      "label": "带提示练习",
+      "canDo": [
+        "answer_with_required_facts",
+        "use_one_contrast"
+      ],
+      "cannotDo": [
+        "skip_parent",
+        "hide_missing_successor"
+      ]
+    },
+    {
+      "id": "independent_candidate",
+      "label": "独立候选",
+      "canDo": [
+        "first_attempt_before_explanation",
+        "single_variable_transfer"
+      ],
+      "cannotDo": [
+        "enter_continuous_without_successor"
+      ]
+    },
+    {
+      "id": "target_reference_ready",
+      "label": "目标参考就绪",
+      "canDo": [
+        "grade_declared_course_policy",
+        "show_range_delta",
+        "continue_successor"
+      ],
+      "cannotDo": [
+        "collapse_reference_and_course"
+      ]
+    }
+  ],
+  "promotionRules": {
+    "noLevelSkipping": true,
+    "identityBeforeFact": true,
+    "factBeforePolicy": true,
+    "policyBeforeReferenceGrade": true,
+    "rangeAndSuccessorBeforeContinuous": true,
+    "learnerTrialBeforeTargetReadiness": true,
+    "missingEvidenceStopsAtCurrentUnit": true,
+    "noFlatHomeMenu": true
+  },
+  "rows": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "补匹配真实范围、后续与完整动作菜单",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有17帧局部保护跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "有限河牌模型不能代表所有前街诈唬",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有17帧主动弱牌局部跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": true,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "A72 KQ仅补一条课程规则，仍缺跨情境完整策略",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有河牌强牌有限树，仍缺前街风险及匹配目标策略",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "补更广的牌力和后续；未取得参考的动作不能自动排除",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "4095权重模型不是4095个真实策略节点",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": true,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "三条9能赢77/AK而输KK的有限比较已补，仍缺完整范围与其他情境",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "补更多价格与匹配下注参考，不能从牌型推诈唬比例",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "有限44张跑牌比较尚不覆盖所有听牌和未来菜单",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有Jd7d给定转牌全下模型和14帧局部跟练；仍缺非全下未来菜单、目标范围及独立迁移",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已补受限价值树而非借听花模型，仍需匹配参考及更广菜单",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "模型只覆盖给定半诈唬树，不自动适用小注或任意人群",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "须接匹配防守参考，不把一个模型的弃牌推广",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": true,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "还需覆盖其他金额与合法再加状态，价格本身不定策略",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已补KK/77加注比例变化的三条9比较，真实加注范围与其他牌力仍缺",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "既有AsQs分支仍属一套限制树，其他尺寸和组合待补",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已补77继续或弃牌的受限再加比较，仍缺完整目标策略",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有21帧局部跟练和给定再加区间比较；仍缺目标匹配范围、真实响应与独立迁移",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "14卡不等于通用规则引擎，不足额全下等完整边界待实现验证",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "作者给定回应可复算，仍缺匹配真实逐手响应",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "不能由一次过牌推演模型中的具体百分比",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有两版合法联合配对和实际手牌条件化；仍缺完整双方范围与真实响应",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "有限同价异序例不覆盖所有尺寸/加注路线",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": true,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "固定脚本正确不等于通用金额引擎和界面通过",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "已有四条答后示例与动作前判断分离，仍缺真人理解与陌生迁移验证",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "自己的成牌改善不等于策略或相对权益必改善",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "明示模型不是目标玩家后验或全部后街参考",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "相关源路线花色有绑定差异，不能搬用精确动作",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "需匹配真实候选与响应才能判断行动",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "不能生成高牌必利于进攻方的规则",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "finite_model",
+      "currentLevel": "fact_frame",
+      "nextCompilationPhase": "identity_canonical",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "同最终牌钱模型仅作历史机制对照，不是通用空白牌策略",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": true,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": true,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "不把物理删除自动称为确定策略或任意后验",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "firstPassRepresentative": false,
+      "sourceIdentity": "fact_or_ledger",
+      "currentLevel": "identity_only",
+      "nextCompilationPhase": "identity_source",
+      "missingCanonicalFields": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "stopReason": "同花移除例不补全河牌所有动作参考",
+      "requiredForIndependent": [
+        "factInputs",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "independentChecks": [
+        "firstAttemptBeforeExplanation",
+        "actionAndAmountBothChecked",
+        "reasonAtCorrectLayer",
+        "rangeAfterOrExplicitStop",
+        "ledgerAfterConserved",
+        "successorOrExplicitStop"
+      ],
+      "promotionOrder": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame",
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer",
+        "release"
+      ],
+      "releaseFlags": {
+        "factOpen": false,
+        "demonstrationOpen": false,
+        "guidedOpen": false,
+        "independentCandidateOpen": false,
+        "targetReferenceReady": false
+      },
+      "invariants": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true
+      },
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false
+      }
+    }
+  ],
+  "counts": {
+    "units": 35,
+    "firstPassRepresentatives": 5,
+    "identityOnly": 16,
+    "factFrameOrHigher": 19,
+    "independentCandidateOpen": 0,
+    "targetReferenceReady": 0
+  },
+  "currentEvidence": {
+    "all35HaveReleaseRows": true,
+    "allRowsHaveStops": true,
+    "allRowsHaveParentReturn": true,
+    "strategyReady": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

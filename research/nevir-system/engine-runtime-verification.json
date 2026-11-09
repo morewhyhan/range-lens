@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "status": "runtime_calibration_verified_not_requested_flop_solution",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "runtimeHash": "2c0f5e35f59b38bb95538e73f48cbbe10752b90342989f07005d33790dd1f71f",
+  "fileHashes": {
+    "research/solver-source/Cargo.toml": "70646a8472c4311666908eb315cb4f37bb9c0969c2aa6b9242a9ea48cfef2a6c",
+    "research/solver-source/src/card.rs": "001dcb1d0beb887fab8fa5b6735501c418cf7911e5431968fe58b3163060969a",
+    "research/solver-source/src/game/interpreter.rs": "28f2d6ebbab7340cea4b283a59c6d9ba307cb3036d94dbfcf9d34c6cded46500",
+    "research/solver-source/src/action_tree.rs": "76f6f4602e99db8e76edfa990f2e0d381f4bee08bd8d1e0d547d24b83ffdc459",
+    "research/solver-probe/Cargo.toml": "da66a7c1eb8d7b4c8b782e6911f66ace0432f6e80e5252957460153aa93a17f7",
+    "research/solver-probe/Cargo.lock": "3d344a0ce85a1bc2a2667a9bd8b15aa1298a23beb349b316235973c3fb9158aa",
+    "research/solver-probe/src/main.rs": "f65ff0b61fe7a231f2b61f04f93aa5087e9f51ff66bbec9fabb28436296d9f8f"
+  },
+  "checks": {
+    "cardRoundTrips": 52,
+    "rangePhysicalWeights": 2652,
+    "declaredRootRanges": 2,
+    "tinyRiverAmountProbe": true,
+    "winLoseTieEVOracles": 3
+  },
+  "limits": [
+    "The three calibrations lock the path into check-bet, preventing a zero-reach action from masquerading as an EV test.",
+    "Only tiny river games were solved; the requested full A72 flop tree has not been built or solved.",
+    "This does not prove general solver correctness, full-game equilibrium or NL50 ability.",
+    "Research executable and source are isolated from app source; no user data saved."
+  ],
+  "buildContext": {
+    "command": "PowerShell process-local RUSTFLAGS='-A dangerous_implicit_autorefs'; cargo run --release --locked --manifest-path research/solver-probe/Cargo.toml",
+    "completedAttempt": {
+      "sessionId": 11745,
+      "exitCode": 0,
+      "sourceChanged": false,
+      "compatibilityFlag": "-A dangerous_implicit_autorefs",
+      "scope": "Allows old source to compile; not a memory safety proof."
+    },
+    "recordHash": "b244827fa238d0d53c7e4672aa2074f0dfcba838c8164b20d0745aaab8e37e4e"
+  }
+}

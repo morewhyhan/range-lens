@@ -1,0 +1,34 @@
+{
+  "status": "declarative_capability_ladder_not_learner_evidence",
+  "source": "49_能力分级与迁移准入合同.md",
+  "doNotUseSingleScoreAsNL50": true,
+  "levels": [
+    {"id":"R0","name":"事实可靠","requires":["independent card and best-five checks","draw and improvement checks","money and legal-action checks"],"evidence":"factItemsOnUnseenInputs","fallback":"read_or_ledger_child","current":"partial_author_checks"},
+    {"id":"R1","name":"结构地图","requires":["order recall","next-layer selection on an unseen short spot"],"evidence":"firstPassPostRouteChecks","fallback":"corresponding_parent_step","current":"contract_written_not_trialed"},
+    {"id":"R2","name":"单步策略","requires":["matched reference or explicit course policy","unseen same-mechanism item","first answer separated from assisted retry"],"evidence":"currentNodeActionAndReason","fallback":"same_parent_child_layer","current":"partial_author_models"},
+    {"id":"R3","name":"连续执行","requires":["closed action successors","chance and range updates","independent ledger and settlement"],"evidence":"continuousRouteReplayAndLearnerRoute","fallback":"last_failed_parent_frame","current":"author_replay_only"},
+    {"id":"R4","name":"相邻迁移","requires":["declared changed fields","action-unchanged contrast","unseen adjacent item"],"evidence":"transferPairWithHelpLog","fallback":"range_or_change_type_layer","current":"design_only"},
+    {"id":"R5","name":"陌生迁移","requires":["unseen history or board","learner locates needed inputs","matched strategy reference and closed successors"],"evidence":"unseenStrategyTransferSet","fallback":"input_bridge_layer","current":"no_complete_set"},
+    {"id":"R6","name":"目标对标","requires":["frozen target configuration","reference quality and coverage","unseen continuous hands","independent transfer evidence"],"evidence":"targetBenchmarkAndRealTransfer","fallback":"do_not_issue_qualification","current":"not_established"}
+  ],
+  "recordFields":["firstAnswer","retryAnswer","helpLevel","currentLayer","factAccuracy","amountAccuracy","actionAccuracy","rangeUpdateAccuracy","seenOrUnseen","isomorphicExposure","referenceIdentity","coursePolicyIdentity","continuationClosure","evLossIfSupported"],
+  "gates": {
+    "assistedRetryDoesNotOverwriteFirstAnswer": true,
+    "shortTermWinDoesNotProveStrategy": true,
+    "factPassDoesNotImplyActionPass": true,
+    "localModelDoesNotImplyNL50": true,
+    "missingReferenceDoesNotCountAsLearnerError": true,
+    "singlePercentageThresholdCalibrated": false
+  },
+  "currentEvidence": {
+    "v1Facts": true,
+    "v2StructureContract": true,
+    "r2PartialModels": true,
+    "r3AuthorReplay": true,
+    "r4UnseenLearnerTrial": false,
+    "r5UnseenMatchedStrategySet": false,
+    "r6TargetBenchmark": false,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  }
+}

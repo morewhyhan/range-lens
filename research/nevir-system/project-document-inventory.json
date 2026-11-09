@@ -1,0 +1,131 @@
+{
+  "id": "PROJECT_DOCUMENT_INVENTORY_V1",
+  "status": "project_inventory_and_runtime_target_boundary_registered",
+  "scope": {
+    "authoredMarkdownExcludes": [
+      "node_modules",
+      ".git",
+      "dist",
+      "build"
+    ],
+    "researchSystemMarkdown": 219,
+    "researchPlainMarkdown": 16,
+    "designMarkdown": 6,
+    "researchOtherMarkdown": 4,
+    "rootMarkdown": 7,
+    "authoredMarkdownTotal": 252
+  },
+  "canonicalSources": [
+    "翻后教学系统_统一总纲.md",
+    "90_研究文档阅读路线与层级索引.md",
+    "169_最终标准可观察验收与NL50边界合同.md",
+    "170_低基础首课黄金路径与逐屏交接脚本.md",
+    "177_学习者可见七步路线与35项释放交叉合同.md",
+    "178_全量文档归档与遗留材料处置合同.md",
+    "195_最终目标发布合同.md",
+    "215_目标标准的顺序教学与NL50结果闭环合同.md",
+    "216_目标标准与既有合同交叉审计.md",
+    "217_用户最终标准逐条验收审计.md",
+    "218_训练阶段别名与唯一用户进阶桥.md",
+    "219_U0_U7用户进阶运行时采用合同.md"
+  ],
+  "documentLayers": [
+    {
+      "id": "canonical_route_and_evidence",
+      "paths": [
+        "翻后教学系统_统一总纲.md",
+        "research/nevir-system/83—215"
+      ],
+      "canDefineLearnerRoute": true
+    },
+    {
+      "id": "plain_language_source_research",
+      "paths": [
+        "research/nevir-plain/00—15"
+      ],
+      "canDefineLearnerRoute": false,
+      "use": "plain_language_and_source_support"
+    },
+    {
+      "id": "runtime_snapshot",
+      "paths": [
+        "README.md",
+        "design/翻后18项教学_实现与验收.md",
+        "design/翻后教学_实现与验收.md"
+      ],
+      "canDefineLearnerRoute": false,
+      "use": "describe_current_implementation_only"
+    },
+    {
+      "id": "design_research",
+      "paths": [
+        "翻后训练器_教学与迁移设计研究报告.md",
+        "翻后逐步骤原理与练习设计手册_2026-10-18.md",
+        "扑克训练器_教学与练习方式深度研究_2026-10-18.md",
+        "design/research-steps-*"
+      ],
+      "canDefineLearnerRoute": false,
+      "use": "design_reasoning_and_historical_decisions"
+    },
+    {
+      "id": "external_source_inspection",
+      "paths": [
+        "research/solver-source",
+        "research/*-inspection"
+      ],
+      "canDefineLearnerRoute": false,
+      "use": "source_capability_and_license_evidence"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "runtime_free_jump_vs_canonical_nested_route",
+      "sources": [
+        "README.md",
+        "design/翻后18项教学_实现与验收.md",
+        "design/翻后教学_实现与验收.md"
+      ],
+      "currentStatement": "18项能力可自由跳转",
+      "canonicalRequirement": "首遍使用唯一L0-L4→p1-p7→回放路线；L0-L8仅为作者侧覆盖宏，35项不作为平铺首页",
+      "resolution": "保留为当前运行快照；后续首课与目标验收以170、177、150为准",
+      "status": "documented_not_runtime_resolved"
+    },
+    {
+      "id": "plain_research_directory_vs_user_home",
+      "sources": [
+        "research/nevir-plain/00_从这里开始.md",
+        "research/nevir-system/90_研究文档阅读路线与层级索引.md"
+      ],
+      "currentStatement": "白话研究目录保留逐篇细节",
+      "canonicalRequirement": "白话材料从总纲按需打开，不成为用户平铺目录",
+      "resolution": "aligned_as_evidence_drawer",
+      "status": "resolved_on_paper"
+    },
+    {
+      "id": "runtime_functionality_vs_learning_evidence",
+      "sources": [
+        "design/翻后18项教学_实现与验收.md",
+        "final-goal-observable-acceptance.json"
+      ],
+      "currentStatement": "技术操作与计算验收通过",
+      "canonicalRequirement": "技术正确、用户理解、迁移能力和NL50准备度分开验收",
+      "resolution": "technical_pass_does_not_grant_learner_or_NL50_claim",
+      "status": "resolved_as_non_substitution"
+    }
+  ],
+  "guards": {
+    "runtimeSnapshotCannotOverrideCanonicalRoute": true,
+    "plainResearchCannotCreateFlatUserHome": true,
+    "designDocumentCannotImplyLearnerTrial": true,
+    "documentCountCannotProveNL50": true,
+    "conflictMustHaveWrittenResolution": true
+  },
+  "currentEvidence": {
+    "allProjectAuthoredMarkdownCounted": true,
+    "conflictsEnumerated": true,
+    "runtimeMigratedToCanonicalNestedRoute": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

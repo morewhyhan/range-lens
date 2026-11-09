@@ -1,0 +1,274 @@
+{
+  "ok": true,
+  "status": "request_context_and_rejection_checks_not_reference_quality_pass",
+  "nodes": 6,
+  "moneyChecks": 6,
+  "incompleteReferences": [
+    {
+      "gate": "G_FLOP_HERO",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "gate": "G_FLOP_RESPONSE",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "gate": "G_TURN_HERO",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "gate": "G_TURN_RESPONSE",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "gate": "G_RIVER_HERO",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "gate": "G_RIVER_RESPONSE",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "actualContext",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "preciseStrategyReady": false
+      }
+    }
+  ],
+  "negativeFixtures": [
+    {
+      "name": "wrong_actor",
+      "result": {
+        "status": "context_or_path_mismatch",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "mismatch": [
+          "actor"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "name": "wrong_suit",
+      "result": {
+        "status": "context_or_path_mismatch",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "mismatch": [
+          "board_suits_or_street_order"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "name": "wrong_pot",
+      "result": {
+        "status": "context_or_path_mismatch",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "mismatch": [
+          "pot"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "name": "same_money_different_history",
+      "result": {
+        "status": "context_or_path_mismatch",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport"
+        ],
+        "mismatch": [
+          "prior_history"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "name": "zero_selected_path",
+      "result": {
+        "status": "context_or_path_mismatch",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits"
+        ],
+        "mismatch": [
+          "selected_hand_zero_reach_or_zero_action_probability"
+        ],
+        "preciseStrategyReady": false
+      }
+    },
+    {
+      "name": "aggregate_only",
+      "result": {
+        "status": "incomplete",
+        "missing": [
+          "sourceIdentity",
+          "configurationId",
+          "rootRangeIdentity",
+          "bothOrderedPrivateHandLists",
+          "bothRawReachWeights",
+          "actorStrategyByPhysicalHandAndAction",
+          "actorEVByPhysicalHandAndAction",
+          "actualMenuWithAmounts",
+          "continuationIdentityAndCoverage",
+          "errorAndUnits",
+          "selectedHandPathSupport",
+          "node_aggregate_is_not_physical_hand_strategy"
+        ],
+        "mismatch": [],
+        "preciseStrategyReady": false
+      }
+    }
+  ],
+  "receivedRealReferenceNodes": 0,
+  "preciseStrategyReadyNodes": 0
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const dir=path.resolve('research/nevir-system');
+const c=JSON.parse(fs.readFileSync(path.join(dir,'architecture-replay-contract.json'),'utf8'));
+const r=JSON.parse(fs.readFileSync(path.join(dir,'architecture-replay-rubric.json'),'utf8'));
+if(c.nodes.length!==8) throw new Error('architecture must contain eight nodes');
+if(c.edges.length!==7) throw new Error('architecture must contain seven edges');
+const ids=c.nodes.map(x=>x.id);
+if(JSON.stringify(ids)!==JSON.stringify(['A1','A2','A3','A4','A5','A6','A7','A8'])) throw new Error('node order mismatch');
+if(JSON.stringify(c.minimumStructureEvidence)!==JSON.stringify(['node_identification','edge_recall','error_recovery','one_variable_transfer'])) throw new Error('minimum evidence mismatch');
+if(r.observations.nodeIdentification.required!==8 || r.observations.edgeRecall.required!==7) throw new Error('rubric cardinality mismatch');
+if(!r.notEquivalent.includes('structure_formed_is_not_strategy_mastery')) throw new Error('boundary missing');
+console.log(JSON.stringify({ok:true,status:c.status,nodes:c.nodes.length,edges:c.edges.length,replayLayers:c.replayLayers.length,minimumEvidence:c.minimumStructureEvidence,runtimeTrialed:c.runtimeEvidence.trialed}));

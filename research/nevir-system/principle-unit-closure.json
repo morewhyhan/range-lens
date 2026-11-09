@@ -1,0 +1,999 @@
+{
+  "id": "PRINCIPLE_UNIT_CLOSURE_V1",
+  "status": "paper_principle_unit_closure_compiled_not_trialed",
+  "sources": [
+    "first-pass-principle-coverage.json",
+    "unit-architecture-bridge.json",
+    "full-nested-learning-route.json"
+  ],
+  "rules": {
+    "everyPrincipleIntroducedOnMainRoute": true,
+    "everyPrincipleReinforcedByNestedUnitsOrParentOnly": true,
+    "everyUnitAttachedToAtLeastOnePrinciple": true,
+    "firstIntroductionPrecedesReinforcement": true,
+    "transferMustUseDeclaredField": true,
+    "closureDoesNotProveStrategyOrNL50": true
+  },
+  "principles": [
+    {
+      "principleId": "P01",
+      "name": "定位与行动者",
+      "firstIntroduction": "L1_preflop_context",
+      "firstQuestion": "现在谁在决定，轮到谁行动？",
+      "reinforcementUnits": [
+        "4.5"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "actor",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P02",
+      "name": "价格与账本起点",
+      "firstIntroduction": "L1_preflop_context",
+      "firstQuestion": "现在要付多少，底池和双方后手是多少？",
+      "reinforcementUnits": [
+        "3.1",
+        "4.5"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "toCallBB",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P03",
+      "name": "牌面结构",
+      "firstIntroduction": "p2_board",
+      "firstQuestion": "这几张公共牌在花色、连接和配对上属于什么结构？",
+      "reinforcementUnits": [
+        "5.1",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.2",
+        "5.3",
+        "5.7",
+        "5.8"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": [
+          "5.1",
+          "5.2",
+          "5.3",
+          "5.4",
+          "5.5",
+          "5.6",
+          "5.7",
+          "5.8"
+        ]
+      },
+      "reinforcementByParent": [],
+      "transferField": "board",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P04",
+      "name": "手牌、牌力与改善牌",
+      "firstIntroduction": "p2_board",
+      "firstQuestion": "自己的最佳五张是什么，哪些牌会改善？",
+      "reinforcementUnits": [
+        "5.1",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.2",
+        "5.6",
+        "5.7",
+        "5.8"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": [
+          "5.1",
+          "5.2",
+          "5.3",
+          "5.4",
+          "5.5",
+          "5.6",
+          "5.7",
+          "5.8"
+        ]
+      },
+      "reinforcementByParent": [],
+      "transferField": "heroHole",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P05",
+      "name": "行动前范围",
+      "firstIntroduction": "p3_range",
+      "firstQuestion": "进入这一节点前，双方有哪些合法组合？",
+      "reinforcementUnits": [
+        "4.1",
+        "4.3",
+        "4.4",
+        "4.2",
+        "4.5",
+        "4.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6"
+        ],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "rangeBefore",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P06",
+      "name": "物理过滤与行动过滤",
+      "firstIntroduction": "p3_range",
+      "firstQuestion": "哪些组合因为实体冲突移除，哪些才是动作造成的筛选？",
+      "reinforcementUnits": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "5.7",
+        "4.4",
+        "4.5",
+        "4.6",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.8"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6"
+        ],
+        "update.card": [
+          "5.1",
+          "5.2",
+          "5.3",
+          "5.4",
+          "5.5",
+          "5.6",
+          "5.7",
+          "5.8"
+        ]
+      },
+      "reinforcementByParent": [],
+      "transferField": "board",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P07",
+      "name": "动作目的与比较维度",
+      "firstIntroduction": "p4_compare",
+      "firstQuestion": "现在比较动作时，目标是价值、保护、实现权益还是拒绝权益？",
+      "reinforcementUnits": [
+        "1.1",
+        "2.1",
+        "3.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [
+          "1.1",
+          "1.2",
+          "1.3",
+          "1.4",
+          "1.5",
+          "1.6",
+          "1.7",
+          "1.8"
+        ],
+        "compare.bet": [
+          "2.1",
+          "2.2",
+          "2.3",
+          "2.4",
+          "2.5",
+          "2.6",
+          "2.7"
+        ],
+        "compare.raise": [
+          "3.1",
+          "3.2",
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6"
+        ],
+        "update.response": [],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "actionPurpose",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P08",
+      "name": "价格、尺寸与阈值",
+      "firstIntroduction": "p4_compare",
+      "firstQuestion": "这个尺寸带来的价格和所需权益是什么？",
+      "reinforcementUnits": [
+        "1.8",
+        "2.2",
+        "3.1",
+        "3.3",
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "2.1",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "3.2",
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [
+          "1.1",
+          "1.2",
+          "1.3",
+          "1.4",
+          "1.5",
+          "1.6",
+          "1.7",
+          "1.8"
+        ],
+        "compare.bet": [
+          "2.1",
+          "2.2",
+          "2.3",
+          "2.4",
+          "2.5",
+          "2.6",
+          "2.7"
+        ],
+        "compare.raise": [
+          "3.1",
+          "3.2",
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6"
+        ],
+        "update.response": [],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "size",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P09",
+      "name": "执行动作与账本更新",
+      "firstIntroduction": "p5_execute",
+      "firstQuestion": "选择动作后，金额、底池、后手和下一行动者怎样变化？",
+      "reinforcementUnits": [
+        "4.5",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6"
+        ],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "selectedAction",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P10",
+      "name": "行动后范围变化",
+      "firstIntroduction": "p6_update",
+      "firstQuestion": "这个动作之后，范围具体留下和移除了什么？",
+      "reinforcementUnits": [
+        "4.1",
+        "4.3",
+        "4.4",
+        "4.2",
+        "4.5",
+        "4.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6"
+        ],
+        "update.card": []
+      },
+      "reinforcementByParent": [],
+      "transferField": "selectedAction",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P11",
+      "name": "新牌效果与后继",
+      "firstIntroduction": "p6_update",
+      "firstQuestion": "新牌改变了什么，下一步真实后继是什么？",
+      "reinforcementUnits": [
+        "5.2",
+        "5.3",
+        "5.7",
+        "5.8",
+        "5.1",
+        "5.4",
+        "5.5",
+        "5.6"
+      ],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": [
+          "5.1",
+          "5.2",
+          "5.3",
+          "5.4",
+          "5.5",
+          "5.6",
+          "5.7",
+          "5.8"
+        ]
+      },
+      "reinforcementByParent": [],
+      "transferField": "board",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    },
+    {
+      "principleId": "P12",
+      "name": "结算、错误层与下一手",
+      "firstIntroduction": "p7_close",
+      "firstQuestion": "结果是什么，哪一层出错，下一手从哪里重新开始？",
+      "reinforcementUnits": [],
+      "reinforcementByGroup": {
+        "compare.unopened": [],
+        "compare.bet": [],
+        "compare.raise": [],
+        "update.response": [],
+        "update.card": []
+      },
+      "reinforcementByParent": [
+        "p7_close"
+      ],
+      "transferField": "errorLayer",
+      "closureRule": "先在父步骤讲清，再在子题中使用，最后在相邻/延迟/连续队列中迁移；不能只凭子题数量证明掌握。"
+    }
+  ],
+  "units": [
+    {
+      "unitId": "1.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P07"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.7",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "1.8",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P08"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P07"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P08"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "2.7",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P02",
+        "P07",
+        "P08"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [
+        "P08"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "3.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.1",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [
+        "P05",
+        "P06",
+        "P10"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.2",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [
+        "P06"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.3",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [
+        "P05",
+        "P06",
+        "P10"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.4",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [
+        "P05",
+        "P10"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.5",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [
+        "P01",
+        "P02",
+        "P09"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "4.6",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "explicitReinforcement": [],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.1",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P03",
+        "P04"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.2",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P11"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.3",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P04",
+        "P11"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.4",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P03",
+        "P04"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.5",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P03",
+        "P04"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.6",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P03"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.7",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P06",
+        "P11"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    },
+    {
+      "unitId": "5.8",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "explicitReinforcement": [
+        "P11"
+      ],
+      "hasOneQuestion": true,
+      "returnsToParent": true,
+      "exactGradeRequires": "matched_reference_and_successor"
+    }
+  ],
+  "counts": {
+    "principles": 12,
+    "units": 35,
+    "principlesWithReinforcement": 12,
+    "unitsWithPrinciple": 35
+  },
+  "currentEvidence": {
+    "allPrinciplesListed": true,
+    "all35UnitsAttached": true,
+    "learnerTrial": false,
+    "matchedStrategy": false,
+    "NL50Evidence": false
+  }
+}

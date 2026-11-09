@@ -1,0 +1,33 @@
+{
+  "id": "CLAIM_EVIDENCE_AUDIT_V1",
+  "status": "reverse_audit_passed_claim_boundaries_not_goal",
+  "evidenceLevels": ["source_read","fact_verified","finite_model","course_policy","reference_ready","route_paper_ready","learner_trial","target_benchmark"],
+  "forbiddenSubstitutions": [
+    "document_count_to_course_completeness",
+    "question_count_to_coverage",
+    "fact_correct_to_strategy_correct",
+    "finite_model_EV_to_full_GTO",
+    "solver_convergence_to_lossless_simplification",
+    "QQQ_engine_case_to_A72_course_reference",
+    "first_pass_to_unseen_three_street_execution",
+    "retry_correct_to_independent_first_answer",
+    "low_baseline_trial_to_NL50",
+    "short_term_result_to_teaching_effect"
+  ],
+  "auditedFacts": {
+    "all35FullTargetPolicy": false,
+    "A72C2toC5RawReference": false,
+    "QQQReplacesA72": false,
+    "paperRouteEqualsRuntime": false,
+    "lowBaselineTrial": false,
+    "continuousTransfer": false,
+    "NL50Evidence": false,
+    "goalCompletionVerified": false
+  },
+  "requiredNewDocumentFooter": ["evidenceLevel","unprovenClaims","nextGate","inputOrPolicyChange","runtimeOrLearnerEvidence"],
+  "currentStatus": {
+    "reverseAuditPerformed": true,
+    "claimBoundariesPreserved": true,
+    "goalCompleted": false
+  }
+}

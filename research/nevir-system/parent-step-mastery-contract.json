@@ -1,0 +1,17 @@
+{
+  "id": "PARENT_STEP_MASTERY_CONTRACT_V1",
+  "status": "paper_observable_mastery_contract_not_trialed",
+  "steps": [
+    {"id":"p1_context","label":"看清局面","question":"现在轮到谁，以及我面对什么？","visual":"table_history_money","cannotInfer":["action_from_position_only"],"transfer":"change_one_actor_or_history_event","errorReturn":"read.context_or_read.money","opensChildren":["read.context","read.money"]},
+    {"id":"p2_board","label":"读牌和牌力","question":"我现在是什么牌力或听牌？","visual":"entity_cards_best_five_improvement_cards","cannotInfer":["action_from_board_texture_only"],"transfer":"change_one_board_or_hole_card","errorReturn":"read.cards","opensChildren":["read.cards"]},
+    {"id":"p3_range","label":"看范围关系","question":"谁的哪些组合留下或改变？","visual":"before_after_range_same_coordinate_combo_detail","cannotInfer":["physical_removal_equals_action_filter"],"transfer":"change_one_blocker_or_response","errorReturn":"read.range","opensChildren":["read.range","update.response"]},
+    {"id":"p4_compare","label":"比较当前动作","question":"在声明的后续和课程政策下选哪个动作？","visual":"legal_actions_price_successor_tree","cannotInfer":["board_or_range_advantage_alone_is_complete_action"],"transfer":"change_one_price_or_successor_response","errorReturn":"compare.unopened_or_compare.bet_or_compare.raise","opensChildren":["compare.unopened","compare.bet","compare.raise"]},
+    {"id":"p5_execute","label":"执行并记账","question":"点哪个按钮、投入多少？","visual":"legal_buttons_ledger_turn_order","cannotInfer":["intended_action_equals_executed_ledger"],"transfer":"change_one_amount_or_effective_stack","errorReturn":"execute.amount","opensChildren":["execute.amount"]},
+    {"id":"p6_update","label":"动作后更新","question":"动作和新牌具体改变了什么？","visual":"range_after_action_money_and_chance_delta","cannotInfer":["showdown_result_proves_prior_reason"],"transfer":"change_one_response_or_next_card","errorReturn":"update.response_or_update.card","opensChildren":["update.response","update.card"]},
+    {"id":"p7_close","label":"结算和回看","question":"我错在读牌、范围、价格、按钮还是更新？","visual":"settlement_ledger_error_layer_next_help","cannotInfer":["single_outcome_proves_decision"],"transfer":"change_one_runout_or_error_layer","errorReturn":"update.end","opensChildren":["update.end"]}
+  ],
+  "screenRules":{"oneQuestion":true,"onePrimaryAction":true,"unknownCountsAsWrong":true,"firstAnswerPreserved":true,"parentFrameRestoredOnChildClose":true,"nextLayerOnly":true},
+  "errorLayers":["state","board","hand","range","price","action","ledger","update"],
+  "postRouteChecks":["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "currentStatus":{"paperContract":true,"runtimeImplemented":false,"adultBeginnerTrial":false,"unseenTransferVerified":false,"completeStrategyCoverage":false,"NL50Evidence":false}
+}

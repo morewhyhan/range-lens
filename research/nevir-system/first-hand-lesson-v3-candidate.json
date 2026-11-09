@@ -1,0 +1,115 @@
+{
+  "id": "FIRST_HAND_LESSON_V3_CANDIDATE",
+  "status": "paper_candidate_with_p3_insert_not_runtime",
+  "sourcePacket": "first-hand-lesson-packet.json",
+  "existingFrameCount": 18,
+  "candidateFrameCount": 19,
+  "sequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "parentCoverage": {
+    "p1_context": [
+      "S03",
+      "S12"
+    ],
+    "p2_board": [
+      "S04"
+    ],
+    "p3_range": [
+      "R01"
+    ],
+    "p4_compare": [
+      "S05",
+      "S09",
+      "S13"
+    ],
+    "p5_execute": [
+      "S06",
+      "S10"
+    ],
+    "p6_update": [
+      "S07",
+      "S08",
+      "S11",
+      "S14"
+    ],
+    "p7_close": [
+      "S15",
+      "S16",
+      "S17"
+    ]
+  },
+  "insertedFrame": {
+    "id": "R01",
+    "sourceCandidate": "a72-range-handoff-candidate.json",
+    "after": "S04",
+    "before": "S05",
+    "parent": "p3_range",
+    "taskKind": "physical_fact",
+    "question": "先不选下注。已知公共牌和我的底牌后，下面哪一组牌在对手手里已经不可能？",
+    "returnTo": "p4_compare",
+    "actionFilter": "insufficient_reference",
+    "parentFrameRestored": true,
+    "firstAnswerPreserved": true
+  },
+  "hardRules": {
+    "originalPacketUnchanged": true,
+    "allSevenParentsHaveCoreFrame": true,
+    "p3MustPrecedeP4": true,
+    "factDoesNotAnswerAction": true,
+    "missingReferenceStopsExactGrade": true,
+    "transferDoesNotBecomeCoreFrame": true
+  },
+  "currentStatus": {
+    "paperCoreCoverage": true,
+    "attachedToRuntimePacket": false,
+    "matchedStrategyReference": false,
+    "successorClosure": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "nestedChildFrameSource": "first-hand-gap-frame-cards.json",
+  "nestedChildFrames": {
+    "S04": [
+      "I03"
+    ],
+    "R01": [
+      "I05"
+    ],
+    "S05": [
+      "I07",
+      "I08"
+    ],
+    "S07": [
+      "I10"
+    ],
+    "S08": [
+      "I11"
+    ]
+  },
+  "childFrameRules": {
+    "oneQuestionPerChild": true,
+    "childDoesNotIncreaseTopLevelSequence": true,
+    "parentRestoredAfterClose": true,
+    "missingEvidenceStops": true,
+    "p10StopCardPresent": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "poker-range-trainer",
+  "version": "1.1.0",
+  "private": true,
+  "description": "六人现金桌100BB扑克练习器，包含翻前、读牌与翻后原理训练。",
+  "author": "Poker Trainer",
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/curriculum.test.js tests/desktop.test.js tests/engine.test.js tests/golden-path.test.js tests/learning.test.js tests/lesson-package.test.js tests/prerequisite.test.js tests/session.test.js tests/solver-workspace.test.js tests/postflop-model.test.js tests/range-evidence.test.js tests/threebet.test.js tests/threebet-native.test.js tests/postflop-coverage.test.js tests/postflop-coverage-native.test.js",
+    "verify:postflop-pilot": "node scripts/verify-postflop-pilot.mjs",
+    "verify:prerequisites": "node scripts/verify-prerequisites.mjs",
+    "verify:gto-candidate": "node scripts/verify-gto-candidate.mjs",
+    "verify:matched-package": "node scripts/verify-matched-package.mjs",
+    "verify:a72-c0": "node scripts/verify-a72-c0.mjs",
+    "verify:desktop-package": "node scripts/verify-desktop-package.mjs",
+    "verify:golden-path": "node scripts/verify-golden-path.mjs",
+    "build:tiny-matched": "node scripts/build-tiny-matched-package.mjs",
+    "desktop": "electron .",
+    "package:win:dir": "node scripts/package-win.mjs --dir",
+    "package:win:dir:current": "node scripts/package-win.mjs --dir --out=release/postflop-solver-v7",
+    "package:win": "node scripts/package-win.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "26.15.3",
+    "vite": "^6.3.0"
+  }
+}

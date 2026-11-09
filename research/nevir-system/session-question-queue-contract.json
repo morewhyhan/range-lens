@@ -1,0 +1,224 @@
+{
+  "id": "SESSION_QUESTION_QUEUE_CONTRACT_V1",
+  "status": "paper_deterministic_session_scheduler_specified_runtime_missing",
+  "purpose": "把路线、单元释放、题池比例、错误修复和缺资料停止合成一个确定性会话队列，避免随机出题或总分跳层。",
+  "sources": [
+    "automatic-question-generation-contract.json",
+    "full-course-coverage-and-release-contract.json",
+    "first-pass-state-evidence-crosswalk.json",
+    "unit-canonical-route-bridge.json",
+    "route-cognitive-slow-execution-bridge.json",
+    "unified-learner-evidence-release-gates.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "stages": [
+    "first_pass",
+    "map",
+    "guided",
+    "independent",
+    "adjacent",
+    "delayed",
+    "continuous"
+  ],
+  "priority": [
+    "route_repair_same_parent",
+    "first_pass_representative",
+    "current_unit_release_gap",
+    "missing_coverage_pool",
+    "adjacent_single_field_transfer",
+    "delayed_recall",
+    "continuous_integration"
+  ],
+  "sessionFields": [
+    "sessionVersion",
+    "sessionId",
+    "routeNode",
+    "parentSnapshotHash",
+    "unitId",
+    "queueStage",
+    "questionMode",
+    "questionId",
+    "sourceFingerprint",
+    "configurationFingerprint",
+    "requestedRatios",
+    "coverageBefore",
+    "firstAnswer",
+    "helpLevel",
+    "errorLayer",
+    "returnTo",
+    "coverageAfter",
+    "releaseStatus"
+  ],
+  "identityKey": [
+    "routeParent",
+    "unitId",
+    "sourceFingerprint",
+    "configurationFingerprint",
+    "changedField",
+    "entityHand",
+    "board",
+    "actionState",
+    "queueStage"
+  ],
+  "hardFilters": [
+    "same_parent_frame",
+    "physical_legal",
+    "history_pot_stack_actor_consistent",
+    "source_identity",
+    "successor_or_explicit_stop",
+    "exactly_one_changed_field_for_transfer",
+    "unique_question_identity",
+    "child_parent_lock",
+    "visible_inputs_exclude_answer_and_unresolved_policy"
+  ],
+  "stageTransitions": [
+    {
+      "from": "first_pass",
+      "to": "map",
+      "requires": [
+        "firstPassRouteComplete",
+        "firstAnswerRecorded"
+      ]
+    },
+    {
+      "from": "map",
+      "to": "guided",
+      "requires": [
+        "parentFrameIdentified",
+        "plainQuestionRepeated"
+      ]
+    },
+    {
+      "from": "guided",
+      "to": "independent",
+      "requires": [
+        "firstAnswerSaved",
+        "requiredOutputComplete",
+        "sameParentRestore"
+      ]
+    },
+    {
+      "from": "independent",
+      "to": "adjacent",
+      "requires": [
+        "answerBeforeHelp",
+        "errorLayerNamed",
+        "retryComplete"
+      ]
+    },
+    {
+      "from": "adjacent",
+      "to": "delayed",
+      "requires": [
+        "exactlyOneChangedField",
+        "affectedLayerNamed",
+        "sameDenominatorVisual"
+      ]
+    },
+    {
+      "from": "delayed",
+      "to": "continuous",
+      "requires": [
+        "orderRecalled",
+        "returnPointRecalled",
+        "rangeOrStopRecalled"
+      ]
+    },
+    {
+      "from": "continuous",
+      "to": "complete",
+      "requires": [
+        "ledgerContinuity",
+        "rangeSnapshotContinuity",
+        "successorOrStop",
+        "resultSeparatedFromDecision"
+      ]
+    }
+  ],
+  "queueAlgorithm": [
+    "load_session_only_state",
+    "lock_current_parent_and_snapshot",
+    "if_unresolved_error_then_select_nearest_missing_layer_same_parent",
+    "else_if_first_pass_incomplete_then_select_next_representative_route_state",
+    "else_select_current_unit_at_current_release_stage",
+    "apply_physical_history_source_successor_and_identity_filters_in_order",
+    "apply_requested_pool_ratio_without_silent_renormalization",
+    "if_pool_empty_emit_unavailable_stop_card",
+    "freeze_one_question_package_before_showing_it",
+    "record_first_answer_and_stop_reason_before_explanation",
+    "on_wrong_answer_return_to_nearest_missing_layer_without_advancing",
+    "on_pass_record_coverage_and_release_evidence_then_advance_one_stage_only"
+  ],
+  "ratioPolicy": {
+    "userEditable": [
+      "edgeRatio",
+      "internalRatio",
+      "pureRatio",
+      "mixedRatio",
+      "transferRatio"
+    ],
+    "sumMustEqualOne": true,
+    "exactRequestedRatiosPreserved": true,
+    "zeroRatioMeansPoolNotScheduled": true,
+    "unavailablePoolIsNotReplaced": true,
+    "edgeAndInternalBothRequiredForCoverageClose": true,
+    "repairQueueOverridesRatios": true,
+    "defaultRatios": null
+  },
+  "errorPolicy": {
+    "unknownCountsAsWrong": true,
+    "wrongDoesNotAdvance": true,
+    "sameParentAfterError": true,
+    "firstAnswerPreserved": true,
+    "helpedRetryNotIndependent": true,
+    "resultDoesNotChangeDecisionGrade": true
+  },
+  "stopCards": [
+    {
+      "id": "STOP_NO_SOURCE_IDENTITY",
+      "when": "sourceIdentityMissing",
+      "visible": "资料身份不够，先停在当前层。",
+      "returnTo": "currentParent"
+    },
+    {
+      "id": "STOP_NO_POLICY",
+      "when": "coursePolicyAndReferencePolicyMissing",
+      "visible": "没有足够依据判定精确动作，先停在当前层。",
+      "returnTo": "currentParent"
+    },
+    {
+      "id": "STOP_NO_SUCCESSOR",
+      "when": "successorMissing",
+      "visible": "没有合法后继，先停在当前层。",
+      "returnTo": "currentParent"
+    },
+    {
+      "id": "STOP_POOL_EMPTY",
+      "when": "requestedPoolEmpty",
+      "visible": "当前题池暂不可用，不用邻近题替代。",
+      "returnTo": "currentParent"
+    }
+  ],
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeScheduler": false,
+    "sessionTrace": false,
+    "lowBaselineTrial": false,
+    "matchedReference": false,
+    "continuousThreeStreet": false,
+    "NL50Evidence": false
+  }
+}

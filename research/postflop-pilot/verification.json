@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "inputFingerprint": "013ed92100928fa010412bd63121408bbc2bdd3c8173ca8c4d36d5d4d99dbc6c",
+  "solverReportedExploitabilityBB": 0.005403060913085938,
+  "scope": "用户简化翻前范围；BTN开池2.5BB、BB跟注；零抽水；每街一个下注尺度、面对下注允许弃牌/跟注/全下加注。有限动作树训练参考，不等于全尺度NL50。",
+  "verifiedNodes": 104,
+  "physicalWeightChecks": 89960,
+  "edges": 151,
+  "independentTerminalChecks": 15,
+  "completeCheckAndBetCallRoutes": true,
+  "hiddenCardTrials": 12,
+  "allRuntimeHistoriesAvailable": true,
+  "independentSecondSolver": false,
+  "files": {
+    "request.json": "888a0a4eb90223efcbd5acac00fd51799ddc05e9f6cd08967b024a99faa5fdc3",
+    "result.json": "009b2c7becbb96c9c2daaac0f8ab1514b6e9fb977c572a1dcd69146109b3a601",
+    "strategy.bin": "b6faf100f742a506c98dabb621074d792371e80f3982092c235bc90ad47501b3"
+  },
+  "engineSHA256": "4adf872e5f45ebe8d4c2a102af9b05688d7ceec911182cb484dbbff60331ae20"
+}

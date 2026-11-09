@@ -1,0 +1,1329 @@
+{
+  "id": "SOURCE_SCOPED_UNIT_GAMEFRAMES_V1",
+  "status": "fact_candidate_bundle_not_strategy_ready",
+  "source": "unit-execution-field-audit.json",
+  "releaseIdentity": "independent_fact_candidate",
+  "strategyReady": false,
+  "rows": [
+    {
+      "unitId": "1.1",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "size-comparison-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "history": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+        "potBB": 10,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.2",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "active-plan-models.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": "Author legal observed history: BTN opens2.5, SB raises_to10, BB folds, BTN calls; flop Ks7s2d both check; turn3d before SB first action.",
+        "potBB": 21,
+        "stacksBB": {
+          "hero": 90,
+          "villain": 90
+        },
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.3",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "size-comparison-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "history": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+        "potBB": 10,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.4",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "active-plan-models.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": "Author legal observed history: BTN opens2.5, SB raises_to10, BB folds, BTN calls; flop Ks7s2d both check; turn3d before SB first action.",
+        "potBB": 21,
+        "stacksBB": {
+          "hero": 90,
+          "villain": 90
+        },
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.5",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "size-comparison-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "history": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+        "potBB": 10,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.6",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "value-trap-tree-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+          "Flop Ks9h2d: SB bets7; BTN calls7",
+          "Turn3c: SB checks; BTN checks",
+          "River7h: SB to act"
+        ],
+        "potBB": 35,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.7",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "size-comparison-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "history": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+        "potBB": 10,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "1.8",
+      "parentFrame": "compare.unopened",
+      "groupId": "compare.unopened",
+      "routeStop": "L6",
+      "sourceEvidence": "size-comparison-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "history": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+        "potBB": 10,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.1",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "value-trap-tree-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+          "Flop Ks9h2d: SB bets7; BTN calls7",
+          "Turn3c: SB checks; BTN checks",
+          "River7h: SB to act"
+        ],
+        "potBB": 35,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.2",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.3",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.5",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "value-trap-tree-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+          "Flop Ks9h2d: SB bets7; BTN calls7",
+          "Turn3c: SB checks; BTN checks",
+          "River7h: SB to act"
+        ],
+        "potBB": 35,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.6",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "2.7",
+      "parentFrame": "compare.bet",
+      "groupId": "compare.bet",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "3.1",
+      "parentFrame": "compare.raise",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "3.2",
+      "parentFrame": "compare.raise",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceEvidence": "value-trap-tree-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+          "Flop Ks9h2d: SB bets7; BTN calls7",
+          "Turn3c: SB checks; BTN checks",
+          "River7h: SB to act"
+        ],
+        "potBB": 35,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "3.3",
+      "parentFrame": "compare.raise",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceEvidence": "defense-tree-evidence.json",
+      "gameFrame": {
+        "street": "turn",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "history": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21"
+        ],
+        "potBB": 31.5,
+        "stacksBB": null,
+        "toCallBB": 10.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "3.4",
+      "parentFrame": "compare.raise",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceEvidence": "value-trap-tree-evidence.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+          "Flop Ks9h2d: SB bets7; BTN calls7",
+          "Turn3c: SB checks; BTN checks",
+          "River7h: SB to act"
+        ],
+        "potBB": 35,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "3.5",
+      "parentFrame": "compare.raise",
+      "groupId": "compare.raise",
+      "routeStop": "L6",
+      "sourceEvidence": "bluff-reraise-model.json",
+      "gameFrame": {
+        "street": "river",
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "history": [
+          "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+          "Flop Kh9h2c: SB bets7; BTN calls7",
+          "Turn7d: both check",
+          "River4s: SB bets17.5; BTN raises_to45"
+        ],
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": 27.5,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "4.1",
+      "parentFrame": "update.response",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceEvidence": "history-contrast-evidence.json",
+      "gameFrame": {
+        "street": null,
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": null,
+        "history": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "4.2",
+      "parentFrame": "update.response",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceEvidence": "history-contrast-evidence.json",
+      "gameFrame": {
+        "street": null,
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": null,
+        "history": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "4.4",
+      "parentFrame": "update.response",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceEvidence": "history-contrast-evidence.json",
+      "gameFrame": {
+        "street": null,
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": null,
+        "history": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "4.5",
+      "parentFrame": "update.response",
+      "groupId": "update.response",
+      "routeStop": "L7",
+      "sourceEvidence": "first-hand-lesson-packet.json",
+      "gameFrame": {
+        "street": "preflop",
+        "heroSeat": "SB",
+        "villainSeat": null,
+        "board": [],
+        "history": [
+          {
+            "street": "preflop",
+            "actor": "SB",
+            "action": "post",
+            "addedBB": 0.5,
+            "totalStreetPaidBB": 0.5
+          },
+          {
+            "street": "preflop",
+            "actor": "BB",
+            "action": "post",
+            "addedBB": 1,
+            "totalStreetPaidBB": 1
+          }
+        ],
+        "potBB": 1.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 100,
+          "SB": 99.5,
+          "BB": 99
+        },
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.1",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.2",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.3",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.4",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.5",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.6",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "history-contrast-evidence.json",
+      "gameFrame": {
+        "street": null,
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "board": null,
+        "history": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.7",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "turn-transfer-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "history": {
+          "players": 6,
+          "startingStackBB": 100,
+          "hero": "BTN",
+          "villain": "BB",
+          "deadSB": 0.5,
+          "preflop": "BTN raise to 2.5; BB call",
+          "flop": "BB check; BTN bet 2; BB call",
+          "flopBoard": [
+            "Qs",
+            "Th",
+            "5s"
+          ],
+          "heroHole": [
+            "Ac",
+            "Qh"
+          ],
+          "turn": "2d",
+          "turnStart": {
+            "potBB": 9.5,
+            "heroStackBB": 95.5,
+            "villainStackBB": 95.5,
+            "foldedStacksBB": 399.5
+          },
+          "branches": [
+            {
+              "id": "BB_bet",
+              "events": "BB bet 6",
+              "potIncludingBetBB": 15.5,
+              "heroStackBB": 95.5,
+              "villainStackBB": 89.5,
+              "toCallBB": 6,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 21.5,
+              "afterCallEachStackBB": 89.5,
+              "immediateCallPrice": 0.27906976744186046
+            },
+            {
+              "id": "BB_raise",
+              "events": "BB check; BTN bet 6; BB raise to 20",
+              "potIncludingBetBB": 35.5,
+              "heroStackBB": 89.5,
+              "villainStackBB": 75.5,
+              "toCallBB": 14,
+              "legalHeroActions": [
+                "fold",
+                "call",
+                "raise"
+              ],
+              "afterCallPotBB": 49.5,
+              "afterCallEachStackBB": 75.5,
+              "immediateCallPrice": 0.2828282828282828
+            }
+          ]
+        },
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    },
+    {
+      "unitId": "5.8",
+      "parentFrame": "update.card",
+      "groupId": "update.card",
+      "routeStop": "L7",
+      "sourceEvidence": "blocker-teaching-evidence.json",
+      "gameFrame": {
+        "street": "flop",
+        "heroSeat": null,
+        "villainSeat": null,
+        "board": [
+          "Th",
+          "8d",
+          "5c"
+        ],
+        "history": null,
+        "potBB": null,
+        "stacksBB": null,
+        "toCallBB": null,
+        "scope": "source_local_context",
+        "strategyReady": false
+      },
+      "rangeBefore": null,
+      "rangeAfter": null,
+      "legalSuccessors": [],
+      "stopReason": "no_complete_range_or_successor_reference",
+      "strategyReady": false
+    }
+  ],
+  "guards": {
+    "noRangeInvented": true,
+    "noSuccessorInvented": true,
+    "localContextDoesNotImplyCoursePolicy": true,
+    "localContextDoesNotImplyNL50": true
+  },
+  "currentEvidence": {
+    "matchedReference": false,
+    "coursePolicy": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

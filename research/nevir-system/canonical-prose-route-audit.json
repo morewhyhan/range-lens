@@ -1,0 +1,511 @@
+{
+  "id": "CANONICAL_PROSE_ROUTE_AUDIT_V1",
+  "status": "paper_canonical_route_and_legacy_boundaries_consistent",
+  "canonicalLearnerRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "legacyMacroRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8"
+  ],
+  "machineChecks": [
+    {
+      "source": "learner-goal-route-canonical.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "allInnerParentsL4": true,
+      "shortBackendAliasesOneToOne": true
+    },
+    {
+      "source": "first-pass-screen-coverage-matrix.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "legacyMacroRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true
+    },
+    {
+      "source": "first-pass-architecture-goal-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "legacyMacroRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true,
+      "innerParent": "L4",
+      "innerParentExact": true
+    },
+    {
+      "source": "full-curriculum-route-manifest.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "legacyInventoryDeclared": true
+    },
+    {
+      "source": "single-path-course-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_surface",
+      "canonicalRoleExact": true,
+      "legacyRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true,
+      "legacyRole": "legacy_author_macro_inventory_only",
+      "legacyRoleDeclared": true
+    },
+    {
+      "source": "progression-unlock-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_unlock_surface",
+      "canonicalRoleExact": true,
+      "legacyRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true,
+      "legacyRole": "legacy_author_macro_inventory_only",
+      "legacyRoleDeclared": true
+    },
+    {
+      "source": "route-release-gates.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_release_surface",
+      "canonicalRoleExact": true,
+      "legacyRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true,
+      "legacyRole": "legacy_author_macro_gates",
+      "legacyRoleDeclared": true
+    },
+    {
+      "source": "a72-c6-c9-release-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_surface",
+      "canonicalRoleExact": true,
+      "legacyRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "legacyPreserved": true,
+      "legacyRole": "legacy_author_macro_inventory_only",
+      "legacyRoleDeclared": true
+    },
+    {
+      "source": "first-run-route-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1_context",
+        "p2_board",
+        "p3_range",
+        "p4_compare",
+        "p5_execute",
+        "p6_update",
+        "p7_close",
+        "replay_transfer"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1_context",
+        "p2_board",
+        "p3_range",
+        "p4_compare",
+        "p5_execute",
+        "p6_update",
+        "p7_close",
+        "replay_transfer"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_surface",
+      "canonicalRoleExact": true,
+      "legacyRole": "legacy_author_macro_inventory_only",
+      "legacyRoleDeclared": true
+    },
+    {
+      "source": "first-pass-completeness-contract.json",
+      "learnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1_context",
+        "p2_board",
+        "p3_range",
+        "p4_compare",
+        "p5_execute",
+        "p6_update",
+        "p7_close",
+        "replay_transfer"
+      ],
+      "expectedLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1_context",
+        "p2_board",
+        "p3_range",
+        "p4_compare",
+        "p5_execute",
+        "p6_update",
+        "p7_close",
+        "replay_transfer"
+      ],
+      "exact": true,
+      "canonicalRole": "runtime_surface",
+      "canonicalRoleExact": true,
+      "legacyRole": "legacy_author_macro_inventory_only",
+      "legacyRoleDeclared": true
+    }
+  ],
+  "proseAudits": [
+    {
+      "source": "翻后教学系统_统一总纲.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "90_研究文档阅读路线与层级索引.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "119_目标级单一路径运行蓝图.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "164_低基础一遍架构建立与目标级倒推验收合同.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "169_最终标准可观察验收与NL50边界合同.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "177_学习者可见七步路线与35项释放交叉合同.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "178_全量文档归档与遗留材料处置合同.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "187_一遍到目标级的嵌套释放总架构合同.md",
+      "suspicious": [],
+      "clean": true
+    },
+    {
+      "source": "195_最终目标发布合同.md",
+      "suspicious": [],
+      "clean": true
+    }
+  ],
+  "runtimeAttached": false,
+  "participantObserved": false,
+  "goalCompletionVerified": false
+}

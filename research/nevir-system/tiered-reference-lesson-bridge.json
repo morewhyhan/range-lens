@@ -1,0 +1,38 @@
+{
+  "id": "TIERED_REFERENCE_LESSON_BRIDGE_V1",
+  "status": "paper_local_lesson_bridge_reference_missing",
+  "shell": ["parentFrame","oneQuestion","onePrimaryAction","currentAnswer","rangeOrFactView","changeArrow","successorOrStop","returnTo"],
+  "tiers": {
+    "T0": {"answerIdentity":["fact","demonstration"],"required":["factFrame","stopReason"],"parent":"p1_or_p2_or_p3_or_p5"},
+    "T1": {"answerIdentity":["course_rule","reference_frequency","reference_policy"],"required":["perHandPolicyOrCourseWeight","rangeBefore","rangeAfterOrStop","amount","parentFrame"],"parent":"p4_or_p6"},
+    "T2": {"answerIdentity":["course_rule","reference_frequency","reference_policy"],"required":["T1Fields","changedField","successorSnapshot","successorBoundary"],"parent":"p4_or_p6"},
+    "T3": {"answerIdentity":["course_rule","reference_policy"],"required":["T2Fields","completeSuccessorGraph","streetLedgers","settlement"],"parent":"p4_or_p6"}
+  },
+  "rangeViewOrder": ["rangeBefore","physicalAfter","referenceOrCourseAfter","successorAfterOrBoundaryStop"],
+  "gradingOrder": ["layerLocation","factLegality","actionAndAmount","rangeOrStop","successorEntry"],
+  "navigationRules": {
+    "opensOnlyFromP4OrP6": true,
+    "oneSliceAtATime": true,
+    "parentRestoredOnClose": true,
+    "sameParentT1BeforeT2": true,
+    "T3RequiresAllSuccessors": true,
+    "unknownIsNotZero": true,
+    "boundaryStopReturnsToParent": true
+  },
+  "releaseRules": {
+    "T0CannotGradeExactAction": true,
+    "T1CannotGradeOutsideNode": true,
+    "T2CannotGradeOutsideBoundary": true,
+    "T3NeededForContinuousThreeStreet": true,
+    "allRequireReferenceAndCourseIdentity": true
+  },
+  "currentEvidence": {
+    "T0LessonShellSpecified": true,
+    "T1LessonCompiled": false,
+    "T2LessonCompiled": false,
+    "T3LessonCompiled": false,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

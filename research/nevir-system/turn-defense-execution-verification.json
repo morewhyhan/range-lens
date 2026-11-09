@@ -1,0 +1,193 @@
+{
+  "ok": true,
+  "status": "author_given_turn_river_execution_not_app_or_real_learner",
+  "rootQuestions": 4,
+  "rootPlanComparisons": 16,
+  "childPlanComparisons": 652,
+  "publicChanceNodes": 13,
+  "publicRiverEvents": 594,
+  "requiredCheckVisits": 228,
+  "decisionVisits": 212,
+  "terminalCalls": 1714,
+  "all600BB": true,
+  "sourceEVsReconstructed": true,
+  "publicRiverNotUniform46": true,
+  "newCardAndActionConditioning": true,
+  "riverCheckIsGivenPolicyNotOptimalityClaim": true,
+  "realLearners": 0,
+  "newCoarseContextCells": 0,
+  "summaries": [
+    {
+      "id": "M-689bd0d9ae25a746",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "executedEVBB": 0,
+      "referenceEVBB": 0
+    },
+    {
+      "id": "M-689bd0d9ae25a746",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 10.5,
+        "label": "跟10.5"
+      },
+      "executedEVBB": -0.15909090909092072,
+      "referenceEVBB": -0.15909090909091006
+    },
+    {
+      "id": "M-689bd0d9ae25a746",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 30,
+        "label": "加到30"
+      },
+      "executedEVBB": -30,
+      "referenceEVBB": -30
+    },
+    {
+      "id": "M-689bd0d9ae25a746",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 90,
+        "label": "全下90"
+      },
+      "executedEVBB": -33.8766233766234,
+      "referenceEVBB": -33.87662337662328
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "executedEVBB": 0,
+      "referenceEVBB": 0
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 10.5,
+        "label": "跟10.5"
+      },
+      "executedEVBB": 0.3977272727273089,
+      "referenceEVBB": 0.39772727272727604
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 30,
+        "label": "加到30"
+      },
+      "executedEVBB": -19.19318181818184,
+      "referenceEVBB": -19.193181818181813
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 90,
+        "label": "全下90"
+      },
+      "executedEVBB": -19.19318181818184,
+      "referenceEVBB": -19.193181818181777
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "executedEVBB": 0,
+      "referenceEVBB": 0
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 10.5,
+        "label": "跟10.5"
+      },
+      "executedEVBB": -0.15909090909092072,
+      "referenceEVBB": -0.15909090909091006
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 30,
+        "label": "加到30"
+      },
+      "executedEVBB": 1.9155844155844193,
+      "referenceEVBB": 1.9155844155844202
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 90,
+        "label": "全下90"
+      },
+      "executedEVBB": -33.8766233766234,
+      "referenceEVBB": -33.87662337662328
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "executedEVBB": 0,
+      "referenceEVBB": 0
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 10.5,
+        "label": "跟10.5"
+      },
+      "executedEVBB": -0.15909090909092072,
+      "referenceEVBB": -0.15909090909091006
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 30,
+        "label": "加到30"
+      },
+      "executedEVBB": -30,
+      "referenceEVBB": -30
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 90,
+        "label": "全下90"
+      },
+      "executedEVBB": 14.448051948051955,
+      "referenceEVBB": 14.44805194805195
+    }
+  ]
+}

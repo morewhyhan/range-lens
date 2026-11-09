@@ -1,0 +1,387 @@
+{
+  "scope": "按场景、无序翻牌三张、固定后街身份及全24种花色置换检查导入节点的候选连接，不能证明完整线路正确，也不将未导入原笔记例子视为不存在。",
+  "nodes": 58,
+  "continuationNodes": 18,
+  "matchingImportedParentNodes": 4,
+  "unmatchedImportedParentNodes": 14,
+  "candidates": [
+    {
+      "child": "T01",
+      "childSource": "05 转牌路线 · B8 / D8 / E8",
+      "scenario": "ip3",
+      "board": [
+        "Ks",
+        "Th",
+        "5d",
+        "2d"
+      ],
+      "required": {
+        "beforeSize": 33,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T02",
+      "childSource": "05 转牌路线 · B9 / D9 / E9",
+      "scenario": "ip3",
+      "board": [
+        "9s",
+        "6h",
+        "2d",
+        "Jc"
+      ],
+      "required": {
+        "beforeSize": 67,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T03",
+      "childSource": "05 转牌路线 · B10 / D10 / E10",
+      "scenario": "ip3",
+      "board": [
+        "9s",
+        "6h",
+        "2d",
+        "7d"
+      ],
+      "required": {
+        "beforeSize": 67,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T04",
+      "childSource": "05 转牌路线 · B11 / D11 / E11",
+      "scenario": "ip3",
+      "board": [
+        "9s",
+        "6h",
+        "2d",
+        "2h"
+      ],
+      "required": {
+        "beforeSize": 67,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T05",
+      "childSource": "05 转牌路线 · B12 / D12 / E12",
+      "scenario": "ip3",
+      "board": [
+        "Js",
+        "Th",
+        "2d",
+        "9d"
+      ],
+      "required": {
+        "beforeSize": 33,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T06",
+      "childSource": "05 转牌路线 · B13 / D13 / E13",
+      "scenario": "ip3",
+      "board": [
+        "Ks",
+        "Ts",
+        "5s",
+        "9s"
+      ],
+      "required": {
+        "beforeSize": 33,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T07",
+      "childSource": "05 转牌路线 · B14 / D14 / E14",
+      "scenario": "ipSRP",
+      "board": [
+        "9s",
+        "8h",
+        "6s",
+        "2d"
+      ],
+      "required": {
+        "beforeSize": 33,
+        "line": null,
+        "condition": "对手会快玩强牌，跟注后又对大注弃牌过多。转牌是空白牌。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "T08",
+      "childSource": "05 转牌路线 · B15 / D15 / E15",
+      "scenario": "oop3",
+      "board": [
+        "Ts",
+        "8h",
+        "3d",
+        "2c"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": "xraise",
+        "condition": null
+      },
+      "importedParentCandidates": [
+        {
+          "parent": "O07",
+          "parentSource": "02 没位置3bet · B31 / D31 / E31",
+          "parentAction": "先过牌，面对小注再过牌加注",
+          "checksRequired": [
+            "须确认前驱条件与后续相容"
+          ],
+          "status": "same_board_candidate_not_validated_strategy_edge"
+        }
+      ],
+      "status": "requires_semantic_and_ledger_validation"
+    },
+    {
+      "child": "T09",
+      "childSource": "05 转牌路线 · B16 / D16 / E16",
+      "scenario": "oop3",
+      "board": [
+        "Ts",
+        "8h",
+        "3d",
+        "4c"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": "xx",
+        "condition": "双方翻牌过牌；有证据表明对手在该线路转牌弃牌过多。"
+      },
+      "importedParentCandidates": [
+        {
+          "parent": "O07",
+          "parentSource": "02 没位置3bet · B31 / D31 / E31",
+          "parentAction": "先过牌，面对小注再过牌加注",
+          "checksRequired": [
+            "后序要求双方过牌；主尺寸或下注方向不能自动提供该前序",
+            "须保留后序自己的条件，不能沿用其他节点人群假设",
+            "须确认前驱条件与后续相容"
+          ],
+          "status": "same_board_candidate_not_validated_strategy_edge"
+        }
+      ],
+      "status": "requires_semantic_and_ledger_validation"
+    },
+    {
+      "child": "T10",
+      "childSource": "05 转牌路线 · B17 / D17 / E17",
+      "scenario": "oopSRP",
+      "board": [
+        "Qs",
+        "Th",
+        "5d",
+        "2c"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": "xx",
+        "condition": "双方翻牌过牌；有证据表明对手在该线路转牌弃牌过多。"
+      },
+      "importedParentCandidates": [
+        {
+          "parent": "P04",
+          "parentSource": "04 没位置单加注 · B26 / D26 / E26",
+          "parentAction": 25,
+          "checksRequired": [
+            "后序要求双方过牌；主尺寸或下注方向不能自动提供该前序",
+            "须保留后序自己的条件，不能沿用其他节点人群假设",
+            "须确认前驱条件与后续相容"
+          ],
+          "status": "same_board_candidate_not_validated_strategy_edge"
+        }
+      ],
+      "status": "requires_semantic_and_ledger_validation"
+    },
+    {
+      "child": "R01",
+      "childSource": "06 河牌路线 · B8 / D8 / E8",
+      "scenario": "ipSRP",
+      "board": [
+        "As",
+        "7h",
+        "2d",
+        "Kd",
+        "3h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "对手过牌，而且AQ、AJ等更差牌会跟你的下注。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R02",
+      "childSource": "06 河牌路线 · B9 / D9 / E9",
+      "scenario": "ipSRP",
+      "board": [
+        "Ks",
+        "7h",
+        "2d",
+        "3d",
+        "9h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "对手过牌；更差对子不跟下注，Kx也不会弃牌。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R03",
+      "childSource": "06 河牌路线 · B10 / D10 / E10",
+      "scenario": "ipSRP",
+      "board": [
+        "Ks",
+        "Th",
+        "4s",
+        "2c",
+        "2h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "对手过牌；本题设定他不会弃掉你想赶走的更好牌。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R04",
+      "childSource": "06 河牌路线 · B11 / D11 / E11",
+      "scenario": "oopSRP",
+      "board": [
+        "Ks",
+        "9h",
+        "5d",
+        "2c",
+        "7h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": null
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R05",
+      "childSource": "06 河牌路线 · B12 / D12 / E12",
+      "scenario": "ipSRP",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "2d",
+        "3h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "你用两对价值下注，对手加注。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R06",
+      "childSource": "06 河牌路线 · B13 / D13 / E13",
+      "scenario": "oopSRP",
+      "board": [
+        "Qs",
+        "Th",
+        "5d",
+        "2d",
+        "6h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "翻牌和转牌你下注、对手跟注；该对手跟转牌后在河牌很少弃牌。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    },
+    {
+      "child": "R07",
+      "childSource": "06 河牌路线 · B14 / D14 / E14",
+      "scenario": "ipSRP",
+      "board": [
+        "9s",
+        "8h",
+        "6s",
+        "2d",
+        "7c"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "采用表中转牌超池路线并被跟注；河牌使公共牌更连接。"
+      },
+      "importedParentCandidates": [
+        {
+          "parent": "T07",
+          "parentSource": "05 转牌路线 · B14 / D14 / E14",
+          "parentAction": "考虑超池下注",
+          "checksRequired": [
+            "须保留后序自己的条件，不能沿用其他节点人群假设",
+            "须确认前驱条件与后续相容",
+            "需另核对明确的转牌行动及对手响应，不能仅凭牌张连接"
+          ],
+          "status": "same_board_candidate_not_validated_strategy_edge"
+        }
+      ],
+      "status": "requires_semantic_and_ledger_validation"
+    },
+    {
+      "child": "R08",
+      "childSource": "06 河牌路线 · B15 / D15 / E15",
+      "scenario": "oopSRP",
+      "board": [
+        "Js",
+        "7h",
+        "3d",
+        "2d",
+        "9h"
+      ],
+      "required": {
+        "beforeSize": null,
+        "line": null,
+        "condition": "前面曾有一街双方过牌，而且有证据表明对手在这条线路河牌弃牌过多。"
+      },
+      "importedParentCandidates": [],
+      "status": "no_matching_imported_parent_not_proof_source_missing"
+    }
+  ]
+}

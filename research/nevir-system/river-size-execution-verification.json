@@ -1,0 +1,295 @@
+{
+  "ok": true,
+  "status": "author_execution_checks_not_app_or_learner_results",
+  "sizeQuestions": 8,
+  "planEVsReconstructed": 24,
+  "terminalCalls": 36,
+  "rejectedZeroReplies": 14,
+  "winLoseTieCovered": true,
+  "wrongLegalAmountPreserved": true,
+  "all600BB": true,
+  "immutableInputs": true,
+  "unknownDoesNotCommit": true,
+  "traces": [
+    {
+      "questionId": "M-cdbbd0d18ae19b6f",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 8,
+      "referenceEVBB": 8,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-cdbbd0d18ae19b6f",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 9.5,
+      "referenceEVBB": 9.5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-cdbbd0d18ae19b6f",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-6d41feff8a47ea6a",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-6d41feff8a47ea6a",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 15,
+      "referenceEVBB": 15,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-6d41feff8a47ea6a",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 20,
+      "referenceEVBB": 20,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-3f12580e3e4fc2a2",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-3f12580e3e4fc2a2",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 15,
+      "referenceEVBB": 15,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-3f12580e3e4fc2a2",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-9db0b52237b352f2",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 0,
+      "referenceEVBB": 0,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-9db0b52237b352f2",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": -5,
+      "referenceEVBB": -5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-9db0b52237b352f2",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": -10,
+      "referenceEVBB": -10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-300597ef8d6f57a1",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 5,
+      "referenceEVBB": 5,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-300597ef8d6f57a1",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 5,
+      "referenceEVBB": 5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-300597ef8d6f57a1",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 5,
+      "referenceEVBB": 5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-bcdaa8f191db420a",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-bcdaa8f191db420a",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-bcdaa8f191db420a",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-dd706034bb2b118d",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 0,
+      "referenceEVBB": 0,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-dd706034bb2b118d",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": -5,
+      "referenceEVBB": -5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-dd706034bb2b118d",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-aa9ef6c09797f43e",
+      "action": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "weightedTerminalDeltaBB": 5,
+      "referenceEVBB": 5,
+      "kind": "awaiting_showdown"
+    },
+    {
+      "questionId": "M-aa9ef6c09797f43e",
+      "action": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 5,
+        "label": "下注5"
+      },
+      "weightedTerminalDeltaBB": 5,
+      "referenceEVBB": 5,
+      "kind": "waiting_opponent"
+    },
+    {
+      "questionId": "M-aa9ef6c09797f43e",
+      "action": {
+        "choiceId": "p2",
+        "action": "bet",
+        "to": 10,
+        "label": "下注10"
+      },
+      "weightedTerminalDeltaBB": 10,
+      "referenceEVBB": 10,
+      "kind": "waiting_opponent"
+    }
+  ]
+}

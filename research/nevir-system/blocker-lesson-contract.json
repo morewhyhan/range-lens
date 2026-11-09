@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "status": "specified_not_learner_validated",
+  "scope": "研究与作者合同；不修改应用，不代表完整策略或学习结果",
+  "mainPath": "compare",
+  "openFrom": ["compare.unopened", "compare.bet", "compare.raise", "update.card"],
+  "returnContract": {
+    "preserve": ["parentHandId", "parentState", "history", "potAndStacks", "rangeVersion", "currentAnswer"],
+    "alternateExample": "另开明确标记的示意，不改原牌局；关闭后恢复原快照",
+    "returnTo": "originating_decision",
+    "diagnosticReturn": "failed_step_then_originating_decision"
+  },
+  "dependencies": ["best_five", "physical_card_uniqueness", "current_actor", "range_source", "response_role"],
+  "tasks": [
+    {"id":"B01","parent":"read.cards","operation":"指当前五张及输赢","answerType":"card_fact","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/currentRankingExamples"},"mustNotInfer":"当前牌力等于未来权益或下注EV"},
+    {"id":"B02","parent":"read.range","operation":"点被A占用的实体组合","answerType":"physical_combinatorics","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/groups"},"mustNotInfer":"AT总数下降意味着所有ATs也下降"},
+    {"id":"B03","parent":"read.range","operation":"合并两张底牌的重复移除","answerType":"physical_combinatorics","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/inclusionExclusion"},"mustNotInfer":"同一组合被两张底牌各排除一次就删两次"},
+    {"id":"B04","parent":"read.range","operation":"从格子到实体及跟注权重","answerType":"scoped_chart_model","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/groups"},"mustNotInfer":"物理存在就必在指定前序范围内"},
+    {"id":"B05","parent":"compare.unopened","operation":"给定响应角色后，指出移除影响的是付款、继续还是退出","answerType":"conditional_mechanism","evidence":{"file":"14_阻挡与后门怎样接到实际选择.md","section":3},"mustNotInfer":"单个方向理由证明最佳动作"},
+    {"id":"B06","parent":"read.cards","operation":"预测Q7下一张是否建立直接同花听牌","answerType":"card_fact","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/backdoor"},"mustNotInfer":"后门完成同花概率等于赢池概率"},
+    {"id":"B07","parent":"compare.unopened","operation":"按明示课程条款选择有无后门Q7s的简化动作","answerType":"apply_stated_course_simplification","evidence":{"file":"source-claims.json","reviewId":"R31"},"mustNotInfer":"适用于任意牌、任意牌面或已证明全局最优"},
+    {"id":"B08","parent":"update.card","operation":"新牌后检查后门是否转成直接听牌，回到原循环","answerType":"card_fact_and_route","evidence":{"file":"14_阻挡与后门怎样接到实际选择.md","section":5},"mustNotInfer":"既然翻牌为后门下注，转牌就必继续下注"},
+    {"id":"B09","parent":"compare.bet","operation":"相同当前牌力，点出占用的相关花色组合","answerType":"physical_combinatorics","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/riverMissedHeartExample"},"mustNotInfer":"所有未成同花组合都是实际下注的诈唬"},
+    {"id":"B10","parent":"compare.bet","operation":"在完整给定质量中同时比较价值与诈唬移除比例","answerType":"complete_given_math_model","evidence":{"file":"blocker-teaching-evidence.json","pointer":"/pureBluffCatchRatioCounterexample"},"mustNotInfer":"移除价值更多就必适合跟注"},
+    {"id":"B11","parent":"compare","operation":"回原决定，保留所有替代方案并在依据充分时行动","answerType":"matched_reference_required","evidence":{"file":"14_阻挡与后门怎样接到实际选择.md","section":8},"mustNotInfer":"前面事实任务完成即完整策略通过"}
+  ],
+  "teachingSequence": ["demonstrate_one_relation", "complete_one_missing_step", "change_relevant_response_role", "check_irrelevant_change", "unprompted_new_relation", "supported_action", "update_and_return"],
+  "newCaseRequirements": [
+    "训练实例和最终保留实例分离；本合同未提供已冻结的有效测试集",
+    "花色同构只检表示熟悉度，不能独自证明关系迁移",
+    "实体计数可跨新牌检验；策略动作不得跨来源范围自动继承",
+    "相同移除不同响应、相同牌型不同改善、原目标不在当前前序均需覆盖",
+    "未经参考支持的组合只出事实或条件任务，不能冒充动作标准答案"
+  ],
+  "errorRoutes": {
+    "wrong_current_hand":"B01",
+    "wrong_removed_combo":"B02",
+    "double_count":"B03",
+    "rank_label_or_weight_confusion":"B04",
+    "ignores_opposite_effect":"B05",
+    "confuses_backdoor_and_direct_draw":"B06",
+    "overgeneralizes_course_rule":"B07",
+    "automatic_second_barrel":"B08",
+    "all_missed_draws_are_bluffs":"B09",
+    "absolute_count_instead_of_relative_share":"B10",
+    "uses_reason_as_complete_answer":"B11"
+  },
+  "publicationGates": [
+    "来源身份与当前范围一致，或任务明确只检查课程条款执行",
+    "事实题与完整策略题的结果分开",
+    "完整动作题具有匹配范围、价格、响应和未来依据",
+    "不存在用缺输入检测顶替普通动作课的情况",
+    "真实初学者可独立操作，错误可回到原决定：目前尚未验证"
+  ],
+  "sessionState": "仅本轮内存，不新增用户数据库或长期成绩保存",
+  "notVerified": ["full_action_policy", "novice_comprehension", "unprompted_transfer", "NL50_ability"]
+}

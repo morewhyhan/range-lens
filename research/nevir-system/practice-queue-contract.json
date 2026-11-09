@@ -1,0 +1,50 @@
+{
+  "id": "PRACTICE_QUEUE_CONTRACT_V1",
+  "status": "declarative_queue_contract_not_implemented_or_calibrated",
+  "poolIdentities": ["pure","mixed","source_boundary","internal","unavailable"],
+  "configurableRatios": ["edgeRatio","internalRatio","pureRatio","mixedRatio","boundaryRatio","transferRatio"],
+  "ratioRules": {
+    "nonNegative": true,
+    "sumMustEqualOne": true,
+    "missingPoolCannotBeInvented": true,
+    "transferNeedsSuccessor": true,
+    "ratioDoesNotChangePolicyWeights": true,
+    "ratioDoesNotRepresentRealFrequency": true
+  },
+  "compileOrder": [
+    "parentRouteLock",
+    "requiredLocator",
+    "unseenPoolSelection",
+    "actionPreservingContrast",
+    "singleFieldTransfer",
+    "fullRouteReturn",
+    "coverageClose"
+  ],
+  "preflopQueue": ["scenario_locator","grid_sweep","mixed_and_boundary","adjacent_position_history","bb_profile_size_pairs","starting_range_fact"],
+  "postflopQueue": ["state_locator","board_and_hand_strength","blocker_backdoor_relation","range_before_after","action_compare","amount_execute","action_or_card_update","continuous_transfer"],
+  "answerDimensions": ["structure","fact","policy","rangeUpdate","transfer"],
+  "hardRules": {
+    "samePromptCannotBeDuplicatedWithinRound": true,
+    "buttonOrderChangeIsNotNewQuestion": true,
+    "unavailableCannotEnterExactGrade": true,
+    "edgeSamplingDoesNotReweightEvaluation": true,
+    "mixedRequiresCompleteActionAndWeight": true,
+    "unknownCountsAsWrong": true,
+    "firstAnswerPreserved": true
+  },
+  "coverageClose": {
+    "requiredPools": ["pure","mixed","internal"],
+    "sourceBoundaryWhenApplicable": true,
+    "requiresActionPreservingContrast": true,
+    "requiresSingleFieldTransfer": true,
+    "requiresSuccessorForExactQuestion": true,
+    "requiresLocator": true
+  },
+  "currentStatus": {
+    "queueCompilerImplemented": false,
+    "edgeRatioCalibrated": false,
+    "all35UnitsQueueReady": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

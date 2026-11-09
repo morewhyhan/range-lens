@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "coreFrames": 14,
+  "optionalFrames": 12,
+  "goldenFiveCardVectors": 12,
+  "firstActualReveal": "H13",
+  "samePhysicalRiver": true,
+  "status": "guided_history_paper_sequence_not_UI_or_learner_verified"
+}

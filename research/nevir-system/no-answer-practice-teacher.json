@@ -1,0 +1,1095 @@
+{
+  "status": "author_reference_keys_not_learner_results",
+  "familyCount": 1,
+  "source": "bluff-reraise-model.json",
+  "total": 60,
+  "administration": {
+    "showCurrentQuestionOnly": true,
+    "noCorrectHighlights": true,
+    "requiredInputsRemainAccessible": true,
+    "defaultTrainingFeedback": "immediate_after_answer",
+    "laterAnswersAfterFeedbackNotIndependent": true,
+    "notHeldout": true,
+    "noActualLearnerResponsesCollected": true,
+    "noDatabase": true
+  },
+  "references": [
+    {
+      "id": "Q-17838d06c6aec31e",
+      "inputFingerprint": "17838d06c6aec31ed5ac1b6181dd2a93bc895aeb5e30721c3dca59050800cba9",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.2666666666666667,
+      "minRaiseEV": -14.333333333333325,
+      "jamEV": -22.033333333333328,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-86791d3b0b4bae66",
+      "inputFingerprint": "86791d3b0b4bae66c034145d6ccf7d9a851679c43348e1d797d552182a497046",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.30000000000000004,
+      "minRaiseEV": -9.249999999999996,
+      "jamEV": -16.59999999999999,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-b8c38e58220ccba7",
+      "inputFingerprint": "b8c38e58220ccba7b455d6921bb9ad8843cd91aac1c1ba9a83ddc16710615a25",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.32,
+      "minRaiseEV": -6.199999999999999,
+      "jamEV": -13.34,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-faa597db1f0e7ab0",
+      "inputFingerprint": "faa597db1f0e7ab01f5ecc38c668e91f0758dcacfbf92b64f68f2c99e3bd7bd5",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.3333333333333333,
+      "minRaiseEV": -4.166666666666671,
+      "jamEV": -11.166666666666671,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-f6aa784210c514ad",
+      "inputFingerprint": "f6aa784210c514adf144bda1059eb0acd248740685f25d3db0b62134d96e3144",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.3466666666666667,
+      "minRaiseEV": -2.1333333333333258,
+      "jamEV": -8.993333333333325,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-3689211a7d2a08f8",
+      "inputFingerprint": "3689211a7d2a08f840a94ac3508d1b446a8833ddbc3cd97a8c99601d2d832745",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.36000000000000004,
+      "minRaiseEV": -0.09999999999999432,
+      "jamEV": -6.819999999999993,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-7144d9baad76f88e",
+      "inputFingerprint": "7144d9baad76f88e63468774ace30f34a8628ec84d8db252d1d39de367e826e4",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.3666666666666667,
+      "minRaiseEV": 0.9166666666666714,
+      "jamEV": -5.733333333333334,
+      "bestEV": 0.9166666666666714,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-9620c4836ebf7dbe",
+      "inputFingerprint": "9620c4836ebf7dbede30ff8d576dab5d0962c301434cf7d0a0e1cbfd4c4714ad",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.38,
+      "minRaiseEV": 2.9499999999999957,
+      "jamEV": -3.5600000000000023,
+      "bestEV": 2.9499999999999957,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-d7e05bbddc841d65",
+      "inputFingerprint": "d7e05bbddc841d65d946e123834e81a17aeb0b9250b64958fb7500604d9c2e8e",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.39999999999999997,
+      "minRaiseEV": 5.999999999999993,
+      "jamEV": -0.30000000000000426,
+      "bestEV": 5.999999999999993,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-585c0e0fce68bc8b",
+      "inputFingerprint": "585c0e0fce68bc8b4dca1f558c199426ef308e8e26819c3a6c24a48ae2755260",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.43333333333333335,
+      "minRaiseEV": 11.083333333333336,
+      "jamEV": 5.133333333333333,
+      "bestEV": 11.083333333333336,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-66c68254d5fe7eeb",
+      "inputFingerprint": "66c68254d5fe7eeba1c4a457989166b544ff38ebf0dc5872cfeb0eae38a0f8d7",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.46666666666666656,
+      "minRaiseEV": 16.166666666666654,
+      "jamEV": 10.566666666666656,
+      "bestEV": 16.166666666666654,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-2e0a56a31da3fa24",
+      "inputFingerprint": "2e0a56a31da3fa24dc7150994c98ba3052f1e3269fe0acc32e3fd5676922855a",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.5333333333333334,
+      "minRaiseEV": 26.333333333333346,
+      "jamEV": 21.433333333333348,
+      "bestEV": 26.333333333333346,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-cd825cd910adfbdf",
+      "inputFingerprint": "cd825cd910adfbdf07c02848b9c3245a358512508073bc068ceef779d947200e",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.6000000000000001,
+      "minRaiseEV": 36.500000000000014,
+      "jamEV": 32.30000000000001,
+      "bestEV": 36.500000000000014,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-51701dee78359518",
+      "inputFingerprint": "51701dee78359518b57e3a7742f926b8a7c9f0d90e713febc25a181f753957ff",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.6666666666666666,
+      "minRaiseEV": 46.666666666666664,
+      "jamEV": 43.166666666666664,
+      "bestEV": 46.666666666666664,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-bbb9606043db283e",
+      "inputFingerprint": "bbb9606043db283ee50622ad1063d2cb45be6ca3eecf22c202b161ff77213bc7",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.5409836065573771,
+      "foldShare": 0.3606557377049181,
+      "minRaiseEV": 1.4210854715202004e-14,
+      "jamEV": -6.713114754098349,
+      "bestEV": 1.4210854715202004e-14,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-3431d74610938ab5",
+      "inputFingerprint": "3431d74610938ab53ff54b99add59ecb3617a060672f78e398ef557b88ad7914",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.3111111111111111,
+      "minRaiseEV": -7.555555555555554,
+      "jamEV": -14.788888888888888,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-9a74b404b45fa680",
+      "inputFingerprint": "9a74b404b45fa68015e5e83920ef62756650a9211b61ec9f6594db52517216b0",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.35,
+      "minRaiseEV": -1.625,
+      "jamEV": -8.450000000000003,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-33f9d5459aed9b35",
+      "inputFingerprint": "33f9d5459aed9b3555a6ac4fc0024d882897ff54271209616bd1d234e3685cfb",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.3733333333333333,
+      "minRaiseEV": 1.93333333333333,
+      "jamEV": -4.646666666666668,
+      "bestEV": 1.93333333333333,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-0c137ea1b478852e",
+      "inputFingerprint": "0c137ea1b478852e964b07fcff7cf4a581ef9a62ad7a1dc06c3657fd6ae67edd",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.3888888888888889,
+      "minRaiseEV": 4.30555555555555,
+      "jamEV": -2.1111111111111143,
+      "bestEV": 4.30555555555555,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-412eeb2c77121b4a",
+      "inputFingerprint": "412eeb2c77121b4a1fab20db2ba7579912226376c12ae1fd91eba8b293f4b75b",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.40444444444444444,
+      "minRaiseEV": 6.67777777777777,
+      "jamEV": 0.42444444444443974,
+      "bestEV": 6.67777777777777,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-7407bb1dfd9ab916",
+      "inputFingerprint": "7407bb1dfd9ab9162066051f46c0916b23510732ea4654e24d97a5eca11836a3",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.42000000000000004,
+      "minRaiseEV": 9.050000000000004,
+      "jamEV": 2.960000000000008,
+      "bestEV": 9.050000000000004,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-95499751e19da499",
+      "inputFingerprint": "95499751e19da4992760e1fad1e68c8a370edb3b86b1edab84bfca54fd46d42e",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.4277777777777778,
+      "minRaiseEV": 10.236111111111114,
+      "jamEV": 4.227777777777781,
+      "bestEV": 10.236111111111114,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-adc0fb757c1dd616",
+      "inputFingerprint": "adc0fb757c1dd616b76d86e6ed7370730c87946895c6504beecff58131e468a2",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.4433333333333333,
+      "minRaiseEV": 12.608333333333327,
+      "jamEV": 6.763333333333328,
+      "bestEV": 12.608333333333327,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-91be3d10aef7a12a",
+      "inputFingerprint": "91be3d10aef7a12aa0550e110325f81a0954efc03370ae6e65dcaf816f3bd14f",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.4666666666666667,
+      "minRaiseEV": 16.166666666666668,
+      "jamEV": 10.56666666666667,
+      "bestEV": 16.166666666666668,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-4ffadcf56ca1a2cb",
+      "inputFingerprint": "4ffadcf56ca1a2cbbcad42a2622d5c229a1264523b14a1a2cc4d33aab25d903d",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.5055555555555555,
+      "minRaiseEV": 22.097222222222218,
+      "jamEV": 16.90555555555555,
+      "bestEV": 22.097222222222218,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-39e84e4692e1a699",
+      "inputFingerprint": "39e84e4692e1a699051c87a53cb5343c26c38d7fe380dd492789798c67181221",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.5444444444444444,
+      "minRaiseEV": 28.02777777777777,
+      "jamEV": 23.244444444444436,
+      "bestEV": 28.02777777777777,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-6ecf9913d1420718",
+      "inputFingerprint": "6ecf9913d1420718de62c28205d068b8165ddf7ec00d426382149ef07094bf8e",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.6222222222222222,
+      "minRaiseEV": 39.888888888888886,
+      "jamEV": 35.92222222222222,
+      "bestEV": 39.888888888888886,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-fcb6a7fb3fab00bd",
+      "inputFingerprint": "fcb6a7fb3fab00bd2d71f6663bf45c5de6d65bed348976ce332d18e1df3a0d44",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.7,
+      "minRaiseEV": 51.75,
+      "jamEV": 48.599999999999994,
+      "bestEV": 51.75,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-eb6b610f2941e234",
+      "inputFingerprint": "eb6b610f2941e234fe72e5b60d0cb9aa39927314a2c76a7417f085f6ea985750",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.7777777777777778,
+      "minRaiseEV": 63.61111111111111,
+      "jamEV": 61.27777777777777,
+      "bestEV": 63.61111111111111,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-db0ad00ccfb460c8",
+      "inputFingerprint": "db0ad00ccfb460c878272eeff50eb12d9c63be51f4b2327e9e03589517abc926",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.4637002341920375,
+      "foldShare": 0.36065573770491804,
+      "minRaiseEV": 0,
+      "jamEV": -6.713114754098363,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-dbaeb993b23c31d9",
+      "inputFingerprint": "dbaeb993b23c31d98508531f649ccd0cff87a666c9446fcc306ef77fd080afa0",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.28,
+      "minRaiseEV": -12.299999999999997,
+      "jamEV": -19.859999999999992,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-bb1655ac9cf41ff2",
+      "inputFingerprint": "bb1655ac9cf41ff24aab6727ab11f23b93e7bbae0d38b659bf12b37503de2133",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.315,
+      "minRaiseEV": -6.962500000000006,
+      "jamEV": -14.155000000000008,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-55c4e534318d8640",
+      "inputFingerprint": "55c4e534318d8640a9239b0843adc8a4ab234c1c3e5ba6bb9f09ae2e0ec8d636",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.33599999999999997,
+      "minRaiseEV": -3.760000000000005,
+      "jamEV": -10.732000000000006,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-6781f06917838fef",
+      "inputFingerprint": "6781f06917838fef35c08334fb3cb21f764d79e8aa6ca4508a1d320b2d93112c",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.35,
+      "minRaiseEV": -1.625,
+      "jamEV": -8.450000000000003,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-9ec0425f761316e8",
+      "inputFingerprint": "9ec0425f761316e87c8c88d9af2986ca718b1a35f0d7978457ec33b5622ade80",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.364,
+      "minRaiseEV": 0.509999999999998,
+      "jamEV": -6.167999999999999,
+      "bestEV": 0.509999999999998,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-21c20ec1084a45f7",
+      "inputFingerprint": "21c20ec1084a45f7493c3ca2ba28f71edd62e92c33740bd5b43c16dc5f10f4b4",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.378,
+      "minRaiseEV": 2.644999999999996,
+      "jamEV": -3.886000000000003,
+      "bestEV": 2.644999999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-bf1e434d4e513235",
+      "inputFingerprint": "bf1e434d4e513235e87f1ac2393744c43ad927947fb4e4c04772a23c7e84c766",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.38500000000000006,
+      "minRaiseEV": 3.7125000000000057,
+      "jamEV": -2.7449999999999903,
+      "bestEV": 3.7125000000000057,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-6cf9d7473e7dc200",
+      "inputFingerprint": "6cf9d7473e7dc200891cd1f476dccbb1f4cb02248ec74bbeb059111981a7d2cd",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.39899999999999997,
+      "minRaiseEV": 5.847499999999997,
+      "jamEV": -0.46300000000000097,
+      "bestEV": 5.847499999999997,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-acd8ec7f32935193",
+      "inputFingerprint": "acd8ec7f32935193b173e76c8f2f951587c58a1ec5890713e6ab7fe9c8047927",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.42000000000000004,
+      "minRaiseEV": 9.050000000000004,
+      "jamEV": 2.960000000000008,
+      "bestEV": 9.050000000000004,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-851148e10635796a",
+      "inputFingerprint": "851148e10635796a2d1ed5508db926da2f25977643606d77485bff2081c76bfa",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.45499999999999996,
+      "minRaiseEV": 14.387499999999996,
+      "jamEV": 8.664999999999992,
+      "bestEV": 14.387499999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-432a4f62633006b5",
+      "inputFingerprint": "432a4f62633006b55a7c8d6b96ff06d050402ace5073ec460fbf9f169f3d763e",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.48999999999999994,
+      "minRaiseEV": 19.72499999999999,
+      "jamEV": 14.36999999999999,
+      "bestEV": 19.72499999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-f4315ab56fd6bcb7",
+      "inputFingerprint": "f4315ab56fd6bcb76a0272097157f79b24661ad04c25f30ab12e1f244c75d42d",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.56,
+      "minRaiseEV": 30.400000000000013,
+      "jamEV": 25.780000000000012,
+      "bestEV": 30.400000000000013,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-589434518ff639bb",
+      "inputFingerprint": "589434518ff639bbd79dee0a72451edda93a0fdf758b56f210861e8de631f1f0",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.63,
+      "minRaiseEV": 41.074999999999996,
+      "jamEV": 37.19,
+      "bestEV": 41.074999999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-7d6abbefe4f9b8ef",
+      "inputFingerprint": "7d6abbefe4f9b8efca7e45d6a0e09e41cba17d39a9d027a19b4f167777411deb",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.7,
+      "minRaiseEV": 51.75,
+      "jamEV": 48.599999999999994,
+      "bestEV": 51.75,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-43e70951724dd13d",
+      "inputFingerprint": "43e70951724dd13d7e68a4d019894116fabf3f1dc5acc37f63a74935fe33a39c",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.5152224824355972,
+      "foldShare": 0.36065573770491804,
+      "minRaiseEV": 0,
+      "jamEV": -6.713114754098363,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-0f447b21219b4df1",
+      "inputFingerprint": "0f447b21219b4df1bd3212e8f31ee86a52d076c0740211dc3427fd1d8a4be317",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.30000000000000004,
+      "minRaiseEV": -9.249999999999996,
+      "jamEV": -16.59999999999999,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-aa758623ec781d86",
+      "inputFingerprint": "aa758623ec781d860e07d89eeee0151fd6a39c27863c6fdd77a0e497a01c9113",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.3375,
+      "minRaiseEV": -3.53125,
+      "jamEV": -10.487499999999997,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-1fd5abb034e0775c",
+      "inputFingerprint": "1fd5abb034e0775c8260cf2f34dc9cb2ca98914133b06f09de63d464bba038bf",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.36,
+      "minRaiseEV": -0.10000000000000142,
+      "jamEV": -6.82,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-c467e7fc4f54745a",
+      "inputFingerprint": "c467e7fc4f54745ad5c08885e39108fd5ef27c6232bba95b92536ce4eb75197d",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.375,
+      "minRaiseEV": 2.1875,
+      "jamEV": -4.375,
+      "bestEV": 2.1875,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-5c424f71ee9b8742",
+      "inputFingerprint": "5c424f71ee9b874252a80bf3c0128e485ccdfe07c526ad90f4b47188b422cd04",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.39,
+      "minRaiseEV": 4.475000000000001,
+      "jamEV": -1.9299999999999997,
+      "bestEV": 4.475000000000001,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-30aa94c6a30f68ed",
+      "inputFingerprint": "30aa94c6a30f68ed67a4953bffb584c5a777aad2a605356c56c01da472f476ab",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.405,
+      "minRaiseEV": 6.762500000000003,
+      "jamEV": 0.5150000000000077,
+      "bestEV": 6.762500000000003,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-c9f8a1f9379450b7",
+      "inputFingerprint": "c9f8a1f9379450b78751eb05a26aa97972f5bfb33390e38b95db9ea9e05058c8",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.41250000000000003,
+      "minRaiseEV": 7.906250000000007,
+      "jamEV": 1.7375000000000043,
+      "bestEV": 7.906250000000007,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-fc5d70bc2460f59f",
+      "inputFingerprint": "fc5d70bc2460f59f31653f16c834f17439f78663f719eb5a1bcfcfdbc9b9faf8",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.4275,
+      "minRaiseEV": 10.193749999999998,
+      "jamEV": 4.182499999999997,
+      "bestEV": 10.193749999999998,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-cac47499c0f5b5e1",
+      "inputFingerprint": "cac47499c0f5b5e1ddc88eb2d6aa639c3d63c60f818bb8daf764ac14af944035",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.44999999999999996,
+      "minRaiseEV": 13.62499999999999,
+      "jamEV": 7.849999999999987,
+      "bestEV": 13.62499999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-57833a9773fb6b67",
+      "inputFingerprint": "57833a9773fb6b67534e80286b45b2d48695ad1f8f20b9004668c4d758754ed4",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.48750000000000004,
+      "minRaiseEV": 19.34375000000001,
+      "jamEV": 13.962500000000013,
+      "bestEV": 19.34375000000001,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-17f82066f04e1f83",
+      "inputFingerprint": "17f82066f04e1f83a2216d8581e00e402ec696bca1293c919fe018a97ebf85c1",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.5249999999999999,
+      "minRaiseEV": 25.06249999999999,
+      "jamEV": 20.07499999999999,
+      "bestEV": 25.06249999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-abc05a7cb9541b44",
+      "inputFingerprint": "abc05a7cb9541b44bdd667a6954e6487501fd35bbcc9a4af581ca963fc077fa4",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.6000000000000001,
+      "minRaiseEV": 36.500000000000014,
+      "jamEV": 32.30000000000001,
+      "bestEV": 36.500000000000014,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-f23af51710a63050",
+      "inputFingerprint": "f23af51710a63050887b5c7602005ac1d663252c66a40c00037f5da50874b3fb",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.675,
+      "minRaiseEV": 47.9375,
+      "jamEV": 44.525000000000006,
+      "bestEV": 47.9375,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-abf51af38ca848f0",
+      "inputFingerprint": "abf51af38ca848f03b0afb2d8ca2eb2a29cea7586ad4094e249901b03c2b3696",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.75,
+      "minRaiseEV": 59.375,
+      "jamEV": 56.75,
+      "bestEV": 59.375,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    },
+    {
+      "id": "Q-1054ad06f53e51c3",
+      "inputFingerprint": "1054ad06f53e51c37ff2b07bd8045d6dce64f2a93fc51aead136e65e27bf1503",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.4808743169398907,
+      "foldShare": 0.360655737704918,
+      "minRaiseEV": -7.105427357601002e-15,
+      "jamEV": -6.71311475409837,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer."
+    }
+  ]
+}

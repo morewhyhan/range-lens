@@ -1,0 +1,2384 @@
+{
+  "id": "FULL_COURSE_COVERAGE_AND_RELEASE_CONTRACT_V1",
+  "status": "paper_35_unit_coverage_plan_compiled_pools_and_reference_missing",
+  "purpose": "把35项从首遍代表题到全量练习的覆盖维度、三卡结构、用户可调抽题参数和六级释放绑定起来，防止题量增长替代系统覆盖。",
+  "sources": [
+    "unit-course-manifest.json",
+    "principle-loop-unit-crosswalk.json",
+    "unit-learner-release-matrix.json",
+    "automatic-question-generation-contract.json",
+    "unit-canonical-route-bridge.json"
+  ],
+  "releasePlan": [
+    {
+      "stage": "first_pass",
+      "visibleUnits": [
+        "1.5",
+        "2.1",
+        "3.1",
+        "4.5",
+        "5.7"
+      ],
+      "rule": "只用五个代表单元建立路线，不打开35项平铺入口。"
+    },
+    {
+      "stage": "map_to_guided",
+      "visibleUnits": "all35",
+      "rule": "每个单元先确认父帧、白话问题、首答、必需输出和返回点。"
+    },
+    {
+      "stage": "independent_to_adjacent",
+      "visibleUnits": "all35",
+      "rule": "每单元必须有基准卡、单变量对照卡和未见迁移卡。"
+    },
+    {
+      "stage": "delayed_to_continuous",
+      "visibleUnits": "all35",
+      "rule": "只有范围后继、账本和停止身份闭合后才能进入连续路线。"
+    }
+  ],
+  "poolControls": {
+    "userAdjustable": [
+      "edgeRatio",
+      "internalRatio",
+      "pureRatio",
+      "mixedRatio",
+      "transferRatio"
+    ],
+    "invariants": [
+      "sumMustEqualOne",
+      "edgeAndInternalBothRequired",
+      "missingPoolCannotBeInvented",
+      "samplingDoesNotChangePolicy",
+      "samplingDoesNotChangeRange",
+      "samplingDoesNotChangeEV"
+    ],
+    "defaultRatios": null,
+    "calibrationRequiredBeforeDefault": true,
+    "emptyPoolBehavior": "unavailable_not_substituted"
+  },
+  "requiredPools": [
+    "locator",
+    "pure_or_fact",
+    "mixed_when_applicable",
+    "edge",
+    "internal",
+    "action_preserving_contrast",
+    "single_field_transfer"
+  ],
+  "requiredModes": [
+    "base",
+    "contrast",
+    "transfer"
+  ],
+  "releaseStages": [
+    "map",
+    "guided",
+    "independent",
+    "adjacent",
+    "delayed",
+    "continuous"
+  ],
+  "groupPolicies": {
+    "compare.unopened": {
+      "parent": "p4",
+      "dimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeMeaning": "贴近课程动作边界的比较牌",
+      "internalMeaning": "同一比较原理的非边界牌"
+    },
+    "compare.bet": {
+      "parent": "p4",
+      "dimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeMeaning": "贴近面对下注价格边界的牌",
+      "internalMeaning": "同一价格机制的内部牌"
+    },
+    "compare.raise": {
+      "parent": "p4",
+      "dimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeMeaning": "贴近面对加注边界的牌",
+      "internalMeaning": "同一加注比较机制的内部牌"
+    },
+    "update.response": {
+      "parent": "p6",
+      "dimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeMeaning": "回应后范围/账本明显变化的边界牌",
+      "internalMeaning": "回应不改变主导结构的内部牌"
+    },
+    "update.card": {
+      "parent": "p6",
+      "dimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeMeaning": "新牌改变策略分支的边界牌",
+      "internalMeaning": "新牌不改变主导结构的内部牌"
+    }
+  },
+  "rows": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": true,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "edgeDefinition": "贴近课程动作边界的比较牌",
+      "internalDefinition": "同一比较原理的非边界牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": true,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对下注价格边界的牌",
+      "internalDefinition": "同一价格机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": true,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "canonicalParentState": "p4",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "edgeDefinition": "贴近面对加注边界的牌",
+      "internalDefinition": "同一加注比较机制的内部牌",
+      "contrastChangedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "transferRequiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": true,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "edgeDefinition": "回应后范围/账本明显变化的边界牌",
+      "internalDefinition": "回应不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "finite_model",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": true,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "canonicalParentState": "p6",
+      "firstPassRepresentative": false,
+      "requiredModes": [
+        "base",
+        "contrast",
+        "transfer"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "edgeDefinition": "新牌改变策略分支的边界牌",
+      "internalDefinition": "新牌不改变主导结构的内部牌",
+      "contrastChangedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "transferRequiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "sourceIdentity": "fact_or_ledger",
+      "status": "coverage_specified_not_pool_compiled"
+    }
+  ],
+  "rules": {
+    "all35UnitsListed": true,
+    "all35HaveBaseContrastTransfer": true,
+    "contrastExactlyOneField": true,
+    "edgeAndInternalAreSeparateAttempts": true,
+    "everyUnitHasParentAndReturn": true,
+    "everyUnitHasStopOnMissingEvidence": true,
+    "firstPassUsesOnlyFiveRepresentatives": true,
+    "noFlat35HomeMenu": true,
+    "missingPoolIsNotFilledByNeighbor": true,
+    "noExactGradeWithoutReferenceAndSuccessor": true,
+    "coverageStateIsNotSkillScore": true
+  },
+  "currentEvidence": {
+    "paperPlan": true,
+    "all35RowsCompiled": true,
+    "all105CardsCompiled": false,
+    "poolsCompiled": false,
+    "ratiosCalibrated": false,
+    "runtimeQuestionGenerator": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

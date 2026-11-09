@@ -1,0 +1,138 @@
+{
+  "status": "paper_fact_prompts_not_app",
+  "questions": [
+    {
+      "id": "QV_P1",
+      "body": {
+        "task": "从这两手给定候选中，点出与自己底牌冲突、现在不可能出现的一手。",
+        "board": [
+          "Qs",
+          "Qh",
+          "Qd"
+        ],
+        "hero": [
+          "As",
+          "Kd"
+        ],
+        "candidates": [
+          {
+            "id": "a",
+            "hole": [
+              "6s",
+              "7s"
+            ]
+          },
+          {
+            "id": "b",
+            "hole": [
+              "2s",
+              "As"
+            ]
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "label": "第一手"
+          },
+          {
+            "id": "b",
+            "label": "第二手"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "evidenceScope": "physical_card_conflict_only"
+      }
+    },
+    {
+      "id": "QV_P2",
+      "body": {
+        "task": "我知道自己拿A♠K♦；刚下注1.98BB，对方还没回应。仅凭我下注，要删掉对方的弱牌吗？",
+        "board": [
+          "Qs",
+          "Qh",
+          "Qd"
+        ],
+        "hero": [
+          "As",
+          "Kd"
+        ],
+        "state": {
+          "potBB": 7.98,
+          "SBStackBB": 95.02,
+          "BBStackBB": 97,
+          "actor": "BB"
+        },
+        "options": [
+          {
+            "id": "remove",
+            "label": "删掉，对方已经弃了弱牌"
+          },
+          {
+            "id": "keep",
+            "label": "保留，还没有观察到对方回应"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "evidenceScope": "known_private_hand_conditioning_no_new_opponent_action"
+      }
+    },
+    {
+      "id": "QV_P3",
+      "body": {
+        "task": "只按下方给定回应规则：观察到跟注后，哪手不再留在这个跟注分支？",
+        "board": [
+          "Qs",
+          "Qh",
+          "Qd"
+        ],
+        "hero": [
+          "As",
+          "Kd"
+        ],
+        "given": [
+          {
+            "id": "a",
+            "hole": [
+              "2s",
+              "3s"
+            ],
+            "rootWeight": 1,
+            "callFrequency": 0
+          },
+          {
+            "id": "b",
+            "hole": [
+              "2h",
+              "2d"
+            ],
+            "rootWeight": 1,
+            "callFrequency": 0.9519493579864502
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "label": "第一手"
+          },
+          {
+            "id": "b",
+            "label": "第二手"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ],
+        "evidenceScope": "literal_given_policy_update_not_optimal_action_or_population_inference"
+      }
+    }
+  ],
+  "learnerTrials": 0
+}

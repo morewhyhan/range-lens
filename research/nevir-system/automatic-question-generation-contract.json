@@ -1,0 +1,119 @@
+{
+  "id": "AUTOMATIC_QUESTION_GENERATION_CONTRACT_V1",
+  "status": "paper_question_generator_contract_not_implemented",
+  "purpose": "为每道题固定身份、来源过滤、单变量变化、边缘抽题、覆盖闭合和父帧返回。",
+  "sourceDocuments": [
+    "78_练习队列与边缘牌覆盖合同.md",
+    "131_频率简化与边缘牌编译算法.md",
+    "145_原理练习剂量与间隔队列合同.md",
+    "156_从首遍结构到目标级能力的释放总表.md"
+  ],
+  "questionIdentityFields": ["routeParent","unitId","sourceFingerprint","configurationFingerprint","changedField","entityHand","board","actionState","queueStage"],
+  "outputContract": {
+    "requiredFields": ["questionId","routeParent","parentSnapshotHash","unitId","sourceIdentity","configurationFingerprint","questionMode","visibleInputs","plainPrompt","primaryAction","requiredOutput","answerIdentity","gradingRule","explanation","rangeViewOrStop","successorOrStop","transferSpec"],
+    "questionModes": ["locator","fact","course_rule","reference_policy","ledger","transfer","stop"],
+    "visibleInputsMustExclude": ["teacherAnswer","hiddenReferenceFrequency","futureOpponentAction","unresolvedPolicy"],
+    "answerIdentityRules": {
+      "fact": "independent_fact_or_formula",
+      "course_rule": "declared_course_policy_only",
+      "reference_policy": "matched_reference_and_course_policy",
+      "stop": "missing_identity_or_successor_explained"
+    },
+    "gradingRuleFields": ["acceptedOutputs","toleranceOrExactness","unknownHandling","firstAnswerPreserved","helpLevel"],
+    "transferSpecFields": ["changedField","preservedFields","affectedLayer","holdoutStatus"],
+    "runtimeInput": "one_verified_question_package_at_a_time"
+  },
+  "runtimeReaders": {
+    "questionId": ["duplicate_guard", "session_record"],
+    "routeParent": ["scheduler_parent_lock", "parent_restore"],
+    "parentSnapshotHash": ["child_close_restore", "state_identity"],
+    "unitId": ["release_stage", "coverage_ledger"],
+    "sourceIdentity": ["answer_identity_grader", "stop_logic"],
+    "configurationFingerprint": ["input_freeze", "reference_match"],
+    "questionMode": ["mode_specific_grader"],
+    "visibleInputs": ["prompt_renderer", "hidden_field_guard"],
+    "plainPrompt": ["prompt_renderer", "plain_language_lint"],
+    "primaryAction": ["one_primary_action_guard", "response_capture"],
+    "requiredOutput": ["response_capture", "handoff_writer"],
+    "answerIdentity": ["answer_identity_grader"],
+    "gradingRule": ["grader"],
+    "explanation": ["feedback_after_first_answer"],
+    "rangeViewOrStop": ["range_delta_or_stop_renderer"],
+    "successorOrStop": ["continuous_gate", "stop_renderer"],
+    "transferSpec": ["transfer_gate", "coverage_ledger"]
+  },
+  "runtimeReaderRule": "每个requiredFields必须至少有一个明确读取者；没有读取者的字段只能留在作者草稿，不能进入可答题包。",
+  "coverageLedgerContract": {
+    "perParentFields": ["parentRoute","requiredPools","seenQuestionIds","seenUnitIds","edgeAttempts","internalAttempts","contrastAttempts","transferAttempts","successorClosed","stopIdentities"],
+    "completionRequires": ["locator", "pure_or_fact", "mixed_when_applicable", "edge_and_internal_independent_attempts", "action_preserving_contrast", "single_field_transfer", "parent_restore"],
+    "emptyPoolStatus": "unavailable_not_substituted",
+    "scoreMeaning": "coverage_and_evidence_state_not_skill_percentage"
+  },
+  "hardFilters": ["parentRouteLock","physicalLegality","stateAndLedgerConsistency","sourceIdentity","rangeOrStopAvailability","oneChangedField","uniqueQuestionIdentity","childExerciseParentLock"],
+  "poolIdentities": ["pure","mixed","source_boundary","internal","transfer","unavailable"],
+  "userRatios": ["edgeRatio","internalRatio","pureRatio","mixedRatio","transferRatio"],
+  "ratioRules": {
+    "sumMustEqualOne": true,
+    "missingPoolCannotBeInvented": true,
+    "samplingDoesNotReweightPolicy": true,
+    "samplingDoesNotReweightRange": true,
+    "samplingDoesNotReweightEV": true,
+    "uncalibratedEdgeScoreCannotGrade": true
+  },
+  "compileOrder": ["locator","sameMechanism","pureOrFact","mixed","edgeBoundary","internal","actionPreservingContrast","singleFieldTransfer","continuousReturn","coverageClose"],
+  "edgeFields": ["margin","supportCount","localEvGap","quantizationLoss"],
+  "duplicateRules": {
+    "buttonOrderChangeIsNotNewQuestion": true,
+    "colorChangeIsNotNewQuestion": true,
+    "sameEntityAcrossHelpLevelsMustShareIdentity": true,
+    "exhaustedPoolIsNotDuplicated": true
+  },
+  "childExercises": [
+    {
+      "id": "hand_rank_ladder",
+      "contract": "hand-rank-ladder-exercise.json",
+      "parentRoute": "p2_board",
+      "identity": "fact",
+      "strategyControlsHidden": true,
+      "returnsToParent": true,
+      "cannotEnterActionPools": true
+    }
+  ],
+  "coverageClose": {
+    "requiresLocator": true,
+    "requiresPureMixedInternal": true,
+    "requiresApplicableSourceBoundary": true,
+    "requiresEdgeAndInternalIndependentAttempts": true,
+    "requiresActionPreservingContrast": true,
+    "requiresSingleFieldTransfer": true,
+    "requiresReferenceAndSuccessorForExactPolicy": true,
+    "requiresParentRestore": true
+  },
+  "schedulerContract": {
+    "source": "learner-evidence-driven-scheduler.json",
+    "hardFilterOrderMustInclude": [
+      "same_parent_frame",
+      "physical_legal",
+      "history_pot_stack_actor_consistent",
+      "source_identity",
+      "successor_or_explicit_stop",
+      "exactly_one_changed_field",
+      "unique_question_identity",
+      "child_parent_lock"
+    ],
+    "firstPassRouteSource": "learner-goal-route-canonical.json",
+    "firstPassMustUseRepresentativeOnly": true,
+    "repairOverridesUserRatios": true,
+    "sessionOnly": true,
+    "runtimeAttached": false
+  },
+  "currentEvidence": {
+    "identitySchemaWritten": true,
+    "filtersWritten": true,
+    "compilerImplemented": false,
+    "edgeThresholdsCalibrated": false,
+    "all35PoolsClosed": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

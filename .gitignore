@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.sites-runtime/
+*.log
+.build-cache/
+release/
+
+# Generated solver data and local test runs (regenerate from source).
+*.bin
+*.exe
+*.dll
+*.pdb
+**/target/
+research/runtime/
+research/nevir-system/*rollouts*.jsonl
+
+# Local credentials and editor/system files.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

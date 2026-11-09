@@ -1,0 +1,43 @@
+{
+  "id": "REFERENCE_TO_COURSE_PACKAGE_C0_C9_CLOSURE_V1",
+  "status": "paper_reference_course_closure_not_compiled",
+  "purpose": "把固定GTO参考、课程政策、范围变化、后继、教学帧和迁移题按C0-C9依赖编译为可发布单元。",
+  "stages": [
+    {"id":"C0_identity","output":"inputFingerprint","required":["tableSize","effectiveStack","rake","positions","street","board","history","pot","stacks","ranges","allowedActions","solverCommit"]},
+    {"id":"C1_physical_facts","output":"factSnapshot","required":["bestFive","handClass","legalRunouts","amountLedger","entityCombos"]},
+    {"id":"C2_reference_solve","output":"referenceSnapshot","required":["actionFrequency","actionEV","reachWeight","rangeAfter","successors"]},
+    {"id":"C3_reference_quality","output":"referenceQuality","required":["inputVerified","reloadVerified","menuVerified","ledgerVerified","denominatorVerified"]},
+    {"id":"C4_course_policy","output":"coursePolicy","required":["policyId","keptActions","removedActions","quantizationRule","boundary"]},
+    {"id":"C5_difference","output":"differenceLedger","required":["actionDelta","evDelta","rangeDelta","affectedAncestors","stopBoundary"]},
+    {"id":"C6_successor_closure","output":"successorGraph","required":["positiveActionSuccessors","newCardSuccessors","terminalStops","ledgerHandoff"]},
+    {"id":"C7_lesson_compile","output":"lessonFrames","required":["parentFrame","oneQuestion","onePrimaryAction","answerIdentity","errorLayer","returnTo"]},
+    {"id":"C8_transfer_compile","output":"heldoutTransfer","required":["sameParent","oneChangedField","firstAttemptBeforeExplanation","errorLayer"]},
+    {"id":"C9_release_audit","output":"releaseDecision","required":["provenance","policyReferenceSeparation","rangeVisual","successorCompleteness","trialStatus"]}
+  ],
+  "releaseIdentities": ["fact","demonstration","course_policy","reference_policy","not_open"],
+  "hardRules": {
+    "cStagesAreSequential": true,
+    "missingStageBlocksExactGrade": true,
+    "coursePolicySeparateFromReference": true,
+    "affectedAncestorsRecompiledAfterMenuChange": true,
+    "sameDenominatorForRangeComparison": true,
+    "unknownDistinctFromZero": true,
+    "missingSuccessorStopsContinuousRoute": true,
+    "lessonFrameNestedInParent": true,
+    "heldoutChangesExactlyOneField": true,
+    "noDefaultAnswerForMissingEvidence": true
+  },
+  "rangeSnapshots": ["rangeBefore","referenceAfter","courseAfter","successorRange"],
+  "requiredCoursePackageOutputs": ["inputFingerprint","factSnapshot","referenceSnapshot","coursePolicy","differenceLedger","rangeSnapshots","successorGraph","lessonFrames","heldoutTransfer","releaseDecision"],
+  "currentEvidence": {
+    "schemaWritten": true,
+    "A72C0C1FactCandidate": true,
+    "A72C2Reference": false,
+    "coursePolicyCompiled": false,
+    "all35ReferenceClosed": false,
+    "successorGraphComplete": false,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

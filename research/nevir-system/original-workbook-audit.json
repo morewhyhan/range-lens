@@ -1,0 +1,957 @@
+{
+  "status": "read_only_workbook_audited_not_complete_caller_policy",
+  "source": "C:\\Users\\why\\Desktop\\笔记 Nevir\\翻前GTO_整理版.xlsx",
+  "sha256": "80c35c635edd62938c79dc5b8eb4e52d72c096e68760975dab6a599af4b95cef",
+  "reviewedImageWorkbookSha256": "80c35c635edd62938c79dc5b8eb4e52d72c096e68760975dab6a599af4b95cef",
+  "unchangedAfterRead": true,
+  "sheets": [
+    {
+      "name": "翻前GTO",
+      "visibility": "visible",
+      "part": "xl/worksheets/sheet1.xml",
+      "dimension": "A1:J8",
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "翻前 GTO 边缘手牌笔记",
+          "formula": null,
+          "style": "2"
+        },
+        {
+          "cell": "H1",
+          "value": "0–24% → 0%\n25–74% → 50%\n75–100% → 100%",
+          "formula": null,
+          "style": "3"
+        },
+        {
+          "cell": "A3",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B3",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C3",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D3",
+          "value": "关煞",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "E3",
+          "value": "庄位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "F3",
+          "value": "小盲",
+          "formula": null,
+          "style": "7"
+        },
+        {
+          "cell": "A4",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "B4",
+          "value": "(ATo:T9s)To细分：\nKto-50%,\nQTo-0%,                                JTo-0%,                        T9s-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "C4",
+          "value": "(AT0:T8s)To细分：                     QTo-50%,                                                      JTo-50%,                                         T8s-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "D4",
+          "value": "(A9o:98s)9o细分：                                     K9o-50%,                                      Q9o\\J9o\\T9o-0%                                           ",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "E4",
+          "value": "(A8:86s)8o细分：                           K8o-50%,                                       Q8o-0%,                                              J8o-50%,                                 T8o-50%,                                                      88\\87s\\86s-100%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "F4",
+          "value": "(A8o-85s)8o细分：                       K8o-100%,                                        Q8o\\J8o-0%,                                           T8o\\98o-50%,                                           88\\87s\\86s\\85s-100%                                                                       ",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "A5",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "B5",
+          "value": "66:AA,                               55-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "C5",
+          "value": "55:AA,                                           44-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "D5",
+          "value": "44:AA,                                          33\\22-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "E5",
+          "value": "33:AA,                                          22-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "F5",
+          "value": "22:AA",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "A6",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "B6",
+          "value": "A2s,                                             (K6s,K5s)-50%,                          Q9s%,                                JTs%,                                  T9s-50%                                            ",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "C6",
+          "value": "A2s,                                                       K4s-50%,                                                  Q7s-50%,                                         J8s-50%,                                                           T8s-50%,                                                     98s-50%,                                       65s-50%                                                                                                  ",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "D6",
+          "value": "A2s,                                                                        K3s,                                               Q5s,                                                                J7s-50%,                                                               T8s,                                                   98s,                                                       65s",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "E6",
+          "value": "A2s, K2s, Q3s,                                                                  J4s-50%,                                            T6s,                                                      96s-50%,                                             86s,                                                                        75s-50%,                                   65s, 54s-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "F6",
+          "value": "A2s, K2s, Q2s,                           J4s-50%,                                            T6s\\96s\\85s\\75s-100%,          64s-50%,                                        54s-100%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "A7",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "B7",
+          "value": "ATo",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "C7",
+          "value": "A8o",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "D7",
+          "value": "A7o-50%,                                         A5o-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "E7",
+          "value": "A3o-50%",
+          "formula": null,
+          "style": "11"
+        },
+        {
+          "cell": "F7",
+          "value": "A4o",
+          "formula": null,
+          "style": "11"
+        }
+      ]
+    },
+    {
+      "name": "3bet",
+      "visibility": "visible",
+      "part": "xl/worksheets/sheet2.xml",
+      "dimension": "A1:M48",
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "枪口加注",
+          "formula": null,
+          "style": "1"
+        },
+        {
+          "cell": "K1",
+          "value": "0–24% → 0%\n25–74% → 50%\n75–100% → 100%",
+          "formula": null,
+          "style": "3"
+        },
+        {
+          "cell": "A3",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B3",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C3",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D3",
+          "value": "关煞",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "E3",
+          "value": "庄位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "F3",
+          "value": "小盲",
+          "formula": null,
+          "style": "7"
+        },
+        {
+          "cell": "A4",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "C4",
+          "value": "=DISPIMG(\"ID_F4CF71ECD77242BB8F874D03C3E5F189\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_F4CF71ECD77242BB8F874D03C3E5F189\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "D4",
+          "value": "=DISPIMG(\"ID_94BBAE150DEC421A911E3B9FA23084A1\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_94BBAE150DEC421A911E3B9FA23084A1\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "E4",
+          "value": "=DISPIMG(\"ID_70F209381D9348CCB3E69E1046552B4F\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_70F209381D9348CCB3E69E1046552B4F\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "F4",
+          "value": "=DISPIMG(\"ID_2520555E73BC48188C06A622BC9A1E3D\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_2520555E73BC48188C06A622BC9A1E3D\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "A5",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "A6",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A7",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A11",
+          "value": "中位加注",
+          "formula": null,
+          "style": "1"
+        },
+        {
+          "cell": "A13",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B13",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C13",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D13",
+          "value": "关煞",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "E13",
+          "value": "庄位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "F13",
+          "value": "小盲",
+          "formula": null,
+          "style": "7"
+        },
+        {
+          "cell": "A14",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "D14",
+          "value": "=DISPIMG(\"ID_BA26B4D7C282485BB13D3B90063CA08A\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_BA26B4D7C282485BB13D3B90063CA08A\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "E14",
+          "value": "=DISPIMG(\"ID_6AC64F4BC30B44E7B274FC400271A2D7\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_6AC64F4BC30B44E7B274FC400271A2D7\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "F14",
+          "value": "=DISPIMG(\"ID_4FF96D9E232E4206B549643814B93F96\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_4FF96D9E232E4206B549643814B93F96\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "A15",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "A16",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A17",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A21",
+          "value": "关煞加注",
+          "formula": null,
+          "style": "1"
+        },
+        {
+          "cell": "A23",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B23",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C23",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D23",
+          "value": "关煞",
+          "formula": null,
+          "style": "16"
+        },
+        {
+          "cell": "E23",
+          "value": "庄位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "F23",
+          "value": "小盲",
+          "formula": null,
+          "style": "7"
+        },
+        {
+          "cell": "A24",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "E24",
+          "value": "=DISPIMG(\"ID_FB227332C63C4FCBA5D7BC087D40A8A9\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_FB227332C63C4FCBA5D7BC087D40A8A9\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "F24",
+          "value": "=DISPIMG(\"ID_8A1195A7C3A144BA9BBCBC1362908F33\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_8A1195A7C3A144BA9BBCBC1362908F33\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "A25",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "A26",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A27",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A31",
+          "value": "庄位加注",
+          "formula": null,
+          "style": "1"
+        },
+        {
+          "cell": "A33",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B33",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C33",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D33",
+          "value": "关煞",
+          "formula": null,
+          "style": "16"
+        },
+        {
+          "cell": "E33",
+          "value": "庄位",
+          "formula": null,
+          "style": "16"
+        },
+        {
+          "cell": "F33",
+          "value": "小盲",
+          "formula": null,
+          "style": "7"
+        },
+        {
+          "cell": "A34",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "F34",
+          "value": "=DISPIMG(\"ID_057C3DDE98DC4763BCC0F346BD0B8195\",1)",
+          "formula": "_xlfn.DISPIMG(\"ID_057C3DDE98DC4763BCC0F346BD0B8195\",1)",
+          "style": "11"
+        },
+        {
+          "cell": "A35",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "A36",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A37",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A41",
+          "value": "小盲加注",
+          "formula": null,
+          "style": "1"
+        },
+        {
+          "cell": "A43",
+          "value": "类别",
+          "formula": null,
+          "style": "5"
+        },
+        {
+          "cell": "B43",
+          "value": "枪口",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "C43",
+          "value": "中位",
+          "formula": null,
+          "style": "6"
+        },
+        {
+          "cell": "D43",
+          "value": "关煞",
+          "formula": null,
+          "style": "16"
+        },
+        {
+          "cell": "E43",
+          "value": "庄位",
+          "formula": null,
+          "style": "16"
+        },
+        {
+          "cell": "F43",
+          "value": "小盲",
+          "formula": null,
+          "style": "8"
+        },
+        {
+          "cell": "A44",
+          "value": "边缘行",
+          "formula": null,
+          "style": "9"
+        },
+        {
+          "cell": "A45",
+          "value": "边缘对",
+          "formula": null,
+          "style": "12"
+        },
+        {
+          "cell": "A46",
+          "value": "边缘S",
+          "formula": null,
+          "style": "14"
+        },
+        {
+          "cell": "A47",
+          "value": "边缘Ao",
+          "formula": null,
+          "style": "14"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "part": "xl/media/image1.png",
+      "bytes": 175575,
+      "sha256": "94469edc3e93f069b4e047f59c7c7869f656f24c791f695cee5c8671fc4634ca"
+    },
+    {
+      "part": "xl/media/image10.png",
+      "bytes": 123376,
+      "sha256": "15e4619169e5c50cc225f255cfd4ef1b029371f126b980a9411034bc4940a0fc"
+    },
+    {
+      "part": "xl/media/image2.png",
+      "bytes": 175478,
+      "sha256": "b1dbce3830a49f981a13e3ce19500bc9f5e8d8a9435fc9a612805296a2cf90e7"
+    },
+    {
+      "part": "xl/media/image3.png",
+      "bytes": 176769,
+      "sha256": "1f39aa48b4d902c30ace249effc079536842ceee28d98bff2b6849102f988610"
+    },
+    {
+      "part": "xl/media/image4.png",
+      "bytes": 177079,
+      "sha256": "0dd0755908405519fdbf592f264a9a61140a1c6a86e488101ea05756d84a1094"
+    },
+    {
+      "part": "xl/media/image5.png",
+      "bytes": 176192,
+      "sha256": "fe34f72e6171a8d84aa2b512b0be3371752e81d10dd132c25237b43cf0e00cec"
+    },
+    {
+      "part": "xl/media/image6.png",
+      "bytes": 133138,
+      "sha256": "c965303f663c42f623dcab72cf5f079172b7fcea421733fdc7433663e9d53128"
+    },
+    {
+      "part": "xl/media/image7.png",
+      "bytes": 174684,
+      "sha256": "bc775d5a9c9d232b9661f8aba4d0dce835cc137da97104b6b0add846e4cc262f"
+    },
+    {
+      "part": "xl/media/image8.png",
+      "bytes": 175754,
+      "sha256": "dfa78a7d06b7155bcd03b2c022749ac5783e28bd23efaab391f29bb2d485e279"
+    },
+    {
+      "part": "xl/media/image9.png",
+      "bytes": 175122,
+      "sha256": "5882bfd6ae2bc6452ab9ad8874cffed16f5ff0db7e4c378709617ccef3d7d35d"
+    }
+  ],
+  "wpsCellImages": [
+    {
+      "wpsId": "ID_94BBAE150DEC421A911E3B9FA23084A1",
+      "part": "xl/media/image1.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "D4"
+        }
+      ],
+      "review": {
+        "opener": "UTG",
+        "responder": "CO",
+        "openToBB": 2,
+        "threebetToBB": 6.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_70F209381D9348CCB3E69E1046552B4F",
+      "part": "xl/media/image2.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "E4"
+        }
+      ],
+      "review": {
+        "opener": "UTG",
+        "responder": "BTN",
+        "openToBB": 2,
+        "threebetToBB": 7.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_2520555E73BC48188C06A622BC9A1E3D",
+      "part": "xl/media/image3.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "F4"
+        }
+      ],
+      "review": {
+        "opener": "UTG",
+        "responder": "SB",
+        "openToBB": 2,
+        "threebetToBB": 10,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_BA26B4D7C282485BB13D3B90063CA08A",
+      "part": "xl/media/image4.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "D14"
+        }
+      ],
+      "review": {
+        "opener": "HJ",
+        "responder": "CO",
+        "openToBB": 2,
+        "threebetToBB": 6.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_6AC64F4BC30B44E7B274FC400271A2D7",
+      "part": "xl/media/image5.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "E14"
+        }
+      ],
+      "review": {
+        "opener": "HJ",
+        "responder": "BTN",
+        "openToBB": 2,
+        "threebetToBB": 7.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_4FF96D9E232E4206B549643814B93F96",
+      "part": "xl/media/image6.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "F14"
+        }
+      ],
+      "review": {
+        "opener": "HJ",
+        "responder": "SB",
+        "openToBB": null,
+        "threebetToBB": null,
+        "players": null,
+        "initialDepthBB": null,
+        "scope": "Worksheet placement HJ open / SB response only; cropped image has no action header.",
+        "availableActionsAtSelectedSeat": null,
+        "visualStatus": "grid_only_viewed_context_not_independently_visible",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_FB227332C63C4FCBA5D7BC087D40A8A9",
+      "part": "xl/media/image7.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "E24"
+        }
+      ],
+      "review": {
+        "opener": "CO",
+        "responder": "BTN",
+        "openToBB": 2.3,
+        "threebetToBB": 7.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_8A1195A7C3A144BA9BBCBC1362908F33",
+      "part": "xl/media/image8.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "F24"
+        }
+      ],
+      "review": {
+        "opener": "CO",
+        "responder": "SB",
+        "openToBB": 2.3,
+        "threebetToBB": 11.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_057C3DDE98DC4763BCC0F346BD0B8195",
+      "part": "xl/media/image9.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "F34"
+        }
+      ],
+      "review": {
+        "opener": "BTN",
+        "responder": "SB",
+        "openToBB": 2.5,
+        "threebetToBB": 12,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    },
+    {
+      "wpsId": "ID_F4CF71ECD77242BB8F874D03C3E5F189",
+      "part": "xl/media/image10.png",
+      "refs": [
+        {
+          "sheet": "3bet",
+          "cell": "C4"
+        }
+      ],
+      "review": {
+        "opener": "UTG",
+        "responder": "HJ",
+        "openToBB": 2,
+        "threebetToBB": 6.5,
+        "players": 6,
+        "initialDepthBB": 100,
+        "scope": "selected responder facing an open, before making a 3bet; not opener facing a 3bet",
+        "availableActionsAtSelectedSeat": [
+          "fold",
+          "raise",
+          "allin"
+        ],
+        "visualStatus": "header_and_grid_viewed",
+        "stakeAndRake": null,
+        "frequencies": "not_digitized"
+      }
+    }
+  ],
+  "embeddedBinaryParts": [],
+  "importerLimit": "Artifact Tool import found two sheets and DISPIMG formulas, but its drawing inspect returned no records. Original ZIP holds ten WPS cell images. No-drawing API output is not absence of images.",
+  "roundingRuleEvidence": {
+    "cells": [
+      {
+        "sheet": "翻前GTO",
+        "cell": "H1"
+      },
+      {
+        "sheet": "3bet",
+        "cell": "K1"
+      }
+    ],
+    "text": "0–24% → 0%; 25–74% → 50%; 75–100% → 100%",
+    "scope": "This early workbook states a many-to-one rounding rule. It cannot recover original frequencies and does not prove another workbook uses identical source ranges or rules."
+  },
+  "conclusion": {
+    "earlyRfiNotesPresent": true,
+    "rangeImagesRecovered": 10,
+    "headersConfirmResponseToOpen": 9,
+    "croppedImageContext": "worksheet_assignment_only",
+    "completeOpenerCallVs3betPolicy": "not_recovered_from_this_audit",
+    "notClaimed": "No per-combo caller frequencies inferred, no whole original course validated, no new training scope or application changes."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "engineRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "c0_root_and_representative_history_adapter_verified_reload_and_serialization_pending",
+  "targetRoot": {
+    "actions": [
+      "Check",
+      "Bet(182)",
+      "AllIn(9750)"
+    ],
+    "actualAmountUnits": "integer chips; 182 is the constructed 33% pot amount from a 550-chip pot",
+    "automaticMergeDisabled": true
+  },
+  "representativeHistory": {
+    "rootActions": "[Check, Bet(182), AllIn(9750)]",
+    "afterCheckBet": "[Fold, Call, Raise(455), AllIn(9750)]",
+    "afterRaise": "[Fold, Call, Raise(1138), AllIn(9750)]",
+    "evOracles": [
+      "win",
+      "lose",
+      "tie"
+    ]
+  },
+  "historyProbe": {
+    "exampleSha256": "37BB24F0ADA554712623E5100AD29A38E120B75ABA4C2C576421C13681804074",
+    "solverMemoryAllocated": false,
+    "memoryUsageBytes": {
+      "uncompressed": 10174073380,
+      "compressed": 5189681440
+    }
+  },
+  "releaseBlockers": [
+    "目标求解器输入尚未完成同输入重载哈希证明",
+    "C2逐组合策略尚未取得"
+  ],
+  "licenseDecision": "distribution_boundary_fixed_solver_runtime_not_in_current_exe"
+}

@@ -1,0 +1,87 @@
+{
+  "status": "paper_trial_prompt_sequence_not_administered",
+  "question": {
+    "id": "MX0020",
+    "context": {
+      "players": 6,
+      "activeSeats": [
+        "BTN",
+        "BB"
+      ],
+      "initialEffectiveBB": 100,
+      "anteBB": 0,
+      "street": "flop",
+      "potType": "single_raised",
+      "openToBB": 2.5,
+      "heroSeat": "BTN",
+      "villainSeat": "BB",
+      "preflop": "UTG/HJ/CO fold; BTN open to2.5; SB fold; BB call",
+      "observedFlopAction": "BB check",
+      "actor": "BTN",
+      "toCallBB": 0,
+      "money": {
+        "potBB": 5.5,
+        "heroStackBB": 97.5,
+        "villainStackBB": 97.5,
+        "foldedStacksBB": 399.5
+      },
+      "sourceDepth": "The cited2.1 paragraph does not specify a full solver configuration;6max/100BB are declared training conditions, not recovered solver metadata."
+    },
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "hole": [
+      "Qc",
+      "Kc"
+    ],
+    "reference": "采用前面学过的基础简化",
+    "options": [
+      "过牌",
+      "下注",
+      "我不知道"
+    ]
+  },
+  "onWrong": {
+    "feedback": "这题按基础简化过牌。现在最佳五张是A、K、Q、7、2，属于A高；K是随后比较的踢脚。",
+    "actions": [
+      "下一题",
+      "看不懂，拆一步"
+    ]
+  },
+  "optionalHelp": {
+    "firstTask": "点出当前五张中最大的点数。再指出这手是否成对。",
+    "alternativePreview": {
+      "board": [
+        "As",
+        "Kh",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ],
+      "task": "换一个翻牌比较：这时是否配到一对？"
+    },
+    "closeLabel": "回到刚才那题"
+  },
+  "nextQuestion": {
+    "id": "MX0004",
+    "board": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "hole": [
+      "3c",
+      "Qc"
+    ],
+    "label": "下一道独立练习",
+    "options": [
+      "过牌",
+      "下注",
+      "我不知道"
+    ]
+  }
+}

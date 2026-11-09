@@ -1,0 +1,194 @@
+{
+  "id": "A72_C0_C5_REFERENCE_CONTRACT_V1",
+  "status": "prepared_inputs_C0_source_build_root_menu_verified_C1_independent_fact_snapshot_verified_C2_C5_reference_missing",
+  "candidateRequest": "reference-request-btn-bb-a72.json",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "gates": [
+    {
+      "id": "C0",
+      "name": "configuration_identity_freeze",
+      "status": "source_build_verified_root_menu_probe_adapter_pending",
+      "evidence": [
+        "reference-request-btn-bb-a72.json",
+        "a72-c0-source-build-audit.json"
+      ],
+      "requiredFields": [
+        "candidateId",
+        "sourceHash",
+        "engineRevision",
+        "rakeIdentity",
+        "positions",
+        "board",
+        "pot",
+        "stacks",
+        "actionMenu",
+        "inputFingerprint"
+      ],
+      "currentMissing": [
+        "history_action_adapter_runtime_probe",
+        "solved_game_reload_same_input_hash",
+        "serialized_reference_identity"
+      ],
+      "stopIf": [
+        "sourceHashChanged",
+        "configurationChanged",
+        "engineUnpinned",
+        "adapterMergesActions"
+      ],
+      "opens": false
+    },
+    {
+      "id": "C1",
+      "name": "preflop_snapshot_and_physical_filter",
+      "status": "independent_fact_ready_verified",
+      "evidence": [
+        "reference-request-btn-bb-a72.json",
+        "a72-c1-independent-physical-snapshot.json"
+      ],
+      "requiredFields": [
+        "orderedEntityHands",
+        "classWeights",
+        "knownCardFilter",
+        "distinctPrivateCardFilter",
+        "jointPrior",
+        "coordinateIdentity"
+      ],
+      "currentFact": {
+        "compatiblePairs": 164251,
+        "unnormalizedMass": 124335.25
+      },
+      "currentMissing": [
+        "engine_reload_match"
+      ],
+      "stopIf": [
+        "duplicatePrivateCards",
+        "classEntityMismatch",
+        "physicalFilterLabeledAsActionFilter",
+        "preflopWeightLabeledAsPostflopPolicy"
+      ],
+      "opens": false
+    },
+    {
+      "id": "C2",
+      "name": "flop_reference_policy",
+      "status": "reference_missing",
+      "evidence": [
+        "flop-tree-preflight.json",
+        "flop-tree-preflight-verification.json"
+      ],
+      "requiredFields": [
+        "actualLegalActions",
+        "perHandActionFrequency",
+        "perActionEV",
+        "bothPlayerReachWeights",
+        "convergenceMetric",
+        "stoppingReason",
+        "successorIndex",
+        "zeroReachNodes"
+      ],
+      "currentEvidenceIs": "tree_built_and_memory_estimated_not_solved",
+      "stopIf": [
+        "noPerHandPolicy",
+        "noAmounts",
+        "noReachWeights",
+        "noConvergenceDefinition",
+        "treeMismatch"
+      ],
+      "opens": false
+    },
+    {
+      "id": "C3",
+      "name": "action_conditioned_range_update",
+      "status": "reference_missing",
+      "evidence": [
+        "static-course-package-contract.json",
+        "61_视觉导航与范围图语义统一合同.md"
+      ],
+      "requiredFields": [
+        "rangeBefore",
+        "rangeAfterByAction",
+        "normalizationDenominator",
+        "physicalFilter",
+        "actionFilter",
+        "zeroSupportHands",
+        "parentSnapshot"
+      ],
+      "currentEvidenceIs": "contract_only",
+      "stopIf": [
+        "noPerHandFrequency",
+        "undeclaredDenominator",
+        "sameViewForDifferentActions",
+        "staticOverallFrequencyOnly"
+      ],
+      "opens": false
+    },
+    {
+      "id": "C4",
+      "name": "turn_successor_closure",
+      "status": "reference_missing",
+      "evidence": [
+        "57_逐街角色与行动分支完整覆盖矩阵.md",
+        "flop-tree-preflight.json"
+      ],
+      "requiredFields": [
+        "parentNode",
+        "legalTurnCards",
+        "conditionalCardDenominator",
+        "rangeSnapshot",
+        "actualTurnActions",
+        "turnPolicy",
+        "successorIndex"
+      ],
+      "currentEvidenceIs": "physical_turn_structure_only",
+      "stopIf": [
+        "parentUnresolved",
+        "wrongCardDenominator",
+        "missingSuccessor",
+        "rankOnlyCardIdentity"
+      ],
+      "opens": false
+    },
+    {
+      "id": "C5",
+      "name": "river_terminal_and_ledger_closure",
+      "status": "reference_missing",
+      "evidence": [
+        "64_静态课包文件格式与发布清单.md"
+      ],
+      "requiredFields": [
+        "riverPolicy",
+        "terminalActions",
+        "boardAndHoleCards",
+        "actionLedger",
+        "potStackConservation",
+        "showdownResult",
+        "referenceIdentity",
+        "terminalSuccessor"
+      ],
+      "currentEvidenceIs": "ledger_contract_only",
+      "stopIf": [
+        "noTerminalPolicy",
+        "ledgerFailure",
+        "hiddenInformationDependency",
+        "resultUsedToInferAction"
+      ],
+      "opens": false
+    }
+  ],
+  "releaseRules": {
+    "noExactStrategyBeforeC2": true,
+    "noRangeUpdateLessonBeforeC3": true,
+    "noContinuousThreeStreetLessonBeforeC5": true,
+    "missingSuccessorBlocksExactLesson": true,
+    "factDoesNotImplyStrategy": true,
+    "coursePackageRequiresC0ToC9": true
+  },
+  "nextActions": [
+    "pin_and_build_candidate_engine",
+    "test_action_adapter_against_requested_tree",
+    "independently_recompute_C1_snapshot",
+    "solve_A72_or_record_resource_block",
+    "export_raw_policy_before_course_simplification"
+  ]
+}

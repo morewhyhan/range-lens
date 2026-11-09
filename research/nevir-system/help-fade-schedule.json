@@ -1,0 +1,22 @@
+{
+  "id":"HELP_FADE_SCHEDULE_V1",
+  "status":"paper_help_fade_contract_not_trialed",
+  "levels":[
+    {"id":"H0","label":"完整引导","visible":["stepName","highlightedField","oneContrast","childButton"],"pass":"assisted_current_parent_completion","next":"H1"},
+    {"id":"H1","label":"关系提示","visible":["stepName","requiredInputs","oneContrast"],"pass":"names_one_changed_field","next":"H2"},
+    {"id":"H2","label":"结构提示","visible":["board","history","money","legalActions"],"pass":"finds_current_layer_and_next_layer","next":"H3"},
+    {"id":"H3","label":"单变量迁移","visible":["same_parent_with_one_changed_field"],"pass":"completes_unseen_single_step","next":"H4"},
+    {"id":"H4","label":"延迟回忆","visible":["unseen_state_without_step_name"],"pass":"recalls_order_layer_and_return_point","next":"H5"},
+    {"id":"H5","label":"连续执行","visible":["new_hand_and_error_only_help"],"pass":"updates_ledger_range_successor_and_settlement","next":"independent_assessment"}
+  ],
+  "representativeSchedule":{
+    "REP_1_5":["H0","H1","H2","H3"],
+    "REP_2_1":["H0","H1","H2","H3"],
+    "REP_3_1":["H0","H1","H2","H3"],
+    "REP_4_5":["H0","H1","H2","H3"],
+    "REP_5_7":["H0","H1","H2","H3"]
+  },
+  "rollback":{"sameParentFrame":true,"restoreOnePreviousHelpLevel":true,"preserveFirstAnswer":true,"secondFailureOpensFactChild":true,"missingReferenceDowngradesIdentity":true},
+  "rules":{"noSpeedThreshold":true,"sameQuestionRetryIsNotIndependent":true,"singleVariableTransferRequired":true,"delayedRecallRequiredBeforeContinuous":true,"H5DoesNotProveNL50":true,"sessionOnlyState":true},
+  "currentStatus":{"levelsWritten":true,"runtimeImplemented":false,"beginnerTrial":false,"unseenTransferVerified":false,"continuousTrial":false,"NL50Evidence":false}
+}

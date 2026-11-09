@@ -1,0 +1,64 @@
+{
+  "id": "A72_FIRST_REFERENCE_SLICE_COMPILATION_V1",
+  "status": "first_slice_contract_written_solver_subtree_capability_unverified",
+  "parentCandidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "targetIdentity": {
+    "table": "six_max_cash",
+    "startingStackBB": 100,
+    "preflop": "BTN_open_2.5BB_BB_call",
+    "board": ["As", "7h", "2d"],
+    "oop": "BB",
+    "ip": "BTN",
+    "firstActor": "BB",
+    "potBB": 5.5,
+    "effectiveStackBB": 97.5,
+    "rake": 0,
+    "bunching": false,
+    "actionTree": {
+      "flop": ["check", "bet_33pct_pot", "all_in"],
+      "turn": ["check", "bet_75pct_pot", "all_in"],
+      "river": ["check", "bet_75pct_pot", "all_in"],
+      "facingBet": ["fold", "call", "raise_2_5x", "all_in"]
+    }
+  },
+  "engineSnapshot": {
+    "repo": "b-inary/postflop-solver",
+    "commit": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "license": "AGPL-3.0-or-later",
+    "subtreeCapability": "unverified",
+    "targetStorageModeIsNotSolveBoundary": true,
+    "actionIndexAloneIsInsufficient": true
+  },
+  "executionPaths": [
+    {"id":"A_full_target_tree","identity":"same_A72_full_tree","release":"T3_when_C0_C5_pass","allowed":true},
+    {"id":"B_verified_parent_slice","identity":"same_A72_input_verified_subtree_boundary","release":"T1_or_T2_with_boundary","allowed":"only_if_subtreeCapability_verified_exact"},
+    {"id":"C_resource_or_capability_block","identity":"fact_or_demonstration_only","release":"T0","allowed":true}
+  ],
+  "c0Outputs": ["candidateId","inputFingerprint","solverCommit","adapterRevision","licenseIdentity","treeConfigHash","cardConfigHash","actualActionIdsAndAmounts","subtreeCapability","storageCapability"],
+  "c1Outputs": ["orderedPrivateHands","classWeight","entityWeight","knownCardMask","jointCompatiblePairs","jointPriorMass","fixedDenominator","coordinateIdentity","parentSnapshotHash"],
+  "sliceRequiredFields": ["sliceId","parentNodeId","solveBoundary","parentSnapshotHash","sameInputFingerprint","sameActionIdsAndAmounts","perHandStrategy","perActionEV","reachWeight","rangeBefore","rangeAfterByAction","successorIdsWithinBoundary","boundaryStopReason","resourceUsage","artifactHash"],
+  "compilerOrder": ["preserveRawActionMenu","restorePrivateCardIndex","computeRangeBeforeAfter","separatePhysicalAndActionFilters","compileCoursePolicy","writeDifferenceLedger","closeSuccessorsOrStop","compileNestedLesson","compileHoldout"],
+  "releaseRules": {
+    "targetStorageModeDoesNotProveSubtreeSolve": true,
+    "changedActionTreeCreatesNewCandidate": true,
+    "missingSubtreeProofStopsT1": true,
+    "missingC2BlocksExactActionGrading": true,
+    "missingC3BlocksRangeChangeLesson": true,
+    "missingSuccessorBlocksContinuousLesson": true,
+    "resourceBlockDoesNotBecomePartialGTO": true,
+    "noNL50ClaimFromT1OrT2": true
+  },
+  "currentEvidence": {
+    "targetIdentityFrozen": true,
+    "c0InputPrepared": true,
+    "c1IndependentSnapshot": false,
+    "subtreeCapabilityVerified": false,
+    "fullTargetSolveStarted": false,
+    "t1SliceReference": false,
+    "t2SuccessorReference": false,
+    "t3CompleteA72": false,
+    "courseCompilerImplemented": false,
+    "learnerTrial": false,
+    "nl50Evidence": false
+  }
+}

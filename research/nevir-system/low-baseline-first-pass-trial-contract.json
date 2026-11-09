@@ -1,0 +1,54 @@
+{
+  "id": "LOW_BASELINE_FIRST_PASS_TRIAL_CONTRACT_V1",
+  "status": "declarative_trial_protocol_not_administered",
+  "audience": {
+    "adultLowBaseline": true,
+    "ageLabelIsNotEvidence": true,
+    "speedNotMeasured": true,
+    "noCountdown": true
+  },
+  "segments": [
+    {"id":"A","name":"initial_location","task":"state_table_goal_current_task"},
+    {"id":"B","name":"first_pass_route","task":"follow_L0_to_L8_and_p1_to_p7"},
+    {"id":"C","name":"error_recovery","task":"retry_same_parent_after_feedback"},
+    {"id":"D","name":"order_recall","task":"restore_shuffled_seven_steps"},
+    {"id":"E","name":"layer_location","task":"choose_next_layer_on_unseen_case"},
+    {"id":"F","name":"one_variable_transfer","task":"identify_changed_field_and_return_layer"}
+  ],
+  "recordFields": [
+    "sessionVersion","routeNode","firstAnswer","helpLevelUsed","retryAnswer",
+    "errorLayer","returnTo","neededPrompt","enteredWrongChild","structureRecall",
+    "layerLocation","errorRecovery","oneVariableTransfer","stopReason"
+  ],
+  "independentEvidence": {
+    "firstAnswerPreserved": true,
+    "assistedRetrySeparated": true,
+    "unseenStructureChecks": true,
+    "designerWalkthroughInsufficient": true,
+    "repeatedPromptIsNotIndependent": true
+  },
+  "passBehaviors": ["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "stopConditions": [
+    "direct_action_guessing_before_state",
+    "host_fills_answer",
+    "wrong_route_without_parent",
+    "multiple_questions_on_one_screen",
+    "multi_variable_transfer",
+    "answer_requires_hidden_input",
+    "unverified_exact_frequency",
+    "repeated_or_demo_only_task"
+  ],
+  "privacyAndStorage": {
+    "noLearnerDatabase": true,
+    "sessionOnlyState": true,
+    "externalObservationLogAllowed": true,
+    "externalLogDoesNotAlterCourse": true
+  },
+  "currentStatus": {
+    "protocolWritten": true,
+    "participantsObserved": false,
+    "routeReadabilityVerified": false,
+    "unseenTransferVerified": false,
+    "NL50Evidence": false
+  }
+}

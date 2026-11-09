@@ -1,0 +1,28 @@
+{
+  "id": "FIRST_PASS_COPY_DECK_V1",
+  "status": "paper_copy_contract_not_trialed",
+  "languageLayers": ["生活语言","练习语言","技术别名"],
+  "steps": [
+    {"id":"p1_context","title":"先看现在发生什么","question":"现在轮到谁？前面发生了什么？如果继续，要补多少钱？","success":"对。先把人、动作和钱摆清楚，下一步才有意义。","wrong":"先别猜按钮。你漏看了行动顺序、前面的动作或还要补的钱。","unknown":"按不知道处理。打开行动线和账本，再在同一局面回答。","childLabels":["看行动顺序","看钱怎样变化"],"returnTo":"read"},
+    {"id":"p2_board","title":"再看我的牌","question":"我用这几张牌组成的最好五张是什么？还可能改善成什么？","success":"对。先确认牌力和改善牌，暂时不要从牌型直接猜下注。","wrong":"你把牌面关系、最佳五张或改善牌看错了。先回到实体牌。","unknown":"按不知道处理。逐张点牌，系统只展示最佳五张和合法改善牌。","childLabels":["拼最佳五张","练牌力顺序"],"returnTo":"read"},
+    {"id":"p3_range","title":"看双方可能拿什么","question":"这次已知的牌和前面的动作，让哪些组合不可能、变少或留下？","success":"对。你指出的是实际组合的变化；这还不是下注答案。","wrong":"你把“牌不可能”和“动作后变少”混在一起了。看两张同坐标图。","unknown":"按不知道处理。先点一组真实组合，再看它为什么被划掉或变淡。","childLabels":["看前后范围","看一组组合"],"returnTo":"read"},
+    {"id":"p4_compare","title":"比较现在能做的事","question":"在这些合法选择和当前价格下，哪一个动作符合本题的课程规则？","success":"对。你是在比较动作的目的、价格和后续，不是只看牌名。","wrong":"先回到价格、范围或后续中的缺失一层，再重新比较。","unknown":"按不知道处理。只保留当前两个合法选择，打开它们各自的后续。","childLabels":["比较过牌和下注","比较跟、弃、加"],"returnTo":"compare"},
+    {"id":"p5_execute","title":"把动作做完整","question":"点哪个按钮？投入多少？行动接下来给谁？","success":"对。动作、金额和行动权都对上了，账本没有跳步。","wrong":"动作想对了，但金额、合法性或行动顺序没有对上。","unknown":"按不知道处理。先只看合法按钮和待补金额。","childLabels":["看金额怎样算"],"returnTo":"execute"},
+    {"id":"p6_update","title":"动作或新牌后重新看","question":"这次回应或新牌，具体改变了什么？","success":"对。你保留了前面的信息，只更新发生变化的那一项。","wrong":"不要把整手牌重置。回到动作前的范围、钱和行动者，只改这一项。","unknown":"按不知道处理。先打开行动前后对照，或只看新牌造成的变化。","childLabels":["看回应怎样筛选范围","看新牌怎样改变组合"],"returnTo":"update"},
+    {"id":"p7_close","title":"结算并找错层","question":"最后发生了什么？如果错了，错在状态、牌面、范围、价格、动作、账本还是更新？","success":"对。结果只是结果；我们先回看当时能看到的依据。","wrong":"不要用这次输赢倒推上一步。先定位哪一层缺了。","unknown":"按不知道处理。并排看决策前信息、结果和错误层。","childLabels":["回看这层","做一题只改一个因素的题"],"returnTo":"update"}
+  ],
+  "visualBinding":{"impossible":"crossed_combo","lower_but_possible":"same_coordinate_nonzero","price":"to_call_and_pot","action_filter":"before_after_range","new_card":"one_field_highlight","error":"layer_and_return_point"},
+  "architectureMicrocopy":[
+    {"id":"A1","parent":"p1_context","show":"桌面、行动线、底池和待补","learnerAction":"先指出谁行动、前面发生什么、还要补多少","handoff":"contextFrame","plainTerm":"现在发生什么","technicalTerm":"state_and_history"},
+    {"id":"A2","parent":"p2_board","show":"公共牌和街次","learnerAction":"说出牌面带来的顺子、同花和成牌关系","handoff":"boardRelations","plainTerm":"公共牌改变了什么","technicalTerm":"board_texture"},
+    {"id":"A3","parent":"p2_board","show":"自己的两张牌和最佳五张轮廓","learnerAction":"拼出当前最好五张，再指出合法改善牌","handoff":"bestFive_and_improvements","plainTerm":"我的牌现在多大","technicalTerm":"hand_class_and_draws"},
+    {"id":"A4","parent":"p3_range","show":"同一坐标的行动前后范围图","learnerAction":"区分不可能、变少但仍可能和课程未开放","handoff":"rangeAfter_and_denominator","plainTerm":"对手还可能拿什么","technicalTerm":"physical_and_action_filter"},
+    {"id":"A5","parent":"p4_compare","show":"题面允许的按钮、价格和后续摘要","learnerAction":"只比较当前合法动作，不从牌名直接猜","handoff":"courseDecision_and_policyIdentity","plainTerm":"现在比较什么","technicalTerm":"action_policy_comparison"},
+    {"id":"A6","parent":"p5_execute","show":"动作按钮、金额、行动权","learnerAction":"完成一次合法动作并核对账本","handoff":"potAfter_stackAfter_nextActor","plainTerm":"把动作做完整","technicalTerm":"ledger_transition"},
+    {"id":"A7","parent":"p6_update","show":"回应或新牌造成的一处变化","learnerAction":"只更新改变的字段，保留其它状态","handoff":"changedField_and_successor","plainTerm":"这次具体变了什么","technicalTerm":"state_delta"},
+    {"id":"A8","parent":"p7_close","show":"结果、决策依据和返回点","learnerAction":"定位错误层并选一处单变量迁移","handoff":"nextPractice_and_errorLayer","plainTerm":"最后怎么收束","technicalTerm":"settlement_and_transfer"}
+  ],
+  "forbiddenPrimaryTerms":["EV","frequency","range advantage","nut advantage","blocker","backdoor","GTO"],
+  "rules":{"oneQuestion":true,"onePrimaryAction":true,"feedbackNamesLayer":true,"childReturnsToParent":true,"copyMatchesEvidenceIdentity":true,"singleVariableTransferRequired":true,"microcopyMustNameShowActionHandoff":true,"p2CanNestBoardThenHand":true},
+  "currentStatus":{"paperContract":true,"runtimeImplemented":false,"beginnerTrial":false,"unseenTransferVerified":false}
+}

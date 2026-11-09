@@ -1,0 +1,1928 @@
+{
+  "note": "只读来源与当前导入字段审计；字段缺失不等于原始笔记没有相关文字。不是重新求解或新增战略答案。",
+  "sources": [
+    {
+      "name": "2.1- 翻后策略导论_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+      "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125",
+      "lines": 49,
+      "sections": [
+        {
+          "title": "3.1 学习GTO的常见错误与正确目标",
+          "startLine": 6,
+          "endLine": 9
+        },
+        {
+          "title": "3.2 第一个错误：试图记忆所有频率和组合",
+          "startLine": 10,
+          "endLine": 13
+        },
+        {
+          "title": "3.3 在T85彩虹面简化组合选择",
+          "startLine": 14,
+          "endLine": 21
+        },
+        {
+          "title": "3.4 第二个错误：只关注自己策略，忽略对手策略",
+          "startLine": 22,
+          "endLine": 26
+        },
+        {
+          "title": "3.5 第二个例子：J95有同花听牌面",
+          "startLine": 27,
+          "endLine": 34
+        },
+        {
+          "title": "3.6 第三个例子：A72彩虹面",
+          "startLine": 35,
+          "endLine": 42
+        }
+      ]
+    },
+    {
+      "name": "2.2-有利位置3bet底池—第一部分_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+      "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e",
+      "lines": 50,
+      "sections": [
+        {
+          "title": "3.1 常见错误一：在所有牌面上都使用小尺寸范围下注",
+          "startLine": 6,
+          "endLine": 9
+        },
+        {
+          "title": "3.2 常见错误二：在湿润牌面上大下注，在干燥牌面上小下注",
+          "startLine": 10,
+          "endLine": 12
+        },
+        {
+          "title": "3.3 下注尺寸选择：高牌面（K高、Q高、J高）",
+          "startLine": 13,
+          "endLine": 18
+        },
+        {
+          "title": "3.4 下注尺寸选择：10高牌面",
+          "startLine": 19,
+          "endLine": 21
+        },
+        {
+          "title": "3.5 下注尺寸选择：低连接干燥牌面",
+          "startLine": 22,
+          "endLine": 25
+        },
+        {
+          "title": "3.6 下注尺寸选择：低连接湿润牌面",
+          "startLine": 26,
+          "endLine": 28
+        },
+        {
+          "title": "3.7 两个关键问题帮你确定最佳下注尺寸",
+          "startLine": 29,
+          "endLine": 36
+        },
+        {
+          "title": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+          "startLine": 37,
+          "endLine": 46
+        }
+      ]
+    },
+    {
+      "name": "2.3-有利位置3bet底池—第二部分_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.3-有利位置3bet底池—第二部分_中文笔记.md",
+      "sha256": "70f3d6795902d64bd1859cf7ed1164bae467b4c0c43accdd9a6cbc0af41c4368",
+      "lines": 28,
+      "sections": [
+        {
+          "title": "3.1 人群统计数据揭示的错误模式",
+          "startLine": 6,
+          "endLine": 10
+        },
+        {
+          "title": "3.2 利用GTO Wizard制定剥削策略",
+          "startLine": 11,
+          "endLine": 14
+        },
+        {
+          "title": "3.3 具体翻牌结构示例一：8-3-2彩虹面",
+          "startLine": 15,
+          "endLine": 16
+        },
+        {
+          "title": "3.4 具体翻牌结构示例二：9-7-3彩虹面",
+          "startLine": 17,
+          "endLine": 18
+        },
+        {
+          "title": "3.5 关于小尺寸持续下注的翻牌",
+          "startLine": 19,
+          "endLine": 21
+        },
+        {
+          "title": "3.6 示例三：J-9-7带同花听牌面",
+          "startLine": 22,
+          "endLine": 23
+        },
+        {
+          "title": "3.7 总结思路与后续预告",
+          "startLine": 24,
+          "endLine": 26
+        }
+      ]
+    },
+    {
+      "name": "2.4-3bet底池的转牌_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+      "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845",
+      "lines": 51,
+      "sections": [
+        {
+          "title": "翻牌范围下注带来的问题",
+          "startLine": 7,
+          "endLine": 11
+        },
+        {
+          "title": "理论上的转牌策略（三个推论）",
+          "startLine": 12,
+          "endLine": 18
+        },
+        {
+          "title": "实际对手行为与调整（Mopius Poker数据）",
+          "startLine": 19,
+          "endLine": 24
+        },
+        {
+          "title": "翻牌1/3下注后的转牌策略",
+          "startLine": 25,
+          "endLine": 33
+        },
+        {
+          "title": "翻牌大尺寸下注后的转牌策略",
+          "startLine": 34,
+          "endLine": 40
+        },
+        {
+          "title": "简化策略与最后建议",
+          "startLine": 41,
+          "endLine": 46
+        }
+      ]
+    },
+    {
+      "name": "2.5-不利位置3bet底池_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+      "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310",
+      "lines": 36,
+      "sections": [
+        {
+          "title": "3.1 常见错误：不利位置沿用有利位置的下注尺寸",
+          "startLine": 7,
+          "endLine": 10
+        },
+        {
+          "title": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+          "startLine": 11,
+          "endLine": 14
+        },
+        {
+          "title": "3.3 按钮位置对小盲过牌-加注的具体反应",
+          "startLine": 15,
+          "endLine": 18
+        },
+        {
+          "title": "3.4 实例分析：翻牌10-8-3彩虹",
+          "startLine": 19,
+          "endLine": 22
+        },
+        {
+          "title": "3.5 翻牌过牌-过牌后的转牌策略",
+          "startLine": 23,
+          "endLine": 26
+        },
+        {
+          "title": "3.6 其他牌面实例：9-5-2带听花",
+          "startLine": 27,
+          "endLine": 28
+        },
+        {
+          "title": "3.7 牌面J-9-4彩虹的意外结果",
+          "startLine": 29,
+          "endLine": 30
+        },
+        {
+          "title": "3.8 整体策略总结",
+          "startLine": 31,
+          "endLine": 32
+        }
+      ]
+    },
+    {
+      "name": "2.6-有利位置单次加注底池_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.6-有利位置单次加注底池_中文笔记.md",
+      "sha256": "9e7718aa34caf9c2db3fbbf70eb0dd31cbadf55809176f46dfc09baf68b71680",
+      "lines": 90,
+      "sections": [
+        {
+          "title": "3.1 单次加注底池的复杂性与简化的重要性",
+          "startLine": 8,
+          "endLine": 11
+        },
+        {
+          "title": "3.2 案例研究：A-K-2彩虹面（按钮位 vs 大盲注）",
+          "startLine": 12,
+          "endLine": 18
+        },
+        {
+          "title": "3.3 替代策略：使用小额下注（25%底池）",
+          "startLine": 19,
+          "endLine": 27
+        },
+        {
+          "title": "3.4 简化策略的核心思想：每张翻牌只用一个尺度",
+          "startLine": 28,
+          "endLine": 39
+        },
+        {
+          "title": "3.5 简化三大下注尺度及牌面分类",
+          "startLine": 40,
+          "endLine": 44
+        },
+        {
+          "title": "3.6 不同翻牌结构的典型下注策略与原因",
+          "startLine": 45,
+          "endLine": 52
+        },
+        {
+          "title": "3.7 下注尺度本身不重要，理解其目的才重要",
+          "startLine": 53,
+          "endLine": 56
+        },
+        {
+          "title": "3.8 利用对手数据制定剥削策略（翻牌圈统计数据）",
+          "startLine": 57,
+          "endLine": 67
+        },
+        {
+          "title": "3.9 冰球原理（Ice Skating Concept）",
+          "startLine": 68,
+          "endLine": 86
+        }
+      ]
+    },
+    {
+      "name": "2.7-不利位置单次加注底池_中文笔记.md",
+      "path": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+      "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d",
+      "lines": 51,
+      "sections": [
+        {
+          "title": "3.1 不利位置单次加注底池的挑战",
+          "startLine": 7,
+          "endLine": 11
+        },
+        {
+          "title": "3.2 GTO翻牌报告分析",
+          "startLine": 12,
+          "endLine": 16
+        },
+        {
+          "title": "3.3 对手对c-bet和过牌加注的倾向",
+          "startLine": 17,
+          "endLine": 21
+        },
+        {
+          "title": "3.4 针对紧弱玩家和鱼的剥削策略",
+          "startLine": 22,
+          "endLine": 25
+        },
+        {
+          "title": "3.5 针对常规玩家的剥削策略",
+          "startLine": 26,
+          "endLine": 30
+        },
+        {
+          "title": "3.6 翻牌过牌后的转牌和河牌线路",
+          "startLine": 31,
+          "endLine": 35
+        },
+        {
+          "title": "3.7 对抗按钮位跟注的特殊情况",
+          "startLine": 36,
+          "endLine": 38
+        },
+        {
+          "title": "3.8 整体策略执行建议",
+          "startLine": 39,
+          "endLine": 43
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "sourceFiles": 7,
+    "sections": 52,
+    "comparisonBranches": 13,
+    "strategyNodes": 58,
+    "pending": [
+      "O01",
+      "O02",
+      "S06",
+      "P01",
+      "P07"
+    ],
+    "sourceKinds": {
+      "课程": 24,
+      "条件剥削": 12,
+      "教学归纳": 12,
+      "资料待补": 5,
+      "原理补充": 5
+    },
+    "typedFlopHandExamples": [
+      {
+        "id": "I11",
+        "count": 4
+      },
+      {
+        "id": "S04",
+        "count": 1
+      },
+      {
+        "id": "S05",
+        "count": 5
+      },
+      {
+        "id": "S07",
+        "count": 2
+      },
+      {
+        "id": "S08",
+        "count": 3
+      },
+      {
+        "id": "S09",
+        "count": 2
+      }
+    ]
+  },
+  "comparisonBranches": [
+    {
+      "id": "D01",
+      "title": "单A → A带K",
+      "text": "同是KQ：上图只有K高；下图已配到K，变成第二对。你的AK也从顶对变成两对。换掉一张7，改变的是双方整批手牌的强弱，不只是牌面名字。",
+      "reason": "IP 3bet：课程AK2偏小注高频；A72只在后街例中给过B33前序。可以理解为“小注路线均有依据”，不能推成两面所有牌都相同频率。IP SRP的A72还明确区分KQ过牌、部分弱高张/好后门下注。\n\n依据：S1 §3.6；S3 §3.5；S4小注前序",
+      "source": "牌面分支与原因 · D15 / E15"
+    },
+    {
+      "id": "D02",
+      "title": "小牌分散 → 低牌连上",
+      "text": "32在上图只是配到2；在下图用A作1，已拼成A2345。A98也要单独查连接：JT可听7或Q成顺。因此“有A”不能自动消除对手的低牌威胁。",
+      "reason": "先检查对手翻前会不会带着32s/JTs进来：BB宽跟注与3bet跟注不是一回事。合理推导是重新筛选下注牌，别照抄AK2全范围小注；A54/A98的具体尺寸和频率，课程未给，不填确定值。\n\n依据：由S2 §3.6–3.7、S6低连原理推导；非原求解节点",
+      "source": "牌面分支与原因 · D16 / E16"
+    },
+    {
+      "id": "D03",
+      "title": "K高 → Q高",
+      "text": "同样AK：K52上是顶对强踢脚，Q52上只有A高。AQ则恰好相反。对手会用什么跟、你有多少能收价值的牌，都会变化。“K/Q高”不能直接合成一条固定指令。",
+      "reason": "IP 3bet：K52原例B25高频；笔记对Q5类给B40并保留更多X。Q52是为讲区别而补的图，不是完整已求解节点。到OOP 3bet还需换表：课程K高40–67%、Q高50–67%。\n\n依据：S2 §3.3；S5 §3.1",
+      "source": "牌面分支与原因 · D19 / E19"
+    },
+    {
+      "id": "D04",
+      "title": "一张高牌 → 高牌连张",
+      "text": "AT由A高变成TJQKA顺子；对手的QJ也会从未配对变成两对。AA仍是超对，却更不能只凭“我有AA”就认定大注被跟很舒服。",
+      "reason": "课程这两例都用B25，但理由有区别：K52可让中等牌参与小注；KQJ的小注避免只留下更强的成牌/听牌。相同动作不代表同一强弱结构。QT5tt则另查具体底池，不能从KQJ推出所有高牌连面都25%。\n\n依据：S2 §3.3、3.7–3.8",
+      "source": "牌面分支与原因 · D20 / E20"
+    },
+    {
+      "id": "D05",
+      "title": "彩虹 → 两同花",
+      "text": "上图AQ黑桃合计只有3张黑桃，要连来两张才成花；下图合计4张，下一张黑桃就成花。对手多了可继续的直接听花组合，大注不一定能把这些牌赶走。",
+      "reason": "在课程IP 3bet节点：T72r用B67，T72tt降到B40。含义是重新选择愿意让哪些牌继续，不能简化成“有听花就加大保护”。这是尺寸变化；下注多少手牌，要另外看频率和对手反应。\n\n依据：S2 §3.4、3.7",
+      "source": "牌面分支与原因 · D23 / E23"
+    },
+    {
+      "id": "D06",
+      "title": "T72 → T82",
+      "text": "上图J9只能靠8补成789TJ；下图已有8、9、T、J，来7或Q都能成顺。由一个点数可补顺，变成两个点数。T72本来也有98两头听；区别不是“有没有听牌”，而是哪些组合的听牌更强。",
+      "reason": "课程IP 3bet：T72r用B67 → T82r用B40。大注被跟后，更容易撞上还能反超你的组合。于是尺寸下调。不要把“间隔小一格”机械变成所有局面的40%公式。\n\n依据：S2 §3.4、3.7；J9为解释性配牌",
+      "source": "牌面分支与原因 · D24 / E24"
+    },
+    {
+      "id": "D07",
+      "title": "有顺听 → 已能成顺",
+      "text": "QJ在T82是两张高牌＋卡顺，来9才成顺；T98上已经是89TJQ顺子。J7也能成顺，76也能成顺。不能把两个牌面都只写成“有点连接”。",
+      "reason": "课程IP 3bet：T82r的B40 → T98的B25。重点是强牌上限和继续范围发生变化。你拿AA也不能按T72的强超对模板盲目打大；但小注方向本身并不证明每个组合都下注。\n\n依据：S2 §3.4、3.8；T98彩虹为配色示意",
+      "source": "牌面分支与原因 · D25 / E25"
+    },
+    {
+      "id": "D08",
+      "title": "低而分散 → 低连张",
+      "text": "上图78其实配到8，是顶对；下图已成45678顺子。AA在上图可向许多更差对子收价值，下图却可能已落后。较低的点数并不等于较安全。",
+      "reason": "IP 3bet：842的高对子可大注，66/77这类中等牌多X；456/467等低连例按课程先大量X。原因包括被加注后许多高张无法继续。若换成IP SRP，456反而有选择性B50路线，不能跨底池照抄X。\n\n依据：S2 §3.5–3.7；S3 §3.7；S6 §3.6",
+      "source": "牌面分支与原因 · D28 / E28"
+    },
+    {
+      "id": "D09",
+      "title": "456 → 987",
+      "text": "上图77高于公共牌，且3或8可补顺；下图77加上公共牌7，成为暗三条。相反，88在456是超对，66在987则只是低于牌面的口袋对。每换一面，都重新判断自己能从哪些更差牌取值。",
+      "reason": "课程IP SRP把456安排为选择性B50、987安排为B75路线。差异还涉及双方范围，不能由“都是低连张”抹平。此配牌专门训练重新读牌力，不表示77在两面都按该尺寸纯下注。\n\n依据：S6 §3.6；手牌对照为教学补充",
+      "source": "牌面分支与原因 · D29 / E29"
+    },
+    {
+      "id": "D10",
+      "title": "低点重复 → 高点重复",
+      "text": "T22上，JT利用公共22与自己配到的T组成两对，仍输给AA；TT5上，JT有三条T，已经领先AA。对手常见的Tx突然进入了强牌一端。",
+      "reason": "课程IP 3bet：T22用B67且高频，TT5用B40。大注被跟后是否仍能大量赢过对手，是差别所在。两例还换了单张踢脚牌，故这是结构对照，不是假装只改变一个变量的实验。\n\n依据：S3 §3.2；S2 §3.8",
+      "source": "牌面分支与原因 · D32 / E32"
+    },
+    {
+      "id": "D11",
+      "title": "两张重复 → 三张重复",
+      "text": "QQ2上是QQ88两对；QQQ上是QQQ88葫芦。对手若拿一张Q则是四条。三条公共牌不能当普通对子面，更不能只凭自己有葫芦就认为是最大牌。",
+      "reason": "课程OOP SRP的QQQ例给高频甚至全范围下注方向，但尺寸没写清。IP/OOP 3bet没有对应完整表。保留“三条公共牌”独立分支，不借用T22的67%。\n\n依据：S7 §3.2；QQ2对照为教学补充",
+      "source": "牌面分支与原因 · D33 / E33"
+    },
+    {
+      "id": "D12",
+      "title": "没该花色 → 一张该花色",
+      "text": "两手现在都只有一对A。下图额外有最高同花听牌，再来黑桃就可成A高花；上图没有这项直接改善。一张黑桃绝不是已经成花。",
+      "reason": "IP 3bet的258M课程给B25尺寸；IP SRP也有单色小注例。但不同AA的下注/过牌、面对加注的继续能力可能不同。不能由“单色小”变成“所有手牌100%小注”。\n\n依据：S2 §3.8；S6 §3.6；底牌对照为教学补充",
+      "source": "牌面分支与原因 · D36 / E36"
+    },
+    {
+      "id": "D13",
+      "title": "已经成花 → 再分花的大小",
+      "text": "上图在当前翻牌是最大同花；下图虽然已成花，却输给A高花、K高花。转牌若公共牌配对或出现第四张黑桃，还要重新判断，不能用翻牌标签一直打到河牌。",
+      "reason": "这解释“已成花”里面也有不同价值任务；不意味着小花必须过牌、最大花必须大注。课程未给完整单色手牌表，不能用花大小编造固定尺寸。先按对应局面的小注方向，再保留未确定的组合选择。\n\n依据：由S2 §3.7–3.8和牌型规则展开",
+      "source": "牌面分支与原因 · D37 / E37"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "I01",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B17 / D17 / E17",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB25：下注 1/4 池。\n原文给了小尺寸方向，未列完整选牌频率。",
+      "reason": "AA大注时，无黑桃弱牌更容易退出，成花与带大黑桃的牌较容易留下。被跟后未必占很大便宜 → 本例选小注；哪些AA下注仍需细分。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "2s",
+          "5s",
+          "8s"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I02",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B20 / D20 / E20",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nB67：约 2/3 池，课程例中高频。\n已观察到对手少加注时，可进一步扩大。",
+      "reason": "对手JT在T22是TT22两对，仍输AA；Tx和中小对子是可收价值的对象。课程已可高频大注；对手加注更少时，才进一步扩频率。\nS3 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "2h",
+          "2d"
+        ],
+        "size": 67,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "已观察到对手过牌加注不足。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I03",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B21 / D21 / E21",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB40：约 40% 池。\n下注/过牌的完整组合未列出。",
+      "reason": "JT在TT5已是三条T。对手跟大注后更可能留下Tx等强牌 → 超对不能继续按T22的优势理解，课程改B40。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "Th",
+          "5d"
+        ],
+        "size": 40,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I04",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B24 / D24 / E24",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n小注、高频。\n执行可选 B25；25%是统一小尺寸的教学取值。",
+      "reason": "AK是两对，AQ/AJ是顶对；对手KQ成为第二对。小注能让较弱Kx和部分对子继续 → 不必只用最强牌下注。全范围扩频另看对手是否少加注。\nS3 §3.5；S2 §3.3\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "Kh",
+          "2d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": "使用表中教学取值25%。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I05",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B25 / D25 / E25",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n可沿用 B33 的小注路线。\n仅由转牌章节的前序例子归纳；翻牌组合表未给。",
+      "reason": "AK仍能向较弱Ax收价值；QQ/JJ却已落在所有Ax后面。先分手牌任务，再采用资料出现过的小注线；不能因标题“A高”给每手牌同一指令。\nS4「翻牌1/3下注后的转牌策略」\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "size": 33,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I06",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B28 / D28 / E28",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB25，高频。\nAA/AK 属强价值；QQ 等中等牌也有小注空间。",
+      "reason": "AK想让较弱Kx跟；JJ等中等牌小注时可能留下TT/99，也能令部分高张放弃。中等牌也有下注理由 → 小注可以用较宽范围。\nS2 §3.3、3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "5h",
+          "2d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I07",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B29 / D29 / E29",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB25 小注。\n牌点来自课程，r 配色用作图示。",
+      "reason": "AT/T9已成顺，QJ是两对。AA仍叫超对，却不能像在K52上那样看待对手继续牌 → 课程保持小注，避免无依据放大一对底池。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "Qh",
+          "Jd"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I08",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B32 / D32 / E32",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB67：约 2/3 池。\n高对子、强顶对是价值核心；加合适高张诈唬。",
+      "reason": "AA/JJ等能领先AT/KT和许多口袋对子；98虽有顺听，但并非对手每手牌都强听牌。强超对愿意收较大价值 → 用67%主尺寸。\nS2 §3.4；S3 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "7h",
+          "2d"
+        ],
+        "size": 67,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I09",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B33 / D33 / E33",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB40：约 40% 池。\n与上一行只改变花色。",
+      "reason": "A♠Q♠由后门花变直接花听。它面对下注仍有改善空间 → 大注未必赶走它，反而可能只赶走弱对子；本例尺寸降到40%。\nS2 §3.4、3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "7h",
+          "2s"
+        ],
+        "size": 40,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I13",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B34 / D34 / E34",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB40：约40%底池。\n这是较疏的T72与已可成顺的T98之间的课程例；完整选牌频率未给。",
+      "reason": "J9由T72上的卡顺听8，变成T82的两头顺听7或Q。对手可继续的顺听变强 → 本例从T72的67%降到40%；不能由此反推所有空气都下注。\nS2 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "2d"
+        ],
+        "size": 40,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I10",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B35 / D35 / E35",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB25 是课程给的尺寸方向。\n完整选牌频率未给，不能等同全范围下注。",
+      "reason": "QJ、J7、76可成顺，JT等还有对子＋听牌。普通超对面对继续范围不再稳占优势 → 本例小注25%，完整下注组合未给。\nS2 §3.3–3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "9h",
+          "8d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I11",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B38 / D38 / E38",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB67，采用极化思路。\n高对子＋合适高张下注；66/77 等中等牌多过牌。",
+      "reason": "AA/KK领先8x和许多对子，愿意价值大注；AK没成对但可利用弃牌并改善。77面对大注跟注范围不舒服，却能赢部分高张 → 多过牌。\nS2 §3.5、3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "8s",
+          "4h",
+          "2d"
+        ],
+        "size": 67,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "AA",
+            "action": "下注67%底池",
+            "kind": "价值下注"
+          },
+          {
+            "hand": "KK",
+            "action": "下注67%底池",
+            "kind": "价值下注"
+          },
+          {
+            "hand": "77",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          },
+          {
+            "hand": "66",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "I12",
+      "street": "flop",
+      "scenario": "ip3",
+      "source": "01 有位置3bet · B39 / D39 / E39",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nX：本例先整体过牌。\n保留手牌权益，到转牌重新判断。",
+      "reason": "74可成顺，54有对子＋两头顺听；黑桃还带来花听。你许多AK/AQ没成牌，下注被加注会被迫弃掉以后改善机会 → 先X保留看转牌权利。\nS2 §3.6、3.8；S3 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "3s",
+          "5h",
+          "6s"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "先整体过牌",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O01",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B17 / D17 / E17",
+      "sourceKind": "资料待补",
+      "rawClaim": "【资料待补】\n资料待补：未给本位置的单色翻牌完整路线。\n不能直接搬 IP 的 B25 全范围策略。",
+      "reason": "已成花与一张大花听当然不同，但课程未给SB对BTN单色面各自怎么下注。可以判断牌型，不能仅从牌型推出精确下注频率。\nS5覆盖缺口\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "8s",
+          "5s"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "待补，不能提供精确战略答案"
+    },
+    {
+      "id": "O02",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B20 / D20 / E20",
+      "sourceKind": "资料待补",
+      "rawClaim": "【资料待补】\n资料待补：没有 OOP 3bet 对子面的系统表。\n不照搬 IP T22 的大注高频。",
+      "reason": "T22上Tx不是三条；TT5上Tx才是三条。这个差别仍成立，但先行动还要应付BTN的跟注和后街下注，IP的尺寸不能直接代入。\nS5覆盖缺口\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "2h",
+          "2d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "待补，不能提供精确战略答案"
+    },
+    {
+      "id": "O03",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B23 / D23 / E23",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nA 高是小注例外，可考虑 B25。\n具体A72手牌选择/频率未给。",
+      "reason": "AK/AQ能向较弱Ax收价值，非Ax对子则怕A。A高被课程单独列为小注例外；A72只是图示，不能据此断言所有Ax和空气都下注。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O04",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B26 / D26 / E26",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nK 高课程范围：B40～B67。\n可用 B50 作为练习取值；精确频率待补。",
+      "reason": "SB位置外下注后，对手可后行动跟住，再看转牌。较大的尺寸使边缘高张继续更贵；仍须区分AK等价值牌、听牌和适合X的中等牌。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "5h",
+          "2d"
+        ],
+        "size": 50,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": "本练习固定取 50%底池，位于表中给定尺寸区间内。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O05",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B27 / D27 / E27",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nQ 高课程范围：B50～B67。\n先用 B50 练习，选牌仍需看自身强度/听牌。",
+      "reason": "AQ是顶对，AK却没有配对。课程对Q高给比A高大的区间；这只解决“打时多少钱”，不等于拿AK等所有没中的牌都打。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "5h",
+          "2d"
+        ],
+        "size": 50,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": "本练习固定取 50%底池，位于表中给定尺寸区间内。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O06",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B30 / D30 / E30",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n课程例：可高频较大 CB。\nJ高给 B67～B100 的尺寸区间。",
+      "reason": "QQ+和AJ仍是你的强牌，对手不少Jx、9x和口袋对子较弱。位置不好不等于没有价值可取；课程此例允许高频较大持续下注。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Js",
+          "9h",
+          "3d"
+        ],
+        "size": 75,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": "本练习固定取 75%底池，位于表中给定尺寸区间内。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O07",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B31 / D31 / E31",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\n基准方向：高频大 CB。\n若 BTN 小注后对X/R弃牌过多：增加X，面对小注再X/R。",
+      "reason": "直接大CB是课程基准。若对手见X会用弱牌小注、被X/R又弃太多，先X才能让他把弱牌的钱放进来 → 这是利用特定反应，不是无条件乱加注。\nS5 §3.2–3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "先过牌，面对小注再过牌加注",
+        "handExamples": [],
+        "condition": "BTN面对你的过牌会用弱牌小注，而且对过牌加注弃牌过多。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O08",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B34 / D34 / E34",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n低连接例：以X为主，少量大注。\n原文743约80%过牌；具体花色未给。",
+      "reason": "65在743上已经组成34567顺子。对手可有低牌强牌，而你的大高张大量未中 → 课程先大幅增加X，避免用太多没中的高张撞上强继续范围。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "7s",
+          "4h",
+          "3s"
+        ],
+        "size": null,
+        "frequency": {
+          "action": "过牌",
+          "value": 80
+        },
+        "direction": "以过牌为主",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "O09",
+      "street": "flop",
+      "scenario": "oop3",
+      "source": "02 没位置3bet · B35 / D35 / E35",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\n课程基准约40%频率下大注。\n对手对X/R弃牌多时，才增加过牌加注路线。",
+      "reason": "952中没有三张紧密连牌，但两同花让直接花听能继续。相比干燥T83，不能假定对手同样容易对加注弃牌 → 先保留课程约40%下注频率。\nS5 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "5h",
+          "2s"
+        ],
+        "size": null,
+        "frequency": {
+          "action": "下注",
+          "value": 40
+        },
+        "direction": null,
+        "handExamples": [],
+        "condition": "对手对过牌加注弃牌过多；本题单独练表中课程基准频率。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S01",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B17 / D17 / E17",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB25，小尺寸。\n具体组合/频率未给，别把“单色小”理解为“单色全打”。",
+      "reason": "对手一张红桃可能有直接花听，两张红桃可能已经成花；无红桃弱对子面对大注容易退出。课程选25%，但三类手牌并非相同下注频率。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "8s",
+          "5s"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S02",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B20 / D20 / E20",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nB33 是课程针对低级别的简化。\n有弃牌过多/加注不足证据时可较宽。",
+      "reason": "Kx在K22不是三条；对手需用部分小对子/高张继续才能防守。若现实对手把这些牌弃得太多且少加注，小注就能更便宜地拿到弃牌。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "2h",
+          "2d"
+        ],
+        "size": 33,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "对手弃牌过多，而且加注不足；采用课程小注简化。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S03",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B23 / D23 / E23",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\n选小注替代路线：B25，较高频。\n这是基于对手过弃/少加注的练习方案。",
+      "reason": "小注使你付较少筹码就能让对手的部分未中牌弃掉。只有这些牌弃得过多、反加注又不足，才有理由扩大频率；原solver低频超池是另一条线。\nS6 §3.2–3.3\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "Kh",
+          "2d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "对手弃牌过多，而且加注不足；采用课程的小注替代路线。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S04",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B24 / D24 / E24",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nB33，先选牌：Ax、部分需保护对子、好后门牌。\nKQ/JJ/QQ等不要一概硬打。",
+      "reason": "Ax可向弱Ax取值；Q3这类弱牌可借后门和弃牌收益下注。KQ本来能赢一些未中牌，下注却不一定让Ax弃掉 → 课程把它作为X例。\nS1 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "size": 33,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "KQo",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S05",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B27 / D27 / E27",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n选 B75 的极化路线。\n强价值＋有效听牌下注，普通中等对子多X。",
+      "reason": "AQ/QT/55等价值端与有效听牌可组成大注范围；J♠9♠有两头顺听＋花听。普通中等对子不想被更强继续牌包围 → 多X，不能拿TT当中等牌。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "Th",
+          "5s"
+        ],
+        "size": 75,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "AQo",
+            "action": "下注75%底池",
+            "kind": "价值下注"
+          },
+          {
+            "hand": "QTo",
+            "action": "下注75%底池",
+            "kind": "价值下注"
+          },
+          {
+            "hand": "55",
+            "action": "下注75%底池",
+            "kind": "价值下注"
+          },
+          {
+            "cards": [
+              "Js",
+              "9s"
+            ],
+            "action": "下注75%底池",
+            "kind": "有效听牌"
+          },
+          {
+            "hand": "JJ",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S06",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B28 / D28 / E28",
+      "sourceKind": "资料待补",
+      "rawClaim": "【资料待补】\n资料待补：未给这个普通K高面的完整路线。\n不能由 K22 或 IP 3bet K52 直接填成全范围B25。",
+      "reason": "K72上AK可向较弱Kx取值；QQ/7x更接近摊牌任务。但“这些牌各想做什么”还不能给出整范围频率，现有课程没有此节点的完整表。\nS6覆盖缺口\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "待补，不能提供精确战略答案"
+    },
+    {
+      "id": "S07",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B31 / D31 / E31",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n选 B67 单尺寸。\n两高张、合适A高/好后门可下注；77等多X。",
+      "reason": "KQ等有改善机会，77却能赢一些未中的高牌、又难从更弱牌取大价值。两者虽然都没顶对，任务不同 → 一个可作诈唬候选，一个常保留X。\nS1 §3.2–3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "5d"
+        ],
+        "size": 67,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "77",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          },
+          {
+            "hand": "KQo",
+            "action": "可进入67%下注端",
+            "kind": "诈唬候选"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S08",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B32 / D32 / E32",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n选 B67。\nAJ价值、KQ/KT卡顺可下注；弱J和无好后门空气更多X。",
+      "reason": "KQ来T可成顺；KT来Q可成顺。它们是有真实改善机会的诈唬候选。AJ可向弱Jx取值；无好后门的空气和弱J不能只按“没中/中了”两类硬打。\nS1 §3.5\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Js",
+          "9h",
+          "5s"
+        ],
+        "size": 67,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "AJo",
+            "action": "可进入67%下注端",
+            "kind": "价值下注"
+          },
+          {
+            "hand": "KQo",
+            "action": "可进入67%下注端",
+            "kind": "诈唬候选"
+          },
+          {
+            "hand": "KTo",
+            "action": "可进入67%下注端",
+            "kind": "诈唬候选"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S09",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B35 / D35 / E35",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nB50，选择性下注；课程约40%频率。\n可考虑77/88等超对、6x、有效顺子听牌。",
+      "reason": "77/88是超对；87已经成顺，7x还可能带顺听。BTN与BB都保留低牌组合 → 你并非只有没中的大高张，课程仍安排部分下注，不是全范围X。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "4s",
+          "5h",
+          "6d"
+        ],
+        "size": 50,
+        "frequency": {
+          "action": "下注",
+          "value": 40
+        },
+        "direction": null,
+        "handExamples": [
+          {
+            "hand": "77",
+            "action": "可进入50%下注端",
+            "kind": "超对兼顺听候选"
+          },
+          {
+            "hand": "88",
+            "action": "可进入50%下注端",
+            "kind": "超对兼顺听候选"
+          }
+        ],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "S10",
+      "street": "flop",
+      "scenario": "ipSRP",
+      "source": "03 有位置单加注 · B36 / D36 / E36",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n课程选 B75 大注。\n高对子＋合适听牌形成进攻端，中等摊牌牌多X。",
+      "reason": "JT已成顺，TT+为超对，T9有顶对＋顺听；普通8x等中等牌则更怕强继续范围。先给手牌分任务，再用课程75%的进攻路线。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "8h",
+          "7d"
+        ],
+        "size": 75,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P01",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B17 / D17 / E17",
+      "sourceKind": "资料待补",
+      "rawClaim": "【资料待补】\n资料待补：SB–BB单色面完整方案未给。\n不能照搬IP SRP的B25尺寸及选牌频率。",
+      "reason": "花色会改变成牌与听牌，但SB先行动还要应付BB的下注。原材料没有这个节点的完整动作，不能因IP SRP小注而补成一样。\nS7覆盖缺口\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "8s",
+          "5s"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "待补，不能提供精确战略答案"
+    },
+    {
+      "id": "P02",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B20 / D20 / E20",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n课程例：可高频甚至全范围下注。\n具体尺寸未给。",
+      "reason": "88在QQQ上已经是QQQ88葫芦；A高和口袋对的任务不同。课程此面可高频下注，但没给尺寸；不能把“高频”误读成“下很大”。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "Qh",
+          "Qd"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "高频下注",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P03",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B23 / D23 / E23",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\n基准不是自动全打。\n对手过弃且少加注时，课程允许扩大至范围CB；尺寸未明确固定。",
+      "reason": "若对手把很多无A的高张、弱对子过度弃掉，小CB才更容易获利；若他会宽跟、会加注，空气牌不能照样自动下注。尺寸资料不完整。\nS7 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "扩大至范围持续下注",
+        "handExamples": [],
+        "condition": "对手弃牌过多，而且加注不足。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P04",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B26 / D26 / E26",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\n对过弃的紧弱/娱乐玩家：可B25，扩大频率。\n没有这种证据，保留选牌和过牌。",
+      "reason": "面对25%小注，部分高张、对子、后门牌本可继续；若对手实际放弃太多，小注已足够取得弃牌收益 → 才增加下注范围。\nS7 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "Th",
+          "5d"
+        ],
+        "size": 25,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "对手对小下注弃牌过多。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P05",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B27 / D27 / E27",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n课程基准约55%过牌。\n其余牌有下注，组合和具体尺寸未完整给出。",
+      "reason": "QJ有两头顺听，黑桃底牌可有花听，BB还能凭位置跟注。你的QQ/JJ等中等牌不愿每手都扩大底池 → 课程约55%X。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "Th",
+          "6s"
+        ],
+        "size": null,
+        "frequency": {
+          "action": "过牌",
+          "value": 55
+        },
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P06",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B30 / D30 / E30",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n课程给的简化：范围X。\n对手下注后再按价值、听牌、价格判断。",
+      "reason": "SB开池范围里弱高张、边缘牌比3bet范围多，BB也有宽广的继续组合。不能只看你可能有AA就整范围打 → 课程T83先X，再回应对手下注。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "先整体过牌",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "P07",
+      "street": "flop",
+      "scenario": "oopSRP",
+      "source": "04 没位置单加注 · B33 / D33 / E33",
+      "sourceKind": "资料待补",
+      "rawClaim": "【资料待补】\n资料待补：未列普通低牌/低连张完整表。\n教学退路可先X，但不是已验证的范围X。",
+      "reason": "98已成順，84也已成顺，许多一对同时带听牌。说明应谨慎处理普通一对；但原文没给精确频率，教学X只是保守退路。\nS7 §3.1–3.2\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "7s",
+          "6h",
+          "5s"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "待补，不能提供精确战略答案"
+    },
+    {
+      "id": "P08",
+      "street": "flop",
+      "scenario": "earlyBTN",
+      "source": "04 没位置单加注 · B35 / D35 / E35",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\n若改成“前位开池，BTN跟注”：\n先高频X；不要套上方SB–BB的高频小CB剥削。",
+      "reason": "BTN冷跟前位开池所带进来的牌，与BB宽防守不是一批。即使同为A72，不能沿用SB–BB针对弱范围的高频CB；课程在此先更多X。\nS7 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "以过牌为主",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T01",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B8 / D8 / E8",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nIP 3bet：翻牌B33被跟，转牌对手X。\n此空白牌可继续大注，课程讨论B70～B100。",
+      "reason": "翻牌虽可广打，对手跟注范围已收紧；第二枪采用强价值＋合适诈唬的极化思路。\n边界：中等牌与未改善空气不自动全打。完整选牌频率未给。\nS4「翻牌1/3下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "Th",
+          "5d",
+          "2d"
+        ],
+        "size": 75,
+        "frequency": null,
+        "direction": "较大第二枪",
+        "handExamples": [],
+        "condition": "",
+        "convention": "课程给70%～100%，练习固定取75%。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T02",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B9 / D9 / E9",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\nIP 3bet：翻牌B67被跟，对手转牌X。\nJ是课程继续较大第二枪的例子。",
+      "reason": "J能改善你的高张范围，也给对手中对压力；不是“任何高牌都自动打”。\n边界：具体手牌选取由强价值/有效诈唬归纳，原文无完整组合。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "6h",
+          "2d",
+          "Jc"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "较大第二枪",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T03",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B10 / D10 / E10",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n同一962大注线：转5/6/7/8/T，课程简化为X。",
+      "reason": "这些牌更常改善跟注方的对子/连牌/听牌。降低第二枪，利用位置看河牌。\n边界：只用于该类前序例子；不能总结成“所有低转牌都过牌”。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "6h",
+          "2d",
+          "7d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "过牌",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T04",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B11 / D11 / E11",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n同一962大注线：降低第二枪频率，保留更多X。\n不能把配对当成无条件全范围下注牌。",
+      "reason": "顶端牌和中等牌的价值变化不同；手牌是否改善必须重新看。\n边界：对子转牌没有完整统一表。原笔记A72→2有重复花色记录，不照抄不合法牌。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "6h",
+          "2d",
+          "2h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "降低第二枪频率，保留更多过牌",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T05",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B12 / D12 / E12",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n范围变化优先：减少第二枪，下注偏小。\n先区分自己已成强牌、普通一对、听牌/空气。",
+      "reason": "9让KQ/87等成为顺子，对手先前跟注的连牌集中改善。\n边界：不是所有牌都X，也不是“我有一对就保护大注”；精确选牌待补。\nS4「翻牌1/3下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "Js",
+          "Th",
+          "2d",
+          "9d"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "减少第二枪，下注偏小",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T06",
+      "street": "turn",
+      "scenario": "ip3",
+      "source": "05 转牌路线 · B13 / D13 / E13",
+      "sourceKind": "课程",
+      "rawClaim": "【课程】\n原例是第四张同花！\n课程给减少进攻、较小尺寸的方向。",
+      "reason": "一张黑桃底牌就能组成同花。强弱要按同花大小重新判断。\n边界：不要错画成“两同花翻牌→第三张”；其他完成花的牌按范围重新评估。\nS4「翻牌1/3下注后的转牌策略」",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "Ts",
+          "5s",
+          "9s"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "减少进攻，下注偏小",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T07",
+      "street": "turn",
+      "scenario": "ipSRP",
+      "source": "05 转牌路线 · B14 / D14 / E14",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nIP SRP：小CB被跟，转牌对手X。\n若对手会快玩强牌、跟注后又对大注过弃，可考虑超池。",
+      "reason": "“冰球原理”用翻牌反应推测范围，再施压；不能只看一声跟注就认定封顶。\n边界：>100%是超池定义；原资料无统一125%。听牌完成时停止机械超池。\nS6 §3.9",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "8h",
+          "6s",
+          "2d"
+        ],
+        "size": 125,
+        "frequency": null,
+        "direction": "考虑超池下注",
+        "handExamples": [],
+        "condition": "对手会快玩强牌，跟注后又对大注弃牌过多。转牌是空白牌。",
+        "convention": "本练习把超池固定为125%；这是执行取值，表中只要求大于100%，未给统一125%。"
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T08",
+      "street": "turn",
+      "scenario": "oop3",
+      "source": "05 转牌路线 · B15 / D15 / E15",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nOOP 3bet：翻牌X/R被跟，空白转牌先多X。\n不要因为前面加注大就硬打第二枪。",
+      "reason": "对手通过你的加注筛选后更强；翻牌剥削有利，不代表后街必须继续投入。\n边界：原文提好牌上可继续，但全下例条件不足，未编成固定指令。\nS5 §3.4",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "先更多过牌",
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T09",
+      "street": "turn",
+      "scenario": "oop3",
+      "source": "05 转牌路线 · B16 / D16 / E16",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nOOP 3bet：翻牌X–X。\n若该线对手转牌过弃，可做延迟下注；B70是资料讨论尺寸之一。",
+      "reason": "对手过牌可能减少部分强牌，但仍可能慢打。选牌须有价值或弃牌目标。\n边界：不是任何空气见X–X必打；原文70%弃牌数据是人群统计。\nS5 §3.5",
+      "typedFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "4c"
+        ],
+        "size": 70,
+        "frequency": null,
+        "direction": "增加延迟下注",
+        "handExamples": [],
+        "condition": "双方翻牌过牌；有证据表明对手在该线路转牌弃牌过多。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "T10",
+      "street": "turn",
+      "scenario": "oopSRP",
+      "source": "05 转牌路线 · B17 / D17 / E17",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nOOP SRP：翻牌X–X。\n对在此线过弃的对手，可增加转牌下注；尺度无统一答案。",
+      "reason": "材料的盈利依据是具体线路中的弃牌偏差，非单看牌面。\n边界：换成前位–BTN须用该子场景判断。对手下注时已进入防守，不能继续照CB表。\nS7 §3.6–3.7",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "Th",
+          "5d",
+          "2c"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "增加转牌下注",
+        "handExamples": [],
+        "condition": "双方翻牌过牌；有证据表明对手在该线路转牌弃牌过多。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R01",
+      "street": "river",
+      "scenario": "ipSRP",
+      "source": "06 河牌路线 · B8 / D8 / E8",
+      "sourceKind": "原理补充",
+      "rawClaim": "【原理补充】\n你有AK，两对。对手X：若AQ/AJ等会跟，考虑价值B。\n尺寸以能被更差牌跟为目的。",
+      "reason": "要问“什么更差的牌会跟”；强牌名称本身不是下注理由。\n边界：牌例为原理演示，不是原文solver节点；资料未给统一河牌75%。\nS6 §3.4「哪些牌跟/弃」",
+      "typedFacts": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Kd",
+          "3h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "价值下注",
+        "handExamples": [],
+        "condition": "对手过牌，而且AQ、AJ等更差牌会跟你的下注。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R02",
+      "street": "river",
+      "scenario": "ipSRP",
+      "source": "06 河牌路线 · B9 / D9 / E9",
+      "sourceKind": "原理补充",
+      "rawClaim": "【原理补充】\n你有QQ。若更差对子不跟下注、Kx不弃：X。\nIP可直接摊牌；OOP过牌后仍要应对下注。",
+      "reason": "下注既拿不到差牌价值，又赶不走强牌时，没有明确收益目标。\n边界：不是“QQ一律X”；行动史和对手跟注范围改变时重新判断。\nS6 §3.4；S4后街收缩原则",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3d",
+          "9h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "过牌摊牌",
+        "handExamples": [],
+        "condition": "对手过牌；更差对子不跟下注，Kx也不会弃牌。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R03",
+      "street": "river",
+      "scenario": "ipSRP",
+      "source": "06 河牌路线 · B10 / D10 / E10",
+      "sourceKind": "原理补充",
+      "rawClaim": "【原理补充】\n你有87黑桃，听花没中。\n只有能指出更好牌会弃，才考虑诈唬；否则X。",
+      "reason": "错过听牌只是候选资格，不能证明对手会弃。还要看其跟注线路和倾向。\n边界：两次跟注后是否仍会弃必须重估；不以“已经投入”决定再开枪。\nS6 §3.4、3.9；S7 §3.6",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "Th",
+          "4s",
+          "2c",
+          "2h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "放弃诈唬，过牌",
+        "handExamples": [],
+        "condition": "对手过牌；本题设定他不会弃掉你想赶走的更好牌。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R04",
+      "street": "river",
+      "scenario": "oopSRP",
+      "source": "06 河牌路线 · B11 / D11 / E11",
+      "sourceKind": "原理补充",
+      "rawClaim": "【原理补充】\n你有KQ。先算跟注所需胜率，再估计这条线的价值/诈唬范围。\n数字不能替你猜对手的诈唬率。",
+      "reason": "若只赢诈唬，就是抓诈唬牌；对手少诈唬时应减少抓诈唬。\n边界：完整河牌防守表未包含在原材料。页末只提供赔率计算，不输出自动跟/弃。\nS7 §3.4–3.6＋基础赔率",
+      "typedFacts": {
+        "board": [
+          "Ks",
+          "9h",
+          "5d",
+          "2c",
+          "7h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": null,
+        "handExamples": [],
+        "condition": "",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R05",
+      "street": "river",
+      "scenario": "ipSRP",
+      "source": "06 河牌路线 · B12 / D12 / E12",
+      "sourceKind": "原理补充",
+      "rawClaim": "【原理补充】\n你有AK，价值下注后被R。\n重新评估对手加注范围；两对不等于坚果，不能自动跟。",
+      "reason": "被加注后，原本“更差牌会跟”的问题变成“哪些牌会加注”。\n边界：被动玩家的大行动偏强是课程方向；具体两对/三条的防守频率仍待补。\nS7 §3.3–3.4",
+      "typedFacts": {
+        "board": [
+          "As",
+          "Kh",
+          "7d",
+          "2d",
+          "3h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "重新评估对手加注范围",
+        "handExamples": [],
+        "condition": "你用两对价值下注，对手加注。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R06",
+      "street": "river",
+      "scenario": "oopSRP",
+      "source": "06 河牌路线 · B13 / D13 / E13",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nOOP SRP，翻牌和转牌都B–C。\n紧弱/娱乐玩家若跟转后河牌黏，不机械三枪诈唬。",
+      "reason": "原材料认为这条线与其他“对手示弱”线路不同，转牌跟注已保留较强牌。\n边界：常规玩家可有三枪过弃倾向，但“reg”标签本身不是证据。\nS7 §3.6",
+      "typedFacts": {
+        "board": [
+          "Qs",
+          "Th",
+          "5d",
+          "2d",
+          "6h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "减少机械三枪诈唬",
+        "handExamples": [],
+        "condition": "翻牌和转牌你下注、对手跟注；该对手跟转牌后在河牌很少弃牌。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R07",
+      "street": "river",
+      "scenario": "ipSRP",
+      "source": "06 河牌路线 · B14 / D14 / E14",
+      "sourceKind": "教学归纳",
+      "rawClaim": "【教学归纳】\nIP SRP：转牌超池被跟，河牌先重新评估。\n此7让四张牌连成一段，不自动再超池。",
+      "reason": "对手的跟注范围和河牌强牌组成都变了；翻牌“封顶”的假设可能失效。\n边界：资料提供延续剥削思路，未给全部河牌/尺寸。精确行动未确定。\nS6 §3.9",
+      "typedFacts": {
+        "board": [
+          "9s",
+          "8h",
+          "6s",
+          "2d",
+          "7c"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "重新评估，不自动再超池",
+        "handExamples": [],
+        "condition": "采用表中转牌超池路线并被跟注；河牌使公共牌更连接。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    },
+    {
+      "id": "R08",
+      "street": "river",
+      "scenario": "oopSRP",
+      "source": "06 河牌路线 · B15 / D15 / E15",
+      "sourceKind": "条件剥削",
+      "rawClaim": "【条件剥削】\nOOP SRP，曾有一街双方过牌。\n只在该线路对手过弃有依据时，增加河牌施压。",
+      "reason": "S7指出许多含过牌的线路比三枪线更易得到弃牌。\n边界：“过牌过”不等于“没有强牌”；选诈唬仍需要更好牌会弃。\nS7 §3.6–3.8",
+      "typedFacts": {
+        "board": [
+          "Js",
+          "7h",
+          "3d",
+          "2d",
+          "9h"
+        ],
+        "size": null,
+        "frequency": null,
+        "direction": "增加河牌施压",
+        "handExamples": [],
+        "condition": "前面曾有一街双方过牌，而且有证据表明对手在这条线路河牌弃牌过多。",
+        "convention": ""
+      },
+      "limitation": "仅能依各条来源命题支持的精度出题；本记录不是完整逐手策略表"
+    }
+  ]
+}

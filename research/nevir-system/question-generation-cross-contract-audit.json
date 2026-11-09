@@ -1,0 +1,153 @@
+{
+  "id": "QUESTION_GENERATION_CROSS_CONTRACT_AUDIT_V1",
+  "status": "paper_question_generation_cross_contract_consistent_runtime_missing",
+  "purpose": "验证自动出题、会话队列、35项覆盖和用户阶段脚本共同遵守同一条嵌套主线，不把后台题量变成前台平铺菜单。",
+  "sources": [
+    "automatic-question-generation-contract.json",
+    "session-question-queue-contract.json",
+    "full-course-coverage-and-release-contract.json",
+    "user-first-complete-route-contract.json",
+    "nested-release-architecture-contract.json",
+    "first-pass-handoff-ledger.json",
+    "learner-session-progression-contract.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "releaseStages": [
+    "first_pass",
+    "map",
+    "guided",
+    "independent",
+    "adjacent",
+    "delayed",
+    "continuous"
+  ],
+  "firstPassRepresentatives": [
+    "1.5",
+    "2.1",
+    "3.1",
+    "4.5",
+    "5.7"
+  ],
+  "requiredPools": [
+    "locator",
+    "pure_or_fact",
+    "mixed_when_applicable",
+    "edge",
+    "internal",
+    "action_preserving_contrast",
+    "single_field_transfer"
+  ],
+  "findings": [
+    {
+      "id": "route_is_single",
+      "pass": true,
+      "detail": "queue and handoff use the canonical 12-state route"
+    },
+    {
+      "id": "first_pass_representatives_match",
+      "pass": true,
+      "detail": "architecture and coverage use the same five representatives"
+    },
+    {
+      "id": "first_pass_uses_representatives_only",
+      "pass": true,
+      "detail": "first pass does not draw from all35"
+    },
+    {
+      "id": "no_flat_home",
+      "pass": true,
+      "detail": "full coverage remains nested under parent frames"
+    },
+    {
+      "id": "stage_order_matches",
+      "pass": true,
+      "detail": "queue and visible session progression use the same release order"
+    },
+    {
+      "id": "hard_filters_match",
+      "pass": true,
+      "detail": "parent, physical, source, successor, transfer and identity filters are present"
+    },
+    {
+      "id": "ratios_do_not_change_policy",
+      "pass": true,
+      "detail": "requested ratios only affect scheduling"
+    },
+    {
+      "id": "empty_pool_stops",
+      "pass": true,
+      "detail": "empty pools emit a stop instead of neighbor substitution"
+    },
+    {
+      "id": "all35_have_three_modes",
+      "pass": true,
+      "detail": "each unit requires base, contrast and transfer"
+    },
+    {
+      "id": "question_identity_is_unique",
+      "pass": true,
+      "detail": "identity and duplicate rules are explicit"
+    },
+    {
+      "id": "visible_input_guard",
+      "pass": true,
+      "detail": "the answer and unresolved policy stay hidden"
+    },
+    {
+      "id": "first_answer_before_help",
+      "pass": true,
+      "detail": "first answer is recorded before explanation"
+    },
+    {
+      "id": "same_parent_after_error",
+      "pass": true,
+      "detail": "an error never resets the route"
+    },
+    {
+      "id": "exact_grade_requires_evidence",
+      "pass": true,
+      "detail": "missing reference or successor blocks exact grading"
+    }
+  ],
+  "invariants": {
+    "firstPassIsFiveRepresentatives": true,
+    "all35StayInsideParentFrames": true,
+    "oneQuestionPackageAtATime": true,
+    "requestedRatiosDoNotReweightPolicy": true,
+    "emptyPoolIsNotSubstituted": true,
+    "firstAnswerBeforeHelp": true,
+    "sameParentAfterError": true,
+    "exactGradeRequiresReferenceAndSuccessor": true,
+    "unknownIsNotZero": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "runtimeQuestionGenerator": false,
+    "runtimeSessionScheduler": false,
+    "poolsCompiled": false,
+    "edgeThresholdsCalibrated": false,
+    "learnerTrial": false,
+    "heldoutTransfer": false,
+    "NL50Evidence": false
+  },
+  "guards": {
+    "crossContractConsistencyIsNotRuntime": true,
+    "coverageIsNotSkillScore": true,
+    "firstPassIsNotMastery": true,
+    "noNeighborSubstitution": true,
+    "noExactActionWithoutReference": true
+  }
+}

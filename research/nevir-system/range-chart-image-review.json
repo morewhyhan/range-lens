@@ -1,0 +1,51 @@
+{
+  "status": "author_visual_review_not_learner_or_UI_pass",
+  "reviewedOn": "2026-10-21",
+  "method": "Opened all four final PNGs with view_image after rendering; checked visible labels, physical suits, positions, numerical rows and fixed-scale interpretation.",
+  "packetSHA256": "d0df2efe3b2a6b4d2abfbf1708e9bbcf36d1de17f1a7314f068bf3a07558c63a",
+  "figures": [
+    {
+      "file": "figures/range-change-1.png",
+      "width": 1200,
+      "height": 1050,
+      "sha256": "cd065301c4e5ce58cd804feb5bb607fc831f0500312fb3c2a16cb8bf2381a67c",
+      "visuallyOpened": true
+    },
+    {
+      "file": "figures/range-change-2.png",
+      "width": 1200,
+      "height": 1050,
+      "sha256": "196b0371c706d795bc726de8951adec26ae36d0f51a2418d2cc44d5e1415b204",
+      "visuallyOpened": true
+    },
+    {
+      "file": "figures/range-change-3.png",
+      "width": 1200,
+      "height": 1050,
+      "sha256": "8aa274e4e08ba1ab553f7173690805f951aa815c529df651227701a62f2df2c5",
+      "visuallyOpened": true
+    },
+    {
+      "file": "figures/range-change-4.png",
+      "width": 1200,
+      "height": 1050,
+      "sha256": "0fa0bbe6850bf3610a1e59d088d4fd73ab60c00dba20d590e5863e3781a30144",
+      "visuallyOpened": true
+    }
+  ],
+  "checks": [
+    "No visible text clipping in final four images",
+    "Same 13x13 positions and fixed 10-mass bar denominator",
+    "KK mass1 throughout; visible share10/11.1/11.1/33.3 percent",
+    "Known-card impossibility slash differs from finite-model zero support",
+    "Pot35/52.5/97.5/163 and actor BTN/SB/BTN/SB displayed",
+    "All images explicitly answer-bearing authored-model explanation"
+  ],
+  "limitations": [
+    "Sparse five-holding model, not full target range",
+    "Cell labels small; full-size adult beginner readability not tested",
+    "Static images do not verify click, animation, navigation or responsive implementation"
+  ],
+  "learnerTrials": 0,
+  "productImplemented": false
+}

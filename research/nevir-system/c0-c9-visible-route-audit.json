@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "status": "paper_c0_c9_to_visible_route_crosswalk_not_runtime",
+  "stages": 10,
+  "visibleLayers": 8,
+  "outputsMapped": 10,
+  "authorOnlyOutputs": [
+    "referenceQuality"
+  ],
+  "visibleFieldSourcesMapped": true,
+  "authorOnlyStages": [
+    "C3_reference_quality",
+    "C9_release_audit"
+  ],
+  "runtimeImplemented": false,
+  "learnerTrial": false
+}

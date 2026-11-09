@@ -1,0 +1,8975 @@
+{
+  "NL50Reference": false,
+  "appChanged": false,
+  "cases": [
+    {
+      "actualIterationsReported": null,
+      "id": "asymmetric_turn",
+      "initialBoard": [
+        "2d",
+        "7s",
+        "Ks",
+        "3d"
+      ],
+      "maxIterationsRequested": 4,
+      "memoryUsageBytes": [
+        158392,
+        157114
+      ],
+      "orderedHands": [
+        [
+          "AhQh",
+          "AsQs"
+        ],
+        [
+          "JsTs",
+          "KcJc",
+          "KhKd"
+        ]
+      ],
+      "possiblePhysicalRiverCount": 48,
+      "representativeActions": [
+        "Chance(0)",
+        "Chance(2)",
+        "Chance(3)",
+        "Chance(4)",
+        "Chance(6)",
+        "Chance(7)",
+        "Chance(8)",
+        "Chance(9)",
+        "Chance(10)",
+        "Chance(11)",
+        "Chance(12)",
+        "Chance(13)",
+        "Chance(14)",
+        "Chance(15)",
+        "Chance(16)",
+        "Chance(17)",
+        "Chance(18)",
+        "Chance(19)",
+        "Chance(20)",
+        "Chance(21)",
+        "Chance(22)",
+        "Chance(24)",
+        "Chance(25)",
+        "Chance(26)",
+        "Chance(27)",
+        "Chance(28)",
+        "Chance(29)",
+        "Chance(30)",
+        "Chance(31)",
+        "Chance(32)",
+        "Chance(33)",
+        "Chance(34)",
+        "Chance(35)",
+        "Chance(36)",
+        "Chance(37)",
+        "Chance(38)",
+        "Chance(39)",
+        "Chance(40)",
+        "Chance(41)",
+        "Chance(42)",
+        "Chance(43)",
+        "Chance(44)",
+        "Chance(45)",
+        "Chance(46)",
+        "Chance(48)",
+        "Chance(49)",
+        "Chance(50)",
+        "Chance(51)"
+      ],
+      "returnedMetric": 0.0,
+      "riverRecords": [
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "2c"
+          ],
+          "engineCardId": 0,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            0
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "2h"
+          ],
+          "engineCardId": 2,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            2
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              366.66668701171875
+            ],
+            [
+              275.0,
+              275.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "2s"
+          ],
+          "engineCardId": 3,
+          "equity": [
+            [
+              0.0,
+              0.6666666865348816
+            ],
+            [
+              0.5,
+              0.5,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            3
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              366.66668701171875
+            ],
+            [
+              275.0,
+              275.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "3c"
+          ],
+          "engineCardId": 4,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            4
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "3h"
+          ],
+          "engineCardId": 6,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            6
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              366.66668701171875
+            ],
+            [
+              275.0,
+              275.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "3s"
+          ],
+          "engineCardId": 7,
+          "equity": [
+            [
+              0.0,
+              0.6666666865348816
+            ],
+            [
+              0.5,
+              0.5,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            7
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              366.66668701171875
+            ],
+            [
+              275.0,
+              275.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "4c"
+          ],
+          "engineCardId": 8,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            8
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "4d"
+          ],
+          "engineCardId": 9,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            9
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "4h"
+          ],
+          "engineCardId": 10,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            10
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "4s"
+          ],
+          "engineCardId": 11,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            11
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "5c"
+          ],
+          "engineCardId": 12,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            12
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "5d"
+          ],
+          "engineCardId": 13,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            13
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "5h"
+          ],
+          "engineCardId": 14,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            14
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "5s"
+          ],
+          "engineCardId": 15,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            15
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "6c"
+          ],
+          "engineCardId": 16,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            16
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "6d"
+          ],
+          "engineCardId": 17,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            17
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "6h"
+          ],
+          "engineCardId": 18,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            18
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "6s"
+          ],
+          "engineCardId": 19,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            19
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "7c"
+          ],
+          "engineCardId": 20,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            20
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "7d"
+          ],
+          "engineCardId": 21,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            21
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "7h"
+          ],
+          "engineCardId": 22,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            22
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "8c"
+          ],
+          "engineCardId": 24,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            24
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "8d"
+          ],
+          "engineCardId": 25,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            25
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "8h"
+          ],
+          "engineCardId": 26,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            26
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "8s"
+          ],
+          "engineCardId": 27,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            27
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "9c"
+          ],
+          "engineCardId": 28,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            28
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "9d"
+          ],
+          "engineCardId": 29,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            29
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "9h"
+          ],
+          "engineCardId": 30,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            30
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "9s"
+          ],
+          "engineCardId": 31,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            31
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              550.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Tc"
+          ],
+          "engineCardId": 32,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            32
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Tc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Td"
+          ],
+          "engineCardId": 33,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            33
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Td",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Th"
+          ],
+          "engineCardId": 34,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            34
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Th",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              550.0
+            ],
+            [
+              0.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Ts"
+          ],
+          "engineCardId": 35,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            35
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              550.0
+            ],
+            [
+              null,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              false,
+              true,
+              true
+            ]
+          ],
+          "river": "Ts",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              0.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              2.0,
+              0.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Jc"
+          ],
+          "engineCardId": 36,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            36
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              null,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              false,
+              true
+            ]
+          ],
+          "river": "Jc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Jd"
+          ],
+          "engineCardId": 37,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            37
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Jd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Jh"
+          ],
+          "engineCardId": 38,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            38
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Jh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              550.0
+            ],
+            [
+              0.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Js"
+          ],
+          "engineCardId": 39,
+          "equity": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            39
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              550.0
+            ],
+            [
+              null,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              false,
+              true,
+              true
+            ]
+          ],
+          "river": "Js",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Qc"
+          ],
+          "engineCardId": 40,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            40
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Qd"
+          ],
+          "engineCardId": 41,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            41
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              0.0,
+              3.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Qh"
+          ],
+          "engineCardId": 42,
+          "equity": [
+            [
+              0.0,
+              0.3333333134651184
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.011363636702299118,
+          "historyIndices": [
+            0,
+            0,
+            42
+          ],
+          "publishedEVByHand": [
+            [
+              null,
+              183.3333282470703
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              false,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Qs"
+          ],
+          "engineCardId": 43,
+          "equity": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.011363636702299118,
+          "historyIndices": [
+            0,
+            0,
+            43
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              null
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              false
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qs",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              0.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              2.0,
+              0.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Kc"
+          ],
+          "engineCardId": 44,
+          "equity": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            44
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              null,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              false,
+              true
+            ]
+          ],
+          "river": "Kc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              2.0,
+              2.0,
+              0.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Kd"
+          ],
+          "engineCardId": 45,
+          "equity": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            45
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              null
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              false
+            ]
+          ],
+          "river": "Kd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0
+            ],
+            [
+              2.0,
+              2.0,
+              0.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Kh"
+          ],
+          "engineCardId": 46,
+          "equity": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            46
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0
+            ],
+            [
+              -0.000030517578125,
+              550.0,
+              null
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              false
+            ]
+          ],
+          "river": "Kh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              366.66668701171875,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Ac"
+          ],
+          "engineCardId": 48,
+          "equity": [
+            [
+              0.6666666865348816,
+              0.6666666865348816
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            48
+          ],
+          "publishedEVByHand": [
+            [
+              366.66668701171875,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ac",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              366.66668701171875,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Ad"
+          ],
+          "engineCardId": 49,
+          "equity": [
+            [
+              0.6666666865348816,
+              0.6666666865348816
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            49
+          ],
+          "publishedEVByHand": [
+            [
+              366.66668701171875,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ad",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              0.0,
+              3.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "Ah"
+          ],
+          "engineCardId": 50,
+          "equity": [
+            [
+              0.0,
+              0.6666666865348816
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.011363636702299118,
+          "historyIndices": [
+            0,
+            0,
+            50
+          ],
+          "publishedEVByHand": [
+            [
+              null,
+              366.66668701171875
+            ],
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              false,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ah",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              183.3333282470703,
+              0.0
+            ],
+            [
+              550.0,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "currentBoard": [
+            "2d",
+            "7s",
+            "Ks",
+            "3d",
+            "As"
+          ],
+          "engineCardId": 51,
+          "equity": [
+            [
+              0.3333333134651184,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.011363636702299118,
+          "historyIndices": [
+            0,
+            0,
+            51
+          ],
+          "publishedEVByHand": [
+            [
+              183.3333282470703,
+              null
+            ],
+            [
+              550.0,
+              -0.000030517578125,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              false
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "As",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        }
+      ],
+      "rootEV": [
+        [
+          133.3333282470703,
+          237.5
+        ],
+        [
+          131.24998474121094,
+          456.25,
+          506.25
+        ]
+      ],
+      "rootEquity": [
+        [
+          0.24242424964904785,
+          0.4318181872367859
+        ],
+        [
+          0.23863637447357178,
+          0.8295454978942871,
+          0.9204545021057129
+        ]
+      ],
+      "rootJointMass": [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          2.0,
+          2.0
+        ]
+      ],
+      "rootRawWeights": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "actualIterationsReported": null,
+      "id": "suit_symmetric_turn",
+      "initialBoard": [
+        "2s",
+        "7s",
+        "Ks",
+        "3s"
+      ],
+      "maxIterationsRequested": 4,
+      "memoryUsageBytes": [
+        152648,
+        151952
+      ],
+      "orderedHands": [
+        [
+          "AcQc",
+          "AdQd",
+          "AhQh"
+        ],
+        [
+          "KcJc",
+          "KdJd",
+          "KhJh"
+        ]
+      ],
+      "possiblePhysicalRiverCount": 48,
+      "representativeActions": [
+        "Chance(0)",
+        "Chance(4)",
+        "Chance(8)",
+        "Chance(11)",
+        "Chance(12)",
+        "Chance(15)",
+        "Chance(16)",
+        "Chance(19)",
+        "Chance(20)",
+        "Chance(24)",
+        "Chance(27)",
+        "Chance(28)",
+        "Chance(31)",
+        "Chance(32)",
+        "Chance(35)",
+        "Chance(36)",
+        "Chance(39)",
+        "Chance(40)",
+        "Chance(43)",
+        "Chance(44)",
+        "Chance(48)",
+        "Chance(51)"
+      ],
+      "returnedMetric": 0.0,
+      "riverRecords": [
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "2c"
+          ],
+          "engineCardId": 0,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            0
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "2d"
+          ],
+          "engineCardId": 1,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            1
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "2h"
+          ],
+          "engineCardId": 2,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            2
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "2h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "3c"
+          ],
+          "engineCardId": 4,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            4
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "3d"
+          ],
+          "engineCardId": 5,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            5
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "3h"
+          ],
+          "engineCardId": 6,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            6
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "3h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "4c"
+          ],
+          "engineCardId": 8,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            8
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "4d"
+          ],
+          "engineCardId": 9,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            9
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "4h"
+          ],
+          "engineCardId": 10,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            10
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "4s"
+          ],
+          "engineCardId": 11,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            11
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "4s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "5c"
+          ],
+          "engineCardId": 12,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            12
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "5d"
+          ],
+          "engineCardId": 13,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            13
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "5h"
+          ],
+          "engineCardId": 14,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            14
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "5s"
+          ],
+          "engineCardId": 15,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            15
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "5s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "6c"
+          ],
+          "engineCardId": 16,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            16
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "6d"
+          ],
+          "engineCardId": 17,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            17
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "6h"
+          ],
+          "engineCardId": 18,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            18
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "6s"
+          ],
+          "engineCardId": 19,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            19
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "6s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "7c"
+          ],
+          "engineCardId": 20,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            20
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "7d"
+          ],
+          "engineCardId": 21,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            21
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "7h"
+          ],
+          "engineCardId": 22,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            22
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "7h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "8c"
+          ],
+          "engineCardId": 24,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            24
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "8d"
+          ],
+          "engineCardId": 25,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            25
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "8h"
+          ],
+          "engineCardId": 26,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            26
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "8s"
+          ],
+          "engineCardId": 27,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            27
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "8s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "9c"
+          ],
+          "engineCardId": 28,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            28
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9c",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "9d"
+          ],
+          "engineCardId": 29,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            29
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9d",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "9h"
+          ],
+          "engineCardId": 30,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            30
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9h",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "9s"
+          ],
+          "engineCardId": 31,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            31
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "9s",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Tc"
+          ],
+          "engineCardId": 32,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            32
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Tc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Td"
+          ],
+          "engineCardId": 33,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            33
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Td",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Th"
+          ],
+          "engineCardId": 34,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            34
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Th",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Ts"
+          ],
+          "engineCardId": 35,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            35
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ts",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Jc"
+          ],
+          "engineCardId": 36,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            36
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              null,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              false,
+              true,
+              true
+            ]
+          ],
+          "river": "Jc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              0.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              3.0,
+              0.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Jd"
+          ],
+          "engineCardId": 37,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            37
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              null,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              false,
+              true
+            ]
+          ],
+          "river": "Jd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              3.0,
+              3.0,
+              0.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Jh"
+          ],
+          "engineCardId": 38,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            38
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              null
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              false
+            ]
+          ],
+          "river": "Jh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Js"
+          ],
+          "engineCardId": 39,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            39
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Js",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              0.0,
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Qc"
+          ],
+          "engineCardId": 40,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            40
+          ],
+          "publishedEVByHand": [
+            [
+              null,
+              -0.000030517578125,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              false,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              0.0,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              0.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Qd"
+          ],
+          "engineCardId": 41,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            41
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              null,
+              -0.000030517578125
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              false,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              0.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Qh"
+          ],
+          "engineCardId": 42,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            42
+          ],
+          "publishedEVByHand": [
+            [
+              -0.000030517578125,
+              -0.000030517578125,
+              null
+            ],
+            [
+              550.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              false
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Qs"
+          ],
+          "engineCardId": 43,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            43
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Qs",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              550.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Kc"
+          ],
+          "engineCardId": 44,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            44
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              null,
+              550.0,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              false,
+              true,
+              true
+            ]
+          ],
+          "river": "Kc",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              0.0,
+              550.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              3.0,
+              0.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Kd"
+          ],
+          "engineCardId": 45,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            45
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              null,
+              550.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              false,
+              true
+            ]
+          ],
+          "river": "Kd",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              2.0,
+              2.0,
+              2.0
+            ],
+            [
+              3.0,
+              3.0,
+              0.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Kh"
+          ],
+          "engineCardId": 46,
+          "equity": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            46
+          ],
+          "publishedEVByHand": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              550.0,
+              550.0,
+              null
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              false
+            ]
+          ],
+          "river": "Kh",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              0.0,
+              550.0,
+              550.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              0.0,
+              3.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Ac"
+          ],
+          "engineCardId": 48,
+          "equity": [
+            [
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            48
+          ],
+          "publishedEVByHand": [
+            [
+              null,
+              550.0,
+              550.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              false,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ac",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              550.0,
+              0.0,
+              550.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              0.0,
+              3.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Ad"
+          ],
+          "engineCardId": 49,
+          "equity": [
+            [
+              1.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            49
+          ],
+          "publishedEVByHand": [
+            [
+              550.0,
+              null,
+              550.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              false,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ad",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              550.0,
+              550.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              0.0
+            ],
+            [
+              2.0,
+              2.0,
+              2.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "Ah"
+          ],
+          "engineCardId": 50,
+          "equity": [
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "globalPublicRiverProbability": 0.01515151560306549,
+          "historyIndices": [
+            0,
+            0,
+            50
+          ],
+          "publishedEVByHand": [
+            [
+              550.0,
+              550.0,
+              null
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              false
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "Ah",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        },
+        {
+          "EV": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "actions": "[Check]",
+          "compatibleJointMass": [
+            [
+              3.0,
+              3.0,
+              3.0
+            ],
+            [
+              3.0,
+              3.0,
+              3.0
+            ]
+          ],
+          "currentBoard": [
+            "2s",
+            "7s",
+            "Ks",
+            "3s",
+            "As"
+          ],
+          "engineCardId": 51,
+          "equity": [
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "globalPublicRiverProbability": 0.022727273404598236,
+          "historyIndices": [
+            0,
+            0,
+            51
+          ],
+          "publishedEVByHand": [
+            [
+              275.0,
+              275.0,
+              275.0
+            ],
+            [
+              275.0,
+              275.0,
+              275.0
+            ]
+          ],
+          "rawWeights": [
+            [
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "referenceUsableByHand": [
+            [
+              true,
+              true,
+              true
+            ],
+            [
+              true,
+              true,
+              true
+            ]
+          ],
+          "river": "As",
+          "totalBetAmount": [
+            0,
+            0
+          ]
+        }
+      ],
+      "rootEV": [
+        [
+          81.25,
+          81.25,
+          81.25
+        ],
+        [
+          468.75,
+          468.75,
+          468.75
+        ]
+      ],
+      "rootEquity": [
+        [
+          0.14772728085517883,
+          0.14772728085517883,
+          0.14772728085517883
+        ],
+        [
+          0.8522727489471436,
+          0.8522727489471436,
+          0.8522727489471436
+        ]
+      ],
+      "rootJointMass": [
+        [
+          3.0,
+          3.0,
+          3.0
+        ],
+        [
+          3.0,
+          3.0,
+          3.0
+        ]
+      ],
+      "rootRawWeights": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "requestedFlopSolved": false,
+  "scope": "Only check/check on turn and river; exact physical runout and export calibration, not a betting strategy or target equilibrium.",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "startingPot": 550,
+  "status": "actual_small_turn_chance_export_calibration_not_full_reference",
+  "unitsPerBB": 100
+}

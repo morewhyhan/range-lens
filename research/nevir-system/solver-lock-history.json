@@ -1,0 +1,12 @@
+{
+  "status": "exact_historical_lock_identity_archived_not_old_binary_rebuilt",
+  "archivedFile": "research/nevir-system/Cargo-before-storage.lock",
+  "archivedSHA256": "3d344a0ce85a1bc2a2667a9bd8b15aa1298a23beb349b316235973c3fb9158aa",
+  "currentSHA256": "3eba95db2071143cb868de4c49c71216d05dd1df7cce48aa4f6794e8a952c1c0",
+  "addedPackages": [
+    "bincode 2.0.0-rc.3",
+    "bincode_derive 2.0.0-rc.3",
+    "virtue 0.0.13"
+  ],
+  "oldRuntimeResultsNotRewritten": true
+}

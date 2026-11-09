@@ -1,0 +1,23 @@
+{
+  "id": "UNIT_RELEASE_READINESS_AUDIT_V1",
+  "status": "paper_35_unit_readiness_joined_not_released",
+  "sourceLedger": "unit-release-readiness-ledger.json",
+  "checks": {
+    "units": 35,
+    "allThreeModesRegistered": true,
+    "allParentsSafe": true,
+    "canonicalFieldsComplete": 0,
+    "unitsWithCompiledCards": 0,
+    "unitsWithMatchedReference": 0,
+    "unitsWithRangeAfter": 0,
+    "unitsWithSuccessor": 0,
+    "exactStrategyReady": 0,
+    "runtimeAttached": 0,
+    "learnerTrial": 0,
+    "failures": 0
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "35项的结构卡位和父层已经合并，但策略、课程政策、动作后范围、后继、运行时和学习者试读仍未闭合；不能把清单完整误写成题库完整。"
+  }
+}

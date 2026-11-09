@@ -1,0 +1,82 @@
+{
+  "status": "exact_current_made_hand_composition_under_authored_user_roots_not_terminal_equity_or_policy",
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "requestSHA256": "cd2ad5c2504628415a4399af8999fcc2bd610fd1f576d10b5a0b93100ff8fb8c",
+  "flop": [
+    "Qs",
+    "Qh",
+    "Qd"
+  ],
+  "compatiblePairs": 187926,
+  "jointMass": 154515,
+  "summary": [
+    {
+      "seat": "SB",
+      "groups": {
+        "quads": {
+          "physicalHands": 27,
+          "literalRootWeight": 27,
+          "compatibleJointMass": 8799,
+          "publicConditionalShare": 0.056945927579846616
+        },
+        "AA_KK_full_house": {
+          "physicalHands": 12,
+          "literalRootWeight": 12,
+          "compatibleJointMass": 3855,
+          "publicConditionalShare": 0.024949034074361713
+        },
+        "JJ_to_22_full_house": {
+          "physicalHands": 60,
+          "literalRootWeight": 60,
+          "compatibleJointMass": 20070,
+          "publicConditionalShare": 0.1298903019124357
+        },
+        "trips_with_unpaired_kickers": {
+          "physicalHands": 388,
+          "literalRootWeight": 372,
+          "compatibleJointMass": 121791,
+          "publicConditionalShare": 0.7882147364333559
+        }
+      }
+    },
+    {
+      "seat": "BB",
+      "groups": {
+        "quads": {
+          "physicalHands": 21,
+          "literalRootWeight": 19,
+          "compatibleJointMass": 8056,
+          "publicConditionalShare": 0.05213733294502152
+        },
+        "AA_KK_full_house": {
+          "physicalHands": 0,
+          "literalRootWeight": 0,
+          "compatibleJointMass": 0,
+          "publicConditionalShare": 0
+        },
+        "JJ_to_22_full_house": {
+          "physicalHands": 48,
+          "literalRootWeight": 42,
+          "compatibleJointMass": 18696,
+          "publicConditionalShare": 0.12099796136297447
+        },
+        "trips_with_unpaired_kickers": {
+          "physicalHands": 356,
+          "literalRootWeight": 300,
+          "compatibleJointMass": 127763,
+          "publicConditionalShare": 0.826864705692004
+        }
+      }
+    }
+  ],
+  "meaning": "Public marginal under both user-chart roots conditioned on board and no collision; not a known-private-hand posterior.",
+  "conclusionsNotEstablished": [
+    "Exact original course ranges",
+    "Action frequencies",
+    "Reason for betting a particular holding",
+    "Course simplification loss",
+    "Turn or river equity",
+    "NL50 suitability"
+  ],
+  "appChanged": false
+}

@@ -1,0 +1,32 @@
+{
+  "frames": 18,
+  "branches": 4,
+  "sourceReconciliation": {
+    "proseLiteralBoard": [
+      "As",
+      "9c",
+      "2h",
+      "7s",
+      "4d"
+    ],
+    "linkBoard": [
+      "Ah",
+      "9c",
+      "2h",
+      "7s",
+      "4d"
+    ],
+    "globallySuitEquivalent": false,
+    "proseFlopSuitGroups": 3,
+    "linkFlopSuitGroups": 2,
+    "prose4hFlushCandidateCombos": 0,
+    "link4hFlushCandidateCombos": 45,
+    "scope": "Physical consistency with hero AcQd; no opponent action weighting. Two original static river charts visually inspected for rank/color partitions and aggregate frequencies; exact per-combo policy and EV remain unavailable.",
+    "originalChartVisuallyVerified": true,
+    "visualVerificationScope": "Static charts only; not per-combo strategy validation",
+    "visualReviewRecord": "source-river-chart-visual-review.json"
+  },
+  "preciseStrategyDecisionsReady": 0,
+  "policyGates": 6,
+  "status": "first_hand_structure_paper_trial_not_strategy_lesson_or_learner_result"
+}

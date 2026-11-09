@@ -1,0 +1,46 @@
+{
+  "id": "GOAL_TRACEABILITY_CONTRACT_V1",
+  "status": "evidence_inventory_not_completion_certificate",
+  "requirements": [
+    {"id":"G1","status":"specification","evidence":["53_单一路径总装与首次全图导航合同.md","66_首遍一手牌逐屏运行合同.md"],"nextGate":"H4"},
+    {"id":"G2","status":"specification","evidence":["53_单一路径总装与首次全图导航合同.md","66_首遍一手牌逐屏运行合同.md"],"nextGate":"H4"},
+    {"id":"G3","status":"not_verified","evidence":["69_低基础首遍试读主持脚本与证据合同.md"],"nextGate":"H5"},
+    {"id":"G4","status":"partial_material","evidence":["55_35项课程单元的依赖编译与发布闸门.md","57_逐街角色与行动分支完整覆盖矩阵.md","70_翻前到翻后完整课程编排总表.md"],"nextGate":"35_unit_release_audit"},
+    {"id":"G5","status":"not_verified","evidence":["54_低理解门槛与认知负荷验收合同.md","68_翻后五层因果地图与视觉教学合同.md","69_低基础首遍试读主持脚本与证据合同.md"],"nextGate":"H5"},
+    {"id":"G6","status":"not_verified","evidence":["58_学习者一页慢想运行卡.md","69_低基础首遍试读主持脚本与证据合同.md"],"nextGate":"unassisted_single_step_trial"},
+    {"id":"G7","status":"partial_material","evidence":["44_开源仓库能力审查_从GTO参考到课程简化训练.md","65_A72候选C0到C5参考请求与停止条件.md"],"nextGate":"A72_C2_C5"},
+    {"id":"G8","status":"not_verified","evidence":["56_简化策略与GTO参考的差异评估合同.md","65_A72候选C0到C5参考请求与停止条件.md"],"nextGate":"H2"},
+    {"id":"G9","status":"not_verified","evidence":["57_逐街角色与行动分支完整覆盖矩阵.md","70_翻前到翻后完整课程编排总表.md"],"nextGate":"H6"},
+    {"id":"G10","status":"not_verified","evidence":["04_正确性与NL50验收方案.md","49_能力分级与迁移准入合同.md","60_最终目标逐项验收与完成闸门.md"],"nextGate":"H7"},
+    {"id":"G11","status":"specification","evidence":["61_视觉导航与范围图语义统一合同.md","68_翻后五层因果地图与视觉教学合同.md"],"nextGate":"visual_first_pass_trial"}
+  ],
+  "gates": [
+    {"id":"H0","name":"identity_freeze"},
+    {"id":"H1","name":"matched_three_street_reference"},
+    {"id":"H2","name":"reference_course_difference_and_successors"},
+    {"id":"H3","name":"static_first_lesson_package"},
+    {"id":"H4","name":"route_runtime_walkthrough"},
+    {"id":"H5","name":"low_baseline_first_pass_trial"},
+    {"id":"H6","name":"unseen_continuous_transfer"},
+    {"id":"H7","name":"frozen_NL50_external_benchmark"}
+  ],
+  "releaseRules": {
+    "specificationDoesNotProveRuntime": true,
+    "factDoesNotProveStrategy": true,
+    "courseRuleDoesNotProveRawGTO": true,
+    "referencePolicyDoesNotProveLearnerSkill": true,
+    "learnerTrialDoesNotProveNL50": true,
+    "missingSuccessorBlocksContinuousLesson": true,
+    "increaseQuestionCountCannotReplaceMissingEvidence": true
+  },
+  "currentStatus": {
+    "documentsAndLocalChecks": true,
+    "matchedThreeStreetReference": false,
+    "firstLessonPackage": false,
+    "routeRuntime": false,
+    "learnerTrial": false,
+    "unseenTransfer": false,
+    "NL50Benchmark": false,
+    "goalCompletionVerified": false
+  }
+}

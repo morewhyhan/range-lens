@@ -1,0 +1,21 @@
+{
+  "id": "COURSE_POLICY_CANDIDATE_LEDGER_AUDIT_V1",
+  "status": "paper_course_policy_candidate_ledger_complete_not_compiled",
+  "sourceLedger": "course-policy-candidate-ledger.json",
+  "checks": {
+    "candidateCount": 122,
+    "courseRuleCandidates": 110,
+    "populationExploitCandidates": 12,
+    "sourceHashesMatched": true,
+    "exactStrategyReady": 0,
+    "coursePolicyCompiled": 0,
+    "learnerTrial": 0,
+    "untypedNumbersCannotPromote": true,
+    "exploitCannotPromoteToGTO": true,
+    "failures": 0
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "候选已抽取但尚未完成政策身份、来源范围、动作分母、差异账本、后继节点与参考快照匹配；因此不能进入可判分题库。"
+  }
+}

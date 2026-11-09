@@ -1,0 +1,134 @@
+{
+  "id": "USER_PROGRESSION_ORDER_AUDIT_V1",
+  "status": "paper_user_order_is_canonical_numeric_author_alias_order_is_non_monotonic_and_runtime_missing",
+  "purpose": "确认用户看到的U0—U7顺序不被V数字、P/S阶段或单元releaseStage打乱，并把每次升级的最低交付固定下来。",
+  "sources": [
+    "release-stage-alias-bridge.json",
+    "user-stage-runtime-adoption-contract.json",
+    "unified-learner-evidence-release-gates.json"
+  ],
+  "canonicalUserOrder": [
+    "U0_guided_route",
+    "U1_structure_recall",
+    "U2_same_parent_practice",
+    "U3_slow_single_step",
+    "U4_adjacent_transfer",
+    "U5_delayed_recall",
+    "U6_continuous_three_street",
+    "U7_target_review"
+  ],
+  "transitions": [
+    {
+      "from": "U0_guided_route",
+      "to": "U1_structure_recall",
+      "gate": "V1_guided_first_pass",
+      "requires": [
+        "allCanonicalStatesVisited",
+        "handoffObserved",
+        "stopBoundaryVisible"
+      ]
+    },
+    {
+      "from": "U1_structure_recall",
+      "to": "U2_same_parent_practice",
+      "gate": "V2_hidden_structure_recall",
+      "requires": [
+        "routeRecall",
+        "layerLocation",
+        "parentRestore",
+        "errorReturn"
+      ]
+    },
+    {
+      "from": "U2_same_parent_practice",
+      "to": "U3_slow_single_step",
+      "gate": "unit.guided_to_independent",
+      "requires": [
+        "firstAnswerBeforeHelp",
+        "requiredOutputComplete",
+        "errorLayerClassified"
+      ]
+    },
+    {
+      "from": "U3_slow_single_step",
+      "to": "U4_adjacent_transfer",
+      "gate": "V4_unseen_slow_single_step",
+      "requires": [
+        "matchedOrDeclaredPolicy",
+        "amountChecked",
+        "rangeAfterOrStop",
+        "legalSuccessorOrStop"
+      ]
+    },
+    {
+      "from": "U4_adjacent_transfer",
+      "to": "U5_delayed_recall",
+      "gate": "V3_single_variable_transfer",
+      "requires": [
+        "exactlyOneChangedField",
+        "affectedLayer",
+        "preservedFields",
+        "firstAnswerBeforeHelp"
+      ]
+    },
+    {
+      "from": "U5_delayed_recall",
+      "to": "U6_continuous_three_street",
+      "gate": "unit.delayed_to_continuous",
+      "requires": [
+        "orderRecalled",
+        "returnPointRecalled",
+        "rangeOrStopRecalled"
+      ]
+    },
+    {
+      "from": "U6_continuous_three_street",
+      "to": "U7_target_review",
+      "gate": "V5_continuous_three_street",
+      "requires": [
+        "successorOrStopEveryNode",
+        "rangeConservation",
+        "ledgerConservation",
+        "actionRightContinuity"
+      ]
+    },
+    {
+      "from": "U7_target_review",
+      "to": null,
+      "gate": "V6_target_external_review",
+      "requires": [
+        "frozenTargetConfig",
+        "heldoutDecisions",
+        "independentReview",
+        "realDecisionAudit",
+        "externalBenchmark"
+      ]
+    }
+  ],
+  "gateAliasOrder": {
+    "U0_guided_route": "V1_guided_first_pass",
+    "U1_structure_recall": "V2_hidden_structure_recall",
+    "U4_adjacent_transfer": "V3_single_variable_transfer",
+    "U3_slow_single_step": "V4_unseen_slow_single_step",
+    "U6_continuous_three_street": "V5_continuous_three_street",
+    "U7_target_review": "V6_target_external_review"
+  },
+  "numericAliasOrderDiffers": true,
+  "userOrderMustWin": true,
+  "evidence": {
+    "paperOrder": true,
+    "paperTransitionRequirements": true,
+    "runtimeUsesCanonicalStage": false,
+    "runtimeUsesSingleNextChain": false,
+    "learnerProgressionObserved": false,
+    "targetEvidence": false
+  },
+  "guards": {
+    "numericGateNamesCannotDefineUserOrder": true,
+    "userStageCannotAdvanceFromScoreOrSpeed": true,
+    "missingEvidenceStopsCurrentStage": true,
+    "unitReleaseDoesNotCreateHomeRoute": true,
+    "continuousDoesNotEqualNL50": true
+  },
+  "currentConclusion": "纸面顺序和升级交付已闭合；由于运行时仍未采用U0—U7，当前页面不能宣称已经只有一条用户进阶路线。"
+}

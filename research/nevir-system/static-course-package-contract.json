@@ -1,0 +1,116 @@
+{
+  "status": "declarative_static_course_package_contract_not_built",
+  "source": "64_静态课包文件格式与发布清单.md",
+  "requiredDirectories": ["reference","policy","ranges","lesson","verification","assets"],
+  "requiredFiles": [
+    "manifest.json",
+    "reference/reference-spec.json",
+    "reference/raw-policy.json",
+    "reference/successor-index.json",
+    "policy/course-policy.json",
+    "policy/simplification-report.json",
+    "ranges/preflop-snapshot.json",
+    "ranges/node-range-views.json",
+    "lesson/route.json",
+    "lesson/frames.json",
+    "lesson/prompts.json",
+    "lesson/teacher-key.json",
+    "verification/physical-checks.json",
+    "verification/ledger-checks.json",
+    "verification/reference-checks.json",
+    "verification/package-verification.json"
+  ],
+  "manifestRequiredFields": [
+    "packageId",
+    "packageVersion",
+    "courseIdentity",
+    "sourceFingerprints",
+    "referenceFingerprint",
+    "coursePolicyFingerprint",
+    "configuration",
+    "routeRoot",
+    "availableReleaseIdentity",
+    "supportedParentNodes",
+    "requiredVerificationFiles",
+    "licenseAndDistributionNotes",
+    "createdAt"
+  ],
+  "frameRequiredFields": [
+    "frameId",
+    "parentFrameId",
+    "returnTo",
+    "releaseIdentity",
+    "visibleState",
+    "question",
+    "allowedActions",
+    "answerPrecision",
+    "helpLevels",
+    "successors",
+    "errorLayer",
+    "unknownCountsAsError",
+    "sourcePointers",
+    "nestedChildFrames",
+    "answerIdentity",
+    "stopReason"
+  ],
+  "nestedFrameContract": {
+    "source": "first-hand-gap-frame-insertions.json",
+    "requiredInsertions": ["I03", "I05", "I07", "I08", "I10", "I11"],
+    "requiredFields": [
+      "insertionId",
+      "parentFrameId",
+      "returnTo",
+      "sequence",
+      "principleId",
+      "visibleState",
+      "question",
+      "answerIdentity",
+      "stopReason",
+      "sourcePointers"
+    ],
+    "invariants": {
+      "parentReturnMustMatch": true,
+      "mainHistoryMustRemainUnchanged": true,
+      "missingEvidenceEmitsStopFrame": true,
+      "oneQuestionPerInsertion": true,
+      "noFlatHomeMenuEntry": true
+    },
+    "currentStatus": {
+      "allRequiredInsertionsCompiled": false,
+      "allReferenceDependenciesReceived": false,
+      "runtimeAttached": false
+    }
+  },
+  "rangeViewRequiredFields": [
+    "nodeId",
+    "owner",
+    "viewpoint",
+    "knownCards",
+    "history",
+    "rangeBefore",
+    "actionProbabilities",
+    "rangeAfterByAction",
+    "normalizationDenominator",
+    "physicalFilter",
+    "actionFilter",
+    "successorCards",
+    "parentSnapshot"
+  ],
+  "releaseGates": {
+    "allManifestFilesExistAndHash": true,
+    "crossDirectoryFingerprintsMatch": true,
+    "referenceAndCoursePolicySeparate": true,
+    "everyExactFrameHasSuccessorsOrExplicitStop": true,
+    "teacherKeySeparatedFromPrompts": true,
+    "noLongTermLearnerDatabase": true,
+    "missingHardGateEmitsGapList": true
+  },
+  "currentStatus": {
+    "a72PackageBuilt": false,
+    "qqqPackageBuilt": false,
+    "c0ToC5ArtifactsClosed": false,
+    "c6ToC9ArtifactsClosed": false,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  }
+}

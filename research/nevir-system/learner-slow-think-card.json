@@ -1,0 +1,36 @@
+{
+  "status": "declarative_learner_slow_think_card_not_trialed",
+  "source": "58_学习者一页慢想运行卡.md",
+  "mantra": "先看清现在 → 再看牌和范围 → 比较能做什么 → 执行金额 → 更新以后再来",
+  "steps": [
+    {"id":"S1","label":"context","questions":["whose_turn","history","pot","stacks","to_call"],"returnTo":"桌面与历史"},
+    {"id":"S2","label":"cards","questions":["best_five","hand_class","relative_strength","draws"],"returnTo":"牌面与最佳五张"},
+    {"id":"S3","label":"ranges","questions":["range_owner","physical_removal","action_filter","blocker_effect"],"returnTo":"范围前后图"},
+    {"id":"S4","label":"legal_actions","questions":["legal_menu","amount","next_actor","successors"],"returnTo":"动作菜单与账本"},
+    {"id":"S5","label":"compare","questions":["purpose","price","worse_calls","better_folds","future_pressure"],"returnTo":"当前比较"},
+    {"id":"S6","label":"execute","questions":["exact_amount","pot_after","stack_after","street_close","action_reopens"],"returnTo":"执行与交接"},
+    {"id":"S7","label":"update","questions":["new_history","range_change","new_card_effect","next_task"],"returnTo":"更新后重新定位"}
+  ],
+  "backtracks": {
+    "unknownButton":"S1",
+    "unknownHand":"S2",
+    "unknownRange":"S3",
+    "unknownCallOrFold":"S4_S5",
+    "wrongAmount":"S6",
+    "confusedAfterNewCard":"S7",
+    "missingReference":"stop_at_fact_or_demonstration"
+  },
+  "antiShortcutRules": [
+    "drawDoesNotImplyBet",
+    "handClassDoesNotImplyAction",
+    "physicalRemovalDoesNotImplyActionFilter",
+    "staticOverallFrequencyDoesNotImplyPerHandAction",
+    "resultDoesNotRewriteFirstAnswer"
+  ],
+  "currentStatus": {
+    "cardImplemented": false,
+    "adultBeginnerTrial": false,
+    "unseenTransferEvidence": false,
+    "nl50Evidence": false
+  }
+}

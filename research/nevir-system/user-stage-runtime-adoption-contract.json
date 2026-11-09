@@ -1,0 +1,181 @@
+{
+  "id": "USER_STAGE_RUNTIME_ADOPTION_CONTRACT_V1",
+  "status": "paper_user_stage_runtime_contract_written_not_implemented",
+  "purpose": "规定运行时只采用U0—U7作为用户进阶字段，并把canonical路线、父帧、单元释放、帮助和证据卡接到同一个会话状态；不把作者别名做成页面菜单。",
+  "sources": [
+    "release-stage-alias-bridge.json",
+    "first-lesson-visible-state-machine.json",
+    "first-pass-user-facing-script-contract.json",
+    "unified-learner-evidence-release-gates.json"
+  ],
+  "canonicalUserStages": [
+    "U0_guided_route",
+    "U1_structure_recall",
+    "U2_same_parent_practice",
+    "U3_slow_single_step",
+    "U4_adjacent_transfer",
+    "U5_delayed_recall",
+    "U6_continuous_three_street",
+    "U7_target_review"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "sessionStateFields": [
+    "userStage",
+    "routeStateId",
+    "parentFrameStack",
+    "childFrame",
+    "unitReleaseStage",
+    "helpLevel",
+    "caseIdentity",
+    "firstAnswer",
+    "requiredOutput",
+    "errorLayer",
+    "returnTo",
+    "handoffPayload",
+    "successorOrStop",
+    "releaseDecision"
+  ],
+  "transitions": [
+    {
+      "from": "U0_guided_route",
+      "to": "U1_structure_recall",
+      "gate": "V1_guided_first_pass",
+      "requires": [
+        "allCanonicalStatesVisited",
+        "handoffObserved",
+        "stopBoundaryVisible"
+      ]
+    },
+    {
+      "from": "U1_structure_recall",
+      "to": "U2_same_parent_practice",
+      "gate": "V2_hidden_structure_recall",
+      "requires": [
+        "routeRecall",
+        "layerLocation",
+        "parentRestore",
+        "errorReturn"
+      ]
+    },
+    {
+      "from": "U2_same_parent_practice",
+      "to": "U3_slow_single_step",
+      "gate": "unit.guided_to_independent",
+      "requires": [
+        "firstAnswerBeforeHelp",
+        "requiredOutputComplete",
+        "errorLayerClassified"
+      ]
+    },
+    {
+      "from": "U3_slow_single_step",
+      "to": "U4_adjacent_transfer",
+      "gate": "V4_unseen_slow_single_step",
+      "requires": [
+        "matchedOrDeclaredPolicy",
+        "amountChecked",
+        "rangeAfterOrStop",
+        "legalSuccessorOrStop"
+      ]
+    },
+    {
+      "from": "U4_adjacent_transfer",
+      "to": "U5_delayed_recall",
+      "gate": "V3_single_variable_transfer",
+      "requires": [
+        "exactlyOneChangedField",
+        "affectedLayer",
+        "preservedFields",
+        "firstAnswerBeforeHelp"
+      ]
+    },
+    {
+      "from": "U5_delayed_recall",
+      "to": "U6_continuous_three_street",
+      "gate": "unit.delayed_to_continuous",
+      "requires": [
+        "orderRecalled",
+        "returnPointRecalled",
+        "rangeOrStopRecalled"
+      ]
+    },
+    {
+      "from": "U6_continuous_three_street",
+      "to": "U7_target_review",
+      "gate": "V5_continuous_three_street",
+      "requires": [
+        "successorOrStopEveryNode",
+        "rangeConservation",
+        "ledgerConservation",
+        "actionRightContinuity"
+      ]
+    },
+    {
+      "from": "U7_target_review",
+      "to": null,
+      "gate": "V6_target_external_review",
+      "requires": [
+        "frozenTargetConfig",
+        "heldoutDecisions",
+        "independentReview",
+        "realDecisionAudit",
+        "externalBenchmark"
+      ]
+    }
+  ],
+  "visibleRules": {
+    "showPlainStageNameOnly": true,
+    "showOneRouteStateAtATime": true,
+    "showOnePrimaryQuestion": true,
+    "showOnePrimaryAction": true,
+    "authorAliasesHidden": true,
+    "requiredInputsAreNeverHidden": true,
+    "childCloseRestoresParentSnapshot": true,
+    "missingEvidenceStopsCurrentParent": true
+  },
+  "transitionRules": {
+    "nextStateComesFromCanonicalRoute": true,
+    "userStageCannotAdvanceFromTotalScore": true,
+    "userStageCannotAdvanceFromSpeed": true,
+    "failedTransitionStaysOrReturnsToSameParent": true,
+    "unitReleaseDoesNotCreateHomeRoute": true,
+    "unknownIsRecordedAsErrorNotSkipped": true,
+    "sessionOnlyNoDatabase": true
+  },
+  "forbiddenRuntimeShortcuts": [
+    "flatModulesMenuAsPrimaryRoute",
+    "numericAliasAsVisibleStage",
+    "scoreBasedStageJump",
+    "speedBasedStageJump",
+    "randomNextState",
+    "defaultActionWhenEvidenceMissing",
+    "childCloseToHomeInsteadOfParent",
+    "persistLearnerStageAfterSession"
+  ],
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeReadsUserStage": false,
+    "runtimeParentRestore": false,
+    "runtimeStageTransitions": false,
+    "learnerTrial": false,
+    "targetEvidence": false
+  },
+  "guards": {
+    "contractDoesNotEqualRuntime": true,
+    "runtimeRouteDoesNotEqualLearnerMastery": true,
+    "continuousDoesNotEqualNL50": true
+  }
+}

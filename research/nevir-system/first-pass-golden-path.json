@@ -1,0 +1,318 @@
+{
+  "id": "FIRST_PASS_GOLDEN_PATH_V1",
+  "status": "paper_golden_path_not_runtime",
+  "purpose": "把首课L0-L4外层定位、p1-p7翻后内层和一次结构回放压成一条低基础用户可跟随、可复述、可原位返回的黄金路径。",
+  "route": [
+    "G0_welcome",
+    "G1_context",
+    "G2_preflop_chart",
+    "G3_preflop_action",
+    "G4_range_bridge",
+    "G5_p1_context",
+    "G6_p2_hand",
+    "G7_p3_range",
+    "G8_p4_compare",
+    "G9_p5_execute",
+    "G10_p6_update",
+    "G11_p7_close",
+    "G12_recall_transfer"
+  ],
+  "screenShell": {
+    "top": "只有当前节点、上一步和下一步的短路线条",
+    "center": "一张桌面或一张牌/范围图，当前变化只高亮一个字段",
+    "bottom": "一句普通话问题和一个主要动作",
+    "secondary": "解析、术语、来源和原始资料放在按需抽屉",
+    "forbidden": [
+      "dashboard",
+      "flat_35_item_home",
+      "multiple_equal_primary_buttons",
+      "hidden_required_input"
+    ]
+  },
+  "frames": [
+    {
+      "id": "G0_welcome",
+      "outer": "L0",
+      "inner": null,
+      "see": [
+        "six_max_table",
+        "effective_stack",
+        "training_goal"
+      ],
+      "ask": "这是一张什么桌，今天只练哪一条路线？",
+      "primaryAction": "确认桌面并开始",
+      "output": "tableFrame",
+      "handoff": "tableFrame→G1_context",
+      "errorReturn": "G0_welcome",
+      "stopCondition": "桌面、有效筹码或训练目标未确认时停在本帧，不进入专题选择。",
+      "after": "只显示路线条，不显示专题菜单"
+    },
+    {
+      "id": "G1_context",
+      "outer": "L1",
+      "inner": null,
+      "see": [
+        "seats",
+        "folded_seats",
+        "actor_pointer",
+        "history",
+        "pot",
+        "to_call"
+      ],
+      "ask": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "primaryAction": "点行动者并确认待补",
+      "output": "contextFrame",
+      "handoff": "contextFrame→G2_preflop_chart",
+      "errorReturn": "G1_context",
+      "stopCondition": "行动者、历史、底池或待补金额不完整时停在本帧，只修正局面事实。",
+      "after": "只解释行动顺序或金额，不出现下注策略"
+    },
+    {
+      "id": "G2_preflop_chart",
+      "outer": "L2",
+      "inner": null,
+      "see": [
+        "one_named_preflop_chart",
+        "hero_hand",
+        "fixed_169_grid"
+      ],
+      "ask": "我的牌在这张图的哪一格？先只找到坐标。",
+      "primaryAction": "点击固定坐标格",
+      "output": "preflopCell",
+      "handoff": "preflopCell→G3_preflop_action",
+      "errorReturn": "G2_preflop_chart",
+      "stopCondition": "图表身份或格子坐标未确定时停在本帧，不猜动作。",
+      "after": "先只显示图表名称、范围归属和坐标，不在这一屏解释翻后。"
+    },
+    {
+      "id": "G3_preflop_action",
+      "outer": "L3",
+      "inner": null,
+      "see": [
+        "selected_grid_cell",
+        "action_legend",
+        "action_weight"
+      ],
+      "ask": "这个格子代表什么翻前课程动作？权重是多少？",
+      "primaryAction": "确认格子动作和权重",
+      "output": "preflopAction",
+      "handoff": "preflopAction→G4_range_bridge",
+      "errorReturn": "G3_preflop_action",
+      "stopCondition": "动作身份或权重未读清时停在本帧，不把未知权重编成确定动作。",
+      "after": "只确认动作身份和权重，不把它解释成翻后下注策略。"
+    },
+    {
+      "id": "G4_range_bridge",
+      "outer": "L4",
+      "inner": null,
+      "see": [
+        "range_before",
+        "known_cards",
+        "physical_filter",
+        "range_after_or_stop"
+      ],
+      "ask": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "primaryAction": "标记一组物理排除并确认分母",
+      "output": "startingRangeFrame",
+      "handoff": "startingRangeFrame→G5_p1_context",
+      "errorReturn": "G4_range_bridge",
+      "stopCondition": "物理过滤、范围分母或资料身份缺失时停在本帧，不推导行动弃牌。",
+      "after": "固定同一坐标，明确物理排除不等于行动弃牌"
+    },
+    {
+      "id": "G5_p1_context",
+      "outer": "L4",
+      "inner": "p1_context",
+      "see": [
+        "board",
+        "hole_cards",
+        "history",
+        "actor_pointer",
+        "pot",
+        "stacks",
+        "to_call"
+      ],
+      "ask": "翻牌后现在轮到谁？继续需要多少钱？",
+      "primaryAction": "确认行动权和价格",
+      "output": "contextCard",
+      "handoff": "contextCard→G6_p2_hand",
+      "errorReturn": "G5_p1_context",
+      "stopCondition": "翻后行动者、价格或历史没有确认时停在本帧，不进入牌力判断。",
+      "after": "保留翻前历史和范围入口，不重置牌局"
+    },
+    {
+      "id": "G6_p2_hand",
+      "outer": "L4",
+      "inner": "p2_board",
+      "see": [
+        "board_cards",
+        "hole_cards",
+        "best_five_slots",
+        "hand_rank_ladder"
+      ],
+      "ask": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "primaryAction": "拼最佳五张并点牌型",
+      "output": "handCard",
+      "handoff": "handCard→G7_p3_range",
+      "errorReturn": "G6_p2_hand",
+      "childExercise": "hand-rank-ladder-exercise.json",
+      "childReturn": "G6_p2_hand",
+      "stopCondition": "最佳五张、牌型或改善牌未确认时停在本帧，不跳到下注答案。",
+      "after": "答后可打开横向牌力顺序短练，不与下注按钮混合"
+    },
+    {
+      "id": "G7_p3_range",
+      "outer": "L4",
+      "inner": "p3_range",
+      "see": [
+        "same_coordinate_range_before",
+        "physical_removed",
+        "action_filtered_or_unknown",
+        "denominator"
+      ],
+      "ask": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "primaryAction": "点一个组合并选择变化身份",
+      "output": "rangeDeltaCard",
+      "handoff": "rangeDeltaCard→G8_p4_compare",
+      "errorReturn": "G7_p3_range",
+      "stopCondition": "范围分母、物理移除或行动筛选身份不完整时停在本帧，不开放精确策略。",
+      "after": "阻挡牌先显示组合数变化；没有行动参考就显示停止卡"
+    },
+    {
+      "id": "G8_p4_compare",
+      "outer": "L4",
+      "inner": "p4_compare",
+      "see": [
+        "legal_actions",
+        "price",
+        "purpose",
+        "policy_identity",
+        "stop_reason_if_missing"
+      ],
+      "ask": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "primaryAction": "选择一个有依据的动作或停止",
+      "output": "choiceCard",
+      "handoff": "choiceCard→G9_p5_execute",
+      "errorReturn": "G8_p4_compare",
+      "stopCondition": "没有匹配参考或明确课程政策时停在本帧，只显示资料缺口，不伪造最佳动作。",
+      "after": "课程规则、匹配参考、事实模型分开标记，不显示无依据精确频率"
+    },
+    {
+      "id": "G9_p5_execute",
+      "outer": "L4",
+      "inner": "p5_execute",
+      "see": [
+        "action_button",
+        "amount_input",
+        "pot_before_after",
+        "stacks_after",
+        "next_actor"
+      ],
+      "ask": "实际点什么？投入多少？接下来轮到谁？",
+      "primaryAction": "点击动作并确认金额",
+      "output": "ledgerCard",
+      "handoff": "ledgerCard→G10_p6_update",
+      "errorReturn": "G9_p5_execute",
+      "stopCondition": "动作金额、底池、后手或下一行动者不守恒时停在本帧，不能进入更新。",
+      "after": "金额不守恒或行动者错误时原位修正，不能继续"
+    },
+    {
+      "id": "G10_p6_update",
+      "outer": "L4",
+      "inner": "p6_update",
+      "see": [
+        "response_or_new_card",
+        "one_changed_field_highlight",
+        "range_after",
+        "successor_or_stop"
+      ],
+      "ask": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "primaryAction": "确认变化并进入真实后继",
+      "output": "changeCard",
+      "handoff": "changeCard→G11_p7_close",
+      "errorReturn": "G10_p6_update",
+      "stopCondition": "变化字段、动作后范围或真实后继缺失时停在本帧，不生成下一街。",
+      "after": "保留历史、分母、底池和行动权；没有后继就停在当前父帧"
+    },
+    {
+      "id": "G11_p7_close",
+      "outer": "L4",
+      "inner": "p7_close",
+      "see": [
+        "settlement_ledger",
+        "decision_vs_result",
+        "error_layer",
+        "route_replay"
+      ],
+      "ask": "这手牌到哪里结束？如果错了，错在第几层？",
+      "primaryAction": "确认结算并选择回退层",
+      "output": "reviewCard",
+      "handoff": "reviewCard→G12_recall_transfer",
+      "errorReturn": "最近缺失层",
+      "stopCondition": "结算、错误层或决策与结果分离未完成时回到最近缺失层，不进入迁移。",
+      "after": "结果不能反写当时的信息；保留首答与解析后答"
+    },
+    {
+      "id": "G12_recall_transfer",
+      "outer": null,
+      "inner": null,
+      "see": [
+        "blank_outer_route_map",
+        "blank_postflop_inner_route",
+        "parent_child_bracket",
+        "one_unseen_parent_frame",
+        "one_changed_field"
+      ],
+      "ask": "先说外层路线，再说翻后七步；这个陌生变化要回哪一层？",
+      "primaryAction": "复述双层路线并完成单变量迁移",
+      "output": "nestedStructureEvidence",
+      "handoff": "nestedStructureEvidence→next_session_or_stop",
+      "errorReturn": "对应父层",
+      "stopCondition": "不能复述路线或定位单变量变化时回到对应父层，不开放下一阶段。",
+      "after": "收起标题和答案颜色，不打开35项菜单；用户不需要记内部编号"
+    }
+  ],
+  "handoffRules": {
+    "oneQuestionPerFrame": true,
+    "onePrimaryActionPerFrame": true,
+    "everyOutputReadByNextFrame": true,
+    "parentRestoredAfterChild": true,
+    "missingEvidenceStops": true,
+    "unknownCountsAsError": true,
+    "firstAnswerBeforeExplanation": true,
+    "noSpeedGate": true,
+    "sessionOnly": true
+  },
+  "firstPassChecks": [
+    "outer_route_recall_5_states",
+    "inner_route_recall_7_steps_6_edges",
+    "parent_child_relation_recall",
+    "three_unseen_layer_locations",
+    "two_error_recoveries",
+    "one_variable_transfer"
+  ],
+  "currentEvidence": {
+    "paperPath": true,
+    "runtime": false,
+    "lowBaselineTrial": false,
+    "matchedReference": false,
+    "continuousThreeStreet": false,
+    "NL50Evidence": false
+  },
+  "scope": "first_lesson_visible_state_machine",
+  "canonicalStateRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "recallFrame": "G12_recall_transfer"
+}

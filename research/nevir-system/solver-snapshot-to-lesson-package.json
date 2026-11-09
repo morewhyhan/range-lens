@@ -1,0 +1,139 @@
+{
+  "id": "SOLVER_SNAPSHOT_TO_LESSON_PACKAGE_V1",
+  "status": "solver_api_to_lesson_fields_mapped_release_gates_open",
+  "source": {
+    "repo": "b-inary/postflop-solver",
+    "localSnapshot": "research/solver-source",
+    "commit": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "snapshotDate": "2023-10-01T21:59:55+09:00",
+    "license": "AGPL-3.0-or-later",
+    "algorithm": "discounted_cfr",
+    "activePlayers": 2,
+    "sixMaxBunchingIsNotSixActivePlayers": true
+  },
+  "inputIdentity": {
+    "required": [
+      "sourceCommit",
+      "cargoFeatures",
+      "cardConfig.rangeByPlayer",
+      "cardConfig.flopTurnRiver",
+      "deadCardsAndBunching",
+      "treeConfig.startingPot",
+      "treeConfig.effectiveStack",
+      "treeConfig.rakeRateAndCap",
+      "treeConfig.streetBetSizes",
+      "treeConfig.raiseSizes",
+      "treeConfig.donkSizes",
+      "treeConfig.allinThresholds",
+      "treeConfig.mergingThreshold",
+      "nodeLocking",
+      "targetStorageMode"
+    ],
+    "rangeIsConcreteWeightedCombos": true,
+    "actionMenuIsPartOfProblemIdentity": true,
+    "actionIndexAloneIsInsufficient": true
+  },
+  "solverOutputs": {
+    "nodeIdentity": ["history", "currentBoard", "currentPlayer", "currentNodeType", "totalBetAmount", "availableActions"],
+    "perCombo": ["privateCards", "weights", "normalizedWeights", "strategy", "equity", "expectedValues", "expectedValuesDetail"],
+    "chanceAndSuccessors": ["possibleCards", "isomorphicChanceMap", "successorNodeIdentity", "successorActionMenu"],
+    "quality": ["iterations", "targetExploitability", "finalExploitability", "stoppingReason", "compression", "storageMode"],
+    "preconditions": {
+      "strategyRequiresNonChanceNonTerminalAndAllocatedMemory": true,
+      "expectedValuesRequiresSolvedGame": true,
+      "weightsAfterMutationRequireNormalizedWeightCache": true,
+      "chanceRepresentativeMustBeExpandedBeforeDisplay": true
+    }
+  },
+  "lessonPackageMapping": {
+    "rangeBefore": "normalized_weights_or_explicit_course_denominator",
+    "referenceActionFrequencyByCombo": "strategy_action_major_indexed_by_private_cards",
+    "referenceActionValueByCombo": "expected_values_detail_action_major_indexed_by_private_cards",
+    "referenceEquityByCombo": "equity_indexed_by_private_cards",
+    "referenceActionMenu": "available_actions_with_actual_amounts",
+    "rangeAfter": "rangeBefore_times_action_frequency_per_action",
+    "differenceLedger": "physical_conflict_separate_from_action_filter",
+    "legalSuccessorCards": "possible_cards_expanded_from_isomorphism",
+    "solverQuality": "iterations_exploitability_stopping_and_storage_identity",
+    "teachingFields": ["plainQuestion", "onePrimaryAction", "plainExplanation", "errorReturn", "restatementCheck"]
+  },
+  "externalRepositoryRoleMap": {
+    "gto-wizard/equity-calculator": {
+      "layer": "fact_equity",
+      "allowedOutputs": ["exact_runout_equity", "win", "tie", "pot_share_equity"],
+      "forbiddenPromotion": ["betting_policy", "range_action_frequency", "successor_policy"]
+    },
+    "b-inary/holdem-hand-evaluator": {
+      "layer": "fact_hand_rank",
+      "allowedOutputs": ["best_five", "hand_category", "showdown_order"],
+      "forbiddenPromotion": ["action_ev", "course_answer"]
+    },
+    "b-inary/postflop-solver": {
+      "layer": "reference_strategy",
+      "allowedOutputs": ["per_combo_strategy", "action_ev", "range_after", "successor_identity"],
+      "forbiddenPromotion": ["course_policy", "beginner_mastery", "nl50_readiness"]
+    },
+    "b-inary/wasm-postflop": {
+      "layer": "browser_solver_reference",
+      "allowedOutputs": ["worker_input_shape", "result_view_shape", "node_navigation_reference"],
+      "forbiddenPromotion": ["completed_training_flow", "learner_route"]
+    },
+    "b-inary/desktop-postflop": {
+      "layer": "desktop_solver_reference",
+      "allowedOutputs": ["desktop_shell_reference", "range_node_view_reference"],
+      "forbiddenPromotion": ["completed_training_mode", "course_policy"]
+    },
+    "b-inary/poker-cfr": {
+      "layer": "algorithm_test_reference",
+      "allowedOutputs": ["small_game_cfr_regression"],
+      "forbiddenPromotion": ["full_postflop_reference", "course_answer"]
+    }
+  },
+  "runtimeIntegrationContract": {
+    "frontendReadsOnly": "verified_static_lesson_packages",
+    "frontendMustNot": ["solve_on_answer_click", "infer_missing_policy", "display_isomorphic_card_as_unique", "use_equity_as_action_answer"],
+    "coursePolicyMustRemainSeparateFrom": ["referenceStrategy", "factSnapshot", "solverQuality"],
+    "staticPackageMinimum": ["inputFingerprint", "sourceIdentity", "factSnapshot", "referenceSnapshot", "coursePolicy", "differenceLedger", "rangeSnapshots", "successorGraph", "lessonFrames", "releaseDecision"],
+    "missingReferenceIdentity": "insufficient_evidence_no_exact_grade",
+    "missingSuccessorIdentity": "stop_at_current_parent",
+    "licenseFailureIdentity": "research_only_not_distributable",
+    "currentStatus": "contract_written_compiler_and_runtime_missing"
+  },
+  "minimalPackageRequired": [
+    "completeInputIdentity",
+    "handFactVerification",
+    "rawReferencePerAction",
+    "coursePolicyAndQuantization",
+    "rangeBeforeAndAfterForEachAction",
+    "successorOrExplicitStopReason",
+    "teachingFields",
+    "provenanceAndReleaseAudit"
+  ],
+  "releaseGates": [
+    {"id":"S0_input_identity","blocks":"any_export","requires":["sourceCommit","fullCardConfig","fullTreeConfig","licenseRecord"]},
+    {"id":"S1_reference","blocks":"action_grading","requires":["solvedSnapshot","strategy","ev","equity","quality"]},
+    {"id":"S2_policy","blocks":"course_answer","requires":["rawActionMenu","simplificationRule","quantizationError","scope"]},
+    {"id":"S3_range_delta","blocks":"range_change_teaching","requires":["rangeBefore","rangeAfter","differenceLedger","fixedDenominator"]},
+    {"id":"S4_successor","blocks":"continuous_practice","requires":["successorIdentity_or_stopReason","expandedChanceCards","nextRangeState"]},
+    {"id":"S5_learner","blocks":"beginner_claim","requires":["one_question_one_action","error_return","learner_trial"]}
+  ],
+  "guards": {
+    "equityDoesNotImplyAction": true,
+    "solverDoesNotEqualCoursePolicy": true,
+    "actionIndexCannotBeDisplayedWithoutActualAmount": true,
+    "isomorphismRepresentativeCannotBeDisplayedAsUniqueCard": true,
+    "storageRoundTripDoesNotProveStrategyQuality": true,
+    "missingSuccessorBlocksContinuousPractice": true,
+    "missingMatchedReferenceStopsNode": true,
+    "unlicensedOrUnclearSourceCannotBeCopied": true,
+    "noNL50ClaimFromSolverOutputAlone": true
+  },
+  "currentEvidence": {
+    "localSourceApiInspected": true,
+    "lessonPackageCompilerImplemented": false,
+    "matchedCourseReferenceAcquired": false,
+    "runtimeTrainingIntegrated": false,
+    "learnerTrial": false,
+    "nl50Evidence": false
+  }
+}

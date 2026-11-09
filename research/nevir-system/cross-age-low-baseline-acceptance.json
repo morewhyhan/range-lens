@@ -1,0 +1,288 @@
+{
+  "id": "CROSS_AGE_LOW_BASELINE_ACCEPTANCE_V1",
+  "status": "cross_age_comprehension_contract_written_trial_missing",
+  "sourceDocument": "188_跨年龄低基础可理解性与操作验收合同.md",
+  "parentDocument": "187_一遍到目标级的嵌套释放总架构合同.md",
+  "audienceFloor": {
+    "meaning": "低扑克基础、工作记忆有限、阅读或操作速度较慢的用户",
+    "ageIsNotProxyForAbility": true,
+    "targetIncludesChildLikeReadingLoad": true,
+    "targetIncludesOlderAdultLikeVisualAndOperationLoad": true,
+    "noOutcomeGuaranteeFromAudienceFit": true
+  },
+  "fourChannels": {
+    "language": {
+      "plainQuestion": true,
+      "oneVerbAndOneObject": true,
+      "technicalTermsNotRequiredForFirstAnswer": true
+    },
+    "visual": {
+      "textAndGraphicRedundancy": true,
+      "colorIsNotSoleCue": true,
+      "stableCoordinates": true,
+      "currentChangeIsVisible": true
+    },
+    "memory": {
+      "routeCuePersistent": true,
+      "handoffCardPersistent": true,
+      "parentSnapshotRestorable": true,
+      "nextAndReturnAreVisible": true
+    },
+    "operation": {
+      "onePrimaryAction": true,
+      "largeTargetRecommended": true,
+      "retryWithoutRouteReset": true,
+      "noCountdown": true,
+      "slowOperationIsNotError": true
+    }
+  },
+  "firstPassTasks": [
+    "L0_to_L4_context_and_range_handoff",
+    "p1_to_p7_guided_postflop_route",
+    "locate_layer_without_step_title",
+    "restore_parent_after_child_close",
+    "return_to_nearest_missing_layer_after_injected_error",
+    "identify_affected_layer_after_one_field_change",
+    "complete_unseen_short_route_before_explanation"
+  ],
+  "onePassArchitectureEvidence": {
+    "purpose": "证明跟完首遍后留下的是可复述的步骤结构，而不是只完成了一串按钮",
+    "requiredBeforeStructureRelease": [
+      "recall_route_order_without_step_titles",
+      "locate_current_layer_in_three_unseen_parent_frames",
+      "state_each_step_handoff_in_plain_language",
+      "identify_nearest_missing_layer_after_two_injected_errors",
+      "identify_affected_layer_after_one_field_change",
+      "state_stop_reason_when_reference_or_successor_is_missing"
+    ],
+    "firstAnswerBeforeHelp": true,
+    "speedIsNotEvidence": true,
+    "aggregateScoreIsNotEvidence": true,
+    "postExplanationAccuracyIsNotIndependentEvidence": true,
+    "minimumRecallPrompt": "先说这手牌从哪里开始，再说每一步先看什么、交给下一步什么、缺资料时停在哪里。"
+  },
+  "trialPacket": {
+    "packet": "low-baseline-first-pass-trial-packet.json",
+    "outerPromptPacket": "first-pass-outer-route-trial-prompts.json",
+    "outerAnswerKey": "first-pass-outer-route-trial-key.json",
+    "outerRouteOrder": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "outerCaseCount": 5,
+    "innerRouteOrder": [
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6",
+      "p7"
+    ],
+    "outerCasesAreStructureOnly": true,
+    "participantObservationStillRequired": true
+  },
+  "observationFields": [
+    "firstAnswer",
+    "hostPromptCount",
+    "hostPromptContent",
+    "currentLayerSelfLocated",
+    "primaryActionCompleted",
+    "nextLayerSelfLocated",
+    "returnPointSelfLocated",
+    "errorLayer",
+    "parentRestore",
+    "changedField",
+    "exitPoint",
+    "visualAnchorPointed",
+    "nextOrStopSelfLocated",
+    "handoffRestated",
+    "retryWithoutRouteReset"
+  ],
+  "observationSchema": {
+    "recordIdentity": [
+      "participantId",
+      "audienceLoadProfile",
+      "stopId",
+      "passIndex",
+      "routeRevision"
+    ],
+    "answerRecord": [
+      "firstAnswer",
+      "answerAfterHelp",
+      "helpLevel",
+      "hostPromptCount",
+      "hostPromptType",
+      "promptContent",
+      "primaryActionCompleted"
+    ],
+    "structureRecord": [
+      "currentLayerSelfLocated",
+      "nextLayerSelfLocated",
+      "returnPointSelfLocated",
+      "parentRestore",
+      "errorLayer",
+      "changedField",
+      "successorOrStopSelfLocated"
+    ],
+    "hostPromptTypes": [
+      "none",
+      "repeat_question",
+      "point_to_visible_input",
+      "point_to_route_marker",
+      "reveal_fact",
+      "lead_to_answer"
+    ],
+    "independenceRule": "lead_to_answer or host_decides_current_layer is not an independent pass; answerAfterHelp remains for diagnosis only",
+    "timingRule": "time may be logged for usability analysis but never becomes a pass/fail gate",
+    "missingValueRule": "unknown is recorded explicitly; missing observation cannot be silently treated as pass"
+  },
+  "passRules": {
+    "perStopAndPerChannel": true,
+    "averageScoreCannotMaskCoreFailure": true,
+    "hostLeadingAnswerIsNotIndependentPass": true,
+    "slowReadingOrOperationIsNotFailure": true,
+    "unknownButtonCountsAsErrorAndPreservesRoute": true,
+    "sameStopRepeatedFailureRequiresPromptRevision": true,
+    "everyCanonicalStopHasFourChannels": true,
+    "firstAnswerBeforeHelp": true,
+    "missingObservationIsUnknownNotPass": true
+  },
+  "releaseDecision": {
+    "defaultStatus": "paper_contract_only",
+    "statuses": [
+      "paper_contract_only",
+      "trial_collecting",
+      "revise_before_release",
+      "cross_age_pilot_pass",
+      "structure_release_ready"
+    ],
+    "stopBeforeReleaseIf": [
+      "any_core_stop_has_language_failure",
+      "any_core_stop_has_current_layer_failure",
+      "any_core_stop_has_parent_restore_failure",
+      "any_core_stop_has_error_recovery_failure",
+      "any_core_stop_requires_leading_answer",
+      "unseen_short_route_not_attempted_before_explanation",
+      "observation_missing_or_replaced_by_average_score"
+    ],
+    "pilotPassRequires": [
+      "all_firstPassTasks_observed",
+      "per_stop_and_per_channel_records_complete",
+      "first_answer_before_help_recorded",
+      "order_recall_layer_location_error_recovery_and_one_variable_transfer_each_pass",
+      "no_core_failure_hidden_by_aggregate_score"
+    ],
+    "doesNotProve": [
+      "matched_strategy_accuracy",
+      "continuous_three_street_skill",
+      "NL50_readiness"
+    ]
+  },
+  "visualRequirements": [
+    "current_route_and_adjacent_direction",
+    "necessary_parent_inputs",
+    "one_plain_language_question",
+    "one_primary_action_and_unknown_button",
+    "handoff_or_stop_card"
+  ],
+  "assistanceOptions": {
+    "fontScale": "optional",
+    "cardScale": "optional",
+    "readAloud": "optional",
+    "animationSpeed": "optional",
+    "optionsMayChangeRouteOrGrading": false
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "crossAgeTrial": false,
+    "beginnerTrial": false,
+    "routeComprehension": false,
+    "parentRestore": false,
+    "unseenTransfer": false,
+    "nl50Evidence": false,
+    "stopObservationCrosswalkPaper": true,
+    "stopObservationTrial": false
+  },
+  "observationFieldRegistry": {
+    "firstAnswer": {
+      "channel": "language",
+      "timing": "before_help",
+      "meaning": "用户第一次自己给出的回答或明确不知道。"
+    },
+    "currentLayerSelfLocated": {
+      "channel": "memory",
+      "timing": "before_help",
+      "meaning": "用户自己指出当前路线停点。"
+    },
+    "visualAnchorPointed": {
+      "channel": "visual",
+      "timing": "before_help",
+      "meaning": "用户指出本停点的中心视觉锚点。"
+    },
+    "primaryActionCompleted": {
+      "channel": "operation",
+      "timing": "after_answer",
+      "meaning": "用户完成本停点唯一主要动作。"
+    },
+    "nextLayerSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "非终点停点中用户自己找到下一层。"
+    },
+    "nextOrStopSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户自己找到下一停点，或在终点说出停止。"
+    },
+    "returnPointSelfLocated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户自己指出答错或关闭子层后回到哪里。"
+    },
+    "handoffRestated": {
+      "channel": "memory",
+      "timing": "after_answer",
+      "meaning": "用户用自己的话复述交给下一层的字段。"
+    },
+    "hostPromptCount": {
+      "channel": "language",
+      "timing": "throughout",
+      "meaning": "主持者在首答前后的提示次数。"
+    },
+    "hostPromptContent": {
+      "channel": "language",
+      "timing": "throughout",
+      "meaning": "提示属于重复问题、指向事实、指向标记、揭示事实还是引导答案。"
+    },
+    "errorLayer": {
+      "channel": "operation",
+      "timing": "after_error",
+      "meaning": "错误归因到哪一层；未知也要记录。"
+    },
+    "parentRestore": {
+      "channel": "memory",
+      "timing": "after_child_close_or_error",
+      "meaning": "回到父帧并恢复父帧字段。"
+    },
+    "changedField": {
+      "channel": "visual",
+      "timing": "transfer_only",
+      "meaning": "迁移题中唯一改变的字段。"
+    },
+    "retryWithoutRouteReset": {
+      "channel": "operation",
+      "timing": "after_error",
+      "meaning": "错误后能在原路线继续，而不是被迫重新开始。"
+    },
+    "exitPoint": {
+      "channel": "operation",
+      "timing": "terminal_or_stop",
+      "meaning": "用户退出、停止或完成的位置。"
+    }
+  },
+  "stopObservationCrosswalk": "low-baseline-stop-observation-crosswalk.json"
+}

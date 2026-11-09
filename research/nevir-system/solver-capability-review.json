@@ -1,0 +1,48 @@
+{
+  "status": "primary_documentation_review_only_not_runtime_verification",
+  "checkedOn": "2026-10-20",
+  "candidates": [
+    {
+      "name": "b-inary/postflop-solver",
+      "repo": "https://github.com/b-inary/postflop-solver",
+      "licenseLabel": "AGPL-3.0-or-later",
+      "developmentLabel": "Development suspended",
+      "observed": [
+        "Example config includes ranges, cards, pot, stack, rake and sizing",
+        "Official PostFlopGame API documents strategies, per-action EV, node locking and storage depth",
+        "Library code/API may change without version number changes according to README"
+      ],
+      "notDone": [
+        "No clone/build/solver run",
+        "No performance or correctness benchmark",
+        "No licence incorporation or distribution decision"
+      ],
+      "docs": [
+        "https://github.com/b-inary/postflop-solver/blob/main/examples/basic.rs",
+        "https://b-inary.github.io/postflop_solver/postflop_solver/struct.PostFlopGame.html",
+        "https://b-inary.github.io/postflop_solver/postflop_solver/struct.Range.html",
+        "https://b-inary.github.io/postflop_solver/postflop_solver/struct.TreeConfig.html"
+      ]
+    },
+    {
+      "name": "TexasSolver",
+      "repo": "https://github.com/bupticybee/TexasSolver/tree/console",
+      "observed": [
+        "Console README describes range/tree commands and strategy JSON dump",
+        "Issue202 reports an EV export modification; not proof every release exports required EV fields"
+      ],
+      "notDone": [
+        "No binary downloaded or run",
+        "No exported JSON obtained or schema verified"
+      ],
+      "issue": "https://github.com/bupticybee/TexasSolver/issues/202"
+    }
+  ],
+  "localTooling": "Version commands verified: cargo 1.96.0 (30a34c682 2026-05-25); rustc 1.96.0 (ac68faa20 2026-05-25). No engine compile or solve performed.",
+  "limits": "Documentation availability is not strategy data. Engine licensing, exact revision, semantics, runtime results and matching target configuration remain distinct author checks.",
+  "pinnedSourceReview": {
+    "file": "engine-adapter-contract.json",
+    "revision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "runtimeValidated": false
+  }
+}

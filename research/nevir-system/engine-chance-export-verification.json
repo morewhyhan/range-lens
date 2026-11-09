@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "status": "actual_chance_export_physical_checks_not_full_strategy",
+  "scenarios": 2,
+  "physicalRiverRecords": 96,
+  "perHandRiverRows": 528,
+  "unsupportedHandRows": 22,
+  "independentJointRunouts": 660,
+  "summaries": [
+    {
+      "id": "asymmetric_turn",
+      "compatibleJointPairs": 6,
+      "physicalRivers": 48,
+      "representativeActions": 48,
+      "rootPhysicalEquityChecked": true
+    },
+    {
+      "id": "suit_symmetric_turn",
+      "compatibleJointPairs": 9,
+      "physicalRivers": 48,
+      "representativeActions": 22,
+      "rootPhysicalEquityChecked": true
+    }
+  ],
+  "engineGlobalCardsNotGivenHeroCards": true,
+  "givenAsQs": {
+    "legalRiverCount": 46,
+    "JsProbability": 0.015151515151515152,
+    "fourClubsProbability": 0.022727272727272728
+  },
+  "fileHashes": {
+    "research/solver-probe/src/bin/chance_export_probe.rs": "94fbd1db2da3a9201f2bb2fb2109341b458c126420862803136c10a3a5c17dbd",
+    "research/solver-probe/target/release/chance_export_probe.exe": "412ccacbc01800847ff706f11e4c71dc169bf250c47c2d4860eb4da7bc726c9e",
+    "research/solver-probe/Cargo.lock": "3d344a0ce85a1bc2a2667a9bd8b15aa1298a23beb349b316235973c3fb9158aa",
+    "research/nevir-system/engine-chance-export-probe.json": "3e811675310ddb9444dbc497648a76f0eecdba7d24339e8544bffb3ffcc14cbb"
+  },
+  "fullOriginalFlopSolved": false,
+  "learnerTrials": 0,
+  "limitations": [
+    "Turn to river only, no flop-to-turn chance or nested isomorphism tested.",
+    "No bets: does not establish three-street strategy quality.",
+    "Not an NL50 benchmark or learning result."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "FIRST_HAND_GAP_FRAME_INSERTIONS_V1",
+  "status": "paper_insertion_spec_strategy_and_runtime_missing",
+  "source": "first-hand-principle-frame-audit.json",
+  "baseSequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "insertions": [
+    {
+      "id": "I03",
+      "after": "S04",
+      "before": "R01",
+      "principle": "P03",
+      "parent": "p2_board",
+      "kind": "board_texture_fact",
+      "question": "这三张公共牌先按花色、连接和配对归到哪类？",
+      "visual": "board_texture_six_class_visual",
+      "answerIdentity": "fact",
+      "requiredInputs": [
+        "board"
+      ],
+      "returnsTo": "R01",
+      "stop": "none_for_physical_classification"
+    },
+    {
+      "id": "I05",
+      "after": "I03",
+      "before": "R01",
+      "principle": "P05",
+      "parent": "p3_range",
+      "kind": "range_before_snapshot",
+      "question": "进入动作比较前，哪些组合在实体上仍然合法？",
+      "visual": "fixed_denominator_range_before",
+      "answerIdentity": "range_or_stop",
+      "requiredInputs": [
+        "board",
+        "heroHole",
+        "startingRange",
+        "normalizationDenominator"
+      ],
+      "returnsTo": "R01",
+      "stop": "missing_complete_starting_range"
+    },
+    {
+      "id": "I07",
+      "after": "S05",
+      "before": "S06",
+      "principle": "P07",
+      "parent": "p4_compare",
+      "kind": "action_purpose",
+      "question": "在过牌和下注之间比较时，当前首先比较的是哪种目的？",
+      "visual": "one_action_purpose_card",
+      "answerIdentity": "course_rule_or_stop",
+      "requiredInputs": [
+        "actionState",
+        "rangeBefore",
+        "coursePolicyOrReference"
+      ],
+      "returnsTo": "S06",
+      "stop": "missing_course_policy_or_matched_reference"
+    },
+    {
+      "id": "I08",
+      "after": "I07",
+      "before": "S06",
+      "principle": "P08",
+      "parent": "p4_compare",
+      "kind": "price_threshold",
+      "question": "这个尺寸对应的底池价格和所需权益是多少？",
+      "visual": "size_price_threshold_visual",
+      "answerIdentity": "ledger_or_course_rule",
+      "requiredInputs": [
+        "potBB",
+        "size",
+        "toCallBB",
+        "courseThresholdOrReference"
+      ],
+      "returnsTo": "S06",
+      "stop": "missing_threshold_policy"
+    },
+    {
+      "id": "I10",
+      "after": "S07",
+      "before": "S08",
+      "principle": "P10",
+      "parent": "p6_update",
+      "kind": "action_after_range",
+      "question": "对手完成这次回应后，行动前后的范围具体怎样变化？",
+      "visual": "same_coordinate_before_after_range",
+      "answerIdentity": "matched_reference_or_stop",
+      "requiredInputs": [
+        "rangeBefore",
+        "selectedAction",
+        "referenceAfter",
+        "courseAfter",
+        "normalizationDenominator"
+      ],
+      "returnsTo": "S08",
+      "stop": "missing_matched_action_reference"
+    },
+    {
+      "id": "I11",
+      "after": "S08",
+      "before": "S09",
+      "principle": "P11",
+      "parent": "p6_update",
+      "kind": "new_card_successor_or_stop",
+      "question": "这张新牌改变了什么，下一步真实后继是什么？",
+      "visual": "new_card_delta_and_successor_arrow",
+      "answerIdentity": "successor_or_stop",
+      "requiredInputs": [
+        "boardBefore",
+        "newCard",
+        "rangeAfter",
+        "successorIdentity"
+      ],
+      "returnsTo": "S09",
+      "stop": "missing_successor_reference"
+    }
+  ],
+  "rules": {
+    "exactlySixInsertions": true,
+    "mainHistoryUnchanged": true,
+    "oneQuestionPerInsertion": true,
+    "oneCentralVisualPerInsertion": true,
+    "returnsToOriginalMainline": true,
+    "missingEvidenceStops": true,
+    "factDoesNotBecomeStrategy": true,
+    "noFlatHomeMenu": true
+  },
+  "currentEvidence": {
+    "insertionSpecWritten": true,
+    "compiledIntoFirstHandPacket": false,
+    "matchedStrategyReference": false,
+    "successorClosure": false,
+    "runtimeAttached": false,
+    "learnerTrial": false,
+    "NL50Evidence": false,
+    "compiledIntoGapFrameCards": true,
+    "compiledIntoFirstHandCandidate": true,
+    "candidateFile": "first-hand-lesson-v3-candidate.json"
+  }
+}

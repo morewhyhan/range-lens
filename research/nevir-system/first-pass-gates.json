@@ -1,0 +1,36 @@
+{
+  "status": "declarative_first_pass_acceptance_contract_not_administered",
+  "source": "48_首遍七步教学验收与错误恢复合同.md",
+  "purpose": "检查首遍是否建立路线感；不等于完整策略、NL50或学习者通过。",
+  "assistedAnswerCountsAsIndependent": false,
+  "unknownCountsAsError": true,
+  "steps": [
+    {"id":"p1_context","localQuestion":"轮到谁？前面发生了什么？","visible":["seats","actionHistory","pot","stacks","toCall"],"localGate":["select current actor","identify current event"],"errorLayers":["position","history","money"],"childLayers":["read.context","read.money"],"returnTo":"read"},
+    {"id":"p2_board","localQuestion":"我现在是什么牌力或听牌？","visible":["board","heroCards","bestFive","improvementCards"],"localGate":["identify hand category","identify best five"],"errorLayers":["handRank","drawType"],"childLayers":["read.cards"],"returnTo":"read"},
+    {"id":"p3_range","localQuestion":"谁的哪些组合留下或改变？","visible":["beforeRange","afterRange","comboDetail","blockerContext","normalization"],"localGate":["point to one real change","name change type"],"errorLayers":["physicalRemoval","actionFilter","relativeShare"],"childLayers":["read.range","update.response"],"returnTo":"read"},
+    {"id":"p4_compare","localQuestion":"在当前课程政策下选哪个动作？","visible":["legalActions","price","actionPurpose","declaredContinuation"],"localGate":["select adopted action","name one supporting relation"],"errorLayers":["price","rangeReason","policyIdentity"],"childLayers":["compare.unopened","compare.bet","compare.raise"],"returnTo":"compare"},
+    {"id":"p5_execute","localQuestion":"点哪个按钮、投入多少？","visible":["buttons","streetInvested","toCall","actor"],"localGate":["choose legal action","enter exact amount"],"errorLayers":["legality","ledger","turnOrder"],"childLayers":["execute.amount"],"returnTo":"execute"},
+    {"id":"p6_update","localQuestion":"动作和新牌改变了什么？","visible":["newPot","newStacks","rangeAfterAction","chanceDistribution","nextActor"],"localGate":["name one range change","identify next actor"],"errorLayers":["rangeUpdate","chanceConditioning","nextEvent"],"childLayers":["update.response","update.card"],"returnTo":"update"},
+    {"id":"p7_close","localQuestion":"结果是什么？我错在哪一层？","visible":["settlement","ledger","correctRelation","errorLocation"],"localGate":["classify result","locate one error layer"],"errorLayers":["foldSettlement","showdown","reasoningLayer"],"childLayers":["update.end"],"returnTo":"update"}
+  ],
+  "postRouteChecks": [
+    {"id":"order_recall","prompt":"恢复六个核心步骤的顺序","evidence":"route_map_recall","independentStrategy":false},
+    {"id":"layer_location","prompt":"给未见短局面指出下一层","evidence":"next_layer_selection","independentStrategy":false},
+    {"id":"error_recovery","prompt":"答错后回到最近缺失层并在同一父帧重答","evidence":"same_parent_recovery","independentStrategy":false},
+    {"id":"one_variable_transfer","prompt":"只换一个位置或公共牌，指出同一关系如何变化","evidence":"adjacent_transfer","independentStrategy":false}
+  ],
+  "recovery": {
+    "wrong": ["label one mistaken layer","show one minimal contrast","retry same parent frame","continue original route"],
+    "unknown": ["grade as wrong","show explanation","continue with assisted flag"],
+    "secondFailure": "open one deeper child layer while preserving the same parent snapshot",
+    "missingReference": "downgrade to fact or demonstration; do not grade exact strategy"
+  },
+  "publicationEvidence": {
+    "completeMatchedReference": false,
+    "coursePolicyCompiled": false,
+    "successorClosure": false,
+    "unseenTransferTrial": false,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  }
+}

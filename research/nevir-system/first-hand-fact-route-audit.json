@@ -1,0 +1,536 @@
+{
+  "id": "FIRST_HAND_FACT_ROUTE_AUDIT_V1",
+  "status": "fact_demonstration_route_continuity_checked_not_runtime",
+  "sourceFiles": [
+    "first-hand-lesson-packet.json",
+    "first-hand-lesson-v3-candidate.json",
+    "a72-range-handoff-candidate.json"
+  ],
+  "sourceHashes": {
+    "first-hand-lesson-packet.json": "cea0521393a0b5246f0aba150aebec788ec3ee1bff5679d44f989c1fba6be8b6",
+    "first-hand-lesson-v3-candidate.json": "0aa4630d3cbb634c5480aaa9f6caaa1dae9c3c4cbf2f3624e9b804a7573e029f",
+    "a72-range-handoff-candidate.json": "0f813eaf6176b3b7d81dea6e5088b1bd03dd8518e0257411dcb040b160d82216"
+  },
+  "sequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "counts": {
+    "sourceFrames": 18,
+    "insertedFactFrames": 1,
+    "totalFrames": 19,
+    "uniqueFrames": 19
+  },
+  "parentCoverage": {
+    "p1_context": [
+      "S03",
+      "S12"
+    ],
+    "p2_board": [
+      "S04"
+    ],
+    "p3_range": [
+      "R01"
+    ],
+    "p4_compare": [
+      "S05",
+      "S09",
+      "S13"
+    ],
+    "p5_execute": [
+      "S06",
+      "S10"
+    ],
+    "p6_update": [
+      "S07",
+      "S08",
+      "S11",
+      "S14"
+    ],
+    "p7_close": [
+      "S15",
+      "S16",
+      "S17"
+    ]
+  },
+  "missingParents": [],
+  "frames": [
+    {
+      "id": "S01",
+      "street": "preflop",
+      "taskKind": "identify_own_seat",
+      "parent": "read.context",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "SB",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S02"
+    },
+    {
+      "id": "S02",
+      "street": "preflop",
+      "taskKind": "execute_given_own_amount",
+      "parent": "execute.amount",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 9.5,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S03"
+    },
+    {
+      "id": "S03",
+      "street": "flop",
+      "taskKind": "identify_next_actor",
+      "parent": "read.context",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "SB",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S04"
+    },
+    {
+      "id": "S04",
+      "street": "flop",
+      "taskKind": "read_own_cards",
+      "parent": "read.cards",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "一对",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S05"
+    },
+    {
+      "id": "S05",
+      "street": "flop",
+      "taskKind": "identify_available_comparison",
+      "parent": "compare.unopened",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "过牌与下注",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S06"
+    },
+    {
+      "id": "S06",
+      "street": "flop",
+      "taskKind": "execute_given_own_amount",
+      "parent": "execute.amount",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 4.2,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S07"
+    },
+    {
+      "id": "S07",
+      "street": "flop",
+      "taskKind": "observe_opponent_amount",
+      "parent": "update.response",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 4.2,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S08"
+    },
+    {
+      "id": "S08",
+      "street": "turn",
+      "taskKind": "identify_update_step",
+      "parent": "update.card",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "带着刚才的行动和金额重新看清",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S09"
+    },
+    {
+      "id": "S09",
+      "street": "turn",
+      "taskKind": "identify_needed_inputs",
+      "parent": "compare.unopened",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "当前范围、新牌、池与后手及各方案后续",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S10"
+    },
+    {
+      "id": "S10",
+      "street": "turn",
+      "taskKind": "execute_given_own_amount",
+      "parent": "execute.amount",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 22.05,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S11"
+    },
+    {
+      "id": "S11",
+      "street": "turn",
+      "taskKind": "observe_opponent_call_and_pot",
+      "parent": "update.response",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 73.5,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S12"
+    },
+    {
+      "id": "S12",
+      "street": "river",
+      "taskKind": "identify_next_actor",
+      "parent": "read.context",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "SB还要行动",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S13"
+    },
+    {
+      "id": "S13",
+      "street": "river",
+      "taskKind": "identify_available_comparison",
+      "parent": "compare.unopened",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "过牌与下注的当前后果",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S14"
+    },
+    {
+      "id": "S14",
+      "street": "river",
+      "taskKind": "wait_for_opponent",
+      "parent": "update.response",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "还没有，等待BTN回应",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S15"
+    },
+    {
+      "id": "S15",
+      "street": "river",
+      "taskKind": "identify_settlement_transition",
+      "parent": "update.end",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "摊牌并结算",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S16"
+    },
+    {
+      "id": "S16",
+      "street": "river",
+      "taskKind": "compare_revealed_showdown",
+      "parent": "read.cards",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": "SB",
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S17"
+    },
+    {
+      "id": "S17",
+      "street": "river",
+      "taskKind": "account_settled_result",
+      "parent": "update.end",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": true,
+      "expected": 101,
+      "explanation": true,
+      "evidenceKind": "gross_ledger_and_rule_fact",
+      "strategicGrading": false,
+      "nextFrame": "S18"
+    },
+    {
+      "id": "S18",
+      "street": "flop",
+      "taskKind": "new_hand_identify_next_actor",
+      "parent": "compare.bet",
+      "hasState": true,
+      "hasTask": true,
+      "hasPerspective": true,
+      "hasNext": false,
+      "expected": "自己",
+      "explanation": true,
+      "evidenceKind": "existing_structure_candidate",
+      "strategicGrading": false,
+      "nextFrame": null
+    }
+  ],
+  "insertedFrame": {
+    "id": "R01",
+    "parent": "p3_range",
+    "after": "S04",
+    "before": "S05",
+    "taskKind": "physical_fact",
+    "hasTask": true,
+    "hasContext": true,
+    "answerIdentity": "physical_fact",
+    "correctOption": "AcKc",
+    "parentFrameRestored": true,
+    "firstAnswerPreserved": true,
+    "actionFilter": "not_available",
+    "stopReason": "matched_action_filter_and_fixed_denominator_missing"
+  },
+  "routeEdges": [
+    {
+      "from": "S01",
+      "to": "S02",
+      "sourceDeclaredNext": "S02",
+      "insertedBridge": false
+    },
+    {
+      "from": "S02",
+      "to": "S03",
+      "sourceDeclaredNext": "S03",
+      "insertedBridge": false
+    },
+    {
+      "from": "S03",
+      "to": "S04",
+      "sourceDeclaredNext": "S04",
+      "insertedBridge": false
+    },
+    {
+      "from": "S04",
+      "to": "R01",
+      "sourceDeclaredNext": "S05",
+      "insertedBridge": true
+    },
+    {
+      "from": "R01",
+      "to": "S05",
+      "sourceDeclaredNext": null,
+      "insertedBridge": false
+    },
+    {
+      "from": "S05",
+      "to": "S06",
+      "sourceDeclaredNext": "S06",
+      "insertedBridge": false
+    },
+    {
+      "from": "S06",
+      "to": "S07",
+      "sourceDeclaredNext": "S07",
+      "insertedBridge": false
+    },
+    {
+      "from": "S07",
+      "to": "S08",
+      "sourceDeclaredNext": "S08",
+      "insertedBridge": false
+    },
+    {
+      "from": "S08",
+      "to": "S09",
+      "sourceDeclaredNext": "S09",
+      "insertedBridge": false
+    },
+    {
+      "from": "S09",
+      "to": "S10",
+      "sourceDeclaredNext": "S10",
+      "insertedBridge": false
+    },
+    {
+      "from": "S10",
+      "to": "S11",
+      "sourceDeclaredNext": "S11",
+      "insertedBridge": false
+    },
+    {
+      "from": "S11",
+      "to": "S12",
+      "sourceDeclaredNext": "S12",
+      "insertedBridge": false
+    },
+    {
+      "from": "S12",
+      "to": "S13",
+      "sourceDeclaredNext": "S13",
+      "insertedBridge": false
+    },
+    {
+      "from": "S13",
+      "to": "S14",
+      "sourceDeclaredNext": "S14",
+      "insertedBridge": false
+    },
+    {
+      "from": "S14",
+      "to": "S15",
+      "sourceDeclaredNext": "S15",
+      "insertedBridge": false
+    },
+    {
+      "from": "S15",
+      "to": "S16",
+      "sourceDeclaredNext": "S16",
+      "insertedBridge": false
+    },
+    {
+      "from": "S16",
+      "to": "S17",
+      "sourceDeclaredNext": "S17",
+      "insertedBridge": false
+    },
+    {
+      "from": "S17",
+      "to": "S18",
+      "sourceDeclaredNext": "S18",
+      "insertedBridge": false
+    }
+  ],
+  "moneyChecks": [
+    {
+      "from": "S05",
+      "to": "S07",
+      "field": "potBB",
+      "before": 21,
+      "added": 4.2,
+      "after": 25.2,
+      "source": "S06 expected amount",
+      "conserves": true
+    },
+    {
+      "from": "S07",
+      "to": "S08",
+      "field": "potBB",
+      "before": 25.2,
+      "added": 4.2,
+      "after": 29.4,
+      "source": "S07 expected call",
+      "conserves": true
+    },
+    {
+      "from": "S09",
+      "to": "S11",
+      "field": "potBB",
+      "before": 29.4,
+      "added": 22.05,
+      "after": 51.45,
+      "source": "S10 expected amount",
+      "conserves": true
+    },
+    {
+      "from": "S11",
+      "to": "S12",
+      "field": "potBB",
+      "before": 51.45,
+      "added": 22.05,
+      "after": 73.5,
+      "source": "S11 expected matched amount",
+      "conserves": true
+    }
+  ],
+  "checks": {
+    "allSourceFramesHaveStateTaskPerspective": true,
+    "allSourceFramesHaveAnswerAndExplanation": true,
+    "allSourceAnswersAreNonStrategy": true,
+    "allParentAnchorsPresent": true,
+    "insertedP3BetweenS04AndS05": true,
+    "insertedFactHasContextAndReturn": true,
+    "moneyConservationChecksPass": true
+  },
+  "releaseRules": {
+    "factAndDemonstrationOnly": true,
+    "noMatchedStrategyClaim": true,
+    "noContinuousStrategyClaim": true,
+    "noLearnerTrialClaim": true,
+    "noNL50Claim": true
+  },
+  "currentEvidence": {
+    "runtimeAttached": false,
+    "matchedReference": false,
+    "successorClosure": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

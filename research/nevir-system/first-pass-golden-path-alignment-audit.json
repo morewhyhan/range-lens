@@ -1,0 +1,122 @@
+{
+  "id": "FIRST_PASS_GOLDEN_PATH_ALIGNMENT_AUDIT_V1",
+  "status": "paper_golden_path_aligned_state_machine_not_runtime",
+  "purpose": "确认学习者可见黄金路径、可见状态机和完整带练顺序使用同一条外层到内层交接链；动作确认不再被范围桥接吞掉。",
+  "sources": [
+    "first-pass-golden-path.json",
+    "first-lesson-visible-state-machine.json",
+    "first-pass-full-guided-administration.json"
+  ],
+  "canonicalGoldenRoute": [
+    "G0_welcome",
+    "G1_context",
+    "G2_preflop_chart",
+    "G3_preflop_action",
+    "G4_range_bridge",
+    "G5_p1_context",
+    "G6_p2_hand",
+    "G7_p3_range",
+    "G8_p4_compare",
+    "G9_p5_execute",
+    "G10_p6_update",
+    "G11_p7_close",
+    "G12_recall_transfer"
+  ],
+  "canonicalStateRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "checks": {
+    "goldenFrameCount": 13,
+    "goldenRouteMatchesFrameIds": true,
+    "stateMachineRouteMatches": true,
+    "explicitPreflopActionFrame": true,
+    "explicitRangeBridgeFrame": true,
+    "innerStartsAfterOuterL4": true,
+    "allInnerFramesRemainUnderL4": true,
+    "administrationRouteMatches": true,
+    "administrationOuterCasesBeforeInner": true,
+    "requiredFrameFields": [
+      "ask",
+      "primaryAction",
+      "output",
+      "handoff",
+      "errorReturn",
+      "stopCondition",
+      "after"
+    ],
+    "allFrameFieldsComplete": true,
+    "frameFieldAudit": [
+      {
+        "id": "G0_welcome",
+        "missing": []
+      },
+      {
+        "id": "G1_context",
+        "missing": []
+      },
+      {
+        "id": "G2_preflop_chart",
+        "missing": []
+      },
+      {
+        "id": "G3_preflop_action",
+        "missing": []
+      },
+      {
+        "id": "G4_range_bridge",
+        "missing": []
+      },
+      {
+        "id": "G5_p1_context",
+        "missing": []
+      },
+      {
+        "id": "G6_p2_hand",
+        "missing": []
+      },
+      {
+        "id": "G7_p3_range",
+        "missing": []
+      },
+      {
+        "id": "G8_p4_compare",
+        "missing": []
+      },
+      {
+        "id": "G9_p5_execute",
+        "missing": []
+      },
+      {
+        "id": "G10_p6_update",
+        "missing": []
+      },
+      {
+        "id": "G11_p7_close",
+        "missing": []
+      },
+      {
+        "id": "G12_recall_transfer",
+        "missing": []
+      }
+    ],
+    "everyFrameHasStopCondition": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

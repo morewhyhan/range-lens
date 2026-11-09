@@ -1,0 +1,50 @@
+{
+  "status": "declarative_minimal_complete_first_lesson_not_closed",
+  "source": "63_最小完整首课闭环与优先补证计划.md",
+  "candidateRoutes": [
+    {
+      "id":"REF_BTN_BB_A72_100_zero_rake_research_v1",
+      "role":"course_match_priority_candidate",
+      "sourceRequest":"reference-request-btn-bb-a72.json",
+      "currentGate":"C1",
+      "strategySolved":false
+    },
+    {
+      "id":"SB_BB_QQQ_reference_v2",
+      "role":"reference_pipeline_engine_candidate",
+      "sourceRequest":"reference-request-sb-bb-qqq.json",
+      "currentGate":"C5_partial",
+      "courseMatch":false
+    }
+  ],
+  "gates": [
+    {"id":"C0","label":"config_freeze","required":["game","seats","stacks","rake","history","actionTree","version","license"],"release":"reference_request"},
+    {"id":"C1","label":"preflop_snapshot","required":["entityCombos","weights","collisionFilter","jointMass"],"release":"starting_range_fact"},
+    {"id":"C2","label":"flop_reference","required":["perHandActions","ev","reach","successors"],"release":"reference_candidate"},
+    {"id":"C3","label":"action_range_views","required":["beforeRange","afterRange","denominator","filterKinds"],"release":"fact_or_demonstration"},
+    {"id":"C4","label":"turn_closure","required":["conditionalNewCards","positiveActionSuccessors","nextNodes"],"release":"closed_branch_only"},
+    {"id":"C5","label":"river_closure","required":["riverActions","responses","terminals","ledger"],"release":"continuous_reference_route"},
+    {"id":"C6","label":"policy_compile","required":["coursePolicy","policyFingerprint","ancestorReevaluation","differenceReport"],"release":"course_policy"},
+    {"id":"C7","label":"lesson_compile","required":["L0_L8","parentFrames","childFrames","feedback","versionFingerprint"],"release":"demonstration"},
+    {"id":"C8","label":"paper_verification","required":["independentFacts","rangeChecks","ledgerChecks","parentRestore"],"release":"trial_ready"},
+    {"id":"C9","label":"learner_trial","required":["firstAnswer","help","retry","structureRecall","adjacentTransfer"],"release":"revised_and_freezable"}
+  ],
+  "releaseIdentities": ["starting_range_fact","postflop_demonstration","course_policy_practice","matched_strategy_practice"],
+  "hardRules": {
+    "missingC2toC5BlocksMatchedStrategyPractice":true,
+    "qqqDoesNotBecomeA72CourseAnswer":true,
+    "missingSuccessorStopsAtClosedBranch":true,
+    "policyChangeRequiresAncestorReevaluation":true,
+    "learnerTrialMustSeparateFirstAndRetry":true,
+    "localClosureDoesNotGrantNL50":true
+  },
+  "currentStatus": {
+    "a72Gate":"C1",
+    "a72ThreeStreetReference":false,
+    "qqqEngineeringCandidate":true,
+    "coursePolicyCompiled":false,
+    "lessonPackageClosed":false,
+    "adultBeginnerTrial":false,
+    "nl50Evidence":false
+  }
+}

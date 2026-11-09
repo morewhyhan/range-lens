@@ -1,0 +1,3232 @@
+{
+  "status": "research_content_contract_not_complete_strategy_or_learner_evidence",
+  "context": {
+    "board": [
+      "Qs",
+      "Th",
+      "5s"
+    ],
+    "hero": [
+      "Ac",
+      "Qh"
+    ],
+    "priorChart": "bb-普通中",
+    "state": "No intervening postflop action likelihoods applied to exhaustive card facts"
+  },
+  "physicalFacts": {
+    "turns": [
+      {
+        "turn": "2s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 301,
+        "remainingMass": 247.5,
+        "blockedCombos": 5,
+        "blockedMass": 4.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 243,
+            "mass": 200
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 53,
+            "mass": 42.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021825396825396824
+      },
+      {
+        "turn": "2h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 300,
+        "remainingMass": 246.5,
+        "blockedCombos": 6,
+        "blockedMass": 5.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 276,
+            "mass": 227
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02173721340388007
+      },
+      {
+        "turn": "2d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 300,
+        "remainingMass": 246.5,
+        "blockedCombos": 6,
+        "blockedMass": 5.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 276,
+            "mass": 227
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02173721340388007
+      },
+      {
+        "turn": "2c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 301,
+        "remainingMass": 247,
+        "blockedCombos": 5,
+        "blockedMass": 5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 277,
+            "mass": 227.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02178130511463845
+      },
+      {
+        "turn": "3s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 299,
+        "remainingMass": 245,
+        "blockedCombos": 7,
+        "blockedMass": 7,
+        "currentComparison": {
+          "ahead": {
+            "combos": 243,
+            "mass": 200
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 51,
+            "mass": 40
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021604938271604937
+      },
+      {
+        "turn": "3h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 298,
+        "remainingMass": 244,
+        "blockedCombos": 8,
+        "blockedMass": 8,
+        "currentComparison": {
+          "ahead": {
+            "combos": 274,
+            "mass": 224.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021516754850088183
+      },
+      {
+        "turn": "3d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 298,
+        "remainingMass": 244,
+        "blockedCombos": 8,
+        "blockedMass": 8,
+        "currentComparison": {
+          "ahead": {
+            "combos": 274,
+            "mass": 224.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021516754850088183
+      },
+      {
+        "turn": "3c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 299,
+        "remainingMass": 245,
+        "blockedCombos": 7,
+        "blockedMass": 7,
+        "currentComparison": {
+          "ahead": {
+            "combos": 275,
+            "mass": 225.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 19,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021604938271604937
+      },
+      {
+        "turn": "4s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 298,
+        "remainingMass": 245,
+        "blockedCombos": 8,
+        "blockedMass": 7,
+        "currentComparison": {
+          "ahead": {
+            "combos": 241,
+            "mass": 199.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 52,
+            "mass": 40.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021604938271604937
+      },
+      {
+        "turn": "4h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 297,
+        "remainingMass": 244.5,
+        "blockedCombos": 9,
+        "blockedMass": 7.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 271,
+            "mass": 224
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 21,
+            "mass": 15.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02156084656084656
+      },
+      {
+        "turn": "4d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 296,
+        "remainingMass": 243.5,
+        "blockedCombos": 10,
+        "blockedMass": 8.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 271,
+            "mass": 224
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 20,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021472663139329808
+      },
+      {
+        "turn": "4c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 297,
+        "remainingMass": 244,
+        "blockedCombos": 9,
+        "blockedMass": 8,
+        "currentComparison": {
+          "ahead": {
+            "combos": 272,
+            "mass": 224.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 20,
+            "mass": 14.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021516754850088183
+      },
+      {
+        "turn": "5h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          5,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 296,
+        "remainingMass": 244,
+        "blockedCombos": 10,
+        "blockedMass": 8,
+        "currentComparison": {
+          "ahead": {
+            "combos": 264,
+            "mass": 220
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 27,
+            "mass": 19
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021516754850088183
+      },
+      {
+        "turn": "5d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          5,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 295,
+        "remainingMass": 243,
+        "blockedCombos": 11,
+        "blockedMass": 9,
+        "currentComparison": {
+          "ahead": {
+            "combos": 264,
+            "mass": 220
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 26,
+            "mass": 18
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02142857142857143
+      },
+      {
+        "turn": "5c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          5,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 296,
+        "remainingMass": 243.5,
+        "blockedCombos": 10,
+        "blockedMass": 8.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 264,
+            "mass": 220
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 27,
+            "mass": 18.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021472663139329808
+      },
+      {
+        "turn": "6s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          6
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 296,
+        "remainingMass": 244.5,
+        "blockedCombos": 10,
+        "blockedMass": 7.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 241,
+            "mass": 203.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 50,
+            "mass": 36
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02156084656084656
+      },
+      {
+        "turn": "6h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          6
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 295,
+        "remainingMass": 244,
+        "blockedCombos": 11,
+        "blockedMass": 8,
+        "currentComparison": {
+          "ahead": {
+            "combos": 269,
+            "mass": 226
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 21,
+            "mass": 13
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021516754850088183
+      },
+      {
+        "turn": "6d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          6
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 294,
+        "remainingMass": 243.5,
+        "blockedCombos": 12,
+        "blockedMass": 8.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 269,
+            "mass": 226
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 20,
+            "mass": 12.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021472663139329808
+      },
+      {
+        "turn": "6c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          6
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 295,
+        "remainingMass": 244.5,
+        "blockedCombos": 11,
+        "blockedMass": 7.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 270,
+            "mass": 227
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 20,
+            "mass": 12.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02156084656084656
+      },
+      {
+        "turn": "7s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          7
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 295,
+        "remainingMass": 242.5,
+        "blockedCombos": 11,
+        "blockedMass": 9.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 239,
+            "mass": 196
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 51,
+            "mass": 41.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02138447971781305
+      },
+      {
+        "turn": "7h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          7
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 295,
+        "remainingMass": 242.5,
+        "blockedCombos": 11,
+        "blockedMass": 9.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 266,
+            "mass": 218
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 24,
+            "mass": 19.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02138447971781305
+      },
+      {
+        "turn": "7d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          7
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 293,
+        "remainingMass": 240.5,
+        "blockedCombos": 13,
+        "blockedMass": 11.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 266,
+            "mass": 218
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 22,
+            "mass": 17.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02120811287477954
+      },
+      {
+        "turn": "7c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          7
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 294,
+        "remainingMass": 241.5,
+        "blockedCombos": 12,
+        "blockedMass": 10.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 267,
+            "mass": 219
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 22,
+            "mass": 17.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021296296296296296
+      },
+      {
+        "turn": "8s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                9
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          8
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 294,
+        "remainingMass": 242,
+        "blockedCombos": 12,
+        "blockedMass": 10,
+        "currentComparison": {
+          "ahead": {
+            "combos": 234,
+            "mass": 194.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 55,
+            "mass": 42.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021340388007054675
+      },
+      {
+        "turn": "8h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                9
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          8
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 294,
+        "remainingMass": 242,
+        "blockedCombos": 12,
+        "blockedMass": 10,
+        "currentComparison": {
+          "ahead": {
+            "combos": 261,
+            "mass": 216.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 28,
+            "mass": 20.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021340388007054675
+      },
+      {
+        "turn": "8d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                9
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          8
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 240.5,
+        "blockedCombos": 14,
+        "blockedMass": 11.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 261,
+            "mass": 216.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 26,
+            "mass": 19
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02120811287477954
+      },
+      {
+        "turn": "8c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                9
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          8
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 241,
+        "blockedCombos": 14,
+        "blockedMass": 11,
+        "currentComparison": {
+          "ahead": {
+            "combos": 261,
+            "mass": 217
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 26,
+            "mass": 19
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02125220458553792
+      },
+      {
+        "turn": "9s",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          9
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 240,
+        "blockedCombos": 14,
+        "blockedMass": 12,
+        "currentComparison": {
+          "ahead": {
+            "combos": 213,
+            "mass": 179.5
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 74,
+            "mass": 55.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021164021164021163
+      },
+      {
+        "turn": "9h",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          9
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 240,
+        "blockedCombos": 14,
+        "blockedMass": 12,
+        "currentComparison": {
+          "ahead": {
+            "combos": 239,
+            "mass": 201
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 48,
+            "mass": 34
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021164021164021163
+      },
+      {
+        "turn": "9d",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          9
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 291,
+        "remainingMass": 239.5,
+        "blockedCombos": 15,
+        "blockedMass": 12.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 239,
+            "mass": 201
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 47,
+            "mass": 33.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021119929453262788
+      },
+      {
+        "turn": "9c",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                11,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          9
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 291,
+        "remainingMass": 239.5,
+        "blockedCombos": 15,
+        "blockedMass": 12.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 239,
+            "mass": 201
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 47,
+            "mass": 33.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021119929453262788
+      },
+      {
+        "turn": "Ts",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          10,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 285,
+        "remainingMass": 237.5,
+        "blockedCombos": 21,
+        "blockedMass": 14.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 209,
+            "mass": 178
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 71,
+            "mass": 54.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.020943562610229276
+      },
+      {
+        "turn": "Td",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          10,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 285,
+        "remainingMass": 237.5,
+        "blockedCombos": 21,
+        "blockedMass": 14.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 238,
+            "mass": 202
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 42,
+            "mass": 30.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.020943562610229276
+      },
+      {
+        "turn": "Tc",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          2,
+          12,
+          10,
+          14
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 285,
+        "remainingMass": 237.5,
+        "blockedCombos": 21,
+        "blockedMass": 14.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 238,
+            "mass": 202
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 42,
+            "mass": 30.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.020943562610229276
+      },
+      {
+        "turn": "Js",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                9,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                13
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          11,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 291,
+        "remainingMass": 239.5,
+        "blockedCombos": 15,
+        "blockedMass": 12.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 224,
+            "mass": 182
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 62,
+            "mass": 52.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021119929453262788
+      },
+      {
+        "turn": "Jh",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                9,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                13
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          11,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 291,
+        "remainingMass": 239,
+        "blockedCombos": 15,
+        "blockedMass": 13,
+        "currentComparison": {
+          "ahead": {
+            "combos": 251,
+            "mass": 205
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 35,
+            "mass": 29
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02107583774250441
+      },
+      {
+        "turn": "Jd",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                9,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                13
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          11,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 240.5,
+        "blockedCombos": 14,
+        "blockedMass": 11.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 251,
+            "mass": 205
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 36,
+            "mass": 30.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02120811287477954
+      },
+      {
+        "turn": "Jc",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 12,
+              "missingRanks": [
+                9,
+                8
+              ]
+            },
+            {
+              "high": 13,
+              "missingRanks": [
+                13,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                13
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          11,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 292,
+        "remainingMass": 240.5,
+        "blockedCombos": 14,
+        "blockedMass": 11.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 251,
+            "mass": 205
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 36,
+            "mass": 30.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02120811287477954
+      },
+      {
+        "turn": "Qd",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          3,
+          12,
+          14,
+          10
+        ],
+        "heroCategory": "三条",
+        "remainingCombos": 288,
+        "remainingMass": 237.5,
+        "blockedCombos": 18,
+        "blockedMass": 14.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 275,
+            "mass": 227.5
+          },
+          "tie": {
+            "combos": 3,
+            "mass": 3
+          },
+          "behind": {
+            "combos": 10,
+            "mass": 7
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.020943562610229276
+      },
+      {
+        "turn": "Qc",
+        "flags": {
+          "overcard": false,
+          "pairsBoard": true,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": []
+        },
+        "heroBest": [
+          3,
+          12,
+          14,
+          10
+        ],
+        "heroCategory": "三条",
+        "remainingCombos": 287,
+        "remainingMass": 236.5,
+        "blockedCombos": 19,
+        "blockedMass": 15.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 275,
+            "mass": 227.5
+          },
+          "tie": {
+            "combos": 2,
+            "mass": 2
+          },
+          "behind": {
+            "combos": 10,
+            "mass": 7
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02085537918871252
+      },
+      {
+        "turn": "Ks",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 13,
+              "missingRanks": [
+                11,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          13,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 290,
+        "remainingMass": 239,
+        "blockedCombos": 16,
+        "blockedMass": 13,
+        "currentComparison": {
+          "ahead": {
+            "combos": 180,
+            "mass": 151
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 105,
+            "mass": 83
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02107583774250441
+      },
+      {
+        "turn": "Kh",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 13,
+              "missingRanks": [
+                11,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          13,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 289,
+        "remainingMass": 238.5,
+        "blockedCombos": 17,
+        "blockedMass": 13.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 204,
+            "mass": 171
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 80,
+            "mass": 62.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.021031746031746033
+      },
+      {
+        "turn": "Kd",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 13,
+              "missingRanks": [
+                11,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          13,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 289,
+        "remainingMass": 239,
+        "blockedCombos": 17,
+        "blockedMass": 13,
+        "currentComparison": {
+          "ahead": {
+            "combos": 204,
+            "mass": 171
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 80,
+            "mass": 63
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02107583774250441
+      },
+      {
+        "turn": "Kc",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 13,
+              "missingRanks": [
+                11,
+                9
+              ]
+            },
+            {
+              "high": 14,
+              "missingRanks": [
+                14,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          1,
+          12,
+          14,
+          13,
+          10
+        ],
+        "heroCategory": "一对",
+        "remainingCombos": 289,
+        "remainingMass": 239,
+        "blockedCombos": 17,
+        "blockedMass": 13,
+        "currentComparison": {
+          "ahead": {
+            "combos": 204,
+            "mass": 171
+          },
+          "tie": {
+            "combos": 5,
+            "mass": 5
+          },
+          "behind": {
+            "combos": 80,
+            "mass": 63
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02107583774250441
+      },
+      {
+        "turn": "As",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": true,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 14,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          2,
+          14,
+          12,
+          10
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 284,
+        "remainingMass": 232.5,
+        "blockedCombos": 22,
+        "blockedMass": 19.5,
+        "currentComparison": {
+          "ahead": {
+            "combos": 234,
+            "mass": 191
+          },
+          "tie": {
+            "combos": 3,
+            "mass": 3
+          },
+          "behind": {
+            "combos": 47,
+            "mass": 38.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.0205026455026455
+      },
+      {
+        "turn": "Ah",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 14,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          2,
+          14,
+          12,
+          10
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 283,
+        "remainingMass": 232,
+        "blockedCombos": 23,
+        "blockedMass": 20,
+        "currentComparison": {
+          "ahead": {
+            "combos": 258,
+            "mass": 210.5
+          },
+          "tie": {
+            "combos": 3,
+            "mass": 3
+          },
+          "behind": {
+            "combos": 22,
+            "mass": 18.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.020458553791887126
+      },
+      {
+        "turn": "Ad",
+        "flags": {
+          "overcard": true,
+          "pairsBoard": false,
+          "thirdSameSuit": false,
+          "fourthSameSuit": false,
+          "straightRankWindows": [
+            {
+              "high": 14,
+              "missingRanks": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        "heroBest": [
+          2,
+          14,
+          12,
+          10
+        ],
+        "heroCategory": "两对",
+        "remainingCombos": 284,
+        "remainingMass": 233,
+        "blockedCombos": 22,
+        "blockedMass": 19,
+        "currentComparison": {
+          "ahead": {
+            "combos": 258,
+            "mass": 210.5
+          },
+          "tie": {
+            "combos": 4,
+            "mass": 4
+          },
+          "behind": {
+            "combos": 22,
+            "mass": 18.5
+          }
+        },
+        "turnProbabilityUnderOnlyThisPrior": 0.02054673721340388
+      }
+    ],
+    "turnCount": 47,
+    "legalOpponentTurnPairs": 13770,
+    "massPairTotal": 11340,
+    "scope": "One starting prior only; CURRENT made-hand ordering, NOT showdown equity or real post-action range. Turns may be selected for teaching; model deal probabilities are conditional on this prior."
+  },
+  "pairs": [
+    {
+      "id": "blank",
+      "turn": "2d",
+      "opponent": [
+        "Kc",
+        "Jh"
+      ],
+      "expectedHeroCategory": "一对",
+      "expectedOpponentCategory": "高牌",
+      "expectedComparison": 1,
+      "lesson": "低牌只是纹理描述；不能自动变成过牌指令",
+      "heroBest": [
+        1,
+        12,
+        14,
+        10,
+        5
+      ],
+      "opponentBest": [
+        0,
+        13,
+        12,
+        11,
+        10,
+        5
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "5s",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "Th",
+        "5s",
+        "Kc",
+        "Jh"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          0,
+          13,
+          12,
+          11,
+          10,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Kc",
+          "Jh"
+        ],
+        "comparison": 1
+      }
+    },
+    {
+      "id": "flush",
+      "turn": "9s",
+      "opponent": [
+        "Js",
+        "8s"
+      ],
+      "expectedHeroCategory": "一对",
+      "expectedOpponentCategory": "同花",
+      "expectedComparison": -1,
+      "lesson": "第三张黑桃让两张黑桃听牌成花；不是所有对手都成花",
+      "heroBest": [
+        1,
+        12,
+        14,
+        10,
+        9
+      ],
+      "opponentBest": [
+        5,
+        12,
+        11,
+        9,
+        8,
+        5
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "9s",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "5s",
+        "9s",
+        "Js",
+        "8s"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          0,
+          12,
+          11,
+          10,
+          8,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Js",
+          "8s"
+        ],
+        "comparison": 1
+      }
+    },
+    {
+      "id": "straight",
+      "turn": "Jh",
+      "opponent": [
+        "Kc",
+        "9c"
+      ],
+      "expectedHeroCategory": "一对",
+      "expectedOpponentCategory": "顺子",
+      "expectedComparison": -1,
+      "lesson": "新牌完成了具体的9TJQK五张",
+      "heroBest": [
+        1,
+        12,
+        14,
+        11,
+        10
+      ],
+      "opponentBest": [
+        4,
+        13
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "Jh",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "Th",
+        "Jh",
+        "Kc",
+        "9c"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          0,
+          13,
+          12,
+          10,
+          9,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Kc",
+          "9c"
+        ],
+        "comparison": 1
+      }
+    },
+    {
+      "id": "own_improvement",
+      "turn": "As",
+      "opponent": [
+        "Kc",
+        "Jc"
+      ],
+      "expectedHeroCategory": "两对",
+      "expectedOpponentCategory": "顺子",
+      "expectedComparison": -1,
+      "lesson": "自己变两对，同时对手TJQKA；改善不等于相对领先",
+      "heroBest": [
+        2,
+        14,
+        12,
+        10
+      ],
+      "opponentBest": [
+        4,
+        14
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "As",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "Th",
+        "As",
+        "Kc",
+        "Jc"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          0,
+          13,
+          12,
+          11,
+          10,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Kc",
+          "Jc"
+        ],
+        "comparison": 1
+      }
+    },
+    {
+      "id": "trips",
+      "turn": "Qc",
+      "opponent": [
+        "Qd",
+        "Ts"
+      ],
+      "expectedHeroCategory": "三条",
+      "expectedOpponentCategory": "葫芦",
+      "expectedComparison": -1,
+      "lesson": "自己的三条Q仍输QQQTT葫芦",
+      "heroBest": [
+        3,
+        12,
+        14,
+        10
+      ],
+      "opponentBest": [
+        6,
+        12,
+        10
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "Qc",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "Th",
+        "Qc",
+        "Qd",
+        "Ts"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          2,
+          12,
+          10,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Qd",
+          "Ts"
+        ],
+        "comparison": -1
+      }
+    },
+    {
+      "id": "paired_low",
+      "turn": "5d",
+      "opponent": [
+        "5h",
+        "5c"
+      ],
+      "expectedHeroCategory": "两对",
+      "expectedOpponentCategory": "四条",
+      "expectedComparison": -1,
+      "lesson": "公共牌成对不等于所有人同样受益",
+      "heroBest": [
+        2,
+        12,
+        5,
+        14
+      ],
+      "opponentBest": [
+        7,
+        5,
+        12
+      ],
+      "heroBestCards": [
+        "Qs",
+        "5s",
+        "5d",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "5s",
+        "5d",
+        "5h",
+        "5c"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          3,
+          5,
+          12,
+          10
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "5h",
+          "5c"
+        ],
+        "comparison": -1
+      }
+    },
+    {
+      "id": "overcard",
+      "turn": "Kd",
+      "opponent": [
+        "Kc",
+        "Jc"
+      ],
+      "expectedHeroCategory": "一对",
+      "expectedOpponentCategory": "一对",
+      "expectedComparison": -1,
+      "lesson": "还是一对Q，但对手已经是一对K",
+      "heroBest": [
+        1,
+        12,
+        14,
+        13,
+        10
+      ],
+      "opponentBest": [
+        1,
+        13,
+        12,
+        11,
+        10
+      ],
+      "heroBestCards": [
+        "Qs",
+        "Th",
+        "Kd",
+        "Ac",
+        "Qh"
+      ],
+      "opponentBestCards": [
+        "Qs",
+        "Th",
+        "Kd",
+        "Kc",
+        "Jc"
+      ],
+      "before": {
+        "heroBest": [
+          1,
+          12,
+          14,
+          10,
+          5
+        ],
+        "opponentBest": [
+          0,
+          13,
+          12,
+          11,
+          10,
+          5
+        ],
+        "heroBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Ac",
+          "Qh"
+        ],
+        "opponentBestCards": [
+          "Qs",
+          "Th",
+          "5s",
+          "Kc",
+          "Jc"
+        ],
+        "comparison": 1
+      }
+    }
+  ],
+  "teachingModel": {
+    "scope": "Four author-selected candidate holdings and two explicit response models; not player/Nevir/solver probabilities, not derived complete BB strategy",
+    "holdings": [
+      {
+        "id": "55",
+        "cards": [
+          "5d",
+          "5c"
+        ],
+        "priorMass": 1,
+        "active": {
+          "fold": 0,
+          "call": 0.25,
+          "raise": 0.75
+        },
+        "passive": {
+          "fold": 0,
+          "call": 1,
+          "raise": 0
+        }
+      },
+      {
+        "id": "QJ",
+        "cards": [
+          "Qd",
+          "Jc"
+        ],
+        "priorMass": 1,
+        "active": {
+          "fold": 0,
+          "call": 1,
+          "raise": 0
+        },
+        "passive": {
+          "fold": 0,
+          "call": 1,
+          "raise": 0
+        }
+      },
+      {
+        "id": "KJ",
+        "cards": [
+          "Kc",
+          "Jh"
+        ],
+        "priorMass": 1,
+        "active": {
+          "fold": 0.5,
+          "call": 0.5,
+          "raise": 0
+        },
+        "passive": {
+          "fold": 0.75,
+          "call": 0.25,
+          "raise": 0
+        }
+      },
+      {
+        "id": "22",
+        "cards": [
+          "2d",
+          "2h"
+        ],
+        "priorMass": 1,
+        "active": {
+          "fold": 0.75,
+          "call": 0.25,
+          "raise": 0
+        },
+        "passive": {
+          "fold": 1,
+          "call": 0,
+          "raise": 0
+        }
+      }
+    ],
+    "inherited": [
+      {
+        "model": "active",
+        "observedAction": "call",
+        "turn": null,
+        "totalMass": 2,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.125
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.5
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.5,
+            "mass": 0.5,
+            "probability": 0.25
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.125
+          }
+        ],
+        "set55Share": 0.125
+      },
+      {
+        "model": "active",
+        "observedAction": "call",
+        "turn": "2d",
+        "totalMass": 1.75,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.14285714285714285
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.5714285714285714
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.5,
+            "mass": 0.5,
+            "probability": 0.2857142857142857
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0,
+            "probability": 0
+          }
+        ],
+        "set55Share": 0.14285714285714285
+      },
+      {
+        "model": "active",
+        "observedAction": "call",
+        "turn": "9s",
+        "totalMass": 2,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.125
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.5
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.5,
+            "mass": 0.5,
+            "probability": 0.25
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.125
+          }
+        ],
+        "set55Share": 0.125
+      },
+      {
+        "model": "passive",
+        "observedAction": "call",
+        "turn": null,
+        "totalMass": 2.25,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.1111111111111111
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0,
+            "mass": 0,
+            "probability": 0
+          }
+        ],
+        "set55Share": 0.4444444444444444
+      },
+      {
+        "model": "passive",
+        "observedAction": "call",
+        "turn": "2d",
+        "totalMass": 2.25,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.1111111111111111
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0,
+            "mass": 0,
+            "probability": 0
+          }
+        ],
+        "set55Share": 0.4444444444444444
+      },
+      {
+        "model": "passive",
+        "observedAction": "call",
+        "turn": "9s",
+        "totalMass": 2.25,
+        "rows": [
+          {
+            "id": "55",
+            "cards": [
+              "5d",
+              "5c"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "QJ",
+            "cards": [
+              "Qd",
+              "Jc"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 1,
+            "mass": 1,
+            "probability": 0.4444444444444444
+          },
+          {
+            "id": "KJ",
+            "cards": [
+              "Kc",
+              "Jh"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0.25,
+            "mass": 0.25,
+            "probability": 0.1111111111111111
+          },
+          {
+            "id": "22",
+            "cards": [
+              "2d",
+              "2h"
+            ],
+            "priorMass": 1,
+            "callLikelihood": 0,
+            "mass": 0,
+            "probability": 0
+          }
+        ],
+        "set55Share": 0.4444444444444444
+      }
+    ]
+  },
+  "history": {
+    "players": 6,
+    "startingStackBB": 100,
+    "hero": "BTN",
+    "villain": "BB",
+    "deadSB": 0.5,
+    "preflop": "BTN raise to 2.5; BB call",
+    "flop": "BB check; BTN bet 2; BB call",
+    "flopBoard": [
+      "Qs",
+      "Th",
+      "5s"
+    ],
+    "heroHole": [
+      "Ac",
+      "Qh"
+    ],
+    "turn": "2d",
+    "turnStart": {
+      "potBB": 9.5,
+      "heroStackBB": 95.5,
+      "villainStackBB": 95.5,
+      "foldedStacksBB": 399.5
+    },
+    "branches": [
+      {
+        "id": "BB_bet",
+        "events": "BB bet 6",
+        "potIncludingBetBB": 15.5,
+        "heroStackBB": 95.5,
+        "villainStackBB": 89.5,
+        "toCallBB": 6,
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "afterCallPotBB": 21.5,
+        "afterCallEachStackBB": 89.5,
+        "immediateCallPrice": 0.27906976744186046
+      },
+      {
+        "id": "BB_raise",
+        "events": "BB check; BTN bet 6; BB raise to 20",
+        "potIncludingBetBB": 35.5,
+        "heroStackBB": 89.5,
+        "villainStackBB": 75.5,
+        "toCallBB": 14,
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "afterCallPotBB": 49.5,
+        "afterCallEachStackBB": 75.5,
+        "immediateCallPrice": 0.2828282828282828
+      }
+    ]
+  },
+  "sourceCases": [
+    {
+      "id": "small_bet_turn",
+      "fragment": "N4-L28",
+      "review": "R19",
+      "needed": [
+        "3bet pot",
+        "flop small range bet then call",
+        "opponent assumptions from section"
+      ],
+      "answerPrecision": "conditional_direction_not_any_hand_action",
+      "use": "同一牌面先继承翻牌被跟前序",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 28,
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "monotone_fourth",
+      "fragment": "N4-L32",
+      "review": "R20",
+      "needed": [
+        "3bet pot",
+        "Ks Ts 5s flop",
+        "actual turn identity"
+      ],
+      "answerPrecision": "reported_range_frequency_not_combo_frequency",
+      "use": "第四张黑桃与8c对照；40/66不是任意手牌掷骰",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 32,
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "straight_turn",
+      "fragment": "N4-L33",
+      "review": "R21",
+      "needed": [
+        "3bet pot",
+        "Jh Ts 2d flop",
+        "small flop bet version unresolved"
+      ],
+      "answerPrecision": "reported_range_frequency_and_direction",
+      "use": "9d与5c对照；25/33前序版本仍待核实",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 33,
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "xr_called",
+      "fragment": "N5-L22",
+      "review": "R23",
+      "needed": [
+        "SB vs BTN 3bet pot",
+        "T83 rainbow",
+        "specified overfold lock",
+        "XR called"
+      ],
+      "answerPrecision": "conditional_preference",
+      "use": "被跟后的过牌不是已经弃牌；K例单列",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 22,
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "srp_tight_recreational",
+      "fragment": "N7-L25",
+      "review": "R26",
+      "needed": [
+        "single raised pot",
+        "SB vs BB context",
+        "stated tight/recreational strong betting assumption"
+      ],
+      "answerPrecision": "conditional_adjustment_not_complete_defense",
+      "use": "不能借3bet底池T83扩成任意诈唬XR",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 25,
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "srp_aggregate",
+      "fragment": "N7-L20",
+      "review": null,
+      "needed": [
+        "single raised pot",
+        "SB check BB bet SB raise",
+        "aggregate population version"
+      ],
+      "answerPrecision": "source_report_not_current_read",
+      "use": "该段少弃牌；不可与下一人群段合并平均",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 20,
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "strategicPolicyAcquired": false
+    },
+    {
+      "id": "srp_regs",
+      "fragment": "N7-L27",
+      "review": null,
+      "needed": [
+        "single raised pot",
+        "SB vs BB context",
+        "stated regular player over-stab assumption"
+      ],
+      "answerPrecision": "conditional_population_explanation",
+      "use": "更多弱牌下注可改变加注收益；身份标签本身不是概率",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 27,
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "strategicPolicyAcquired": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": "U01",
+      "parent": "update.response",
+      "action": "先选刚才的真实路线",
+      "input": "原历史",
+      "fade": "路线标签被隐藏",
+      "criterion": "保留下注被跟/双方过牌/加注被跟的区别",
+      "evidence": "history_only",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U02",
+      "parent": "update.card",
+      "action": "点出新牌排除的实体牌",
+      "input": "2d与原图",
+      "fade": "冲突组合不预先划除",
+      "criterion": "只删撞牌，不重置前序质量",
+      "evidence": "turns",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U03",
+      "parent": "read.cards",
+      "action": "选自己现在的五张与对手的五张",
+      "input": "As例",
+      "fade": "大小关系不预先显示",
+      "criterion": "自己改善但相对落后",
+      "evidence": "pairs/own_improvement",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U04",
+      "parent": "read.cards",
+      "action": "区分三条与葫芦",
+      "input": "Qc例",
+      "fade": "牌型名称被隐藏",
+      "criterion": "QQQTT优于三条Q",
+      "evidence": "pairs/trips",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U05",
+      "parent": "read.range",
+      "action": "保留仍可能慢打的强牌",
+      "input": "四候选模型active",
+      "fade": "答案宽度被隐藏",
+      "criterion": "55跟注质量1/4不等于0",
+      "evidence": "inherited/active",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U06",
+      "parent": "read.range",
+      "action": "比较同一跟注在两模型里的含义",
+      "input": "两套响应均明示",
+      "fade": "强牌占比被隐藏",
+      "criterion": "同一观察不唯一决定范围",
+      "evidence": "inherited",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U07",
+      "parent": "update.card",
+      "action": "先保留跟注筛选，再发2d",
+      "input": "active call后发牌",
+      "fade": "两个更新的结果被隐藏",
+      "criterion": "22实体冲突；其余不恢复原权重",
+      "evidence": "inherited/active/2d",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U08",
+      "parent": "compare.unopened",
+      "action": "选择当前应比较的路线与资料精度",
+      "input": "课程三组转牌对照",
+      "fade": "原理标题被隐藏",
+      "criterion": "总频率不是任意AQ的动作答案",
+      "evidence": "sourceCases",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U09",
+      "parent": "compare.bet",
+      "action": "面对BB下注先找合法选择与待补",
+      "input": "BB_bet账本",
+      "fade": "答案被隐藏",
+      "criterion": "无免费过牌；仍需比较跟弃加",
+      "evidence": "history/BB_bet",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U10",
+      "parent": "compare.raise",
+      "action": "面对加注算差额与跟后池",
+      "input": "BB_raise账本",
+      "fade": "差额被隐藏",
+      "criterion": "补14而不是补20；价格不等于前街胜率即跟",
+      "evidence": "history/BB_raise",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U11",
+      "parent": "compare.raise",
+      "action": "核对XR建议的适用条件",
+      "input": "三组来源与当前底池/对手设定",
+      "fade": "正确来源不预选",
+      "criterion": "不跨底池或无依据人群借用纯动作",
+      "evidence": "sourceCases",
+      "unknownCountsAsError": true
+    },
+    {
+      "id": "U12",
+      "parent": "update.response",
+      "action": "动作后回到同一手牌继续",
+      "input": "跟注完成的同一账本",
+      "fade": "步骤导航不自动预选",
+      "criterion": "保持牌/历史/范围/金额一致，不跳到独立例题",
+      "evidence": "history",
+      "unknownCountsAsError": true
+    }
+  ],
+  "release": {
+    "physicalCardFacts": true,
+    "completeTurnStrategy": false,
+    "sourceConditionalMatchingOnly": true,
+    "actualLearnerTrials": 0,
+    "NL50Evidence": false
+  },
+  "handCategoryOrder": [
+    "高牌",
+    "一对",
+    "两对",
+    "三条",
+    "顺子",
+    "同花",
+    "葫芦",
+    "四条",
+    "同花顺"
+  ]
+}

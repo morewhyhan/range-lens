@@ -1,0 +1,56 @@
+{
+  "id": "OUTCOME_RELEASE_CROSSWALK_V1",
+  "status": "paper_release_crosswalk_not_trialed",
+  "purpose": "把O0-O6结果阶梯与E0-E6学习者发布闸门和实际训练动作逐级对齐。",
+  "sourceDocuments": [
+    "109_目标结果分层与一遍体验验收.md",
+    "77_NL50目标结果边界与验收合同.md",
+    "learner-evidence-release-gates.json",
+    "155_首遍视觉结构与父子层闭合合同.md",
+    "unified-learner-evidence-release-gates.json",
+    "minimal-matched-first-hand-package.json"
+  ],
+  "stages": [
+    {"id":"S0","outcome":"O0_orientation","gate":"E0","userAction":"定位行动者、历史、底池、后手和待补","unlock":"guided_route","failureReturn":"context"},
+    {"id":"S1","outcome":"O1_guided_route","gate":"E1","userAction":"沿单一路线完成p1-p7并在子层返回父帧","unlock":"structure_recall","failureReturn":"nearest_parent"},
+    {"id":"S2","outcome":"O2_structure_recall","gate":"E2","userAction":"无标题复述顺序、交接状态、定位当前层并恢复错误","unlock":"slow_single_step","failureReturn":"route_or_layer"},
+    {"id":"S3","outcome":"O3_slow_execution","gate":"E3","userAction":"在来源充分的节点读输入、选动作、填金额、看范围后或停止","unlock":"single_variable_transfer","failureReturn":"fact_range_compare_or_execution"},
+    {"id":"S4","outcome":"O4_single_variable_transfer","gate":"E4","userAction":"只改变一个字段并指出重新检查的层","unlock":"continuous_three_street","failureReturn":"changed_field_layer"},
+    {"id":"S5","outcome":"O5_continuous_route","gate":"E5","userAction":"在未见三街路线中保留历史、范围、账本、行动权和后继","unlock":"target_condition_holdout","failureReturn":"broken_street_or_upstream_range"},
+    {"id":"S6","outcome":"O6_target_readiness_candidate","gate":"E6","userAction":"在冻结目标配置和未曝光题包中完成独立复核","unlock":"target_readiness_assessment","failureReturn":"independent_evidence_layer"}
+  ],
+  "complexityOrder": ["routeLength","parentDepth","singleFieldChange","successorLength","strategySpace","unseenness"],
+  "complexityRule": "increase_one_dimension_at_a_time",
+  "userFacingNestedRoute": {
+    "outerPlainLanguage": ["桌面", "局面", "翻前图", "范围交接", "翻后进入", "比较", "更新", "结算", "迁移"],
+    "postflopPlainLanguage": ["局面", "牌面与牌力", "范围", "比较", "执行", "更新", "收口"],
+    "oneQuestionOnePrimaryAction": true,
+    "plainLanguageBeforeTerms": true,
+    "parentRestoreAfterChild": true,
+    "authorLabelsAreHidden": true,
+    "userDoesNotNeedInternalIds": true
+  },
+  "evidenceGateCrosswalk": {
+    "paperClosure": "V0_paper_closure",
+    "guidedFirstPass": "V1_guided_first_pass",
+    "hiddenStructure": "V2_hidden_structure_recall",
+    "singleVariable": "V3_single_variable_transfer",
+    "unseenSlowSingleStep": "V4_unseen_slow_single_step",
+    "continuousThreeStreet": "V5_continuous_three_street",
+    "externalTargetReview": "V6_target_external_review"
+  },
+  "minimumMatchedPackageStages": ["P0_input", "P1_fact", "P2_reference", "P3_policy", "P4_successor", "P5_lesson", "P6_transfer", "P7_trial"],
+  "sameParentRetry": true,
+  "speedIsNotGate": true,
+  "noLevelSkipping": true,
+  "requiredLearnerRecords": ["firstAnswer","helpLevel","retryAnswer","errorLayer","changedField","returnTo","evidenceIdentity"],
+  "currentEvidence": {
+    "allStagesSpecified": true,
+    "runtimeImplemented": false,
+    "beginnerTrial": false,
+    "matchedReference": false,
+    "heldoutTransfer": false,
+    "continuousRoute": false,
+    "NL50Evidence": false
+  }
+}

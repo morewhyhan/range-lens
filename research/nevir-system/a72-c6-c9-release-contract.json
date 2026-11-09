@@ -1,0 +1,149 @@
+{
+  "id": "A72_C6_C9_RELEASE_CONTRACT_V1",
+  "status": "C0_source_build_verified_C1_verified_C2_C5_missing_C6_C9_not_started",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "gates": [
+    {
+      "id": "C6",
+      "name": "course_policy_compile",
+      "status": "not_started",
+      "requires": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "outputs": [
+        "reference-policy.json",
+        "course-policy.json",
+        "simplification-report.json",
+        "policy-range-views.json",
+        "policy-successor-index.json"
+      ],
+      "hardRules": [
+        "referenceAndCoursePolicySeparate",
+        "ancestorReevaluationRequired",
+        "missingSuccessorBlocksExactPolicy"
+      ],
+      "opens": "course_policy_practice"
+    },
+    {
+      "id": "C7",
+      "name": "first_lesson_frame_compile",
+      "status": "not_started",
+      "requires": [
+        "C6"
+      ],
+      "canonicalLearnerRoute": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "canonicalLearnerRouteRole": "runtime_surface",
+      "route": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "routeRole": "legacy_author_macro_inventory_only",
+      "postflopSteps": [
+        "p1_context",
+        "p2_board",
+        "p3_range",
+        "p4_compare",
+        "p5_execute",
+        "p6_update",
+        "p7_close"
+      ],
+      "hardRules": [
+        "oneQuestion",
+        "onePrimaryAction",
+        "parentFrameAndReturn",
+        "publicPromptContainsNoAnswer"
+      ],
+      "opens": "postflop_demonstration"
+    },
+    {
+      "id": "C8",
+      "name": "paper_and_machine_verification",
+      "status": "not_started",
+      "requires": [
+        "C7"
+      ],
+      "checks": [
+        "cards",
+        "ledger",
+        "ranges",
+        "reference",
+        "successors",
+        "teaching",
+        "promptSeparation"
+      ],
+      "hardRules": [
+        "allPositiveSuccessorsIndexed",
+        "unknownCountsAsWrong",
+        "failedCheckDowngradesRelease"
+      ],
+      "opens": "internal_trial_candidate"
+    },
+    {
+      "id": "C9",
+      "name": "unseen_first_pass_trial_and_freeze",
+      "status": "not_started",
+      "requires": [
+        "C8"
+      ],
+      "script": "69_低基础首遍试读主持脚本与证据合同.md",
+      "checks": [
+        "firstPassRoute",
+        "errorRecovery",
+        "orderRecall",
+        "layerLocation",
+        "oneFieldTransfer"
+      ],
+      "hardRules": [
+        "hostCannotFillAnswer",
+        "firstAnswerPreserved",
+        "singleVariableRevision"
+      ],
+      "opens": "matched_strategy_practice_or_downgraded_identity"
+    }
+  ],
+  "releaseIdentities": [
+    "postflop_demonstration",
+    "course_policy_practice",
+    "matched_strategy_practice"
+  ],
+  "currentStatus": {
+    "C0": "source_build_verified_root_menu_probe_adapter_pending",
+    "C1": "independent_fact_snapshot_verified",
+    "C2": "reference_missing",
+    "C3": "reference_missing",
+    "C4": "reference_missing",
+    "C5": "reference_missing",
+    "C6": "not_started",
+    "C7": "not_started",
+    "C8": "not_started",
+    "C9": "not_started",
+    "matchedStrategyPractice": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

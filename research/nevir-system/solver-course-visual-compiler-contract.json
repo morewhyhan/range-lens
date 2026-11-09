@@ -1,0 +1,245 @@
+{
+  "id": "SOLVER_COURSE_VISUAL_COMPILER_CONTRACT_V1",
+  "status": "paper_visual_compiler_contract_not_implemented",
+  "purpose": "把外部求解器的逐组合结果编译成学习者能按顺序读懂的范围变化图、动作选择和下一步，而不把求解器原始字段直接当成题目。",
+  "sources": [
+    "176_指定仓库当前公开能力与训练器映射报告.md",
+    "solver-snapshot-to-lesson-package.json",
+    "course-package-field-crosswalk.json",
+    "range-delta-visual-closure.json",
+    "187_一遍到目标级的嵌套释放总架构合同.md"
+  ],
+  "userVisibleSequence": [
+    "context",
+    "physicalFacts",
+    "rangeBefore",
+    "compareChoices",
+    "executeLedger",
+    "rangeAfter",
+    "successorOrStop",
+    "restatementAndTransfer"
+  ],
+  "dataLayers": [
+    {
+      "id": "context",
+      "routeStep": "p1_context",
+      "source": "inputFingerprint",
+      "consumesFrom": ["initialInput"],
+      "requiredFields": ["position", "actor", "history", "board", "potBB", "stacksBB", "legalActions", "price"],
+      "plainQuestion": "现在是谁在什么位置，前面发生了什么，轮到谁？",
+      "visible": ["sixMaxTable", "heroSeat", "actorMarker", "history", "potAndStacks", "price"],
+      "handoff": "contextSnapshot",
+      "blocks": "missing_input_identity"
+    },
+    {
+      "id": "physicalFacts",
+      "routeStep": "p2_board",
+      "source": "factSnapshot",
+      "consumesFrom": ["contextSnapshot"],
+      "requiredFields": ["bestFive", "handClass", "legalRunouts", "improvementCards", "physicalFilter", "ledgerFacts"],
+      "plainQuestion": "我和公共牌现在实际组成了什么，哪些牌会改变它？",
+      "visible": ["cards", "bestFiveHighlight", "handRankLadder", "boardClass", "improvementCards", "legalRunouts"],
+      "handoff": "handAndBoardFacts",
+      "blocks": "physical_fact_mismatch"
+    },
+    {
+      "id": "rangeBefore",
+      "routeStep": "p3_range",
+      "source": "rangeSnapshots.rangeBefore",
+      "consumesFrom": ["handAndBoardFacts"],
+      "requiredFields": ["rangeBefore", "physicalAfter", "physicalFilter", "fixedDenominator", "sourceFingerprint"],
+      "plainQuestion": "在这些已知牌和前序动作下，对手还可能拿哪些牌？",
+      "visible": ["rangeBeforeChart", "physicalRemovalOverlay", "fixedDenominator", "cellDrilldown"],
+      "handoff": "rangeBeforeAndPhysicalRemoval",
+      "blocks": "missing_range_denominator"
+    },
+    {
+      "id": "compareChoices",
+      "routeStep": "p4_compare",
+      "source": "referenceSnapshot_and_coursePolicy",
+      "consumesFrom": ["rangeBeforeAndPhysicalRemoval"],
+      "requiredFields": ["availableActions", "actualAmounts", "referenceActionFrequencyByCombo", "referenceActionValueByCombo", "courseActionWeight", "policyIdentity"],
+      "plainQuestion": "在这个价格、范围和行动菜单下，哪些选择可以比较？",
+      "visible": ["legalActionButtons", "actualAmounts", "oneComparison", "coursePolicyLabel"],
+      "handoff": "courseDecisionCandidate",
+      "blocks": "missing_matched_reference_or_course_policy"
+    },
+    {
+      "id": "executeLedger",
+      "routeStep": "p5_execute",
+      "source": "ledgerFrame",
+      "consumesFrom": ["courseDecisionCandidate"],
+      "requiredFields": ["selectedAction", "amountBB", "potAfterBB", "stacksAfterBB", "nextActor", "historyAfter"],
+      "plainQuestion": "我要执行哪个动作，放多少，行动权交给谁？",
+      "visible": ["selectedAction", "actualAmount", "potAfter", "stackAfter", "nextActor"],
+      "handoff": "actionLedgerAndActor",
+      "blocks": "missing_amount_or_action_right"
+    },
+    {
+      "id": "rangeAfter",
+      "routeStep": "p6_update",
+      "source": "rangeSnapshots.rangeAfter_and_differenceLedger",
+      "consumesFrom": ["actionLedgerAndActor"],
+      "requiredFields": ["referenceAfter", "courseAfter", "rangeDelta", "changeReason", "fixedDenominator", "physicalConflictSeparate"],
+      "plainQuestion": "这个动作以后，哪些牌留下、哪些牌减少，为什么？",
+      "visible": ["beforeAfterSameGrid", "physicalVsActionLegend", "rangeDeltaGlow", "cellReason"],
+      "handoff": "rangeAfterAndChangeReason",
+      "blocks": "missing_action_after_or_difference"
+    },
+    {
+      "id": "successorOrStop",
+      "routeStep": "p6_update",
+      "source": "successorGraph",
+      "consumesFrom": ["rangeAfterAndChangeReason"],
+      "requiredFields": ["successorIdentityOrStopReason", "expandedChanceCards", "nextRangeStateOrStop", "ledgerHandoff"],
+      "plainQuestion": "接下来真的进入哪一步，还是应该在这里停下？",
+      "visible": ["nextStateCard", "newCardEffect", "nextActor", "stopReason"],
+      "handoff": "successorOrStop",
+      "blocks": "missing_real_successor"
+    },
+    {
+      "id": "restatementAndTransfer",
+      "routeStep": "p7_close",
+      "source": "lessonFrames_and_heldoutTransfer",
+      "consumesFrom": ["successorOrStop"],
+      "requiredFields": ["changedField", "preservedFields", "errorLayer", "returnTo", "transferVariant", "answerIdentity"],
+      "plainQuestion": "这一步真正改变了什么？下一次只改一个地方时，我先回哪一层？",
+      "visible": ["oneSentenceRestatement", "changedFieldArrow", "returnPoint", "nextPracticeEntry"],
+      "handoff": "closeAndTransferField",
+      "blocks": "missing_single_variable_transfer"
+    }
+  ],
+  "visualRules": {
+    "oneCentralVisualPerStep": true,
+    "same13x13CoordinateBeforeAfter": true,
+    "sameScaleBeforeAfter": true,
+    "sameDenominatorBeforeAfter": true,
+    "cellDrilldownRequired": true,
+    "physicalImpossibleDistinctFromActionFiltered": true,
+    "unknownReferenceDistinctFromZero": true,
+    "colorIsNotSoleSemanticChannel": true,
+    "beforeAfterComparisonOnlyAfterRangeBefore": true,
+    "parentRestoredAfterChartClose": true
+  },
+  "formulaContract": {
+    "physicalWeight": "w_physical(h)=w_before(h)*f_physical(h)",
+    "referenceAfter": "r_ref(h,a)=w_physical(h)*p_ref(a|h,node)",
+    "courseAfter": "r_course(h,a)=w_physical(h)*q_course(a|h,node)",
+    "viewShare": "share(h,a)=r(h,a)/sum_h(r(h,a))",
+    "rangeDelta": "delta(h,a)=r_course(h,a)-r_ref(h,a)",
+    "policyLoss": "L=sum_h w_physical(h)*(EV_ref(h,best_ref)-sum_a(q_course(h,a)*EV_ref(h,a)))"
+  },
+  "handoffConsumption": {
+    "initialInput": "contextSnapshot",
+    "contextSnapshot": "handAndBoardFacts",
+    "handAndBoardFacts": "rangeBeforeAndPhysicalRemoval",
+    "rangeBeforeAndPhysicalRemoval": "courseDecisionCandidate",
+    "courseDecisionCandidate": "actionLedgerAndActor",
+    "actionLedgerAndActor": "rangeAfterAndChangeReason",
+    "rangeAfterAndChangeReason": "successorOrStop",
+    "successorOrStop": "closeAndTransferField",
+    "closeAndTransferField": "terminal_or_heldout_transfer"
+  },
+  "fieldLineage": {
+    "context": {
+      "position": "inputFingerprint",
+      "actor": "inputFingerprint",
+      "history": "inputFingerprint",
+      "board": "inputFingerprint",
+      "potBB": "inputFingerprint",
+      "stacksBB": "inputFingerprint",
+      "legalActions": "inputFingerprint",
+      "price": "inputFingerprint"
+    },
+    "physicalFacts": {
+      "bestFive": "factSnapshot",
+      "handClass": "factSnapshot",
+      "legalRunouts": "factSnapshot",
+      "improvementCards": "factSnapshot",
+      "physicalFilter": "factSnapshot",
+      "ledgerFacts": "factSnapshot"
+    },
+    "rangeBefore": {
+      "rangeBefore": "rangeSnapshots",
+      "physicalAfter": "rangeSnapshots",
+      "physicalFilter": "rangeSnapshots",
+      "fixedDenominator": "rangeSnapshots",
+      "sourceFingerprint": "inputFingerprint"
+    },
+    "compareChoices": {
+      "availableActions": "referenceSnapshot",
+      "actualAmounts": "referenceSnapshot",
+      "referenceActionFrequencyByCombo": "referenceSnapshot",
+      "referenceActionValueByCombo": "referenceSnapshot",
+      "courseActionWeight": "coursePolicy",
+      "policyIdentity": "coursePolicy"
+    },
+    "executeLedger": {
+      "selectedAction": "lessonFrames",
+      "amountBB": "lessonFrames",
+      "potAfterBB": "lessonFrames",
+      "stacksAfterBB": "lessonFrames",
+      "nextActor": "lessonFrames",
+      "historyAfter": "lessonFrames"
+    },
+    "rangeAfter": {
+      "referenceAfter": "rangeSnapshots",
+      "courseAfter": "rangeSnapshots",
+      "rangeDelta": "differenceLedger",
+      "changeReason": "differenceLedger",
+      "fixedDenominator": "rangeSnapshots",
+      "physicalConflictSeparate": "differenceLedger"
+    },
+    "successorOrStop": {
+      "successorIdentityOrStopReason": "successorGraph",
+      "expandedChanceCards": "successorGraph",
+      "nextRangeStateOrStop": "successorGraph",
+      "ledgerHandoff": "successorGraph"
+    },
+    "restatementAndTransfer": {
+      "changedField": "lessonFrames",
+      "preservedFields": "lessonFrames",
+      "errorLayer": "lessonFrames",
+      "returnTo": "lessonFrames",
+      "transferVariant": "heldoutTransfer",
+      "answerIdentity": "lessonFrames"
+    }
+  },
+  "sourceBoundaryRules": {
+    "equityDoesNotSelectAction": true,
+    "handEvaluatorDoesNotSelectAction": true,
+    "referenceStrategyIsNotCoursePolicy": true,
+    "courseAfterRequiresExplicitPolicy": true,
+    "rangeAfterRequiresFixedDenominator": true,
+    "successorRequiresRealNodeOrStop": true,
+    "isomorphicRepresentativeMustBeExpanded": true,
+    "missingEvidenceNeverDefaultsToZeroOrFold": true
+  },
+  "releaseGates": [
+    {"id":"V0_fact", "allows":["context", "physicalFacts"], "requires":["inputFingerprint", "factSnapshot"]},
+    {"id":"V1_range", "allows":["rangeBefore"], "requires":["rangeBefore", "physicalFilter", "fixedDenominator"]},
+    {"id":"V2_compare", "allows":["compareChoices", "executeLedger"], "requires":["referenceSnapshot", "coursePolicy", "actualAmounts"]},
+    {"id":"V3_range_change", "allows":["rangeAfter"], "requires":["referenceAfter", "courseAfter", "differenceLedger"]},
+    {"id":"V4_continuous", "allows":["successorOrStop"], "requires":["successorGraph_or_stopReason", "nextRangeStateOrStop", "ledgerHandoff"]},
+    {"id":"V5_transfer", "allows":["restatementAndTransfer"], "requires":["exactlyOneChangedField", "heldoutSourceIdentity", "learnerTrial"]}
+  ],
+  "runtimeIntegration": {
+    "frontendReadsOnly": "verified_static_lesson_package",
+    "solveOnAnswerClick": false,
+    "runtimeInfersMissingPolicy": false,
+    "rangeChartIsPrimaryAnswer": false,
+    "coursePolicyDisplayedSeparatelyFromReference": true
+  },
+  "currentEvidence": {
+    "contractWritten": true,
+    "formulaAudit": true,
+    "fieldReaderAudit": true,
+    "fieldLineageAudit": true,
+    "runtimeFieldReaders": false,
+    "matchedReference": false,
+    "compilerImplemented": false,
+    "rangeRuntime": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

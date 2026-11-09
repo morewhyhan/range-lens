@@ -1,0 +1,42 @@
+{
+  "status": "paper_output_contract_not_trialed",
+  "route": ["O1_context","O2_board","O3_hand","O4_range","O5_compare","O6_execute","O7_update","O8_close"],
+  "steps": [
+    {"id":"O1_context","visibleInputs":["table","street","history","potBB","streetPaidBB","stacksBB"],"requiredOutputs":["street","actor","facingAction","potBB","toCallBB","effectiveStackBB"],"allowedIdentities":["fact"],"precision":"state_and_integer_amounts","visual":"six_max_table_and_ledger","errorReturn":"桌面／历史"},
+    {"id":"O2_board","visibleInputs":["board","boardRelationHints"],"requiredOutputs":["boardClass","pairedRelation","connectedRelation","flushRelation","newCardChange"],"allowedIdentities":["fact"],"precision":"board_relation_set","visual":"horizontal_board","errorReturn":"牌面"},
+    {"id":"O3_hand","visibleInputs":["heroHole","board","remainingDeck"],"requiredOutputs":["bestFive","handClass","directDraws","backdoorDraws","improvementCards","blockerFacts"],"allowedIdentities":["fact"],"precision":"entity_cards_and_hand_class","visual":"hero_cards_best_five_and_outs","errorReturn":"最佳五张"},
+    {"id":"O4_range","visibleInputs":["rangeOwner","rangeBefore","knownCards","history","rangeViewDenominator"],"requiredOutputs":["rangeOwner","physicalRemoval","actionFilter","beforeAfterChangedCells","viewpoint"],"allowedIdentities":["fact","demonstration"],"precision":"fixed_denominator_combo_set_or_weight","visual":"paired_fixed_scale_range_grids","errorReturn":"范围"},
+    {"id":"O5_compare","visibleInputs":["legalActions","toCallBB","potAfterCallBB","declaredSuccessors","rangeEvidence"],"requiredOutputs":["legalActions","price","actionPurpose","worseContinuations","betterFolds","futureBranches"],"allowedIdentities":["course_rule","reference_policy","demonstration"],"precision":"declared_action_or_per_hand_frequency","visual":"action_buttons_and_successor_strip","errorReturn":"范围或价格"},
+    {"id":"O6_execute","visibleInputs":["selectedAction","amountInput","ledgerPreview"],"requiredOutputs":["action","amountBB","potAfterBB","stackAfterBB","nextActor"],"allowedIdentities":["ledger","course_rule","reference_policy"],"precision":"integer_or_declared_bb_amount","visual":"ledger_transition","errorReturn":"金额"},
+    {"id":"O7_update","visibleInputs":["newHistory","newBoard","rangeAfter","successors"],"requiredOutputs":["changedField","newRangeSnapshot","newCardEffect","nextActor","successorOrTerminal"],"allowedIdentities":["fact","reference_policy","demonstration"],"precision":"snapshot_and_legal_successor_identity","visual":"single_changed_field_highlight","errorReturn":"状态"},
+    {"id":"O8_close","visibleInputs":["terminalState","showdownOrFold","parentSnapshot"],"requiredOutputs":["settlement","decisionResultSeparation","routeRecall","nextRoundEntry"],"allowedIdentities":["ledger","fact"],"precision":"settlement_and_route_identity","visual":"settlement_and_route_replay","errorReturn":"nearest_missing_layer"}
+  ],
+  "formulaRules": {
+    "potAfter":"pot_before + matched_contributions + uncalled_return_adjustment",
+    "stackAfter":"stack_before - actual_contribution",
+    "toCall":"amount_required_to_match_current_bet",
+    "rangeAfter":"range_before * action_frequency_per_hand / branch_mass",
+    "fixedRangeDenominator":true,
+    "displayAndGradePrecisionSeparate":true
+  },
+  "antiShortcutRules": [
+    "backdoorDoesNotImplyAction",
+    "physicalRemovalDoesNotImplyActionFilter",
+    "handClassDoesNotImplyAction",
+    "missingSuccessorStopsExactStrategy",
+    "settlementDoesNotRewriteFirstAnswer"
+  ],
+  "stopRules": {
+    "missingSource":"fact_or_demonstration_only",
+    "missingActionAfterRange":"physical_filter_or_demonstration_only",
+    "missingSuccessor":"stop_at_current_parent",
+    "missingLearnerTrial":"do_not_claim_beginner_mastery"
+  },
+  "currentEvidence": {
+    "paperContract":true,
+    "pageImplemented":false,
+    "matchedReferenceComplete":false,
+    "learnerTrial":false,
+    "NL50Evidence":false
+  }
+}

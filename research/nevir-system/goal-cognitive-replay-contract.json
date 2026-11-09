@@ -1,0 +1,65 @@
+{
+  "id": "GOAL_COGNITIVE_REPLAY_CONTRACT_V1",
+  "status": "paper_replay_contract_written_not_trialed",
+  "architectureReplayContract": "architecture-replay-contract.json",
+  "architectureReplayRubric": "architecture-replay-rubric.json",
+  "purpose": "验证学习者是否形成可回放、可定位、可交接和可迁移的七层思考结构，而不是只记住按钮答案。",
+  "route": ["p1_context", "p2_board", "p3_range", "p4_compare", "p5_execute", "p6_update", "p7_close"],
+  "traceSchema": {
+    "tuple": ["currentParentStep", "visibleInputs", "learnerOutput", "handoffPayload", "errorReturn"],
+    "firstAnswerPreserved": true,
+    "helpLevelRecorded": true,
+    "retrySeparateFromFirstAnswer": true,
+    "noLongTermLearnerDatabase": true
+  },
+  "handoffs": [
+    {"step":"p1_context","required":["actor","history","pot","stacks","toCall"],"next":"p2_board","forbiddenSubstitution":"hero_hole_cards_only"},
+    {"step":"p2_board","required":["bestFive","category","improvementCards"],"next":"p3_range","forbiddenSubstitution":"board_texture_to_action"},
+    {"step":"p3_range","required":["rangeBefore","physicalFilter","actionFilterStatus","normalizationDenominator"],"next":"p4_compare","forbiddenSubstitution":"physical_conflict_equals_fold"},
+    {"step":"p4_compare","required":["legalActions","price","actionPurpose","policyIdentity"],"next":"p5_execute","forbiddenSubstitution":"hand_label_to_action"},
+    {"step":"p5_execute","required":["selectedAction","amount","potAfter","stacksAfter","nextActor"],"next":"p6_update","forbiddenSubstitution":"button_without_ledger"},
+    {"step":"p6_update","required":["changedField","rangeAfter","newCardEffect","successorIdentity"],"next":"p7_close","forbiddenSubstitution":"reset_whole_hand"},
+    {"step":"p7_close","required":["settlement","decisionResultSeparation","errorLayer","nextRoundEntry"],"next":"exit_or_review","forbiddenSubstitution":"result_proves_decision"}
+  ],
+  "replayPhases": [
+    {"id":"route_recall","oneCardAtATime":true,"hideStepNames":true,"checks":["allSevenSteps","noSkip","nextStepNamed"]},
+    {"id":"handoff_recall","oneCardAtATime":true,"checks":["currentLayerIdentified","requiredPayloadComplete","technicalIdentityCorrect"]},
+    {"id":"breakpoint_reconnect","oneCardAtATime":true,"checks":["nearestMissingLayer","parentRestored","noHomeReset"]},
+    {"id":"single_variable_transfer","oneCardAtATime":true,"checks":["oneFieldChanged","affectedLayerNamedBeforeAnswer","sameSchemaReused"]}
+  ],
+  "minimumStructuralEvidence": {
+    "allSevenStepsVisited": true,
+    "allSevenHandoffsNonEmpty": true,
+    "oneErrorReturnedToNearestLayer": true,
+    "oneVariableTransferBeforeExplanation": true,
+    "speedThreshold": null,
+    "hostAnswerBeforeFirstResponse": false
+  },
+  "errorLayerMap": {
+    "state":"p1_context",
+    "board":"p2_board",
+    "hand":"p2_board",
+    "range":"p3_range",
+    "price":"p4_compare",
+    "action":"p5_execute",
+    "ledger":"p7_close",
+    "update":"p6_update"
+  },
+  "releaseRules": {
+    "structureReplayDoesNotProveStrategy": true,
+    "structureReplayDoesNotProveContinuousRoute": true,
+    "structureReplayDoesNotProveNL50": true,
+    "missingReferenceStopsExactAction": true,
+    "missingSuccessorStopsContinuousLesson": true,
+    "failureReturnsToLayerInsteadOfAddingFlatTopics": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "structureMasteryVerified": false,
+    "unseenTransferVerified": false,
+    "continuousRouteVerified": false,
+    "NL50Evidence": false
+  }
+}

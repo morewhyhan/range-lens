@@ -1,0 +1,617 @@
+{
+  "status": "author_fixed_opponent_policy_restriction_counterexample",
+  "sourceFingerprints": [
+    "618f335997d71c8907cc9d1b88869ea42501077ee8f7f61a0931e73625a41d2a",
+    "621ea4c65f3d92aa3119aa46ecfabcf2acfa923b7cc7017421b22614c287556b",
+    "faae2c247429810f7ed79ee448b75463ebf41c1fa3a4db6709e3a8b3c590d061",
+    "9003894733f3fa1f3d52f3229ab62311ba589afd5046ff93221a97169c2d8777"
+  ],
+  "method": "Recursive expectation over observed replies and conditional ranges; hero maxima at public decision nodes; terminal physical showdown and refunds use the existing executor. No use of unrestricted child EVs to value restricted continuations.",
+  "restrictionsChangeHeroPolicyOnly": true,
+  "opponentAdaptationModelled": false,
+  "equilibriumSolved": false,
+  "newNL50Evidence": false,
+  "learnerTrials": 0,
+  "interfaceOnlyCollapse": "No menu restriction: identical full-model values by definition; this script tests actual removal of executable continuations.",
+  "cases": [
+    {
+      "profile": "passive",
+      "questionId": "M-618f335997d71c89",
+      "board": [
+        "Ks",
+        "9h",
+        "2d",
+        "3c",
+        "7h"
+      ],
+      "hero": [
+        "9c",
+        "9d"
+      ],
+      "initialState": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "results": [
+        {
+          "policy": "full",
+          "description": "保留原模型全部后续动作",
+          "policyFingerprint": "f5d2f331d17bbf689f699e5d5a51139944f0cb8fdc32b3c59ed4838eefc4a785",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 39.79999999999998
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 45.92500000000001,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise45",
+          "description": "过牌后面对下注时，只移除加到45",
+          "policyFingerprint": "e57a143a2a51b3f87559c9133b46cb93e2f265740fbf9c0e5b8be49a206defdd",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 39.79999999999998
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 45.92500000000001,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_jam83",
+          "description": "过牌后面对下注时，只移除全下83",
+          "policyFingerprint": "a5af820cdfb72c73f28a26538962fb57f3b981c11f1fc444c50d5729bceffb6e",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 39.79999999999998
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 45.92500000000001,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise",
+          "description": "过牌后面对下注只准弃或跟；主动下注被加注仍保留再加",
+          "policyFingerprint": "9932eba46c405daf17ab5a763118e1262e2c2c2354e0418416e75e2bae8b3df5",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 33.25
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 45.92500000000001,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_future_raise",
+          "description": "面对下注和面对加注都只准弃或跟",
+          "policyFingerprint": "356262ef8bbbf3a8412ffbe043a9656f3bd60c8b5ff7f07f8f6cfce14a5a7de8",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 33.25
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 42.124999999999986,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 3.8000000000000256,
+          "rootBestChanged": false
+        }
+      ]
+    },
+    {
+      "profile": "induces",
+      "questionId": "M-621ea4c65f3d92aa",
+      "board": [
+        "Ks",
+        "9h",
+        "2d",
+        "3c",
+        "7h"
+      ],
+      "hero": [
+        "9c",
+        "9d"
+      ],
+      "initialState": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "results": [
+        {
+          "policy": "full",
+          "description": "保留原模型全部后续动作",
+          "policyFingerprint": "3ebd65558ab07614b08433c0ad549af2aef4eb0a2dd94e885d53be34d40d0a7a",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 58.55000000000001
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 58.55000000000001,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise45",
+          "description": "过牌后面对下注时，只移除加到45",
+          "policyFingerprint": "05c5bc22f24136124f02b7913417ea295ee8e05516477a2ea9a2e90a8c65f728",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 50.30000000000001
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 50.30000000000001,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 8.25,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_jam83",
+          "description": "过牌后面对下注时，只移除全下83",
+          "policyFingerprint": "21a842d4bdeb5d3e0066b48569a642b65fd2f5463ba900a8fdad714cda538889",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 58.55000000000001
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 58.55000000000001,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise",
+          "description": "过牌后面对下注只准弃或跟；主动下注被加注仍保留再加",
+          "policyFingerprint": "239474d6c78826a386a6efa1aa2c56061f3ecdc0250e770bc1516f42f1c991d8",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 43.749999999999986
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 45.92500000000001
+            }
+          ],
+          "bestEV": 45.92500000000001,
+          "bestActions": [
+            "bet"
+          ],
+          "lossAgainstFullBB": 12.625,
+          "rootBestChanged": true
+        },
+        {
+          "policy": "no_future_raise",
+          "description": "面对下注和面对加注都只准弃或跟",
+          "policyFingerprint": "727fc82642ccad978672a3f18fad30ea343cec1d9057e695e6db7dfe6d0588e4",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 43.749999999999986
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 43.749999999999986,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 14.800000000000026,
+          "rootBestChanged": false
+        }
+      ]
+    },
+    {
+      "profile": "worse_folds_to_jam",
+      "questionId": "M-faae2c247429810f",
+      "board": [
+        "Ks",
+        "9h",
+        "2d",
+        "3c",
+        "7h"
+      ],
+      "hero": [
+        "9c",
+        "9d"
+      ],
+      "initialState": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "results": [
+        {
+          "policy": "full",
+          "description": "保留原模型全部后续动作",
+          "policyFingerprint": "2b53248422379bafb511b14628567bb4198faad610d88efc1676e5a68f730a00",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 58.55000000000001
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 58.55000000000001,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise45",
+          "description": "过牌后面对下注时，只移除加到45",
+          "policyFingerprint": "2171b64b58e6709ace406103cd05b7ca58e581307e52a3bcc090e36cfe0799a4",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 43.749999999999986
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 43.749999999999986,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 14.800000000000026,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_jam83",
+          "description": "过牌后面对下注时，只移除全下83",
+          "policyFingerprint": "c76bd4ca89559f18e83a0764658655e0345942fead35334d35b9c1c48486e692",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 58.55000000000001
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 58.55000000000001,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise",
+          "description": "过牌后面对下注只准弃或跟；主动下注被加注仍保留再加",
+          "policyFingerprint": "b916b00cd4a4bc135a0bad0ac21abec2e1c587b1c303e9e2f3d7028f95a5fc7b",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 43.749999999999986
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 43.749999999999986,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 14.800000000000026,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_future_raise",
+          "description": "面对下注和面对加注都只准弃或跟",
+          "policyFingerprint": "f8aeb8bf7f956f011d76799f518e7d05ecb1ea45e84c90bb36d51c08a141b785",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 43.749999999999986
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 42.124999999999986
+            }
+          ],
+          "bestEV": 43.749999999999986,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 14.800000000000026,
+          "rootBestChanged": false
+        }
+      ]
+    },
+    {
+      "profile": "strong_raise",
+      "questionId": "M-9003894733f3fa1f",
+      "board": [
+        "Ks",
+        "9h",
+        "2d",
+        "3c",
+        "7h"
+      ],
+      "hero": [
+        "9c",
+        "9d"
+      ],
+      "initialState": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "results": [
+        {
+          "policy": "full",
+          "description": "保留原模型全部后续动作",
+          "policyFingerprint": "511bb12bd1ce095ee9ae288d7d9a40f0fc304814b3b62b861e34520739cfa66a",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 18.529411764705884
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 7.720588235294116
+            }
+          ],
+          "bestEV": 18.529411764705884,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise45",
+          "description": "过牌后面对下注时，只移除加到45",
+          "policyFingerprint": "dad81108ea081d34114430552fd0eb365377c970a45e99eeea4cece5611952ee",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 18.529411764705884
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 7.720588235294116
+            }
+          ],
+          "bestEV": 18.529411764705884,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_jam83",
+          "description": "过牌后面对下注时，只移除全下83",
+          "policyFingerprint": "3a8254db21b5279811cee59e8ee1fe11bbf7c259f13a05553705fb77efd3a3b0",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 18.529411764705884
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 7.720588235294116
+            }
+          ],
+          "bestEV": 18.529411764705884,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_check_raise",
+          "description": "过牌后面对下注只准弃或跟；主动下注被加注仍保留再加",
+          "policyFingerprint": "6c1da3939018a0696fc5500787be905e3b3197a0d6c6157fdea4606059997092",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 18.529411764705884
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 7.720588235294116
+            }
+          ],
+          "bestEV": 18.529411764705884,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        },
+        {
+          "policy": "no_future_raise",
+          "description": "面对下注和面对加注都只准弃或跟",
+          "policyFingerprint": "9502eac084f65902d60f4c3f8327d9810b996254e0bf07ec79e46354abcdcf0e",
+          "values": [
+            {
+              "action": "check",
+              "to": null,
+              "evBB": 18.529411764705884
+            },
+            {
+              "action": "bet",
+              "to": 17.5,
+              "evBB": 7.720588235294116
+            }
+          ],
+          "bestEV": 18.529411764705884,
+          "bestActions": [
+            "check"
+          ],
+          "lossAgainstFullBB": 0,
+          "rootBestChanged": false
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "fullRootsReproduced": 4,
+    "variantsPerRoot": 5,
+    "terminalVisits": 328,
+    "publicDecisions": 48,
+    "inducedGoldenRootValues": {
+      "full": [
+        58.55,
+        45.925
+      ],
+      "no_check_raise45": [
+        50.3,
+        45.925
+      ],
+      "no_check_jam83": [
+        58.55,
+        45.925
+      ],
+      "no_check_raise": [
+        43.75,
+        45.925
+      ],
+      "no_future_raise": [
+        43.75,
+        42.125
+      ]
+    },
+    "independentSelectedPolicyHandArithmetic": {
+      "fullCheck": 58.55,
+      "callAfterCheck": 43.75,
+      "fullLead": 45.925,
+      "callAfterLeadRaise": 42.125
+    },
+    "allRestrictedValuesNoGreaterThanFull": true
+  }
+}

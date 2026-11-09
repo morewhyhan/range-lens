@@ -1,0 +1,49 @@
+{
+  "id": "GRADING_PRECISION_CONTRACT_V1",
+  "status": "formula_and_identity_contract_not_data_complete",
+  "answerIdentities": ["fact","preflop_course_policy","postflop_course_policy","reference_strategy","transfer"],
+  "factRules": {
+    "bestFiveUsesMaxFiveCardSubset": true,
+    "handOrder": ["high_card","pair","two_pair","three_of_a_kind","straight","flush","full_house","four_of_a_kind","straight_flush"],
+    "legalCombosExcludeKnownCards": true,
+    "equityUsesSplitPotShare": true,
+    "requiredEquityFormula": "C/(P+C)",
+    "singleCallEVFormula": "equity*(P+C)-C",
+    "singleCallFormulaNotFullFutureStrategy": true
+  },
+  "preflopRules": {
+    "pureCellRequiresDeclaredAction": true,
+    "mixedCellRequiresDeclaredActionSetAndWeight": true,
+    "edgeExposureDoesNotChangeStrategyWeight": true,
+    "bigBlindActionAndScaleStayBound": true,
+    "unknownIsWrongOnlyWhenQuestionIsReleased": true
+  },
+  "postflopRules": {
+    "exactGradeRequiresDeclaredCondition": true,
+    "quantizationMustBeVersioned": true,
+    "boundaryFrequencyCannotBeUncalibratedRounded": true,
+    "noEvidenceNodeMustBeBlockedBeforeRelease": true,
+    "allowedStates":["exact_correct","strategy_set_correct","wrong","unavailable_not_released"]
+  },
+  "referenceMetrics": {
+    "weightedL1Formula":"sum_h(w_h*sum_a(abs(p_ref(a|h)-p_course(a|h))))/(2*sum_h(w_h))",
+    "evDifferenceFormula":"EV_best_ref(h)-EV_chosen(h)",
+    "absoluteAfterRangeFormula":"w_before(h)*p(a|h)*legal(h,board,known_cards)",
+    "normalizedAfterRangeFormula":"w_after(h)/sum_h(w_after(h))",
+    "absoluteAndNormalizedViewsMustBeDistinct":true,
+    "lockedConvergenceDoesNotProveLosslessSimplification":true
+  },
+  "successorRules": {
+    "ledgerRecomputedAfterAction":true,
+    "missingSuccessorStopsContinuousRoute":true,
+    "missingSuccessorCannotUseDefaultResponse":true,
+    "rawValueAndRoundingRuleRetained":true
+  },
+  "currentStatus": {
+    "formulasWritten":true,
+    "all35TargetPolicyDataComplete":false,
+    "completeThreeStreetSuccessors":false,
+    "lowBaselineTrial":false,
+    "NL50Evidence":false
+  }
+}

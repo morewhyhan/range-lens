@@ -1,0 +1,28 @@
+{
+  "id": "HELP_FADE_VISIBILITY_BRIDGE_V1",
+  "status": "paper_help_visibility_bridge_not_trialed",
+  "purpose": "把R1-R6帮助撤除与首遍字段可见层绑定，每轮只撤一种帮助并保留必要输入。",
+  "sourceVisibility": "first-pass-visibility-contract.json",
+  "sourceHelpPlan": "help-fade-execution-plan.json",
+  "sourceHelpSchedule": "help-fade-schedule.json",
+  "rounds": [
+    {"id":"R1","hiddenDimension":"none","visibleHelp":["stepName","currentField","oneContrast","childButton"],"necessaryInputs":"all_visibleNow","evidence":"route_seen_and_parent_restore","rollback":"same_parent"},
+    {"id":"R2","hiddenDimension":"answer_color","visibleHelp":["stepName","requiredInputs","oneContrast"],"evidence":"assisted_current_parent_completion_and_first_answer","rollback":"restore_one_relation_prompt"},
+    {"id":"R3","hiddenDimension":"step_name","visibleHelp":["board","history","money","legalActions"],"evidence":"unseen_same_mechanism_and_layer_location","rollback":"restore_step_name"},
+    {"id":"R4","hiddenDimension":"one_known_conclusion","visibleHelp":["same_parent","one_changed_field","necessaryInputs"],"evidence":"exactly_one_changed_field_and_first_attempt","rollback":"restore_changed_field_comparison"},
+    {"id":"R5","hiddenDimension":"needed_view_selection","visibleHelp":["unseen_state","necessaryInputs"],"evidence":"delayed_order_layer_and_return_recall","rollback":"restore_one_relation_prompt"},
+    {"id":"R6","hiddenDimension":"target_mechanism","visibleHelp":["newHand","factsTools","currentParent"],"evidence":"ledger_range_successor_settlement","rollback":"return_to_broken_parent"}
+  ],
+  "hardRules": {
+    "roundOrderMatchesHelpPlan": true,
+    "oneHelpDimensionChangesPerRound": true,
+    "necessaryInputsNeverHidden": true,
+    "answerThenAfterFirstAnswer": true,
+    "sameParentAfterError": true,
+    "sameQuestionRetryNotIndependent": true,
+    "missingSuccessorBlocksR6": true,
+    "sessionOnlyState": true,
+    "R6DoesNotProveNL50": true
+  },
+  "currentEvidence": {"paperBridge": true,"runtimeImplemented": false,"R1toR6LearnerEvidence": false,"calibratedSpacing": false,"NL50Evidence": false}
+}

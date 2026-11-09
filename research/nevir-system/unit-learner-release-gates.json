@@ -1,0 +1,3158 @@
+{
+  "id": "UNIT_LEARNER_RELEASE_GATES_V1",
+  "status": "35_unit_release_contract_unified_paper_only",
+  "purpose": "将35项的父帧位置、首答、帮助撤除、错误回退、单变量迁移、延迟回忆和连续执行合成单元级释放闸门。",
+  "sources": [
+    "172_统一学习者证据与发布闸门协议.md",
+    "126_帮助撤除与六轮内化运行包.md",
+    "154_35项错误归因与反馈回退矩阵.md",
+    "171_首课后单变量迁移与陌生牌练习协议.md",
+    "182_首课用户可见状态机与父子恢复合同.md"
+  ],
+  "releaseStages": [
+    {
+      "id": "map",
+      "requires": [
+        "parent_frame_identified",
+        "plain_question_repeated"
+      ],
+      "allows": "guided"
+    },
+    {
+      "id": "guided",
+      "requires": [
+        "first_answer_saved",
+        "required_output_complete",
+        "same_parent_restore"
+      ],
+      "allows": "independent"
+    },
+    {
+      "id": "independent",
+      "requires": [
+        "answer_before_help",
+        "error_layer_named",
+        "retry_complete"
+      ],
+      "allows": "adjacent"
+    },
+    {
+      "id": "adjacent",
+      "requires": [
+        "exactly_one_changed_field",
+        "affected_layer_named",
+        "same_denominator_visual"
+      ],
+      "allows": "delayed"
+    },
+    {
+      "id": "delayed",
+      "requires": [
+        "order_recalled",
+        "return_point_recalled",
+        "range_or_stop_recalled"
+      ],
+      "allows": "continuous"
+    },
+    {
+      "id": "continuous",
+      "requires": [
+        "ledger_continuity",
+        "range_snapshot_continuity",
+        "successor_or_stop",
+        "result_separated_from_decision"
+      ],
+      "allows": "unit_evidence_only"
+    }
+  ],
+  "helpLevels": [
+    {
+      "id": "H0",
+      "visible": [
+        "stepName",
+        "highlightedField",
+        "oneContrast",
+        "childButton"
+      ]
+    },
+    {
+      "id": "H1",
+      "visible": [
+        "stepName",
+        "requiredInputs",
+        "oneContrast"
+      ]
+    },
+    {
+      "id": "H2",
+      "visible": [
+        "board",
+        "history",
+        "money",
+        "legalActions"
+      ]
+    },
+    {
+      "id": "H3",
+      "visible": [
+        "sameParent",
+        "oneChangedField",
+        "necessaryInputs"
+      ]
+    },
+    {
+      "id": "H4",
+      "visible": [
+        "unseenState",
+        "necessaryInputs"
+      ]
+    },
+    {
+      "id": "H5",
+      "visible": [
+        "newHand",
+        "errorOnlyHelp"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "groupId": "compare.unopened",
+      "representative": "1.5",
+      "opensOtherUnitsAfter": "representative_guided_independent_adjacent",
+      "commonMechanism": "input_to_changed_field_to_affected_layer_to_required_output"
+    },
+    {
+      "groupId": "compare.bet",
+      "representative": "2.1",
+      "opensOtherUnitsAfter": "representative_guided_independent_adjacent",
+      "commonMechanism": "input_to_changed_field_to_affected_layer_to_required_output"
+    },
+    {
+      "groupId": "compare.raise",
+      "representative": "3.1",
+      "opensOtherUnitsAfter": "representative_guided_independent_adjacent",
+      "commonMechanism": "input_to_changed_field_to_affected_layer_to_required_output"
+    },
+    {
+      "groupId": "update.response",
+      "representative": "4.5",
+      "opensOtherUnitsAfter": "representative_guided_independent_adjacent",
+      "commonMechanism": "input_to_changed_field_to_affected_layer_to_required_output"
+    },
+    {
+      "groupId": "update.card",
+      "representative": "5.7",
+      "opensOtherUnitsAfter": "representative_guided_independent_adjacent",
+      "commonMechanism": "input_to_changed_field_to_affected_layer_to_required_output"
+    }
+  ],
+  "unitRows": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": true,
+      "firstPassVisible": true,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": true,
+      "firstPassVisible": true,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": true,
+      "firstPassVisible": true,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "returnTo": "p4_compare",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": true,
+      "firstPassVisible": true,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": true,
+      "firstPassVisible": true,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "representative": false,
+      "firstPassVisible": false,
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "returnTo": "p6_update",
+      "releaseStages": [
+        {
+          "id": "map",
+          "requires": [
+            "parent_frame_identified",
+            "plain_question_repeated"
+          ],
+          "allows": "guided"
+        },
+        {
+          "id": "guided",
+          "requires": [
+            "first_answer_saved",
+            "required_output_complete",
+            "same_parent_restore"
+          ],
+          "allows": "independent"
+        },
+        {
+          "id": "independent",
+          "requires": [
+            "answer_before_help",
+            "error_layer_named",
+            "retry_complete"
+          ],
+          "allows": "adjacent"
+        },
+        {
+          "id": "adjacent",
+          "requires": [
+            "exactly_one_changed_field",
+            "affected_layer_named",
+            "same_denominator_visual"
+          ],
+          "allows": "delayed"
+        },
+        {
+          "id": "delayed",
+          "requires": [
+            "order_recalled",
+            "return_point_recalled",
+            "range_or_stop_recalled"
+          ],
+          "allows": "continuous"
+        },
+        {
+          "id": "continuous",
+          "requires": [
+            "ledger_continuity",
+            "range_snapshot_continuity",
+            "successor_or_stop",
+            "result_separated_from_decision"
+          ],
+          "allows": "unit_evidence_only"
+        }
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "errorReturn": "unit_error_feedback_matrix",
+      "helpSchedule": "H0_to_H5_one_field_at_a_time",
+      "promotionRule": "own_unit_evidence_only_no_aggregate_score",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    }
+  ],
+  "globalGates": {
+    "noAggregateScorePromotion": true,
+    "firstAnswerBeforeHelp": true,
+    "unknownCountsAsWrong": true,
+    "wrongDoesNotAdvance": true,
+    "preserveFirstAnswer": true,
+    "sameQuestionRetryIsNotIndependent": true,
+    "oneHelpChangeAtATime": true,
+    "necessaryInputsNeverHidden": true,
+    "sameParentAfterError": true,
+    "missingReferenceStops": true,
+    "missingSuccessorStops": true,
+    "childCloseRestoresParent": true,
+    "rangeDenominatorMustRemainStable": true,
+    "continuousDoesNotProveNL50": true
+  },
+  "promotion": {
+    "mapToGuided": "parent_frame_and_plain_question",
+    "guidedToIndependent": "required_output_and_retry_evidence",
+    "independentToAdjacent": "unseen_same_mechanism_without_answer_labels",
+    "adjacentToDelayed": "exactly_one_changed_field_then_correct_output",
+    "delayedToContinuous": "order_and_return_point_recalled_after_intervening_items",
+    "continuous": "unit_only_no_global_claim"
+  },
+  "errorRouting": {
+    "context": "p1_context",
+    "board": "p2_board",
+    "hand": "p2_board",
+    "range": "p3_range",
+    "purpose": "p4_compare",
+    "price": "p4_compare",
+    "execution": "p5_execute",
+    "update": "p6_update",
+    "successor": "p6_update",
+    "result": "p7_close"
+  },
+  "currentEvidence": {
+    "all35RowsCompiled": true,
+    "paperContract": true,
+    "runtime": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "completeSuccessorChains": false,
+    "NL50Evidence": false
+  }
+}

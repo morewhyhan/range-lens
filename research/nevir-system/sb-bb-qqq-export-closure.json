@@ -1,0 +1,1681 @@
+{
+  "status": "selected_export_not_closed_for_arbitrary_continuous_strategy_training",
+  "sourceSHA256": "85b1165b49b2daae3d09896b1b8352a136f8a02bb609586a613a3323bbb7bfc6",
+  "counts": {
+    "selectedNodes": 14,
+    "decisionNodes": 10,
+    "chanceNodes": 3,
+    "actionEdges": 35,
+    "missingActionEdges": 25,
+    "positivePhysicalChanceEdges": 146,
+    "missingChanceEdges": 143
+  },
+  "actionGaps": [
+    {
+      "parent": "root",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        3
+      ]
+    },
+    {
+      "parent": "after_SB_check",
+      "action": "Bet(402)",
+      "childHistory": [
+        0,
+        2
+      ]
+    },
+    {
+      "parent": "after_SB_check",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        3
+      ]
+    },
+    {
+      "parent": "after_SB_bet198",
+      "action": "Fold",
+      "childHistory": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "after_SB_bet198",
+      "action": "Raise(495)",
+      "childHistory": [
+        1,
+        2
+      ]
+    },
+    {
+      "parent": "after_SB_bet198",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        1,
+        3
+      ]
+    },
+    {
+      "parent": "after_SB_bet402",
+      "action": "Fold",
+      "childHistory": [
+        2,
+        0
+      ]
+    },
+    {
+      "parent": "after_SB_bet402",
+      "action": "Call",
+      "childHistory": [
+        2,
+        1
+      ]
+    },
+    {
+      "parent": "after_SB_bet402",
+      "action": "Raise(1005)",
+      "childHistory": [
+        2,
+        2
+      ]
+    },
+    {
+      "parent": "after_SB_bet402",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        2,
+        3
+      ]
+    },
+    {
+      "parent": "after_SB_check_BB_bet198",
+      "action": "Fold",
+      "childHistory": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "after_SB_check_BB_bet198",
+      "action": "Call",
+      "childHistory": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "parent": "after_SB_check_BB_bet198",
+      "action": "Raise(495)",
+      "childHistory": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "parent": "after_SB_check_BB_bet198",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "parent": "turn_Ac",
+      "action": "Bet(450)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        1
+      ]
+    },
+    {
+      "parent": "turn_Ac",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        2
+      ]
+    },
+    {
+      "parent": "turn_Ac_after_SB_check",
+      "action": "Bet(450)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        1
+      ]
+    },
+    {
+      "parent": "turn_Ac_after_SB_check",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        2
+      ]
+    },
+    {
+      "parent": "river_Ac2c",
+      "action": "Bet(450)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "parent": "river_Ac2c",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "parent": "river_Ac2c_after_SB_check",
+      "action": "Bet(450)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "parent": "river_Ac2c_after_SB_check",
+      "action": "AllIn(9700)",
+      "childHistory": [
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "parent": "turn_Ac_after_B198C",
+      "action": "Check",
+      "childHistory": [
+        1,
+        1,
+        48,
+        0
+      ]
+    },
+    {
+      "parent": "turn_Ac_after_B198C",
+      "action": "Bet(747)",
+      "childHistory": [
+        1,
+        1,
+        48,
+        1
+      ]
+    },
+    {
+      "parent": "turn_Ac_after_B198C",
+      "action": "AllIn(9502)",
+      "childHistory": [
+        1,
+        1,
+        48,
+        2
+      ]
+    }
+  ],
+  "chanceRecords": [
+    {
+      "id": "flop_XX_before_turn",
+      "historyIndices": [
+        0,
+        0
+      ],
+      "board": [
+        "Qd",
+        "Qh",
+        "Qs"
+      ],
+      "compatibleMass": 5609.357246992806,
+      "remainingPerPhysicalPair": 45,
+      "publicCards": [
+        {
+          "card": "2s",
+          "probability": 0.0217010508251571,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2h",
+          "probability": 0.0217010508251571,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2d",
+          "probability": 0.0217010508251571,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2c",
+          "probability": 0.021520909458275953,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3s",
+          "probability": 0.02153258061964878,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3h",
+          "probability": 0.021532580619648783,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3d",
+          "probability": 0.021532580619648783,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3c",
+          "probability": 0.02137333271679871,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4s",
+          "probability": 0.02056398768349442,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4h",
+          "probability": 0.020563987683494416,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4d",
+          "probability": 0.020563987683494416,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4c",
+          "probability": 0.020551569948781205,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5s",
+          "probability": 0.01959547615498028,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5h",
+          "probability": 0.01959547615498028,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5d",
+          "probability": 0.019595476154980276,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5c",
+          "probability": 0.020104831986954397,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6s",
+          "probability": 0.02026544277927814,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6h",
+          "probability": 0.02026544277927814,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6d",
+          "probability": 0.020265442779278144,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6c",
+          "probability": 0.020654130338433697,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7s",
+          "probability": 0.02085249011321714,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7h",
+          "probability": 0.020852490113217142,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7d",
+          "probability": 0.02085249011321714,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7c",
+          "probability": 0.021205870951228747,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8s",
+          "probability": 0.019553525620247796,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8h",
+          "probability": 0.01955352562024779,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8d",
+          "probability": 0.019553525620247786,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8c",
+          "probability": 0.020503318431634842,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9s",
+          "probability": 0.020479621912068972,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9h",
+          "probability": 0.02047962191206898,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9d",
+          "probability": 0.020479621912068986,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9c",
+          "probability": 0.020555467753072182,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ts",
+          "probability": 0.020712821681349407,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Th",
+          "probability": 0.02071282168134941,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Td",
+          "probability": 0.020712821681349407,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Tc",
+          "probability": 0.02046041056524298,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Js",
+          "probability": 0.02060251771122513,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jh",
+          "probability": 0.02060251771122513,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jd",
+          "probability": 0.02060251771122513,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jc",
+          "probability": 0.020063732908907013,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Qc",
+          "probability": 0.0210505278677427,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ks",
+          "probability": 0.019530133892488834,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kh",
+          "probability": 0.019530133892488828,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kd",
+          "probability": 0.01953013389248884,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kc",
+          "probability": 0.018196531327280854,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "As",
+          "probability": 0.019400211632410968,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ah",
+          "probability": 0.019400211632410964,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ad",
+          "probability": 0.019400211632410964,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ac",
+          "probability": 0.019389783868949476,
+          "includedInSelectedExport": true
+        }
+      ],
+      "numberOfPositivePhysicalCards": 49,
+      "selectedChildren": 1,
+      "minPublic": {
+        "card": "Kc",
+        "probability": 0.018196531327280854,
+        "includedInSelectedExport": false
+      },
+      "maxPublic": {
+        "card": "2d",
+        "probability": 0.0217010508251571,
+        "includedInSelectedExport": false
+      },
+      "privateView": {
+        "viewer": "SB",
+        "knownHolding": [
+          "As",
+          "Kd"
+        ],
+        "cards": [
+          {
+            "card": "2s",
+            "probability": 0.02188128408613518
+          },
+          {
+            "card": "2h",
+            "probability": 0.02184549469518589
+          },
+          {
+            "card": "2d",
+            "probability": 0.02190994063417632
+          },
+          {
+            "card": "2c",
+            "probability": 0.02177479093724144
+          },
+          {
+            "card": "3s",
+            "probability": 0.021728595191603407
+          },
+          {
+            "card": "3h",
+            "probability": 0.02169314412309334
+          },
+          {
+            "card": "3d",
+            "probability": 0.021762125550681254
+          },
+          {
+            "card": "3c",
+            "probability": 0.021635909400777996
+          },
+          {
+            "card": "4s",
+            "probability": 0.02144724629988648
+          },
+          {
+            "card": "4h",
+            "probability": 0.02140056761617807
+          },
+          {
+            "card": "4d",
+            "probability": 0.02149891662564141
+          },
+          {
+            "card": "4c",
+            "probability": 0.02140029309665653
+          },
+          {
+            "card": "5s",
+            "probability": 0.02114817746578493
+          },
+          {
+            "card": "5h",
+            "probability": 0.02119811404516188
+          },
+          {
+            "card": "5d",
+            "probability": 0.021315735362684288
+          },
+          {
+            "card": "5c",
+            "probability": 0.021311675045987823
+          },
+          {
+            "card": "6s",
+            "probability": 0.021364642824664964
+          },
+          {
+            "card": "6h",
+            "probability": 0.021265624321520064
+          },
+          {
+            "card": "6d",
+            "probability": 0.021375052370356366
+          },
+          {
+            "card": "6c",
+            "probability": 0.021324903596918483
+          },
+          {
+            "card": "7s",
+            "probability": 0.021549799763788617
+          },
+          {
+            "card": "7h",
+            "probability": 0.02146773349652992
+          },
+          {
+            "card": "7d",
+            "probability": 0.021557838973303486
+          },
+          {
+            "card": "7c",
+            "probability": 0.02155127852316072
+          },
+          {
+            "card": "8s",
+            "probability": 0.02082839096696737
+          },
+          {
+            "card": "8h",
+            "probability": 0.020834912820447925
+          },
+          {
+            "card": "8d",
+            "probability": 0.020877532107062665
+          },
+          {
+            "card": "8c",
+            "probability": 0.021139837999293917
+          },
+          {
+            "card": "9s",
+            "probability": 0.021048530039054006
+          },
+          {
+            "card": "9h",
+            "probability": 0.021054365046348097
+          },
+          {
+            "card": "9d",
+            "probability": 0.021140407790325933
+          },
+          {
+            "card": "9c",
+            "probability": 0.021126887530155663
+          },
+          {
+            "card": "Ts",
+            "probability": 0.021296196821048528
+          },
+          {
+            "card": "Th",
+            "probability": 0.021352579275295044
+          },
+          {
+            "card": "Td",
+            "probability": 0.021271353879123135
+          },
+          {
+            "card": "Tc",
+            "probability": 0.021297625483011676
+          },
+          {
+            "card": "Js",
+            "probability": 0.021259218508394184
+          },
+          {
+            "card": "Jh",
+            "probability": 0.021264122426426727
+          },
+          {
+            "card": "Jd",
+            "probability": 0.021187554629918188
+          },
+          {
+            "card": "Jc",
+            "probability": 0.021189129276445014
+          },
+          {
+            "card": "Qc",
+            "probability": 0.021597806152114478
+          },
+          {
+            "card": "Ks",
+            "probability": 0.02081067467253089
+          },
+          {
+            "card": "Kh",
+            "probability": 0.02081067467253089
+          },
+          {
+            "card": "Kc",
+            "probability": 0.02067775116451051
+          },
+          {
+            "card": "Ah",
+            "probability": 0.020508976963447736
+          },
+          {
+            "card": "Ad",
+            "probability": 0.020508976963447736
+          },
+          {
+            "card": "Ac",
+            "probability": 0.020507610764980814
+          }
+        ],
+        "notUniformAcrossAllUnseenPublicCards": true
+      }
+    },
+    {
+      "id": "turn_XX_before_river",
+      "historyIndices": [
+        0,
+        0,
+        48,
+        0,
+        0
+      ],
+      "board": [
+        "Qd",
+        "Qh",
+        "Qs",
+        "Ac"
+      ],
+      "compatibleMass": 3704.086247857029,
+      "remainingPerPhysicalPair": 44,
+      "publicCards": [
+        {
+          "card": "2s",
+          "probability": 0.022167627874289397,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2h",
+          "probability": 0.022167627874289397,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2d",
+          "probability": 0.022167627874289397,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2c",
+          "probability": 0.022081429985979676,
+          "includedInSelectedExport": true
+        },
+        {
+          "card": "3s",
+          "probability": 0.022014247338096465,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3h",
+          "probability": 0.022014247338096465,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3d",
+          "probability": 0.022014247338096465,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3c",
+          "probability": 0.021994843338436775,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4s",
+          "probability": 0.021076317125414846,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4h",
+          "probability": 0.02107631712541485,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4d",
+          "probability": 0.02107631712541485,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4c",
+          "probability": 0.021252713927448597,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5s",
+          "probability": 0.02007555324541721,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5h",
+          "probability": 0.020075553245417214,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5d",
+          "probability": 0.020075553245417217,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5c",
+          "probability": 0.020772731192817143,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6s",
+          "probability": 0.0207254888157412,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6h",
+          "probability": 0.020725488815741197,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6d",
+          "probability": 0.020725488815741197,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6c",
+          "probability": 0.0214900349207419,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7s",
+          "probability": 0.021319902871833985,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7h",
+          "probability": 0.021319902871833985,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7d",
+          "probability": 0.021319902871833985,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7c",
+          "probability": 0.02201519588297901,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8s",
+          "probability": 0.01992725169867671,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8h",
+          "probability": 0.019927251698676707,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8d",
+          "probability": 0.019927251698676703,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8c",
+          "probability": 0.021145275654267402,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9s",
+          "probability": 0.020902573298554515,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9h",
+          "probability": 0.02090257329855452,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9d",
+          "probability": 0.02090257329855452,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9c",
+          "probability": 0.021029614597871372,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ts",
+          "probability": 0.02109411968365183,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Th",
+          "probability": 0.02109411968365183,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Td",
+          "probability": 0.021094119683651828,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Tc",
+          "probability": 0.020682838662762337,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Js",
+          "probability": 0.020782952837474833,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jh",
+          "probability": 0.020782952837474833,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jd",
+          "probability": 0.020782952837474826,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jc",
+          "probability": 0.020079767207423833,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Qc",
+          "probability": 0.02194489281816686,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ks",
+          "probability": 0.019463522105797524,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kh",
+          "probability": 0.019463522105797524,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kd",
+          "probability": 0.01946352210579752,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kc",
+          "probability": 0.01780951418534098,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "As",
+          "probability": 0.019684158980306215,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ah",
+          "probability": 0.01968415898030621,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ad",
+          "probability": 0.01968415898030621,
+          "includedInSelectedExport": false
+        }
+      ],
+      "numberOfPositivePhysicalCards": 48,
+      "selectedChildren": 1,
+      "minPublic": {
+        "card": "Kc",
+        "probability": 0.01780951418534098,
+        "includedInSelectedExport": false
+      },
+      "maxPublic": {
+        "card": "2d",
+        "probability": 0.022167627874289397,
+        "includedInSelectedExport": false
+      },
+      "privateView": {
+        "viewer": "SB",
+        "knownHolding": [
+          "As",
+          "Kd"
+        ],
+        "cards": [
+          {
+            "card": "2s",
+            "probability": 0.022383610999144567
+          },
+          {
+            "card": "2h",
+            "probability": 0.02233838486445901
+          },
+          {
+            "card": "2d",
+            "probability": 0.02242247153134174
+          },
+          {
+            "card": "2c",
+            "probability": 0.0223308703659797
+          },
+          {
+            "card": "3s",
+            "probability": 0.02224462399914636
+          },
+          {
+            "card": "3h",
+            "probability": 0.022199300253438324
+          },
+          {
+            "card": "3d",
+            "probability": 0.02228929775573749
+          },
+          {
+            "card": "3c",
+            "probability": 0.022239318274058246
+          },
+          {
+            "card": "4s",
+            "probability": 0.02193005515850658
+          },
+          {
+            "card": "4h",
+            "probability": 0.021875366831028788
+          },
+          {
+            "card": "4d",
+            "probability": 0.02200406810567246
+          },
+          {
+            "card": "4c",
+            "probability": 0.022033456297720723
+          },
+          {
+            "card": "5s",
+            "probability": 0.021632348872483026
+          },
+          {
+            "card": "5h",
+            "probability": 0.02168583736997808
+          },
+          {
+            "card": "5d",
+            "probability": 0.021839765775223792
+          },
+          {
+            "card": "5c",
+            "probability": 0.021822371552516966
+          },
+          {
+            "card": "6s",
+            "probability": 0.02187691665400108
+          },
+          {
+            "card": "6h",
+            "probability": 0.021771115457600625
+          },
+          {
+            "card": "6d",
+            "probability": 0.02191423627592682
+          },
+          {
+            "card": "6c",
+            "probability": 0.022046483134380422
+          },
+          {
+            "card": "7s",
+            "probability": 0.022049395567498218
+          },
+          {
+            "card": "7h",
+            "probability": 0.021958219465190002
+          },
+          {
+            "card": "7d",
+            "probability": 0.02207577492887691
+          },
+          {
+            "card": "7c",
+            "probability": 0.022241331130345907
+          },
+          {
+            "card": "8s",
+            "probability": 0.021271977877725456
+          },
+          {
+            "card": "8h",
+            "probability": 0.021280071038791152
+          },
+          {
+            "card": "8d",
+            "probability": 0.021335859396931844
+          },
+          {
+            "card": "8c",
+            "probability": 0.02168784491067213
+          },
+          {
+            "card": "9s",
+            "probability": 0.0214889523062584
+          },
+          {
+            "card": "9h",
+            "probability": 0.021496181199531703
+          },
+          {
+            "card": "9d",
+            "probability": 0.021608190480888606
+          },
+          {
+            "card": "9c",
+            "probability": 0.02158416720917896
+          },
+          {
+            "card": "Ts",
+            "probability": 0.021725514844921818
+          },
+          {
+            "card": "Th",
+            "probability": 0.02179929568302576
+          },
+          {
+            "card": "Td",
+            "probability": 0.021699078832063682
+          },
+          {
+            "card": "Tc",
+            "probability": 0.021619010081635394
+          },
+          {
+            "card": "Js",
+            "probability": 0.021526320566706857
+          },
+          {
+            "card": "Jh",
+            "probability": 0.02153272802848241
+          },
+          {
+            "card": "Jd",
+            "probability": 0.02143852084023386
+          },
+          {
+            "card": "Jc",
+            "probability": 0.02138138582932105
+          },
+          {
+            "card": "Qc",
+            "probability": 0.022418186426396845
+          },
+          {
+            "card": "Ks",
+            "probability": 0.020931027777770266
+          },
+          {
+            "card": "Kh",
+            "probability": 0.020931027777770266
+          },
+          {
+            "card": "Kc",
+            "probability": 0.020708467802478526
+          },
+          {
+            "card": "Ah",
+            "probability": 0.020665785234479594
+          },
+          {
+            "card": "Ad",
+            "probability": 0.020665785234479594
+          }
+        ],
+        "notUniformAcrossAllUnseenPublicCards": true
+      }
+    },
+    {
+      "id": "flop_B198C_before_turn",
+      "historyIndices": [
+        1,
+        1
+      ],
+      "board": [
+        "Qd",
+        "Qh",
+        "Qs"
+      ],
+      "compatibleMass": 52591.075486800844,
+      "remainingPerPhysicalPair": 45,
+      "publicCards": [
+        {
+          "card": "2s",
+          "probability": 0.021587724064245695,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2h",
+          "probability": 0.021587724064245698,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2d",
+          "probability": 0.021587724064245698,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "2c",
+          "probability": 0.02155715521153275,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3s",
+          "probability": 0.021515492389108805,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3h",
+          "probability": 0.02151549238910881,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3d",
+          "probability": 0.02151549238910881,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "3c",
+          "probability": 0.021490372190006844,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4s",
+          "probability": 0.021238592541984246,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4h",
+          "probability": 0.021238592541984246,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4d",
+          "probability": 0.021238592541984246,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "4c",
+          "probability": 0.02128104031395354,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5s",
+          "probability": 0.02104365931951864,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5h",
+          "probability": 0.02104365931951864,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5d",
+          "probability": 0.02104365931951864,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "5c",
+          "probability": 0.021127010490597425,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6s",
+          "probability": 0.020839901472625877,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6h",
+          "probability": 0.020839901472625873,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6d",
+          "probability": 0.020839901472625873,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "6c",
+          "probability": 0.020969650778503924,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7s",
+          "probability": 0.02092126774293173,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7h",
+          "probability": 0.020921267742931734,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7d",
+          "probability": 0.020921267742931734,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "7c",
+          "probability": 0.020965669867043558,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8s",
+          "probability": 0.02014429887084046,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8h",
+          "probability": 0.020144298870840464,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8d",
+          "probability": 0.020144298870840464,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "8c",
+          "probability": 0.020210431857638236,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9s",
+          "probability": 0.019924942958803107,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9h",
+          "probability": 0.01992494295880311,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9d",
+          "probability": 0.019924942958803114,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "9c",
+          "probability": 0.020007471202533173,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ts",
+          "probability": 0.019967283347895465,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Th",
+          "probability": 0.01996728334789545,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Td",
+          "probability": 0.01996728334789545,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Tc",
+          "probability": 0.020071862554991233,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Js",
+          "probability": 0.01988589443380199,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jh",
+          "probability": 0.01988589443380199,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jd",
+          "probability": 0.01988589443380199,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Jc",
+          "probability": 0.02005165288672602,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Qc",
+          "probability": 0.019958413616179234,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ks",
+          "probability": 0.019465984869173943,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kh",
+          "probability": 0.019465984869173947,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kd",
+          "probability": 0.019465984869173936,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Kc",
+          "probability": 0.01954688624195307,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "As",
+          "probability": 0.018280760918244425,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ah",
+          "probability": 0.01828076091824443,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ad",
+          "probability": 0.01828076091824442,
+          "includedInSelectedExport": false
+        },
+        {
+          "card": "Ac",
+          "probability": 0.0183149740008224,
+          "includedInSelectedExport": true
+        }
+      ],
+      "numberOfPositivePhysicalCards": 49,
+      "selectedChildren": 1,
+      "minPublic": {
+        "card": "Ad",
+        "probability": 0.01828076091824442,
+        "includedInSelectedExport": false
+      },
+      "maxPublic": {
+        "card": "2d",
+        "probability": 0.021587724064245698,
+        "includedInSelectedExport": false
+      },
+      "privateView": {
+        "viewer": "SB",
+        "knownHolding": [
+          "As",
+          "Kd"
+        ],
+        "cards": [
+          {
+            "card": "2s",
+            "probability": 0.021835627631569373
+          },
+          {
+            "card": "2h",
+            "probability": 0.02178219344338785
+          },
+          {
+            "card": "2d",
+            "probability": 0.0218629419631636
+          },
+          {
+            "card": "2c",
+            "probability": 0.021768148072076544
+          },
+          {
+            "card": "3s",
+            "probability": 0.021809301066234226
+          },
+          {
+            "card": "3h",
+            "probability": 0.0217439368722638
+          },
+          {
+            "card": "3d",
+            "probability": 0.021820598941318364
+          },
+          {
+            "card": "3c",
+            "probability": 0.021717687193404382
+          },
+          {
+            "card": "4s",
+            "probability": 0.02170264513346993
+          },
+          {
+            "card": "4h",
+            "probability": 0.02164201062062401
+          },
+          {
+            "card": "4d",
+            "probability": 0.021730677667899434
+          },
+          {
+            "card": "4c",
+            "probability": 0.021677686779114837
+          },
+          {
+            "card": "5s",
+            "probability": 0.021586411901267304
+          },
+          {
+            "card": "5h",
+            "probability": 0.02163407880352515
+          },
+          {
+            "card": "5d",
+            "probability": 0.02172572044235624
+          },
+          {
+            "card": "5c",
+            "probability": 0.021722082475864567
+          },
+          {
+            "card": "6s",
+            "probability": 0.021550876858525133
+          },
+          {
+            "card": "6h",
+            "probability": 0.02144714085028387
+          },
+          {
+            "card": "6d",
+            "probability": 0.021543294941032652
+          },
+          {
+            "card": "6c",
+            "probability": 0.021524191552400852
+          },
+          {
+            "card": "7s",
+            "probability": 0.021651045386791284
+          },
+          {
+            "card": "7h",
+            "probability": 0.021555958316000257
+          },
+          {
+            "card": "7d",
+            "probability": 0.02164871058849824
+          },
+          {
+            "card": "7c",
+            "probability": 0.021569326318373955
+          },
+          {
+            "card": "8s",
+            "probability": 0.02109069288850708
+          },
+          {
+            "card": "8h",
+            "probability": 0.021096874399351335
+          },
+          {
+            "card": "8d",
+            "probability": 0.02112979341490225
+          },
+          {
+            "card": "8c",
+            "probability": 0.02111098060119144
+          },
+          {
+            "card": "9s",
+            "probability": 0.020880964320542636
+          },
+          {
+            "card": "9h",
+            "probability": 0.020876253433588565
+          },
+          {
+            "card": "9d",
+            "probability": 0.020970388068543976
+          },
+          {
+            "card": "9c",
+            "probability": 0.020910940885952217
+          },
+          {
+            "card": "Ts",
+            "probability": 0.020996497142179434
+          },
+          {
+            "card": "Th",
+            "probability": 0.021082729442812413
+          },
+          {
+            "card": "Td",
+            "probability": 0.02098498708030473
+          },
+          {
+            "card": "Tc",
+            "probability": 0.02119463689721643
+          },
+          {
+            "card": "Js",
+            "probability": 0.020955027864158017
+          },
+          {
+            "card": "Jh",
+            "probability": 0.020981723716272483
+          },
+          {
+            "card": "Jd",
+            "probability": 0.020882915974188034
+          },
+          {
+            "card": "Jc",
+            "probability": 0.021132211784462875
+          },
+          {
+            "card": "Qc",
+            "probability": 0.02099834627759841
+          },
+          {
+            "card": "Ks",
+            "probability": 0.020687651660207966
+          },
+          {
+            "card": "Kh",
+            "probability": 0.020687651660207966
+          },
+          {
+            "card": "Kc",
+            "probability": 0.02078108675565102
+          },
+          {
+            "card": "Ah",
+            "probability": 0.02009732383078917
+          },
+          {
+            "card": "Ad",
+            "probability": 0.02009732383078917
+          },
+          {
+            "card": "Ac",
+            "probability": 0.02012070425113652
+          }
+        ],
+        "notUniformAcrossAllUnseenPublicCards": true
+      }
+    }
+  ],
+  "measuredBytes": {
+    "sb-bb-qqq-reload-export.json": 1763614,
+    "sb-bb-qqq-range-views.json": 8166918,
+    "qqq-range-lesson-packet.json": 446231,
+    "qqq-range-lesson-prompts.json": 3011,
+    "qqq-range-lesson-teacher.json": 1462
+  },
+  "fullAuthorStrategyFileBytes": 1261830677,
+  "standaloneContinuousTrainerReady": false,
+  "fullAuthorTreeFileExists": true,
+  "sourceTargetReached": false,
+  "releaseRule": "Publish a declared finite lesson with all allowed next actions/events and required references closed, or use a separately validated full-tree query service. A missing export is not an opponent fold, an illegal poker action or a learner mistake.",
+  "chanceRule": "Sample a supported private pair then uniformly deal from remaining physical deck, or use the exact conditional public-card law. Uniform choice over all publicly unexposed cards is generally wrong.",
+  "learnerTrials": 0,
+  "appChanged": false
+}

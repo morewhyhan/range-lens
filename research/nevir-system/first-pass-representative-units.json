@@ -1,0 +1,16 @@
+{
+  "id":"FIRST_PASS_REPRESENTATIVE_UNITS_V1",
+  "status":"paper_representatives_selected_not_trialed",
+  "principle":"one_representative_per_background_group_then_unlock_full_group_queue",
+  "routeBeforeRepresentatives":["p1_context","p2_board","R01_p3_range_fact","p4_compare","p5_execute","p6_update","p7_close"],
+  "representatives":[
+    {"group":"compare.unopened","unit":"1.5","label":"有摊牌赢面但下注未必增收","parent":"p4_compare","evidence":"size-comparison-evidence.json","identity":"course_demonstration_or_finite_comparison","mustNotInfer":"made_showdown_equity_alone_selects_check_or_bet"},
+    {"group":"compare.bet","unit":"2.1","label":"能赢一部分正常取值牌","parent":"p4_compare","evidence":"value-trap-tree-evidence.json","identity":"finite_model_demonstration","mustNotInfer":"beating_some_value_hands_alone_selects_call_or_raise"},
+    {"group":"compare.raise","unit":"3.1","label":"算清新价格","parent":"p4_compare","evidence":"defense-tree-evidence.json","identity":"fact_or_finite_comparison","mustNotInfer":"price_formula_alone_selects_strategy"},
+    {"group":"update.response","unit":"4.5","label":"账本与行动顺序更新","parent":"p6_update","evidence":"first-hand-lesson-packet.json","identity":"ledger_fact","mustNotInfer":"correct_ledger_implies_correct_strategy"},
+    {"group":"update.card","unit":"5.7","label":"新牌移除组合","parent":"p6_update","evidence":"turn-transfer-evidence.json","identity":"physical_fact","mustNotInfer":"physical_removal_equals_opponent_action_filter"}
+  ],
+  "unlockRules":{"firstPassShowsOnlyRepresentatives":true,"representativeRequiresParentFrame":true,"oneRepresentativeAtATime":true,"fullGroupUnlockAfterStructureChecks":true,"failedRepresentativeBlocksNextGroup":true,"noFlat35UnitHome":true},
+  "structureChecksBeforeSecondPass":["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "currentStatus":{"fiveRepresentativesSelected":true,"representativeReferenceComplete":false,"representativeLearnerTrial":false,"full35QueueReleased":false,"NL50Evidence":false}
+}

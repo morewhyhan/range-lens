@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+
+const a=JSON.parse(fs.readFileSync('research/nevir-system/first-hand-principle-frame-audit.json','utf8'));
+assert.equal(a.id,'FIRST_HAND_PRINCIPLE_FRAME_AUDIT_V1');
+assert.equal(a.status,'paper_crosswalk_all_principles_have_frame_or_stop_not_strategy_ready');
+assert.equal(a.frameSequence.length,19);
+assert.equal(a.principles.length,12);
+assert.equal(a.nestedCardSource,'first-hand-gap-frame-cards.json');
+assert.deepEqual(a.nestedCards,['I03','I05','I07','I08','I10','I11']);
+assert.deepEqual(a.counts,{totalPrinciples:12,covered:6,partial:6,missing:0});
+assert.equal(a.principles.filter(x=>x.status==='missing').length,0);
+assert.equal(a.principles.filter(x=>x.status==='partial').length,6);
+assert.equal(a.principles.filter(x=>x.status==='covered').length,6);
+for(const x of a.principles.filter(x=>x.status!=='covered')) assert.ok(x.missing&&x.requiredInsertion?.parent&&x.requiredInsertion?.kind&&x.requiredInsertion?.answerIdentity);
+for(const key of ['allTwelveMustBeCoveredBeforeCompleteFirstPassClaim','partialDoesNotCountAsCovered','missingReferenceStopsAtCurrentParent','factFrameReturnsToOriginalParent','frameCountDoesNotProvePrincipleCoverage','structurePaperDoesNotProveStrategy']) assert.equal(a.releaseRules[key],true);
+assert.equal(a.currentEvidence.allTwelveCovered,false);
+assert.equal(a.currentEvidence.NL50Evidence,false);
+assert.equal(a.releaseRules.nestedCardsAreInsideParent,true);
+const cards=JSON.parse(fs.readFileSync('research/nevir-system/first-hand-gap-frame-cards.json','utf8'));
+assert.equal(cards.id,'FIRST_HAND_GAP_FRAME_CARDS_V1');
+assert.equal(cards.cards.length,6);
+assert.equal(cards.cards.find(x=>x.id==='I10').principle,'P10');
+assert.equal(cards.cards.find(x=>x.id==='I10').currentReadiness,'stop_card_ready_reference_missing');
+assert.equal(cards.currentEvidence.p10HasExplicitStopCard,true);
+console.log(JSON.stringify({ok:true,status:a.status,covered:a.counts.covered,partial:a.counts.partial,missing:a.counts.missing,allTwelve:a.currentEvidence.allTwelveCovered,gapCards:cards.cards.length}));

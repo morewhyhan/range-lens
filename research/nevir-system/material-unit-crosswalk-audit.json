@@ -1,0 +1,16 @@
+{
+  "id": "MATERIAL_UNIT_CROSSWALK_AUDIT_V1",
+  "status": "paper_material_unit_disposition_complete_exact_binding_not_released",
+  "materialRows": 374,
+  "allRowsAccountedFor": true,
+  "allCandidateGroupsKnown": true,
+  "candidateRows": 153,
+  "exactUnitRows": 0,
+  "authorOnlyRows": 111,
+  "stopRows": 14,
+  "mechanismRows": 96,
+  "exactUnitBinding": false,
+  "matchedReference": false,
+  "learnerTrial": false,
+  "NL50Evidence": false
+}

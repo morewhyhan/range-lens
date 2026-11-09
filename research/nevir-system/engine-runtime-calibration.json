@@ -1,0 +1,62 @@
+{
+  "NL50Reference": false,
+  "amountProbe": {
+    "afterCheckBet182": "[Fold, Call, Raise(455), AllIn(9750)]",
+    "afterRaise455": "[Fold, Call, Raise(1138), AllIn(9750)]",
+    "notActualFlopTree": true,
+    "rootActions": "[Check, Bet(182)]",
+    "street": "river"
+  },
+  "appChanged": false,
+  "cardChecks": 52,
+  "evCalibrations": [
+    {
+      "actions": "[Fold, Call]",
+      "expectedCurrentCallEV": 732.0,
+      "id": "win",
+      "reportedMetric": 0.0,
+      "runtimeCurrentCallEV": 732.0,
+      "runtimeFoldEV": 0.0,
+      "scope": "Locked tiny river calibration; not an unconstrained equilibrium benchmark"
+    },
+    {
+      "actions": "[Fold, Call]",
+      "expectedCurrentCallEV": -182.0,
+      "id": "lose",
+      "reportedMetric": 0.0,
+      "runtimeCurrentCallEV": -182.0,
+      "runtimeFoldEV": 0.0,
+      "scope": "Locked tiny river calibration; not an unconstrained equilibrium benchmark"
+    },
+    {
+      "actions": "[Fold, Call]",
+      "expectedCurrentCallEV": 275.0,
+      "id": "tie",
+      "reportedMetric": 0.0,
+      "runtimeCurrentCallEV": 275.0,
+      "runtimeFoldEV": 0.0,
+      "scope": "Locked tiny river calibration; not an unconstrained equilibrium benchmark"
+    }
+  ],
+  "features": {
+    "bincode": false,
+    "rayon": true
+  },
+  "parsedRanges": [
+    {
+      "physicalWeightChecks": 1326,
+      "role": "oop",
+      "rootMass": 289.0,
+      "rootPositiveHands": 358
+    },
+    {
+      "physicalWeightChecks": 1326,
+      "role": "ip",
+      "rootMass": 475.5,
+      "rootPositiveHands": 507
+    }
+  ],
+  "requestedFlopSolveStarted": false,
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "runtime_range_amount_and_river_calibration_passed_not_flop_solved"
+}

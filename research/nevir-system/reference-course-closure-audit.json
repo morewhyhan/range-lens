@@ -1,0 +1,22 @@
+{
+  "id": "REFERENCE_COURSE_CLOSURE_AUDIT_V1",
+  "status": "candidate_reference_pipeline_audited_not_released",
+  "sourceLedger": "reference-course-closure-ledger.json",
+  "checks": {
+    "phases": 9,
+    "gates": 8,
+    "passedGates": 0,
+    "blockedGates": 8,
+    "firstBlockedGate": "G0_identity",
+    "targetUnknownFields": 4,
+    "solverCandidateOnly": true,
+    "coursePolicyNotPromoted": true,
+    "successorNotInvented": true,
+    "learnerTrialNotClaimed": true,
+    "failures": 0
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "现有QQQ只是达到内部停止线的作者侧参考候选；输入目标配置尚未完全冻结，且课程政策、差异账本、后继闭合、教学帧和迁移尚未完成。"
+  }
+}

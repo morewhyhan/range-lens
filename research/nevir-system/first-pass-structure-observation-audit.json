@@ -1,0 +1,224 @@
+{
+  "id": "FIRST_PASS_STRUCTURE_OBSERVATION_AUDIT_V1",
+  "status": "paper_structure_observation_mapped_runtime_and_learner_evidence_missing",
+  "purpose": "把首遍结构形成的六个观察镜头逐一落到13帧黄金路径和12个规范状态，防止结构要求停留在口号。",
+  "sources": [
+    "user-standard-requirement-audit.json",
+    "first-pass-user-facing-script-contract.json",
+    "first-lesson-visible-state-machine.json",
+    "first-pass-screen-coverage-matrix.json",
+    "first-pass-principle-coverage.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "structuralFrameCount": 13,
+  "principleCount": 12,
+  "principleCoverage": {
+    "firstIntroductionTotal": 12,
+    "routeStepsWithPrinciples": [
+      "L1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6",
+      "p7"
+    ],
+    "allHaveQuestionVisualHandoffAndTransfer": true
+  },
+  "protocolCheckCount": 6,
+  "checks": [
+    {
+      "id": "P1_order_followed",
+      "paperFrames": [
+        "G0_welcome",
+        "G1_context",
+        "G2_preflop_chart",
+        "G3_preflop_action",
+        "G4_range_bridge",
+        "G5_p1_context",
+        "G6_p2_hand",
+        "G7_p3_range",
+        "G8_p4_compare",
+        "G9_p5_execute",
+        "G10_p6_update",
+        "G11_p7_close"
+      ],
+      "canonicalStates": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "paperFields": [
+        "allCanonicalStatesVisited",
+        "orderedRoute",
+        "noFlatMenuShortcut"
+      ],
+      "minimum": "12个规范状态全部按唯一next链按序到达"
+    },
+    {
+      "id": "P2_hidden_structure_recall",
+      "paperFrames": [
+        "G12_recall_transfer"
+      ],
+      "canonicalStates": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "paperFields": [
+        "routeRecall",
+        "layerLocation",
+        "nextHandoffRecalled"
+      ],
+      "minimum": "隐藏标题后能说出外层/内层顺序，并定位至少3个未见层"
+    },
+    {
+      "id": "P3_parent_restore",
+      "paperFrames": [
+        "G6_p2_hand",
+        "G8_p4_compare",
+        "G10_p6_update"
+      ],
+      "canonicalStates": [
+        "p2",
+        "p4",
+        "p6"
+      ],
+      "paperFields": [
+        "parentFrameHashBefore",
+        "parentFrameHashAfter",
+        "childClosedToSameParent"
+      ],
+      "minimum": "子层关闭后父题牌、历史、金额、首答和主问题保持不变"
+    },
+    {
+      "id": "P4_error_return",
+      "paperFrames": [
+        "G0_welcome",
+        "G1_context",
+        "G2_preflop_chart",
+        "G3_preflop_action",
+        "G4_range_bridge",
+        "G5_p1_context",
+        "G6_p2_hand",
+        "G7_p3_range",
+        "G8_p4_compare",
+        "G9_p5_execute",
+        "G10_p6_update",
+        "G11_p7_close"
+      ],
+      "canonicalStates": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "paperFields": [
+        "firstAnswerBeforeHelp",
+        "errorLayer",
+        "returnTo",
+        "secondAnswer"
+      ],
+      "minimum": "答错后只补当前缺失事实，并在同一父题重答"
+    },
+    {
+      "id": "P5_unseen_slow_execution",
+      "paperFrames": [
+        "G12_recall_transfer"
+      ],
+      "canonicalStates": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "paperFields": [
+        "unseenCase",
+        "exactlyOneChangedField",
+        "amountChecked",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "minimum": "至少一题匹配参考的未见单步，按局面→牌面→范围→比较→动作→更新完成"
+    },
+    {
+      "id": "P6_continuous_handoff",
+      "paperFrames": [
+        "G9_p5_execute",
+        "G10_p6_update",
+        "G11_p7_close"
+      ],
+      "canonicalStates": [
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "paperFields": [
+        "successorOrStopEveryNode",
+        "ledgerConservation",
+        "rangeConservation",
+        "actionRightContinuity"
+      ],
+      "minimum": "只在后继闭合课包中完成翻牌、转牌、河牌连续交接"
+    }
+  ],
+  "evidence": {
+    "paperRoute": true,
+    "paperFrameMapping": true,
+    "runtimeTelemetry": false,
+    "learnerObserved": false,
+    "matchedReferenceForUnseenExecution": false,
+    "continuousSuccessorClosure": false,
+    "targetNL50Evidence": false
+  },
+  "releaseRules": {
+    "allSixChecksRequiredForStructureClaim": true,
+    "p5RequiresMatchedReference": true,
+    "p6RequiresSuccessorClosure": true,
+    "firstPassDoesNotEqualMastery": true,
+    "structureDoesNotEqualNL50": true,
+    "narrativeFramesCannotReplaceStructuralFrames": true
+  },
+  "currentConclusion": "纸面映射已闭合；运行时没有记录六个镜头，且没有低基础学习者首答、未见慢做或连续三街观察，因此不能发布结构形成或NL50声明。"
+}

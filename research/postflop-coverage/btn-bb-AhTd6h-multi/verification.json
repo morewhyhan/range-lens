@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "inputFingerprint": "676d7c7d7f858b2c7c647ef596e9e21f625a7b8c90e73a5e742f3dc0cec82aa8",
+  "solverReportedExploitabilityBB": 0.005245647430419922,
+  "scope": "独立求解翻牌 Ah Td 6h（A高）；继承已明确的双方翻前条件范围、底池和后手；零抽水；翻牌33%／75%，转河75%，面对下注允许弃牌／跟注／全下加注。有限动作树参考。",
+  "verifiedNodes": 95,
+  "physicalWeightChecks": 78470,
+  "edges": 131,
+  "independentTerminalChecks": 12,
+  "completeCheckAndBetCallRoutes": true,
+  "hiddenCardTrials": 12,
+  "allRuntimeHistoriesAvailable": true,
+  "independentSecondSolver": false,
+  "files": {
+    "request.json": "712ccbb1212919ac040a6bb34b567a69e9a67126b802f96cdcb9a489e7aafd09",
+    "result.json": "c85e5278e0db748f6b71e93bebab49b96b968f939be3ea05a46ccb14a1f7982b",
+    "strategy.bin": "689ad41e1fa03310f9be1def74332764c66f79528d0ce0e831758697e6979069"
+  },
+  "engineSHA256": "4adf872e5f45ebe8d4c2a102af9b05688d7ceec911182cb484dbbff60331ae20"
+}

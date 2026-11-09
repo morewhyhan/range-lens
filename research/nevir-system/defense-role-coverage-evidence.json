@@ -1,0 +1,2884 @@
+{
+  "status": "role_aware_local_bank_and_selected_source_audit_not_comprehensive_strategy",
+  "scope": "Exact observed histories in the existing85-question bank and ten selected claims from notes2.5/2.7. Does not certify all seven notes or all original Excel content.",
+  "sourceHashes": {
+    "mixed-model-practice-prompts.json": "aa631428ffeef68c10e3eb610c052b115da8f507ad50451a0bf277cf4c18bc9c",
+    "mixed-model-practice-teacher.json": "0d1ca1154691bc8934fd5f5fc84d5d83ae4081b2b7748b64e2d58dd45c2d144e",
+    "mixed-model-practice-coverage.json": "d33e6523673a556399cdfc7647d8134a27120bd8975bcec850e22723146ca254",
+    "source-claims.json": "d179f74f33615516810dbf6e7a75bbfc284720cc3a289832fded47954190a1da"
+  },
+  "counts": {
+    "originalCoarseCells": 48,
+    "roleAwareAuditCells": 96,
+    "existingQuestions": 85,
+    "lastRaiserQuestions": 85,
+    "callerQuestions": 0,
+    "roleCellsWithPartialLocalModel": 6,
+    "completeTargetPolicyCells": 0,
+    "selectedSourceClaims": 10
+  },
+  "roleRule": "Facing a bet after checking does not imply preflop caller. The preflop role comes from the full observed history, independently of current position and action.",
+  "sourceRule": "A paragraph describing how a caller responds to the opener is not a complete graded policy for a learner in the caller seat.",
+  "sourceRecords": [
+    {
+      "id": "R22",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 20,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "fragment": "N5-L20",
+      "title": "T83过牌加注的条件锁定模型",
+      "precision": "conditional_model_report",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP3bet_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R23",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 22,
+        "section": "3.4 实例分析：翻牌10-8-3彩虹",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "fragment": "N5-L22",
+      "title": "T83加注被跟后的过牌方向",
+      "precision": "conditional_preference",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP3bet_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R25",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 33,
+        "section": "3.6 翻牌过牌后的转牌和河牌线路",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "fragment": "N7-L33",
+      "title": "第三枪与其他河牌线路的对手差异",
+      "precision": "conditional_population_report",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP_SRP_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R26",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 25,
+        "section": "3.4 针对紧弱玩家和鱼的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "fragment": "N7-L25",
+      "title": "紧弱与娱乐玩家下注后的XR调整",
+      "precision": "conditional_course_adjustment",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP_SRP_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R28",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 32,
+        "section": "3.8 整体策略总结",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "fragment": "N5-L32",
+      "title": "禁止所有过牌跟注的总结不能生成防守表",
+      "precision": "unresolved_scope",
+      "reviewStatus": "requires_source_resolution",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP3bet_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R30",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 38,
+        "section": "3.7 对抗按钮位跟注的特殊情况",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "fragment": "N7-L38",
+      "title": "翻牌过牌没有发生弃牌",
+      "precision": "unresolved_scope",
+      "reviewStatus": "requires_source_resolution",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP_SRP_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R42",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 13,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "fragment": "N5-L13",
+      "title": "OOP3bet面对不同下注尺度的条件报告",
+      "precision": "conditional_population_report",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP3bet_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R43",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.5-不利位置3bet底池_中文笔记.md",
+        "line": 14,
+        "section": "3.2 过牌-加注策略的基础：统计数据揭示的漏洞",
+        "sha256": "825d1fec8795aa1338bacdbb27d7c744a17d69e0dc10a98918cde356b44b6310"
+      },
+      "fragment": "N5-L14",
+      "title": "A8与A4的被再加代价对照",
+      "precision": "conditional_preference",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP3bet_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R44",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 20,
+        "section": "3.3 对手对c-bet和过牌加注的倾向",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "fragment": "N7-L20",
+      "title": "盲对盲SRP的XR少弃统计条件",
+      "precision": "conditional_population_report",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP_SRP_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    },
+    {
+      "id": "R45",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.7-不利位置单次加注底池_中文笔记.md",
+        "line": 27,
+        "section": "3.5 针对常规玩家的剥削策略",
+        "sha256": "6f9d3c0defacbd17010c7373bdfc6e515dc67e3774db6fa3b291ce06fdac055d"
+      },
+      "fragment": "N7-L27",
+      "title": "SRP过度刺探与XR过弃的调整条件",
+      "precision": "conditional_course_adjustment",
+      "reviewStatus": "reviewed_text_entailment_only",
+      "heroRole": "last_preflop_raiser",
+      "strategyScope": "OOP_SRP_PFR",
+      "opponentResponsesAreNotCompleteOpponentPolicy": true,
+      "currentTargetPolicyObtained": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "M-c797f3b3a39357ac",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_allin"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_allin",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_allin",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "c797f3b3a39357aca2103039bfdcb67e7b8e3cb2e5b1bb7cbc76543092754d6f"
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_bet",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "2a6236ea7b5acbbbaec7b1750e4b6605e1133f831a59ac3e8762a21b55d591c4"
+    },
+    {
+      "id": "M-7c3585a9a1a4ef4e",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "7c3585a9a1a4ef4ed1616ad7e2e79d3df54357e87b00a3d5cc9cdc66b49febef"
+    },
+    {
+      "id": "M-618f335997d71c89",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "OOP/3bet/river/free",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/free",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "618f335997d71c8907cc9d1b88869ea42501077ee8f7f61a0931e73625a41d2a"
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_bet",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "980297769b3398ff6b96d694a10df2eefe9591366c7c77a8087dc305543f95ab"
+    },
+    {
+      "id": "M-621ea4c65f3d92aa",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "OOP/3bet/river/free",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/free",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "621ea4c65f3d92aa3119aa46ecfabcf2acfa923b7cc7017421b22614c287556b"
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_bet",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "e5f62377d3db21c4d45aabe05c4e4b78e6b3c103e751308bef63f9b3929e723c"
+    },
+    {
+      "id": "M-ce099baa7c11b2b2",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "ce099baa7c11b2b29a29585f381acbea1a682cba1ad0d2e5e44c1f6ba03985bd"
+    },
+    {
+      "id": "M-faae2c247429810f",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "OOP/3bet/river/free",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/free",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "faae2c247429810f7ed79ee448b75463ebf41c1fa3a4db6709e3a8b3c590d061"
+    },
+    {
+      "id": "M-faf7125c4e97bd3b",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_allin"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_allin",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_allin",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "faf7125c4e97bd3bd1cf6d75b9b25a1cae5e064c6fb1d4f4a5f7cfb804cdb921"
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_bet",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "95a9e7fa48e326c213eb9600eb42e7a0e6d751bfb79013fca76aeeb36d376e8e"
+    },
+    {
+      "id": "M-17013f3a2881ebdb",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "17013f3a2881ebdb71486aa4a4c350be9311f3558e73f1c893b2faaff5235ced"
+    },
+    {
+      "id": "M-9003894733f3fa1f",
+      "family": "river_value",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "OOP/3bet/river/free",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/free",
+      "observedPrefix": "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "inputFingerprint": "9003894733f3fa1f3d52f3229ab62311ba589afd5046ff93221a97169c2d8777"
+    },
+    {
+      "id": "M-689bd0d9ae25a746",
+      "family": "turn_defense",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/turn/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/turn/facing_bet",
+      "observedPrefix": "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+      "inputFingerprint": "689bd0d9ae25a7466022130e2a3e13b258d186d3547b4a530e4587d8ad32e5af"
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "family": "turn_defense",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/turn/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/turn/facing_bet",
+      "observedPrefix": "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+      "inputFingerprint": "1517092e089e13f939da53128d5095440579071ce73b2a5ee003fd81502b6926"
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "family": "turn_defense",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/turn/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/turn/facing_bet",
+      "observedPrefix": "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+      "inputFingerprint": "42f47374dd1800b094f802bcb4ce5d88f513c0bd9876555288af6cab5c5f47ee"
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "family": "turn_defense",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "oldCoarseKey": "OOP/3bet/turn/facing_bet",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/turn/facing_bet",
+      "observedPrefix": "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+      "inputFingerprint": "1e0617626fd72882d9073504c5d851c91322a9a926ceade4c6446de6f3e3b70e"
+    },
+    {
+      "id": "M-cdbbd0d18ae19b6f",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "cdbbd0d18ae19b6fce7e7f4446cd38f2f6508f2a7eef3483da0eca965a22cb13"
+    },
+    {
+      "id": "M-6d41feff8a47ea6a",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "6d41feff8a47ea6a227d806dcc086a4a65f3cf13b02312f7d7b3b287b0de243a"
+    },
+    {
+      "id": "M-3f12580e3e4fc2a2",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "3f12580e3e4fc2a28002c849218a85604855b9536f66e3275df0e26561dae93e"
+    },
+    {
+      "id": "M-9db0b52237b352f2",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "9db0b52237b352f2b77354a9199034fe5794dc61532cc4aaa0304f45414b09c9"
+    },
+    {
+      "id": "M-300597ef8d6f57a1",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "300597ef8d6f57a15db7037efc21bd74f3cb3a9bfbe36b99e26b25f367737975"
+    },
+    {
+      "id": "M-bcdaa8f191db420a",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "bcdaa8f191db420a5846e768a91a0429f5b1ecb0ceb806a8b6848f2eaefa6d94"
+    },
+    {
+      "id": "M-dd706034bb2b118d",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "dd706034bb2b118dd3d4cc68fc293068af222a5bd2607c63c22d72b3aea60615"
+    },
+    {
+      "id": "M-aa9ef6c09797f43e",
+      "family": "river_size",
+      "heroSeat": "BTN",
+      "preflopLastRaiser": "BTN",
+      "preflopCaller": "BB",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "oldCoarseKey": "IP/SRP/river/free",
+      "roleAwareKey": "last_preflop_raiser/IP/SRP/river/free",
+      "observedPrefix": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "inputFingerprint": "aa9ef6c09797f43ef22ee8b30aff3c274e9ff4c7912b43732ea0cdbc692ebe30"
+    },
+    {
+      "id": "M-d1cd9592518ba3bc",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "d1cd9592518ba3bc7a61df88d22eabf7f186d72fb11fc023924724d75b0e067c"
+    },
+    {
+      "id": "M-4d5da055459423ed",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "4d5da055459423ed23e022b350aa79083d13c3ee70a3bc7ec532e38d0079df2c"
+    },
+    {
+      "id": "M-6f09529eaefe02bf",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6f09529eaefe02bf2efe7ecfb31003611e9692978875808d99ebbcf982729471"
+    },
+    {
+      "id": "M-aa618423835901a6",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "aa618423835901a6713f537c4dc6b236469b7183eb68a82e9165d5166ceb0d82"
+    },
+    {
+      "id": "M-7b12beba6921fd45",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "7b12beba6921fd4541f9b07df5cd678ba800ceac974ebd8753c857c7d4d55af1"
+    },
+    {
+      "id": "M-e60e54e694c07f0c",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "e60e54e694c07f0ca278102194cdf7c1c47dba06016195dd55cf781c88b05673"
+    },
+    {
+      "id": "M-7254d32b66fdf5d9",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "7254d32b66fdf5d9fd8dd96bd6084de425fcf7e784e3154fb75cc470fd25305b"
+    },
+    {
+      "id": "M-eb11d565fc245ab2",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "eb11d565fc245ab26f6b37f28d5c21d6044052d272e725e72e4962a80d5ec07e"
+    },
+    {
+      "id": "M-2bb67c1a2d1320f5",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "2bb67c1a2d1320f5b17c2a21c10a9e910476f044a2e5159fd514419e6283f6bb"
+    },
+    {
+      "id": "M-1ae32378d4065ccb",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "1ae32378d4065ccb448bf322dba7d4565a8717854886f034de02c9f062d17b04"
+    },
+    {
+      "id": "M-ee676c25603a2c96",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "ee676c25603a2c96fd07a46b01408ed76082390509c9cc9011ef58b2d7c77041"
+    },
+    {
+      "id": "M-7897165c0e0eb2dd",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "7897165c0e0eb2dd77716c285e4af2b6370ce812f281524f25746f90af794dc7"
+    },
+    {
+      "id": "M-14504f8f37603040",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "14504f8f37603040aee959e64863384f97625e8c9fc5112c01c1da85958ddb3c"
+    },
+    {
+      "id": "M-18da983aad66d68d",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "18da983aad66d68d99f6c6e4e91bc748a7439b20cf5e5918e376000de156a1f8"
+    },
+    {
+      "id": "M-f926740d388ec9ca",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "f926740d388ec9ca2b350371507f6d7f33c0ef9d4df74091898237fdbe12c9a4"
+    },
+    {
+      "id": "M-74c333522435d787",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "74c333522435d787de79013c5b992af9571354f9533b53b3e5d933e150b0c855"
+    },
+    {
+      "id": "M-1d42d115ba24e4b4",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "1d42d115ba24e4b4a60289289380b25a2221ce14d07ac96ff8a171ed90fd8e09"
+    },
+    {
+      "id": "M-6977c83d150fca92",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6977c83d150fca92d7aefce2161887860953911c1c7c982d29bdcd72201be211"
+    },
+    {
+      "id": "M-8b0304fd99e7c757",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "8b0304fd99e7c757caab0057ad875e08543e365b27fd69972d968b21c115ed77"
+    },
+    {
+      "id": "M-5bf956c6068257eb",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "5bf956c6068257ebfdc7e30ad8e03c0ea92f836f4dcb969a61ddf68eea2db293"
+    },
+    {
+      "id": "M-a40db6e60c5ae8c0",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "a40db6e60c5ae8c073a38395257c72f9ebfea8929deddd03d8d5fce583ede1ac"
+    },
+    {
+      "id": "M-cc81b316270b2e6e",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "cc81b316270b2e6ef2e650ac3b7c2064afc453566d53e274742153b4ddbba0e6"
+    },
+    {
+      "id": "M-6ccceb9c15e45dd4",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6ccceb9c15e45dd45359b077fa8a6314037ea8b74d896307793fb4ee747caa63"
+    },
+    {
+      "id": "M-44a1caf58ed9d67b",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "44a1caf58ed9d67b767a1029595932db1ca4da87d8f207e68239f7b9cfcc50cd"
+    },
+    {
+      "id": "M-94158140e7c66938",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "94158140e7c669382e98ac446255b2d47be1ba1d3c3c98eee8c4340daabf0168"
+    },
+    {
+      "id": "M-58954f95749bdee9",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "58954f95749bdee9d16ecf976bc12be1b5ceffcb59f25575438734e8029f2d81"
+    },
+    {
+      "id": "M-292ab348d707728e",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "292ab348d707728ea7a04f585b392efa3f0f1bc86d4ae1259c2b5fb28e27827e"
+    },
+    {
+      "id": "M-790a30ad86183b23",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "790a30ad86183b23a51cbc84ed3faf899878625a9fb2f9c8a5f6ccb74fd9368b"
+    },
+    {
+      "id": "M-99d023853421fa8f",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "99d023853421fa8f5e0aafc0e9b0bb10b99ec61bf16655d9f02e0e29f40646ec"
+    },
+    {
+      "id": "M-81467d6d538f3ca8",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "81467d6d538f3ca81645c6b2deb0d3771b9ea517bd223ebe7c00d4e61333bbb7"
+    },
+    {
+      "id": "M-9e6d8d7fbaec3b41",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "9e6d8d7fbaec3b41d1dae6abd6bbe58eb4233a81cd52e4dcd83754b6cbd97335"
+    },
+    {
+      "id": "M-52fa769f1e06517f",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "52fa769f1e06517f3abd4713a1bae4f38430d6063e31970530a33023939a2ccf"
+    },
+    {
+      "id": "M-9054ea6f9aede516",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "9054ea6f9aede5169ddc66f31875159c33f1b81731777525147b903c93b0147e"
+    },
+    {
+      "id": "M-b80c88aa65f1e65a",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "b80c88aa65f1e65ac29c6407f68939ec6a34cf89e571a609ff5bead7b302b906"
+    },
+    {
+      "id": "M-24ff4cc8113f2114",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "24ff4cc8113f2114b6ee73177b90644b3bbe0f09ddf4fce6973ee64d22c41b33"
+    },
+    {
+      "id": "M-ae6f8482ef793b6b",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "ae6f8482ef793b6bcde9be491c793de99ee59464964ce52ddfa79b86303869a1"
+    },
+    {
+      "id": "M-66db9c53513a867e",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "66db9c53513a867ec3fb6b90be264d8e62fa978bcbf1d2579159131abc4564db"
+    },
+    {
+      "id": "M-506cee0379de7076",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "506cee0379de7076a3b30f77b51f36e668942ac8ba15c69109ca22a55e7a9230"
+    },
+    {
+      "id": "M-7d52fe1f2a61446c",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "7d52fe1f2a61446c8a30ef011a90f3c495c7bdaf997bb924db7704a498bf4c33"
+    },
+    {
+      "id": "M-76133fb727d4a5ff",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "76133fb727d4a5ff5bd342fe428582267a7b75d119e83fb4a860d2b0351bb6b0"
+    },
+    {
+      "id": "M-57c3683da28562bf",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "57c3683da28562bfa4a80b3a034553e46f542a1acfeba85ace61c200a565e263"
+    },
+    {
+      "id": "M-4ee886f1fcc21ab5",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "4ee886f1fcc21ab576cba4cdd4407cae055a1bf0ba42db03c5b75eaf18d57901"
+    },
+    {
+      "id": "M-4aad6df320e223f6",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "4aad6df320e223f6c2feaf45648c8fb4dc01982819eac0394d8249e63dadd99f"
+    },
+    {
+      "id": "M-17759599804d6ac2",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "17759599804d6ac2b31cd776ded7366a0f29503ca92896779e3edaf7bb93d2d1"
+    },
+    {
+      "id": "M-3037c4477e1024ed",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "3037c4477e1024ed4e012d32b357e2da47ce2ede0351025b358851383332b2c2"
+    },
+    {
+      "id": "M-d8b9360f52d1671b",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "d8b9360f52d1671b8e1c74e1ba2be67cf988f75771cb8e1c4705d92d8bb47287"
+    },
+    {
+      "id": "M-4d6e03c17ad970b9",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "4d6e03c17ad970b91d5fa624c6feed133b8d946eabbf50b28559f82070ea1109"
+    },
+    {
+      "id": "M-b12e9b5114778a03",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "b12e9b5114778a03d0aa9fa5b6971cf4cd7c0bf066db6dd9003f962811c74bb9"
+    },
+    {
+      "id": "M-9b48bc577db53d73",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "9b48bc577db53d73b38f45140b64ba4504f4418c94a5ea9abe492f59153ea168"
+    },
+    {
+      "id": "M-a035ebe7c523505b",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "a035ebe7c523505b7793b801a158d705f19704bb3a7794506c2586ff1f5db313"
+    },
+    {
+      "id": "M-4c6f85c2e21f58b9",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "4c6f85c2e21f58b9679a472eca325deb38682d900893237b371d31dc32e72dca"
+    },
+    {
+      "id": "M-2a5b1efb6f32eb18",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "2a5b1efb6f32eb18a78102d9d480706e21b80dc39ac1563fd85d36571603f744"
+    },
+    {
+      "id": "M-2d81b0be6e76202b",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "2d81b0be6e76202bb4cda0c99b5e7e305daa599f7614ad38ea0920a3c9cbd24c"
+    },
+    {
+      "id": "M-3c0adb28f35927b5",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "3c0adb28f35927b5180c0ac740ecdfb1b4d6a306f9ad79e40757d41b7a32a2f4"
+    },
+    {
+      "id": "M-6dfc1d62cf491e5c",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6dfc1d62cf491e5c0751259cf2a6f5ea99c8336225d32b085c9592d0b3948708"
+    },
+    {
+      "id": "M-6201aacb49228476",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6201aacb492284760c7c9192ff1a02e548767e3d9fb71f32d0cb4728281b6abf"
+    },
+    {
+      "id": "M-6fe2e1d2ae9e0362",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "6fe2e1d2ae9e03629b4732d4f3d9086e69193efe1e05c8ea15f59c981362ce90"
+    },
+    {
+      "id": "M-697f8f61c1f20e67",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "697f8f61c1f20e67d18161ba6e4a53e81ce12b70be79fe1c9cedd784356e338e"
+    },
+    {
+      "id": "M-364790a95c4856b1",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "364790a95c4856b18b1874b12fa2f0921585c566c2fb92e54afa3ff7cd2d1ac9"
+    },
+    {
+      "id": "M-1625741597a4f233",
+      "family": "river_bluff",
+      "heroSeat": "SB",
+      "preflopLastRaiser": "SB",
+      "preflopCaller": "BTN",
+      "heroRole": "last_preflop_raiser",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "oldCoarseKey": "OOP/3bet/river/facing_raise",
+      "roleAwareKey": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "observedPrefix": "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "inputFingerprint": "1625741597a4f233e7bcd7a5df8716fe969efd059c404b511b59647086e08dd0"
+    }
+  ],
+  "roleCells": [
+    {
+      "key": "last_preflop_raiser/IP/SRP/flop/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/flop/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/flop/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/flop/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/turn/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/turn/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/turn/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/turn/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/river/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [
+        "M-cdbbd0d18ae19b6f",
+        "M-6d41feff8a47ea6a",
+        "M-3f12580e3e4fc2a2",
+        "M-9db0b52237b352f2",
+        "M-300597ef8d6f57a1",
+        "M-bcdaa8f191db420a",
+        "M-dd706034bb2b118d",
+        "M-aa9ef6c09797f43e"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/river/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/river/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/SRP/river/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/flop/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/flop/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/flop/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/flop/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/turn/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/turn/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/turn/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/turn/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/river/free",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/river/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/river/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/IP/3bet/river/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/flop/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/flop/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/flop/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/flop/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/turn/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/turn/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/turn/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/turn/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/river/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/river/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/river/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/SRP/river/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/flop/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/flop/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/flop/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/flop/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/turn/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/turn/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [
+        "M-689bd0d9ae25a746",
+        "M-1517092e089e13f9",
+        "M-42f47374dd1800b0",
+        "M-1e0617626fd72882"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/turn/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/turn/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/river/free",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [
+        "M-618f335997d71c89",
+        "M-621ea4c65f3d92aa",
+        "M-faae2c247429810f",
+        "M-9003894733f3fa1f"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/river/facing_bet",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [
+        "M-2a6236ea7b5acbbb",
+        "M-980297769b3398ff",
+        "M-e5f62377d3db21c4",
+        "M-95a9e7fa48e326c2"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/river/facing_raise",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [
+        "M-7c3585a9a1a4ef4e",
+        "M-ce099baa7c11b2b2",
+        "M-17013f3a2881ebdb",
+        "M-d1cd9592518ba3bc",
+        "M-4d5da055459423ed",
+        "M-6f09529eaefe02bf",
+        "M-aa618423835901a6",
+        "M-7b12beba6921fd45",
+        "M-e60e54e694c07f0c",
+        "M-7254d32b66fdf5d9",
+        "M-eb11d565fc245ab2",
+        "M-2bb67c1a2d1320f5",
+        "M-1ae32378d4065ccb",
+        "M-ee676c25603a2c96",
+        "M-7897165c0e0eb2dd",
+        "M-14504f8f37603040",
+        "M-18da983aad66d68d",
+        "M-f926740d388ec9ca",
+        "M-74c333522435d787",
+        "M-1d42d115ba24e4b4",
+        "M-6977c83d150fca92",
+        "M-8b0304fd99e7c757",
+        "M-5bf956c6068257eb",
+        "M-a40db6e60c5ae8c0",
+        "M-cc81b316270b2e6e",
+        "M-6ccceb9c15e45dd4",
+        "M-44a1caf58ed9d67b",
+        "M-94158140e7c66938",
+        "M-58954f95749bdee9",
+        "M-292ab348d707728e",
+        "M-790a30ad86183b23",
+        "M-99d023853421fa8f",
+        "M-81467d6d538f3ca8",
+        "M-9e6d8d7fbaec3b41",
+        "M-52fa769f1e06517f",
+        "M-9054ea6f9aede516",
+        "M-b80c88aa65f1e65a",
+        "M-24ff4cc8113f2114",
+        "M-ae6f8482ef793b6b",
+        "M-66db9c53513a867e",
+        "M-506cee0379de7076",
+        "M-7d52fe1f2a61446c",
+        "M-76133fb727d4a5ff",
+        "M-57c3683da28562bf",
+        "M-4ee886f1fcc21ab5",
+        "M-4aad6df320e223f6",
+        "M-17759599804d6ac2",
+        "M-3037c4477e1024ed",
+        "M-d8b9360f52d1671b",
+        "M-4d6e03c17ad970b9",
+        "M-b12e9b5114778a03",
+        "M-9b48bc577db53d73",
+        "M-a035ebe7c523505b",
+        "M-4c6f85c2e21f58b9",
+        "M-2a5b1efb6f32eb18",
+        "M-2d81b0be6e76202b",
+        "M-3c0adb28f35927b5",
+        "M-6dfc1d62cf491e5c",
+        "M-6201aacb49228476",
+        "M-6fe2e1d2ae9e0362",
+        "M-697f8f61c1f20e67",
+        "M-364790a95c4856b1",
+        "M-1625741597a4f233"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "last_preflop_raiser/OOP/3bet/river/facing_allin",
+      "role": "last_preflop_raiser",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [
+        "M-c797f3b3a39357ac",
+        "M-faf7125c4e97bd3b"
+      ],
+      "hasPartialLocalModel": true,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/flop/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/flop/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/flop/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/flop/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/turn/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/turn/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/turn/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/turn/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/river/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/river/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/river/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/SRP/river/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/flop/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/flop/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/flop/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/flop/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/turn/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/turn/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/turn/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/turn/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/river/free",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/river/facing_bet",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/river/facing_raise",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/IP/3bet/river/facing_allin",
+      "role": "preflop_caller",
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/flop/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/flop/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/flop/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/flop/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/turn/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/turn/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/turn/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/turn/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/river/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/river/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/river/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/SRP/river/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/flop/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/flop/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/flop/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/flop/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/turn/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/turn/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/turn/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/turn/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/river/free",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/river/facing_bet",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/river/facing_raise",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    },
+    {
+      "key": "preflop_caller/OOP/3bet/river/facing_allin",
+      "role": "preflop_caller",
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "localQuestionIds": [],
+      "hasPartialLocalModel": false,
+      "completeTargetPolicyVerified": false
+    }
+  ],
+  "requiredNextReferences": [
+    "BB caller versus BTN opener SRP: same known root ranges and full postflop tree; current A72 request remains unsolved.",
+    "Caller in3bet pot: lawful matching caller range and complete policy, not inferred from the3bet chart complement.",
+    "Original raiser after checking versus a stab: separate small/large bet and response models, preserving call, raise and reraises."
+  ],
+  "learnerFlow": "Role is supplied by the small table and observed history; show the same read/compare/act/update loop. Do not add96 menu tiles or repeatedly quiz already-known role.",
+  "neitherCompletionPercentageNorNewQuestions": true,
+  "appChanged": false,
+  "learnerTrials": 0
+}

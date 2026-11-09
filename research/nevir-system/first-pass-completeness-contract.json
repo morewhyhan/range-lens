@@ -1,0 +1,57 @@
+{
+  "status": "paper_layering_contract_not_trialed",
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close","replay_transfer"],
+  "canonicalLearnerRouteRole": "runtime_surface",
+  "outerRouteRole": "legacy_author_macro_inventory_only",
+  "definitions": {
+    "firstPassStructuralCompleteness": "Every necessary outer and inner step has one visible anchor, question, action, error return and successor without flattening the 35-unit bank.",
+    "backendCoverageCompleteness": "All 35 units are registered across five groups, streets, roles, action states and legal successors with evidence identity.",
+    "notInterchangeable": true
+  },
+  "outerRoute": [
+    {"id":"L0","visible":"six_max_100bb_table_and_turn_order","action":"locate_actor_and_effective_stack","next":"L1","returnTo":"root"},
+    {"id":"L1","visible":"position_history_and_preflop_chart_kind","action":"select_chart","next":"L2","returnTo":"L0"},
+    {"id":"L2","visible":"169_grid_and_current_hand_coordinate","action":"locate_cell","next":"L3","returnTo":"L1"},
+    {"id":"L3","visible":"course_action_precision","action":"read_cell_action","next":"L4","returnTo":"L2"},
+    {"id":"L4","visible":"preflop_to_postflop_range_handoff","action":"confirm_range_owner_and_physical_filter","next":"L5","returnTo":"L3"},
+    {"id":"L5","visible":"postflop_state_actor_price_and_stack","action":"locate_next_layer","next":"L6","returnTo":"L4"},
+    {"id":"L6","visible":"board_hand_range_and_action_comparison","action":"complete_one_comparison","next":"L7","returnTo":"L5"},
+    {"id":"L7","visible":"action_new_card_and_range_update","action":"update_one_field","next":"state_dependent","nextByState":{"successor":"L5","terminal":"L8"},"returnTo":"L6"},
+    {"id":"L8","visible":"settlement_structure_recall_and_transfer","action":"recall_route_and_transfer_one_field","next":"exit_or_next_round","returnTo":"L7"}
+  ],
+  "postflopInnerSteps":[
+    {"id":"p1_context","question":"whose_turn_and_what_action_is_faced","returnTo":"L5"},
+    {"id":"p2_board","question":"what_board_class_and_which_cards_matter","returnTo":"L5"},
+    {"id":"p3_range","question":"which_combos_can_still_exist","returnTo":"L5"},
+    {"id":"p4_compare","question":"what_changes_the_comparison_between_actions","returnTo":"L6"},
+    {"id":"p5_execute","question":"which_declared_course_or_reference_action_applies","returnTo":"L6"},
+    {"id":"p6_update","question":"what_changed_after_action_or_new_card","returnTo":"L7"},
+    {"id":"p7_close","question":"what_is_the_next_parent_step_and_what_is_settled","returnTo":"L8"}
+  ],
+  "backendCoverage": {
+    "units": 35,
+    "groups": ["compare.unopened","compare.bet","compare.raise","update.response","update.card"],
+    "streets": ["flop","turn","river"],
+    "roles": ["preflop_raiser","preflop_caller","blind_defender"],
+    "actionStates": ["unopened","facing_bet","facing_raise","allin","terminal"],
+    "requiredFields": ["parentFrame","sourceIdentity","factInputs","coursePolicy","referencePolicy","rangeBefore","rangeAfter","legalSuccessors","errorReturn","transferVariant","releaseStatus"],
+    "flatHomeMenu": false
+  },
+  "unlockOrder": ["first_pass","order_recall","layer_location","error_recovery","one_variable_transfer","second_pass_group_queue","adjacent_transfer","delayed_recall","continuous_route","external_benchmark"],
+  "releaseGates": {
+    "routeRequiresAllOuterAnchors": true,
+    "postflopRequiresAllSevenInnerSteps": true,
+    "backendRequiresAll35Registered": true,
+    "missingSuccessorStopsExactStrategy": true,
+    "firstPassDoesNotGrant35UnitMastery": true,
+    "35UnitCoverageDoesNotGrantLearnerStructure": true,
+    "learnerStructureDoesNotGrantNL50": true
+  },
+  "currentEvidence": {
+    "paperRoute": true,
+    "runtimeRoute": false,
+    "all35ReferenceClosed": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

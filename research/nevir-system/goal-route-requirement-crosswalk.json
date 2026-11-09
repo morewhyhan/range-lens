@@ -1,0 +1,1591 @@
+{
+  "id": "GOAL_ROUTE_REQUIREMENT_CROSSWALK_V1",
+  "status": "paper_goal_to_route_and_author_stage_crosswalk_closed_runtime_missing",
+  "purpose": "将最终目标的十项可验收要求直接落到用户12状态、作者C0-C9阶段和可见交接字段，防止目标要求停留在抽象口号。",
+  "sourceDocuments": [
+    "goal-level-acceptance-matrix.json",
+    "learner-goal-route-canonical.json",
+    "first-pass-state-evidence-crosswalk.json",
+    "final-goal-release-audit.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "authorStages": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "requirements": [
+    {
+      "goalId": "G1",
+      "goalName": "single_sequential_route",
+      "requiredEvidence": [
+        "runtime_reads_canonical_next_chain",
+        "parent_restore_after_child",
+        "one_primary_action_per_screen"
+      ],
+      "routeNodes": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C7",
+        "C9"
+      ],
+      "proofFields": [
+        "currentState",
+        "nextState",
+        "parentFrame",
+        "parentRestore",
+        "onePrimaryAction"
+      ],
+      "paperSources": [
+        "learner-goal-route-canonical.json",
+        "route-consistency-audit.json",
+        "learner-evidence-release-gates.json",
+        "154_35项错误归因与反馈回退矩阵.md",
+        "unit-error-feedback-matrix.json",
+        "155_首遍视觉结构与父子层闭合合同.md",
+        "first-pass-visual-structure-contract.json",
+        "156_从首遍结构到目标级能力的释放总表.md",
+        "outcome-release-crosswalk.json",
+        "161_首遍逐屏交接完整性矩阵与停止合同.md",
+        "first-pass-screen-coverage-matrix.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "166_分层参考到可见局部课包的用户训练交接合同.md",
+        "tiered-reference-lesson-bridge.json",
+        "low-cognitive-load-contract.json",
+        "final-goal-observable-acceptance.json",
+        "first-pass-golden-path.json",
+        "unified-learner-evidence-release-gates.json",
+        "first-lesson-visible-state-machine.json",
+        "182_首课用户可见状态机与父子恢复合同.md",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md",
+        "184_35项低基础题面与视觉负荷合同.md",
+        "185_学习者证据驱动题队列调度合同.md",
+        "learner-evidence-driven-scheduler.json",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "188_跨年龄低基础可理解性与操作验收合同.md",
+        "cross-age-low-baseline-acceptance.json",
+        "first-pass-trial-coverage-audit.json",
+        "first-pass-outer-route-validation.json",
+        "first-pass-full-guided-administration-audit.json",
+        "first-pass-golden-path-alignment-audit.json",
+        "first-pass-surface-scope-audit.json",
+        "runtime-route-attachment-audit.json",
+        "first-pass-outer-route-trial-prompts.json",
+        "first-pass-outer-route-trial-key.json",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "final-goal-release-audit.json"
+      ],
+      "currentStatus": "paper_contract_only",
+      "blocking": [
+        "runtime_release"
+      ],
+      "releaseGate": "R0"
+    },
+    {
+      "goalId": "G2",
+      "goalName": "complete_first_pass_structure",
+      "requiredEvidence": [
+        "all_p1_p7_visited",
+        "missing_evidence_stops",
+        "first_hand_state_payload_preserved"
+      ],
+      "routeNodes": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C0",
+        "C1",
+        "C7",
+        "C9"
+      ],
+      "proofFields": [
+        "stateInputs",
+        "handoffOutputs",
+        "missingEvidenceStop",
+        "firstPassReplay"
+      ],
+      "paperSources": [
+        "learner-goal-route-canonical.json",
+        "first-hand-lesson-v3-candidate.json",
+        "first-hand-fact-route-audit.json",
+        "goal-cognitive-replay-contract.json",
+        "141_首遍思考骨架回放与结构建立合同.md",
+        "architecture-replay-contract.json",
+        "architecture-replay-rubric.json",
+        "94_首遍逐屏语言与反馈词典.md",
+        "first-pass-copy-deck.json",
+        "134_首遍七步闭合与嵌套交接合同.md",
+        "first-pass-step-closure-contract.json",
+        "137_首遍步骤与运行输出交叉合同.md",
+        "first-pass-runtime-output-crosswalk.json",
+        "handoff-consumption-audit.json",
+        "first-pass-trial-coverage-audit.json",
+        "first-pass-outer-route-validation.json",
+        "first-pass-full-guided-administration-audit.json",
+        "first-pass-golden-path-alignment-audit.json",
+        "first-pass-surface-scope-audit.json",
+        "runtime-route-attachment-audit.json",
+        "first-pass-outer-route-trial-prompts.json",
+        "first-pass-outer-route-trial-key.json",
+        "138_首遍可见负荷与状态分层合同.md",
+        "first-pass-visibility-contract.json",
+        "144_首遍原理覆盖与结构记忆合同.md",
+        "first-pass-principle-coverage.json",
+        "146_首手19帧到12原理覆盖缺口审计.md",
+        "first-hand-principle-frame-audit.json",
+        "147_首手缺口补帧编译规格.md",
+        "first-hand-gap-frame-insertions.json",
+        "160_低基础首遍最小脑内模型与完整交接合同.md",
+        "first-pass-mental-model-contract.json",
+        "161_首遍逐屏交接完整性矩阵与停止合同.md",
+        "first-pass-screen-coverage-matrix.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "167_低基础结构形成的可证伪验收与遗漏检测合同.md",
+        "structure-formation-acceptance-contract.json",
+        "low-cognitive-load-contract.json",
+        "final-goal-observable-acceptance.json",
+        "first-pass-golden-path.json",
+        "unified-learner-evidence-release-gates.json",
+        "hand-rank-ladder-exercise.json",
+        "first-lesson-visible-state-machine.json",
+        "182_首课用户可见状态机与父子恢复合同.md",
+        "184_35项低基础题面与视觉负荷合同.md",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "188_跨年龄低基础可理解性与操作验收合同.md",
+        "cross-age-low-baseline-acceptance.json",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "final-goal-release-audit.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "paper_frames_only",
+      "blocking": [
+        "structure_claim"
+      ],
+      "releaseGate": "R1"
+    },
+    {
+      "goalId": "G3",
+      "goalName": "full_coverage_without_flat_menu",
+      "requiredEvidence": [
+        "all35_units_embedded",
+        "representative_first_pass_only",
+        "no35_item_home_menu"
+      ],
+      "routeNodes": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C0",
+        "C1",
+        "C2",
+        "C4",
+        "C6",
+        "C7",
+        "C9"
+      ],
+      "proofFields": [
+        "unitParent",
+        "unitReturn",
+        "representativeGate",
+        "flatHomeVisible",
+        "missingEvidenceStop"
+      ],
+      "paperSources": [
+        "unit-outcome-matrix.json",
+        "learner-goal-route-canonical.json",
+        "single-path-course-contract.json",
+        "134_首遍七步闭合与嵌套交接合同.md",
+        "first-pass-step-closure-contract.json",
+        "135_35项字段补齐队列与停止矩阵.md",
+        "unit-field-completion-queue.json",
+        "unit-course-manifest.json",
+        "150_完整35项嵌套路由运行合同.md",
+        "full-nested-learning-route.json",
+        "157_自动出题与覆盖闭合合同.md",
+        "automatic-question-generation-contract.json",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md",
+        "reference-to-course-closure-contract.json",
+        "final-goal-observable-acceptance.json",
+        "first-pass-golden-path.json",
+        "unified-learner-evidence-release-gates.json",
+        "unit-learner-release-gates.json",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md",
+        "185_学习者证据驱动题队列调度合同.md",
+        "learner-evidence-driven-scheduler.json",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "188_跨年龄低基础可理解性与操作验收合同.md",
+        "cross-age-low-baseline-acceptance.json",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "mapped_not_released",
+      "blocking": [
+        "full_course_release"
+      ],
+      "releaseGate": "R2"
+    },
+    {
+      "goalId": "G4",
+      "goalName": "route_recall_and_error_recovery",
+      "requiredEvidence": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "routeNodes": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "proofFields": [
+        "errorLayer",
+        "errorReturn",
+        "orderRecall",
+        "layerLocation",
+        "oneVariableTransfer"
+      ],
+      "paperSources": [
+        "route-consistency-audit.json",
+        "learner-evidence-release-gates.json",
+        "parent-step-mastery-contract.json",
+        "goal-cognitive-replay-contract.json",
+        "141_首遍思考骨架回放与结构建立合同.md",
+        "architecture-replay-contract.json",
+        "architecture-replay-rubric.json",
+        "94_首遍逐屏语言与反馈词典.md",
+        "first-pass-copy-deck.json",
+        "134_首遍七步闭合与嵌套交接合同.md",
+        "first-pass-step-closure-contract.json",
+        "137_首遍步骤与运行输出交叉合同.md",
+        "first-pass-runtime-output-crosswalk.json",
+        "handoff-consumption-audit.json",
+        "first-pass-trial-coverage-audit.json",
+        "first-pass-outer-route-validation.json",
+        "first-pass-full-guided-administration-audit.json",
+        "first-pass-golden-path-alignment-audit.json",
+        "first-pass-surface-scope-audit.json",
+        "first-pass-outer-route-trial-prompts.json",
+        "first-pass-outer-route-trial-key.json",
+        "138_首遍可见负荷与状态分层合同.md",
+        "first-pass-visibility-contract.json",
+        "139_帮助撤除与可见状态交接合同.md",
+        "help-fade-visibility-bridge.json",
+        "144_首遍原理覆盖与结构记忆合同.md",
+        "first-pass-principle-coverage.json",
+        "150_完整35项嵌套路由运行合同.md",
+        "full-nested-learning-route.json",
+        "154_35项错误归因与反馈回退矩阵.md",
+        "unit-error-feedback-matrix.json",
+        "155_首遍视觉结构与父子层闭合合同.md",
+        "first-pass-visual-structure-contract.json",
+        "159_低基础试读结果与课程修订判定合同.md",
+        "low-baseline-trial-revision-contract.json",
+        "160_低基础首遍最小脑内模型与完整交接合同.md",
+        "first-pass-mental-model-contract.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "167_低基础结构形成的可证伪验收与遗漏检测合同.md",
+        "structure-formation-acceptance-contract.json",
+        "low-cognitive-load-contract.json",
+        "final-goal-observable-acceptance.json",
+        "first-pass-golden-path.json",
+        "unified-learner-evidence-release-gates.json",
+        "hand-rank-ladder-exercise.json",
+        "unit-learner-release-gates.json",
+        "unit-course-manifest.json",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md",
+        "184_35项低基础题面与视觉负荷合同.md",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "188_跨年龄低基础可理解性与操作验收合同.md",
+        "cross-age-low-baseline-acceptance.json",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "contract_only",
+      "blocking": [
+        "structure_mastery"
+      ],
+      "releaseGate": "R3"
+    },
+    {
+      "goalId": "G5",
+      "goalName": "visible_range_delta",
+      "requiredEvidence": [
+        "fixed_coordinate_grid",
+        "fixed_denominator",
+        "physical_filter_separate_from_action_filter",
+        "before_after_range"
+      ],
+      "routeNodes": [
+        "p3",
+        "p4",
+        "p6"
+      ],
+      "authorStages": [
+        "C1",
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "proofFields": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilter",
+        "rangeAfter",
+        "fixedDenominator"
+      ],
+      "paperSources": [
+        "visual-navigation-contract.json",
+        "repo-to-course-first-hand-bridge.json",
+        "learner-execution-output-contract.json",
+        "148_六个补帧的参考闭合矩阵.md",
+        "gap-frame-reference-closure.json",
+        "158_动作后范围变化视觉闭合合同.md",
+        "range-delta-visual-closure.json",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md",
+        "reference-to-course-closure-contract.json",
+        "course-package-field-crosswalk.json",
+        "165_A72资源预算分层参考获取与不降级替代合同.md",
+        "a72-resource-tier-contract.json",
+        "166_分层参考到可见局部课包的用户训练交接合同.md",
+        "tiered-reference-lesson-bridge.json",
+        "final-goal-observable-acceptance.json",
+        "minimal-matched-first-hand-package.json",
+        "hand-rank-ladder-exercise.json",
+        "learner-visible-question-contract.json",
+        "course-simplification-calibration.json",
+        "186_课程简化损失校准与发布阈值合同.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "193_A72_C1独立物理快照复核报告.md",
+        "194_A72_C0本地引擎源码适配审计.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "schema_only_without_complete_strategy_input",
+      "blocking": [
+        "range_strategy_lesson"
+      ],
+      "releaseGate": "R4"
+    },
+    {
+      "goalId": "G6",
+      "goalName": "unseen_slow_single_step",
+      "requiredEvidence": [
+        "matched_or_declared_policy",
+        "amount_checked",
+        "layer_reason_checked",
+        "independent_first_attempt"
+      ],
+      "routeNodes": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "proofFields": [
+        "layerReason",
+        "amountChecked",
+        "courseAction",
+        "successorOrStop",
+        "independentFirstAttempt"
+      ],
+      "paperSources": [
+        "learner-evidence-release-gates.json",
+        "capability-readiness-contract.json",
+        "strategy-to-course-compiler-contract.json",
+        "139_帮助撤除与可见状态交接合同.md",
+        "help-fade-visibility-bridge.json",
+        "145_原理练习剂量与间隔队列合同.md",
+        "principle-practice-queue.json",
+        "152_35项单元学习者释放矩阵.md",
+        "unit-learner-release-matrix.json",
+        "156_从首遍结构到目标级能力的释放总表.md",
+        "outcome-release-crosswalk.json",
+        "157_自动出题与覆盖闭合合同.md",
+        "automatic-question-generation-contract.json",
+        "162_低基础陌生单步慢速执行合同.md",
+        "slow-single-step-execution-contract.json",
+        "handoff-consumption-audit.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "165_A72资源预算分层参考获取与不降级替代合同.md",
+        "a72-resource-tier-contract.json",
+        "166_分层参考到可见局部课包的用户训练交接合同.md",
+        "tiered-reference-lesson-bridge.json",
+        "final-goal-observable-acceptance.json",
+        "slow-transfer-ladder.json",
+        "unified-learner-evidence-release-gates.json",
+        "hand-rank-ladder-exercise.json",
+        "learner-evidence-driven-scheduler.json",
+        "185_学习者证据驱动题队列调度合同.md",
+        "course-simplification-calibration.json",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "local_models_only",
+      "blocking": [
+        "slow_execution_release"
+      ],
+      "releaseGate": "R5"
+    },
+    {
+      "goalId": "G7",
+      "goalName": "single_variable_transfer",
+      "requiredEvidence": [
+        "exactly_one_changed_field",
+        "heldout_item",
+        "first_attempt_before_explanation",
+        "error_layer_classified"
+      ],
+      "routeNodes": [
+        "p3",
+        "p4",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "proofFields": [
+        "changedField",
+        "heldoutItem",
+        "firstAttemptBeforeExplanation",
+        "errorLayer"
+      ],
+      "paperSources": [
+        "learner-evidence-release-gates.json",
+        "learner-trial-loop-contract.json",
+        "23_怎样检验真的教会了_顺序试读与迁移合同.md",
+        "141_首遍思考骨架回放与结构建立合同.md",
+        "architecture-replay-rubric.json",
+        "145_原理练习剂量与间隔队列合同.md",
+        "principle-practice-queue.json",
+        "152_35项单元学习者释放矩阵.md",
+        "unit-learner-release-matrix.json",
+        "156_从首遍结构到目标级能力的释放总表.md",
+        "outcome-release-crosswalk.json",
+        "157_自动出题与覆盖闭合合同.md",
+        "automatic-question-generation-contract.json",
+        "162_低基础陌生单步慢速执行合同.md",
+        "slow-single-step-execution-contract.json",
+        "handoff-consumption-audit.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "final-goal-observable-acceptance.json",
+        "slow-transfer-ladder.json",
+        "unified-learner-evidence-release-gates.json",
+        "learner-evidence-driven-scheduler.json",
+        "unit-learner-release-gates.json",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "193_A72_C1独立物理快照复核报告.md",
+        "repository-capabilities-evidence.json",
+        "sb-bb-qqq-reference-verification-v2.json",
+        "sb-bb-qqq-range-views-v2.json",
+        "sb-bb-qqq-export-closure.json",
+        "qqq-policy-rollouts-v2-verification.json",
+        "qqq-v2-course-bridge-audit.json",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "trial_missing",
+      "blocking": [
+        "transfer_release"
+      ],
+      "releaseGate": "R6"
+    },
+    {
+      "goalId": "G8",
+      "goalName": "continuous_three_street_route",
+      "requiredEvidence": [
+        "successor_or_stop_for_every_open_node",
+        "range_and_ledger_conservation",
+        "no_hidden_opponent_action",
+        "settlement_independent_of_result"
+      ],
+      "routeNodes": [
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C1",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C9"
+      ],
+      "proofFields": [
+        "successorOrStop",
+        "rangeConservation",
+        "ledgerConservation",
+        "actionOwner",
+        "settlementPolicy"
+      ],
+      "paperSources": [
+        "learner-evidence-release-gates.json",
+        "capability-readiness-contract.json",
+        "visual-navigation-contract.json",
+        "165_A72资源预算分层参考获取与不降级替代合同.md",
+        "a72-resource-tier-contract.json",
+        "166_分层参考到可见局部课包的用户训练交接合同.md",
+        "tiered-reference-lesson-bridge.json",
+        "final-goal-observable-acceptance.json",
+        "slow-transfer-ladder.json",
+        "handoff-consumption-audit.json",
+        "unified-learner-evidence-release-gates.json",
+        "minimal-matched-first-hand-package.json",
+        "learner-evidence-driven-scheduler.json",
+        "course-simplification-calibration.json",
+        "186_课程简化损失校准与发布阈值合同.md",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "193_A72_C1独立物理快照复核报告.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "partial_author_models_only",
+      "blocking": [
+        "continuous_route_release"
+      ],
+      "releaseGate": "R7"
+    },
+    {
+      "goalId": "G9",
+      "goalName": "reference_to_course_policy_integrity",
+      "requiredEvidence": [
+        "matched_reference",
+        "course_policy_separate",
+        "difference_report",
+        "ancestor_recompile_after_policy_change"
+      ],
+      "routeNodes": [
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "authorStages": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "proofFields": [
+        "inputFingerprint",
+        "referenceSnapshot",
+        "coursePolicy",
+        "differenceLedger",
+        "successorGraph",
+        "releaseStatus"
+      ],
+      "paperSources": [
+        "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+        "116_仓库能力到训练器的首手范围交接合同.md",
+        "strategy-to-course-compiler-contract.json",
+        "136_参考策略与课程简化对照账本.md",
+        "reference-course-policy-ledger-contract.json",
+        "unit-reference-course-ledgers.json",
+        "135_35项字段补齐队列与停止矩阵.md",
+        "unit-field-completion-queue.json",
+        "148_六个补帧的参考闭合矩阵.md",
+        "gap-frame-reference-closure.json",
+        "153_35项匹配参考请求与停止清单.md",
+        "all35-reference-request-matrix.json",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md",
+        "reference-to-course-closure-contract.json",
+        "165_A72资源预算分层参考获取与不降级替代合同.md",
+        "a72-resource-tier-contract.json",
+        "166_分层参考到可见局部课包的用户训练交接合同.md",
+        "tiered-reference-lesson-bridge.json",
+        "final-goal-observable-acceptance.json",
+        "minimal-matched-first-hand-package.json",
+        "course-simplification-calibration.json",
+        "186_课程简化损失校准与发布阈值合同.md",
+        "learner-evidence-driven-scheduler.json",
+        "189_从案例到可迁移原理的教学闭环合同.md",
+        "190_35项单元原理卡编译矩阵合同.md",
+        "191_首遍五组代表三卡候选与停止审计.md",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "193_A72_C1独立物理快照复核报告.md",
+        "final-goal-release-audit.json",
+        "196_求解器结果到用户范围图的教学编译合同.md",
+        "solver-course-visual-compiler-contract.json",
+        "197_C0_C9到用户路线映射与闭合审计.md",
+        "c0-c9-visible-route-crosswalk.json",
+        "198_35项单元到C0_C9和释放闸门闭合合同.md",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "currentStatus": "bridge_written_reference_missing",
+      "blocking": [
+        "precise_strategy_practice"
+      ],
+      "releaseGate": "R8"
+    },
+    {
+      "goalId": "G10",
+      "goalName": "target_level_readiness",
+      "requiredEvidence": [
+        "frozen_target_configuration",
+        "unseen_holdout",
+        "independent_review",
+        "continuous_results",
+        "real_decision_audit"
+      ],
+      "routeNodes": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "authorStages": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "proofFields": [
+        "frozenTargetConfig",
+        "unseenHoldout",
+        "independentReview",
+        "continuousResults",
+        "realDecisionAudit"
+      ],
+      "paperSources": [
+        "04_正确性与NL50验收方案.md",
+        "49_能力分级与迁移准入合同.md",
+        "learner-evidence-release-gates.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "first-pass-architecture-goal-contract.json",
+        "final-goal-observable-acceptance.json",
+        "unified-learner-evidence-release-gates.json",
+        "minimal-matched-first-hand-package.json",
+        "course-simplification-calibration.json",
+        "186_课程简化损失校准与发布阈值合同.md",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "188_跨年龄低基础可理解性与操作验收合同.md",
+        "cross-age-low-baseline-acceptance.json",
+        "192_首遍五组代表参考闭合请求与发布顺序合同.md",
+        "193_A72_C1独立物理快照复核报告.md",
+        "final-goal-release-audit.json"
+      ],
+      "currentStatus": "not_established",
+      "blocking": [
+        "NL50_claim",
+        "profit_claim"
+      ],
+      "releaseGate": "R9"
+    }
+  ],
+  "proofFieldRegistry": {
+    "currentState": "first-pass-state-evidence-crosswalk.json.stateId",
+    "nextState": "first-pass-state-evidence-crosswalk.json.nextState",
+    "parentFrame": "first-pass-state-evidence-crosswalk.json.parentStateId",
+    "parentRestore": "first-lesson-visible-state-machine.json.parentRestore",
+    "onePrimaryAction": "first-pass-state-evidence-crosswalk.json.primaryAction",
+    "stateInputs": "first-pass-state-evidence-crosswalk.json.requiredInputs",
+    "handoffOutputs": "first-pass-state-evidence-crosswalk.json.requiredOutput",
+    "missingEvidenceStop": "first-pass-state-evidence-crosswalk.json.stopCondition",
+    "firstPassReplay": "architecture-replay-contract.json",
+    "unitParent": "unit-c0-c9-release-crosswalk.json.parentFrame",
+    "unitReturn": "unit-c0-c9-release-crosswalk.json.returnTo",
+    "representativeGate": "unit-c0-c9-release-crosswalk.json.firstPassRepresentative",
+    "flatHomeVisible": "learner-goal-route-canonical.json.screenContract.dashboardHomeForbidden",
+    "errorLayer": "unit-error-feedback-matrix.json.errorLayer",
+    "errorReturn": "first-pass-state-evidence-crosswalk.json.errorReturn",
+    "orderRecall": "structure-formation-acceptance-contract.json.orderRecall",
+    "layerLocation": "structure-formation-acceptance-contract.json.layerLocation",
+    "oneVariableTransfer": "structure-formation-acceptance-contract.json.oneVariableTransfer",
+    "rangeBefore": "solver-course-visual-compiler-contract.json.rangeBefore",
+    "physicalFilter": "solver-course-visual-compiler-contract.json.physicalFilter",
+    "actionFilter": "solver-course-visual-compiler-contract.json.actionFilter",
+    "rangeAfter": "solver-course-visual-compiler-contract.json.rangeAfter",
+    "fixedDenominator": "solver-course-visual-compiler-contract.json.rangeChartRules.sameDenominator",
+    "layerReason": "slow-single-step-execution-contract.json.layerReason",
+    "amountChecked": "learner-execution-output-contract.json.amountChecked",
+    "courseAction": "learner-execution-output-contract.json.courseAction",
+    "successorOrStop": "slow-single-step-execution-contract.json.successorOrStop",
+    "independentFirstAttempt": "slow-single-step-execution-contract.json.independentFirstAttempt",
+    "changedField": "slow-transfer-ladder.json.changedField",
+    "heldoutItem": "slow-transfer-ladder.json.heldoutItem",
+    "firstAttemptBeforeExplanation": "unified-learner-evidence-release-gates.json.firstAttemptBeforeExplanation",
+    "rangeConservation": "continuous-state-ledger-contract.json.rangeConservation",
+    "ledgerConservation": "continuous-state-ledger-contract.json.ledgerConservation",
+    "actionOwner": "continuous-state-ledger-contract.json.actionOwner",
+    "settlementPolicy": "first-course-closure-audit.json.settlementIndependentOfResult",
+    "inputFingerprint": "solver-snapshot-to-lesson-package.json.inputFingerprint",
+    "referenceSnapshot": "solver-snapshot-to-lesson-package.json.referenceSnapshot",
+    "coursePolicy": "reference-to-course-closure-contract.json.coursePolicy",
+    "differenceLedger": "reference-to-course-closure-contract.json.differenceLedger",
+    "successorGraph": "solver-snapshot-to-lesson-package.json.successorGraph",
+    "releaseStatus": "unit-learner-release-gates.json.releaseStatus",
+    "frozenTargetConfig": "final-goal-observable-acceptance.json.frozenTargetConfiguration",
+    "unseenHoldout": "final-goal-observable-acceptance.json.unseenHoldout",
+    "independentReview": "final-goal-observable-acceptance.json.independentReview",
+    "continuousResults": "final-goal-observable-acceptance.json.continuousResults",
+    "realDecisionAudit": "final-goal-observable-acceptance.json.realDecisionAudit"
+  },
+  "proofFieldCoverage": {
+    "currentState": "first-pass-state-evidence-crosswalk.json.stateId",
+    "nextState": "first-pass-state-evidence-crosswalk.json.nextState",
+    "parentFrame": "first-pass-state-evidence-crosswalk.json.parentStateId",
+    "parentRestore": "first-lesson-visible-state-machine.json.parentRestore",
+    "onePrimaryAction": "first-pass-state-evidence-crosswalk.json.primaryAction",
+    "stateInputs": "first-pass-state-evidence-crosswalk.json.requiredInputs",
+    "handoffOutputs": "first-pass-state-evidence-crosswalk.json.requiredOutput",
+    "missingEvidenceStop": "first-pass-state-evidence-crosswalk.json.stopCondition",
+    "firstPassReplay": "architecture-replay-contract.json",
+    "unitParent": "unit-c0-c9-release-crosswalk.json.parentFrame",
+    "unitReturn": "unit-c0-c9-release-crosswalk.json.returnTo",
+    "representativeGate": "unit-c0-c9-release-crosswalk.json.firstPassRepresentative",
+    "flatHomeVisible": "learner-goal-route-canonical.json.screenContract.dashboardHomeForbidden",
+    "errorLayer": "unit-error-feedback-matrix.json.errorLayer",
+    "errorReturn": "first-pass-state-evidence-crosswalk.json.errorReturn",
+    "orderRecall": "structure-formation-acceptance-contract.json.orderRecall",
+    "layerLocation": "structure-formation-acceptance-contract.json.layerLocation",
+    "oneVariableTransfer": "structure-formation-acceptance-contract.json.oneVariableTransfer",
+    "rangeBefore": "solver-course-visual-compiler-contract.json.rangeBefore",
+    "physicalFilter": "solver-course-visual-compiler-contract.json.physicalFilter",
+    "actionFilter": "solver-course-visual-compiler-contract.json.actionFilter",
+    "rangeAfter": "solver-course-visual-compiler-contract.json.rangeAfter",
+    "fixedDenominator": "solver-course-visual-compiler-contract.json.rangeChartRules.sameDenominator",
+    "layerReason": "slow-single-step-execution-contract.json.layerReason",
+    "amountChecked": "learner-execution-output-contract.json.amountChecked",
+    "courseAction": "learner-execution-output-contract.json.courseAction",
+    "successorOrStop": "slow-single-step-execution-contract.json.successorOrStop",
+    "independentFirstAttempt": "slow-single-step-execution-contract.json.independentFirstAttempt",
+    "changedField": "slow-transfer-ladder.json.changedField",
+    "heldoutItem": "slow-transfer-ladder.json.heldoutItem",
+    "firstAttemptBeforeExplanation": "unified-learner-evidence-release-gates.json.firstAttemptBeforeExplanation",
+    "rangeConservation": "continuous-state-ledger-contract.json.rangeConservation",
+    "ledgerConservation": "continuous-state-ledger-contract.json.ledgerConservation",
+    "actionOwner": "continuous-state-ledger-contract.json.actionOwner",
+    "settlementPolicy": "first-course-closure-audit.json.settlementIndependentOfResult",
+    "inputFingerprint": "solver-snapshot-to-lesson-package.json.inputFingerprint",
+    "referenceSnapshot": "solver-snapshot-to-lesson-package.json.referenceSnapshot",
+    "coursePolicy": "reference-to-course-closure-contract.json.coursePolicy",
+    "differenceLedger": "reference-to-course-closure-contract.json.differenceLedger",
+    "successorGraph": "solver-snapshot-to-lesson-package.json.successorGraph",
+    "releaseStatus": "unit-learner-release-gates.json.releaseStatus",
+    "frozenTargetConfig": "final-goal-observable-acceptance.json.frozenTargetConfiguration",
+    "unseenHoldout": "final-goal-observable-acceptance.json.unseenHoldout",
+    "independentReview": "final-goal-observable-acceptance.json.independentReview",
+    "continuousResults": "final-goal-observable-acceptance.json.continuousResults",
+    "realDecisionAudit": "final-goal-observable-acceptance.json.realDecisionAudit"
+  },
+  "routeOutputConsumption": [
+    {
+      "stateId": "L0",
+      "nextState": "L1",
+      "fields": [
+        {
+          "field": "table",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "trainingGoal",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "startingStackBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "L1",
+      "nextState": "L2",
+      "fields": [
+        {
+          "field": "heroSeat",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "villainSeat",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "actionHistory",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "actor",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "potBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "effectiveStackBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "toCallBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "L2",
+      "nextState": "L3",
+      "fields": [
+        {
+          "field": "chartIdentity",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "gridCell",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "rangeOwner",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "L3",
+      "nextState": "L4",
+      "fields": [
+        {
+          "field": "preflopActionIdentity",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "actionWeight",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "L4",
+      "nextState": "p1",
+      "fields": [
+        {
+          "field": "rangeSnapshotHash",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "rangeBefore",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "physicalFilter",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "denominator",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p1",
+      "nextState": "p2",
+      "fields": [
+        {
+          "field": "actor",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "actionHistory",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "potBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "effectiveStackBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "heroSeat",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "villainSeat",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "toCallBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p2",
+      "nextState": "p3",
+      "fields": [
+        {
+          "field": "board",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "heroHole",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "handCategory",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "draws",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "improvingCards",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "bestFive",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p3",
+      "nextState": "p4",
+      "fields": [
+        {
+          "field": "rangeBefore",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "blockedCombos",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "physicalRemovalReason",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "rangeBeforeDenominator",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "actionFilterStatus",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "actionAfterOrUnknown",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "denominator",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p4",
+      "nextState": "p5",
+      "fields": [
+        {
+          "field": "legalActions",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "price",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "courseDecisionCandidate",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "reason",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "policyIdentity",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p5",
+      "nextState": "p6",
+      "fields": [
+        {
+          "field": "action",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "amountOrNoBet",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "nextActor",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "ledgerAfter",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "potAfterBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "stacksAfterBB",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p6",
+      "nextState": "p7",
+      "fields": [
+        {
+          "field": "changedField",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "rangeAfterOrStopReason",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "successorOrTerminal",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "ledgerAfter",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": false,
+          "terminal": false
+        },
+        {
+          "field": "responseOrCard",
+          "consumedByNextState": true,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    },
+    {
+      "stateId": "p7",
+      "nextState": "exit_or_review",
+      "fields": [
+        {
+          "field": "oneSentenceReason",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "stopOrSuccessor",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": false,
+          "terminal": true
+        },
+        {
+          "field": "singleTransferField",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "settlement",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "decisionResultSeparation",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "errorLayer",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        },
+        {
+          "field": "nextEntry",
+          "consumedByNextState": false,
+          "consumedByCurrentEvidence": true,
+          "terminal": false
+        }
+      ],
+      "unconsumed": []
+    }
+  ],
+  "routeNodeCoverage": {
+    "L0": [
+      "G1",
+      "G2",
+      "G3",
+      "G10"
+    ],
+    "L1": [
+      "G1",
+      "G2",
+      "G3",
+      "G10"
+    ],
+    "L2": [
+      "G1",
+      "G2",
+      "G3",
+      "G10"
+    ],
+    "L3": [
+      "G1",
+      "G2",
+      "G3",
+      "G10"
+    ],
+    "L4": [
+      "G1",
+      "G2",
+      "G3",
+      "G10"
+    ],
+    "p1": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G6",
+      "G10"
+    ],
+    "p2": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G6",
+      "G10"
+    ],
+    "p3": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G9",
+      "G10"
+    ],
+    "p4": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G9",
+      "G10"
+    ],
+    "p5": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G6",
+      "G9",
+      "G10"
+    ],
+    "p6": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "p7": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G6",
+      "G7",
+      "G8",
+      "G10"
+    ]
+  },
+  "authorStageCoverage": {
+    "C0": [
+      "G2",
+      "G3",
+      "G9",
+      "G10"
+    ],
+    "C1": [
+      "G2",
+      "G3",
+      "G5",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "C2": [
+      "G3",
+      "G5",
+      "G9",
+      "G10"
+    ],
+    "C3": [
+      "G9",
+      "G10"
+    ],
+    "C4": [
+      "G3",
+      "G5",
+      "G6",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "C5": [
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "C6": [
+      "G3",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "C7": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ],
+    "C8": [
+      "G4",
+      "G7",
+      "G9",
+      "G10"
+    ],
+    "C9": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G7",
+      "G8",
+      "G9",
+      "G10"
+    ]
+  },
+  "rules": {
+    "everyGoalRequirementMapped": true,
+    "everyCanonicalStateMapped": true,
+    "everyAuthorStageMapped": true,
+    "proofFieldsAreRegistered": true,
+    "everyProofFieldHasAuthoritativeSource": true,
+    "everyRouteOutputConsumedOrTerminal": true,
+    "paperMappingDoesNotPromoteRuntime": true,
+    "learnerEvidenceCannotBeInferredFromMapping": true,
+    "noGoalStatusPromoted": true
+  },
+  "currentEvidence": {
+    "allTenRequirementsMapped": true,
+    "allTwelveRouteStatesMapped": true,
+    "allTenAuthorStagesMapped": true,
+    "paperSourcesRegistered": true,
+    "runtimeImplemented": false,
+    "matchedReference": false,
+    "beginnerTrial": false,
+    "heldoutTransfer": false,
+    "continuousThreeStreet": false,
+    "NL50Evidence": false,
+    "goalCompletionVerified": false
+  }
+}

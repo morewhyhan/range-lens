@@ -1,0 +1,892 @@
+{
+  "id": "FIRST_PASS_EXPLANATION_DECK_V1",
+  "status": "paper_explanation_sequence_closed_runtime_and_trial_missing",
+  "purpose": "把首遍每一帧的答后解析统一为“答案状态→为什么现在做→哪项改变/保留→交给下一步→资料身份”，让解释建立路线而不是堆术语。",
+  "sources": [
+    "first-pass-handoff-ledger.json",
+    "first-pass-copy-deck.json",
+    "learner-visible-question-contract.json"
+  ],
+  "route": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "rows": [
+    {
+      "frameId": "G0_welcome",
+      "canonicalState": "L0",
+      "output": "tableFrame",
+      "question": "这是一张什么桌，今天只练哪一条路线？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "先把练习发生在哪张桌上固定住；如果场景没固定，后面的图表和金额都没有对象。",
+        "changedOrPreserved": "本帧只确认场景，不改变牌局。",
+        "handoff": "把桌面和训练路线交给下一帧，下一帧开始读行动事实。",
+        "sourceIdentity": "课程输入身份"
+      },
+      "visualMeaning": {
+        "observe": "桌面人数、有效筹码和今天要走的路线。",
+        "primaryVisual": "six_max_table",
+        "preservedFields": [
+          "route",
+          "tableFrame"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "这是一张什么桌，今天只练哪一条路线？",
+        "explanation": "先把练习发生在哪张桌上固定住；如果场景没固定，后面的图表和金额都没有对象。",
+        "nextSentence": "把桌面和训练路线交给下一帧，下一帧开始读行动事实。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "tableFrame / input identity"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "课程输入身份"
+      },
+      "wrongAnswer": {
+        "returnTo": "G0_welcome",
+        "message": "桌面、有效筹码或训练目标未确认时停在本帧，不进入专题选择。",
+        "preserve": [
+          "route",
+          "tableFrame"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G1_context",
+      "canonicalState": "L1",
+      "output": "contextFrame",
+      "question": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "先知道谁在行动、发生过什么、继续要付多少钱，才知道应该查哪张图或哪种牌局。",
+        "changedOrPreserved": "本帧不判断好坏，只锁定行动者、历史和价格。",
+        "handoff": "把行动事实交给翻前图表坐标帧。",
+        "sourceIdentity": "牌局事实与金额账本"
+      },
+      "visualMeaning": {
+        "observe": "座位、弃牌、行动箭头、前面动作、底池和待补金额。",
+        "primaryVisual": "actor_pointer",
+        "preservedFields": [
+          "tableFrame",
+          "seats",
+          "history",
+          "pot",
+          "toCall"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+        "explanation": "先知道谁在行动、发生过什么、继续要付多少钱，才知道应该查哪张图或哪种牌局。",
+        "nextSentence": "把行动事实交给翻前图表坐标帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "contextFrame / history state"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "牌局事实与金额账本"
+      },
+      "wrongAnswer": {
+        "returnTo": "G1_context",
+        "message": "行动者、历史、底池或待补金额不完整时停在本帧，只修正局面事实。",
+        "preserve": [
+          "tableFrame",
+          "seats",
+          "history",
+          "pot",
+          "toCall"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G2_preflop_chart",
+      "canonicalState": "L2",
+      "output": "preflopCell",
+      "question": "我的牌在这张图的哪一格？先只找到坐标。",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "先找到格子，避免把“我觉得应该做什么”混进查图这一步。",
+        "changedOrPreserved": "本帧只确认坐标，不提前判断动作。",
+        "handoff": "把坐标格交给下一帧读取颜色、动作和权重。",
+        "sourceIdentity": "用户提供的简化翻前图"
+      },
+      "visualMeaning": {
+        "observe": "一张命名明确的169格翻前图和自己的手牌坐标。",
+        "primaryVisual": "fixed_169_grid",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "oneNamedPreflopChart",
+          "heroHand"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "我的牌在这张图的哪一格？先只找到坐标。",
+        "explanation": "先找到格子，避免把“我觉得应该做什么”混进查图这一步。",
+        "nextSentence": "把坐标格交给下一帧读取颜色、动作和权重。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "preflopCell / chart coordinate"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "用户提供的简化翻前图"
+      },
+      "wrongAnswer": {
+        "returnTo": "G2_preflop_chart",
+        "message": "图表身份或格子坐标未确定时停在本帧，不猜动作。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "oneNamedPreflopChart",
+          "heroHand"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G3_preflop_action",
+      "canonicalState": "L3",
+      "output": "preflopAction",
+      "question": "这个格子代表什么翻前课程动作？权重是多少？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "同一个坐标可能代表确定动作或混合权重，必须先读清身份再继续。",
+        "changedOrPreserved": "本帧把坐标翻译成课程动作，不把未知权重当成确定动作。",
+        "handoff": "把动作身份和权重交给起始范围桥。",
+        "sourceIdentity": "用户提供的翻前图例"
+      },
+      "visualMeaning": {
+        "observe": "被选中的格子、图例和该格的权重。",
+        "primaryVisual": "selected_grid_cell",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopCell",
+          "actionLegend"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "这个格子代表什么翻前课程动作？权重是多少？",
+        "explanation": "同一个坐标可能代表确定动作或混合权重，必须先读清身份再继续。",
+        "nextSentence": "把动作身份和权重交给起始范围桥。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "preflopAction / action weight"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "用户提供的翻前图例"
+      },
+      "wrongAnswer": {
+        "returnTo": "G3_preflop_action",
+        "message": "动作身份或权重未读清时停在本帧，不把未知权重编成确定动作。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopCell",
+          "actionLegend"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G4_range_bridge",
+      "canonicalState": "L4",
+      "output": "startingRangeFrame",
+      "question": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "先分清哪些牌因为已经被看见而不可能，哪些只是课程资料还没提供。",
+        "changedOrPreserved": "本帧只做物理排除和分母确认，不把划掉的牌说成对手主动弃牌。",
+        "handoff": "把起始范围、分母和已知牌交给翻后局面。",
+        "sourceIdentity": "物理牌张事实与范围来源"
+      },
+      "visualMeaning": {
+        "observe": "同一范围坐标、已知牌和被划掉的实体组合。",
+        "primaryVisual": "physical_filter",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "rangeDenominator",
+          "knownCards"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+        "explanation": "先分清哪些牌因为已经被看见而不可能，哪些只是课程资料还没提供。",
+        "nextSentence": "把起始范围、分母和已知牌交给翻后局面。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "physical filter / denominator"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "物理牌张事实与范围来源"
+      },
+      "wrongAnswer": {
+        "returnTo": "G4_range_bridge",
+        "message": "物理过滤、范围分母或资料身份缺失时停在本帧，不推导行动弃牌。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "rangeDenominator",
+          "knownCards"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G5_p1_context",
+      "canonicalState": "p1",
+      "output": "contextCard",
+      "question": "翻牌后现在轮到谁？继续需要多少钱？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "进入翻后先把行动权和价格重新锁定，同时保留翻前交接的范围入口。",
+        "changedOrPreserved": "本帧只确认当前局面，不从牌面直接猜下注。",
+        "handoff": "把局面卡和前序范围交给读牌帧。",
+        "sourceIdentity": "冻结局面输入"
+      },
+      "visualMeaning": {
+        "observe": "翻牌、行动者、前序历史、底池、后手和待补金额。",
+        "primaryVisual": "board",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "翻牌后现在轮到谁？继续需要多少钱？",
+        "explanation": "进入翻后先把行动权和价格重新锁定，同时保留翻前交接的范围入口。",
+        "nextSentence": "把局面卡和前序范围交给读牌帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "p1 context / context snapshot"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "冻结局面输入"
+      },
+      "wrongAnswer": {
+        "returnTo": "G5_p1_context",
+        "message": "翻后行动者、价格或历史没有确认时停在本帧，不进入牌力判断。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G6_p2_hand",
+      "canonicalState": "p2",
+      "output": "handCard",
+      "question": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "先把能直接看见的牌面事实读对，后面的范围和动作才有正确起点。",
+        "changedOrPreserved": "本帧只确认最佳五张、牌型和改善牌，不跳到下注答案。",
+        "handoff": "把牌力事实和合法改善牌交给范围变化帧。",
+        "sourceIdentity": "牌力评估与合法跑牌事实"
+      },
+      "visualMeaning": {
+        "observe": "公共牌、自己的两张牌、最佳五张位置和牌力顺序。",
+        "primaryVisual": "best_five_slots",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+        "explanation": "先把能直接看见的牌面事实读对，后面的范围和动作才有正确起点。",
+        "nextSentence": "把牌力事实和合法改善牌交给范围变化帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "best five / hand class / improvement cards"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "牌力评估与合法跑牌事实"
+      },
+      "wrongAnswer": {
+        "returnTo": "G6_p2_hand",
+        "message": "最佳五张、牌型或改善牌未确认时停在本帧，不跳到下注答案。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G7_p3_range",
+      "canonicalState": "p3",
+      "output": "rangeDeltaCard",
+      "question": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "现在才看“对手还可能拿什么”，并把实体不可能和行动后变少分开。",
+        "changedOrPreserved": "只解释当前范围差异，不把范围差异直接变成下注答案。",
+        "handoff": "把范围和变化身份交给动作比较帧。",
+        "sourceIdentity": "匹配参考或明确课程政策；缺失则停止"
+      },
+      "visualMeaning": {
+        "observe": "同坐标的行动前范围、物理排除、行动筛选和固定分母。",
+        "primaryVisual": "same_coordinate_range_before",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+        "explanation": "现在才看“对手还可能拿什么”，并把实体不可能和行动后变少分开。",
+        "nextSentence": "把范围和变化身份交给动作比较帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "range before/after / physical versus action filter"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "匹配参考或明确课程政策；缺失则停止"
+      },
+      "wrongAnswer": {
+        "returnTo": "G7_p3_range",
+        "message": "范围分母、物理移除或行动筛选身份不完整时停在本帧，不开放精确策略。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G8_p4_compare",
+      "canonicalState": "p4",
+      "output": "choiceCard",
+      "question": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "只有在局面、牌力和范围都准备好后，才比较当前允许的动作。",
+        "changedOrPreserved": "本帧比较选择，不让结果或单张牌名替代价格、范围和后续。",
+        "handoff": "把选中的课程动作和理由交给执行账本。",
+        "sourceIdentity": "匹配参考与课程简化政策"
+      },
+      "visualMeaning": {
+        "observe": "当前合法按钮、真实价格、动作目的和资料身份。",
+        "primaryVisual": "legal_actions",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+        "explanation": "只有在局面、牌力和范围都准备好后，才比较当前允许的动作。",
+        "nextSentence": "把选中的课程动作和理由交给执行账本。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "course policy / action comparison"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "匹配参考与课程简化政策"
+      },
+      "wrongAnswer": {
+        "returnTo": "G8_p4_compare",
+        "message": "没有匹配参考或明确课程政策时停在本帧，只显示资料缺口，不伪造最佳动作。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G9_p5_execute",
+      "canonicalState": "p5",
+      "output": "ledgerCard",
+      "question": "实际点什么？投入多少？接下来轮到谁？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "想法必须落成合法动作；金额和行动权错了，后面的范围也会错。",
+        "changedOrPreserved": "本帧只执行一个动作并检查守恒。",
+        "handoff": "把动作、金额、账本和下一行动者交给更新帧。",
+        "sourceIdentity": "动作菜单与金额公式"
+      },
+      "visualMeaning": {
+        "observe": "动作按钮、投入金额、动作前后底池、后手和下一行动者。",
+        "primaryVisual": "action_button",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "实际点什么？投入多少？接下来轮到谁？",
+        "explanation": "想法必须落成合法动作；金额和行动权错了，后面的范围也会错。",
+        "nextSentence": "把动作、金额、账本和下一行动者交给更新帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "ledger transition / next actor"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "动作菜单与金额公式"
+      },
+      "wrongAnswer": {
+        "returnTo": "G9_p5_execute",
+        "message": "动作金额、底池、后手或下一行动者不守恒时停在本帧，不能进入更新。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G10_p6_update",
+      "canonicalState": "p6",
+      "output": "changeCard",
+      "question": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "下一步不是重新猜整手牌，而是保留未变字段，只更新这一次真正改变的东西。",
+        "changedOrPreserved": "明确一项变化，若没有真实后继就停在当前父帧。",
+        "handoff": "把变化字段、动作后范围和后继或停止原因交给收口帧。",
+        "sourceIdentity": "动作后范围与后继图"
+      },
+      "visualMeaning": {
+        "observe": "回应或新牌、唯一变化高亮、动作后范围和真实后继。",
+        "primaryVisual": "one_changed_field_highlight",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard",
+          "changeCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "回应或新牌只改变了哪一项？下一步接哪里？",
+        "explanation": "下一步不是重新猜整手牌，而是保留未变字段，只更新这一次真正改变的东西。",
+        "nextSentence": "把变化字段、动作后范围和后继或停止原因交给收口帧。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "state delta / successor or stop"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "动作后范围与后继图"
+      },
+      "wrongAnswer": {
+        "returnTo": "G10_p6_update",
+        "message": "变化字段、动作后范围或真实后继缺失时停在本帧，不生成下一街。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard",
+          "changeCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G11_p7_close",
+      "canonicalState": "p7",
+      "output": "reviewCard",
+      "question": "这手牌到哪里结束？如果错了，错在第几层？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "输赢只是结果；先把当时能看到的依据和错误层分开，才能知道下次从哪里重查。",
+        "changedOrPreserved": "本帧只收束本手并定位一个错误层，不用结果倒推答案。",
+        "handoff": "把结算、回退层和下一次练习入口交给回放。",
+        "sourceIdentity": "事实结算与决策证据分离"
+      },
+      "visualMeaning": {
+        "observe": "结算账本、当时决策、结果、错误层和回放入口。",
+        "primaryVisual": "settlement_ledger",
+        "preservedFields": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard",
+          "changeCard",
+          "reviewCard"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "这手牌到哪里结束？如果错了，错在第几层？",
+        "explanation": "输赢只是结果；先把当时能看到的依据和错误层分开，才能知道下次从哪里重查。",
+        "nextSentence": "把结算、回退层和下一次练习入口交给回放。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "settlement / error attribution / replay entry"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "事实结算与决策证据分离"
+      },
+      "wrongAnswer": {
+        "returnTo": "最近缺失层",
+        "message": "结算、错误层或决策与结果分离未完成时回到最近缺失层，不进入迁移。",
+        "preserve": [
+          "tableFrame",
+          "contextFrame",
+          "preflopAction",
+          "startingRangeFrame",
+          "board",
+          "history",
+          "actor",
+          "pot",
+          "stacks",
+          "toCall",
+          "handCard",
+          "rangeDeltaCard",
+          "choiceCard",
+          "ledgerCard",
+          "changeCard",
+          "reviewCard"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": false
+    },
+    {
+      "frameId": "G12_recall_transfer",
+      "canonicalState": "replay_transfer",
+      "output": "nestedStructureEvidence",
+      "question": "先说外层路线，再说翻后七步；这个陌生变化要回哪一层？",
+      "explanationOrder": [
+        "answerStatus",
+        "whyThisStep",
+        "changedOrPreserved",
+        "handoff",
+        "sourceIdentity"
+      ],
+      "afterAnswer": {
+        "answerStatus": "先显示对/错/不知道，不先显示技术词。",
+        "whyThisStep": "最后要确认留下的是一套顺序，而不是刚刚跟着按钮走完的一次演示。",
+        "changedOrPreserved": "只改变一个字段，先说受影响层，再完成同类判断。",
+        "handoff": "输出外层路线、内层路线、返回点和单变量迁移结果；之后才决定是否进入下一阶段。",
+        "sourceIdentity": "学习者首答与迁移证据"
+      },
+      "visualMeaning": {
+        "observe": "没有标题的外层路线图、翻后七步、父子括号和一个陌生变化。",
+        "primaryVisual": "blank_outer_route_map",
+        "preservedFields": [
+          "outerRoute",
+          "innerRoute",
+          "returnPoint",
+          "oneVariableTransfer"
+        ],
+        "changedFieldRule": "只突出本帧真正改变的字段；没有变化的字段保持同样位置和样式。"
+      },
+      "plainLanguage": {
+        "title": "先说外层路线，再说翻后七步，并指出陌生变化回到哪一层。",
+        "explanation": "最后要确认留下的是一套顺序，而不是刚刚跟着按钮走完的一次演示。",
+        "nextSentence": "输出外层路线、内层路线、返回点和单变量迁移结果；之后才决定是否进入下一阶段。"
+      },
+      "technicalDrawer": {
+        "aliases": [
+          "outer/inner route recall / one-variable transfer"
+        ],
+        "visibleOnlyAfterAnswer": true,
+        "sourceIdentity": "学习者首答与迁移证据"
+      },
+      "wrongAnswer": {
+        "returnTo": "对应父层",
+        "message": "不能复述路线或定位单变量变化时回到对应父层，不开放下一阶段。",
+        "preserve": [
+          "outerRoute",
+          "innerRoute",
+          "returnPoint",
+          "oneVariableTransfer"
+        ],
+        "noRouteReset": true
+      },
+      "terminal": true
+    }
+  ],
+  "visualSemantics": {
+    "crossOut": "实体牌张冲突或物理不可能",
+    "fade": "仍然可能但权重或行动后比例变低",
+    "glow": "当前唯一变化字段",
+    "lock": "必须保留的父帧字段",
+    "stopCard": "资料不足或没有真实后继，停在当前父帧",
+    "colorIsNotSoleCue": true
+  },
+  "rules": {
+    "firstAnswerBeforeExplanation": true,
+    "explanationOrderFixed": true,
+    "plainLanguageBeforeTechnicalAlias": true,
+    "factsBeforeStrategy": true,
+    "oneChangedFieldOnTransfer": true,
+    "sameParentAfterWrongAnswer": true,
+    "sourceIdentityVisibleAfterAnswer": true,
+    "noResultBackPropagation": true,
+    "oneCentralVisualPerFrame": true
+  },
+  "currentEvidence": {
+    "paperDeck": true,
+    "runtimeAttached": false,
+    "lowBaselineTrial": false,
+    "unseenTransferObserved": false
+  }
+}

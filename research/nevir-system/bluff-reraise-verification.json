@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "status": "physical_blockers_current_node_amounts_and_values_checked_not_target_policy",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "checks": {
+    "heroVariants": 4,
+    "oneCardSuitControls": 2,
+    "rankValuesEqual": true,
+    "ruleMinimum7250": true,
+    "belowMinimumRejected": true,
+    "shortAllinOnlyFoldCall": true,
+    "profile52EndpointOracles": 4,
+    "allinOnlyMenuWouldMissAProfitableSizeAt55": true
+  },
+  "files": {
+    "research/solver-probe/src/bin/reraise_rules.rs": "86a018c7dc320774c18b0c7605f7cc69e87afe24b47e8fb8a0e575a279f3774e",
+    "scripts/research-nevir-bluff-reraise.mjs": "0fb3b199fe29df4c024bb62baad0c73634ebc15f156a334522c66cfed8093b6f",
+    "research/nevir-system/bluff-reraise-model.json": "6d75e00a962491317e93c263dee2936909c5d3243729291274cfd11e4a279953",
+    "research/nevir-system/bluff-reraise-rules-runtime.json": "b2c3ecd2d9a185d7f65a340f2fefda13bf9cd35832f9671985e670055aa19eba"
+  },
+  "limits": [
+    "This verifies a declared response model, not a solve or empirical poker strategy.",
+    "Opponent fold percentages are authored;52% was chosen to expose an action change, not measured.",
+    "A mathematical interval and check grid do not specify a real platform chip denomination.",
+    "No learner trial, GTO equilibrium or NL50 outcome verified."
+  ]
+}

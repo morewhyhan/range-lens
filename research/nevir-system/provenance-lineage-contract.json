@@ -1,0 +1,83 @@
+{
+  "id": "PROVENANCE_LINEAGE_CONTRACT_V1",
+  "status": "declarative_provenance_contract_not_complete",
+  "sourceKinds": [
+    "source_fact",
+    "derived_fact",
+    "reference_output",
+    "course_policy",
+    "teaching_explanation"
+  ],
+  "sourceMinimumFields": [
+    "sourceId",
+    "sourceKind",
+    "location",
+    "versionOrRevision",
+    "contentHash",
+    "condition",
+    "inputFingerprint",
+    "retrievedAt",
+    "licenseIdentity",
+    "reviewStatus"
+  ],
+  "derivedFactMinimumFields": [
+    "formulaId",
+    "independentChecker",
+    "roundingRule",
+    "unit",
+    "intermediateValues"
+  ],
+  "referenceMinimumFields": [
+    "engineRevision",
+    "configurationHash",
+    "actionTreeHash",
+    "convergenceMetric",
+    "stoppingReason",
+    "rawOutputHash",
+    "supportStatus"
+  ],
+  "lineageOrder": [
+    "publicPrompt",
+    "parentFrameAndFingerprint",
+    "source",
+    "formulaOrRawOutput",
+    "courseTransform",
+    "teacherAnswer",
+    "explanationAndSuccessor"
+  ],
+  "downgradeRules": {
+    "missingFactSource": "unverified_fact",
+    "missingCoursePolicySource": "demonstration_or_not_open",
+    "missingReferenceOutput": "no_exact_strategy_grade",
+    "missingSuccessor": "stop_continuous_lesson",
+    "sourceHashChanged": "recompile_ancestors"
+  },
+  "invalidationTriggers": [
+    "source_material_changed",
+    "preflop_chart_changed",
+    "range_weights_changed",
+    "board_history_stack_rake_changed",
+    "engine_revision_changed",
+    "action_tree_changed",
+    "course_policy_changed",
+    "successor_support_changed"
+  ],
+  "publicationChecks": [
+    "publicPromptContainsNoPrivateAnswer",
+    "everyAnswerHasSourceAndCondition",
+    "formulaHasUnitAndIndependentChecker",
+    "referenceHasRawOutputAndSuccessor",
+    "courseAndReferenceFingerprintsDiffer",
+    "staleAncestorsAreInvalidated",
+    "missingEvidenceHasNoExactGrade",
+    "displayIdentityMatchesAnswerIdentity"
+  ],
+  "currentStatus": {
+    "sourceInventoryExists": true,
+    "all35UnitLineageComplete": false,
+    "A72RawReferenceLineage": false,
+    "questionPackageLineage": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,2026 @@
+{
+  "status": "mathematical_mechanism_family_not_NL50_strategy",
+  "context": {
+    "players": 6,
+    "street": "river",
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "board": [
+      "Ks",
+      "7h",
+      "2d",
+      "3c",
+      "9h"
+    ],
+    "hero": [
+      "Qs",
+      "Qc"
+    ],
+    "potBB": 10,
+    "activeStackBB": 95.25,
+    "legalGrossHistory": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+    "menu": [
+      "check",
+      "bet_5",
+      "bet_10"
+    ],
+    "opponentResponse": "Fixed call/fold rules for this complete model; no raises",
+    "rake": "none"
+  },
+  "weightsMeaning": "Relative probability mass for mutually exclusive possible holdings, not copies of a physical combo or source population counts.",
+  "groups": [
+    {
+      "id": "JJ",
+      "hole": [
+        "Js",
+        "Jd"
+      ],
+      "callsSmall": true,
+      "callsLarge": true,
+      "role": "worse_inelastic",
+      "equity": 1
+    },
+    {
+      "id": "66",
+      "hole": [
+        "6s",
+        "6h"
+      ],
+      "callsSmall": true,
+      "callsLarge": false,
+      "role": "worse_price_sensitive",
+      "equity": 1
+    },
+    {
+      "id": "KJ",
+      "hole": [
+        "Kc",
+        "Jc"
+      ],
+      "callsSmall": true,
+      "callsLarge": false,
+      "role": "better_price_sensitive",
+      "equity": 0
+    },
+    {
+      "id": "KK",
+      "hole": [
+        "Kh",
+        "Kd"
+      ],
+      "callsSmall": true,
+      "callsLarge": true,
+      "role": "better_inelastic",
+      "equity": 0
+    },
+    {
+      "id": "QQ",
+      "hole": [
+        "Qh",
+        "Qd"
+      ],
+      "callsSmall": true,
+      "callsLarge": true,
+      "role": "tie",
+      "equity": 0.5
+    },
+    {
+      "id": "AJ",
+      "hole": [
+        "As",
+        "Jc"
+      ],
+      "callsSmall": false,
+      "callsLarge": false,
+      "role": "worse_always_folds",
+      "equity": 1
+    }
+  ],
+  "examples": {
+    "equityFallsButLargeWins": {
+      "weights": {
+        "66": 3,
+        "JJ": 2,
+        "KJ": 1,
+        "KK": 1,
+        "QQ": 0,
+        "AJ": 3
+      },
+      "responseOverrides": {},
+      "totalMass": 10,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 8,
+          "doubledEVNumerator": 160,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 2,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 2,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 3,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 3,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 9.5,
+          "doubledEVNumerator": 190,
+          "calledMass": 7,
+          "calledEquity": 0.7142857142857143,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 2,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 1
+            },
+            {
+              "group": "66",
+              "weight": 3,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 4.5,
+              "deltaFromCheckEVBB": 1.5
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": -0.5,
+              "deltaFromCheckEVBB": -0.5
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": -0.5,
+              "deltaFromCheckEVBB": -0.5
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 3,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 10,
+          "doubledEVNumerator": 200,
+          "calledMass": 3,
+          "calledEquity": 0.6666666666666666,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 2,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 4,
+              "deltaFromCheckEVBB": 2
+            },
+            {
+              "group": "66",
+              "weight": 3,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 1,
+              "deltaFromCheckEVBB": 1
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": -1,
+              "deltaFromCheckEVBB": -1
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 3,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 3,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "large"
+      ]
+    },
+    "valueLarge": {
+      "weights": {
+        "66": 0,
+        "JJ": 1,
+        "KJ": 0,
+        "KK": 0,
+        "QQ": 0,
+        "AJ": 0
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 15,
+          "doubledEVNumerator": 30,
+          "calledMass": 1,
+          "calledEquity": 1,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 15,
+              "deltaFromCheckEVBB": 5
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 20,
+          "doubledEVNumerator": 40,
+          "calledMass": 1,
+          "calledEquity": 1,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 20,
+              "deltaFromCheckEVBB": 10
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "large"
+      ]
+    },
+    "valueSmall": {
+      "weights": {
+        "66": 1,
+        "JJ": 0,
+        "KJ": 0,
+        "KK": 0,
+        "QQ": 0,
+        "AJ": 0
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 15,
+          "doubledEVNumerator": 30,
+          "calledMass": 1,
+          "calledEquity": 1,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 15,
+              "deltaFromCheckEVBB": 5
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": 0,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "small"
+      ]
+    },
+    "checkBetter": {
+      "weights": {
+        "66": 0,
+        "JJ": 0,
+        "KJ": 0,
+        "KK": 1,
+        "QQ": 0,
+        "AJ": 0
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 0,
+          "doubledEVNumerator": 0,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": -5,
+          "doubledEVNumerator": -10,
+          "calledMass": 1,
+          "calledEquity": 0,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": -5,
+              "deltaFromCheckEVBB": -5
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": -10,
+          "doubledEVNumerator": -20,
+          "calledMass": 1,
+          "calledEquity": 0,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": -10,
+              "deltaFromCheckEVBB": -10
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "check"
+      ]
+    },
+    "allTie": {
+      "weights": {
+        "66": 0,
+        "JJ": 0,
+        "KJ": 0,
+        "KK": 0,
+        "QQ": 1,
+        "AJ": 0
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 5,
+          "doubledEVNumerator": 10,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 5,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 5,
+          "doubledEVNumerator": 10,
+          "calledMass": 1,
+          "calledEquity": 0.5,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 5,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 5,
+          "doubledEVNumerator": 10,
+          "calledMass": 1,
+          "calledEquity": 0.5,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 5,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "check",
+        "small",
+        "large"
+      ]
+    },
+    "foldsWorseButGainsNothing": {
+      "weights": {
+        "66": 0,
+        "JJ": 0,
+        "KJ": 0,
+        "KK": 0,
+        "QQ": 0,
+        "AJ": 1
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": 0,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": 0,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "check",
+        "small",
+        "large"
+      ]
+    },
+    "foldsBetterAndWins": {
+      "weights": {
+        "66": 0,
+        "JJ": 0,
+        "KJ": 1,
+        "KK": 0,
+        "QQ": 0,
+        "AJ": 0
+      },
+      "responseOverrides": {},
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 0,
+          "doubledEVNumerator": 0,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": -5,
+          "doubledEVNumerator": -10,
+          "calledMass": 1,
+          "calledEquity": 0,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": -5,
+              "deltaFromCheckEVBB": -5
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": 0,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 10
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "large"
+      ]
+    },
+    "tieHandFoldsToLarge": {
+      "weights": {
+        "66": 0,
+        "JJ": 0,
+        "KJ": 0,
+        "KK": 0,
+        "QQ": 1,
+        "AJ": 0
+      },
+      "responseOverrides": {
+        "QQ": {
+          "callsLarge": false
+        }
+      },
+      "totalMass": 1,
+      "actions": [
+        {
+          "id": "check",
+          "bet": 0,
+          "evBB": 5,
+          "doubledEVNumerator": 10,
+          "calledMass": null,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 0,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 5,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "showdown",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "small",
+          "bet": 5,
+          "evBB": 5,
+          "doubledEVNumerator": 10,
+          "calledMass": 1,
+          "calledEquity": 0.5,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 15,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -5,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "call",
+              "payoffIfThisHoldingBB": 5,
+              "weightedEVBB": 5,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        },
+        {
+          "id": "large",
+          "bet": 10,
+          "evBB": 10,
+          "doubledEVNumerator": 20,
+          "calledMass": 0,
+          "calledEquity": null,
+          "contributions": [
+            {
+              "group": "JJ",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": 20,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "66",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "KK",
+              "weight": 0,
+              "response": "call",
+              "payoffIfThisHoldingBB": -10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            },
+            {
+              "group": "QQ",
+              "weight": 1,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 10,
+              "deltaFromCheckEVBB": 5
+            },
+            {
+              "group": "AJ",
+              "weight": 0,
+              "response": "fold",
+              "payoffIfThisHoldingBB": 10,
+              "weightedEVBB": 0,
+              "deltaFromCheckEVBB": 0
+            }
+          ]
+        }
+      ],
+      "best": [
+        "large"
+      ]
+    }
+  },
+  "exhaustiveFamily": {
+    "weightValues": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "models": 4095,
+    "proof": "For every model, independently formulated terminal payouts equal check EV plus fold-gain and called-investment differences. Exact integer numerator decides ties. Scaling pot/bets by 2 preserves ordering in this fixed model.",
+    "scaleCheckScope": "Algebra only. Not the same 100BB physical history and not a transfer between NL50 and NL500. Complete configuration still needs matching.",
+    "bestSetCounts": {
+      "large": 2528,
+      "small": 496,
+      "small|large": 160,
+      "check": 384,
+      "check|small|large": 111,
+      "check|small": 128,
+      "check|large": 288
+    },
+    "lowerCalledEquityButLargeBetter": 744
+  },
+  "checkdownContrast": {
+    "flop": [
+      "Ks",
+      "7h",
+      "2d"
+    ],
+    "hero": [
+      "Qs",
+      "Qc"
+    ],
+    "villain": [
+      "As",
+      "Jc"
+    ],
+    "runouts": 990,
+    "wins": 856,
+    "ties": 0,
+    "losses": 134,
+    "heroEquity": 0.8646464646464647,
+    "potBB": 5.5,
+    "forcedCheckdownEVBB": 4.7555555555555555,
+    "winImmediatelyIfVillainFoldsEVBB": 5.5,
+    "foldGainOverForcedCheckdownBB": 0.7444444444444444,
+    "scope": "Alternate flop experiment before the recorded 2.25 bet: uniform legal runouts, BOTH hands known, forced checkdown with no future betting and no rake. If an immediate fold occurs instead, compare its conditional payoff. Does not assert a bet makes this holding fold or that real checking guarantees no future bets."
+  },
+  "textureFacts": [
+    {
+      "board": [
+        "Ts",
+        "7h",
+        "2d"
+      ],
+      "opponent": [
+        "Ks",
+        "Qs"
+      ],
+      "hero": [
+        "Ah",
+        "Ac"
+      ],
+      "opponentFlushOuts": [],
+      "opponentBackdoorFlushSuits": [
+        "s"
+      ],
+      "scope": "Card-structure facts only; not a prediction that this holding calls or raises, nor a derivation of the course bet size."
+    },
+    {
+      "board": [
+        "Ts",
+        "7h",
+        "2s"
+      ],
+      "opponent": [
+        "Ks",
+        "Qs"
+      ],
+      "hero": [
+        "Ah",
+        "Ac"
+      ],
+      "opponentFlushOuts": [
+        "3s",
+        "4s",
+        "5s",
+        "6s",
+        "7s",
+        "8s",
+        "9s",
+        "Js",
+        "As"
+      ],
+      "opponentBackdoorFlushSuits": [],
+      "scope": "Card-structure facts only; not a prediction that this holding calls or raises, nor a derivation of the course bet size."
+    }
+  ],
+  "potGeometry": {
+    "start": {
+      "potBB": 18,
+      "activeStackBB": 91.75,
+      "foldedPlayerStacksBB": 398.5,
+      "history": "Six seats, 100BB: CO opens 2.5, BTN raises to 8.25, SB folds 0.5, BB folds 1, CO calls. UTG/HJ folded. Gross pot 18; CO checks flop."
+    },
+    "branches": [
+      {
+        "name": "40_percent",
+        "betBB": 7.2,
+        "afterCallPotBB": 32.4,
+        "eachStackBB": 84.55,
+        "spr": 2.609567901234568
+      },
+      {
+        "name": "two_thirds",
+        "betBB": 12,
+        "afterCallPotBB": 42,
+        "eachStackBB": 79.75,
+        "spr": 1.8988095238095237
+      }
+    ],
+    "scope": "Alternative gross ledgers from the SAME predecision state. Legal amounts only; not a source-optimal preflop or postflop sizing claim. Actual response ranges for each size remain separate."
+  },
+  "courseLesson": {
+    "scope": "Source main-size retrieval, hand-role precision and context discrimination only; not a complete strategic lesson.",
+    "context": "6max, 100BB, BTN 3bettor vs CO caller, CO checks. Original ranges/rake not fully supplied.",
+    "givenAmountTask": {
+      "potBB": 18,
+      "activeStackBB": 91.75,
+      "historyRef": "potGeometry/start",
+      "scope": "Apply a GIVEN course percent and update a legal gross ledger; no claim that a new preflop size preserves source optimal strategy.",
+      "percentConvention": "Use the task explicit training percent. For 67%, bet12.06BB; exact2/3 would be12BB, a separate convention."
+    },
+    "fixtures": [
+      {
+        "fixtureId": "SC_I08",
+        "phase": "demonstrate",
+        "board": [
+          "Ts",
+          "7h",
+          "2d"
+        ],
+        "notation": "T72r",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I08",
+          "location": "01 有位置3bet · B32 / D32 / E32",
+          "text": "【课程】\nB67：约 2/3 池。\n高对子、强顶对是价值核心；加合适高张诈唬。"
+        },
+        "task": "Given this course betting line, choose its stated MAIN size; not whether an arbitrary hand must bet.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 67,
+          "amountAtGivenPot18BB": 12.06
+        },
+        "notEvidenceOf": "Complete per-combo strategy, why this precise size is solver-optimal, or any-hand NL50 transfer."
+      },
+      {
+        "fixtureId": "SC_I09",
+        "phase": "demonstrate",
+        "board": [
+          "Ts",
+          "7h",
+          "2s"
+        ],
+        "notation": "T72tt",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I09",
+          "location": "01 有位置3bet · B33 / D33 / E33",
+          "text": "【课程】\nB40：约 40% 池。\n与上一行只改变花色。"
+        },
+        "task": "Given this course betting line, choose its stated MAIN size; not whether an arbitrary hand must bet.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 40,
+          "amountAtGivenPot18BB": 7.2
+        },
+        "notEvidenceOf": "Complete per-combo strategy, why this precise size is solver-optimal, or any-hand NL50 transfer."
+      },
+      {
+        "fixtureId": "SC_I13",
+        "phase": "nearby_boundary",
+        "board": [
+          "Ts",
+          "8h",
+          "2d"
+        ],
+        "notation": "T82r",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I13",
+          "location": "01 有位置3bet · B34 / D34 / E34",
+          "text": "【课程】\nB40：约40%底池。\n这是较疏的T72与已可成顺的T98之间的课程例；完整选牌频率未给。"
+        },
+        "task": "Given this course betting line, choose its stated MAIN size; not whether an arbitrary hand must bet.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 40,
+          "amountAtGivenPot18BB": 7.2
+        },
+        "notEvidenceOf": "Complete per-combo strategy, why this precise size is solver-optimal, or any-hand NL50 transfer."
+      },
+      {
+        "fixtureId": "SC_I10",
+        "phase": "connected_boundary",
+        "board": [
+          "Ts",
+          "9h",
+          "8d"
+        ],
+        "notation": "T98r",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I10",
+          "location": "01 有位置3bet · B35 / D35 / E35",
+          "text": "【课程】\nB25 是课程给的尺寸方向。\n完整选牌频率未给，不能等同全范围下注。"
+        },
+        "task": "Given this course betting line, choose its stated MAIN size; not whether an arbitrary hand must bet.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 25,
+          "amountAtGivenPot18BB": 4.5
+        },
+        "notEvidenceOf": "Complete per-combo strategy, why this precise size is solver-optimal, or any-hand NL50 transfer."
+      },
+      {
+        "fixtureId": "SC_I11",
+        "phase": "mixed_retrieval",
+        "board": [
+          "8s",
+          "4h",
+          "2d"
+        ],
+        "notation": "842r",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I11",
+          "location": "01 有位置3bet · B38 / D38 / E38",
+          "text": "【课程】\nB67，采用极化思路。\n高对子＋合适高张下注；66/77 等中等牌多过牌。"
+        },
+        "task": "Given this course betting line, choose its stated MAIN size; not whether an arbitrary hand must bet.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 67,
+          "amountAtGivenPot18BB": 12.06
+        },
+        "notEvidenceOf": "Complete per-combo strategy, why this precise size is solver-optimal, or any-hand NL50 transfer."
+      },
+      {
+        "fixtureId": "SC_T62r",
+        "phase": "new_source_supported_rank_case",
+        "board": [
+          "Ts",
+          "6h",
+          "2d"
+        ],
+        "notation": "T62r",
+        "source": {
+          "kind": "reviewed_note",
+          "reviewId": "R15",
+          "location": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+            "line": 42,
+            "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+            "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+          },
+          "precision": "main_size",
+          "suitAssignment": "Teaching representative; no exact physical-suit solution recovered."
+        },
+        "task": "Apply the stated main size in the same IP 3bet teaching context.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 67,
+          "amountAtGivenPot18BB": 12.06
+        },
+        "notEvidenceOf": "A formula proving all rainbow T-high boards use this size, or full hand selection."
+      },
+      {
+        "fixtureId": "SC_T62tt",
+        "phase": "new_source_supported_rank_case",
+        "board": [
+          "Ts",
+          "6h",
+          "2s"
+        ],
+        "notation": "T62tt",
+        "source": {
+          "kind": "reviewed_note",
+          "reviewId": "R14",
+          "location": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.2-有利位置3bet底池—第一部分_中文笔记.md",
+            "line": 41,
+            "section": "3.8 快速测试：对各类牌面选择正确下注尺寸",
+            "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+          },
+          "precision": "main_size",
+          "suitAssignment": "Teaching representative; no exact physical-suit solution recovered."
+        },
+        "task": "Apply the stated main size in the same IP 3bet teaching context.",
+        "expected": {
+          "type": "main_size_execution",
+          "percent": 40,
+          "amountAtGivenPot18BB": 7.2
+        },
+        "notEvidenceOf": "A formula proving all rainbow T-high boards use this size, or full hand selection."
+      },
+      {
+        "fixtureId": "SC_I12",
+        "phase": "branch_before_size",
+        "board": [
+          "3s",
+          "5h",
+          "6s"
+        ],
+        "notation": "356tt",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I12",
+          "location": "01 有位置3bet · B39 / D39 / E39",
+          "text": "【课程】\nX：本例先整体过牌。\n保留手牌权益，到转牌重新判断。"
+        },
+        "condition": "本例采用课程先整体过牌简化；CO极少领先下注的前提保留，不加入另外的过弃调整。",
+        "task": "Apply the stated check simplification; do not force a size selection.",
+        "expected": {
+          "type": "stated_check_simplification",
+          "action": "check"
+        },
+        "notEvidenceOf": "All wet low boards or all opponents require checking."
+      },
+      {
+        "fixtureId": "SC_I11_77",
+        "phase": "main_size_vs_hand_role",
+        "board": [
+          "8s",
+          "4h",
+          "2d"
+        ],
+        "notation": "842r",
+        "holeClass": "77",
+        "source": {
+          "kind": "user_workbook_import",
+          "node": "I11",
+          "location": "01 有位置3bet · B38 / D38 / E38",
+          "handEntry": {
+            "hand": "77",
+            "action": "更多过牌",
+            "kind": "保留摊牌"
+          }
+        },
+        "task": "Identify the source-described hand role, not a fabricated pure-action frequency.",
+        "expected": {
+          "type": "preference_interpretation",
+          "description": "更多过牌",
+          "exactBetFrequency": null
+        },
+        "notEvidenceOf": "77 always checks or the 67% main size makes every hand bet."
+      }
+    ],
+    "sequence": [
+      "SC_I08",
+      "SC_I09",
+      "SC_I13",
+      "SC_T62r",
+      "SC_T62tt",
+      "SC_I10",
+      "SC_I11",
+      "SC_I11_77",
+      "SC_I12"
+    ],
+    "authorGuards": [
+      {
+        "change": "Switch hero to OOP SB",
+        "decision": "Reject reuse of this IP reference; route to separately matched material, not an unknown-answer ordinary learner task."
+      },
+      {
+        "change": "Ask arbitrary hand action from main-size-only data",
+        "decision": "Reject exact action grading."
+      },
+      {
+        "change": "Change physical suits where only diagram suits were supplied",
+        "decision": "Do not claim exact solver equivalence."
+      }
+    ],
+    "notVerified": [
+      "Learner understanding of why each precise course size is optimal",
+      "Source-matched response matrix",
+      "Unprompted real-game transfer"
+    ]
+  },
+  "sourceBoundary": "Nevir sizing discussion motivates the learning question. These exact responses and weights are author-specified, not original course or solver data. The result does not select 25/40/67 for arbitrary flops."
+}

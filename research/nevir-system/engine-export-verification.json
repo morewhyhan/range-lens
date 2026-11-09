@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "status": "actual_export_layout_reach_and_current_EV_calibration_not_full_reference",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "scenarios": 2,
+  "nodes": 18,
+  "physicalReachWeightsChecked": 72,
+  "usableDecisionHandRows": 12,
+  "unusableDecisionHandRows": 4,
+  "independentCurrentCallChecks": 4,
+  "goldens": [
+    {
+      "case": "all_bet",
+      "hand": "QsQh",
+      "callEVIndependent": 503.5,
+      "callEVEngine": 503.5
+    },
+    {
+      "case": "all_bet",
+      "hand": "AsAh",
+      "callEVIndependent": 732,
+      "callEVEngine": 732
+    },
+    {
+      "case": "split_by_own_hand",
+      "hand": "QsQh",
+      "callEVIndependent": 275,
+      "callEVEngine": 275
+    },
+    {
+      "case": "split_by_own_hand",
+      "hand": "AsAh",
+      "callEVIndependent": 732,
+      "callEVEngine": 732
+    }
+  ],
+  "fileHashes": {
+    "research/solver-probe/src/bin/export_probe.rs": "c8f256c5c6e44db8698bcea9c50bb6e748d7e7228bb624368031556822a924f7",
+    "research/solver-probe/Cargo.lock": "3d344a0ce85a1bc2a2667a9bd8b15aa1298a23beb349b316235973c3fb9158aa",
+    "research/solver-probe/target/release/export_probe.exe": "e8a85023e8b5af19cae3949711a6d94669a09fa9dae6988a06de2a85721a0168",
+    "research/nevir-system/engine-export-probe.json": "5de918306afc9051e34b4cc96577769ac5a1ce8b8c11f1168a486785ffc8b7ec"
+  },
+  "limitations": [
+    "Tiny fixed river only, no chance-node export yet.",
+    "Locked policies, not an unconstrained equilibrium benchmark.",
+    "Full A72 requested graph remains unsolved.",
+    "No NL50 or learner validation."
+  ]
+}

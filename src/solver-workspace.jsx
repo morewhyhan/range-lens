@@ -1,0 +1,53 @@
+import React,{useMemo,useState} from 'react';
+import {ArrowLeft,ArrowRight,ArrowCounterClockwise,Info} from '@phosphor-icons/react';
+import {Cards} from './trainer-ui.jsx';
+import {card} from './poker.js';
+import {SOLVER_NODES,SOLVER_INFO,seats,ranks,holeCards,handClass,actionName,pct,masses,transition,policyFor,rangeCells,focusedQuestion,drillRows,nodeTitle} from './solver-workspace.js';
+import './solver-workspace.css';
+
+function Matrix({node,side,before,after,onSelect,selected}){
+ const [stage,setStage]=useState('after');
+ const b=rangeCells(node,side,before.joint),a=after&&stage==='after'?rangeCells(node,side,after.joint):b;
+ const max=Math.max(...Object.values(b),1);
+ return <>{after&&<div className="sw-chart-stages"><button className={stage==='before'?'active':''} onClick={()=>setStage('before')}>动作前</button><button className={stage==='after'?'active':''} onClick={()=>setStage('after')}>动作后</button><span>同一亮度刻度，直接对比</span></div>}<div className="sw-matrix" aria-label={`${seats[side]}范围图`}>{ranks.flatMap((r,i)=>ranks.map((c,j)=>{
+  const label=i===j?r+c:i<j?r+c+'s':c+r+'o';const value=a[label]||0,old=b[label]||0;
+  return <button key={label} title={`${label} · 动作前占比 ${pct(old/before.total)} · 保留 ${old?pct(value/old):'0%'}`} className={selected===label?'chosen':''} onClick={()=>onSelect(label)} style={{'--fill':value/max,'--old':old/max}}><span>{label}</span><i style={{width:`${old?value/old*100:0}%`}}/></button>;
+ }))}</div></>;
+}
+
+export default function SolverWorkspace({onSection}){
+ const [drill,setDrill]=useState('frequency');
+ const [mode,setMode]=useState('explore'),[nodeId,setNodeId]=useState('root'),[path,setPath]=useState([]),[chosen,setChosen]=useState(null),[side,setSide]=useState(0),[label,setLabel]=useState('AA'),[handIndex,setHandIndex]=useState(null),[details,setDetails]=useState(false),[round,setRound]=useState(0),[answer,setAnswer]=useState(null),[scores,setScores]=useState({});
+ const node=SOLVER_NODES.find(n=>n.id===nodeId),base=useMemo(()=>masses(node),[node]);
+ const change=useMemo(()=>chosen===null?null:transition(node,chosen),[node,chosen]);
+ const rows=node.orderedHands[side].map((hand,index)=>({hand,index})).filter(r=>{
+  const [a,b]=holeCards(r.hand);return label===(a[0]===b[0]?a[0]+b[0]:[a[0],b[0]].sort((x,y)=>ranks.indexOf(x)-ranks.indexOf(y)).join('')+(a[1]===b[1]?'s':'o'));
+ });
+ const activeIndex=handIndex!==null&&rows.some(r=>r.index===handIndex)?handIndex:rows[0]?.index;
+ const policy=node.actor===side&&activeIndex!==undefined&&base.joint[side][activeIndex]>0?policyFor(node,activeIndex):[];
+ const decisionNodes=SOLVER_NODES.filter(n=>n.actor!==null&&drillRows(n).length);
+ const question=useMemo(()=>node.actor===null?null:focusedQuestion(node,round,drill),[node,round,drill]);
+ const scoreKey=[mode,drill,nodeId].join(':');
+ const score=scores[scoreKey]||{right:0,wrong:0};
+ function reset(id='root'){setNodeId(id);setChosen(null);setAnswer(null);setHandIndex(null);setLabel('AA');setSide(SOLVER_NODES.find(n=>n.id===id).actor??0);}
+ function switchMode(id){setMode(id);setPath([]);setRound(0);reset();}
+ function submit(id){if(answer!==null)return;setAnswer(id);const correct=id===question.correct;setScores(s=>({...s,[scoreKey]:{right:score.right+Number(correct),wrong:score.wrong+Number(!correct)}}));setLabel(handClass(question.target.hand));setSide(node.actor);setHandIndex(question.target.index);if(question.actionIndex!==null&&question.actionIndex!==undefined)setChosen(question.actionIndex);}
+ function nextNode(n,text){setPath(p=>[...p,{id:node.id,text}]);reset(n.id);setSide(n.actor??0);}
+ const amount=node.totalBetAmount.map(x=>x/100),pot=6+amount[0]+amount[1];
+ return <div className="solver-app">
+  <header className="sw-header"><strong>扑克练习器</strong><nav>{[['preflop','翻前'],['reading','读牌'],['postflop','翻后'],['combined','综合']].map(([id,text])=><button key={id} className={id==='postflop'?'active':''} onClick={()=>id!=='postflop'&&onSection(id)}>{text}</button>)}</nav><button className="sw-info-button" onClick={()=>setDetails(!details)}><Info size={18}/>求解配置</button></header>
+  <div className="sw-layout">
+   <aside className="sw-sidebar"><span className="sw-eyebrow">翻后</span><h2>看懂每一步</h2><p>选择动作，观察两个人的范围如何变化。</p><div className="sw-modes">{[['explore','看动作与变化'],['practice','专项训练'],['route','连贯 · 行动路线']].map(([id,text])=><button key={id} className={mode===id?'active':''} onClick={()=>switchMode(id)}>{text}</button>)}</div><label className="sw-node-label">选择已导出的局面<select value={nodeId} onChange={e=>{setPath([]);reset(e.target.value);}}>{decisionNodes.map(n=><option key={n.id} value={n.id}>{nodeTitle(n)}</option>)}</select></label><div className="sw-scope"><strong>当前数据范围</strong><p>SB 开池 3 BB，BB 跟注。100 BB 起始筹码，零抽水。QQQ 翻牌的已求解研究局面。</p><p>当前仅开放这套数据支持的节点。课程简化尚未与此配置逐项匹配。</p></div></aside>
+   <main className="sw-main">
+    {details&&<section className="sw-config"><strong>b-inary/postflop-solver · 离线求解快照</strong><p>迭代 {SOLVER_INFO.iterations} 次；引擎报告可利用度 {SOLVER_INFO.errorBB.toFixed(6)} BB。此精度针对声明的有限动作树，不代表所有下注尺度。</p><p>范围传播及部分终局金额已独立复核；完整策略准确性未由第二套求解器独立验证。</p><code>输入 {SOLVER_INFO.fingerprint}</code><code>引擎 {SOLVER_INFO.revision}</code></section>}
+    <section className="sw-state"><div className="sw-state-heading"><div><span className="sw-eyebrow">{node.board.length===3?'翻牌':node.board.length===4?'转牌':'河牌'} · 当前状态</span><h1>{node.terminal?'本手已到摊牌':node.chance?'等待发下一张牌':`轮到 ${seats[node.actor]} 行动`}</h1></div><button className="sw-reset" onClick={()=>{setPath([]);reset();}}><ArrowCounterClockwise size={16}/>重新开始</button></div><div className="sw-board"><Cards cards={node.board.map(card)} small/><div className="sw-money">{node.actor!==null&&<span>当前需跟注<strong>{Math.max(0,amount[node.actor^1]-amount[node.actor]).toFixed(2)} BB</strong></span>}<span>底池<strong>{pot.toFixed(2)} BB</strong></span>{seats.map((s,i)=><span key={s}>{s} 剩余<strong>{(97-amount[i]).toFixed(2)} BB</strong></span>)}</div></div><div className="sw-history"><span>SB 开池 3 → BB 跟注</span><span>{nodeTitle(node)}</span>{path.map((p,i)=><button key={i} onClick={()=>{reset(p.id);setPath(path.slice(0,i));}}>{p.text}</button>)}</div></section>
+    {mode==='practice'&&question&&<section className="sw-drill"><div className="sw-drill-types">{[['frequency','行动频率'],['retention','动作后范围'],['blocker','阻挡组合']].map(([id,title])=><button key={id} className={drill===id?'active':''} onClick={()=>{setDrill(id);setAnswer(null);setRound(0);setChosen(null);}}>{title}</button>)}</div><div><span className="sw-eyebrow">专项训练 · {seats[node.actor]}</span><h2>{question.prompt}</h2><Cards cards={holeCards(question.target.hand).map(card)} small/></div><div className="sw-drill-answers">{question.options.map(o=><button key={o.id} disabled={answer!==null} className={answer!==null&&o.id===question.correct?'correct':''} onClick={()=>submit(o.id)}>{o.text||node.actions.map((a,i)=><span key={a}>{actionName(a)} <b>{pct(o.mix[i])}</b></span>)}</button>)}<button disabled={answer!==null} onClick={()=>submit(-1)}>我不知道</button></div><div className="sw-drill-score"><span>{score.right} 对 · {score.wrong} 错</span>{answer!==null&&<><strong>{answer===question.correct?'答对了':'答错了，正确选项已标绿'}</strong><button onClick={()=>{setRound(r=>r+1);setAnswer(null);setChosen(null);}}>下一题 <ArrowRight size={16}/></button></>}</div>{answer!==null&&<p className="sw-chart-caption">{question.explanation}</p>}</section>}
+    {(mode!=='practice'||answer!==null)&&<>
+    {node.actor!==null&&<section className="sw-action-section"><div className="sw-section-label"><span>① 选择一个动作，预览它留下的范围</span><small>当前行动者：{seats[node.actor]}</small></div><div className="sw-actions">{node.actions.map((a,i)=>{const t=transition(node,i);return <button key={a} className={chosen===i?'active':''} onClick={()=>setChosen(i)}><strong>{actionName(a)}</strong><span>范围采用率 {pct(t.probability)}</span></button>;})}</div></section>}
+    <section className="sw-range-section"><div className="sw-section-label"><span>② {change?'动作之后，哪些牌留下了？':'当前双方可能拿着哪些牌？'}</span><div>{seats.map((s,i)=><button key={s} className={side===i?'active':''} onClick={()=>{setSide(i);setHandIndex(null);}}>{s}{node.actor===i?' · 行动者':''}</button>)}</div></div><div className="sw-range-content"><div><Matrix node={node} side={side} before={base} after={change?.after} selected={label} onSelect={x=>{setLabel(x);setHandIndex(null);}}/><p className="sw-chart-caption">蓝色越深，该类牌的组合权重越大。底部细条表示动作后保留比例；灰格表示当前没有权重。点击格子查看具体组合。</p></div><aside className="sw-inspector"><h3>{label} <small>{seats[side]} 范围</small></h3><div className="sw-combo-list">{rows.map(r=><button key={r.hand} className={activeIndex===r.index?'active':''} onClick={()=>setHandIndex(r.index)}>{r.hand}</button>)}</div>{activeIndex!==undefined&&<><Cards cards={holeCards(node.orderedHands[side][activeIndex]).map(card)} small/><div className="sw-weights"><span>动作前权重<b>{node.rawWeights[side][activeIndex].toFixed(4)}</b></span><span>动作后权重<b>{(change?.weights[side][activeIndex]??node.rawWeights[side][activeIndex]).toFixed(4)}</b></span><span>范围内占比<b>{pct((change?.after.joint[side][activeIndex]??base.joint[side][activeIndex])/(change?.after.total??base.total)||0)}</b></span></div>{policy.length>0?<div className="sw-policy">{policy.map(p=><div key={p.action}><span>{actionName(p.action)}</span><strong>{pct(p.frequency)}</strong><small>EV {p.ev.toFixed(3)} BB</small></div>)}</div>:<p className="sw-chart-caption">当前轮到另一方行动，此处显示该方范围的变化。</p>}</>}{change&&<div className="sw-reason"><strong>{side===node.actor?'行动筛选了自己的范围':'你的行动也改变了对手的条件分布'}</strong><p>{side===node.actor?'每个组合原来的权重 × 该组合采用此动作的频率 = 动作后的权重。':'对手的原始范围权重不变。但双方底牌不能重复，你留下了不同的组合，因此对手各组合与你相容的可能性也会改变。'}</p><p>此动作保留 {pct(change.probability)} 的相容联合权重。{change.probability===0?'该动作在此策略下没有到达权重，不能用它继续推导条件分布。':''}</p></div>}</aside></div></section>
+    <section className="sw-next">{change?<><div><strong>③ {seats[node.actor]} {actionName(node.actions[chosen])}</strong><p>{change.next?'确认后进入真实后继，保留这次动作产生的范围。':'已算出本次范围变化；这个动作的后继尚未导出，暂不能继续。'}</p></div><button disabled={!change.next||change.after.total<=0} onClick={()=>nextNode(change.next,`${seats[node.actor]} ${actionName(node.actions[chosen])}`)}>确认并看下一步 <ArrowRight size={16}/></button></>:node.chance?<><div><strong>③ 发下一张牌</strong><p>新公共牌会移除双方包含该牌的组合。这里只提供已导出的物理牌后继。</p></div>{SOLVER_NODES.filter(n=>n.historyIndices.length===node.historyIndices.length+1&&node.historyIndices.every((x,i)=>n.historyIndices[i]===x)).map(n=><button key={n.id} onClick={()=>nextNode(n,`发出 ${n.board.at(-1)}`)}>发出 {n.board.at(-1)} <ArrowRight size={16}/></button>)}</>:<p>{node.terminal?'已到终局。可点击行动记录返回任何一步。':'先选择上方动作，图表会立即显示变化。'}</p>}</section>
+    </>}
+   </main>
+  </div>
+ </div>;
+}

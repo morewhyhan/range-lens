@@ -1,0 +1,796 @@
+{
+  "status": "guided_semibluff_paper_sequence_not_UI_or_learner_verified",
+  "parentLink": {
+    "source": "guided-draw-sequence-packet.json",
+    "frame": "D13",
+    "mode": "review_after_draw_episode",
+    "notice": "听牌段结束后回看D13，明确切到KJ会弃或跟加注的给定回应；关闭恢复原压力模型及其弃牌较高比较。",
+    "snapshotHash": "5946c8b380f6ee85b15564c6c54a4e245ea36435d4eab3a94db567f1e9ccf20d",
+    "returnHash": "5946c8b380f6ee85b15564c6c54a4e245ea36435d4eab3a94db567f1e9ccf20d",
+    "independentAssessment": false
+  },
+  "modelInput": {
+    "source": "defense-tree-evidence.json",
+    "profile": "fold_to_raise",
+    "weights": [
+      4,
+      16,
+      1
+    ],
+    "smallResponse": [
+      {
+        "fold": 0,
+        "call": 0,
+        "jam": 1
+      },
+      {
+        "fold": 0.5,
+        "call": 0.5,
+        "jam": 0
+      },
+      {
+        "fold": 0,
+        "call": 0,
+        "jam": 1
+      }
+    ],
+    "jamCall": [
+      1,
+      1,
+      1
+    ],
+    "scope": {
+      "turnActions": [
+        "fold",
+        "call",
+        "raise_to_30",
+        "jam_to_90"
+      ],
+      "riverHero": "Always check first, then fold or call a bet; no river raise or lead evaluated",
+      "turnReraise": "Only opponent jam and hero fold/call",
+      "notFullGame": "Other legal turn raise sizes, river leads and river raises are omitted from this teaching tree. These omissions are explicit task restrictions, not poker rules. No exploitability or equilibrium claim."
+    }
+  },
+  "navigation": {
+    "core": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16"
+    ],
+    "optional": [],
+    "events": [
+      {
+        "from": "A12",
+        "to": "A13",
+        "event": "Actual SB raise_to30 once"
+      },
+      {
+        "from": "A13",
+        "to": "A14",
+        "event": "Observed BTN fold and refund19.5 once"
+      },
+      {
+        "from": "A14",
+        "to": "A15",
+        "event": "Award matched pot42 once"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "A01",
+      "title": "先认真正的退出目标",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "phase": "actual_current_turn",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己AsQs目前面对KJ，谁领先？",
+        "options": [
+          "KJ的一对K",
+          "自己的A高",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A02",
+      "title": "只改一项回应",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "phase": "actual_current_turn",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "本版本KJ面对加到30，有一半退出；它是什么目标？",
+        "options": [
+          "当前赢自己而会退出的牌",
+          "当前输自己而会付钱的牌",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "weights": [
+          4,
+          16,
+          1
+        ],
+        "candidateOrder": [
+          "KK",
+          "KJ",
+          "JT"
+        ],
+        "smallResponse": [
+          {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          {
+            "fold": 0.5,
+            "call": 0.5,
+            "jam": 0
+          },
+          {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          }
+        ]
+      },
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A03",
+      "title": "算清加到与新增",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "phase": "actual_current_turn",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己这街尚未投入，加到30要新增多少？",
+        "options": [
+          30,
+          19.5,
+          60,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A04",
+      "title": "先预演不真扣钱",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 61.5,
+        "heroStack": 60,
+        "villainStack": 79.5,
+        "heroPut": 30,
+        "villainPut": 10.5,
+        "actor": "BTN",
+        "phase": "raise_preview",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "加到30的预演里，池和自己后手是哪项？",
+        "options": [
+          "61.5与60",
+          "51与70.5",
+          "81与60",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A05",
+      "title": "必须把回应算全",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 61.5,
+        "heroStack": 60,
+        "villainStack": 79.5,
+        "heroPut": 30,
+        "villainPut": 10.5,
+        "actor": "BTN",
+        "phase": "raise_preview",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "能只看对手弃牌这条好结果吗？",
+        "options": [
+          "不能，还要计跟与再全下",
+          "能，有更好牌弃就足够",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A06",
+      "title": "退出时还要退未匹配款",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 42,
+        "heroStack": 79.5,
+        "villainStack": 79.5,
+        "heroPut": 10.5,
+        "villainPut": 10.5,
+        "actor": null,
+        "phase": "preview_fold_refund19.5",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "对手弃牌时，自己30比其10.5多出的19.5怎样？",
+        "options": [
+          "先退还，再结算匹配池42",
+          "全部算成额外盈利",
+          "全部丢掉",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A07",
+      "title": "跟注分支保留未来成本",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 81,
+        "heroStack": 60,
+        "villainStack": 60,
+        "heroPut": 30,
+        "villainPut": 30,
+        "actor": "SB",
+        "phase": "preview_future_river_before_card",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "对手补19.5跟完，池81、双方60，能直接当免费摊牌吗？",
+        "options": [
+          "不能，河牌仍有题设行动",
+          "能，听牌只看补张",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "conditionalEVBB": -7.909090909090896,
+        "scope": "All legal rivers and given shared-information continuation were evaluated in the existing model."
+      },
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A08",
+      "title": "再加分支换成当前范围",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "heroPut": 30,
+        "villainPut": 90,
+        "actor": "SB",
+        "phase": "preview_facing_jam",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "本版本对手再全下后，候选还含KJ吗？",
+        "options": [
+          "不含，只剩KK和JT",
+          "还按4:16:1",
+          "只剩KK",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "jamPosterior": {
+          "KK": 0.8,
+          "KJ": 0,
+          "JT": 0.2
+        }
+      },
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A09",
+      "title": "面对再全下重算价格",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "heroPut": 30,
+        "villainPut": 90,
+        "actor": "SB",
+        "phase": "preview_facing_jam",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "对手全下到90，自己已下30，还补多少？",
+        "options": [
+          60,
+          90,
+          30,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A10",
+      "title": "当前增量与旧基点分开",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 141,
+        "heroStack": 60,
+        "villainStack": 0,
+        "heroPut": 30,
+        "villainPut": 90,
+        "actor": "SB",
+        "phase": "preview_facing_jam",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定胜出份额30%，相对现在弃牌，补60的增量是多少？",
+        "options": [
+          0.3,
+          -29.7,
+          -30,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "winShare": 0.3,
+        "finalPot": 201,
+        "callPrice": 0.29850746268656714,
+        "scope": "Exact restricted model oracle, not a real-world estimate with a0.3BB precision guarantee."
+      },
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A11",
+      "title": "关闭预演回真决定",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "phase": "actual_current_turn",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭全部预演，自己实际还剩多少？",
+        "options": [
+          90,
+          60,
+          79.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A12",
+      "title": "三种后果合起来比较",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "phase": "actual_current_turn",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按给定全部后续，受限菜单选择什么？",
+        "options": [
+          "弃牌",
+          "跟10.5",
+          "加到30",
+          "全下90",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": [
+          {
+            "id": "fold",
+            "evBB": 0
+          },
+          {
+            "id": "call",
+            "evBB": -0.15909090909091006
+          },
+          {
+            "id": "raise_to_30",
+            "evBB": 1.9155844155844202
+          },
+          {
+            "id": "jam_to_90",
+            "evBB": -33.87662337662328
+          }
+        ],
+        "weightedContributions": {
+          "fold": 12,
+          "call": -3.0129870129870078,
+          "jam": -7.071428571428571
+        },
+        "scope": "Given EV support, not unaided strategy."
+      },
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A13",
+      "title": "这次才实际加注",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 61.5,
+        "heroStack": 60,
+        "villainStack": 79.5,
+        "heroPut": 30,
+        "villainPut": 10.5,
+        "actor": "BTN",
+        "phase": "actual_wait_response",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己按示范加到30，下一步等谁？",
+        "options": [
+          "BTN对手",
+          "自己再加",
+          "直接发河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A14",
+      "title": "实际弃牌按真实账本退款",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 42,
+        "heroStack": 79.5,
+        "villainStack": 79.5,
+        "heroPut": 10.5,
+        "villainPut": 10.5,
+        "actor": null,
+        "phase": "actual_fold_refund19.5",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN这次实际弃牌后，匹配池是多少？",
+        "options": [
+          42,
+          61.5,
+          81,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A15",
+      "title": "结算与分段收益分开",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 121.5,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": null,
+        "phase": "actual_settled_opponent_cards_not_revealed",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "整手100到121.5，净赢多少？",
+        "options": [
+          21.5,
+          31.5,
+          42,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "A16",
+      "title": "不把一次成功升级为人群规律",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 121.5,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": null,
+        "phase": "actual_settled_opponent_cards_not_revealed",
+        "modelIdentity": "fold_to_raise",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这次对手弃了，能证明现实KJ都按题设半数弃加吗？",
+        "options": [
+          "不能，一次结果不证明频率",
+          "能，已经赢到钱",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "given_restricted_semibluff_model_not_unseen_strategy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "verification": {
+    "foldPart": 12,
+    "callPart": -3.0129870129870078,
+    "jamPart": -7.071428571428571,
+    "currentJamCallIncrement": 0.3,
+    "rootJamCallEV": -29.7,
+    "moneyTotal": 600
+  },
+  "release": {
+    "sourceMatchedTargetPolicy": false,
+    "unseenAssessment": false,
+    "realLearnerTrial": false,
+    "NL50Verified": false
+  }
+}

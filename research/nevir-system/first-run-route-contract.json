@@ -1,0 +1,58 @@
+{
+  "id": "FIRST_RUN_ROUTE_CONTRACT_V1",
+  "status": "declarative_route_contract_not_implemented_or_trialed",
+  "objective": "one_pass_builds_a_reusable_ordered_mental_route",
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close","replay_transfer"],
+  "canonicalLearnerRouteRole": "runtime_surface",
+  "outerRouteRole": "legacy_author_macro_inventory_only",
+  "outerRoute": [
+    {"id":"L0","label":"enter","oneQuestion":"这手牌的桌面、筹码和目标是什么？","oneAction":"start_hand","children":["table_context"],"returnTo":"L0"},
+    {"id":"L1","label":"preflop_context","oneQuestion":"我该查哪张翻前表？","oneAction":"select_chart_context","children":["scenario_locator"],"returnTo":"L1"},
+    {"id":"L2","label":"preflop_grid","oneQuestion":"自己的两张牌落在哪一格？","oneAction":"select_grid_cell","children":["grid_reading","edge_boundary"],"returnTo":"L2"},
+    {"id":"L3","label":"preflop_action","oneQuestion":"这格的动作和权重是什么？","oneAction":"select_preflop_action","children":["exact_action","boundary_compare"],"returnTo":"L3"},
+    {"id":"L4","label":"range_handoff","oneQuestion":"翻后双方的起始范围从哪里来？","oneAction":"select_range_transition","children":["physical_removal","collision_filter","range_view"],"returnTo":"L4"},
+    {"id":"L5","label":"flop_context","oneQuestion":"现在轮到谁、面对什么？","oneAction":"identify_actor_and_price","children":["table","history","money"],"returnTo":"L5"},
+    {"id":"L6","label":"current_decision","oneQuestion":"在当前牌力和范围关系下选什么？","oneAction":"choose_current_policy_action","children":["read_board","read_range","compare_action"],"returnTo":"L6"},
+    {"id":"L7","label":"continue_update","oneQuestion":"动作或新牌改变了什么？","oneAction":"update_one_state_field","children":["action_range","new_card","response"],"returnTo":"L7"},
+    {"id":"L8","label":"close_review","oneQuestion":"我错在结构、牌、范围、价格、动作还是更新？","oneAction":"classify_error_and_recall","children":["structure_recall","adjacent_transfer"],"returnTo":"L8"}
+  ],
+  "postflopSteps": [
+    {"id":"p1_context","parent":"L5","label":"看清局面","oneQuestion":"现在轮到谁，以及我面对什么动作？","returnTo":"L5"},
+    {"id":"p2_board","parent":"L6","label":"读牌和牌力","oneQuestion":"我现在是成牌、听牌、空气还是强成牌？","returnTo":"L6"},
+    {"id":"p3_range","parent":"L6","label":"看范围关系","oneQuestion":"这一步会让谁的哪些组合继续、退出或改变权重？","returnTo":"L6"},
+    {"id":"p4_compare","parent":"L6","label":"比较当前动作","oneQuestion":"在当前完整后续下，哪一个动作符合当前课程政策？","returnTo":"L6"},
+    {"id":"p5_execute","parent":"L6","label":"执行金额","oneQuestion":"我按哪个按钮、投入多少？","returnTo":"L6"},
+    {"id":"p6_update","parent":"L7","label":"动作后更新","oneQuestion":"这次动作和新牌具体改变了什么？","returnTo":"L7"},
+    {"id":"p7_close","parent":"L8","label":"结束回看","oneQuestion":"我错在读牌、范围、价格、按钮还是后续更新？","returnTo":"L8"}
+  ],
+  "screenRules": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "oneOpenChildAtATime": true,
+    "childMustHaveParentAndReturnTo": true,
+    "parentFrameRestoredOnClose": true,
+    "unknownCountsAsWrong": true,
+    "missingReferenceStopsExactGrade": true,
+    "firstAnswerPreserved": true,
+    "noFlatThirtyFiveUnitHome": true
+  },
+  "assistance": [
+    {"id":"demonstration","titleVisible":true,"answerColorVisible":true,"independentEvidence":false},
+    {"id":"guided","titleVisible":true,"answerColorVisible":false,"independentEvidence":false},
+    {"id":"independent_candidate","titleVisible":false,"answerColorVisible":false,"independentEvidence":true}
+  ],
+  "errorRecovery": {
+    "order":["identify_layer","highlight_one_fact","show_one_contrast","retry_same_parent"],
+    "wrongLayerReturnsTo":"nearest_missing_layer",
+    "retryDoesNotOverwriteFirstAnswer":true
+  },
+  "firstPassChecks": ["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "currentStatus": {
+    "paperRoute": true,
+    "pageImplemented": false,
+    "matchedStrategyComplete": false,
+    "adultBeginnerTrial": false,
+    "continuousUnseenTransfer": false,
+    "NL50Evidence": false
+  }
+}

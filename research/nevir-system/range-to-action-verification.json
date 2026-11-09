@@ -1,0 +1,174 @@
+{
+  "ok": true,
+  "publicQuestions": 4,
+  "independentSourceFamilies": 1,
+  "authoredHistories": 2,
+  "audit": [
+    {
+      "name": "exact relative weights",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "same relative weights scaled",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "already normalized accepted",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "not reset to flop prior",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "unknown is wrong not uniform",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "answeredUnknown": true
+      }
+    },
+    {
+      "name": "empty draft not a completed wrong answer",
+      "result": {
+        "gradeable": false,
+        "reason": "unfinished_or_invalid_entry"
+      }
+    },
+    {
+      "name": "cannot zero all candidates",
+      "result": {
+        "gradeable": false,
+        "reason": "unfinished_or_invalid_entry"
+      }
+    },
+    {
+      "name": "B must use actual B history",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "B update",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    },
+    {
+      "name": "A action",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "answeredUnknown": false,
+        "evLossBB": 0,
+        "computedRangeFeedbackSeen": false,
+        "otherSolutionHelpSeen": false,
+        "potentiallyUnassistedWithinGivenModel": true,
+        "realLearnerOrHeldoutEvidence": false,
+        "actualActionCommitted": false
+      }
+    },
+    {
+      "name": "B action",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "answeredUnknown": false,
+        "evLossBB": 0,
+        "computedRangeFeedbackSeen": false,
+        "otherSolutionHelpSeen": false,
+        "potentiallyUnassistedWithinGivenModel": true,
+        "realLearnerOrHeldoutEvidence": false,
+        "actualActionCommitted": false
+      }
+    },
+    {
+      "name": "same visible cards and money not same choice",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "answeredUnknown": false,
+        "evLossBB": 3.8888888888888893,
+        "computedRangeFeedbackSeen": false,
+        "otherSolutionHelpSeen": false,
+        "potentiallyUnassistedWithinGivenModel": true,
+        "realLearnerOrHeldoutEvidence": false,
+        "actualActionCommitted": false
+      }
+    },
+    {
+      "name": "unknown does not execute",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "answeredUnknown": true,
+        "evLossBB": null,
+        "computedRangeFeedbackSeen": false,
+        "otherSolutionHelpSeen": false,
+        "potentiallyUnassistedWithinGivenModel": true,
+        "realLearnerOrHeldoutEvidence": false,
+        "actualActionCommitted": false
+      }
+    },
+    {
+      "name": "uncalculated legal size not wrong",
+      "result": {
+        "gradeable": false,
+        "reason": "outside_compared_plans"
+      }
+    },
+    {
+      "name": "range feedback assists action even if action correct",
+      "result": {
+        "gradeable": true,
+        "correct": true,
+        "answeredUnknown": false,
+        "evLossBB": 0,
+        "computedRangeFeedbackSeen": true,
+        "otherSolutionHelpSeen": false,
+        "potentiallyUnassistedWithinGivenModel": false,
+        "realLearnerOrHeldoutEvidence": false,
+        "actualActionCommitted": false
+      }
+    },
+    {
+      "name": "cannot reuse A reference after B history swap",
+      "result": {
+        "gradeable": false,
+        "reason": "author_input_mismatch"
+      }
+    },
+    {
+      "name": "wrong update despite right button",
+      "result": {
+        "gradeable": true,
+        "correct": false,
+        "evidenceScope": "conditional_range_update_only_not_action_or_real_opponent_estimation"
+      }
+    }
+  ],
+  "wrongRangeStillSelectsRightAction": true,
+  "actualLearnerTrials": 0,
+  "sourcePolicyAcquired": false,
+  "newContextCells": 0
+}

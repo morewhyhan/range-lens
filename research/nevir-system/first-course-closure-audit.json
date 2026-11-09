@@ -1,0 +1,52 @@
+{
+  "id": "FIRST_COURSE_CLOSURE_AUDIT_V1",
+  "status": "a72_stops_before_matched_strategy",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "gates": [
+    {"id":"C0","status":"prepared_not_open","opens":"input_preflight","blocks":"exact_reference"},
+    {"id":"C1","status":"fact_candidate_not_closed","opens":"starting_range_fact","blocks":"postflop_policy"},
+    {"id":"C2","status":"reference_missing","opens":"fact_or_demonstration","blocks":"precise_flop_action"},
+    {"id":"C3","status":"reference_missing","opens":"physical_filter_only","blocks":"action_conditioned_range"},
+    {"id":"C4","status":"reference_missing","opens":"physical_turn_structure_only","blocks":"continuous_turn_strategy"},
+    {"id":"C5","status":"reference_missing","opens":"ledger_demonstration_only","blocks":"continuous_three_street_strategy"},
+    {"id":"C6","status":"compiler_not_implemented","opens":"course_source_review","blocks":"simplification_impact"},
+    {"id":"C7","status":"paper_route_not_static_package","opens":"author_demonstration_candidate","blocks":"released_course_package"},
+    {"id":"C8","status":"partial_independent_checks","opens":"paper_audit","blocks":"exact_strategy_release"},
+    {"id":"C9","status":"trial_packet_frozen_not_administered","opens":"host_preparation","blocks":"learner_mastery_claim"}
+  ],
+  "allowedReleaseIdentities": ["starting_range_fact","postflop_demonstration","course_policy_practice","matched_strategy_practice"],
+  "currentReleaseIdentity": "starting_range_fact_or_postflop_demonstration_candidate",
+  "gapFrameDependencies": [
+    {"insertion":"I03","principle":"P03","requiresGate":"C1","allowedIdentity":"starting_range_fact","status":"fact_open"},
+    {"insertion":"I05","principle":"P05","requiresGate":"C1","allowedIdentity":"starting_range_fact","status":"reference_missing"},
+    {"insertion":"I07","principle":"P07","requiresGate":"C2","allowedIdentity":"course_policy_practice_or_matched_strategy_practice","status":"policy_or_reference_missing"},
+    {"insertion":"I08","principle":"P08","requiresGate":"C2","allowedIdentity":"ledger_fact_or_course_policy_practice","status":"policy_or_reference_missing"},
+    {"insertion":"I10","principle":"P10","requiresGate":"C3","allowedIdentity":"matched_strategy_practice","status":"reference_missing"},
+    {"insertion":"I11","principle":"P11","requiresGate":"C4","allowedIdentity":"matched_strategy_practice_or_physical_stop","status":"successor_reference_missing"}
+  ],
+  "releaseDecision": {
+    "matchedStrategyPractice": false,
+    "continuousThreeStreetLesson": false,
+    "lowBaselineMastery": false,
+    "NL50Claim": false
+  },
+  "hardRules": {
+    "missingC2BlocksPreciseAction": true,
+    "missingC3BlocksActionRange": true,
+    "missingC5BlocksContinuousLesson": true,
+    "missingC6BlocksSimplificationImpact": true,
+    "missingC9BlocksLearnerMastery": true,
+    "localCaseCannotFillA72": true,
+    "shortTermResultCannotInferAction": true
+  },
+  "nextPriority": "close_A72_C0_to_C5_with_raw_reference_and_independent_recompute",
+  "currentEvidence": {
+    "a72InputsPrepared": true,
+    "a72ReferenceSolved": false,
+    "a72CoursePackageBuilt": false,
+    "gapFrameDependenciesAudited": true,
+    "gapFrameReferenceNodesReceived": 0,
+    "adultBeginnerTrial": false,
+    "NL50Evidence": false
+  }
+}

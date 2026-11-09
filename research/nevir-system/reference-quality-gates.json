@@ -1,0 +1,69 @@
+{
+  "id": "REFERENCE_QUALITY_GATES_V1",
+  "status": "quality_ladder_written_not_calibrated",
+  "purpose": "区分输入正确、输出可重载、求解质量、简化损失和学习发布，防止用单一引擎指标证明完整GTO或NL50。",
+  "levels": [
+    {
+      "id": "RQ0_identity",
+      "name": "配置身份",
+      "required": ["sourceHash", "solverCommit", "inputFingerprint", "rangeFingerprint", "actionTreeFingerprint", "rakeIdentity"],
+      "passMeaning": "知道这份结果究竟在什么配置下产生",
+      "doesNotProve": ["牌力正确", "求解收敛", "课程简化可靠"]
+    },
+    {
+      "id": "RQ1_physical",
+      "name": "物理与账本",
+      "required": ["legalCards", "bestFiveCrossCheck", "jointComboFilter", "ledgerConservation", "equityCrossCheck"],
+      "passMeaning": "牌张、组合、权益和金额可以独立复算",
+      "doesNotProve": ["行动策略", "后继政策", "均衡质量"]
+    },
+    {
+      "id": "RQ2_policy_integrity",
+      "name": "原始政策完整性",
+      "required": ["reloadPreservesRawValues", "decisionIndexMapping", "zeroReachRows", "actualActionAmounts", "successorIndex"],
+      "passMeaning": "导出的逐手动作、EV、到达权重和后继没有因保存/显示而改变",
+      "doesNotProve": ["求解器已经达到目标精度", "策略是完全自由最佳回应"]
+    },
+    {
+      "id": "RQ3_solver_quality",
+      "name": "求解质量",
+      "required": ["convergenceDefinition", "stoppingReason", "unlockedDeviationEvaluation", "terminalRecheck", "supportedRowsSeparated"],
+      "passMeaning": "有独立证据评价有限行动树下的求解质量",
+      "doesNotProve": ["未放入行动树的尺寸", "课程简化损失", "学习者能力"]
+    },
+    {
+      "id": "RQ4_course_impact",
+      "name": "课程简化影响",
+      "required": ["sameConfigReferenceAndCourse", "perHandActionDelta", "rootAndAncestorEVDelta", "rangeDelta", "successorImpact", "boundaryCases"],
+      "passMeaning": "知道课程规则相对参考改变了什么以及在哪些边界失效",
+      "doesNotProve": ["简化优于参考", "其它牌面自动适用", "真实盈利"]
+    },
+    {
+      "id": "RQ5_learning_release",
+      "name": "学习发布",
+      "required": ["completeSuccessorClosure", "heldoutTransfer", "firstPassTrial", "errorLayerEvidence", "targetConfigAudit"],
+      "passMeaning": "课包可以进入相应身份的学习者验证",
+      "doesNotProve": ["永久NL50盈利", "所有学习者都能达成", "无需复习"]
+    }
+  ],
+  "decisionStates": ["pass", "candidate", "blocked", "not_comparable"],
+  "thresholdRules": {
+    "singleGlobalThresholdForbidden": true,
+    "thresholdMustBeCalibratedOnMatchedNodes": true,
+    "lockedSolverMetricCannotStandForUnlockedQuality": true,
+    "displayRoundingCannotBeGradingInput": true,
+    "smallPositiveEVDoesNotMeanCourseBetter": true,
+    "oneSolvedBoardDoesNotGeneralize": true
+  },
+  "currentEvidence": {
+    "RQ0_A72": "prepared",
+    "RQ1_A72": "fact_candidate",
+    "RQ2_A72": "missing",
+    "RQ3_A72": "missing",
+    "RQ4_A72": "missing",
+    "RQ5_A72": "missing",
+    "thresholdsCalibrated": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

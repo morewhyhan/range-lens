@@ -1,0 +1,1349 @@
+{
+  "NL50Reference": false,
+  "appChanged": false,
+  "cases": [
+    {
+      "actualIterationsReported": null,
+      "id": "all_bet",
+      "locks": [
+        "OOP always check at root",
+        "IP always bets182 after check"
+      ],
+      "maxIterationsRequested": 64,
+      "memoryUsageBytes": [
+        145016,
+        144948
+      ],
+      "metricScope": "Locked policies; not unconstrained equilibrium quality or target game.",
+      "nodes": [
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "actor": 0,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [],
+          "historyIndices": [],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 2.0,
+              "conditionalProbabilityWithinNode": 0.6666666865348816,
+              "engineEVByAction": [
+                503.5,
+                526.75
+              ],
+              "engineStrategyWeightedEV": 503.5,
+              "hand": "QsQh",
+              "handIndex": 0,
+              "publishedActionEV": [
+                503.5,
+                526.75
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.3333333432674408,
+              "engineEVByAction": [
+                732.0,
+                641.0
+              ],
+              "engineStrategyWeightedEV": 732.0,
+              "hand": "AsAh",
+              "handIndex": 1,
+              "publishedActionEV": [
+                732.0,
+                641.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                1.0,
+                0.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "actor": 1,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [
+            "Check"
+          ],
+          "historyIndices": [
+            0
+          ],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 2.0,
+              "conditionalProbabilityWithinNode": 0.6666666865348816,
+              "engineEVByAction": [
+                137.5,
+                46.5
+              ],
+              "engineStrategyWeightedEV": 46.5,
+              "hand": "QdQc",
+              "handIndex": 0,
+              "publishedActionEV": [
+                137.5,
+                46.5
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.3333333432674408,
+              "engineEVByAction": [
+                0.0,
+                -182.0
+              ],
+              "engineStrategyWeightedEV": -182.0,
+              "hand": "AsQc",
+              "handIndex": 1,
+              "publishedActionEV": [
+                0.0,
+                -182.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Check"
+          ],
+          "historyIndices": [
+            0,
+            0
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Fold",
+            "Call"
+          ],
+          "actor": 0,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "historyIndices": [
+            0,
+            1
+          ],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 2.0,
+              "conditionalProbabilityWithinNode": 0.6666666865348816,
+              "engineEVByAction": [
+                0.0,
+                503.5
+              ],
+              "engineStrategyWeightedEV": 503.5,
+              "hand": "QsQh",
+              "handIndex": 0,
+              "publishedActionEV": [
+                0.0,
+                503.5
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.3333333432674408,
+              "engineEVByAction": [
+                0.0,
+                732.0
+              ],
+              "engineStrategyWeightedEV": 732.0,
+              "hand": "AsAh",
+              "handIndex": 1,
+              "publishedActionEV": [
+                0.0,
+                732.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            182
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)",
+            "Fold"
+          ],
+          "historyIndices": [
+            0,
+            1,
+            0
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            0,
+            182
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)",
+            "Call"
+          ],
+          "historyIndices": [
+            0,
+            1,
+            1
+          ],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            182
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Fold",
+            "Call"
+          ],
+          "actor": 1,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)"
+          ],
+          "historyIndices": [
+            1
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 0.0,
+              "conditionalProbabilityWithinNode": null,
+              "engineEVByAction": [
+                0.0,
+                0.0
+              ],
+              "engineStrategyWeightedEV": 0.0,
+              "hand": "QdQc",
+              "handIndex": 0,
+              "publishedActionEV": [
+                null,
+                null
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": false,
+              "strategyByAction": [
+                0.5,
+                0.5
+              ]
+            },
+            {
+              "compatibleJointMass": 0.0,
+              "conditionalProbabilityWithinNode": null,
+              "engineEVByAction": [
+                0.0,
+                0.0
+              ],
+              "engineStrategyWeightedEV": 0.0,
+              "hand": "AsQc",
+              "handIndex": 1,
+              "publishedActionEV": [
+                null,
+                null
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": false,
+              "strategyByAction": [
+                0.5,
+                0.5
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            182,
+            0
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)",
+            "Fold"
+          ],
+          "historyIndices": [
+            1,
+            0
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            0
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)",
+            "Call"
+          ],
+          "historyIndices": [
+            1,
+            1
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            182
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        }
+      ],
+      "returnedMetric": 0.0
+    },
+    {
+      "actualIterationsReported": null,
+      "id": "split_by_own_hand",
+      "locks": [
+        "OOP always check at root",
+        "IP bets QQ and checks AsQc after check"
+      ],
+      "maxIterationsRequested": 64,
+      "memoryUsageBytes": [
+        145016,
+        144948
+      ],
+      "metricScope": "Locked policies; not unconstrained equilibrium quality or target game.",
+      "nodes": [
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "actor": 0,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [],
+          "historyIndices": [],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 2.0,
+              "conditionalProbabilityWithinNode": 0.6666666865348816,
+              "engineEVByAction": [
+                412.5,
+                526.75
+              ],
+              "engineStrategyWeightedEV": 412.5,
+              "hand": "QsQh",
+              "handIndex": 0,
+              "publishedActionEV": [
+                412.5,
+                526.75
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.3333333432674408,
+              "engineEVByAction": [
+                732.0,
+                641.0
+              ],
+              "engineStrategyWeightedEV": 732.0,
+              "hand": "AsAh",
+              "handIndex": 1,
+              "publishedActionEV": [
+                732.0,
+                641.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                1.0,
+                0.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "actor": 1,
+          "compatibleJointMassWeights": [
+            [
+              2.0,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ]
+          ],
+          "historyActions": [
+            "Check"
+          ],
+          "historyIndices": [
+            0
+          ],
+          "jointReachMass": 3.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 2.0,
+              "conditionalProbabilityWithinNode": 0.6666666865348816,
+              "engineEVByAction": [
+                137.5,
+                46.5
+              ],
+              "engineStrategyWeightedEV": 46.5,
+              "hand": "QdQc",
+              "handIndex": 0,
+              "publishedActionEV": [
+                137.5,
+                46.5
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.3333333432674408,
+              "engineEVByAction": [
+                0.0,
+                -182.0
+              ],
+              "engineStrategyWeightedEV": 0.0,
+              "hand": "AsQc",
+              "handIndex": 1,
+              "publishedActionEV": [
+                0.0,
+                -182.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                1.0,
+                0.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 1.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Check"
+          ],
+          "historyIndices": [
+            0,
+            0
+          ],
+          "jointReachMass": 1.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            0,
+            0
+          ],
+          "unconditionalPathProbability": 0.3333333432674408,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Fold",
+            "Call"
+          ],
+          "actor": 0,
+          "compatibleJointMassWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              2.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)"
+          ],
+          "historyIndices": [
+            0,
+            1
+          ],
+          "jointReachMass": 2.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.5,
+              "engineEVByAction": [
+                0.0,
+                275.0
+              ],
+              "engineStrategyWeightedEV": 275.0,
+              "hand": "QsQh",
+              "handIndex": 0,
+              "publishedActionEV": [
+                0.0,
+                275.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "compatibleJointMass": 1.0,
+              "conditionalProbabilityWithinNode": 0.5,
+              "engineEVByAction": [
+                0.0,
+                732.0
+              ],
+              "engineStrategyWeightedEV": 732.0,
+              "hand": "AsAh",
+              "handIndex": 1,
+              "publishedActionEV": [
+                0.0,
+                732.0
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": true,
+              "strategyByAction": [
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            0,
+            182
+          ],
+          "unconditionalPathProbability": 0.6666666865348816,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)",
+            "Fold"
+          ],
+          "historyIndices": [
+            0,
+            1,
+            0
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            0,
+            182
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              2.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Check",
+            "Bet(182)",
+            "Call"
+          ],
+          "historyIndices": [
+            0,
+            1,
+            1
+          ],
+          "jointReachMass": 2.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            182
+          ],
+          "unconditionalPathProbability": 0.6666666865348816,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [
+            "Fold",
+            "Call"
+          ],
+          "actor": 1,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)"
+          ],
+          "historyIndices": [
+            1
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "rows": [
+            {
+              "compatibleJointMass": 0.0,
+              "conditionalProbabilityWithinNode": null,
+              "engineEVByAction": [
+                0.0,
+                0.0
+              ],
+              "engineStrategyWeightedEV": 0.0,
+              "hand": "QdQc",
+              "handIndex": 0,
+              "publishedActionEV": [
+                null,
+                null
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": false,
+              "strategyByAction": [
+                0.5,
+                0.5
+              ]
+            },
+            {
+              "compatibleJointMass": 0.0,
+              "conditionalProbabilityWithinNode": null,
+              "engineEVByAction": [
+                0.0,
+                0.0
+              ],
+              "engineStrategyWeightedEV": 0.0,
+              "hand": "AsQc",
+              "handIndex": 1,
+              "publishedActionEV": [
+                null,
+                null
+              ],
+              "rawReachWeight": 1.0,
+              "referenceUsableAtThisObservedNode": false,
+              "strategyByAction": [
+                0.5,
+                0.5
+              ]
+            }
+          ],
+          "terminal": false,
+          "totalBetAmount": [
+            182,
+            0
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)",
+            "Fold"
+          ],
+          "historyIndices": [
+            1,
+            0
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            0
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        },
+        {
+          "actionMajorLayout": "actionIndex*privateHandCount+handIndex",
+          "actions": [],
+          "actor": null,
+          "compatibleJointMassWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "historyActions": [
+            "Bet(182)",
+            "Call"
+          ],
+          "historyIndices": [
+            1,
+            1
+          ],
+          "jointReachMass": 0.0,
+          "orderedHands": [
+            [
+              "QsQh",
+              "AsAh"
+            ],
+            [
+              "QdQc",
+              "AsQc"
+            ]
+          ],
+          "rawReachWeights": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "rows": [],
+          "terminal": true,
+          "totalBetAmount": [
+            182,
+            182
+          ],
+          "unconditionalPathProbability": 0.0,
+          "zeroReachPolicy": "Preserve raw engine values for audit; do not publish zero-support EV as a grading reference."
+        }
+      ],
+      "returnedMetric": 0.0
+    }
+  ],
+  "context": {
+    "board": [
+      "Ks",
+      "7h",
+      "2d",
+      "3c",
+      "9h"
+    ],
+    "effectiveStack": 9750,
+    "rake": 0,
+    "startingPot": 550
+  },
+  "rawRangeWeights": "Each listed physical holding has mass1 before compatibility. There are3 compatible joint pairs, not4.",
+  "requestedFullFlopSolved": false,
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "actual_tiny_river_export_probe_not_original_flop_reference",
+  "unitsPerBB": 100
+}

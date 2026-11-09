@@ -1,0 +1,253 @@
+{
+  "id": "A72_FACT_AND_STOP_QUESTION_FIXTURES_V1",
+  "status": "paper_fact_and_stop_question_fixtures_compiled_strategy_fixture_blocked",
+  "purpose": "用已经独立核对的A72事实和缺参考停止边界，验证自动出题器能生成可追溯的题卡而不越级生成策略答案。",
+  "sources": [
+    "a72-c1-independent-physical-snapshot.json",
+    "first-course-closure-audit.json",
+    "automatic-question-generation-contract.json",
+    "reference-snapshot-intake-and-match-contract.json"
+  ],
+  "fixtures": [
+    {
+      "questionId": "A72_FACT_P1_ACTOR_V1",
+      "routeParent": "p1_context",
+      "unitId": null,
+      "questionMode": "fact",
+      "sourceIdentity": "A72_C1_independent_physical_snapshot",
+      "configurationFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+      "parentSnapshotHash": "93cdfd74b1c8a3c3fd689d4efb6741a2c634cfc7bdfd243161f77fd9d1183af1",
+      "visibleInputs": {
+        "table": "6人现金桌",
+        "effectiveStackBB": 100,
+        "preflop": "UTG/HJ/CO弃牌，BTN开2.5BB，SB弃牌，BB跟注",
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "actor": "BB",
+        "potBB": 5.5,
+        "rangeLabels": [
+          "BB普通中",
+          "BTN开池"
+        ],
+        "hidden": [
+          "opponentHoleCards",
+          "referenceActionFrequency",
+          "futureOpponentAction"
+        ]
+      },
+      "plainPrompt": "现在翻牌前的动作结束了，翻牌先轮到谁？",
+      "primaryAction": "select_one",
+      "requiredOutput": [
+        "currentActor"
+      ],
+      "options": [
+        "BB",
+        "BTN",
+        "已经摊牌",
+        "我不知道"
+      ],
+      "answerIdentity": "fact",
+      "gradingRule": {
+        "acceptedOutputs": [
+          "BB"
+        ],
+        "toleranceOrExactness": "exact",
+        "unknownHandling": "wrong",
+        "firstAnswerPreserved": true,
+        "helpLevel": "H0"
+      },
+      "answer": {
+        "currentActor": "BB"
+      },
+      "explanation": "前面是BTN开池、SB弃牌、BB跟注；翻牌前没有新的动作，所以翻牌先由BB行动。",
+      "rangeViewOrStop": {
+        "type": "none",
+        "reason": "this card only locates the actor"
+      },
+      "successorOrStop": {
+        "type": "next",
+        "next": "p2_board"
+      },
+      "transferSpec": null
+    },
+    {
+      "questionId": "A72_FACT_P3_JOINT_PRIOR_V1",
+      "routeParent": "p3_range",
+      "unitId": "5.7",
+      "questionMode": "fact",
+      "sourceIdentity": "A72_C1_independent_physical_snapshot",
+      "configurationFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+      "parentSnapshotHash": "93cdfd74b1c8a3c3fd689d4efb6741a2c634cfc7bdfd243161f77fd9d1183af1",
+      "visibleInputs": {
+        "table": "6人现金桌",
+        "effectiveStackBB": 100,
+        "preflop": "UTG/HJ/CO弃牌，BTN开2.5BB，SB弃牌，BB跟注",
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "actor": "BB",
+        "potBB": 5.5,
+        "rangeLabels": [
+          "BB普通中",
+          "BTN开池"
+        ],
+        "hidden": [
+          "opponentHoleCards",
+          "referenceActionFrequency",
+          "futureOpponentAction"
+        ]
+      },
+      "plainPrompt": "已知这三张公共牌和两边的起始范围，去掉撞牌后，双方一共有多少种合法组合配对？",
+      "primaryAction": "enter_number",
+      "requiredOutput": [
+        "compatiblePairs",
+        "physicalFilterSeparate"
+      ],
+      "options": [
+        "164251",
+        "17255",
+        "124335.25",
+        "我不知道"
+      ],
+      "answerIdentity": "fact",
+      "gradingRule": {
+        "acceptedOutputs": [
+          {
+            "compatiblePairs": 164251,
+            "physicalFilterSeparate": true
+          }
+        ],
+        "toleranceOrExactness": "exact",
+        "unknownHandling": "wrong",
+        "firstAnswerPreserved": true,
+        "helpLevel": "H1"
+      },
+      "answer": {
+        "compatiblePairs": 164251,
+        "physicalFilterSeparate": true,
+        "unnormalizedMass": 124335.25
+      },
+      "explanation": "先删掉公共牌冲突和双方私牌相撞的组合；这一步只说明哪些组合在实体上可能，尚未使用任何下注频率。",
+      "rangeViewOrStop": {
+        "type": "fact_chart",
+        "before": [
+          "BB:358个实体组合",
+          "BTN:507个实体组合"
+        ],
+        "joint": "164251个合法组合配对",
+        "actionFilter": "not_applied"
+      },
+      "successorOrStop": {
+        "type": "next",
+        "next": "p4_compare",
+        "note": "只有取得匹配动作参考后才可比较下注"
+      },
+      "transferSpec": {
+        "changedField": "board",
+        "preservedFields": [
+          "ranges",
+          "history",
+          "configuration"
+        ],
+        "affectedLayer": "p3_range",
+        "holdoutStatus": "not_open_without_new_fact_snapshot"
+      }
+    },
+    {
+      "questionId": "A72_STOP_P4_REFERENCE_MISSING_V1",
+      "routeParent": "p4_compare",
+      "unitId": "1.5",
+      "questionMode": "stop",
+      "sourceIdentity": "A72_C1_independent_physical_snapshot",
+      "configurationFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+      "parentSnapshotHash": "93cdfd74b1c8a3c3fd689d4efb6741a2c634cfc7bdfd243161f77fd9d1183af1",
+      "visibleInputs": {
+        "table": "6人现金桌",
+        "effectiveStackBB": 100,
+        "preflop": "UTG/HJ/CO弃牌，BTN开2.5BB，SB弃牌，BB跟注",
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "actor": "BB",
+        "potBB": 5.5,
+        "rangeLabels": [
+          "BB普通中",
+          "BTN开池"
+        ],
+        "hidden": [
+          "opponentHoleCards",
+          "referenceActionFrequency",
+          "futureOpponentAction"
+        ]
+      },
+      "plainPrompt": "现在没有与这套范围、牌面、筹码和动作菜单完全匹配的下注参考。此时应该怎么办？",
+      "primaryAction": "select_stop",
+      "requiredOutput": [
+        "stopReason",
+        "returnTo"
+      ],
+      "options": [
+        "按相邻牌面猜一个下注",
+        "把权益最高的动作当答案",
+        "停在当前节点并返回p4",
+        "我不知道"
+      ],
+      "answerIdentity": "stop",
+      "gradingRule": {
+        "acceptedOutputs": [
+          {
+            "stopReason": "missing_matched_reference",
+            "returnTo": "p4_compare"
+          }
+        ],
+        "toleranceOrExactness": "exact",
+        "unknownHandling": "wrong",
+        "firstAnswerPreserved": true,
+        "helpLevel": "H0"
+      },
+      "answer": {
+        "stopReason": "missing_matched_reference",
+        "returnTo": "p4_compare"
+      },
+      "explanation": "C2参考策略尚未取得，不能把相邻案例、权益或有限模型当成动作答案；停止是这一题的正确结果。",
+      "rangeViewOrStop": {
+        "type": "stop_card",
+        "reason": "missing_matched_reference",
+        "visible": "资料不足：不能判精确动作"
+      },
+      "successorOrStop": {
+        "type": "stop",
+        "returnTo": "p4_compare",
+        "next": null
+      },
+      "transferSpec": null
+    }
+  ],
+  "rules": {
+    "allRequiredQuestionFieldsPresent": true,
+    "everyFixtureHasUnknownButton": true,
+    "factDoesNotUseActionFrequency": true,
+    "stopDoesNotUseDefaultAction": true,
+    "sameConfigurationFingerprint": true,
+    "uniqueQuestionIdentity": true,
+    "strategyFixturesBlockedUntilMatchedReference": true,
+    "actionAfterRangeFixtureBlockedUntilC3": true
+  },
+  "currentEvidence": {
+    "factFixturesCompiled": true,
+    "stopFixtureCompiled": true,
+    "referencePolicyFixture": false,
+    "rangeAfterFixture": false,
+    "successorStrategyFixture": false,
+    "runtimeAttached": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

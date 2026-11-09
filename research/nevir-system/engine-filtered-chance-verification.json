@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "status": "action_filtered_chance_and_EV_origin_checked_not_target_strategy",
+  "riverRecords": 96,
+  "handRows": 480,
+  "unsupportedRows": 112,
+  "independentJointRunouts": 264,
+  "rootChecks": [
+    {
+      "player": 0,
+      "hand": "AhQh",
+      "independentRootEV": 46.46969696969697,
+      "engineRootEV": 46.46968078613281
+    },
+    {
+      "player": 0,
+      "hand": "AsQs",
+      "independentRootEV": 182.34848484848484,
+      "engineRootEV": 182.34848022460938
+    },
+    {
+      "player": 1,
+      "hand": "JsTs",
+      "independentRootEV": 131.25,
+      "engineRootEV": 131.24998474121094
+    },
+    {
+      "player": 1,
+      "hand": "KcJc",
+      "independentRootEV": 516.2272727272727,
+      "engineRootEV": 516.227294921875
+    },
+    {
+      "player": 1,
+      "hand": "KhKd",
+      "independentRootEV": 659.2954545454545,
+      "engineRootEV": 659.29541015625
+    }
+  ],
+  "rootComparedWithAllPhysicalRunouts": true,
+  "callEVEqualsPostCallEVMinus182": true,
+  "naiveGrossBranchAverageOverstatesRootByUnits": 91,
+  "JsProbability": {
+    "afterBetCalled": 0.022727272727272728,
+    "afterBothCheck": 0.007575757575757575,
+    "priorWeightedAverage": 0.015151515151515152
+  },
+  "fileHashes": {
+    "research/solver-probe/src/bin/filtered_chance_probe.rs": "be2bfe6eca45d349f309a4ba4f8fda4f8449ff5bc47602837d311ab05af80e12",
+    "research/solver-probe/target/release/filtered_chance_probe.exe": "d8946fe8cbb0103a2656980adb2300f7694c7d2d0d77488339ba19a0fc3d6839",
+    "research/nevir-system/engine-filtered-chance-probe.json": "da6f7214478acfb39ce9daf10c317c7519faf47bc31c5d5ecea1e09f5a549ec5"
+  },
+  "fullOriginalFlopSolved": false,
+  "learnerTrials": 0,
+  "limits": [
+    "Fixed author locks and no river bets; not an optimal turn strategy.",
+    "No double-chance export yet.",
+    "No complete original lesson or NL50 reference."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "status": "author_manual_visual_review_not_user_test",
+  "reviewDate": "2026-10-21",
+  "allSixOpened": true,
+  "checks": [
+    "牌张与执行状态一致",
+    "文字可读且无溢出遮挡",
+    "候选标明非实际亮牌",
+    "默认与按需层分开",
+    "金额和收益说明与核对包一致"
+  ],
+  "images": [
+    {
+      "path": "figures/visual-river-1.png",
+      "sha256": "ede923f1a62e0024e66b5e758014811e335728068c3662d361445aab30b4eb17",
+      "width": 1100,
+      "height": 1000
+    },
+    {
+      "path": "figures/visual-river-2.png",
+      "sha256": "9d020eaf2883de380e9848414d76b9df9803e31513b198674efdf4da447f55a7",
+      "width": 1100,
+      "height": 1000
+    },
+    {
+      "path": "figures/visual-river-3.png",
+      "sha256": "95cf173db455cf21bd0cfb10e4095d8fc6d72563cf828a4fae3396a3cb2a2838",
+      "width": 1100,
+      "height": 1000
+    },
+    {
+      "path": "figures/visual-river-4.png",
+      "sha256": "ff494604da5c2f381fab0e8640486b4a6c41f2fcfb2b7df5bb02ec760e469a2f",
+      "width": 1100,
+      "height": 1000
+    },
+    {
+      "path": "figures/visual-river-5.png",
+      "sha256": "c49769cfbe3ee3935827d8e27413077b0d741141f3a7bb696301105f407b019a",
+      "width": 1100,
+      "height": 1000
+    },
+    {
+      "path": "figures/visual-river-6.png",
+      "sha256": "c34f923f1f916831953a87356b2707cff22f1e28c9a524996bd6c716ad407eb2",
+      "width": 1100,
+      "height": 1000
+    }
+  ],
+  "learnerTrials": 0
+}

@@ -1,0 +1,118 @@
+{
+  "afterCheckEV": {
+    "examples": [
+      {
+        "index": 8,
+        "loaded": 203.26138305664062,
+        "loadedFloat32Bits": 1129005802,
+        "originalFloat32Bits": 1129005802,
+        "originalJSON": 203.26138305664065
+      },
+      {
+        "index": 113,
+        "loaded": 397.75994873046875,
+        "loadedFloat32Bits": 1137107270,
+        "originalFloat32Bits": 1137107270,
+        "originalJSON": 397.7599487304687
+      },
+      {
+        "index": 114,
+        "loaded": 397.75994873046875,
+        "loadedFloat32Bits": 1137107270,
+        "originalFloat32Bits": 1137107270,
+        "originalJSON": 397.7599487304687
+      }
+    ],
+    "float32BitDifferences": 0,
+    "jsonFloat64Differences": 119,
+    "maxAbsoluteDifference": 5.684341886080802e-14,
+    "values": 1700
+  },
+  "afterCheckStrategy": {
+    "examples": [
+      {
+        "index": 46,
+        "loaded": 0.47981956601142883,
+        "loadedFloat32Bits": 1056287465,
+        "originalFloat32Bits": 1056287465,
+        "originalJSON": 0.4798195660114288
+      },
+      {
+        "index": 55,
+        "loaded": 0.47981956601142883,
+        "loadedFloat32Bits": 1056287465,
+        "originalFloat32Bits": 1056287465,
+        "originalJSON": 0.4798195660114288
+      },
+      {
+        "index": 63,
+        "loaded": 0.47981956601142883,
+        "loadedFloat32Bits": 1056287465,
+        "originalFloat32Bits": 1056287465,
+        "originalJSON": 0.4798195660114288
+      }
+    ],
+    "float32BitDifferences": 0,
+    "jsonFloat64Differences": 132,
+    "maxAbsoluteDifference": 1.1102230246251565e-16,
+    "values": 1700
+  },
+  "rootEV": {
+    "examples": [
+      {
+        "index": 4,
+        "loaded": 92.29521179199219,
+        "loadedFloat32Bits": 1119393574,
+        "originalFloat32Bits": 1119393574,
+        "originalJSON": 92.2952117919922
+      },
+      {
+        "index": 8,
+        "loaded": 99.66203308105469,
+        "loadedFloat32Bits": 1120359158,
+        "originalFloat32Bits": 1120359158,
+        "originalJSON": 99.66203308105467
+      },
+      {
+        "index": 11,
+        "loaded": 99.66203308105469,
+        "loadedFloat32Bits": 1120359158,
+        "originalFloat32Bits": 1120359158,
+        "originalJSON": 99.66203308105467
+      }
+    ],
+    "float32BitDifferences": 0,
+    "jsonFloat64Differences": 230,
+    "maxAbsoluteDifference": 1.1368683772161603e-13,
+    "values": 1948
+  },
+  "rootStrategy": {
+    "examples": [
+      {
+        "index": 47,
+        "loaded": 0.10184022784233093,
+        "loadedFloat32Bits": 1037078940,
+        "originalFloat32Bits": 1037078940,
+        "originalJSON": 0.10184022784233092
+      },
+      {
+        "index": 49,
+        "loaded": 0.11818869411945343,
+        "loadedFloat32Bits": 1039273194,
+        "originalFloat32Bits": 1039273194,
+        "originalJSON": 0.11818869411945344
+      },
+      {
+        "index": 56,
+        "loaded": 0.10184022784233093,
+        "loadedFloat32Bits": 1037078940,
+        "originalFloat32Bits": 1037078940,
+        "originalJSON": 0.10184022784233092
+      }
+    ],
+    "float32BitDifferences": 0,
+    "jsonFloat64Differences": 99,
+    "maxAbsoluteDifference": 5.551115123125783e-17,
+    "values": 1948
+  }
+}

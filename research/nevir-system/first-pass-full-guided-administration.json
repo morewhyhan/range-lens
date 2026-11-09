@@ -1,0 +1,170 @@
+{
+  "id": "FIRST_PASS_FULL_GUIDED_ADMINISTRATION_V1",
+  "status": "paper_administration_contract_not_trialed",
+  "purpose": "规定一次完整首遍试读如何从L0开始走到p7、何时可以提示、错误如何回到原位，以及怎样记录结构是否交给了学习者。",
+  "sources": [
+    "low-baseline-first-pass-trial-packet.json",
+    "cross-age-low-baseline-acceptance.json",
+    "first-lesson-visible-state-machine.json",
+    "first-pass-trial-coverage-audit.json"
+  ],
+  "canonicalOrder": [
+    "OL01", "OL02", "OL03", "OL04", "OL05",
+    "C01", "R01", "C03", "C05", "C08", "C10", "C12"
+  ],
+  "routeOrder": ["L0", "L1", "L2", "L3", "L4", "p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+  "phases": [
+    {
+      "id": "F0_setup",
+      "purpose": "说明一次只看一个画面、允许慢慢操作、我不知道按错误记录，但不先讲答案。",
+      "cases": [],
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "releaseWhen": "participant_profile_and_session_id_recorded"
+    },
+    {
+      "id": "F1_outer_guided",
+      "purpose": "带着用户完成桌面、局面、翻前图表、动作身份和范围交接。",
+      "cases": ["OL01", "OL02", "OL03", "OL04", "OL05"],
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "oneHelpChangeAtATime": true,
+      "sameParentAfterError": true,
+      "releaseWhen": "each_case_has_first_answer_and_handoff_or_stop_record"
+    },
+    {
+      "id": "F2_inner_guided",
+      "purpose": "沿同一局面进入翻后p1到p7，不把翻后七步改成平铺专题。",
+      "cases": ["C01", "R01", "C03", "C05", "C08", "C10", "C12"],
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "oneHelpChangeAtATime": true,
+      "sameParentAfterError": true,
+      "releaseWhen": "each_case_has_first_answer_and_handoff_or_stop_record"
+    },
+    {
+      "id": "F3_hidden_structure_replay",
+      "purpose": "隐藏状态名称，只给路线条和当前视觉，让用户复述外层套住内层的顺序。",
+      "cases": [],
+      "routeOrder": ["L0", "L1", "L2", "L3", "L4", "p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+      "hideStateLabels": true,
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "releaseWhen": "order_recall_layer_location_and_outer_inner_nesting_recorded"
+    },
+    {
+      "id": "F4_error_recovery",
+      "purpose": "在不更换牌面和父帧的情况下注入一次交接错误，观察用户能否回到最近缺失层。",
+      "cases": ["OL04"],
+      "injectedError": "把L3的动作身份说成翻后下注动作",
+      "expectedErrorLayer": "L3",
+      "expectedReturn": "L3",
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "sameParentAfterError": true,
+      "releaseWhen": "error_layer_and_return_point_recorded"
+    },
+    {
+      "id": "F5_one_variable_transfer",
+      "purpose": "只改变一个字段，观察用户是否先找到受影响层，再重新执行同类动作。",
+      "cases": ["H01"],
+      "changedField": "board",
+      "firstAnswerBeforeHelp": true,
+      "hostMayRevealAnswer": false,
+      "releaseWhen": "changed_field_affected_layer_and_new_handoff_recorded"
+    }
+  ],
+  "hostPromptLadder": [
+    {
+      "level": "H0",
+      "name": "none",
+      "allowed": "等待用户自己回答",
+      "countsAsIndependent": true
+    },
+    {
+      "level": "H1",
+      "name": "repeat_question",
+      "allowed": "原句重复一次，不增加事实",
+      "countsAsIndependent": true
+    },
+    {
+      "level": "H2",
+      "name": "point_to_visible_input",
+      "allowed": "指出已经显示的对象，不指出答案",
+      "countsAsIndependent": true
+    },
+    {
+      "level": "H3",
+      "name": "point_to_route_marker",
+      "allowed": "指出路线上的当前位置，不指出要选什么",
+      "countsAsIndependent": true
+    },
+    {
+      "level": "H4",
+      "name": "reveal_fact",
+      "allowed": "说出事实或答案",
+      "countsAsIndependent": false
+    },
+    {
+      "level": "H5",
+      "name": "lead_to_answer",
+      "allowed": "引导用户说出答案",
+      "countsAsIndependent": false
+    }
+  ],
+  "recordFields": [
+    "sessionId",
+    "participantId",
+    "audienceLoadProfile",
+    "phaseId",
+    "caseId",
+    "routeNode",
+    "firstAnswer",
+    "answerAfterHelp",
+    "helpLevel",
+    "hostPromptType",
+    "hostPromptCount",
+    "primaryActionCompleted",
+    "currentLayerSelfLocated",
+    "nextLayerSelfLocated",
+    "returnPointSelfLocated",
+    "errorLayer",
+    "parentRestore",
+    "changedField",
+    "successorOrStopSelfLocated",
+    "independentPass",
+    "stopReason"
+  ],
+  "hardRules": {
+    "firstAnswerAlwaysRecorded": true,
+    "firstAnswerBeforeAnyHelp": true,
+    "noHostLeadingBeforeFirstAnswer": true,
+    "onePrimaryQuestionAtATime": true,
+    "oneHelpChangeAtATime": true,
+    "sameParentAfterError": true,
+    "answerAfterHelpNeverOverwritesFirstAnswer": true,
+    "slowOperationIsNotFailure": true,
+    "aggregateScoreCannotMaskCoreFailure": true,
+    "missingObservationIsUnknown": true
+  },
+  "releaseGates": [
+    "all_canonical_order_cases_administered",
+    "outer_route_before_inner_route_observed",
+    "first_answer_before_help_recorded_for_each_case",
+    "hidden_structure_replay_recorded",
+    "error_recovery_recorded",
+    "one_variable_transfer_recorded",
+    "no_core_stop_requires_H4_or_H5_before_first_answer",
+    "no_missing_observation_filled_by_average"
+  ],
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "structureReplayObserved": false,
+    "errorRecoveryObserved": false,
+    "oneVariableTransferObserved": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

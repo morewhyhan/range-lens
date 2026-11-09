@@ -1,0 +1,38 @@
+{
+  "id": "LEARNER_ONE_PAGE_CARD_CONTRACT_V1",
+  "status": "learner_facing_card_written_not_trialed",
+  "steps": [
+    {"id":"S1","label":"轮到谁","question":"现在什么街、轮到谁、面对什么？","returnTo":"state"},
+    {"id":"S2","label":"牌面","question":"公共牌形成了什么关系？","returnTo":"board"},
+    {"id":"S3","label":"自己的牌","question":"最佳五张、成牌、听牌和后门是什么？","returnTo":"hand"},
+    {"id":"S4","label":"对手可能的牌","question":"哪些牌能来到这里，动作后哪些更常留下？","returnTo":"range"},
+    {"id":"S5","label":"比较动作","question":"当前合法选择的后续和价格是什么？","returnTo":"action"},
+    {"id":"S6","label":"执行记账","question":"这次新增投入多少，接下来轮到谁？","returnTo":"execute"},
+    {"id":"S7","label":"更新再来","question":"动作、回应和新牌改变了什么？","returnTo":"update"}
+  ],
+  "handStrengthOrder": ["high_card","pair","two_pair","trips","straight","flush","full_house","quads","straight_flush"],
+  "cardRules": {
+    "boardTextureDoesNotChooseAction": true,
+    "handLabelDoesNotChooseAction": true,
+    "physicalImpossibleDiffersFromLowerWeight": true,
+    "historyIsNeverReset": true
+  },
+  "stuckRecovery": {
+    "oneQuestionAtATime": true,
+    "openNearestMissingLayer": true,
+    "neverJumpToFlatTopicMenu": true,
+    "unknownCountsAsWrong": true
+  },
+  "answerHandling": {
+    "retryOnSameParent": true,
+    "firstAnswerPreserved": true,
+    "assistedRetryIsNotIndependent": true
+  },
+  "currentStatus": {
+    "cardWritten": true,
+    "beginnerTrial": false,
+    "pageImplemented": false,
+    "strategyCoverageComplete": false,
+    "NL50Evidence": false
+  }
+}

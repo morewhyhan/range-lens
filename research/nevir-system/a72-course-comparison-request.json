@@ -1,0 +1,504 @@
+{
+  "status": "original_course_comparison_inputs_and_blockers_not_strategy_validation",
+  "source": {
+    "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+    "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125",
+    "section": "3.6 第三个例子：A72彩虹面",
+    "reviews": [
+      "R06",
+      "R07",
+      "R37"
+    ],
+    "textHazardFragment": "N1-L40"
+  },
+  "goal": "Compare original basic and adjusted A72 course prescriptions to matched references, then teach verified simplification without losing full-hand structure.",
+  "root": {
+    "requestFile": "reference-request-btn-bb-a72.json",
+    "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+    "context": {
+      "playersAtDeal": 6,
+      "postflopPlayers": 2,
+      "initialEffectiveBB": 100,
+      "oopSeat": "BB",
+      "ipSeat": "BTN",
+      "openToBB": 2.5,
+      "preflop": "UTG/HJ/CO fold; BTN opens2.5; SB folds; BB calls",
+      "flop": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "turn": null,
+      "river": null,
+      "firstActor": "BB",
+      "startingPotBB": 5.5,
+      "eachStackBB": 97.5,
+      "foldedStacksBB": 399.5,
+      "conditionTime": "Before BB first flop action; BB check not yet observed or imposed."
+    },
+    "immutableOriginalRequestPreserved": true
+  },
+  "courseDecision": {
+    "actor": "BTN",
+    "observedPrefix": [
+      "BB check"
+    ],
+    "potBB": 5.5,
+    "stacksBB": [
+      97.5,
+      97.5
+    ],
+    "toCallBB": 0
+  },
+  "originalCourseConfigRecovered": false,
+  "declaredTrainingConfig": {
+    "sixMax": true,
+    "initialStackBB": 100,
+    "openBB": 2.5,
+    "rake": 0,
+    "startingRanges": "User simplified charts; not recovered original GTO ranges."
+  },
+  "sourcePrecision": {
+    "basicRules": "KQ check, Q3 bet_small as adopted course rules; not full exact-frequency solver data.",
+    "reportedAggregateBetFrequency": "about50%, not a 50% policy for every hand",
+    "adjustedRule": "Adopt final range-small-bet simplification only when its additional response assumptions are stated.",
+    "numericAdjustedOpponentPolicy": null,
+    "reportedXR": "about9%, aggregate claim only, not applied per hand"
+  },
+  "currentActualMenus": {
+    "afterBBCheck": "[Check, Bet(182), AllIn(9750)]",
+    "facingBet182": "[Fold, Call, Raise(455), AllIn(9750)]",
+    "riverAfterTurnChecks": "[Check, Bet(686), AllIn(9568)]",
+    "rootBB": "[Check, Bet(182), AllIn(9750)]",
+    "turnAfterFlopCheckBetCall": "[Check, Bet(686), AllIn(9568)]"
+  },
+  "actualSmallBet": {
+    "amountUnits": 182,
+    "potUnits": 550,
+    "ratio": 0.33090909090909093,
+    "label": "Actual engine33% rounded amount; not exact mathematical1/3."
+  },
+  "sizeStudyStatus": "Current draft has one non-all-in flop size; it cannot establish optimality versus20%,25%,40% or other unlisted sizes. Do not change original request or claim size comparison solved.",
+  "physicalReview": {
+    "22": {
+      "sourceClaimStatus": "requires_source_resolution",
+      "sourceFragment": "N1-L40",
+      "legalPhysicalCombos": 3,
+      "allHaveThreeTwos": true,
+      "sets": [
+        {
+          "hole": [
+            "2c",
+            "2h"
+          ],
+          "bestFive": [
+            3,
+            2,
+            14,
+            7
+          ],
+          "currentCategory": "三条"
+        },
+        {
+          "hole": [
+            "2c",
+            "2s"
+          ],
+          "bestFive": [
+            3,
+            2,
+            14,
+            7
+          ],
+          "currentCategory": "三条"
+        },
+        {
+          "hole": [
+            "2h",
+            "2s"
+          ],
+          "bestFive": [
+            3,
+            2,
+            14,
+            7
+          ],
+          "currentCategory": "三条"
+        }
+      ],
+      "blockedUse": "Do not teach this literal22 example as a weak one-pair-to-bluff conversion.",
+      "notInferred": "Current made-hand strength alone does not determine optimal raise, call, check or source speaker intent."
+    }
+  },
+  "targets": [
+    {
+      "hole": [
+        "3s",
+        "Qs"
+      ],
+      "handClass": "Q3s",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 331,
+      "priorBBEligibleRelativeMass": 266,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "bet_small",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "3h",
+        "Qh"
+      ],
+      "handClass": "Q3s",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 332,
+      "priorBBEligibleRelativeMass": 267,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "bet_small",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "3d",
+        "Qd"
+      ],
+      "handClass": "Q3s",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 331,
+      "priorBBEligibleRelativeMass": 266,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "bet_small",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "3c",
+        "Qc"
+      ],
+      "handClass": "Q3s",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 331,
+      "priorBBEligibleRelativeMass": 266,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "bet_small",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qs",
+        "Ks"
+      ],
+      "handClass": "KQs",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 319,
+      "priorBBEligibleRelativeMass": 258,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qs",
+        "Kh"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qs",
+        "Kd"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qs",
+        "Kc"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 319,
+      "priorBBEligibleRelativeMass": 258.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qh",
+        "Ks"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qh",
+        "Kh"
+      ],
+      "handClass": "KQs",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 322,
+      "priorBBEligibleRelativeMass": 261,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qh",
+        "Kd"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 322,
+      "priorBBEligibleRelativeMass": 261.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qh",
+        "Kc"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qd",
+        "Ks"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qd",
+        "Kh"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qd",
+        "Kd"
+      ],
+      "handClass": "KQs",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qd",
+        "Kc"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qc",
+        "Ks"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qc",
+        "Kh"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qc",
+        "Kd"
+      ],
+      "handClass": "KQo",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 321,
+      "priorBBEligibleRelativeMass": 260.5,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    },
+    {
+      "hole": [
+        "Qc",
+        "Kc"
+      ],
+      "handClass": "KQs",
+      "ipInitialWeight": 1,
+      "priorBBEligiblePhysicalCombos": 320,
+      "priorBBEligibleRelativeMass": 259,
+      "conditionTime": "Before BB first flop action, conditioned on this exact BTN hand.",
+      "bbAfterObservedCheckRange": null,
+      "bbResponseToSmallBet": null,
+      "actionValues": null,
+      "baselineCourseAction": "check",
+      "adjustedAdoptedCourseAction": "bet_small",
+      "notACompletePolicy": true
+    }
+  ],
+  "readiness": {
+    "originalSolveStarted": false,
+    "originalRootSolved": false,
+    "bbCheckPolicyObtained": false,
+    "completeCoursePoliciesObtained": false,
+    "actionEVReady": false,
+    "fullPolicyLossReady": false,
+    "freeDeviationAssessmentReady": false,
+    "rangeChartsReady": false,
+    "ordinaryExecutionRulesOnly": "Existing source-rule exercises stay explicitly source-rule exercises; not upgraded to GTO-validated."
+  },
+  "resourceObservation": {
+    "memoryUtc": "2026-10-21T07:05:17.4292341Z",
+    "freePhysicalBytes": 5835378688,
+    "executionBudgetBytes": 3501227212,
+    "compressedEstimateBytes": 5189681440,
+    "fits": false,
+    "notReserved": true
+  },
+  "nextRequiredEvidence": [
+    "Full same-config original root reference without forcing BB check.",
+    "Positive-support BB check branch with raw per-hand policy and updated ranges.",
+    "Current hand/action EV plus complete future policy on compared branches.",
+    "Explicit adjusted opponent policy before adjusted-reference claims.",
+    "Separate same-tree course policy evaluation and free deviations; no arbitrary completion of unspecified hands."
+  ],
+  "appChanged": false,
+  "learnerTrials": 0,
+  "newNL50Reference": false
+}

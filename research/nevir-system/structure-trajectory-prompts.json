@@ -1,0 +1,2365 @@
+{
+  "status": "author_new_structure_trial_candidates_not_administered",
+  "strategyQuestion": false,
+  "frozenForFinalAssessment": false,
+  "questions": [
+    {
+      "id": "ST-cd9780168de9ef9e",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 5.5,
+          "heroStackBB": 97.5,
+          "opponentStackBB": 97.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-077905033f866753",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 5.5,
+          "heroStackBB": 97.5,
+          "opponentStackBB": 97.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-b431bcac69ac595c",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 5.5,
+          "heroStackBB": 97.5,
+          "opponentStackBB": 97.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-5221aa3916c683b3",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 7.5,
+          "heroStackBB": 97.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 2
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-213968abf16a7b7b",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 7.5,
+          "heroStackBB": 97.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 2
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-a2b083985c268fdc",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 9.5,
+          "heroStackBB": 95.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 2,
+          "opponentStreetPutBB": 2
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-804ad69c25dc9b0c",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 9.5,
+          "heroStackBB": 95.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-182bbf29acbe0e45",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 9.5,
+          "heroStackBB": 95.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-69682ccbfb630eca",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 9.5,
+          "heroStackBB": 95.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-2f20da7b06d44e46",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 9.5,
+          "heroStackBB": 95.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-bd8d8aa0e4781236",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 14.5,
+          "heroStackBB": 90.5,
+          "opponentStackBB": 95.5,
+          "heroStreetPutBB": 5,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-cb6b3c205b9f324d",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 29.5,
+          "heroStackBB": 90.5,
+          "opponentStackBB": 80.5,
+          "heroStreetPutBB": 5,
+          "opponentStreetPutBB": 15
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-1426879887c15dc6",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 29.5,
+          "heroStackBB": 90.5,
+          "opponentStackBB": 80.5,
+          "heroStreetPutBB": 5,
+          "opponentStreetPutBB": 15
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-ae763f26554324e1",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 39.5,
+          "heroStackBB": 80.5,
+          "opponentStackBB": 80.5,
+          "heroStreetPutBB": 15,
+          "opponentStreetPutBB": 15
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15",
+          "BB跟10"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-de61c68cb2bb710b",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Qh",
+            "9h",
+            "4s",
+            "2c",
+            "4h"
+          ],
+          "hero": [
+            "8c",
+            "8d"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "BTN",
+          "potBB": 0,
+          "heroStackBB": 80.5,
+          "opponentStackBB": 120,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15",
+          "BB跟10",
+          "摊牌并结算"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-1db8e0427733bf9b",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 18,
+          "heroStackBB": 91.75,
+          "opponentStackBB": 91.75,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-d90f5288238b3c50",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 18,
+          "heroStackBB": 91.75,
+          "opponentStackBB": 91.75,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-5ef3fc3c2d72f9d0",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 24,
+          "heroStackBB": 91.75,
+          "opponentStackBB": 85.75,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 6
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-9200f0cf07af7e7a",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 42,
+          "heroStackBB": 73.75,
+          "opponentStackBB": 85.75,
+          "heroStreetPutBB": 18,
+          "opponentStreetPutBB": 6
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-d1f4e0a76de94702",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 127.75,
+          "heroStackBB": 73.75,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 18,
+          "opponentStreetPutBB": 91.75
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-84d3be0669f10ecc",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 127.75,
+          "heroStackBB": 73.75,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 18,
+          "opponentStreetPutBB": 91.75
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-10f2a0383b816e41",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 201.5,
+          "heroStackBB": 0,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 91.75,
+          "opponentStreetPutBB": 91.75
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-b55f124cdfc8f956",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c",
+            "Ah"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 201.5,
+          "heroStackBB": 0,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-b8b879a71f039d8b",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c",
+            "Ah",
+            "4d"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 201.5,
+          "heroStackBB": 0,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah",
+          "发出4d"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-5f6fc3fbdf20de3c",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c",
+            "Ah",
+            "4d"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 0,
+          "heroStackBB": 0,
+          "opponentStackBB": 201.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah",
+          "发出4d",
+          "摊牌并结算"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-02faa6c78dcbe215",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 115.75,
+          "heroStackBB": 0,
+          "opponentStackBB": 85.75,
+          "heroStreetPutBB": 91.75,
+          "opponentStreetPutBB": 6
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-53dbcbad72df2129",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 115.75,
+          "heroStackBB": 0,
+          "opponentStackBB": 85.75,
+          "heroStreetPutBB": 91.75,
+          "opponentStreetPutBB": 6
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-d13be435f82cb45a",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 201.5,
+          "heroStackBB": 0,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 91.75,
+          "opponentStreetPutBB": 91.75
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-c670864af13a9f6b",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c",
+            "Ah",
+            "4d"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 201.5,
+          "heroStackBB": 0,
+          "opponentStackBB": 0,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下",
+          "发出Ah",
+          "发出4d"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-9a8348fc1ef95618",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Js",
+            "7s",
+            "2c",
+            "Ah",
+            "4d"
+          ],
+          "hero": [
+            "Qh",
+            "Qs"
+          ],
+          "heroSeat": "CO",
+          "opponentSeat": "BTN",
+          "potBB": 0,
+          "heroStackBB": 0,
+          "opponentStackBB": 201.5,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下",
+          "发出Ah",
+          "发出4d",
+          "摊牌并结算"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-21c57bdf76ca1a21",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 6,
+          "heroStackBB": 97,
+          "opponentStackBB": 97,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-5be2007e35f84de6",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 6,
+          "heroStackBB": 97,
+          "opponentStackBB": 97,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-e973c7a900998cdf",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 6,
+          "heroStackBB": 97,
+          "opponentStackBB": 97,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-b9267bb1f59cb62f",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 6,
+          "heroStackBB": 97,
+          "opponentStackBB": 97,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-8223efcede220bf7",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c",
+            "6h"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 6,
+          "heroStackBB": 97,
+          "opponentStackBB": 97,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-214cff147d587280",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c",
+            "6h"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 10,
+          "heroStackBB": 97,
+          "opponentStackBB": 93,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 4
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4"
+        ],
+        "prompt": "眼前应进入哪种比较？只选分支，不选最佳打法。",
+        "choices": [
+          {
+            "id": "free",
+            "label": "现在可过牌或下注"
+          },
+          {
+            "id": "bet",
+            "label": "面对下注，比较弃、跟或加"
+          },
+          {
+            "id": "raise",
+            "label": "面对加注，重新比较"
+          },
+          {
+            "id": "allin",
+            "label": "面对对手全下，比较跟或弃"
+          },
+          {
+            "id": "wait",
+            "label": "现在还没轮到自己"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-d1b9ef4f77a4bb91",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c",
+            "6h"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 22,
+          "heroStackBB": 85,
+          "opponentStackBB": 93,
+          "heroStreetPutBB": 12,
+          "opponentStreetPutBB": 4
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4",
+          "BB加到12"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ST-466f6662cfd2f989",
+      "body": {
+        "table": "六人现金桌，初始每人100BB；仅显示仍在本手的两人",
+        "state": {
+          "board": [
+            "Ah",
+            "5d",
+            "5c",
+            "6h"
+          ],
+          "hero": [
+            "Tc",
+            "9c"
+          ],
+          "heroSeat": "BB",
+          "opponentSeat": "SB",
+          "potBB": 0,
+          "heroStackBB": 107,
+          "opponentStackBB": 93,
+          "heroStreetPutBB": 0,
+          "opponentStreetPutBB": 0
+        },
+        "observedHistory": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4",
+          "BB加到12",
+          "SB弃牌"
+        ],
+        "prompt": "接下来先发生什么？",
+        "choices": [
+          {
+            "id": "hero",
+            "label": "轮到自己"
+          },
+          {
+            "id": "opponent",
+            "label": "轮到对手"
+          },
+          {
+            "id": "deal",
+            "label": "发下一张公共牌"
+          },
+          {
+            "id": "runout",
+            "label": "补发剩余公共牌后摊牌"
+          },
+          {
+            "id": "showdown",
+            "label": "摊牌"
+          },
+          {
+            "id": "ended",
+            "label": "这手已结束"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    }
+  ]
+}

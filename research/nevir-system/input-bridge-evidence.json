@@ -1,0 +1,106 @@
+{
+  "scope": "输入来源、行动筛选非唯一性、物理排除和限定河牌敏感性的研究算例；不是完整策略。",
+  "baseline": {
+    "positiveCombos": 306,
+    "mass": 252,
+    "state": "Flop dealt; before BB first postflop action. No checking likelihood has been applied."
+  },
+  "physicalTurnOnly": {
+    "turn": "2d",
+    "blockedCombos": 6,
+    "blockedMass": 5.5,
+    "remainingCombos": 300,
+    "remainingMass": 246.5,
+    "scope": "Condition on this card only, with NO intervening action filtering. Not a real turn action posterior."
+  },
+  "nonIdentifiability": {
+    "group": "Two pair or better on Qs Th 5s, independent of hero hidden cards as a strategy feature.",
+    "models": [
+      {
+        "id": "all_check",
+        "strongCheck": 1,
+        "otherCheck": 1,
+        "totalMass": 252,
+        "strongMass": 9.5,
+        "strongPosterior": 0.037698412698412696
+      },
+      {
+        "id": "less_strong_check",
+        "strongCheck": 0.25,
+        "otherCheck": 1,
+        "totalMass": 244.875,
+        "strongMass": 2.375,
+        "strongPosterior": 0.009698825931597753
+      },
+      {
+        "id": "more_strong_check",
+        "strongCheck": 1,
+        "otherCheck": 0.25,
+        "totalMass": 70.125,
+        "strongMass": 9.5,
+        "strongPosterior": 0.1354723707664884
+      }
+    ],
+    "claim": "Same starting chart and observed check do not identify posterior without action likelihoods.",
+    "notClaimed": "These likelihoods are not Nevir data, solver data, or population estimates."
+  },
+  "rectangularGroupBounds": {
+    "input": [
+      1,
+      3,
+      2,
+      6
+    ],
+    "status": "bounded",
+    "min": 0.14285714285714285,
+    "max": 0.6
+  },
+  "callSensitivity": [
+    {
+      "equity": [
+        0.3,
+        0.4
+      ],
+      "expected": "call_over_fold",
+      "potIncludingBet": 15,
+      "toCall": 5,
+      "evBounds": [
+        1,
+        3
+      ],
+      "result": "call_over_fold",
+      "scope": "River, no further betting, no rake, call/fold only; illustrative bounds, not a measured opponent."
+    },
+    {
+      "equity": [
+        0.1,
+        0.2
+      ],
+      "expected": "fold_over_call",
+      "potIncludingBet": 15,
+      "toCall": 5,
+      "evBounds": [
+        -3,
+        -1
+      ],
+      "result": "fold_over_call",
+      "scope": "River, no further betting, no rake, call/fold only; illustrative bounds, not a measured opponent."
+    },
+    {
+      "equity": [
+        0.2,
+        0.4
+      ],
+      "expected": "not_identified",
+      "potIncludingBet": 15,
+      "toCall": 5,
+      "evBounds": [
+        -1,
+        3
+      ],
+      "result": "not_identified",
+      "scope": "River, no further betting, no rake, call/fold only; illustrative bounds, not a measured opponent."
+    }
+  ],
+  "lessonReleaseRule": "Ordinary graded lessons require sufficient sourced inputs or a supported prescription. Missing-data detection is a named special task, not a replacement for decision training."
+}

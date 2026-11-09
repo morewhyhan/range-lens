@@ -1,0 +1,6894 @@
+{
+  "id": "UNIT_THREE_CARD_SKELETON_V1",
+  "status": "paper_105_card_skeleton_compiled_answers_reference_and_trial_missing",
+  "purpose": "把35项单元展开为105个明确卡位：基准、单变量对照、未见迁移；只补齐结构身份和停止边界，不凭邻近题填策略答案。",
+  "sources": [
+    "full-course-coverage-and-release-contract.json",
+    "unit-learner-release-gates.json",
+    "user-first-complete-route-contract.json"
+  ],
+  "unitCount": 35,
+  "cardCount": 105,
+  "modes": [
+    "base",
+    "contrast",
+    "transfer"
+  ],
+  "cards": [
+    {
+      "cardId": "1.1:base",
+      "mode": "base",
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.1:contrast",
+      "mode": "contrast",
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.1:transfer",
+      "mode": "transfer",
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.2:base",
+      "mode": "base",
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.2:contrast",
+      "mode": "contrast",
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.2:transfer",
+      "mode": "transfer",
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.3:base",
+      "mode": "base",
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.3:contrast",
+      "mode": "contrast",
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.3:transfer",
+      "mode": "transfer",
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.4:base",
+      "mode": "base",
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.4:contrast",
+      "mode": "contrast",
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.4:transfer",
+      "mode": "transfer",
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.5:base",
+      "mode": "base",
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.5:contrast",
+      "mode": "contrast",
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.5:transfer",
+      "mode": "transfer",
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.6:base",
+      "mode": "base",
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.6:contrast",
+      "mode": "contrast",
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.6:transfer",
+      "mode": "transfer",
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.7:base",
+      "mode": "base",
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.7:contrast",
+      "mode": "contrast",
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.7:transfer",
+      "mode": "transfer",
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.8:base",
+      "mode": "base",
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.8:contrast",
+      "mode": "contrast",
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "1.8:transfer",
+      "mode": "transfer",
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.1:base",
+      "mode": "base",
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.1:contrast",
+      "mode": "contrast",
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.1:transfer",
+      "mode": "transfer",
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.2:base",
+      "mode": "base",
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.2:contrast",
+      "mode": "contrast",
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.2:transfer",
+      "mode": "transfer",
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.3:base",
+      "mode": "base",
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.3:contrast",
+      "mode": "contrast",
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.3:transfer",
+      "mode": "transfer",
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.4:base",
+      "mode": "base",
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.4:contrast",
+      "mode": "contrast",
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.4:transfer",
+      "mode": "transfer",
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.5:base",
+      "mode": "base",
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.5:contrast",
+      "mode": "contrast",
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.5:transfer",
+      "mode": "transfer",
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.6:base",
+      "mode": "base",
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.6:contrast",
+      "mode": "contrast",
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.6:transfer",
+      "mode": "transfer",
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.7:base",
+      "mode": "base",
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.7:contrast",
+      "mode": "contrast",
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "2.7:transfer",
+      "mode": "transfer",
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "price",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.1:base",
+      "mode": "base",
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.1:contrast",
+      "mode": "contrast",
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.1:transfer",
+      "mode": "transfer",
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.2:base",
+      "mode": "base",
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.2:contrast",
+      "mode": "contrast",
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.2:transfer",
+      "mode": "transfer",
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.3:base",
+      "mode": "base",
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.3:contrast",
+      "mode": "contrast",
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.3:transfer",
+      "mode": "transfer",
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.4:base",
+      "mode": "base",
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.4:contrast",
+      "mode": "contrast",
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.4:transfer",
+      "mode": "transfer",
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.5:base",
+      "mode": "base",
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.5:contrast",
+      "mode": "contrast",
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.5:transfer",
+      "mode": "transfer",
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.6:base",
+      "mode": "base",
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.6:contrast",
+      "mode": "contrast",
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "3.6:transfer",
+      "mode": "transfer",
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "actionState",
+        "boardClass",
+        "handClass",
+        "raisePrice",
+        "actionHistory",
+        "rangeBefore"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.1:base",
+      "mode": "base",
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.1:contrast",
+      "mode": "contrast",
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.1:transfer",
+      "mode": "transfer",
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.2:base",
+      "mode": "base",
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.2:contrast",
+      "mode": "contrast",
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.2:transfer",
+      "mode": "transfer",
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.3:base",
+      "mode": "base",
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.3:contrast",
+      "mode": "contrast",
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.3:transfer",
+      "mode": "transfer",
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.4:base",
+      "mode": "base",
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.4:contrast",
+      "mode": "contrast",
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.4:transfer",
+      "mode": "transfer",
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.5:base",
+      "mode": "base",
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.5:contrast",
+      "mode": "contrast",
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.5:transfer",
+      "mode": "transfer",
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.6:base",
+      "mode": "base",
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.6:contrast",
+      "mode": "contrast",
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "4.6:transfer",
+      "mode": "transfer",
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.1:base",
+      "mode": "base",
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.1:contrast",
+      "mode": "contrast",
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.1:transfer",
+      "mode": "transfer",
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.2:base",
+      "mode": "base",
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.2:contrast",
+      "mode": "contrast",
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.2:transfer",
+      "mode": "transfer",
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.3:base",
+      "mode": "base",
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.3:contrast",
+      "mode": "contrast",
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.3:transfer",
+      "mode": "transfer",
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.4:base",
+      "mode": "base",
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.4:contrast",
+      "mode": "contrast",
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.4:transfer",
+      "mode": "transfer",
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.5:base",
+      "mode": "base",
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.5:contrast",
+      "mode": "contrast",
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.5:transfer",
+      "mode": "transfer",
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.6:base",
+      "mode": "base",
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "demonstration_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.6:contrast",
+      "mode": "contrast",
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.6:transfer",
+      "mode": "transfer",
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "finite_model",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.7:base",
+      "mode": "base",
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.7:contrast",
+      "mode": "contrast",
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.7:transfer",
+      "mode": "transfer",
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.8:base",
+      "mode": "base",
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在当前父帧让用户第一次看见本单元关系。",
+      "changedField": null,
+      "changedFieldCandidates": [],
+      "preservedFieldRule": "冻结本题全部输入，先回答事实或课程问题。",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.8:contrast",
+      "mode": "contrast",
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "在同一父帧只改变一个字段，让用户看见关系而不是背住牌面。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "除唯一变化字段外，保持父帧、资料身份、分母、动作菜单和未声明输入不变。",
+      "releaseIdentity": "contrast_candidate",
+      "status": "skeleton_not_compiled"
+    },
+    {
+      "cardId": "5.8:transfer",
+      "mode": "transfer",
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "requiredPools": [
+        "locator",
+        "pure_or_fact",
+        "mixed_when_applicable",
+        "edge",
+        "internal",
+        "action_preserving_contrast",
+        "single_field_transfer"
+      ],
+      "groupDimensions": [
+        "street",
+        "role",
+        "boardClass",
+        "newCardClass",
+        "heroHole",
+        "handClass"
+      ],
+      "sourceIdentity": "fact_or_ledger",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "releaseStages": [
+        "map",
+        "guided",
+        "independent",
+        "adjacent",
+        "delayed",
+        "continuous"
+      ],
+      "blockingEvidence": [
+        "matched_reference_or_explicit_fact_boundary",
+        "legal_successor_or_stop"
+      ],
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "answerContentPresent": false,
+      "currentEvidence": {
+        "paperSkeleton": true,
+        "compiled": false,
+        "runtime": false,
+        "learnerTrial": false
+      },
+      "purpose": "隐藏单元标题，在未见条件中先定位受影响层，再完成同类输出。",
+      "changedField": "choose_exactly_one_from_candidates",
+      "changedFieldCandidates": [
+        "board",
+        "heroHole"
+      ],
+      "preservedFieldRule": "迁移题必须声明保持字段，并与训练题、来源指纹和题目身份去重。",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "status": "skeleton_not_compiled"
+    }
+  ],
+  "invariants": {
+    "exactlyThreeCardsPerUnit": true,
+    "baseContrastTransferOrder": true,
+    "sameParentForAllThree": true,
+    "contrastExactlyOneField": true,
+    "transferRequiresOneFieldAndHoldouts": true,
+    "answerContentNotInvented": true,
+    "exactGradeBlockedWithoutReferenceAndSuccessor": true,
+    "missingPoolStopsAtParent": true
+  },
+  "currentEvidence": {
+    "skeletonCompiled": true,
+    "all105AnswersCompiled": false,
+    "matchedReference": false,
+    "coursePolicy": false,
+    "successors": false,
+    "runtime": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "guards": {
+    "skeletonIsNotQuestionPool": true,
+    "skeletonIsNotStrategyAnswer": true,
+    "coverageIsNotMastery": true,
+    "noNeighborSubstitution": true
+  }
+}

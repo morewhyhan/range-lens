@@ -1,0 +1,1867 @@
+{
+  "status": "author_structure_reference_no_participant_results",
+  "keys": [
+    {
+      "id": "ST-cd9780168de9ef9e",
+      "inputFingerprint": "cd9780168de9ef9ecc3151c5cdfd3e708072fca94f96e9ecd5f51c6a6b465952",
+      "answer": "hero",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 550,
+        "stacks": [
+          9750,
+          9750
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-077905033f866753",
+      "inputFingerprint": "077905033f866753986e922fbfe07289e5568d86e6e8b0061598b4cea379bf40",
+      "answer": "free",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 550,
+        "stacks": [
+          9750,
+          9750
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-b431bcac69ac595c",
+      "inputFingerprint": "b431bcac69ac595c4d4b523a4e43c195c115ecc9cb876c7babe1b168ec87cf82",
+      "answer": "opponent",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 550,
+        "stacks": [
+          9750,
+          9750
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 1,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-5221aa3916c683b3",
+      "inputFingerprint": "5221aa3916c683b3e1e0bf383d673f2e0350e77748595050e8910b2aa95207ee",
+      "answer": "hero",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 750,
+        "stacks": [
+          9750,
+          9550
+        ],
+        "paid": [
+          0,
+          200
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 200
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-213968abf16a7b7b",
+      "inputFingerprint": "213968abf16a7b7b082867255d32e399922af0d0634aa2a113802809b9701b49",
+      "answer": "bet",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 750,
+        "stacks": [
+          9750,
+          9550
+        ],
+        "paid": [
+          0,
+          200
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 200
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-a2b083985c268fdc",
+      "inputFingerprint": "a2b083985c268fdcfefd95cb3cb6d710efb32a6c34cc90226cb9ce24ee9d9d60",
+      "answer": "deal",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 950,
+        "stacks": [
+          9550,
+          9550
+        ],
+        "paid": [
+          200,
+          200
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2"
+        ],
+        "actor": null,
+        "phase": "street_end",
+        "checks": 0,
+        "minRaise": 200
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-804ad69c25dc9b0c",
+      "inputFingerprint": "804ad69c25dc9b0c87fa8c9e42f3469e0a0dc280ad376ebc5f4c49b3b876e49e",
+      "answer": "hero",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 950,
+        "stacks": [
+          9550,
+          9550
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-182bbf29acbe0e45",
+      "inputFingerprint": "182bbf29acbe0e4599c08d7565de8e8d2c60a68160e78e30b167ec0f37fec570",
+      "answer": "opponent",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 950,
+        "stacks": [
+          9550,
+          9550
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 1,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-69682ccbfb630eca",
+      "inputFingerprint": "69682ccbfb630eca89d24b90228ff95fd5b902d1160753ac4c88dbc431e53b4b",
+      "answer": "deal",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 950,
+        "stacks": [
+          9550,
+          9550
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌"
+        ],
+        "actor": null,
+        "phase": "street_end",
+        "checks": 2,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-2f20da7b06d44e46",
+      "inputFingerprint": "2f20da7b06d44e46fd0e281a41d2a3587685caf6da31808bd149d08c5f9ada7f",
+      "answer": "hero",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 950,
+        "stacks": [
+          9550,
+          9550
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-bd8d8aa0e4781236",
+      "inputFingerprint": "bd8d8aa0e4781236500b69fd4c6a7cca64b034d37346cf99084bd31440453a28",
+      "answer": "opponent",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 1450,
+        "stacks": [
+          9050,
+          9550
+        ],
+        "paid": [
+          500,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 500
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-cb6b3c205b9f324d",
+      "inputFingerprint": "cb6b3c205b9f324d4e8ae76877b4557e15e62f1d7e4009adba5e728c5ebac093",
+      "answer": "hero",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 2950,
+        "stacks": [
+          9050,
+          8050
+        ],
+        "paid": [
+          500,
+          1500
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 1000
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-1426879887c15dc6",
+      "inputFingerprint": "1426879887c15dc6a46207738147ed392347060377bf72749d0e25c53f664b1f",
+      "answer": "raise",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 2950,
+        "stacks": [
+          9050,
+          8050
+        ],
+        "paid": [
+          500,
+          1500
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 1000
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-ae763f26554324e1",
+      "inputFingerprint": "ae763f26554324e163c30d1bb35737b87fb4e49a6a5bf9c8f390aaf8f256f4ae",
+      "answer": "showdown",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 3950,
+        "stacks": [
+          8050,
+          8050
+        ],
+        "paid": [
+          1500,
+          1500
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15",
+          "BB跟10"
+        ],
+        "actor": null,
+        "phase": "showdown",
+        "checks": 0,
+        "minRaise": 1000
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-de61c68cb2bb710b",
+      "inputFingerprint": "de61c68cb2bb710bf4817ad94967e8fb678f622f1cb66319a7df9b78f1b4e501",
+      "answer": "ended",
+      "scenario": "A",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "A",
+        "heroSeat": "BB",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "8c",
+          "8d"
+        ],
+        "opp": [
+          "Ah",
+          "Qd"
+        ],
+        "pot": 0,
+        "stacks": [
+          8050,
+          12000
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39950,
+        "board": [
+          "Qh",
+          "9h",
+          "4s",
+          "2c",
+          "4h"
+        ],
+        "history": [
+          "BTN开到2.5，SB弃牌，BB跟注；其余人已弃牌",
+          "BB过牌",
+          "BTN下注2",
+          "BB跟2",
+          "发出2c",
+          "BB过牌",
+          "BTN过牌",
+          "发出4h",
+          "BB下注5",
+          "BTN加到15",
+          "BB跟10",
+          "摊牌并结算"
+        ],
+        "actor": null,
+        "phase": "ended",
+        "checks": 0,
+        "minRaise": 1000
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-1db8e0427733bf9b",
+      "inputFingerprint": "1db8e0427733bf9b109d3561643d5dd90a8c42d05ffea3127266ffb7ac117f70",
+      "answer": "free",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 1800,
+        "stacks": [
+          9175,
+          9175
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-d90f5288238b3c50",
+      "inputFingerprint": "d90f5288238b3c502d97b3e1d9c6c2ad9c0eb883f9a20be248907bd91722ef8a",
+      "answer": "opponent",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 1800,
+        "stacks": [
+          9175,
+          9175
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 1,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-5ef3fc3c2d72f9d0",
+      "inputFingerprint": "5ef3fc3c2d72f9d06678ae8524047139aec26a51089b008f5d2f48fe8018dc62",
+      "answer": "bet",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 2400,
+        "stacks": [
+          9175,
+          8575
+        ],
+        "paid": [
+          0,
+          600
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 600
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-9200f0cf07af7e7a",
+      "inputFingerprint": "9200f0cf07af7e7acf251fc3bac76db438d06a46c6675ac6c2b15bc643d910b8",
+      "answer": "opponent",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 4200,
+        "stacks": [
+          7375,
+          8575
+        ],
+        "paid": [
+          1800,
+          600
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 1200
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-d1f4e0a76de94702",
+      "inputFingerprint": "d1f4e0a76de947029b5fd1996afd95a3faa5b43bdd83ef863b57eb527b3fc9ab",
+      "answer": "hero",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 12775,
+        "stacks": [
+          7375,
+          0
+        ],
+        "paid": [
+          1800,
+          9175
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 7375
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-84d3be0669f10ecc",
+      "inputFingerprint": "84d3be0669f10eccf74be4456ca7d3bbf90644854d28ec4aaf0f8b267b2baefe",
+      "answer": "allin",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 12775,
+        "stacks": [
+          7375,
+          0
+        ],
+        "paid": [
+          1800,
+          9175
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 7375
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-10f2a0383b816e41",
+      "inputFingerprint": "10f2a0383b816e410fdfe4580616affd2eff273cd1f1b6436b38847e7877dcdc",
+      "answer": "runout",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "paid": [
+          9175,
+          9175
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下"
+        ],
+        "actor": null,
+        "phase": "allin_runout",
+        "checks": 0,
+        "minRaise": 7375
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-b55f124cdfc8f956",
+      "inputFingerprint": "b55f124cdfc8f956367b1add1bcfeb551e16c3359f315a050080c329209a662a",
+      "answer": "runout",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c",
+          "Ah"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah"
+        ],
+        "actor": null,
+        "phase": "allin_runout",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-b8b879a71f039d8b",
+      "inputFingerprint": "b8b879a71f039d8ba63acab729ba6242ab6f29de578bc669b85ba9b22fd1473e",
+      "answer": "showdown",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c",
+          "Ah",
+          "4d"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah",
+          "发出4d"
+        ],
+        "actor": null,
+        "phase": "showdown",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-5f6fc3fbdf20de3c",
+      "inputFingerprint": "5f6fc3fbdf20de3ccf9cd8c4589ea6d988ca128c678c05c351a603b37c154c80",
+      "answer": "ended",
+      "scenario": "B",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 0,
+        "stacks": [
+          0,
+          20150
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c",
+          "Ah",
+          "4d"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到18",
+          "BTN加到91.75，已全下",
+          "CO跟73.75，已全下",
+          "发出Ah",
+          "发出4d",
+          "摊牌并结算"
+        ],
+        "actor": null,
+        "phase": "ended",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-02faa6c78dcbe215",
+      "inputFingerprint": "02faa6c78dcbe215d8934ab796b1c77e53a7650a72b3af8ce83485d9b86c40ad",
+      "answer": "opponent",
+      "scenario": "B2",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B2",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 11575,
+        "stacks": [
+          0,
+          8575
+        ],
+        "paid": [
+          9175,
+          600
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 8575
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-53dbcbad72df2129",
+      "inputFingerprint": "53dbcbad72df212937dbcc4bb56fadebf44f2f6c578a1835ecba91d8eba93cde",
+      "answer": "wait",
+      "scenario": "B2",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B2",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 11575,
+        "stacks": [
+          0,
+          8575
+        ],
+        "paid": [
+          9175,
+          600
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 8575
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-d13be435f82cb45a",
+      "inputFingerprint": "d13be435f82cb45a5d05c9117d955f5500d180b7ad13cd114bfea8242f4beb96",
+      "answer": "runout",
+      "scenario": "B2",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B2",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "paid": [
+          9175,
+          9175
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下"
+        ],
+        "actor": null,
+        "phase": "allin_runout",
+        "checks": 0,
+        "minRaise": 8575
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-c670864af13a9f6b",
+      "inputFingerprint": "c670864af13a9f6b8225467dbe0d28e0a844ba885f5d18e381df5aa405b9fafc",
+      "answer": "showdown",
+      "scenario": "B2",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B2",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 20150,
+        "stacks": [
+          0,
+          0
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c",
+          "Ah",
+          "4d"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下",
+          "发出Ah",
+          "发出4d"
+        ],
+        "actor": null,
+        "phase": "showdown",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-9a8348fc1ef95618",
+      "inputFingerprint": "9a8348fc1ef9561852a9e44ec95db8a004625da2badf7680c88a06de11f431b4",
+      "answer": "ended",
+      "scenario": "B2",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "B2",
+        "heroSeat": "CO",
+        "oppSeat": "BTN",
+        "oop": 0,
+        "hero": [
+          "Qh",
+          "Qs"
+        ],
+        "opp": [
+          "Kh",
+          "Kd"
+        ],
+        "pot": 0,
+        "stacks": [
+          0,
+          20150
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 39850,
+        "board": [
+          "Js",
+          "7s",
+          "2c",
+          "Ah",
+          "4d"
+        ],
+        "history": [
+          "CO开到2.5，BTN加到8.25，CO跟注；盲注弃牌，其余人已弃牌",
+          "CO过牌",
+          "BTN下注6",
+          "CO加到91.75，已全下",
+          "BTN跟85.75，已全下",
+          "发出Ah",
+          "发出4d",
+          "摊牌并结算"
+        ],
+        "actor": null,
+        "phase": "ended",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-21c57bdf76ca1a21",
+      "inputFingerprint": "21c57bdf76ca1a218d7c2bc0c64b13d3d6e3b2ab4b3312a0fa540bafec6e6303",
+      "answer": "opponent",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 600,
+        "stacks": [
+          9700,
+          9700
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-5be2007e35f84de6",
+      "inputFingerprint": "5be2007e35f84de6ef42b9b656db38d2adc6efb1259918bc5c51d1180a096f3e",
+      "answer": "hero",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 600,
+        "stacks": [
+          9700,
+          9700
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 1,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-e973c7a900998cdf",
+      "inputFingerprint": "e973c7a900998cdffc8a6efa6b9ac356c4bfb87282fb992a4a555de1c136cb94",
+      "answer": "free",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 600,
+        "stacks": [
+          9700,
+          9700
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 1,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-b9267bb1f59cb62f",
+      "inputFingerprint": "b9267bb1f59cb62f874fc32528629555c614efc75d0ab72458f93f2e1d69fc73",
+      "answer": "deal",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 600,
+        "stacks": [
+          9700,
+          9700
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌"
+        ],
+        "actor": null,
+        "phase": "street_end",
+        "checks": 2,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-8223efcede220bf7",
+      "inputFingerprint": "8223efcede220bf72d9d32f749508a9d7ba3d62019a9f18ac2070ca74441ae51",
+      "answer": "opponent",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 600,
+        "stacks": [
+          9700,
+          9700
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c",
+          "6h"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 100
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-214cff147d587280",
+      "inputFingerprint": "214cff147d587280dcf78d6de55b742c27f125185047d9e57b17cda5ab86583c",
+      "answer": "bet",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 1000,
+        "stacks": [
+          9700,
+          9300
+        ],
+        "paid": [
+          0,
+          400
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c",
+          "6h"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4"
+        ],
+        "actor": 0,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 400
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-d1b9ef4f77a4bb91",
+      "inputFingerprint": "d1b9ef4f77a4bb912f3522a7f47173012ebe13712eb5d165d3107ed85e3a5eef",
+      "answer": "opponent",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 2200,
+        "stacks": [
+          8500,
+          9300
+        ],
+        "paid": [
+          1200,
+          400
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c",
+          "6h"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4",
+          "BB加到12"
+        ],
+        "actor": 1,
+        "phase": "action",
+        "checks": 0,
+        "minRaise": 800
+      },
+      "learnerAttempt": null
+    },
+    {
+      "id": "ST-466f6662cfd2f989",
+      "inputFingerprint": "466f6662cfd2f989648ca6daf15cec9f4eb77775c881280752ff7abeffd0d239",
+      "answer": "ended",
+      "scenario": "C",
+      "taskKind": "structure_only_not_strategy",
+      "teacherState": {
+        "id": "C",
+        "heroSeat": "BB",
+        "oppSeat": "SB",
+        "oop": 1,
+        "hero": [
+          "Tc",
+          "9c"
+        ],
+        "opp": [
+          "As",
+          "Kd"
+        ],
+        "pot": 0,
+        "stacks": [
+          10700,
+          9300
+        ],
+        "paid": [
+          0,
+          0
+        ],
+        "folded": 40000,
+        "board": [
+          "Ah",
+          "5d",
+          "5c",
+          "6h"
+        ],
+        "history": [
+          "其余四人弃牌，SB开到3，BB跟注",
+          "SB过牌",
+          "BB过牌",
+          "发出6h",
+          "SB下注4",
+          "BB加到12",
+          "SB弃牌"
+        ],
+        "actor": null,
+        "phase": "ended",
+        "checks": 0,
+        "minRaise": 800
+      },
+      "learnerAttempt": null
+    }
+  ]
+}

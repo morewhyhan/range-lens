@@ -1,0 +1,175 @@
+{
+  "id": "LEARNER_EVIDENCE_DRIVEN_SCHEDULER_V1",
+  "status": "learner_queue_scheduler_compiled_runtime_missing",
+  "purpose": "把当前会话中的父帧、错误层、释放阶段和覆盖缺口确定性地映射为下一道合法题。",
+  "sources": [
+    "157_自动出题与覆盖闭合合同.md",
+    "145_原理练习剂量与间隔队列合同.md",
+    "183_35项学习者释放闸门与帮助撤除统一合同.md",
+    "184_35项低基础题面与视觉负荷合同.md"
+  ],
+  "sessionOnly": true,
+  "stateFields": [
+    "routeParent",
+    "currentUnit",
+    "releaseStage",
+    "lastAnswer",
+    "firstAnswer",
+    "helpLevel",
+    "errorLayer",
+    "requiredOutputMissing",
+    "coverageLedger",
+    "exposureLedger",
+    "lastSeenQuestionIds",
+    "changedFieldHistory",
+    "sourceIdentity",
+    "configurationIdentity"
+  ],
+  "hardFilterOrder": [
+    "same_parent_frame",
+    "physical_legal",
+    "history_pot_stack_actor_consistent",
+    "source_identity",
+    "successor_or_explicit_stop",
+    "exactly_one_changed_field",
+    "unique_question_identity",
+    "child_parent_lock",
+    "plain_prompt_lint"
+  ],
+  "priorityTuple": [
+    "required_parent_handoff",
+    "same_parent_error_repair",
+    "release_stage_deficit",
+    "coverage_deficit",
+    "spacing_due",
+    "user_exposure_quota",
+    "unseenness",
+    "stable_question_hash"
+  ],
+  "eventTransitions": {
+    "first_answer_correct_no_help": {
+      "record": "independent_evidence",
+      "next": "same_mechanism_unseen_or_next_stage_gap",
+      "promotion": "allowed_by_release_contract"
+    },
+    "correct_after_help": {
+      "record": "guided_completion",
+      "next": "same_parent_repair_or_same_mechanism",
+      "promotion": "blocked_from_independent"
+    },
+    "wrong": {
+      "record": "first_answer_and_error_layer",
+      "next": "same_parent_same_error_layer_repair",
+      "promotion": "none"
+    },
+    "unknown": {
+      "record": "unknown_as_wrong",
+      "next": "minimal_fact_child_same_parent",
+      "promotion": "none"
+    },
+    "missing_reference": {
+      "record": "stop_identity",
+      "next": "stop_card_or_parent",
+      "promotion": "none"
+    },
+    "missing_successor": {
+      "record": "stop_identity",
+      "next": "stop_card_or_parent",
+      "promotion": "none"
+    },
+    "child_close": {
+      "record": "restore_parent_snapshot",
+      "next": "parent_queue",
+      "promotion": "none"
+    },
+    "single_variable_transfer_correct": {
+      "record": "changed_field_and_affected_layer",
+      "next": "delayed_or_next_transfer",
+      "promotion": "allowed_by_release_contract"
+    }
+  },
+  "exposure": {
+    "userRatiosMayOrderOnly": true,
+    "hardRepairOverridesRatios": true,
+    "answerWeightsUnchanged": true,
+    "emptyPoolStops": true
+  },
+  "modes": {
+    "firstPass": {
+      "route": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "representatives": [
+        "1.5",
+        "2.1",
+        "3.1",
+        "4.5",
+        "5.7"
+      ],
+      "schedulerRole": "same_parent_minimal_repair_only"
+    },
+    "independent": {
+      "order": [
+        "current_stage_deficit",
+        "same_mechanism_unseen",
+        "adjacent_single_variable",
+        "delayed_recall",
+        "continuous_successor"
+      ],
+      "schedulerRole": "full_priority_tuple"
+    }
+  },
+  "selectionRecordFields": [
+    "selectedQuestionId",
+    "candidateCountAfterHardFilters",
+    "priorityTuple",
+    "selectionReason",
+    "parentFrame",
+    "unitId",
+    "releaseStageBefore",
+    "releaseStageAfter",
+    "errorLayerBefore",
+    "helpLevelBefore",
+    "helpLevelAfter",
+    "changedField",
+    "coverageDelta",
+    "stopReason"
+  ],
+  "stopConditions": [
+    "missing_source_identity",
+    "missing_range_or_ledger_or_successor",
+    "more_than_one_changed_field",
+    "coverage_incomplete_after_pool_exhaustion",
+    "configuration_hash_changed",
+    "required_fact_not_passed"
+  ],
+  "guards": {
+    "noAggregateScorePromotion": true,
+    "noCrossParentRepair": true,
+    "noDefaultActionOnMissingEvidence": true,
+    "noRandomStrategyAnswer": true,
+    "childCloseRestoresParent": true,
+    "continuousRequiresSuccessorOrStop": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "priorityOrderWritten": true,
+    "runtime": false,
+    "lowBaselineCalibration": false,
+    "beginnerTrial": false,
+    "matchedReference": false,
+    "completeSuccessorChains": false,
+    "NL50Evidence": false
+  }
+}

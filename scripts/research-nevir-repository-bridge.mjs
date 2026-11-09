@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const dir=path.resolve('research/nevir-system');
+const capability=JSON.parse(fs.readFileSync(path.join(dir,'repository-current-capability.json'),'utf8'));
+const bridge=JSON.parse(fs.readFileSync(path.join(dir,'repository-training-bridge.json'),'utf8'));
+const names=Object.keys(capability.sources);
+if(names.length!==6) throw new Error(`expected six repository roles, got ${names.length}`);
+if(!capability.hardRules.equityIsNotStrategy || !capability.hardRules.coursePolicySeparateFromReference) throw new Error('core boundary missing');
+const stages=bridge.route.map(x=>x.stage);
+const expected=['source_identity','input_compile','physical_check','reference_solve','policy_compile','exercise_compile'];
+if(JSON.stringify(stages)!==JSON.stringify(expected)) throw new Error(`route mismatch ${JSON.stringify(stages)}`);
+if(bridge.runtimeRule!=='read_immutable_snapshots_only') throw new Error('runtime must read immutable snapshots');
+console.log(JSON.stringify({ok:true,status:capability.status,repositories:names.length,stages,referenceSolve:capability.sources.postflopSolver.role,physicalCheck:[capability.sources.equityCalculator.role,capability.sources.holdemHandEvaluator.role],runtimeIntegrated:capability.evidence.fullRuntimeIntegration}));

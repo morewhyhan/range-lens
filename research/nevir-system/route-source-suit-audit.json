@@ -1,0 +1,413 @@
+{
+  "status": "source_to_imported_route_physical_audit_not_strategy_completion",
+  "cases": [
+    {
+      "id": "T01",
+      "sourceFragments": [
+        {
+          "id": "N4-L26",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 26,
+            "section": "翻牌1/3下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 在大多数空白牌（如K♠ T♥ 5♣翻牌，转牌2♦）上，应该高频大尺寸第二枪（接近GTO）。",
+          "flags": [],
+          "status": "source_fragment_not_strategy_answer"
+        }
+      ],
+      "originalBoard": [
+        "Ks",
+        "Th",
+        "5c",
+        "2d"
+      ],
+      "importedBoard": [
+        "Ks",
+        "Th",
+        "5d",
+        "2d"
+      ],
+      "importedRow": {
+        "sheet": "05 转牌路线",
+        "row": 8,
+        "fields": {
+          "B": "T01\nKT5r → 2♦\n原例",
+          "D": "【课程】\nIP 3bet：翻牌B33被跟，转牌对手X。\n此空白牌可继续大注，课程讨论B70～B100。",
+          "E": "翻牌虽可广打，对手跟注范围已收紧；第二枪采用强价值＋合适诈唬的极化思路。\n边界：中等牌与未改善空气不自动全打。完整选牌频率未给。\nS4「翻牌1/3下注后的转牌策略」"
+        }
+      },
+      "globallySuitEquivalent": false,
+      "sourceCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 0,
+        "currentMadeFlushHoldings": 0
+      },
+      "importedCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "witness": {
+        "sourceHole": [
+          "Ad",
+          "Qd"
+        ],
+        "importedHole": [
+          "Ad",
+          "Qd"
+        ],
+        "sourceFD": 0,
+        "importedFD": 9,
+        "sourceOuts": [],
+        "importedOuts": [
+          "3d",
+          "4d",
+          "6d",
+          "7d",
+          "8d",
+          "9d",
+          "Td",
+          "Jd",
+          "Kd"
+        ]
+      },
+      "strategyRelease": "quarantine_exact_source_policy_transfer_suit_relation_not_equivalent"
+    },
+    {
+      "id": "T02",
+      "sourceFragments": [
+        {
+          "id": "N4-L36",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 36,
+            "section": "翻牌大尺寸下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 例如：9♦ 6♠ 2♣彩虹翻牌，我们大尺寸下注，对手应该过牌-加注15%，但实际只有10%左右且弃牌过多。",
+          "flags": [
+            "需区分动作频率与尺寸及数据身份",
+            "可能包含对手假设或人群判断"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        },
+        {
+          "id": "N4-L37",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 37,
+            "section": "翻牌大尺寸下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 转牌J♣（高牌），我们应该高频大尺寸第二枪。对手本应加注一些组合（如KQ、Jx），但不会，而且应该100%跟注65s，但实际会过度弃牌。",
+          "flags": [
+            "绝对表述需核定作用范围",
+            "需区分动作频率与尺寸及数据身份",
+            "可能包含对手假设或人群判断"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        }
+      ],
+      "originalBoard": [
+        "9d",
+        "6s",
+        "2c",
+        "Jc"
+      ],
+      "importedBoard": [
+        "9s",
+        "6h",
+        "2d",
+        "Jc"
+      ],
+      "importedRow": {
+        "sheet": "05 转牌路线",
+        "row": 9,
+        "fields": {
+          "B": "T02\n962r → J♣\n原例",
+          "D": "【课程】\nIP 3bet：翻牌B67被跟，对手转牌X。\nJ是课程继续较大第二枪的例子。",
+          "E": "J能改善你的高张范围，也给对手中对压力；不是“任何高牌都自动打”。\n边界：具体手牌选取由强价值/有效诈唬归纳，原文无完整组合。\nS4「翻牌大尺寸下注后的转牌策略」"
+        }
+      },
+      "globallySuitEquivalent": false,
+      "sourceCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "importedCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 0,
+        "currentMadeFlushHoldings": 0
+      },
+      "witness": {
+        "sourceHole": [
+          "Ac",
+          "Qc"
+        ],
+        "importedHole": [
+          "Ac",
+          "Qc"
+        ],
+        "sourceFD": 9,
+        "importedFD": 0,
+        "sourceOuts": [
+          "3c",
+          "4c",
+          "5c",
+          "6c",
+          "7c",
+          "8c",
+          "9c",
+          "Tc",
+          "Kc"
+        ],
+        "importedOuts": []
+      },
+      "strategyRelease": "quarantine_exact_source_policy_transfer_suit_relation_not_equivalent"
+    },
+    {
+      "id": "T04",
+      "sourceFragments": [
+        {
+          "id": "N4-L36",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 36,
+            "section": "翻牌大尺寸下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 例如：9♦ 6♠ 2♣彩虹翻牌，我们大尺寸下注，对手应该过牌-加注15%，但实际只有10%左右且弃牌过多。",
+          "flags": [
+            "需区分动作频率与尺寸及数据身份",
+            "可能包含对手假设或人群判断"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        },
+        {
+          "id": "N4-L38",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 38,
+            "section": "翻牌大尺寸下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 在空白牌（如转牌2♦）上，对手仍应donk，但不会，所以我们应该降低第二枪频率。",
+          "flags": [
+            "可能包含对手假设或人群判断"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        }
+      ],
+      "originalBoard": [
+        "9d",
+        "6s",
+        "2c",
+        "2d"
+      ],
+      "importedBoard": [
+        "9s",
+        "6h",
+        "2d",
+        "2h"
+      ],
+      "importedRow": {
+        "sheet": "05 转牌路线",
+        "row": 11,
+        "fields": {
+          "B": "T04\n962r → 2♦\n原例",
+          "D": "【课程】\n同一962大注线：降低第二枪频率，保留更多X。\n不能把配对当成无条件全范围下注牌。",
+          "E": "顶端牌和中等牌的价值变化不同；手牌是否改善必须重新看。\n边界：对子转牌没有完整统一表。原笔记A72→2有重复花色记录，不照抄不合法牌。\nS4「翻牌大尺寸下注后的转牌策略」"
+        }
+      },
+      "globallySuitEquivalent": false,
+      "sourceCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "importedCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "witness": {
+        "sourceHole": [
+          "Ad",
+          "Qd"
+        ],
+        "importedHole": [
+          "As",
+          "Qs"
+        ],
+        "sourceFD": 9,
+        "importedFD": 0,
+        "scope": "Hero suits renamed consistently with the unique flop correspondence; the imported turn breaks that correspondence.",
+        "sourceOuts": [
+          "3d",
+          "4d",
+          "5d",
+          "6d",
+          "7d",
+          "8d",
+          "Td",
+          "Jd",
+          "Kd"
+        ],
+        "importedOuts": []
+      },
+      "strategyRelease": "quarantine_exact_source_policy_transfer_suit_relation_not_equivalent"
+    },
+    {
+      "id": "T05",
+      "sourceFragments": [
+        {
+          "id": "N4-L33",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 33,
+            "section": "翻牌1/3下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 另一例：J♥ T♠ 2♦翻牌，转牌9♦（完成顺子听牌），对手应donk但不会，我们只能以40%频率小尺寸下注；而转牌5♣（空白）则可以高频大尺寸。",
+          "flags": [
+            "需区分动作频率与尺寸及数据身份",
+            "可能包含对手假设或人群判断",
+            "可能需牌张或概率复算"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        }
+      ],
+      "originalBoard": [
+        "Jh",
+        "Ts",
+        "2d",
+        "9d"
+      ],
+      "importedBoard": [
+        "Js",
+        "Th",
+        "2d",
+        "9d"
+      ],
+      "importedRow": {
+        "sheet": "05 转牌路线",
+        "row": 12,
+        "fields": {
+          "B": "T05\nJT2r → 9♦\n原例",
+          "D": "【课程】\n范围变化优先：减少第二枪，下注偏小。\n先区分自己已成强牌、普通一对、听牌/空气。",
+          "E": "9让KQ/87等成为顺子，对手先前跟注的连牌集中改善。\n边界：不是所有牌都X，也不是“我有一对就保护大注”；精确选牌待补。\nS4「翻牌1/3下注后的转牌策略」"
+        }
+      },
+      "globallySuitEquivalent": true,
+      "sourceCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "importedCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 55,
+        "currentMadeFlushHoldings": 0
+      },
+      "witness": null,
+      "strategyRelease": "physical_board_correspondence_only_other_conditions_still_required"
+    },
+    {
+      "id": "T06",
+      "sourceFragments": [
+        {
+          "id": "N4-L32",
+          "source": {
+            "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+            "line": 32,
+            "section": "翻牌1/3下注后的转牌策略",
+            "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+          },
+          "text": "- 数据验证：K♠ T♠ 5♠翻牌，转牌9♠（完成同花），我们只能以40%频率第二枪，尺寸较小；而转牌8♣（空白）则可以以66%频率大尺寸下注。",
+          "flags": [
+            "需区分动作频率与尺寸及数据身份",
+            "可能需牌张或概率复算"
+          ],
+          "status": "source_fragment_not_strategy_answer"
+        }
+      ],
+      "originalBoard": [
+        "Ks",
+        "Ts",
+        "5s",
+        "9s"
+      ],
+      "importedBoard": [
+        "Ks",
+        "Ts",
+        "5s",
+        "9s"
+      ],
+      "importedRow": {
+        "sheet": "05 转牌路线",
+        "row": 13,
+        "fields": {
+          "B": "T06\nKT5M → 9♠\n原例",
+          "D": "【课程】\n原例是第四张同花！\n课程给减少进攻、较小尺寸的方向。",
+          "E": "一张黑桃底牌就能组成同花。强弱要按同花大小重新判断。\n边界：不要错画成“两同花翻牌→第三张”；其他完成花的牌按范围重新评估。\nS4「翻牌1/3下注后的转牌策略」"
+        }
+      },
+      "globallySuitEquivalent": true,
+      "sourceCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 741,
+        "currentMadeFlushHoldings": 387
+      },
+      "importedCounts": {
+        "legalPhysicalHoldings": 1128,
+        "nominalNextCardFlushCompletionHoldings": 741,
+        "currentMadeFlushHoldings": 387
+      },
+      "witness": null,
+      "strategyRelease": "physical_board_correspondence_only_other_conditions_still_required"
+    }
+  ],
+  "literalDuplicate": {
+    "fragment": {
+      "id": "N4-L29",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.4-3bet底池的转牌_中文笔记.md",
+        "line": 29,
+        "section": "翻牌1/3下注后的转牌策略",
+        "sha256": "e6894ef9a052dafea8652784272f7eaf458d32422f888985d8d394adc283b845"
+      },
+      "text": "- 对于A♠ 7♥ 2♦翻牌，转牌2♦，我们大尺寸下注，对手会弃掉所有非A牌，我们可以在河牌放弃，利润来自翻牌。",
+      "flags": [
+        "绝对表述需核定作用范围",
+        "可能包含对手假设或人群判断"
+      ],
+      "status": "source_fragment_not_strategy_answer"
+    },
+    "board": [
+      "As",
+      "7h",
+      "2d",
+      "2d"
+    ],
+    "legal": false,
+    "rejectedByCardCheck": true,
+    "handling": "Do not silently change a suit and claim recovered original strategy."
+  },
+  "counts": {
+    "explicitOriginalExamples": 5,
+    "nonEquivalent": 3,
+    "equivalent": 2,
+    "illegalLiteralExample": 1,
+    "physicalStateEnumerations": 11280
+  },
+  "limits": [
+    "Only five explicitly specified source boards were compared, not all18 continuation nodes.",
+    "No fixed hero cards or action-conditioned ranges in the all-holdings counts.",
+    "Physical suit equivalence does not validate beforeSize, position, action frequencies, hand policy or whole-hand strategy.",
+    "Original user files and application data were not edited.",
+    "Current source diagram assignments might have been illustrative; they still cannot be inherited as exact policies without a matched reference."
+  ]
+}

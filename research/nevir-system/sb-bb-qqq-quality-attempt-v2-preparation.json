@@ -1,0 +1,19 @@
+{
+  "status": "prepared_not_launched",
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "previousStatus": "finished_candidate_saved",
+  "previousIterations": 240,
+  "previousTargetReached": false,
+  "reason": "First completed run failed its unchanged 0.006BB numerical target at the explicit twenty-minute wall limit. Increase compute time while preserving all ranges, menus, future streets and resource guards.",
+  "newSource": "research/solver-probe/src/bin/sb_bb_qqq_reference_v2.rs",
+  "wallLimitSeconds": 7200,
+  "maxIterations": 2000,
+  "targetMetricBB": 0.006,
+  "threadsRequested": 2,
+  "requestChanged": false,
+  "sourceSHA256": "9cb07344a2a03319e62622a0e1c54149ea4e1cc09dcf5b5affee6f66e056b68d",
+  "originalRequestSHA256": "9aded4c8fe90a09c22dfe49fb9daff156bb70ddb6766e7c46ccc0d47dc9bc50f",
+  "QQQRequestSHA256": "cd2ad5c2504628415a4399af8999fcc2bd610fd1f576d10b5a0b93100ff8fb8c",
+  "priorResultSHA256": "dd9ef53a4cb3834bf1249da13372a5ee4cb08c51de7cb62586fda2f2a314770f",
+  "appChanged": false
+}

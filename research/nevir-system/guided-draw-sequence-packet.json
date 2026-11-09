@@ -1,0 +1,963 @@
+{
+  "status": "author_guided_pre_river_sequence_not_full_target_strategy",
+  "context": {
+    "players": 6,
+    "startingEffectiveBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "board": [
+      "Ks",
+      "7s",
+      "2d",
+      "3d"
+    ],
+    "heroHole": [
+      "As",
+      "Qs"
+    ],
+    "rake": "none",
+    "history": [
+      "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+      "Flop Ks 7s 2d: SB checks, BTN checks",
+      "Turn 3d: SB checks, BTN bets 10.5 into 21"
+    ],
+    "state": {
+      "potIncludingBetBB": 31.5,
+      "heroStackBB": 90,
+      "villainStackBB": 79.5,
+      "foldedStacksBB": 399,
+      "toCallBB": 10.5
+    },
+    "origin": "Legal observed history, not asserted optimal. All opponent weights below are GIVEN at this current decision, not inferred from a complete preflop or flop policy."
+  },
+  "parentLink": {
+    "source": "first-hand-lesson-prompts.json",
+    "frame": "S18",
+    "mode": "review_after_first_pass",
+    "notice": "原S18只练识别面对下注；下面换另一手完整给定模型，不把其答案作为原BB那手的策略。",
+    "snapshotHash": "5e2aa97ec5c494200c9ccdbc39e0c991f6c8c3ec8db056be818d775942116024",
+    "returnHash": "5e2aa97ec5c494200c9ccdbc39e0c991f6c8c3ec8db056be818d775942116024",
+    "independentTest": false
+  },
+  "inputs": {
+    "holdings": [
+      {
+        "id": "KK",
+        "hole": [
+          "Kh",
+          "Kd"
+        ]
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kc",
+          "Jc"
+        ]
+      },
+      {
+        "id": "JT",
+        "hole": [
+          "Js",
+          "Ts"
+        ]
+      }
+    ],
+    "weights": [
+      4,
+      16,
+      1
+    ],
+    "smallResponse": [
+      {
+        "fold": 0,
+        "call": 0,
+        "jam": 1
+      },
+      {
+        "fold": 0,
+        "call": 0,
+        "jam": 1
+      },
+      {
+        "fold": 0,
+        "call": 0,
+        "jam": 1
+      }
+    ],
+    "jamCall": [
+      1,
+      1,
+      1
+    ],
+    "riverPolicy": {
+      "KK": "Bet unless river is a spade other than 2s/3s",
+      "KJ": "Check on any spade or Ace, otherwise bet",
+      "JT": "Always bet",
+      "size": "Half pot on the river following a turn call or raise-call; amounts remain within stacks",
+      "information": "Only own holding, public river and observed history; policy does not inspect hero hole cards"
+    },
+    "menu": {
+      "turnActions": [
+        "fold",
+        "call",
+        "raise_to_30",
+        "jam_to_90"
+      ],
+      "riverHero": "Always check first, then fold or call a bet; no river raise or lead evaluated",
+      "turnReraise": "Only opponent jam and hero fold/call",
+      "notFullGame": "Other legal turn raise sizes, river leads and river raises are omitted from this teaching tree. These omissions are explicit task restrictions, not poker rules. No exploitability or equilibrium claim."
+    }
+  },
+  "frames": [
+    {
+      "id": "D01",
+      "title": "先看当前价格",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "跟注现在还需补多少？",
+        "options": [
+          10.5,
+          21,
+          31.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D02",
+      "title": "当前成牌和听牌分开",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己现在已经成花了吗？",
+        "options": [
+          "没有，是直接听花",
+          "已经成花",
+          "没有直接听花",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D03",
+      "title": "先只看已知牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "只看自己和公共牌，还有几张黑桃没显示？",
+        "options": [
+          9,
+          7,
+          13,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "nominalUnknownSpades": [
+          "2s",
+          "3s",
+          "4s",
+          "5s",
+          "6s",
+          "8s",
+          "9s",
+          "Ts",
+          "Js"
+        ]
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D04",
+      "title": "看一个失效补牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "2s"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "hypothetical_river2s_card_comparison_only_not_dealt",
+        "opponentVisible": false,
+        "candidateKK": [
+          "Kh",
+          "Kd"
+        ]
+      },
+      "task": {
+        "prompt": "假设河牌2s、对手是KhKd，自己的A高花赢吗？",
+        "options": [
+          "赢",
+          "输给葫芦",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidateExampleOnly": true,
+        "heroBest": [
+          5,
+          14,
+          13,
+          12,
+          7,
+          2
+        ],
+        "villainBest": [
+          6,
+          13,
+          2
+        ]
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D05",
+      "title": "收起补牌预览",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "回到原转牌后，能把对手范围直接当成只有KK吗？",
+        "options": [
+          "不能，刚才只是候选示例",
+          "能",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "restoreHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+        "posterior": {
+          "KK": 0.19047619047619047,
+          "KJ": 0.7619047619047619,
+          "JT": 0.047619047619047616
+        }
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D06",
+      "title": "分别比较再合并",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定完整跑牌枚举，整体自由摊牌份额是哪项？",
+        "options": [
+          "约27.92%",
+          "9张所以必跟",
+          "100%",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "wins": [
+          {
+            "id": "KK",
+            "wins": 7,
+            "total": 44
+          },
+          {
+            "id": "KJ",
+            "wins": 12,
+            "total": 44
+          },
+          {
+            "id": "JT",
+            "wins": 38,
+            "total": 44
+          }
+        ],
+        "weights": [
+          4,
+          16,
+          1
+        ],
+        "equity": 0.2792207792207792,
+        "scope": "Given enumeration support, not independent mental calculation or clean-out count."
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D07",
+      "title": "先标明免费摊牌假设",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "如果跟后河牌保证不再下注，给定EV+1.227能否只在这个假设下说明跟优于弃？",
+        "options": [
+          "能，但只限这个假设",
+          "能推广所有听花跟注",
+          "不能比较",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "assumption": "Counterfactual free showdown",
+        "callEV": 1.2272727272727266,
+        "foldEV": 0
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D08",
+      "title": "换回真正要比较的未来",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "本题实际压力树里，跟后河牌一定能免费摊牌吗？",
+        "options": [
+          "不一定，对手按题设下注",
+          "一定",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "opponentRiverPolicy": {
+          "KK": "Bet unless river is a spade other than 2s/3s",
+          "KJ": "Check on any spade or Ace, otherwise bet",
+          "JT": "Always bet",
+          "size": "Half pot on the river following a turn call or raise-call; amounts remain within stacks",
+          "information": "Only own holding, public river and observed history; policy does not inspect hero hole cards"
+        },
+        "scope": {
+          "turnActions": [
+            "fold",
+            "call",
+            "raise_to_30",
+            "jam_to_90"
+          ],
+          "riverHero": "Always check first, then fold or call a bet; no river raise or lead evaluated",
+          "turnReraise": "Only opponent jam and hero fold/call",
+          "notFullGame": "Other legal turn raise sizes, river leads and river raises are omitted from this teaching tree. These omissions are explicit task restrictions, not poker rules. No exploitability or equilibrium claim."
+        }
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D09",
+      "title": "打开跟注路线预览",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 42,
+        "heroStack": 79.5,
+        "villainStack": 79.5,
+        "heroPut": 10.5,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "counterfactual_call_preview_not_actual_history",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这只是跟注预演：付10.5后池是多少？",
+        "options": [
+          42,
+          31.5,
+          52.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D10",
+      "title": "预演河牌再次承压",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "4c"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 63,
+        "heroStack": 79.5,
+        "villainStack": 58.5,
+        "heroPut": 0,
+        "villainPut": 21,
+        "actor": "SB",
+        "scope": "counterfactual_call_then4c_then_check_bet21",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "预演4c后自己过、对手下21，只赢JT占1/21，此时跟注EV是哪项？",
+        "options": [
+          -17,
+          0,
+          17,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "observedBetPosterior": {
+          "KK": 0.19047619047619047,
+          "KJ": 0.7619047619047619,
+          "JT": 0.047619047619047616
+        },
+        "equity": 0.047619047619047616,
+        "riverCallEV": -17
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D11",
+      "title": "预演弃牌不等于没付转牌钱",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "4c"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 0,
+        "heroStack": 79.5,
+        "villainStack": 121.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": null,
+        "scope": "counterfactual_only_ended",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这条预演在河牌弃牌，转牌付的10.5还回来了吗？",
+        "options": [
+          "没有",
+          "回来了",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D12",
+      "title": "回原决定重新合并",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭预演后，真实原转牌自己还剩多少？",
+        "options": [
+          90,
+          79.5,
+          0,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "restoreHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57"
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D13",
+      "title": "看完整未来而非一张河牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按所有候选、所有河牌和给定后续汇总，本菜单选什么？",
+        "options": [
+          "弃牌",
+          "跟10.5",
+          "加到30",
+          "全下90",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": [
+          {
+            "id": "fold",
+            "evBB": 0
+          },
+          {
+            "id": "call",
+            "evBB": -0.15909090909091006
+          },
+          {
+            "id": "raise_to_30",
+            "evBB": -30
+          },
+          {
+            "id": "jam_to_90",
+            "evBB": -33.87662337662328
+          }
+        ],
+        "exactCallEV": "−7/44",
+        "scope": "Small exact model difference; no claim that uncertain real-world inputs support this precision."
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D14",
+      "title": "这次才真实执行",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 0,
+        "heroStack": 90,
+        "villainStack": 111,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": null,
+        "scope": "actual_turn_fold_settled",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己弃牌后，对手10.5的未匹配部分怎样处理？",
+        "options": [
+          "退回，再收走匹配池21",
+          "全部当新增盈利",
+          "发河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D15",
+      "title": "分清当前与整手基点",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 0,
+        "heroStack": 90,
+        "villainStack": 111,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": null,
+        "scope": "actual_turn_fold_settled",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "从本次决定起自己没再投入；整手100到90，净变化是多少？",
+        "options": [
+          -10,
+          0,
+          10,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    },
+    {
+      "id": "D16",
+      "title": "换条件，不背听花必弃",
+      "state": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "pot": 31.5,
+        "heroStack": 90,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 10.5,
+        "actor": "SB",
+        "scope": "actual_current_turn",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "另一版本仅把JT质量从1改4，给定完整EV后该选什么？",
+        "options": [
+          "弃牌",
+          "跟注",
+          "加到30",
+          "全下90",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "versionReset": true,
+        "weights": [
+          4,
+          16,
+          4
+        ],
+        "values": [
+          {
+            "id": "fold",
+            "evBB": 0
+          },
+          {
+            "id": "call",
+            "evBB": 0.39772727272727604
+          },
+          {
+            "id": "raise_to_30",
+            "evBB": -19.193181818181813
+          },
+          {
+            "id": "jam_to_90",
+            "evBB": -19.193181818181777
+          }
+        ]
+      },
+      "unknownCountsAsWrong": true,
+      "assessment": "guided_given_model_not_unaided_strategy"
+    }
+  ],
+  "answers": [
+    {
+      "id": "D01",
+      "expected": 10.5,
+      "explanation": "眼前31.5包含对手10.5；跟后42，价格25%。"
+    },
+    {
+      "id": "D02",
+      "expected": "没有，是直接听花",
+      "explanation": "AsQs与Ks7s共四张黑桃；当前最佳五张仍是A高。"
+    },
+    {
+      "id": "D03",
+      "expected": 9,
+      "explanation": "这9张可能被对手占用，且补成花也可能输；不能直接当9张必胜补牌。"
+    },
+    {
+      "id": "D04",
+      "expected": "输给葫芦",
+      "explanation": "对手KKK22葫芦胜同花。这里是独立假设图，2s没有真的发入当前历史。"
+    },
+    {
+      "id": "D05",
+      "expected": "不能，刚才只是候选示例",
+      "explanation": "恢复原四张公共牌、池31.5与后手90，候选仍有三组。"
+    },
+    {
+      "id": "D06",
+      "expected": "约27.92%",
+      "explanation": "每个候选条件下有44张合法河牌，胜出7/12/38，再按4:16:1合并。"
+    },
+    {
+      "id": "D07",
+      "expected": "能，但只限这个假设",
+      "explanation": "此版本跟后直接结算，原始份额可用于计算；实际压力树不是这个版本。"
+    },
+    {
+      "id": "D08",
+      "expected": "不一定，对手按题设下注",
+      "explanation": "未来下注和自己弃/跟都要纳入，不能沿用免费摊牌答案。"
+    },
+    {
+      "id": "D09",
+      "expected": 42,
+      "explanation": "原决定尚未执行；预演中池42、双方79.5。"
+    },
+    {
+      "id": "D10",
+      "expected": -17,
+      "explanation": "跟后84，EV=84/21−21=−17；只比较该受限河牌跟弃菜单。"
+    },
+    {
+      "id": "D11",
+      "expected": "没有",
+      "explanation": "预演从90到79.5；真实原决定仍没付款，不能混同。"
+    },
+    {
+      "id": "D12",
+      "expected": 90,
+      "explanation": "快照恢复：四张牌、池31.5、自己90；预演没有污染实际历史。"
+    },
+    {
+      "id": "D13",
+      "expected": "弃牌",
+      "explanation": "跟注EV−7/44不是只看4c得出；它来自完整给定树，其他动作也已比较。"
+    },
+    {
+      "id": "D14",
+      "expected": "退回，再收走匹配池21",
+      "explanation": "对手79.5+10.5退款+21=111，自己90，池清空；没有真实河牌。"
+    },
+    {
+      "id": "D15",
+      "expected": -10,
+      "explanation": "当前弃牌增量为0，整手已付的10不退；两种基点不能混。"
+    },
+    {
+      "id": "D16",
+      "expected": "跟注",
+      "explanation": "其他未来响应不变，输入权重变化使本模型菜单内最佳改变；这是另一版本，不接在刚才弃牌后继续。"
+    }
+  ],
+  "returnState": {
+    "street": "flop",
+    "board": [
+      "Kc",
+      "8d",
+      "3s"
+    ],
+    "potBB": 7.5,
+    "stacksBB": {
+      "UTG": 100,
+      "HJ": 100,
+      "CO": 100,
+      "BTN": 95.5,
+      "SB": 99.5,
+      "BB": 97.5
+    },
+    "streetPaidBB": {
+      "BB": 0,
+      "BTN": 2
+    },
+    "foldedSeats": [
+      "UTG",
+      "HJ",
+      "CO",
+      "SB"
+    ],
+    "history": [
+      "大盲BB过牌",
+      "按钮BTN下注2BB"
+    ],
+    "heroSeat": "BB",
+    "heroHole": [
+      "As",
+      "Kd"
+    ],
+    "opponentSeat": "BTN",
+    "opponentHoleVisible": false,
+    "mode": "new_structure_candidate"
+  },
+  "invariants": {
+    "hypotheticalRiversNotActualHistory": true,
+    "previewsRestoreOriginalMoney": true,
+    "actualFoldNoRiver": true,
+    "givenCalculationsAreSupport": true,
+    "learnerTrials": 0,
+    "appChanged": false
+  }
+}

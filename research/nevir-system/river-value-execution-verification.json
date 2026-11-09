@@ -1,0 +1,414 @@
+{
+  "ok": true,
+  "status": "author_given_tree_execution_not_app_or_real_learner",
+  "rootQuestions": 13,
+  "rootPlanComparisons": 37,
+  "allNodePlanComparisons": 81,
+  "childDecisionVisits": 16,
+  "pendingVisits": 85,
+  "terminalCalls": 151,
+  "foldRefunds": 43,
+  "all600BB": true,
+  "sourceEVsReconstructed": true,
+  "hiddenHoldingNotUsedToSelectHeroAction": true,
+  "explicitCheckBetRaiseJamCallAndLosingShowdown": true,
+  "wrongLaterFoldKeepsActual38": true,
+  "summaries": [
+    {
+      "id": "M-c797f3b3a39357ac",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-c797f3b3a39357ac",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 38,
+        "label": "跟38"
+      },
+      "evFromExecutedTreeBB": 96,
+      "sourceEVBB": 96
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 17.5,
+        "label": "跟17.5"
+      },
+      "evFromExecutedTreeBB": 29.166666666666657,
+      "sourceEVBB": 29.166666666666668
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 45,
+        "label": "加到45"
+      },
+      "evFromExecutedTreeBB": 51,
+      "sourceEVBB": 51
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": 51,
+      "sourceEVBB": 51
+    },
+    {
+      "id": "M-7c3585a9a1a4ef4e",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-7c3585a9a1a4ef4e",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 27.5,
+        "label": "跟27.5"
+      },
+      "evFromExecutedTreeBB": 55.83333333333333,
+      "sourceEVBB": 55.833333333333336
+    },
+    {
+      "id": "M-7c3585a9a1a4ef4e",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": 68.5,
+      "sourceEVBB": 68.5
+    },
+    {
+      "id": "M-618f335997d71c89",
+      "plan": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "evFromExecutedTreeBB": 39.79999999999998,
+      "sourceEVBB": 39.8
+    },
+    {
+      "id": "M-618f335997d71c89",
+      "plan": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 17.5,
+        "label": "下注17.5"
+      },
+      "evFromExecutedTreeBB": 45.92500000000001,
+      "sourceEVBB": 45.925
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 17.5,
+        "label": "跟17.5"
+      },
+      "evFromExecutedTreeBB": 44.7222222222222,
+      "sourceEVBB": 44.72222222222222
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 45,
+        "label": "加到45"
+      },
+      "evFromExecutedTreeBB": 61.16666666666666,
+      "sourceEVBB": 61.166666666666664
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": 52,
+      "sourceEVBB": 52
+    },
+    {
+      "id": "M-621ea4c65f3d92aa",
+      "plan": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "evFromExecutedTreeBB": 58.55000000000001,
+      "sourceEVBB": 58.55
+    },
+    {
+      "id": "M-621ea4c65f3d92aa",
+      "plan": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 17.5,
+        "label": "下注17.5"
+      },
+      "evFromExecutedTreeBB": 45.92500000000001,
+      "sourceEVBB": 45.925
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 17.5,
+        "label": "跟17.5"
+      },
+      "evFromExecutedTreeBB": 44.7222222222222,
+      "sourceEVBB": 44.72222222222222
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 45,
+        "label": "加到45"
+      },
+      "evFromExecutedTreeBB": 61.16666666666666,
+      "sourceEVBB": 61.166666666666664
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": 37.44444444444444,
+      "sourceEVBB": 37.44444444444444
+    },
+    {
+      "id": "M-ce099baa7c11b2b2",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-ce099baa7c11b2b2",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 27.5,
+        "label": "跟27.5"
+      },
+      "evFromExecutedTreeBB": 55.83333333333333,
+      "sourceEVBB": 55.833333333333336
+    },
+    {
+      "id": "M-ce099baa7c11b2b2",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": 43.16666666666666,
+      "sourceEVBB": 43.16666666666667
+    },
+    {
+      "id": "M-faae2c247429810f",
+      "plan": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "evFromExecutedTreeBB": 58.55000000000001,
+      "sourceEVBB": 58.55
+    },
+    {
+      "id": "M-faae2c247429810f",
+      "plan": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 17.5,
+        "label": "下注17.5"
+      },
+      "evFromExecutedTreeBB": 42.124999999999986,
+      "sourceEVBB": 42.125
+    },
+    {
+      "id": "M-faf7125c4e97bd3b",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-faf7125c4e97bd3b",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 38,
+        "label": "跟38"
+      },
+      "evFromExecutedTreeBB": 2.200000000000003,
+      "sourceEVBB": 2.200000000000003
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 17.5,
+        "label": "跟17.5"
+      },
+      "evFromExecutedTreeBB": 17.5,
+      "sourceEVBB": 17.5
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 45,
+        "label": "加到45"
+      },
+      "evFromExecutedTreeBB": -1.90625,
+      "sourceEVBB": -1.90625
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "plan": {
+        "choiceId": "p3",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": -7.0625,
+      "sourceEVBB": -7.0625
+    },
+    {
+      "id": "M-17013f3a2881ebdb",
+      "plan": {
+        "choiceId": "p0",
+        "action": "fold",
+        "label": "弃牌"
+      },
+      "evFromExecutedTreeBB": 0,
+      "sourceEVBB": 0
+    },
+    {
+      "id": "M-17013f3a2881ebdb",
+      "plan": {
+        "choiceId": "p1",
+        "action": "call",
+        "amount": 27.5,
+        "label": "跟27.5"
+      },
+      "evFromExecutedTreeBB": -2.5,
+      "sourceEVBB": -2.5
+    },
+    {
+      "id": "M-17013f3a2881ebdb",
+      "plan": {
+        "choiceId": "p2",
+        "action": "raise",
+        "to": 83,
+        "label": "全下83"
+      },
+      "evFromExecutedTreeBB": -25.299999999999997,
+      "sourceEVBB": -25.299999999999997
+    },
+    {
+      "id": "M-9003894733f3fa1f",
+      "plan": {
+        "choiceId": "p0",
+        "action": "check",
+        "label": "过牌"
+      },
+      "evFromExecutedTreeBB": 18.529411764705884,
+      "sourceEVBB": 18.529411764705884
+    },
+    {
+      "id": "M-9003894733f3fa1f",
+      "plan": {
+        "choiceId": "p1",
+        "action": "bet",
+        "to": 17.5,
+        "label": "下注17.5"
+      },
+      "evFromExecutedTreeBB": 7.720588235294116,
+      "sourceEVBB": 7.720588235294118
+    }
+  ],
+  "realLearners": 0,
+  "newCoarseContextCells": 0
+}

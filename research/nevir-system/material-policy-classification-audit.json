@@ -1,0 +1,38 @@
+{
+  "id": "MATERIAL_POLICY_CLASSIFICATION_AUDIT_V1",
+  "status": "paper_material_policy_classification_complete_no_strategy_or_learner_release",
+  "materialRows": 374,
+  "reviewedClaims": 45,
+  "identities": {
+    "illustration": 238,
+    "course_rule": 110,
+    "unknown_stop": 14,
+    "population_exploit": 12
+  },
+  "allRowsClassified": true,
+  "allRowsHashBound": true,
+  "allRowsRouted": true,
+  "parentFrameCoverage": {
+    "p2_board": 96,
+    "p4_compare": 132,
+    "p6_update": 35,
+    "author_only": 111
+  },
+  "allUserRowsHavePrincipleLink": true,
+  "principleCoverage": {
+    "P03": 96,
+    "P04": 136,
+    "P05": 86,
+    "P06": 86,
+    "P07": 217,
+    "P08": 217,
+    "P09": 46,
+    "P10": 46,
+    "P11": 54
+  },
+  "unresolvedClaimsStop": 8,
+  "exactStrategyReady": false,
+  "runtimeAttached": false,
+  "learnerVerified": false,
+  "NL50Evidence": false
+}

@@ -1,0 +1,37 @@
+.postflop-home-shell{min-height:100vh;background:#f5f5f7;color:#242426}
+.postflop-home-header{position:sticky;top:0;z-index:5;background:rgba(245,245,247,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.postflop-home-label{justify-self:end;color:#8b8d98;font-size:13px;white-space:nowrap}
+.postflop-home-main,.postflop-specialized-main{width:min(1180px,calc(100% - 72px));margin:0 auto;padding:clamp(58px,9vh,112px) 0 54px}
+.postflop-home-intro{max-width:700px;margin:0 auto 50px;text-align:center}
+.postflop-home-intro.compact{max-width:760px;margin-bottom:38px}
+.postflop-eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:#e9eef7;color:#52749e;font-size:12px;font-weight:650;letter-spacing:.02em}
+.postflop-home-intro h1{margin:18px 0 13px;font-size:clamp(32px,4vw,52px);font-weight:650;letter-spacing:-1.8px;line-height:1.12}
+.postflop-home-intro p{margin:0;color:#7c7f8a;font-size:16px;line-height:1.85}
+.postflop-mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:0 auto}
+.postflop-mode-card{appearance:none;text-align:left;border:1px solid #e1e2e8;border-radius:28px;background:rgba(255,255,255,.72);padding:31px 32px 28px;min-height:285px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 12px 35px rgba(36,38,50,.035);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+.postflop-mode-card:hover{transform:translateY(-3px);border-color:#cfd6e4;background:#fff;box-shadow:0 18px 48px rgba(36,38,50,.08)}
+.postflop-mode-card.primary{background:#fff;border-color:#d9e2f0}
+.mode-icon{width:48px;height:48px;border-radius:17px;display:grid;place-items:center;background:#edf2fa;color:#6082aa;margin-bottom:28px}
+.postflop-mode-card:not(.primary) .mode-icon{background:#eef0ef;color:#70877a}
+.mode-kicker{color:#8a8d98;font-size:12px;font-weight:650;letter-spacing:.04em;margin-bottom:10px}
+.postflop-mode-card strong{font-size:24px;font-weight:620;letter-spacing:-.65px;color:#2b2d32}
+.postflop-mode-card p{margin:14px 0 24px;color:#777b86;font-size:14px;line-height:1.85;max-width:440px}
+.mode-cta{display:inline-flex;align-items:center;gap:8px;margin-top:auto;color:#53779f;font-size:13px;font-weight:620}
+.postflop-mode-card:not(.primary) .mode-cta{color:#6c8376}
+.postflop-home-note{display:flex;justify-content:center;align-items:center;gap:9px;margin:28px auto 0;max-width:800px;color:#9698a2;font-size:12px;line-height:1.7;text-align:center}
+.postflop-home-note svg{flex:0 0 auto;color:#9ca8b8}
+.postflop-specialized-main{padding-top:40px}
+.home-back-button{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:#858894;border-radius:12px;padding:9px 11px;font-size:13px;margin-bottom:35px}
+.home-back-button:hover{background:#e9e9ee;color:#4b4d56}
+.specialized-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:1050px;margin:0 auto}
+.specialized-card{appearance:none;text-align:left;border:1px solid #e2e3e8;border-radius:22px;background:rgba(255,255,255,.82);min-height:178px;padding:22px 22px 20px;display:flex;flex-direction:column;align-items:flex-start;position:relative;box-shadow:0 8px 26px rgba(36,38,50,.025);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease,background .16s ease}
+.specialized-card:hover:not(:disabled){transform:translateY(-2px);border-color:#cfd6e4;background:#fff;box-shadow:0 14px 32px rgba(36,38,50,.065)}
+.specialized-number{color:#a3a6af;font-size:11px;font-weight:650;letter-spacing:.06em;margin-bottom:24px}
+.specialized-title{color:#2e3036;font-size:18px;font-weight:620;letter-spacing:-.35px}
+.specialized-detail{color:#838691;font-size:13px;line-height:1.7;margin-top:9px;max-width:220px}
+.specialized-arrow{position:absolute;right:20px;bottom:20px;color:#aab0bb;transition:transform .16s ease,color .16s ease}
+.specialized-card:hover:not(:disabled) .specialized-arrow{transform:translateX(3px);color:#6687ad}
+.specialized-card.closed{background:#f0f0f3;color:#8b8d95;cursor:default}.specialized-card.closed:hover{transform:none;border-color:#e2e2e7;box-shadow:none}.specialized-card.closed .specialized-arrow{display:none}.specialized-status{margin-top:16px;color:#a08e76;font-size:12px}
+.practice-mode-badge{display:inline-flex;align-items:center;min-height:40px;padding:0 13px;border-radius:18px;background:#e9eef7;color:#52749e;font-size:13px;font-weight:600;white-space:nowrap}
+@media(max-width:900px){.postflop-home-header{position:static}.postflop-home-main,.postflop-specialized-main{width:min(100% - 40px,680px);padding-top:52px}.postflop-mode-grid{grid-template-columns:1fr}.postflop-mode-card{min-height:235px}.specialized-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.postflop-home-main,.postflop-specialized-main{width:calc(100% - 32px);padding-top:35px}.postflop-home-intro{margin-bottom:32px}.postflop-home-intro h1{font-size:34px}.postflop-home-intro p{font-size:14px}.postflop-mode-card{padding:24px;border-radius:23px}.postflop-mode-card strong{font-size:21px}.postflop-home-note{align-items:flex-start;text-align:left}.specialized-grid{grid-template-columns:1fr}.specialized-card{min-height:150px}.postflop-home-header .section-tabs button{padding-inline:11px}}

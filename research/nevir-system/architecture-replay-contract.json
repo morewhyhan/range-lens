@@ -1,0 +1,23 @@
+{
+  "id": "ARCHITECTURE_REPLAY_CONTRACT_V1",
+  "status": "paper_replay_contract_not_administered",
+  "nodes": [
+    {"id":"A1","label":"定位","input":["position","history","actor"],"output":["contextFrame"],"rollback":"context"},
+    {"id":"A2","label":"牌面","input":["board","street"],"output":["boardRelations"],"rollback":"boardFacts"},
+    {"id":"A3","label":"手牌","input":["holeCards","board"],"output":["bestFive","handClass","improvements"],"rollback":"handFacts"},
+    {"id":"A4","label":"范围","input":["rangeBefore","physicalFilter","actionHistory"],"output":["rangeAfter","denominator","viewpoint"],"rollback":"rangeInput"},
+    {"id":"A5","label":"比较","input":["legalActions","price","declaredPolicy"],"output":["courseDecision"],"rollback":"comparison"},
+    {"id":"A6","label":"执行","input":["courseDecision","amount","actor"],"output":["potAfter","stackAfter","nextActor"],"rollback":"ledger"},
+    {"id":"A7","label":"更新","input":["responseOrCard","rangeAfter","ledgerAfter"],"output":["changedField","successor"],"rollback":"latestChange"},
+    {"id":"A8","label":"收束","input":["settlement","errorLayer","migration"],"output":["nextPractice"],"rollback":"nearestMissingNode"}
+  ],
+  "edges":["A1>A2","A2>A3","A3>A4","A4>A5","A5>A6","A6>A7","A7>A8"],
+  "replayLayers":[
+    {"id":"R0","task":"reorder_nodes","help":"parent_route"},
+    {"id":"R1","task":"explain_edges","help":"one_state_hint"},
+    {"id":"R2","task":"single_variable_replay","help":"necessary_inputs"},
+    {"id":"R3","task":"continuous_unseen_replay","help":"facts_and_error_rollback"}
+  ],
+  "minimumStructureEvidence":["node_identification","edge_recall","error_recovery","one_variable_transfer"],
+  "runtimeEvidence":{"implemented":false,"trialed":false,"unseenReplay":false,"lowBaselineAdultEvidence":false,"NL50Evidence":false}
+}

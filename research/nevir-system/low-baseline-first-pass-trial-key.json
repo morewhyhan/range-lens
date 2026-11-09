@@ -1,0 +1,35 @@
+{
+  "id": "LOW_BASELINE_FIRST_PASS_TRIAL_KEY_V1",
+  "status": "author_key_for_paper_trial_not_learner_evidence",
+  "answerIdentity": "structure_and_ledger_only",
+  "architectureGoalContract": "first-pass-architecture-goal-contract.json",
+  "onePassArchitectureChecks": ["orderRecall", "layerLocation", "errorRecovery", "oneVariableTransfer"],
+  "guidedExpected": {
+    "C01":{"routeNode":"p4_compare","location":"self","branch":"compare.unopened","toCallBB":0},
+    "R01":{"routeNode":"p3_range","location":"range","branch":"range.physical_filter","toCallBB":null},
+    "C03":{"routeNode":"p4_compare","location":"self","branch":"compare.bet","toCallBB":2},
+    "C05":{"routeNode":"p4_compare","location":"self","branch":"compare.raise","toCallBB":5},
+    "C08":{"routeNode":"p6_update","location":"board","branch":"update.card","toCallBB":null},
+    "C10":{"routeNode":"p6_update","location":"board","branch":"update.card","toCallBB":null},
+    "C12":{"routeNode":"p7_close","location":"pot","branch":"close.showdown","toCallBB":null}
+  },
+  "holdoutExpected": {
+    "H01":{"routeNode":"p4_compare","location":"self","branch":"compare.unopened","changedField":"board","changedFieldCount":1},
+    "H02":{"routeNode":"p4_compare","location":"self","branch":"compare.bet","changedField":"board","changedFieldCount":1},
+    "H03":{"routeNode":"p4_compare","location":"self","branch":"compare.raise","changedField":"board","changedFieldCount":1},
+    "H04":{"routeNode":"p6_update","location":"board","branch":"update.card","changedField":"board","changedFieldCount":1},
+    "H05":{"routeNode":"p6_update","location":"board","branch":"update.card","changedField":"board","changedFieldCount":1},
+    "H06":{"routeNode":"p7_close","location":"pot","branch":"close.showdown","changedField":"board","changedFieldCount":1},
+    "H07":{"routeNode":"p3_range","location":"range","branch":"range.physical_filter","changedField":"board","changedFieldCount":1}
+  },
+  "doNotGrade": ["best_action","solver_frequency","NL50_readiness","profitability"],
+  "returnRules": {
+    "stateError":"p1_context",
+    "boardError":"p2_board",
+    "rangeError":"p3_range",
+    "compareError":"p4_compare",
+    "amountError":"p5_execute",
+    "updateError":"p6_update",
+    "closeError":"p7_close"
+  }
+}

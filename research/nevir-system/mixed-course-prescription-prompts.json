@@ -1,0 +1,7825 @@
+{
+  "status": "three_source_family_retrieval_not_frozen_transfer_test",
+  "context": {
+    "players": 6,
+    "activeSeats": [
+      "BTN",
+      "BB"
+    ],
+    "initialEffectiveBB": 100,
+    "anteBB": 0,
+    "street": "flop",
+    "potType": "single_raised",
+    "openToBB": 2.5,
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "preflop": "UTG/HJ/CO fold; BTN open to2.5; SB fold; BB call",
+    "observedFlopAction": "BB check",
+    "actor": "BTN",
+    "toCallBB": 0,
+    "money": {
+      "potBB": 5.5,
+      "heroStackBB": 97.5,
+      "villainStackBB": 97.5,
+      "foldedStacksBB": 399.5
+    },
+    "sourceDepth": "The cited2.1 paragraph does not specify a full solver configuration;6max/100BB are declared training conditions, not recovered solver metadata."
+  },
+  "task": {
+    "prompt": "使用已学过的本例基础简化，现在选择什么？",
+    "options": [
+      "过牌",
+      "下注",
+      "我不知道"
+    ],
+    "precision": "按明确来源规则执行，不是独立GTO求解"
+  },
+  "cases": [
+    {
+      "id": "MX0001",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0002",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0003",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0004",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0005",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0006",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0007",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0008",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0009",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0010",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0011",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0012",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0013",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0014",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0015",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0016",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0017",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0018",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0019",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0020",
+      "board": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0021",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0022",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0023",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0024",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0025",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0026",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0027",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0028",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0029",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0030",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0031",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0032",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0033",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0034",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0035",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0036",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0037",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0038",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0039",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0040",
+      "board": [
+        "As",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0041",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0042",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0043",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0044",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0045",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0046",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0047",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0048",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0049",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0050",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0051",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0052",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0053",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0054",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0055",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0056",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0057",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0058",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0059",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0060",
+      "board": [
+        "As",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0061",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0062",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0063",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0064",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0065",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0066",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0067",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0068",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0069",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0070",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0071",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0072",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0073",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0074",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0075",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0076",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0077",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0078",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0079",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0080",
+      "board": [
+        "As",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0081",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0082",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0083",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0084",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0085",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0086",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0087",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0088",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0089",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0090",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0091",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0092",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0093",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0094",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0095",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0096",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0097",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0098",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0099",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0100",
+      "board": [
+        "As",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0101",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0102",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0103",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0104",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0105",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0106",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0107",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0108",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0109",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0110",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0111",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0112",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0113",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0114",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0115",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0116",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0117",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0118",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0119",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0120",
+      "board": [
+        "As",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0121",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0122",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0123",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0124",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0125",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0126",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0127",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0128",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0129",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0130",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0131",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0132",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0133",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0134",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0135",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0136",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0137",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0138",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0139",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0140",
+      "board": [
+        "Ah",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0141",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0142",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0143",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0144",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0145",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0146",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0147",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0148",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0149",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0150",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0151",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0152",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0153",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0154",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0155",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0156",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0157",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0158",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0159",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0160",
+      "board": [
+        "Ah",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0161",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0162",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0163",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0164",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0165",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0166",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0167",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0168",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0169",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0170",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0171",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0172",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0173",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0174",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0175",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0176",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0177",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0178",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0179",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0180",
+      "board": [
+        "Ah",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0181",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0182",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0183",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0184",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0185",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0186",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0187",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0188",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0189",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0190",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0191",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0192",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0193",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0194",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0195",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0196",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0197",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0198",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0199",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0200",
+      "board": [
+        "Ah",
+        "7d",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0201",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0202",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0203",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0204",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0205",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0206",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0207",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0208",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0209",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0210",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0211",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0212",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0213",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0214",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0215",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0216",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0217",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0218",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0219",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0220",
+      "board": [
+        "Ah",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0221",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0222",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0223",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0224",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0225",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0226",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0227",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0228",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0229",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0230",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0231",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0232",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0233",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0234",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0235",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0236",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0237",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0238",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0239",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0240",
+      "board": [
+        "Ah",
+        "7c",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0241",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0242",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0243",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0244",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0245",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0246",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0247",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0248",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0249",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0250",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0251",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0252",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0253",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0254",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0255",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0256",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0257",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0258",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0259",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0260",
+      "board": [
+        "Ad",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0261",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0262",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0263",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0264",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0265",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0266",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0267",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0268",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0269",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0270",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0271",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0272",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0273",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0274",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0275",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0276",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0277",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0278",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0279",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0280",
+      "board": [
+        "Ad",
+        "7s",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0281",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0282",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0283",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0284",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0285",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0286",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0287",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0288",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0289",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0290",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0291",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0292",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0293",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0294",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0295",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0296",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0297",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0298",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0299",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0300",
+      "board": [
+        "Ad",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0301",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0302",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0303",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0304",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0305",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0306",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0307",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0308",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0309",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0310",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0311",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0312",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0313",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0314",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0315",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0316",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0317",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0318",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0319",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0320",
+      "board": [
+        "Ad",
+        "7h",
+        "2c"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0321",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0322",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0323",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0324",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0325",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0326",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0327",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0328",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0329",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0330",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0331",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0332",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0333",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0334",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0335",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0336",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0337",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0338",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0339",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0340",
+      "board": [
+        "Ad",
+        "7c",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0341",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0342",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0343",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0344",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0345",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0346",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0347",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0348",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0349",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0350",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0351",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0352",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0353",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0354",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0355",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0356",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0357",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0358",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0359",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0360",
+      "board": [
+        "Ad",
+        "7c",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0361",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0362",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0363",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0364",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0365",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0366",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0367",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0368",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0369",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0370",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0371",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0372",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0373",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0374",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0375",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0376",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0377",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0378",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0379",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0380",
+      "board": [
+        "Ac",
+        "7s",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0381",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0382",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0383",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0384",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0385",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0386",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0387",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0388",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0389",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0390",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0391",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0392",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0393",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0394",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0395",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0396",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0397",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0398",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0399",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0400",
+      "board": [
+        "Ac",
+        "7s",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0401",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0402",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0403",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0404",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0405",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0406",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0407",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0408",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0409",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0410",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0411",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0412",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0413",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0414",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0415",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0416",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0417",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0418",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0419",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0420",
+      "board": [
+        "Ac",
+        "7h",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0421",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0422",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0423",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0424",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0425",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0426",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0427",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0428",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0429",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0430",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0431",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0432",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0433",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0434",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0435",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0436",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0437",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0438",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0439",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0440",
+      "board": [
+        "Ac",
+        "7h",
+        "2d"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0441",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0442",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0443",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0444",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0445",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0446",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0447",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0448",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0449",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0450",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0451",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0452",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0453",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0454",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0455",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0456",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0457",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0458",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0459",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0460",
+      "board": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0461",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3c",
+        "Qc"
+      ]
+    },
+    {
+      "id": "MX0462",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3d",
+        "Qd"
+      ]
+    },
+    {
+      "id": "MX0463",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3h",
+        "Qh"
+      ]
+    },
+    {
+      "id": "MX0464",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "3s",
+        "Qs"
+      ]
+    },
+    {
+      "id": "MX0465",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0466",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0467",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0468",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qc",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0469",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0470",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0471",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0472",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qd",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0473",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0474",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0475",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0476",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qh",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0477",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kc"
+      ]
+    },
+    {
+      "id": "MX0478",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kd"
+      ]
+    },
+    {
+      "id": "MX0479",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Kh"
+      ]
+    },
+    {
+      "id": "MX0480",
+      "board": [
+        "Ac",
+        "7d",
+        "2h"
+      ],
+      "hole": [
+        "Qs",
+        "Ks"
+      ]
+    },
+    {
+      "id": "MX0481",
+      "board": [
+        "Th",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0482",
+      "board": [
+        "Th",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0483",
+      "board": [
+        "Th",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0484",
+      "board": [
+        "Th",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0485",
+      "board": [
+        "Th",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0486",
+      "board": [
+        "Th",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0487",
+      "board": [
+        "Th",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0488",
+      "board": [
+        "Th",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0489",
+      "board": [
+        "Td",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0490",
+      "board": [
+        "Td",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0491",
+      "board": [
+        "Td",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0492",
+      "board": [
+        "Td",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0493",
+      "board": [
+        "Td",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0494",
+      "board": [
+        "Td",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0495",
+      "board": [
+        "Td",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0496",
+      "board": [
+        "Td",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0497",
+      "board": [
+        "Tc",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0498",
+      "board": [
+        "Tc",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0499",
+      "board": [
+        "Tc",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0500",
+      "board": [
+        "Tc",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0501",
+      "board": [
+        "Tc",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0502",
+      "board": [
+        "Tc",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0503",
+      "board": [
+        "Tc",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0504",
+      "board": [
+        "Tc",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0505",
+      "board": [
+        "Ts",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0506",
+      "board": [
+        "Ts",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0507",
+      "board": [
+        "Ts",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0508",
+      "board": [
+        "Ts",
+        "8d",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0509",
+      "board": [
+        "Ts",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0510",
+      "board": [
+        "Ts",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0511",
+      "board": [
+        "Ts",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0512",
+      "board": [
+        "Ts",
+        "8c",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0513",
+      "board": [
+        "Td",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0514",
+      "board": [
+        "Td",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0515",
+      "board": [
+        "Td",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0516",
+      "board": [
+        "Td",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0517",
+      "board": [
+        "Td",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0518",
+      "board": [
+        "Td",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0519",
+      "board": [
+        "Td",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0520",
+      "board": [
+        "Td",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0521",
+      "board": [
+        "Tc",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0522",
+      "board": [
+        "Tc",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0523",
+      "board": [
+        "Tc",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0524",
+      "board": [
+        "Tc",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0525",
+      "board": [
+        "Tc",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0526",
+      "board": [
+        "Tc",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0527",
+      "board": [
+        "Tc",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0528",
+      "board": [
+        "Tc",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0529",
+      "board": [
+        "Ts",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0530",
+      "board": [
+        "Ts",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0531",
+      "board": [
+        "Ts",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0532",
+      "board": [
+        "Ts",
+        "8h",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0533",
+      "board": [
+        "Ts",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0534",
+      "board": [
+        "Ts",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0535",
+      "board": [
+        "Ts",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0536",
+      "board": [
+        "Ts",
+        "8c",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0537",
+      "board": [
+        "Th",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0538",
+      "board": [
+        "Th",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0539",
+      "board": [
+        "Th",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0540",
+      "board": [
+        "Th",
+        "8s",
+        "5c"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0541",
+      "board": [
+        "Th",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0542",
+      "board": [
+        "Th",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0543",
+      "board": [
+        "Th",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0544",
+      "board": [
+        "Th",
+        "8c",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0545",
+      "board": [
+        "Tc",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0546",
+      "board": [
+        "Tc",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0547",
+      "board": [
+        "Tc",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0548",
+      "board": [
+        "Tc",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0549",
+      "board": [
+        "Tc",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0550",
+      "board": [
+        "Tc",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0551",
+      "board": [
+        "Tc",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0552",
+      "board": [
+        "Tc",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0553",
+      "board": [
+        "Ts",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0554",
+      "board": [
+        "Ts",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0555",
+      "board": [
+        "Ts",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0556",
+      "board": [
+        "Ts",
+        "8h",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0557",
+      "board": [
+        "Ts",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0558",
+      "board": [
+        "Ts",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0559",
+      "board": [
+        "Ts",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0560",
+      "board": [
+        "Ts",
+        "8d",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0561",
+      "board": [
+        "Th",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0562",
+      "board": [
+        "Th",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0563",
+      "board": [
+        "Th",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0564",
+      "board": [
+        "Th",
+        "8s",
+        "5d"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0565",
+      "board": [
+        "Th",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0566",
+      "board": [
+        "Th",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0567",
+      "board": [
+        "Th",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0568",
+      "board": [
+        "Th",
+        "8d",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0569",
+      "board": [
+        "Td",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0570",
+      "board": [
+        "Td",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0571",
+      "board": [
+        "Td",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0572",
+      "board": [
+        "Td",
+        "8s",
+        "5h"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0573",
+      "board": [
+        "Td",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "id": "MX0574",
+      "board": [
+        "Td",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qd",
+        "7d"
+      ]
+    },
+    {
+      "id": "MX0575",
+      "board": [
+        "Td",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qh",
+        "7h"
+      ]
+    },
+    {
+      "id": "MX0576",
+      "board": [
+        "Td",
+        "8h",
+        "5s"
+      ],
+      "hole": [
+        "Qs",
+        "7s"
+      ]
+    },
+    {
+      "id": "MX0577",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0578",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0579",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0580",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0581",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0582",
+      "board": [
+        "Js",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0583",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0584",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0585",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0586",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0587",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0588",
+      "board": [
+        "Js",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0589",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0590",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0591",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0592",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0593",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0594",
+      "board": [
+        "Js",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0595",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0596",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0597",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0598",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0599",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0600",
+      "board": [
+        "Jh",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0601",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0602",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0603",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0604",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0605",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0606",
+      "board": [
+        "Jh",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0607",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0608",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0609",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0610",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0611",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0612",
+      "board": [
+        "Jh",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0613",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0614",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0615",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0616",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0617",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0618",
+      "board": [
+        "Jd",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0619",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0620",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0621",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0622",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0623",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0624",
+      "board": [
+        "Jd",
+        "9c",
+        "5c"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0625",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0626",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0627",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0628",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0629",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0630",
+      "board": [
+        "Jd",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7c",
+        "Jc"
+      ]
+    },
+    {
+      "id": "MX0631",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0632",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0633",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0634",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0635",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0636",
+      "board": [
+        "Jc",
+        "9h",
+        "5h"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0637",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0638",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0639",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0640",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0641",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7s",
+        "Js"
+      ]
+    },
+    {
+      "id": "MX0642",
+      "board": [
+        "Jc",
+        "9d",
+        "5d"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0643",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0644",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "4d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0645",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0646",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "6d",
+        "Jd"
+      ]
+    },
+    {
+      "id": "MX0647",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7h",
+        "Jh"
+      ]
+    },
+    {
+      "id": "MX0648",
+      "board": [
+        "Jc",
+        "9s",
+        "5s"
+      ],
+      "hole": [
+        "7d",
+        "Jd"
+      ]
+    }
+  ],
+  "administration": {
+    "answerScope": "adopted_source_simplifications",
+    "hideFamilyNameBeforeAnswer": true,
+    "showBasicVersion": true,
+    "doNotInferRealDealFrequency": true,
+    "selectFamiliesBeforeWithinFamilyCases": true,
+    "notUnseenHoldout": true,
+    "noLearnerPersistence": true,
+    "unknownCountsAsError": true
+  }
+}

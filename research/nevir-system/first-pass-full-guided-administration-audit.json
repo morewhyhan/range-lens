@@ -1,0 +1,78 @@
+{
+  "id": "FIRST_PASS_FULL_GUIDED_ADMINISTRATION_AUDIT_V1",
+  "status": "paper_admin_contract_audited_not_trialed",
+  "purpose": "核对完整首遍试读合同是否真的能按唯一顺序执行，并且把首答、提示、错误回退和结构回放记录下来。",
+  "sources": [
+    "first-pass-full-guided-administration.json",
+    "low-baseline-first-pass-trial-packet.json",
+    "first-pass-trial-coverage-audit.json",
+    "cross-age-low-baseline-acceptance.json"
+  ],
+  "canonicalOrder": [
+    "OL01",
+    "OL02",
+    "OL03",
+    "OL04",
+    "OL05",
+    "C01",
+    "R01",
+    "C03",
+    "C05",
+    "C08",
+    "C10",
+    "C12"
+  ],
+  "phaseOrder": [
+    "F0_setup",
+    "F1_outer_guided",
+    "F2_inner_guided",
+    "F3_hidden_structure_replay",
+    "F4_error_recovery",
+    "F5_one_variable_transfer"
+  ],
+  "administeredCaseOrder": [
+    "OL01",
+    "OL02",
+    "OL03",
+    "OL04",
+    "OL05",
+    "C01",
+    "R01",
+    "C03",
+    "C05",
+    "C08",
+    "C10",
+    "C12"
+  ],
+  "checks": {
+    "fullGuidedOrderMatchesPacket": true,
+    "outerBeforeInner": true,
+    "allCasesResolvable": true,
+    "routeOrderMatchesStateMachine": true,
+    "hostPromptLadderComplete": true,
+    "independentHelpLevelsSeparated": true,
+    "observationFieldsComplete": true,
+    "firstAnswerBeforeHelp": true,
+    "errorRecoveryPhasePresent": true,
+    "oneVariableTransferPhasePresent": true
+  },
+  "missingObservationFields": [],
+  "releaseRules": {
+    "missingPhaseBlocksTrial": true,
+    "orderMismatchBlocksTrial": true,
+    "missingFirstAnswerRecordBlocksIndependentPass": true,
+    "H4OrH5BeforeFirstAnswerBlocksIndependentPass": true,
+    "paperAuditDoesNotProveLearnerMastery": true,
+    "paperAuditDoesNotProveNL50": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "structureReplayObserved": false,
+    "errorRecoveryObserved": false,
+    "oneVariableTransferObserved": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

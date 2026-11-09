@@ -1,0 +1,135 @@
+{
+  "id": "SLOW_TRANSFER_LADDER_V1",
+  "status": "paper_transfer_ladder_not_trialed",
+  "purpose": "把首课后的陌生牌练习限制为同一父帧内的单变量迁移，再逐步串接真实后继，避免示范记忆冒充执行能力。",
+  "parentRoute": "first-pass-golden-path.json",
+  "actionChainContract": "slow-single-step-execution-contract.json#/observableActionChain",
+  "shell": {
+    "top": "short_parent_route",
+    "center": "same_coordinate_before_after_diff_visual",
+    "bottom": "one_plain_question_one_primary_action",
+    "side": "explanation_terms_source_on_demand",
+    "forbidden": ["flat_35_item_home", "random_full_hand_before_single_variable", "answer_before_first_response", "strategy_from_missing_reference"]
+  },
+  "entryConditions": [
+    "order_recall_7_nodes_6_edges",
+    "three_unseen_layer_locations",
+    "two_error_recoveries",
+    "one_variable_transfer"
+  ],
+  "stages": [
+    {
+      "id": "T0_same_hand_recall",
+      "sequence": 1,
+      "changeBudget": 0,
+      "visible": ["same_hand", "blank_route_map"],
+      "userOutput": ["route_recall", "current_parent"],
+      "doseProposal": 1,
+      "release": "route_recall_observed",
+      "stop": "return_to_golden_path"
+    },
+    {
+      "id": "T1_same_frame_new_hand",
+      "sequence": 2,
+      "changeBudget": 1,
+      "allowedChanges": ["hero_hole_cards", "one_board_card"],
+      "userOutput": ["current_layer_fact", "action_or_stop"],
+      "doseProposal": 2,
+      "release": "same_parent_two_cases_with_first_answer",
+      "stop": "return_to_parent_fact_layer"
+    },
+    {
+      "id": "T2_one_field_contrast",
+      "sequence": 3,
+      "changeBudget": 1,
+      "allowedChanges": ["position", "board_texture", "price", "opponent_response", "one_range_state"],
+      "userOutput": ["changed_field", "affected_layer", "range_delta_explanation"],
+      "doseProposal": 3,
+      "release": "three_contrasts_located_before_explanation",
+      "stop": "return_to_current_parent"
+    },
+    {
+      "id": "T3_response_update",
+      "sequence": 4,
+      "changeBudget": 1,
+      "allowedChanges": ["call", "raise", "fold", "new_board_card"],
+      "userOutput": ["changed_field", "range_after_or_stop", "pot_price", "next_actor"],
+      "doseProposal": 2,
+      "release": "one_update_with_real_successor_or_explicit_stop",
+      "stop": "return_to_p6"
+    },
+    {
+      "id": "T4_two_frame_microroute",
+      "sequence": 5,
+      "changeBudget": 1,
+      "requires": ["matched_policy_or_reference", "legal_successor", "ledger_closed"],
+      "userOutput": ["compare", "execute", "update", "successor"],
+      "doseProposal": 1,
+      "release": "one_two_frame_chain_with_conservation",
+      "stop": "do_not_chain_without_successor"
+    },
+    {
+      "id": "T5_unseen_slow_review",
+      "sequence": 6,
+      "changeBudget": 1,
+      "visible": ["no_titles", "minimal_help", "unseen_adjacent_case"],
+      "userOutput": ["current_layer", "fact", "action_or_stop", "reason_for_return"],
+      "doseProposal": 1,
+      "release": "two_consecutive_slow_unseen_cases",
+      "stop": "return_to_last_failed_layer"
+    }
+  ],
+  "rangeVisualContract": {
+    "panels": ["before_action", "after_physical_filter", "after_action_filter"],
+    "sameCoordinate": true,
+    "sameDenominator": true,
+    "showComboCount": true,
+    "showChangeArrow": true,
+    "physicalRemovalIsNotActionFilter": true,
+    "missingPolicyOrReferenceStopsExactGrade": true
+  },
+  "errorRouting": {
+    "route": "current_parent",
+    "fact": "p2_board",
+    "range": "p3_range",
+    "compare": "p4_compare",
+    "execute": "p5_execute",
+    "update": "p6_update",
+    "sourceGap": "current_parent_stop_card",
+    "unknownCountsAsError": true,
+    "firstAnswerSeparateFromHelpedAnswer": true
+  },
+  "releaseEvidence": [
+    "three_unseen_layer_locations",
+    "two_single_field_contrasts",
+    "one_range_delta_or_stop_reason",
+    "one_closed_two_frame_microroute",
+    "one_unseen_case_reasoned_before_explanation"
+  ],
+  "actionChainCheckpoints": [
+    {"stage":"T0_same_hand_recall","requiredSteps":["A1_layer_entry","A7_transfer_close"],"reason":"先证明用户能找入口，再允许换输入"},
+    {"stage":"T1_same_frame_new_hand","requiredSteps":["A0_state_lock","A1_layer_entry","A2_fact_read","A6_update_or_stop"],"reason":"只换牌时先保持父帧和事实链"},
+    {"stage":"T2_one_field_contrast","requiredSteps":["A3_range_delta","A7_transfer_close"],"reason":"先说哪一层变，再看三联图"},
+    {"stage":"T3_response_update","requiredSteps":["A4_compare","A5_execute","A6_update_or_stop"],"reason":"动作必须落到账本并交接真实后继"},
+    {"stage":"T4_two_frame_microroute","requiredSteps":["A4_compare","A5_execute","A6_update_or_stop"],"reason":"闭合两个真实节点才算微路线"},
+    {"stage":"T5_unseen_slow_review","requiredSteps":["A0_state_lock","A1_layer_entry","A2_fact_read","A3_range_delta","A4_compare","A5_execute","A6_update_or_stop","A7_transfer_close"],"reason":"未见题必须完整走完行动链"}
+  ],
+  "releaseRules": {
+    "checkpointOrderCannotBeSkipped": true,
+    "firstAnswerIsEvidenceBeforeHelp": true,
+    "sameParentRetryIsRequired": true,
+    "oneChangedFieldBeforeMixedPractice": true,
+    "missingChainStepBlocksNextStage": true,
+    "missingSuccessorBlocksContinuousRoute": true,
+    "paperProtocolDoesNotProveNL50": true
+  },
+  "doesNotProve": ["full_strategy_mastery", "continuous_three_street", "NL50_readiness"],
+  "currentEvidence": {
+    "paperProtocol": true,
+    "runtime": false,
+    "matchedReference": false,
+    "learnerTrial": false,
+    "continuousThreeStreet": false,
+    "NL50Evidence": false
+  }
+}

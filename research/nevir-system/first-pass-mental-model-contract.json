@@ -1,0 +1,502 @@
+{
+  "id": "FIRST_PASS_MENTAL_MODEL_CONTRACT_V1",
+  "status": "paper_minimum_mental_model_not_trialed",
+  "purpose": "把低基础首遍压缩成路线地图、当前帧和单变化交接三层记忆，并逐步交付全部必要状态。",
+  "learnerPromise": [
+    "知道现在走到哪一站",
+    "知道这一站先看什么",
+    "知道做完后交给下一站什么",
+    "知道出错回哪里"
+  ],
+  "mentalLayers": [
+    {
+      "id": "routeMap",
+      "visible": "currentStepAndAdjacentDirection",
+      "persisted": [
+        "parentStep",
+        "returnPoint"
+      ]
+    },
+    {
+      "id": "currentFrame",
+      "visible": "oneTableOneFactGroupOneQuestion",
+      "persisted": [
+        "visibleInputs",
+        "firstAnswer"
+      ]
+    },
+    {
+      "id": "changeArrow",
+      "visible": "oneChangedFieldAndHandoffSentence",
+      "persisted": [
+        "changedField",
+        "handoffPayload",
+        "successor"
+      ]
+    }
+  ],
+  "userRoute": [
+    {
+      "id": "p1_context",
+      "memoryToken": "contextCard",
+      "prompt": "谁在行动、前面发生了什么、要付多少钱？",
+      "handoff": "contextFrame"
+    },
+    {
+      "id": "p2_board",
+      "memoryToken": "handCard",
+      "prompt": "公共牌和我的牌组成了什么，哪些牌会改善？",
+      "handoff": "handFrame"
+    },
+    {
+      "id": "p3_range",
+      "memoryToken": "rangeDeltaCard",
+      "prompt": "哪些组合不可能、哪些是因为行动留下或减少？",
+      "handoff": "rangeFrame"
+    },
+    {
+      "id": "p4_compare",
+      "memoryToken": "choiceCard",
+      "prompt": "当前合法的选择和价格是什么？",
+      "handoff": "decisionFrame"
+    },
+    {
+      "id": "p5_execute",
+      "memoryToken": "ledgerCard",
+      "prompt": "点哪个动作、投入多少、接下来轮到谁？",
+      "handoff": "ledgerFrame"
+    },
+    {
+      "id": "p6_update",
+      "memoryToken": "changeCard",
+      "prompt": "回应或新牌只改变了哪一个关键字段？",
+      "handoff": "updateFrame"
+    },
+    {
+      "id": "p7_close",
+      "memoryToken": "reviewCard",
+      "prompt": "结果是什么，错误属于哪一层，下一手从哪里开始？",
+      "handoff": "reviewFrame"
+    }
+  ],
+  "memoryTokens": [
+    {
+      "id": "contextCard",
+      "required": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ]
+    },
+    {
+      "id": "handCard",
+      "required": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ]
+    },
+    {
+      "id": "rangeDeltaCard",
+      "required": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ]
+    },
+    {
+      "id": "choiceCard",
+      "required": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ]
+    },
+    {
+      "id": "ledgerCard",
+      "required": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ]
+    },
+    {
+      "id": "changeCard",
+      "required": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ]
+    },
+    {
+      "id": "reviewCard",
+      "required": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ]
+    }
+  ],
+  "firstPassChecks": [
+    "orderedWhiteLanguageRecall",
+    "allMemoryTokensComplete",
+    "nearestLayerErrorRecovery",
+    "oneFieldTransferBeforeExplanation"
+  ],
+  "handoffContract": {
+    "purpose": "让每一层只交付下一层真正要用的状态；不把整份后台资料平铺给学习者。",
+    "successorConsumption": [
+      {
+        "from": "p1_context",
+        "to": "p2_board",
+        "payload": [
+          "actor",
+          "history",
+          "pot",
+          "stacks",
+          "toCall"
+        ],
+        "usedBy": [
+          "whoActs",
+          "priorAction",
+          "priceToContinue"
+        ]
+      },
+      {
+        "from": "p2_board",
+        "to": "p3_range",
+        "payload": [
+          "bestFive",
+          "handClass",
+          "improvementCards"
+        ],
+        "usedBy": [
+          "madeHandClass",
+          "drawVisibility",
+          "boardHandInteraction"
+        ]
+      },
+      {
+        "from": "p3_range",
+        "to": "p4_compare",
+        "payload": [
+          "rangeBefore",
+          "physicalFilter",
+          "actionFilterStatus",
+          "denominator"
+        ],
+        "usedBy": [
+          "legalCombos",
+          "policyIdentity",
+          "frequencyDenominator"
+        ]
+      },
+      {
+        "from": "p4_compare",
+        "to": "p5_execute",
+        "payload": [
+          "legalActions",
+          "price",
+          "purpose",
+          "policyIdentity"
+        ],
+        "usedBy": [
+          "actionMenu",
+          "amountInput",
+          "reasonLabel"
+        ]
+      },
+      {
+        "from": "p5_execute",
+        "to": "p6_update",
+        "payload": [
+          "action",
+          "amount",
+          "potAfter",
+          "stacksAfter",
+          "nextActor"
+        ],
+        "usedBy": [
+          "ledgerDelta",
+          "nextActor",
+          "successorEligibility"
+        ]
+      },
+      {
+        "from": "p6_update",
+        "to": "p7_close",
+        "payload": [
+          "responseOrCard",
+          "changedField",
+          "rangeAfterOrStop",
+          "successorOrStop"
+        ],
+        "usedBy": [
+          "affectedLayer",
+          "nextEntry",
+          "stopReason"
+        ]
+      },
+      {
+        "from": "p7_close",
+        "to": "p1_context",
+        "payload": [
+          "settlement",
+          "decisionResultSeparation",
+          "errorLayer",
+          "nextEntry"
+        ],
+        "usedBy": [
+          "replay",
+          "errorReturn",
+          "newHandEntry"
+        ]
+      }
+    ],
+    "consumptionRule": "每个payload字段至少在successor中出现一次；未被下一层读取的字段退回当前层，不算完成。",
+    "parentRestoreRule": "打开子层前保存父层输入、首答和returnPoint；关闭子层后逐项恢复，不重新生成一题。"
+  },
+  "testProtocol": {
+    "sessionRecord": [
+      "courseVersion",
+      "taskId",
+      "promptType",
+      "firstAnswer",
+      "answerAfterHelp",
+      "helpLevel",
+      "routeNodeBefore",
+      "routeNodeAfter",
+      "nextStepVerbalized",
+      "handoffPayload",
+      "errorLayer",
+      "returnTo",
+      "changedField",
+      "passStatus"
+    ],
+    "checks": [
+      {
+        "id": "orderedWhiteLanguageRecall",
+        "prompt": "隐藏步骤标题后，按白话说出七步并连出六条正常边。",
+        "fixture": "unseen_short_route",
+        "minimum": {
+          "nodes": 7,
+          "edges": 6
+        },
+        "firstAnswerBeforeHelp": true
+      },
+      {
+        "id": "outerInnerNestingRecall",
+        "prompt": "隐藏步骤标题后，先说五个外层，再说翻后七步，并指出翻后七步套在哪个父层。",
+        "fixture": "outer_inner_nesting_recall",
+        "minimum": {
+          "outerNodes": 5,
+          "innerNodes": 7,
+          "parentBoundary": "L4"
+        },
+        "firstAnswerBeforeHelp": true
+      },
+      {
+        "id": "layerLocation",
+        "prompt": "给三个未见父帧；每帧只改一个状态字段，说出当前层、先看什么和下一层。",
+        "fixture": "three_unseen_parent_frames",
+        "minimum": {
+          "correctFrames": 3,
+          "nextLayerVerbalized": 3
+        },
+        "firstAnswerBeforeHelp": true
+      },
+      {
+        "id": "nearestLayerErrorRecovery",
+        "prompt": "在两个父帧中各注入一个缺失或错误字段，指出缺什么、回到同一父帧并保留父帧内容。",
+        "fixture": "two_injected_single_field_errors",
+        "minimum": {
+          "correctCases": 2,
+          "sameParent": true,
+          "payloadPreserved": true
+        },
+        "firstAnswerBeforeHelp": true
+      },
+      {
+        "id": "oneFieldTransferBeforeExplanation",
+        "prompt": "给一题只改变一个字段的陌生题；先说受影响层，再完成该层判断。",
+        "fixture": "single_field_holdout",
+        "minimum": {
+          "trials": 1,
+          "changedFieldsPerTrial": 1,
+          "affectedLayerLocated": 1
+        },
+        "firstAnswerBeforeHelp": true
+      }
+    ],
+    "independenceLevels": {
+      "independent": "首答前没有lead_to_answer或主持者代定位；允许重复问题和指向已显示输入。",
+      "helpedCorrection": "看过事实或路线提示后修正；用于修课，不计结构闸门独立通过。",
+      "hostAnswered": "主持者直接说出当前层、答案或下一步；只说明流程继续，不计学习证据。"
+    },
+    "attributionOrder": [
+      "missingInput",
+      "stateHandoff",
+      "visualOrCopy",
+      "factUnderstanding",
+      "strategyOrCompiler",
+      "learnerStructure"
+    ]
+  },
+  "hardRules": {
+    "onePrimaryQuestionPerScreen": true,
+    "onePrimaryChangePerScreen": true,
+    "childOpensInsideParent": true,
+    "childReturnsToSameParent": true,
+    "missingEvidenceStopsExactStrategy": true,
+    "retryDoesNotReplaceFirstAnswer": true,
+    "speedIsDescriptiveOnly": true,
+    "flat35ItemHomeForbidden": true
+  },
+  "release": {
+    "structureCandidateRequires": [
+      "orderedWhiteLanguageRecall",
+      "allMemoryTokensComplete",
+      "nearestLayerErrorRecovery",
+      "oneFieldTransferBeforeExplanation"
+    ],
+    "strategyPracticeRequires": [
+      "matchedReferenceOrDeclaredCoursePolicy",
+      "rangeAfterOrStop",
+      "successorOrStop"
+    ],
+    "NL50ClaimRequires": [
+      "continuousThreeStreet",
+      "heldoutTargetConfiguration",
+      "independentReview",
+      "realDecisionAudit"
+    ]
+  },
+  "releaseRules": {
+    "defaultStatus": "paper_contract_only",
+    "statuses": [
+      "paper_contract_only",
+      "runtime_ready_not_trialed",
+      "trial_collecting",
+      "structure_release_ready"
+    ],
+    "blockIf": [
+      "anyMemoryTokenRequiredFieldMissing",
+      "successorDoesNotConsumeHandoffPayload",
+      "parentSnapshotNotRestoredAfterChild",
+      "firstAnswerNotSeparatedFromHelpedRetry",
+      "unknownEvidenceConvertedToExactStrategy",
+      "flat35ItemHomeExposed",
+      "unseenHoldoutChangesMoreThanOneField"
+    ],
+    "doesNotProve": [
+      "matchedStrategyAccuracy",
+      "continuousThreeStreetSkill",
+      "NL50Readiness"
+    ],
+    "trialRequiredBeforeClaim": true,
+    "noAggregatePromotion": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "allMemoryTokensObserved": false,
+    "structureMasteryVerified": false,
+    "NL50Evidence": false
+  },
+  "outerRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+  ],
+  "innerRoute": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "fullLearnerRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7",
+    "replay_transfer"
+  ],
+  "innerRouteParent": "L4",
+  "outerMemoryTokens": [
+    {
+      "id": "tableFrame",
+      "required": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ]
+    },
+    {
+      "id": "contextFrame",
+      "required": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ]
+    },
+    {
+      "id": "preflopCell",
+      "required": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ]
+    },
+    {
+      "id": "preflopAction",
+      "required": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ]
+    },
+    {
+      "id": "startingRangeFrame",
+      "required": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ]
+    }
+  ],
+  "mentalModelContract": {
+    "outerAndInnerAreOneNestedRoute": true,
+    "outerAnchorCount": 5,
+    "innerStepCount": 7,
+    "innerParent": "L4",
+    "replayRequiresBothLayers": true,
+    "routeRecallCannotPassWithInnerOnly": true,
+    "routeRecallCannotPassWithOuterOnly": true
+  }
+}

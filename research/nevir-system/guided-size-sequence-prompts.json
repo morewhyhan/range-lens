@@ -1,0 +1,1103 @@
+{
+  "status": "public_guided_size_paper_frames_not_heldout",
+  "parentLink": {
+    "source": "first-hand-lesson-packet.json",
+    "frame": "S05",
+    "mode": "review_after_first_pass",
+    "notice": "原整手结束后回看S05。换另一手河牌QQ和给定模型，不将它的下10答案贴回AQ翻牌。",
+    "snapshotHash": "0c3f2c871e528f59cd88f450b4c28be67699c56c645f5dc278a583e9f334b9d7",
+    "returnHash": "0c3f2c871e528f59cd88f450b4c28be67699c56c645f5dc278a583e9f334b9d7",
+    "independentAssessment": false
+  },
+  "context": {
+    "players": 6,
+    "street": "river",
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "board": [
+      "Ks",
+      "7h",
+      "2d",
+      "3c",
+      "9h"
+    ],
+    "hero": [
+      "Qs",
+      "Qc"
+    ],
+    "potBB": 10,
+    "activeStackBB": 95.25,
+    "legalGrossHistory": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+    "menu": [
+      "check",
+      "bet_5",
+      "bet_10"
+    ],
+    "opponentResponse": "Fixed call/fold rules for this complete model; no raises",
+    "rake": "none"
+  },
+  "modelInput": {
+    "source": "size-comparison-evidence.json",
+    "example": "equityFallsButLargeWins",
+    "weights": {
+      "66": 3,
+      "JJ": 2,
+      "KJ": 1,
+      "KK": 1,
+      "QQ": 0,
+      "AJ": 3
+    },
+    "groups": [
+      {
+        "id": "JJ",
+        "hole": [
+          "Js",
+          "Jd"
+        ],
+        "callsSmall": true,
+        "callsLarge": true,
+        "role": "worse_inelastic",
+        "equity": 1
+      },
+      {
+        "id": "66",
+        "hole": [
+          "6s",
+          "6h"
+        ],
+        "callsSmall": true,
+        "callsLarge": false,
+        "role": "worse_price_sensitive",
+        "equity": 1
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kc",
+          "Jc"
+        ],
+        "callsSmall": true,
+        "callsLarge": false,
+        "role": "better_price_sensitive",
+        "equity": 0
+      },
+      {
+        "id": "KK",
+        "hole": [
+          "Kh",
+          "Kd"
+        ],
+        "callsSmall": true,
+        "callsLarge": true,
+        "role": "better_inelastic",
+        "equity": 0
+      },
+      {
+        "id": "QQ",
+        "hole": [
+          "Qh",
+          "Qd"
+        ],
+        "callsSmall": true,
+        "callsLarge": true,
+        "role": "tie",
+        "equity": 0.5
+      },
+      {
+        "id": "AJ",
+        "hole": [
+          "As",
+          "Jc"
+        ],
+        "callsSmall": false,
+        "callsLarge": false,
+        "role": "worse_always_folds",
+        "equity": 1
+      }
+    ],
+    "menu": [
+      "check",
+      "bet_5",
+      "bet_10"
+    ],
+    "noRaises": true
+  },
+  "navigation": {
+    "core": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B14"
+    ],
+    "optional": [
+      {
+        "openAt": "B09",
+        "label": "若明确只剩会跟大注的JJ，选什么？",
+        "frames": [
+          "O01"
+        ],
+        "returnTo": "B09",
+        "surface": "feedback",
+        "then": "B10",
+        "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0"
+      },
+      {
+        "openAt": "B09",
+        "label": "若明确只剩跟小注、弃大注的66，选什么？",
+        "frames": [
+          "O02"
+        ],
+        "returnTo": "B09",
+        "surface": "feedback",
+        "then": "B10",
+        "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0"
+      },
+      {
+        "openAt": "B09",
+        "label": "若明确只剩两种都跟的KK，选什么？",
+        "frames": [
+          "O03"
+        ],
+        "returnTo": "B09",
+        "surface": "feedback",
+        "then": "B10",
+        "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0"
+      }
+    ],
+    "events": [
+      {
+        "from": "B10",
+        "to": "B11",
+        "event": "Demonstration BTN bet10 once"
+      },
+      {
+        "from": "B11",
+        "to": "B12",
+        "event": "Observed model BB call10 once"
+      },
+      {
+        "from": "B12",
+        "to": "B13",
+        "event": "Reveal actual JsJd only now"
+      },
+      {
+        "from": "B13",
+        "to": "B14",
+        "event": "Award30 to hero once"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "B01",
+      "title": "先认当前决定",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BB已经过牌，现在自己比较什么？",
+        "options": [
+          "过牌与下注",
+          "跟注与弃牌",
+          "直接结算",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B02",
+      "title": "先看能赢谁",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己的QQ面对JJ和KJ，哪项对？",
+        "options": [
+          "赢JJ、输KJ",
+          "两手都赢",
+          "两手都输",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidates": [
+          "JJ",
+          "KJ"
+        ]
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B03",
+      "title": "差牌两种都付款",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定JJ两种都跟，下10比下5多收到多少？",
+        "options": [
+          5,
+          10,
+          0,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": [
+          "Js",
+          "Jd"
+        ],
+        "small": {
+          "group": "JJ",
+          "weight": 2,
+          "response": "call",
+          "payoffIfThisHoldingBB": 15,
+          "weightedEVBB": 3,
+          "deltaFromCheckEVBB": 1
+        },
+        "large": {
+          "group": "JJ",
+          "weight": 2,
+          "response": "call",
+          "payoffIfThisHoldingBB": 20,
+          "weightedEVBB": 4,
+          "deltaFromCheckEVBB": 2
+        },
+        "scope": "Candidate illustration, not actual opponent reveal."
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B04",
+      "title": "差牌可能嫌贵",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "66跟5、弃10；面对这一组，哪种收益更高？",
+        "options": [
+          "下5",
+          "下10",
+          "相同",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": [
+          "6s",
+          "6h"
+        ],
+        "small": {
+          "group": "66",
+          "weight": 3,
+          "response": "call",
+          "payoffIfThisHoldingBB": 15,
+          "weightedEVBB": 4.5,
+          "deltaFromCheckEVBB": 1.5
+        },
+        "large": {
+          "group": "66",
+          "weight": 3,
+          "response": "fold",
+          "payoffIfThisHoldingBB": 10,
+          "weightedEVBB": 3,
+          "deltaFromCheckEVBB": 0
+        },
+        "scope": "Candidate illustration, not actual opponent reveal."
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B05",
+      "title": "更好的牌也可能退出",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "KJ跟5、弃10；面对这一组，下10带来什么？",
+        "options": [
+          "把原本输的池拿走",
+          "让差牌多付钱",
+          "必然多亏钱",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": [
+          "Kc",
+          "Jc"
+        ],
+        "small": {
+          "group": "KJ",
+          "weight": 1,
+          "response": "call",
+          "payoffIfThisHoldingBB": -5,
+          "weightedEVBB": -0.5,
+          "deltaFromCheckEVBB": -0.5
+        },
+        "large": {
+          "group": "KJ",
+          "weight": 1,
+          "response": "fold",
+          "payoffIfThisHoldingBB": 10,
+          "weightedEVBB": 1,
+          "deltaFromCheckEVBB": 1
+        },
+        "scope": "Candidate illustration, not actual opponent reveal."
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B06",
+      "title": "不能漏掉强端成本",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "KK两种都跟；下10相比下5怎样？",
+        "options": [
+          "多损失5",
+          "多赚5",
+          "没有变化",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": [
+          "Kh",
+          "Kd"
+        ],
+        "small": {
+          "group": "KK",
+          "weight": 1,
+          "response": "call",
+          "payoffIfThisHoldingBB": -5,
+          "weightedEVBB": -0.5,
+          "deltaFromCheckEVBB": -0.5
+        },
+        "large": {
+          "group": "KK",
+          "weight": 1,
+          "response": "call",
+          "payoffIfThisHoldingBB": -10,
+          "weightedEVBB": -1,
+          "deltaFromCheckEVBB": -1
+        },
+        "scope": "Candidate illustration, not actual opponent reveal."
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B07",
+      "title": "本来就能赢的退出",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "AJ在两种下注下都弃；河牌过牌也能赢它，下10比过牌多赚吗？",
+        "options": [
+          "没有多赚",
+          "多赚10",
+          "多赚20",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": [
+          "As",
+          "Jc"
+        ],
+        "small": {
+          "group": "AJ",
+          "weight": 3,
+          "response": "fold",
+          "payoffIfThisHoldingBB": 10,
+          "weightedEVBB": 3,
+          "deltaFromCheckEVBB": 0
+        },
+        "large": {
+          "group": "AJ",
+          "weight": 3,
+          "response": "fold",
+          "payoffIfThisHoldingBB": 10,
+          "weightedEVBB": 3,
+          "deltaFromCheckEVBB": 0
+        },
+        "scope": "Candidate illustration, not actual opponent reveal."
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B08",
+      "title": "把互斥结果合起来",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "判断整体大小注，能只看JJ多付的钱吗？",
+        "options": [
+          "不能，要按所有候选质量合起来",
+          "能，能收差牌就够",
+          "只看KK就够",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "weights": {
+          "66": 3,
+          "JJ": 2,
+          "KJ": 1,
+          "KK": 1,
+          "QQ": 0,
+          "AJ": 3
+        }
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B09",
+      "title": "用完整比较选方案",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按本模型完整比较，当前选什么？",
+        "options": [
+          "过牌",
+          "下注5",
+          "下注10",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": [
+          {
+            "action": "check",
+            "evBB": 8
+          },
+          {
+            "action": "small",
+            "evBB": 9.5
+          },
+          {
+            "action": "large",
+            "evBB": 10
+          }
+        ],
+        "weights": {
+          "66": 3,
+          "JJ": 2,
+          "KJ": 1,
+          "KK": 1,
+          "QQ": 0,
+          "AJ": 3
+        }
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B10",
+      "title": "别只盯被跟时胜率",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "大注被跟时胜出份额更低，是否就能否定它？",
+        "options": [
+          "不能，还要计退出与投入",
+          "能，权益低必然差",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "smallCalledShare": 0.7142857142857143,
+        "largeCalledShare": 0.6666666666666666
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B11",
+      "title": "这次才实际下注",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 20,
+        "heroStack": 85.25,
+        "villainStack": 95.25,
+        "heroPut": 10,
+        "villainPut": 0,
+        "phase": "wait_response",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按示范下10以后，接下来等谁？",
+        "options": [
+          "BB对手",
+          "自己再下10",
+          "立即摊牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B12",
+      "title": "回应完成才到终点",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 30,
+        "heroStack": 85.25,
+        "villainStack": 85.25,
+        "heroPut": 10,
+        "villainPut": 10,
+        "phase": "showdown_pending",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BB实际跟10，河牌行动已完成，下一步是什么？",
+        "options": [
+          "摊牌",
+          "再发一张牌",
+          "自己继续下注",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B13",
+      "title": "此时才亮实际牌",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 30,
+        "heroStack": 85.25,
+        "villainStack": 85.25,
+        "heroPut": 10,
+        "villainPut": 10,
+        "phase": "showdown",
+        "opponentVisible": true,
+        "opponentHole": [
+          "Js",
+          "Jd"
+        ]
+      },
+      "task": {
+        "prompt": "对手这次实际JsJd，谁赢？",
+        "options": [
+          "自己",
+          "对手",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "B14",
+      "title": "一次结果与事前比较分开",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 0,
+        "heroStack": 115.25,
+        "villainStack": 85.25,
+        "phase": "settled",
+        "opponentVisible": true,
+        "opponentHole": [
+          "Js",
+          "Jd"
+        ]
+      },
+      "task": {
+        "prompt": "整手从100到115.25，净赢多少？",
+        "options": [
+          15.25,
+          20,
+          30,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O01",
+      "title": "可选：只改给定候选权重",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "若明确只剩会跟大注的JJ，选什么？",
+        "options": [
+          "过牌",
+          "下注5",
+          "下注10",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "example": "valueLarge",
+        "weights": {
+          "66": 0,
+          "JJ": 1,
+          "KJ": 0,
+          "KK": 0,
+          "QQ": 0,
+          "AJ": 0
+        },
+        "values": [
+          {
+            "action": "check",
+            "evBB": 10
+          },
+          {
+            "action": "small",
+            "evBB": 15
+          },
+          {
+            "action": "large",
+            "evBB": 20
+          }
+        ]
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O02",
+      "title": "可选：只改给定候选权重",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "若明确只剩跟小注、弃大注的66，选什么？",
+        "options": [
+          "过牌",
+          "下注5",
+          "下注10",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "example": "valueSmall",
+        "weights": {
+          "66": 1,
+          "JJ": 0,
+          "KJ": 0,
+          "KK": 0,
+          "QQ": 0,
+          "AJ": 0
+        },
+        "values": [
+          {
+            "action": "check",
+            "evBB": 10
+          },
+          {
+            "action": "small",
+            "evBB": 15
+          },
+          {
+            "action": "large",
+            "evBB": 10
+          }
+        ]
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O03",
+      "title": "可选：只改给定候选权重",
+      "state": {
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ],
+        "hero": [
+          "Qs",
+          "Qc"
+        ],
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 10,
+        "heroStack": 95.25,
+        "villainStack": 95.25,
+        "heroPut": 0,
+        "villainPut": 0,
+        "phase": "unopened",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "若明确只剩两种都跟的KK，选什么？",
+        "options": [
+          "过牌",
+          "下注5",
+          "下注10",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "example": "checkBetter",
+        "weights": {
+          "66": 0,
+          "JJ": 0,
+          "KJ": 0,
+          "KK": 1,
+          "QQ": 0,
+          "AJ": 0
+        },
+        "values": [
+          {
+            "action": "check",
+            "evBB": 0
+          },
+          {
+            "action": "small",
+            "evBB": -5
+          },
+          {
+            "action": "large",
+            "evBB": -10
+          }
+        ]
+      },
+      "assessment": "guided_finite_size_model_not_unaided_full_strategy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "verification": {
+    "independentEndingStackBranches": 144,
+    "firstActualReveal": "B13",
+    "moneyTotalBB": 600
+  },
+  "release": {
+    "preciseOriginalAQStrategy": false,
+    "NL50Reference": false,
+    "unseenAssessment": false,
+    "learnerVerified": false
+  }
+}

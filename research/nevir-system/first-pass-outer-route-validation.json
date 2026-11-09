@@ -1,0 +1,161 @@
+{
+  "id": "FIRST_PASS_OUTER_ROUTE_VALIDATION_V1",
+  "status": "outer_trial_packet_semantically_valid_paper_only",
+  "purpose": "独立校验首遍外层题面、答案键、状态机输出和本地翻前图表是否互相一致。",
+  "sources": [
+    "first-pass-outer-route-trial-prompts.json",
+    "first-pass-outer-route-trial-key.json",
+    "first-lesson-visible-state-machine.json",
+    "src/data/ranges.json"
+  ],
+  "route": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+  ],
+  "caseChecks": [
+    {
+      "id": "OL01",
+      "routeNode": "L0",
+      "outputFields": [
+        "table",
+        "startingStackBB",
+        "trainingGoal"
+      ],
+      "expectedFields": [
+        "table",
+        "startingStackBB",
+        "trainingGoal"
+      ],
+      "next": "L1",
+      "errorReturn": "L0",
+      "noStrategy": true
+    },
+    {
+      "id": "OL02",
+      "routeNode": "L1",
+      "outputFields": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "expectedFields": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistoryIdentity",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "next": "L2",
+      "errorReturn": "L1",
+      "noStrategy": true
+    },
+    {
+      "id": "OL03",
+      "routeNode": "L2",
+      "outputFields": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "expectedFields": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "next": "L3",
+      "errorReturn": "L2",
+      "noStrategy": true
+    },
+    {
+      "id": "OL04",
+      "routeNode": "L3",
+      "outputFields": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "expectedFields": [
+        "preflopActionIdentity",
+        "actionWeight",
+        "actionLabel"
+      ],
+      "next": "L4",
+      "errorReturn": "L3",
+      "noStrategy": true
+    },
+    {
+      "id": "OL05",
+      "routeNode": "L4",
+      "outputFields": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator",
+        "stopReason"
+      ],
+      "expectedFields": [
+        "rangeSnapshotIdentity",
+        "physicalFilter",
+        "denominator",
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "stopReasonIfMissing"
+      ],
+      "next": "p1",
+      "errorReturn": "L4",
+      "noStrategy": true
+    }
+  ],
+  "chartCheck": {
+    "chartId": "open-BTN",
+    "hand": "AKo",
+    "gridCell": {
+      "row": 1,
+      "col": 0
+    },
+    "action": {
+      "raise": 1
+    },
+    "sourceMatch": true
+  },
+  "scenarioCheck": {
+    "sixMax": true,
+    "startingStackBB": 100,
+    "heroSeat": "BTN",
+    "currentActor": "BTN",
+    "potBB": 5.5,
+    "effectiveStackBB": 97.5,
+    "toCallBB": 0
+  },
+  "semanticChecks": {
+    "routeOrderExact": true,
+    "promptAndKeyRouteAligned": true,
+    "stateOutputShapesAligned": true,
+    "noStrategyLeakage": true,
+    "handoffCardsComplete": true,
+    "chartCoordinateAndActionMatch": true,
+    "l4DoesNotInventExactRange": true
+  },
+  "currentEvidence": {
+    "paperValidation": true,
+    "runtimeAttached": false,
+    "participantObserved": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  },
+  "releaseRules": {
+    "semanticMismatchBlocksTrial": true,
+    "strategyLeakageBlocksStructureTrial": true,
+    "missingL4ReferenceMustStopExactStrategy": true,
+    "paperValidationDoesNotProveLearnerMastery": true,
+    "paperValidationDoesNotProveNL50": true
+  }
+}

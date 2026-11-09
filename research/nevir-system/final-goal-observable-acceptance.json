@@ -1,0 +1,98 @@
+{
+  "id": "FINAL_GOAL_OBSERVABLE_ACCEPTANCE_V1",
+  "status": "paper_goal_contract_not_trialed",
+  "purpose": "把‘低基础用户跟完一次就知道怎么想，慢速能做，最终以NL50为目标’转成逐项可观察证据。",
+  "principle": "年龄标签不是能力证据；路线清楚、策略正确、目标级准备度必须分开验收。",
+  "userStandard": {
+    "firstPass": "一次沿嵌套主线走完后，能说出大致步骤、当前层、下一步和错误回退；每一步都出现，资料不足时明确停止。",
+    "slowExecution": "在资料充分的陌生节点，先定位再读牌、范围、比较、执行和更新，慢速交出可核对结果。",
+    "transfer": "只改一个字段时，能指出受影响层并重新判断，而不是记住原案例。",
+    "target": "经过连续路线、未曝光题包、独立复核和外部基准后，才讨论NL50准备度。"
+  },
+  "acceptanceDimensions": [
+    {
+      "id": "A1",
+      "name": "nested_route",
+      "mapsTo": ["G1", "G3"],
+      "passEvidence": ["runtime_trace_L0_L8", "runtime_trace_p1_p7", "one_question_per_screen", "one_primary_action", "child_returns_to_parent"],
+      "failIf": ["flat_35_item_home", "child_skips_parent", "same_screen_multiple_primary_questions"]
+    },
+    {
+      "id": "A2",
+      "name": "no_step_omitted",
+      "mapsTo": ["G2", "G4"],
+      "passEvidence": ["all_required_screen_anchors", "visible_state_payload_preserved", "missing_evidence_stop_visible", "seven_node_order_recall"],
+      "failIf": ["range_handoff_missing", "update_without_successor_or_stop", "answer_shown_before_first_response"]
+    },
+    {
+      "id": "A3",
+      "name": "low_baseline_comprehension",
+      "mapsTo": ["G1", "G2", "G4"],
+      "passEvidence": ["unfamiliar_terms_have_plain_language", "one_new_concept_at_a_time", "three_unseen_layer_locations", "two_error_recoveries", "one_variable_transfer"],
+      "failIf": ["host_fills_knowledge", "hidden_input_required", "speed_is_used_as_pass_condition", "technical_label_is_only_clue"]
+    },
+    {
+      "id": "A4",
+      "name": "fact_and_math_correctness",
+      "mapsTo": ["G5", "G6", "G8"],
+      "passEvidence": ["card_legality", "best_five_hand", "pot_and_stack_conservation", "price_formula", "fixed_denominator_range_snapshot"],
+      "failIf": ["physical_filter_called_action_filter", "unverified_amount", "illegal_duplicate_card", "hidden_information_used"]
+    },
+    {
+      "id": "A5",
+      "name": "policy_and_reference_identity",
+      "mapsTo": ["G5", "G6", "G9"],
+      "passEvidence": ["course_policy_or_reference_policy_label", "matched_input_fingerprint", "before_after_range", "difference_ledger", "successor_or_stop"],
+      "failIf": ["course_example_presented_as_full_GTO", "local_solver_slice_presented_as_complete_tree", "unknown_filled_as_action"]
+    },
+    {
+      "id": "A6",
+      "name": "unseen_slow_execution_and_transfer",
+      "mapsTo": ["G6", "G7"],
+      "passEvidence": ["first_attempt_before_explanation", "heldout_item", "exactly_one_changed_field", "error_layer_classified", "amount_and_action_both_checked"],
+      "failIf": ["same_case_retry_counted_as_transfer", "multi_variable_change", "total_score_hides_layer_error"]
+    },
+    {
+      "id": "A7",
+      "name": "continuous_three_street_route",
+      "mapsTo": ["G8"],
+      "passEvidence": ["flop_turn_river_successors", "range_denominator_continuity", "action_right_continuity", "ledger_conservation", "settlement_replay"],
+      "failIf": ["hidden_opponent_action", "street_reset_loses_history", "postflop_table_used_after_facing_bet", "no_successor_explained_as_default_check"]
+    },
+    {
+      "id": "A8",
+      "name": "target_readiness_and_NL50_boundary",
+      "mapsTo": ["G10"],
+      "passEvidence": ["frozen_six_max_100BB_configuration", "matched_external_reference", "unexposed_continuous_holdout", "independent_reviewer_reconstruction", "real_decision_audit", "risk_management_record"],
+      "failIf": ["docs_only_claim", "short_term_win_rate_claim", "fixed_zero_rake_tree_equated_to_NL50", "no_external_benchmark"]
+    }
+  ],
+  "releaseOrder": ["paper_route", "runtime_guided_route", "structure_recall", "slow_single_step", "single_variable_transfer", "continuous_three_street", "target_condition_holdout", "real_decision_audit"],
+  "evidenceRecord": {
+    "minimumPerAttempt": ["sessionVersion", "caseIdentity", "firstAnswer", "helpLevel", "currentLayer", "requiredOutput", "errorLayer", "returnTo", "retryAnswer", "unseenStatus"],
+    "privacy": "session_only_no_learner_database",
+    "designerWalkthroughInsufficient": true,
+    "answerAfterExplanationNotIndependent": true,
+    "ageLabelNotEvidence": true,
+    "speedNotGate": true
+  },
+  "currentEvidence": {
+    "paperRoute": true,
+    "runtime": false,
+    "lowBaselineTrial": false,
+    "matchedReference": false,
+    "unseenTransfer": false,
+    "continuousThreeStreet": false,
+    "externalTargetBenchmark": false,
+    "NL50Evidence": false,
+    "goalCompletionVerified": false
+  },
+  "guards": {
+    "noFlatMenu": true,
+    "noStepOmitted": true,
+    "unknownStops": true,
+    "factPolicyReferenceSeparated": true,
+    "learnerEvidenceCannotBeInferredFromDocs": true,
+    "NL50CannotBeInferredFromTrainingAccuracy": true
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "LEARNER_GOAL_ROUTE_CANONICAL_V1",
+  "status": "canonical_sequential_route_written_not_trialed",
+  "objective": "one_nested_route_builds_a_reusable_slow_execution_structure",
+  "source": "119_目标级单一路径运行蓝图.md",
+  "canonicality": {
+    "outerMembershipDoesNotDefineOrder": true,
+    "nextChainDefinesOrder": true,
+    "legacyChildrenAreAvailabilitySets": true,
+    "parallelHomeMenuForbidden": true
+  },
+  "outerRoute": [
+    {"id":"L0","next":"L1","output":"table_goal"},
+    {"id":"L1","next":"L2","output":"preflop_context"},
+    {"id":"L2","next":"L3","output":"grid_cell"},
+    {"id":"L3","next":"L4","output":"preflop_action_identity"},
+    {"id":"L4","next":"p1","output":"range_handoff_snapshot"},
+    {"id":"p1","parent":"L4","next":"p2","output":"postflop_context"},
+    {"id":"p2","parent":"L4","next":"p3","output":"hand_strength_and_improvement"},
+    {"id":"p3","parent":"L4","next":"p4","output":"range_delta"},
+    {"id":"p4","parent":"L4","next":"p5","output":"course_action_selection"},
+    {"id":"p5","parent":"L4","next":"p6","output":"ledger_and_actor"},
+    {"id":"p6","parent":"L4","next":"p7","output":"state_update"},
+    {"id":"p7","parent":"L4","next":"exit_or_review","output":"settlement_error_layer_transfer"}
+  ],
+  "stateCarry": {
+    "p1_to_p2":["seat","actor","history","potBB","stacksBB","toCallBB"],
+    "p2_to_p3":["bestFive","handCategory","draws","improvementCards"],
+    "p3_to_p4":["rangeBefore","physicalFilter","actionFilter","rangeViewDenominator"],
+    "p4_to_p5":["coursePolicyVersion","selectedAction","decisionState","referenceIdentity"],
+    "p5_to_p6":["amountBB","potAfterBB","stacksAfterBB","nextActor","historyAfter"],
+    "p6_to_p7":["rangeAfter","newCardCondition","ledgerAfter","successorIdentity"]
+  },
+  "postflopSequentialChain":["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "routeAliases": {
+    "purpose": "用户看到的短标签与机器合同的完整节点ID是一对一别名，不是两条不同路线。",
+    "surfaceToBackend": {
+      "p1": "p1_context",
+      "p2": "p2_board",
+      "p3": "p3_range",
+      "p4": "p4_compare",
+      "p5": "p5_execute",
+      "p6": "p6_update",
+      "p7": "p7_close"
+    },
+    "backendToSurface": {
+      "p1_context": "p1",
+      "p2_board": "p2",
+      "p3_range": "p3",
+      "p4_compare": "p4",
+      "p5_execute": "p5",
+      "p6_update": "p6",
+      "p7_close": "p7"
+    },
+    "oneToOne": true,
+    "doesNotCreateExtraStep": true
+  },
+  "screenContract": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "oneOpenChildAtATime": true,
+    "oneCentralVisual": true,
+    "requiredVisible": ["currentParent","routePosition","requiredInputs","returnPoint"],
+    "unknownCountsAsWrong": true,
+    "firstAnswerPreserved": true,
+    "parentFrameRestoredOnClose": true,
+    "dashboardHomeForbidden": true
+  },
+  "unitEmbedding": {
+    "compare.unopened":{"count":8,"parent":"p4"},
+    "compare.bet":{"count":7,"parent":"p4"},
+    "compare.raise":{"count":6,"parent":"p4"},
+    "update.response":{"count":6,"parent":"p6"},
+    "update.card":{"count":8,"parent":"p6"},
+    "firstPassRepresentativePerGroup":1,
+    "groupUnitsAreNotHomeMenu":true
+  },
+  "firstPassEvidence":["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "assistanceStages":["map","guided","independent","adjacent","delayed","continuous"],
+  "releaseRules": {
+    "missingReferenceStopsExactGrade": true,
+    "missingSuccessorStopsContinuousRoute": true,
+    "missingStateCarryBlocksNextLayer": true,
+    "docsDoNotProveRuntime": true,
+    "firstPassDoesNotGrantNL50": true
+  },
+  "currentEvidence": {
+    "paperRoute": true,
+    "canonicalOrderConflictResolved": true,
+    "runtimeImplemented": false,
+    "parentRecoveryTrialed": false,
+    "adultBeginnerTrialed": false,
+    "completeMatchedStrategy": false,
+    "unseenContinuousTransfer": false,
+    "NL50Evidence": false
+  }
+}

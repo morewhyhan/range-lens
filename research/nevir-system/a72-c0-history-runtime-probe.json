@@ -1,0 +1,21 @@
+{
+  "id": "A72_C0_HISTORY_RUNTIME_PROBE_V1",
+  "status": "history_menu_adapter_verified_without_solver_memory_allocation",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "example": "research/solver-source/examples/a72_c0_adapter_probe.rs",
+  "exampleSha256": "37BB24F0ADA554712623E5100AD29A38E120B75ABA4C2C576421C13681804074",
+  "command": "RUSTFLAGS=-A dangerous-implicit-autorefs cargo run --offline --example a72_c0_adapter_probe",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "historyMenus": {
+    "root": ["Check", "Bet(182)", "AllIn(9750)"],
+    "afterCheckBet182": ["Fold", "Call", "Raise(455)", "AllIn(9750)"],
+    "afterRaise455": ["Fold", "Call", "Raise(1138)", "AllIn(9750)"]
+  },
+  "memoryUsageBytes": {
+    "uncompressed": 10174073380,
+    "compressed": 5189681440
+  },
+  "solverMemoryAllocated": false,
+  "meaning": "只证明冻结行动树的历史菜单和金额可由源码适配器重放；不证明求解策略、逐组合频率或后继范围。"
+}

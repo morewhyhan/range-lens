@@ -1,0 +1,790 @@
+{
+  "status": "public_guided_paper_sequence_not_unseen_test",
+  "parentLink": {
+    "source": "first-hand-lesson-prompts.json",
+    "frame": "S13",
+    "mode": "review_after_first_pass",
+    "notice": "先完成首次整手导览，再回看S13的方法。下面是另一手作者模型，不是该AcQd原例的策略答案。",
+    "snapshotHash": "d766e8624087b15e4c591f00461630ae6fc3dd045aaff1324e725d4ca7d633e1",
+    "returnHash": "d766e8624087b15e4c591f00461630ae6fc3dd045aaff1324e725d4ca7d633e1",
+    "originalOutcomeAlreadySeen": true,
+    "independentAssessment": false,
+    "strategyReferenceForOriginalFrameReady": false
+  },
+  "context": {
+    "players": 6,
+    "initialBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "board": [
+      "Ks",
+      "9h",
+      "2d",
+      "3c",
+      "7h"
+    ],
+    "hero": [
+      "9c",
+      "9d"
+    ],
+    "history": [
+      "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "Flop Ks9h2d: SB bets7; BTN calls7",
+      "Turn3c: SB checks; BTN checks",
+      "River7h: SB to act"
+    ],
+    "start": {
+      "pot": 35,
+      "heroStack": 83,
+      "villainStack": 83,
+      "heroPut": 0,
+      "villainPut": 0,
+      "minRaise": 1
+    },
+    "rake": "none",
+    "priorScope": "Given current river masses; not recovered from a complete preflop/flop/turn policy."
+  },
+  "policyInputs": {
+    "weights": [
+      1,
+      2,
+      3,
+      1,
+      3
+    ],
+    "weakBet": 1,
+    "airBet": 1,
+    "fold77ToHeroJam": false,
+    "opponentPolicy": {
+      "afterHeroCheck": "KK/77 bet17.5; AK uses weakBet; QT uses airBet; QQ checks",
+      "afterHeroBet17_5": "KK/77 raise to45; AK calls; QQ calls half and folds half; QT folds",
+      "afterHeroCheckRaise45": "KK/77 jam83; AK calls; QQ/QT fold",
+      "afterHeroJam83": "KK calls;77 calls unless profile explicitly folds77ToHeroJam; other hands fold",
+      "information": "Only own holding and public history; no access to hero hidden cards"
+    },
+    "menu": {
+      "heroRoot": [
+        "check",
+        "bet17.5"
+      ],
+      "afterVillainBet": [
+        "fold",
+        "call17.5",
+        "raise45",
+        "jam83"
+      ],
+      "afterVillainRaise": [
+        "fold",
+        "call27.5",
+        "jam83"
+      ],
+      "afterVillainJam": [
+        "fold",
+        "call38"
+      ],
+      "omitted": "All other legal sizes and opponent responses are omitted. Optimality is only against the declared fixed policies in this menu, not full-game equilibrium."
+    }
+  },
+  "frames": [
+    {
+      "id": "V01",
+      "title": "先认当前决定",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "现在轮到谁？",
+        "options": [
+          "SB自己",
+          "BTN对手",
+          "发牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V02",
+      "title": "拼出当前五张",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "9♣9♦在这五张公共牌上是什么牌？",
+        "options": [
+          "一对9",
+          "两对",
+          "三条9",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V03",
+      "title": "先看强弱对象",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "分别面对AK与KK，哪项对？",
+        "options": [
+          "赢AK、输KK",
+          "赢KK、输AK",
+          "两手都赢",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidateIllustrations": [
+          {
+            "id": "KK",
+            "hole": [
+              "Kc",
+              "Kd"
+            ]
+          },
+          {
+            "id": "AK",
+            "hole": [
+              "Ac",
+              "Kh"
+            ]
+          }
+        ]
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V04",
+      "title": "看AK多放了什么",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "给定后续下，哪条路线从AK多收到钱？",
+        "options": [
+          "先过牌路线",
+          "直接下注路线",
+          "一样",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": "AK",
+        "checkPlanNet": 80,
+        "directBetPlanNet": 52.5,
+        "scope": "Plans include the given best continuation; expanded later."
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V05",
+      "title": "别漏掉失去的收入",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "面对QQ，哪条路线收益更高？",
+        "options": [
+          "先过牌路线",
+          "直接下注路线",
+          "一样",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": "QQ",
+        "checkPlanNet": 35,
+        "directBetPlanNet": 43.75
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V06",
+      "title": "看弱牌主动投入",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "面对QT，先过牌比直接下17.5多得多少？",
+        "options": [
+          17.5,
+          35,
+          0,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidate": "QT",
+        "checkPlanNet": 52.5,
+        "directBetPlanNet": 35
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V07",
+      "title": "合起来选计划",
+      "state": {
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "heroPut": 0,
+        "villainPut": 0,
+        "minRaise": 1,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "decision"
+      },
+      "task": {
+        "prompt": "按完整给定比较，现在选哪条计划？",
+        "options": [
+          "过牌",
+          "下注17.5",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "rootValues": [
+          {
+            "action": "check",
+            "evBB": 58.55
+          },
+          {
+            "action": "bet17.5",
+            "evBB": 45.925
+          }
+        ],
+        "weights": [
+          1,
+          2,
+          3,
+          1,
+          3
+        ],
+        "scope": "The displayed totals are learning support, so this is not an unaided strategy test."
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V08",
+      "title": "对手下注，换入口",
+      "state": {
+        "pot": 52.5,
+        "heroStack": 83,
+        "villainStack": 65.5,
+        "heroPut": 0,
+        "villainPut": 17.5,
+        "minRaise": 17.5,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "facing_bet"
+      },
+      "task": {
+        "prompt": "自己过牌后，对手下17.5，现在跟注还需补多少？",
+        "options": [
+          17.5,
+          35,
+          52.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V09",
+      "title": "不是只赢诈唬",
+      "state": {
+        "pot": 52.5,
+        "heroStack": 83,
+        "villainStack": 65.5,
+        "heroPut": 0,
+        "villainPut": 17.5,
+        "minRaise": 17.5,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "facing_bet"
+      },
+      "task": {
+        "prompt": "除了QT，自己还能赢题设中哪些主动下注的成牌？",
+        "options": [
+          "77和AK",
+          "KK",
+          "没有",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "posterior": {
+          "77": 0.2222222222222222,
+          "KK": 0.1111111111111111,
+          "AK": 0.3333333333333333,
+          "QQ": 0,
+          "QT": 0.3333333333333333
+        },
+        "roleScope": "These are fixed opponent bets; no claim that the opponent policy itself is optimal."
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V10",
+      "title": "比较跟、加与全下",
+      "state": {
+        "pot": 52.5,
+        "heroStack": 83,
+        "villainStack": 65.5,
+        "heroPut": 0,
+        "villainPut": 17.5,
+        "minRaise": 17.5,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "facing_bet"
+      },
+      "task": {
+        "prompt": "按给定全部后续，哪项条件收益最高？",
+        "options": [
+          "弃牌",
+          "跟17.5",
+          "加到45",
+          "全下83",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": [
+          {
+            "action": "fold",
+            "evBB": 0
+          },
+          {
+            "action": "call17.5",
+            "evBB": 44.72222222222222
+          },
+          {
+            "action": "raise45",
+            "evBB": 61.166666666666664
+          },
+          {
+            "action": "jam83",
+            "evBB": 52
+          }
+        ]
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V11",
+      "title": "加到额不是新增两次",
+      "state": {
+        "pot": 97.5,
+        "heroStack": 38,
+        "villainStack": 65.5,
+        "heroPut": 45,
+        "villainPut": 17.5,
+        "minRaise": 27.5,
+        "actor": "BTN",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "wait_response"
+      },
+      "task": {
+        "prompt": "自己加到45后，接下来等谁行动？",
+        "options": [
+          "BTN对手",
+          "自己再下注",
+          "直接发牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V12",
+      "title": "面对全下重算价格",
+      "state": {
+        "pot": 163,
+        "heroStack": 38,
+        "villainStack": 0,
+        "heroPut": 45,
+        "villainPut": 83,
+        "minRaise": 38,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "facing_jam"
+      },
+      "task": {
+        "prompt": "对手全下到83，自己还需补多少？",
+        "options": [
+          38,
+          83,
+          45,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V13",
+      "title": "只对当前全下范围判断",
+      "state": {
+        "pot": 163,
+        "heroStack": 38,
+        "villainStack": 0,
+        "heroPut": 45,
+        "villainPut": 83,
+        "minRaise": 38,
+        "actor": "SB",
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "facing_jam"
+      },
+      "task": {
+        "prompt": "题设该分支KK:77＝1:2，当前选什么？",
+        "options": [
+          "弃牌",
+          "跟38",
+          "再加",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "posterior": {
+          "77": 0.6666666666666666,
+          "KK": 0.3333333333333333,
+          "AK": 0,
+          "QQ": 0,
+          "QT": 0
+        },
+        "callThreshold": 0.1890547263681592,
+        "winShare": 0.6666666666666666,
+        "scope": "Range and response supplied by author; not inferred from a player label."
+      },
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V14",
+      "title": "行动已经匹配",
+      "state": {
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "heroPut": 83,
+        "villainPut": 83,
+        "actor": null,
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": false,
+        "phase": "showdown_pending"
+      },
+      "task": {
+        "prompt": "双方已全下并匹配，现在做什么？",
+        "options": [
+          "摊牌比五张",
+          "继续下注",
+          "再发一张河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V15",
+      "title": "此时才亮实际牌",
+      "state": {
+        "pot": 201,
+        "heroStack": 0,
+        "villainStack": 0,
+        "heroPut": 83,
+        "villainPut": 83,
+        "actor": null,
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": true,
+        "opponentHole": [
+          "Kc",
+          "Kd"
+        ],
+        "phase": "showdown"
+      },
+      "task": {
+        "prompt": "对手实际是K♣K♦，谁赢？",
+        "options": [
+          "自己",
+          "对手",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "V16",
+      "title": "结果不能改写原依据",
+      "state": {
+        "pot": 0,
+        "heroStack": 0,
+        "villainStack": 201,
+        "actor": null,
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ],
+        "hero": [
+          "9c",
+          "9d"
+        ],
+        "opponentVisible": true,
+        "opponentHole": [
+          "Kc",
+          "Kd"
+        ],
+        "phase": "settled"
+      },
+      "task": {
+        "prompt": "本段起点83，最后0。能仅因这次输牌，就改判起点过牌错了吗？",
+        "options": [
+          "不能，仍看动作前信息",
+          "能，输就是错",
+          "能，赢才算对",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "kind": "guided_given_model_not_unaided_strategy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "administration": "Show only the current frame; author answers and later frames remain teacher-side. Demo outcome is intentionally selected, not a sampled frequency or guarantee."
+}

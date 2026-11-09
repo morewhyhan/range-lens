@@ -1,0 +1,903 @@
+{
+  "status": "author_sequential_answer_bearing_visual_lesson_not_learner_test",
+  "rootQuestionId": "M-1517092e089e13f9",
+  "defaultOrder": [
+    "VR1",
+    "VR2",
+    "VR3",
+    "VR4"
+  ],
+  "optionalFromVR2": "VR5",
+  "previewReturnTo": "VR2",
+  "optionalFromVR3": "VR6",
+  "calculationReturnTo": "VR3",
+  "frames": [
+    {
+      "title": "跟完这一笔，还没有结束",
+      "subtitle": "示范已跟10.5：双方投入匹配，接下来才发河牌。",
+      "footer": "先看清：池42，双方79.5；对手的底牌仍没有亮。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 42,
+        "heroStack": 79.5,
+        "villainStack": 79.5,
+        "heroPut": 10.5,
+        "villainPut": 10.5,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "range": [
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "relativeWeight": 4
+        },
+        {
+          "id": "KJ",
+          "hole": [
+            "Kc",
+            "Jc"
+          ],
+          "relativeWeight": 16
+        },
+        {
+          "id": "JT",
+          "hole": [
+            "Js",
+            "Ts"
+          ],
+          "relativeWeight": 4
+        }
+      ],
+      "kind": "awaiting_river",
+      "id": "VR1",
+      "image": "figures/visual-river-1.png",
+      "answerBearingExplanation": true
+    },
+    {
+      "title": "新牌来了，先重新看自己的牌",
+      "subtitle": "河牌4♣。自己还是A高，没有凑成同花。",
+      "footer": "本段给定后续：自己先过牌，再看对手做什么。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d",
+        "4c"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 42,
+        "heroStack": 79.5,
+        "villainStack": 79.5,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399
+      },
+      "range": [
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "relativeWeight": 4
+        },
+        {
+          "id": "KJ",
+          "hole": [
+            "Kc",
+            "Jc"
+          ],
+          "relativeWeight": 16
+        },
+        {
+          "id": "JT",
+          "hole": [
+            "Js",
+            "Ts"
+          ],
+          "relativeWeight": 4
+        }
+      ],
+      "kind": "required_model_action",
+      "id": "VR2",
+      "image": "figures/visual-river-2.png",
+      "answerBearingExplanation": true
+    },
+    {
+      "title": "他打21，重新比较这次跟弃",
+      "subtitle": "现在池63；如果跟21，最后的池是84。",
+      "footer": "只赢JT这4份：4÷24＝1/6。跟注平均少7；本模型选弃。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d",
+        "4c"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 63,
+        "heroStack": 79.5,
+        "villainStack": 58.5,
+        "heroPut": 0,
+        "villainPut": 21,
+        "toCall": 21,
+        "foldedStacks": 399
+      },
+      "range": [
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "relativeWeight": 4
+        },
+        {
+          "id": "KJ",
+          "hole": [
+            "Kc",
+            "Jc"
+          ],
+          "relativeWeight": 16
+        },
+        {
+          "id": "JT",
+          "hole": [
+            "Js",
+            "Ts"
+          ],
+          "relativeWeight": 4
+        }
+      ],
+      "kind": "next_decision",
+      "id": "VR3",
+      "image": "figures/visual-river-3.png",
+      "answerBearingExplanation": true
+    },
+    {
+      "title": "这次弃牌，自己保留79.5",
+      "subtitle": "对手未被跟的21先退回，再收走原来的池42。",
+      "footer": "这手结束。转牌跟过，不代表河牌还必须继续跟。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d",
+        "4c"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 0,
+        "heroStack": 79.5,
+        "villainStack": 121.5,
+        "heroPut": 0,
+        "villainPut": 0,
+        "toCall": 0,
+        "foldedStacks": 399,
+        "actor": null
+      },
+      "range": [],
+      "kind": "terminal",
+      "id": "VR4",
+      "image": "figures/visual-river-4.png",
+      "answerBearingExplanation": true
+    },
+    {
+      "title": "只换河牌，重新看这次的范围",
+      "subtitle": "可选预演：从发牌前改发2♠，再走过牌与对手下注。",
+      "footer": "本版只剩KK与JT，4:4；跟21平均多21。关闭回4♣原位。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d",
+        "2s"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 63,
+        "heroStack": 79.5,
+        "villainStack": 58.5,
+        "heroPut": 0,
+        "villainPut": 21,
+        "toCall": 21,
+        "foldedStacks": 399
+      },
+      "range": [
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "relativeWeight": 4
+        },
+        {
+          "id": "JT",
+          "hole": [
+            "Js",
+            "Ts"
+          ],
+          "relativeWeight": 4
+        }
+      ],
+      "kind": "next_decision",
+      "id": "VR5",
+      "image": "figures/visual-river-5.png",
+      "answerBearingExplanation": true
+    },
+    {
+      "title": "为什么跟21，平均反而少7？",
+      "subtitle": "把4:16:4约成1:4:1，画成6份同样大小的可能结果。",
+      "footer": "赢时多63，输时少21：(63－5×21)÷6＝－7。弃牌从现在计0。",
+      "board": [
+        "Ks",
+        "7s",
+        "2d",
+        "3d",
+        "4c"
+      ],
+      "hero": [
+        "As",
+        "Qs"
+      ],
+      "state": {
+        "pot": 63,
+        "heroStack": 79.5,
+        "villainStack": 58.5,
+        "heroPut": 0,
+        "villainPut": 21,
+        "toCall": 21,
+        "foldedStacks": 399
+      },
+      "range": [
+        {
+          "id": "KK",
+          "hole": [
+            "Kh",
+            "Kd"
+          ],
+          "relativeWeight": 4
+        },
+        {
+          "id": "KJ",
+          "hole": [
+            "Kc",
+            "Jc"
+          ],
+          "relativeWeight": 16
+        },
+        {
+          "id": "JT",
+          "hole": [
+            "Js",
+            "Ts"
+          ],
+          "relativeWeight": 4
+        }
+      ],
+      "kind": "next_decision",
+      "id": "VR6",
+      "image": "figures/visual-river-6.png",
+      "answerBearingExplanation": true
+    }
+  ],
+  "parentSnapshot": {
+    "kind": "required_model_action",
+    "actualActionCommitted": true,
+    "question": {
+      "id": "DE-252e08b36261d722",
+      "body": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "4c"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "state": {
+          "pot": 42,
+          "heroStack": 79.5,
+          "villainStack": 79.5,
+          "heroPut": 0,
+          "villainPut": 0,
+          "toCall": 0,
+          "foldedStacks": 399
+        },
+        "actor": "SB",
+        "observedHistory": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21",
+          "SB call",
+          "deal 4c"
+        ],
+        "currentRange": {
+          "holdings": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ]
+        },
+        "opponentCardsRevealed": false,
+        "defenseExecutionNode": {
+          "board": [
+            "Ks",
+            "7s",
+            "2d",
+            "3d",
+            "4c"
+          ],
+          "hero": [
+            "As",
+            "Qs"
+          ],
+          "heroSeat": "SB",
+          "villainSeat": "BTN",
+          "range": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ],
+          "state": {
+            "pot": 42,
+            "heroStack": 79.5,
+            "villainStack": 79.5,
+            "heroPut": 0,
+            "villainPut": 0,
+            "toCall": 0,
+            "foldedStacks": 399
+          },
+          "history": [
+            "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+            "Flop Ks 7s 2d: SB checks, BTN checks",
+            "Turn 3d: SB checks, BTN bets 10.5 into 21",
+            "SB call",
+            "deal 4c"
+          ],
+          "phase": "river_check",
+          "basePot": 42,
+          "streetHeroStart": 79.5,
+          "streetVillainStart": 79.5,
+          "model": {
+            "raise": [
+              {
+                "holding": "KK",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "KJ",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "JT",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              }
+            ],
+            "jam": [
+              {
+                "holding": "KK",
+                "callProbability": 1
+              },
+              {
+                "holding": "KJ",
+                "callProbability": 1
+              },
+              {
+                "holding": "JT",
+                "callProbability": 1
+              }
+            ]
+          },
+          "events": [
+            {
+              "type": "deal_river",
+              "river": "4c"
+            }
+          ]
+        },
+        "candidatePlans": [
+          {
+            "choiceId": "p0",
+            "action": "check",
+            "label": "按给定后续过牌"
+          }
+        ],
+        "unknownOption": {
+          "choiceId": "unknown",
+          "label": "我不知道"
+        },
+        "taskKind": "execute_given_continuation_not_strategy_comparison"
+      }
+    },
+    "reference": {
+      "provenance": "demonstration_after_feedback",
+      "feedbackAlreadyShown": true,
+      "domain": "finite_candidate_plans",
+      "family": "turn_defense",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        }
+      ],
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "executionAdapterReady": true,
+      "givenActionExecutionOnly": true,
+      "inputFingerprint": "252e08b36261d722b764aae15156ebd6a1b583dc41bc4657ec0eef97777f0acd",
+      "id": "DE-252e08b36261d722"
+    },
+    "events": [
+      {
+        "type": "deal_river",
+        "river": "4c"
+      }
+    ],
+    "evidence": {
+      "computedConditionalRangeProvided": true,
+      "realLearnerObserved": false,
+      "wholeSequenceIndependent": false
+    }
+  },
+  "beforeDealAnchor": {
+    "kind": "awaiting_river",
+    "actualActionCommitted": true,
+    "question": {
+      "id": "DE-e9decf8baec1fa68",
+      "body": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "state": {
+          "pot": 42,
+          "heroStack": 79.5,
+          "villainStack": 79.5,
+          "heroPut": 10.5,
+          "villainPut": 10.5,
+          "toCall": 0,
+          "foldedStacks": 399
+        },
+        "actor": null,
+        "observedHistory": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21",
+          "SB call"
+        ],
+        "currentRange": {
+          "holdings": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ]
+        },
+        "opponentCardsRevealed": false,
+        "defenseExecutionNode": {
+          "board": [
+            "Ks",
+            "7s",
+            "2d",
+            "3d"
+          ],
+          "hero": [
+            "As",
+            "Qs"
+          ],
+          "heroSeat": "SB",
+          "villainSeat": "BTN",
+          "range": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ],
+          "state": {
+            "pot": 42,
+            "heroStack": 79.5,
+            "villainStack": 79.5,
+            "heroPut": 10.5,
+            "villainPut": 10.5,
+            "toCall": 0,
+            "foldedStacks": 399
+          },
+          "history": [
+            "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+            "Flop Ks 7s 2d: SB checks, BTN checks",
+            "Turn 3d: SB checks, BTN bets 10.5 into 21",
+            "SB call"
+          ],
+          "phase": "chance",
+          "basePot": 21,
+          "streetHeroStart": 90,
+          "streetVillainStart": 90,
+          "model": {
+            "raise": [
+              {
+                "holding": "KK",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "KJ",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "JT",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              }
+            ],
+            "jam": [
+              {
+                "holding": "KK",
+                "callProbability": 1
+              },
+              {
+                "holding": "KJ",
+                "callProbability": 1
+              },
+              {
+                "holding": "JT",
+                "callProbability": 1
+              }
+            ]
+          },
+          "events": [
+            {
+              "type": "hero_call",
+              "add": 10.5,
+              "to": 10.5
+            }
+          ]
+        }
+      }
+    },
+    "reference": {
+      "provenance": "demonstration_after_feedback",
+      "feedbackAlreadyShown": true,
+      "inputFingerprint": "e9decf8baec1fa68539f49ea920a2095c6b71a5ce8d696c741ca955b23e50d92",
+      "id": "DE-e9decf8baec1fa68"
+    },
+    "events": [
+      {
+        "type": "hero_call",
+        "add": 10.5,
+        "to": 10.5
+      }
+    ],
+    "availableRivers": [
+      {
+        "river": "2s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "2h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "2c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "3s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "3h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "3c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "4s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "4h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "4d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "4c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "5s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "5h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "5d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "5c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "6s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "6h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "6d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "6c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "7h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "7d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "7c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "8s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "8h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "8d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "8c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "9s",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "9h",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "9d",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "9c",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Ts",
+        "probability": 0.01893939393939394
+      },
+      {
+        "river": "Th",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Td",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Tc",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Js",
+        "probability": 0.01893939393939394
+      },
+      {
+        "river": "Jh",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Jd",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Jc",
+        "probability": 0.007575757575757576
+      },
+      {
+        "river": "Qh",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Qd",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Qc",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Kh",
+        "probability": 0.01893939393939394
+      },
+      {
+        "river": "Kd",
+        "probability": 0.01893939393939394
+      },
+      {
+        "river": "Kc",
+        "probability": 0.007575757575757576
+      },
+      {
+        "river": "Ah",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Ad",
+        "probability": 0.02272727272727273
+      },
+      {
+        "river": "Ac",
+        "probability": 0.02272727272727273
+      }
+    ],
+    "evidence": {
+      "computedConditionalRangeProvided": true,
+      "realLearnerObserved": false,
+      "wholeSequenceIndependent": false
+    }
+  },
+  "sourceKind": "given authored model, no real opponent inference",
+  "learnerTrials": 0
+}

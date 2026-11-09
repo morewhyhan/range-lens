@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "status": "full_tree_and_public_history_amounts_checked_not_solved",
+  "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+  "abstractNodeHistoriesChecked": 1671,
+  "counts": [
+    69,
+    363,
+    1239
+  ],
+  "actualEngineEstimatedBytes": {
+    "compressed": 5189681440,
+    "includesMiscMemory": true,
+    "notWholeProcessPeak": true,
+    "uncompressed": 10174073380
+  },
+  "memorySnapshot": {
+    "observedUtc": "2026-10-21T09:18:02.5322611Z",
+    "source": "Windows GlobalMemoryStatusEx; instantaneous, not a future reservation",
+    "totalPhysicalBytes": 16962281472,
+    "availablePhysicalBytes": 6801666048,
+    "loadPercent": 59
+  },
+  "executionGuard": {
+    "rule": "At most 60% of measured free RAM, and leave at least 2GiB; excludes unmeasured solver scratch/peak.",
+    "budgetBytes": 4080999628,
+    "compressedFits": false
+  },
+  "fileHashes": {
+    "flop-tree-preflight.json": "479fd7789398dcfda0a5f9aaaf2f382b85fffa044fc4d7e2782de7117514572f",
+    "memory-snapshot.json": "26797bb6b8296ead31d78323d4fcef45feda409d76793be5f58d34b879bb38cb"
+  },
+  "limits": [
+    "Full original graph was built without strategy storage allocation.",
+    "Independent money replay checks exported histories, not game-theoretic convergence or an independent solver.",
+    "Conservative physical node bound ignores suit isomorphism; it is not the actual node count.",
+    "No full flop solve, strategy answer, NL50 reference or learner outcome."
+  ]
+}

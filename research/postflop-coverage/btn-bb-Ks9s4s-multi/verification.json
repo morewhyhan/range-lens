@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "inputFingerprint": "94c97f7fab4ad78c4fb183e88e8ee78e61da6e7346a93621be9155929b73ca2c",
+  "solverReportedExploitabilityBB": 0.005457286834716797,
+  "scope": "独立求解翻牌 Ks 9s 4s（三同花）；继承已明确的双方翻前条件范围、底池和后手；零抽水；翻牌33%／75%，转河75%，面对下注允许弃牌／跟注／全下加注。有限动作树参考。",
+  "verifiedNodes": 95,
+  "physicalWeightChecks": 81985,
+  "edges": 134,
+  "independentTerminalChecks": 12,
+  "completeCheckAndBetCallRoutes": true,
+  "hiddenCardTrials": 12,
+  "allRuntimeHistoriesAvailable": true,
+  "independentSecondSolver": false,
+  "files": {
+    "request.json": "00898ee3166e831bee457beb0e92a3c0054a955a5a0a6941de2aa0c329b2b48c",
+    "result.json": "7c69f6d8d860ef4258f5d493166b6a9252438117a4902469e85b445462b0dd41",
+    "strategy.bin": "a2c6a3948d019342d8854f05b0cefa13d67dc87c1fb2960d4423f34bde8c537e"
+  },
+  "engineSHA256": "4adf872e5f45ebe8d4c2a102af9b05688d7ceec911182cb484dbbff60331ae20"
+}

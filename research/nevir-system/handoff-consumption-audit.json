@@ -1,0 +1,1117 @@
+{
+  "id": "HANDOFF_CONSUMPTION_AUDIT_V1",
+  "status": "paper_handoff_consumption_audited_runtime_and_learner_trial_missing",
+  "purpose": "检查首遍交接卡、用户可见输出、运行字段和慢速行动链是否真正连成可消费的顺序，而不是并列字段清单。",
+  "sources": [
+    "first-pass-mental-model-contract.json",
+    "learner-visible-route-crosswalk.json",
+    "first-pass-runtime-output-crosswalk.json",
+    "slow-single-step-execution-contract.json"
+  ],
+  "route": [
+    "p1_context",
+    "p2_board",
+    "p3_range",
+    "p4_compare",
+    "p5_execute",
+    "p6_update",
+    "p7_close"
+  ],
+  "actionChainOrder": [
+    "A0_state_lock",
+    "A1_layer_entry",
+    "A2_fact_read",
+    "A3_range_delta",
+    "A4_compare",
+    "A5_execute",
+    "A6_update_or_stop",
+    "A7_transfer_close"
+  ],
+  "cards": [
+    {
+      "routeNode": "p1_context",
+      "cardId": "contextCard",
+      "required": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "consumedByNext": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "nextQuestion": "谁在什么位置、前面发生了什么、现在轮到谁？",
+      "visibleOutput": [
+        "actor",
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "actionChainSteps": [
+        "A0_state_lock"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "actor",
+          "runtimeOrVisibleTargets": [
+            "actor"
+          ],
+          "visibleTargets": [
+            "actor"
+          ],
+          "actionChainTargets": [
+            "actor"
+          ],
+          "covered": true
+        },
+        {
+          "source": "history",
+          "runtimeOrVisibleTargets": [
+            "history",
+            "actionHistory"
+          ],
+          "visibleTargets": [
+            "actionHistory"
+          ],
+          "actionChainTargets": [
+            "history"
+          ],
+          "covered": true
+        },
+        {
+          "source": "pot",
+          "runtimeOrVisibleTargets": [
+            "potBB"
+          ],
+          "visibleTargets": [
+            "potBB"
+          ],
+          "actionChainTargets": [
+            "potBB"
+          ],
+          "covered": true
+        },
+        {
+          "source": "stacks",
+          "runtimeOrVisibleTargets": [
+            "stacksBB",
+            "effectiveStackBB"
+          ],
+          "visibleTargets": [
+            "effectiveStackBB"
+          ],
+          "actionChainTargets": [
+            "stacksBB"
+          ],
+          "covered": true
+        },
+        {
+          "source": "toCall",
+          "runtimeOrVisibleTargets": [
+            "toCallBB"
+          ],
+          "visibleTargets": [
+            "toCallBB"
+          ],
+          "actionChainTargets": [
+            "toCallBB"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p2_board",
+      "cardId": "handCard",
+      "required": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ],
+      "consumedByNext": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ],
+      "nextQuestion": "我现在组成了什么牌，下一张可能怎样改变？",
+      "visibleOutput": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "actionChainSteps": [
+        "A1_layer_entry",
+        "A2_fact_read"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "bestFive",
+          "runtimeOrVisibleTargets": [
+            "bestFive"
+          ],
+          "visibleTargets": [
+            "bestFive"
+          ],
+          "actionChainTargets": [
+            "bestFive"
+          ],
+          "covered": true
+        },
+        {
+          "source": "handClass",
+          "runtimeOrVisibleTargets": [
+            "handClass",
+            "handCategory"
+          ],
+          "visibleTargets": [
+            "handCategory"
+          ],
+          "actionChainTargets": [
+            "handClass"
+          ],
+          "covered": true
+        },
+        {
+          "source": "improvementCards",
+          "runtimeOrVisibleTargets": [
+            "improvementCards",
+            "improvingCards"
+          ],
+          "visibleTargets": [
+            "improvingCards"
+          ],
+          "actionChainTargets": [
+            "improvementCards"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p3_range",
+      "cardId": "rangeDeltaCard",
+      "required": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "consumedByNext": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "nextQuestion": "哪些牌仍然可能存在，哪些只是被我手里的牌拿走了？",
+      "visibleOutput": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "rangeBeforeDenominator"
+      ],
+      "actionChainSteps": [
+        "A3_range_delta"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "rangeBefore",
+          "runtimeOrVisibleTargets": [
+            "rangeBefore"
+          ],
+          "visibleTargets": [
+            "rangeBefore"
+          ],
+          "actionChainTargets": [
+            "rangeBefore"
+          ],
+          "covered": true
+        },
+        {
+          "source": "physicalFilter",
+          "runtimeOrVisibleTargets": [
+            "physicalFilter"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "actionFilterStatus",
+          "runtimeOrVisibleTargets": [
+            "actionFilterStatus"
+          ],
+          "visibleTargets": [
+            "actionFilterStatus"
+          ],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "denominator",
+          "runtimeOrVisibleTargets": [
+            "denominator",
+            "normalizationDenominator",
+            "rangeBeforeDenominator"
+          ],
+          "visibleTargets": [
+            "rangeBeforeDenominator"
+          ],
+          "actionChainTargets": [
+            "denominator"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p4_compare",
+      "cardId": "choiceCard",
+      "required": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "consumedByNext": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "nextQuestion": "在这些牌、这个价格和这个历史下，哪个合法选择更合算？",
+      "visibleOutput": [
+        "legalActions",
+        "potOddsOrPrice",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "actionChainSteps": [
+        "A4_compare"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "legalActions",
+          "runtimeOrVisibleTargets": [
+            "legalActions"
+          ],
+          "visibleTargets": [
+            "legalActions"
+          ],
+          "actionChainTargets": [
+            "legalActions"
+          ],
+          "covered": true
+        },
+        {
+          "source": "price",
+          "runtimeOrVisibleTargets": [
+            "price"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [
+            "price"
+          ],
+          "covered": true
+        },
+        {
+          "source": "purpose",
+          "runtimeOrVisibleTargets": [
+            "actionPurpose",
+            "reason"
+          ],
+          "visibleTargets": [
+            "reason"
+          ],
+          "actionChainTargets": [
+            "actionPurpose"
+          ],
+          "covered": true
+        },
+        {
+          "source": "policyIdentity",
+          "runtimeOrVisibleTargets": [
+            "policyIdentity",
+            "answerIdentity",
+            "courseDecisionCandidate"
+          ],
+          "visibleTargets": [
+            "policyIdentity",
+            "courseDecisionCandidate"
+          ],
+          "actionChainTargets": [
+            "answerIdentity"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p5_execute",
+      "cardId": "ledgerCard",
+      "required": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "consumedByNext": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "nextQuestion": "我要按哪个动作、多少金额，把行动权交给谁？",
+      "visibleOutput": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "actionChainSteps": [
+        "A5_execute"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "action",
+          "runtimeOrVisibleTargets": [
+            "action"
+          ],
+          "visibleTargets": [
+            "action"
+          ],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "amount",
+          "runtimeOrVisibleTargets": [
+            "amountBB",
+            "amountOrNoBet"
+          ],
+          "visibleTargets": [
+            "amountOrNoBet"
+          ],
+          "actionChainTargets": [
+            "amountBB"
+          ],
+          "covered": true
+        },
+        {
+          "source": "potAfter",
+          "runtimeOrVisibleTargets": [
+            "potAfterBB"
+          ],
+          "visibleTargets": [
+            "potAfterBB"
+          ],
+          "actionChainTargets": [
+            "potAfterBB"
+          ],
+          "covered": true
+        },
+        {
+          "source": "stacksAfter",
+          "runtimeOrVisibleTargets": [
+            "stacksAfterBB"
+          ],
+          "visibleTargets": [
+            "stacksAfterBB"
+          ],
+          "actionChainTargets": [
+            "stacksAfterBB"
+          ],
+          "covered": true
+        },
+        {
+          "source": "nextActor",
+          "runtimeOrVisibleTargets": [
+            "nextActor"
+          ],
+          "visibleTargets": [
+            "nextActor"
+          ],
+          "actionChainTargets": [
+            "nextActor"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p6_update",
+      "cardId": "changeCard",
+      "required": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "consumedByNext": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "nextQuestion": "动作、回应或新牌具体改变了哪一件事？",
+      "visibleOutput": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter"
+      ],
+      "actionChainSteps": [
+        "A6_update_or_stop"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "responseOrCard",
+          "runtimeOrVisibleTargets": [
+            "newCardEffect"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "changedField",
+          "runtimeOrVisibleTargets": [
+            "changedField"
+          ],
+          "visibleTargets": [
+            "changedField"
+          ],
+          "actionChainTargets": [
+            "changedField"
+          ],
+          "covered": true
+        },
+        {
+          "source": "rangeAfterOrStop",
+          "runtimeOrVisibleTargets": [
+            "rangeAfterOrStop",
+            "rangeAfter",
+            "rangeAfterOrStopReason"
+          ],
+          "visibleTargets": [
+            "rangeAfterOrStopReason"
+          ],
+          "actionChainTargets": [
+            "rangeAfterOrStop"
+          ],
+          "covered": true
+        },
+        {
+          "source": "successorOrStop",
+          "runtimeOrVisibleTargets": [
+            "successorOrStop",
+            "successorOrTerminal"
+          ],
+          "visibleTargets": [
+            "successorOrTerminal"
+          ],
+          "actionChainTargets": [
+            "successorOrStop"
+          ],
+          "covered": true
+        }
+      ]
+    },
+    {
+      "routeNode": "p7_close",
+      "cardId": "reviewCard",
+      "required": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "consumedByNext": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "nextQuestion": "我能用一句话说明这一步为什么结束、下一次改哪个字段吗？",
+      "visibleOutput": [
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField"
+      ],
+      "actionChainSteps": [
+        "A7_transfer_close"
+      ],
+      "fieldCoverage": [
+        {
+          "source": "settlement",
+          "runtimeOrVisibleTargets": [
+            "settlement"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "decisionResultSeparation",
+          "runtimeOrVisibleTargets": [
+            "decisionResultSeparation"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [],
+          "covered": true
+        },
+        {
+          "source": "errorLayer",
+          "runtimeOrVisibleTargets": [
+            "errorLayer"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [
+            "errorLayer"
+          ],
+          "covered": true
+        },
+        {
+          "source": "nextEntry",
+          "runtimeOrVisibleTargets": [
+            "returnTo"
+          ],
+          "visibleTargets": [],
+          "actionChainTargets": [
+            "returnTo"
+          ],
+          "covered": true
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "p1_context",
+      "to": "p2_board",
+      "payload": [
+        "actor",
+        "history",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "usedBy": [
+        "whoActs",
+        "priorAction",
+        "priceToContinue"
+      ],
+      "nextQuestion": "我现在组成了什么牌，下一张可能怎样改变？",
+      "nextRouteRequired": [
+        "bestFive",
+        "handClass",
+        "improvementCards",
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "identity_incomplete",
+        "actor_unknown"
+      ]
+    },
+    {
+      "from": "p2_board",
+      "to": "p3_range",
+      "payload": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ],
+      "usedBy": [
+        "madeHandClass",
+        "drawVisibility",
+        "boardHandInteraction"
+      ],
+      "nextQuestion": "哪些牌仍然可能存在，哪些只是被我手里的牌拿走了？",
+      "nextRouteRequired": [
+        "rangeOwner",
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "normalizationDenominator",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "actionAfterOrUnknown",
+        "rangeBeforeDenominator"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "card_read_error",
+        "best_five_unknown"
+      ]
+    },
+    {
+      "from": "p3_range",
+      "to": "p4_compare",
+      "payload": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "usedBy": [
+        "legalCombos",
+        "policyIdentity",
+        "frequencyDenominator"
+      ],
+      "nextQuestion": "在这些牌、这个价格和这个历史下，哪个合法选择更合算？",
+      "nextRouteRequired": [
+        "legalActions",
+        "price",
+        "actionPurpose",
+        "answerIdentity",
+        "potOddsOrPrice",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "range_source_missing",
+        "physical_filter_unverified"
+      ]
+    },
+    {
+      "from": "p4_compare",
+      "to": "p5_execute",
+      "payload": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "usedBy": [
+        "actionMenu",
+        "amountInput",
+        "reasonLabel"
+      ],
+      "nextQuestion": "我要按哪个动作、多少金额，把行动权交给谁？",
+      "nextRouteRequired": [
+        "selectedAction",
+        "amountBB",
+        "potAfterBB",
+        "stacksAfterBB",
+        "nextActor",
+        "action",
+        "amountOrNoBet",
+        "ledgerAfter"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "no_matching_strategy_reference",
+        "illegal_action",
+        "price_missing"
+      ]
+    },
+    {
+      "from": "p5_execute",
+      "to": "p6_update",
+      "payload": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "usedBy": [
+        "ledgerDelta",
+        "nextActor",
+        "successorEligibility"
+      ],
+      "nextQuestion": "动作、回应或新牌具体改变了哪一件事？",
+      "nextRouteRequired": [
+        "changedField",
+        "rangeAfter",
+        "ledgerAfter",
+        "futureOpportunityOrClosed",
+        "newCardEffect",
+        "nextActor",
+        "successorOrTerminal",
+        "rangeAfterOrStopReason"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "amount_mismatch",
+        "actor_mismatch",
+        "ledger_break"
+      ]
+    },
+    {
+      "from": "p6_update",
+      "to": "p7_close",
+      "payload": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "usedBy": [
+        "affectedLayer",
+        "nextEntry",
+        "stopReason"
+      ],
+      "nextQuestion": "我能用一句话说明这一步为什么结束、下一次改哪个字段吗？",
+      "nextRouteRequired": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextRoundEntry",
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "successor_missing",
+        "range_after_missing",
+        "ledger_not_conserved"
+      ]
+    },
+    {
+      "from": "p7_close",
+      "to": "p1_context",
+      "payload": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "usedBy": [
+        "replay",
+        "errorReturn",
+        "newHandEntry"
+      ],
+      "nextQuestion": "谁在什么位置、前面发生了什么、现在轮到谁？",
+      "nextRouteRequired": [
+        "actor",
+        "history",
+        "toCallBB",
+        "potBB",
+        "stacksBB",
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "effectiveStackBB"
+      ],
+      "allPayloadNamed": true,
+      "allPayloadConsumed": true,
+      "parentRestoreRequired": true,
+      "stopIfMissing": [
+        "reason_not_expressed",
+        "transfer_field_not_isolated"
+      ]
+    }
+  ],
+  "audit": {
+    "allSevenCardsPresent": true,
+    "allEdgesPresent": true,
+    "everyPayloadHasConsumer": true,
+    "everyCardHasNextQuestion": true,
+    "everyCardHasActionChainStep": true,
+    "orphanFields": [],
+    "orphanFieldCount": 0,
+    "p3RangeMinimumVisible": true,
+    "stateMachineAlignmentRows": [
+      {
+        "routeNode": "p1",
+        "stateId": "p1",
+        "required": [
+          "actor",
+          "actionHistory",
+          "potBB",
+          "effectiveStackBB",
+          "toCallBB"
+        ],
+        "output": [
+          "actor",
+          "actionHistory",
+          "potBB",
+          "effectiveStackBB",
+          "heroSeat",
+          "villainSeat",
+          "toCallBB"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p2",
+        "stateId": "p2",
+        "required": [
+          "bestFive",
+          "handCategory",
+          "draws",
+          "improvingCards"
+        ],
+        "output": [
+          "board",
+          "heroHole",
+          "handCategory",
+          "draws",
+          "improvingCards",
+          "bestFive"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p3",
+        "stateId": "p3",
+        "required": [
+          "rangeBefore",
+          "physicalRemovalReason",
+          "actionFilterStatus",
+          "actionAfterOrUnknown",
+          "denominator"
+        ],
+        "output": [
+          "rangeBefore",
+          "blockedCombos",
+          "physicalRemovalReason",
+          "rangeBeforeDenominator",
+          "actionFilterStatus",
+          "actionAfterOrUnknown",
+          "denominator"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p4",
+        "stateId": "p4",
+        "required": [
+          "legalActions",
+          "price",
+          "policyIdentity",
+          "reason"
+        ],
+        "output": [
+          "legalActions",
+          "price",
+          "courseDecisionCandidate",
+          "reason",
+          "policyIdentity"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p5",
+        "stateId": "p5",
+        "required": [
+          "action",
+          "amountOrNoBet",
+          "potAfterBB",
+          "stacksAfterBB",
+          "nextActor"
+        ],
+        "output": [
+          "action",
+          "amountOrNoBet",
+          "nextActor",
+          "ledgerAfter",
+          "potAfterBB",
+          "stacksAfterBB"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p6",
+        "stateId": "p6",
+        "required": [
+          "responseOrCard",
+          "changedField",
+          "rangeAfterOrStopReason",
+          "successorOrTerminal",
+          "ledgerAfter"
+        ],
+        "output": [
+          "changedField",
+          "rangeAfterOrStopReason",
+          "successorOrTerminal",
+          "ledgerAfter",
+          "responseOrCard"
+        ],
+        "missing": [],
+        "complete": true
+      },
+      {
+        "routeNode": "p7",
+        "stateId": "p7",
+        "required": [
+          "settlement",
+          "decisionResultSeparation",
+          "errorLayer",
+          "nextEntry",
+          "oneSentenceReason",
+          "stopOrSuccessor",
+          "singleTransferField"
+        ],
+        "output": [
+          "oneSentenceReason",
+          "stopOrSuccessor",
+          "singleTransferField",
+          "settlement",
+          "decisionResultSeparation",
+          "errorLayer",
+          "nextEntry"
+        ],
+        "missing": [],
+        "complete": true
+      }
+    ],
+    "stateMachineAlignmentComplete": true,
+    "outerHandoffRows": [
+      {
+        "from": "L0",
+        "to": "L1",
+        "payload": [
+          "table",
+          "trainingGoal",
+          "startingStackBB"
+        ],
+        "usedBy": [
+          "tableConfig",
+          "goalLabel",
+          "stackConfig"
+        ],
+        "producedMissing": [],
+        "consumedMissing": [],
+        "complete": true
+      },
+      {
+        "from": "L1",
+        "to": "L2",
+        "payload": [
+          "heroSeat",
+          "villainSeat",
+          "actionHistory",
+          "actor",
+          "potBB",
+          "effectiveStackBB",
+          "toCallBB"
+        ],
+        "usedBy": [
+          "positionContext",
+          "chartEntry",
+          "actionPointer"
+        ],
+        "producedMissing": [],
+        "consumedMissing": [],
+        "complete": true
+      },
+      {
+        "from": "L2",
+        "to": "L3",
+        "payload": [
+          "chartIdentity",
+          "gridCell",
+          "rangeOwner"
+        ],
+        "usedBy": [
+          "rangeCell",
+          "rangeOwner",
+          "actionLookup"
+        ],
+        "producedMissing": [],
+        "consumedMissing": [],
+        "complete": true
+      },
+      {
+        "from": "L3",
+        "to": "L4",
+        "payload": [
+          "preflopActionIdentity",
+          "actionWeight"
+        ],
+        "usedBy": [
+          "preflopPolicy",
+          "rangeWeight"
+        ],
+        "producedMissing": [],
+        "consumedMissing": [],
+        "complete": true
+      },
+      {
+        "from": "L4",
+        "to": "p1",
+        "payload": [
+          "rangeSnapshotHash",
+          "rangeBefore",
+          "physicalFilter",
+          "denominator"
+        ],
+        "usedBy": [
+          "postflopStartingRange",
+          "p1Context"
+        ],
+        "producedMissing": [],
+        "consumedMissing": [],
+        "complete": true
+      }
+    ],
+    "outerHandoffComplete": true,
+    "parentRestoreRule": "打开子层前保存父层输入、首答和returnPoint；关闭子层后逐项恢复，不重新生成一题。",
+    "unknownEvidenceStopsExactStrategy": true,
+    "oneQuestionAtATime": true,
+    "onePrimaryActionAtATime": true
+  },
+  "releaseRules": {
+    "orphanFieldBlocksStructureRelease": true,
+    "missingVisibleConsumerBlocksFirstPass": true,
+    "stateMachineHandoffMismatchBlocksRuntimeRelease": true,
+    "outerHandoffMismatchBlocksFirstPassRelease": true,
+    "missingRangeMinimumBlocksP3ToP4": true,
+    "missingSuccessorBlocksContinuousRoute": true,
+    "paperAuditDoesNotProveRuntime": true,
+    "paperAuditDoesNotProveLearnerMastery": true,
+    "paperAuditDoesNotProveNL50": true
+  },
+  "currentEvidence": {
+    "paperAudit": true,
+    "runtimeImplemented": false,
+    "parentRestoreRuntime": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

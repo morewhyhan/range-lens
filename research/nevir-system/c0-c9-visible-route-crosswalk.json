@@ -1,0 +1,72 @@
+{
+  "id": "C0_C9_VISIBLE_ROUTE_CROSSWALK_V1",
+  "status": "paper_c0_c9_to_visible_route_crosswalk_not_runtime",
+  "purpose": "把作者侧C0-C9参考编译阶段与用户侧八步练习逐阶段对应，确保每个作者阶段都有可见交付物或明确的作者闸门。",
+  "sources": [
+    "reference-to-course-closure-contract.json",
+    "course-package-field-crosswalk.json",
+    "solver-course-visual-compiler-contract.json",
+    "a72-c0-c5-execution-runbook.json"
+  ],
+  "canonicalStageOrder": [
+    "C0_identity",
+    "C1_physical_facts",
+    "C2_reference_solve",
+    "C3_reference_quality",
+    "C4_course_policy",
+    "C5_difference",
+    "C6_successor_closure",
+    "C7_lesson_compile",
+    "C8_transfer_compile",
+    "C9_release_audit"
+  ],
+  "visibleRoute": [
+    "context",
+    "physicalFacts",
+    "rangeBefore",
+    "compareChoices",
+    "executeLedger",
+    "rangeAfter",
+    "successorOrStop",
+    "restatementAndTransfer"
+  ],
+  "stageRows": [
+    {"stage":"C0_identity","output":"inputFingerprint","visibleAt":["context"],"consumedBy":["context","physicalFacts","rangeBefore","compareChoices"],"release":"fact_or_stop","blocks":["exact_grade"]},
+    {"stage":"C1_physical_facts","output":"factSnapshot","visibleAt":["physicalFacts","rangeBefore"],"consumedBy":["physicalFacts","rangeBefore","rangeAfter"],"release":"fact_practice","blocks":["action_inference_from_board"]},
+    {"stage":"C2_reference_solve","output":"referenceSnapshot","visibleAt":["rangeBefore","compareChoices"],"consumedBy":["compareChoices","rangeAfter"],"release":"reference_demonstration","blocks":["exact_action_grade"]},
+    {"stage":"C3_reference_quality","output":"referenceQuality","visibleAt":["authorOnly"],"consumedBy":["compareChoices","rangeAfter"],"release":"reference_gate","blocks":["reference_policy_claim"]},
+    {"stage":"C4_course_policy","output":"coursePolicy","visibleAt":["compareChoices","executeLedger"],"consumedBy":["compareChoices","executeLedger","rangeAfter"],"release":"course_policy_practice","blocks":["course_answer"]},
+    {"stage":"C5_difference","output":"differenceLedger","additionalOutputs":["rangeSnapshots"],"visibleAt":["rangeAfter","restatementAndTransfer"],"consumedBy":["rangeAfter","restatementAndTransfer"],"release":"difference_explanation","blocks":["range_change_claim"]},
+    {"stage":"C6_successor_closure","output":"successorGraph","visibleAt":["successorOrStop"],"consumedBy":["successorOrStop","restatementAndTransfer"],"release":"continuous_practice","blocks":["next_street"]},
+    {"stage":"C7_lesson_compile","output":"lessonFrames","visibleAt":["context","physicalFacts","rangeBefore","compareChoices","executeLedger","rangeAfter","successorOrStop","restatementAndTransfer"],"consumedBy":["all_visible_steps"],"release":"guided_lesson","blocks":["learner_question"]},
+    {"stage":"C8_transfer_compile","output":"heldoutTransfer","visibleAt":["restatementAndTransfer"],"consumedBy":["restatementAndTransfer"],"release":"single_variable_transfer","blocks":["unseen_transfer"]},
+    {"stage":"C9_release_audit","output":"releaseDecision","visibleAt":["authorOnly"],"consumedBy":["author_release_gate"],"release":"release_identity","blocks":["publication"]}
+  ],
+  "authorOnlyOutputs": ["referenceQuality"],
+  "derivedLearnerOutputs": ["rangeSnapshots"],
+  "mappingRules": {
+    "everyCStageHasOneRow": true,
+    "stageOrderIsCanonical": true,
+    "authorOnlyIsNotLearnerStep": true,
+    "everyVisibleLayerIsInVisualCompiler": true,
+    "everyPackageOutputHasOneStage": true,
+    "authorOnlyOutputsAreNotLearnerPackage": true,
+    "everyVisibleFieldSourceHasCStage": true,
+    "qualityDoesNotBecomeVisibleAnswer": true,
+    "missingC2BlocksExactAction": true,
+    "missingC3BlocksRangeChange": true,
+    "missingC6BlocksContinuousPractice": true,
+    "missingC8BlocksTransfer": true,
+    "c9DoesNotInventMissingEvidence": true
+  },
+  "currentEvidence": {
+    "crosswalkWritten": true,
+    "allTenStagesMapped": true,
+    "allPackageOutputsMapped": true,
+    "allVisibleFieldSourcesMapped": true,
+    "matchedReference": false,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

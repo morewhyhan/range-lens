@@ -1,0 +1,140 @@
+{
+  "id": "GOAL_STANDARD_CROSSWALK_AUDIT_V1",
+  "status": "paper_goal_standard_crosswalk_consistent_runtime_and_learner_evidence_missing",
+  "purpose": "把215号目标标准与既有canonical路线、视觉、可见负荷、语言、原理覆盖、35项释放和代表题合同逐项核对。",
+  "sources": [
+    "target-standard-sequential-teaching-and-nl50-closure-contract.json",
+    "learner-goal-route-canonical.json",
+    "visual-navigation-contract.json",
+    "first-pass-visibility-contract.json",
+    "first-pass-language-contract.json",
+    "learner-first-pass-narration-contract.json",
+    "first-pass-principle-coverage.json",
+    "unit-canonical-route-bridge.json",
+    "full-course-coverage-and-release-contract.json",
+    "first-pass-representative-units.json"
+  ],
+  "checks": [
+    {
+      "id": "route_exact",
+      "statement": "215号路线与唯一canonical路线一致",
+      "result": true,
+      "evidence": [
+        "learner-goal-route-canonical.json"
+      ]
+    },
+    {
+      "id": "inner_route_exact",
+      "statement": "215号内层路线与p1-p7一致",
+      "result": true,
+      "evidence": [
+        "learner-goal-route-canonical.json"
+      ]
+    },
+    {
+      "id": "principle_ids_exact",
+      "statement": "12个原理ID完整且顺序一致",
+      "result": true,
+      "evidence": [
+        "first-pass-principle-coverage.json"
+      ]
+    },
+    {
+      "id": "representatives_exact",
+      "statement": "首遍五张代表卡与统一代表清单一致",
+      "result": true,
+      "evidence": [
+        "first-pass-representative-units.json"
+      ]
+    },
+    {
+      "id": "unit_group_parent_exact",
+      "statement": "五组35项父步骤与单元桥一致",
+      "result": true,
+      "evidence": [
+        "unit-canonical-route-bridge.json"
+      ]
+    },
+    {
+      "id": "unit_count_exact",
+      "statement": "后台单元数量为35且都要求父帧",
+      "result": true,
+      "evidence": [
+        "unit-canonical-route-bridge.json",
+        "full-course-coverage-and-release-contract.json"
+      ]
+    },
+    {
+      "id": "visual_regions_compatible",
+      "statement": "中央视觉、问题动作和解析四区与视觉导航合同兼容",
+      "result": true,
+      "evidence": [
+        "visual-navigation-contract.json",
+        "first-pass-visibility-contract.json"
+      ]
+    },
+    {
+      "id": "visual_semantics_compatible",
+      "statement": "固定坐标、固定分母、非颜色语义和三类过滤边界一致",
+      "result": true,
+      "evidence": [
+        "visual-navigation-contract.json",
+        "solver-course-visual-compiler-contract.json"
+      ]
+    },
+    {
+      "id": "visibility_load_compatible",
+      "statement": "每步一问一动作、最多三个视觉块和一次新概念一致",
+      "result": true,
+      "evidence": [
+        "first-pass-visibility-contract.json"
+      ]
+    },
+    {
+      "id": "language_compatible",
+      "statement": "首遍白话层、技术词后置和概念边界一致",
+      "result": true,
+      "evidence": [
+        "first-pass-language-contract.json",
+        "learner-first-pass-narration-contract.json"
+      ]
+    },
+    {
+      "id": "release_pool_compatible",
+      "statement": "全量覆盖的六级释放、空池不替代和首遍代表规则一致",
+      "result": true,
+      "evidence": [
+        "full-course-coverage-and-release-contract.json",
+        "first-pass-representative-units.json"
+      ]
+    },
+    {
+      "id": "stop_and_parent_compatible",
+      "statement": "缺证据停止、子层返回父帧和无平铺入口一致",
+      "result": true,
+      "evidence": [
+        "target-standard-sequential-teaching-and-nl50-closure-contract.json",
+        "unit-canonical-route-bridge.json"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "currentEvidence": {
+    "paperCrosswalk": true,
+    "runtimeRoute": false,
+    "matchedReference": false,
+    "lowBaselineTrial": false,
+    "learnerTransfer": false,
+    "NL50Evidence": false
+  },
+  "guards": {
+    "crosswalkPassDoesNotEqualRuntime": true,
+    "crosswalkPassDoesNotEqualLearnerUnderstanding": true,
+    "crosswalkPassDoesNotEqualMatchedGTO": true,
+    "crosswalkPassDoesNotEqualNL50": true
+  }
+}

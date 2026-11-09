@@ -1,0 +1,61 @@
+{
+  "id": "FIRST_PASS_RUNTIME_VERIFICATION_CURRENT",
+  "status": "bundle_and_state_machine_verified_manual_visual_pending",
+  "verifiedAt": "2026-11-01T10:14:23.709Z",
+  "runtimeComponent": "src/golden-path.jsx",
+  "stateMachine": "src/golden-path.js",
+  "route": [
+    "G0_welcome",
+    "G1_context",
+    "G2_preflop_chart",
+    "G3_preflop_action",
+    "G4_range_bridge",
+    "G5_p1_context",
+    "G6_p2_hand",
+    "G7_p3_range",
+    "G8_p4_compare",
+    "G9_p5_execute",
+    "G10_p6_update",
+    "G11_p7_close",
+    "G12_recall_transfer"
+  ],
+  "successorRoute": [
+    "T01_0_turn_context",
+    "T01_1_size",
+    "T01_2_hand_role",
+    "T01_3_boundary"
+  ],
+  "checks": {
+    "routeAudit": true,
+    "paperRouteAligned": true,
+    "everyFrameHasSelectableAnswer": true,
+    "everyFrameHasEvidenceIdentity": true,
+    "everyFrameHasOutputContract": true,
+    "everyHandoffHasNext": true,
+    "registeredSourceSuccessor": "T01-前序 → T01 (line1)",
+    "successorRouteAudit": true,
+    "successorFramesHaveSelectableAnswers": true,
+    "successorWrongAnswerStaysOnFrame": true,
+    "successorCorrectAnswerAdvances": true,
+    "successorReturnsToParentRoute": true,
+    "wrongAnswerStaysOnFrame": true,
+    "unknownCountsAsWrong": true,
+    "correctAnswerAdvances": true,
+    "parentChildRestore": true,
+    "sessionOnlyScore": true
+  },
+  "evidence": {
+    "automatedTests": "tests/golden-path.test.js",
+    "productionBuild": "npm run build",
+    "verifier": "npm run verify:golden-path",
+    "paperContract": "C:\\Users\\why\\Documents\\ChatGPT\\德州扑克GTO简化\\research\\nevir-system\\first-pass-golden-path.json"
+  },
+  "pending": [
+    "在可连接本地端口的浏览器中完成1366/1920/2560宽度视觉验收",
+    "人工确认答错解析、答对自动前进和嵌套牌力练习的实际点击体验"
+  ],
+  "boundaries": [
+    "当前首遍翻后策略节点仍为course_only或closed；未伪造GTO逐组合范围",
+    "本报告不证明低基础用户迁移能力或NL50结果"
+  ]
+}

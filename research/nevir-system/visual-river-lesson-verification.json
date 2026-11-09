@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "rootReferenceCallCorrect": true,
+  "river4cCallEVBB": -7,
+  "river4cFoldCorrect": true,
+  "river2sCallEVBB": 21,
+  "river2sCallCorrect": true,
+  "fullParentRestored": true,
+  "defaultFrames": 4,
+  "optionalFrames": 2,
+  "sixEqualMassPayoffExplained": true,
+  "imageReview": "Separate manual review record; this numerical script does not inspect pixels.",
+  "realLearners": 0,
+  "independentTest": false,
+  "newCoarseContextCells": 0
+}

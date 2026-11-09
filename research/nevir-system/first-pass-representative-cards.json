@@ -1,0 +1,13 @@
+{
+  "id":"FIRST_PASS_REPRESENTATIVE_CARDS_V1",
+  "status":"paper_public_cards_and_teacher_boundaries_not_trialed",
+  "cards":[
+    {"id":"REP_1_5","unit":"1.5","parent":"compare.unopened","questionKind":"relation","prompt":"我现在有一点摊牌赢面。先把哪两条路线放在一起比较？","options":["过牌后谁会继续/我能否摊牌","只看自己牌型","直接看最后输赢","我不知道"],"correct":"过牌后谁会继续/我能否摊牌","identity":"finite_model_or_course_demonstration","evidence":"value-trap-tree-evidence.json","changesOne":"continuation_policy","mustNotInfer":"showdown_equity_alone_selects_check_or_bet","returnTo":"p4_compare"},
+    {"id":"REP_2_1","unit":"2.1","parent":"compare.bet","questionKind":"relation","prompt":"面对下注时，我能赢其中一部分取值牌。下一步还必须看什么？","options":["价格、对手下注范围和跟/加后的后续","只看我是不是顶对","只看这次会不会赢","我不知道"],"correct":"价格、对手下注范围和跟/加后的后续","identity":"finite_model_demonstration","evidence":"value-trap-tree-evidence.json","changesOne":"comparison_inputs","mustNotInfer":"beating_some_value_hands_alone_selects_call_or_raise","returnTo":"p4_compare"},
+    {"id":"REP_3_1","unit":"3.1","parent":"compare.raise","questionKind":"ledger_price","prompt":"加注后，我还要补多少？跟完以后能争多少池？","example":{"toCallBB":60,"potAfterCallBB":201,"display":"60 / 201"},"correct":"摆出待补60BB和跟后池201BB","identity":"fact_or_finite_comparison","evidence":"defense-tree-evidence.json","evidencePointer":"D08","changesOne":"price","mustNotInfer":"price_formula_alone_selects_strategy","returnTo":"p4_compare"},
+    {"id":"REP_4_5","unit":"4.5","parent":"update.response","questionKind":"ledger_fact","prompt":"对手跟完22.05BB以后，池会变成多少？","options":["73.5BB","51.45BB","201BB","我不知道"],"correct":"73.5BB","identity":"ledger_fact","evidence":"first-hand-lesson-packet.json","evidencePointer":"S11","changesOne":"response_and_pot","mustNotInfer":"correct_ledger_implies_correct_strategy","returnTo":"p6_update"},
+    {"id":"REP_5_7","unit":"5.7","parent":"update.card","questionKind":"physical_fact","prompt":"新牌发出后，先划掉哪一类组合？","options":["含有新公共牌实体的冲突组合","所有弱牌","所有没有改善的牌","我不知道"],"correct":"含有新公共牌实体的冲突组合","identity":"physical_fact","evidence":"turn-transfer-evidence.json","evidencePointer":"U02","changesOne":"known_card_filter","mustNotInfer":"physical_removal_equals_opponent_action_filter","returnTo":"p6_update"}
+  ],
+  "answerRules":{"unknownCountsAsWrong":true,"correctAdvancesToParent":true,"wrongShowsOnlyLocalExplanation":true,"teacherBoundariesVisibleAfterAnswer":true,"noExactStrategyWithoutMatchedReference":true,"noFlatHomeEntry":true},
+  "currentStatus":{"fiveCardsWritten":true,"publicPacketRuntimeAttached":false,"matchedReference":false,"learnerTrial":false,"NL50Evidence":false}
+}

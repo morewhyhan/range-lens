@@ -1,0 +1,2674 @@
+{
+  "status": "guided_history_paper_sequence_not_UI_or_learner_verified",
+  "parentLink": {
+    "source": "first-hand-lesson-packet.json",
+    "frame": "S09",
+    "mode": "review_after_first_pass",
+    "notice": "回看S09怎样带前序比较；换KK与三手候选的给定模型，不补造原AQ策略。",
+    "snapshotHash": "2d8f9b9953a778edbacf870e8b94399faeb44d9aaa418bc9a7e1ec8656e46b0c",
+    "returnHash": "2d8f9b9953a778edbacf870e8b94399faeb44d9aaa418bc9a7e1ec8656e46b0c",
+    "independentAssessment": false
+  },
+  "context": {
+    "players": 6,
+    "initialBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "preflop": "BTN opens2.5, SB raises to10, BB folds, BTN calls",
+    "flopPotBB": 21,
+    "flopStacksBB": 90,
+    "rake": "none",
+    "candidatePrior": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+    "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+  },
+  "modelInput": {
+    "source": "history-contrast-evidence.json",
+    "candidates": [
+      {
+        "id": "88",
+        "hole": [
+          "8c",
+          "8d"
+        ],
+        "priorMass": 1,
+        "heroShowdownShare": 0
+      },
+      {
+        "id": "QQ",
+        "hole": [
+          "Qc",
+          "Qd"
+        ],
+        "priorMass": 2,
+        "heroShowdownShare": 1
+      },
+      {
+        "id": "JT",
+        "hole": [
+          "Js",
+          "Tc"
+        ],
+        "priorMass": 2,
+        "heroShowdownShare": 1
+      }
+    ],
+    "paths": [
+      {
+        "id": "HC_A",
+        "events": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "likelihoods": [
+          [
+            0.2,
+            0.8,
+            1
+          ],
+          [
+            1,
+            0.5,
+            0.1
+          ]
+        ],
+        "integerPosteriorMass": [
+          1,
+          4,
+          1
+        ],
+        "expectedCheck": 29.166666666666668,
+        "expectedBet": 32.083333333333336,
+        "best": "bet17.5",
+        "ledger": [
+          {
+            "event": "flop SB check",
+            "pot": 21,
+            "sb": 90,
+            "btn": 90
+          },
+          {
+            "event": "flop BTN check",
+            "pot": 21,
+            "sb": 90,
+            "btn": 90
+          },
+          {
+            "event": "deal2c",
+            "pot": 21,
+            "sb": 90,
+            "btn": 90
+          },
+          {
+            "event": "turn SB bet7",
+            "pot": 28,
+            "sb": 83,
+            "btn": 90
+          },
+          {
+            "event": "turn BTN call7",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          },
+          {
+            "event": "deal4s",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          }
+        ],
+        "rawMass": [
+          0.2,
+          0.8,
+          0.2
+        ],
+        "posterior": [
+          {
+            "id": "88",
+            "probability": 0.16666666666666669,
+            "checkEV": 0,
+            "calledEV": -17.5,
+            "foldEV": 35,
+            "betEV": -17.5
+          },
+          {
+            "id": "QQ",
+            "probability": 0.6666666666666667,
+            "checkEV": 35,
+            "calledEV": 52.5,
+            "foldEV": 35,
+            "betEV": 43.75
+          },
+          {
+            "id": "JT",
+            "probability": 0.16666666666666669,
+            "checkEV": 35,
+            "calledEV": 52.5,
+            "foldEV": 35,
+            "betEV": 35
+          }
+        ],
+        "currentState": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "actions": {
+          "checkEVBB": 29.16666666666667,
+          "bet17_5EVBB": 32.083333333333336
+        },
+        "answerScope": "Finite model best action only; historical frequencies supplied by author."
+      },
+      {
+        "id": "HC_B",
+        "events": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "likelihoods": [
+          [
+            1,
+            0.5,
+            0.1
+          ],
+          [
+            0.8,
+            0.8,
+            1
+          ]
+        ],
+        "integerPosteriorMass": [
+          4,
+          4,
+          1
+        ],
+        "expectedCheck": 19.444444444444443,
+        "expectedBet": 15.555555555555555,
+        "best": "check",
+        "ledger": [
+          {
+            "event": "flop SB bet7",
+            "pot": 28,
+            "sb": 83,
+            "btn": 90
+          },
+          {
+            "event": "flop BTN call7",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          },
+          {
+            "event": "deal2c",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          },
+          {
+            "event": "turn SB check",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          },
+          {
+            "event": "turn BTN check",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          },
+          {
+            "event": "deal4s",
+            "pot": 35,
+            "sb": 83,
+            "btn": 83
+          }
+        ],
+        "rawMass": [
+          0.8,
+          0.8,
+          0.2
+        ],
+        "posterior": [
+          {
+            "id": "88",
+            "probability": 0.4444444444444445,
+            "checkEV": 0,
+            "calledEV": -17.5,
+            "foldEV": 35,
+            "betEV": -17.5
+          },
+          {
+            "id": "QQ",
+            "probability": 0.4444444444444445,
+            "checkEV": 35,
+            "calledEV": 52.5,
+            "foldEV": 35,
+            "betEV": 43.75
+          },
+          {
+            "id": "JT",
+            "probability": 0.11111111111111112,
+            "checkEV": 35,
+            "calledEV": 52.5,
+            "foldEV": 35,
+            "betEV": 35
+          }
+        ],
+        "currentState": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "actions": {
+          "checkEVBB": 19.444444444444446,
+          "bet17_5EVBB": 15.555555555555557
+        },
+        "answerScope": "Finite model best action only; historical frequencies supplied by author."
+      }
+    ],
+    "fixedResponse": {
+      "afterCheck": "BTN always checks; showdown",
+      "afterBet17_5": {
+        "88": {
+          "call": 1,
+          "fold": 0
+        },
+        "QQ": {
+          "call": 0.5,
+          "fold": 0.5
+        },
+        "JT": {
+          "call": 0,
+          "fold": 1
+        }
+      },
+      "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+    }
+  },
+  "navigation": {
+    "core": [
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12",
+      "H13",
+      "H14"
+    ],
+    "optional": [
+      {
+        "openAt": "H10",
+        "label": "为什么先前路线会改变范围",
+        "frames": [
+          "J01",
+          "J02",
+          "J03",
+          "J04",
+          "J05",
+          "J06",
+          "J07"
+        ],
+        "returnTo": "H10",
+        "surface": "feedback",
+        "then": "H11",
+        "restoreFullFrameHash": "0ea0fae6cc1975770f1c30cc8a0be1aa938fc5e54e23b2c5cd0bae30c43a5a49"
+      },
+      {
+        "openAt": "H08",
+        "label": "看看这张牌改变了什么",
+        "frames": [
+          "K01",
+          "K02",
+          "K03",
+          "K04",
+          "K05"
+        ],
+        "returnTo": "H08",
+        "surface": "feedback",
+        "then": "H09",
+        "restoreFullFrameHash": "8bff438f5635250a935f2b13b5984aebecdae4080285d20eada4c5151c04cf0d"
+      }
+    ],
+    "events": [
+      {
+        "from": "H01",
+        "to": "H02",
+        "event": "Given SB flop check"
+      },
+      {
+        "from": "H02",
+        "to": "H03",
+        "event": "Observed BTN flop check"
+      },
+      {
+        "from": "H04",
+        "to": "H05",
+        "event": "Deal2c only after both checks"
+      },
+      {
+        "from": "H05",
+        "to": "H06",
+        "event": "Given SB turn bet7"
+      },
+      {
+        "from": "H06",
+        "to": "H07",
+        "event": "Observed BTN turn call7"
+      },
+      {
+        "from": "H07",
+        "to": "H08",
+        "event": "Deal4s only after call"
+      },
+      {
+        "from": "H10",
+        "to": "H11",
+        "event": "Demonstration SB river bet17.5 once, only after optional return"
+      },
+      {
+        "from": "H11",
+        "to": "H12",
+        "event": "Observed BTN river call17.5 once"
+      },
+      {
+        "from": "H12",
+        "to": "H13",
+        "event": "Reveal actual QcQd only now"
+      },
+      {
+        "from": "H13",
+        "to": "H14",
+        "event": "Award70 to SB once"
+      }
+    ],
+    "previewEvents": {
+      "J01_to_J02": [
+        "SB bet7",
+        "BTN call7"
+      ],
+      "J02_to_J03": [
+        "deal2c",
+        "SB check"
+      ],
+      "J03_to_J04": [
+        "BTN check"
+      ],
+      "J04_to_J05": [
+        "deal4s"
+      ],
+      "note": "Animate each event and action handoff separately; preview namespace never mutates actual A."
+    },
+    "firstAnswerLocksPersist": true
+  },
+  "frames": [
+    {
+      "id": "H01",
+      "title": "从真实前序开始",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [],
+        "candidateMass": [
+          10,
+          20,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "翻牌刚开始，谁先行动？",
+        "options": [
+          "SB自己",
+          "BTN对手",
+          "发转牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H02",
+      "title": "自己过牌仍要等回应",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "BTN",
+        "phase": "wait_response",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check"
+        ],
+        "candidateMass": [
+          10,
+          20,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己过牌以后，能直接发转牌吗？",
+        "options": [
+          "不能，要等BTN",
+          "能，自己不下注就换街",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H03",
+      "title": "强牌也可能过牌",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "street_closed",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check"
+        ],
+        "candidateMass": [
+          2,
+          16,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN也过牌，模型中的88是不是全没了？",
+        "options": [
+          "没有，仍有非零可能",
+          "是，强牌不会过牌",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "observed": "BTN flop check",
+        "likelihoods": [
+          0.2,
+          0.8,
+          1
+        ],
+        "candidateOrder": [
+          "88",
+          "QQ",
+          "JT"
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H04",
+      "title": "让候选实际变淡",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "street_closed",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check"
+        ],
+        "candidateMass": [
+          2,
+          16,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "QQ原有20份、题设80%会过牌，过牌支留下多少？",
+        "options": [
+          16,
+          20,
+          4,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "displayMass": [
+          2,
+          16,
+          20
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H05",
+      "title": "新街不重置候选",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c"
+        ],
+        "candidateMass": [
+          2,
+          16,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "2c来了，是否把候选恢复成10、20、20？",
+        "options": [
+          "不恢复，继承2、16、20",
+          "恢复，每街重新开始",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H06",
+      "title": "给定下注实际落地",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "BTN",
+        "phase": "wait_response",
+        "pot": 28,
+        "heroStack": 83,
+        "villainStack": 90,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7"
+        ],
+        "candidateMass": [
+          2,
+          16,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "示范下注7以后，下一步等谁？",
+        "options": [
+          "BTN对手",
+          "自己再下注",
+          "直接发河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H07",
+      "title": "连续回应继续筛",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "street_closed",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN跟7后，哪组份额符合本题？",
+        "options": [
+          "2、8、2",
+          "10、20、20",
+          "2、16、20",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "observed": "BTN turn call7",
+        "likelihoods": [
+          1,
+          0.5,
+          0.1
+        ],
+        "candidateOrder": [
+          "88",
+          "QQ",
+          "JT"
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H08",
+      "title": "河牌保留整条历史",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "河牌4s发出，现在轮到谁？",
+        "options": [
+          "SB自己",
+          "BTN对手",
+          "直接结算",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H09",
+      "title": "先看当前能赢谁",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "KK对88、QQ、JT，哪项对？",
+        "options": [
+          "输88，赢QQ和JT",
+          "三组都赢",
+          "只赢JT",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H10",
+      "title": "把留下的候选接到选择",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按这条历史及给定完整河牌回应，比较结果选什么？",
+        "options": [
+          "过牌",
+          "下注17.5",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": {
+          "checkEVBB": 29.16666666666667,
+          "bet17_5EVBB": 32.083333333333336
+        },
+        "weights": [
+          2,
+          8,
+          2
+        ],
+        "scope": "Given EV help; not unaided strategy. Optional alternative history restores this whole frame."
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H11",
+      "title": "比较之后才扣本次钱",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "BTN",
+        "phase": "wait_response",
+        "pot": 52.5,
+        "heroStack": 65.5,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s",
+          "river SB bet17.5"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己实际下17.5后，接下来做什么？",
+        "options": [
+          "等BTN回应",
+          "立即收池",
+          "再发一张牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H12",
+      "title": "实际回应后再更新",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "showdown_pending",
+        "pot": 70,
+        "heroStack": 65.5,
+        "villainStack": 65.5,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s",
+          "river SB bet17.5",
+          "river BTN call17.5"
+        ],
+        "candidateMass": [
+          2,
+          4,
+          0
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN这次跟了，原来必弃的JT还在跟注支吗？",
+        "options": [
+          "不在",
+          "仍按原两份保留",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "likelihoods": [
+          1,
+          0.5,
+          0
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H13",
+      "title": "此时才亮实际QQ",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "showdown",
+        "pot": 70,
+        "heroStack": 65.5,
+        "villainStack": 65.5,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s",
+          "river SB bet17.5",
+          "river BTN call17.5"
+        ],
+        "candidateMass": [
+          2,
+          4,
+          0
+        ],
+        "opponentVisible": true,
+        "opponentHole": [
+          "Qc",
+          "Qd"
+        ]
+      },
+      "task": {
+        "prompt": "对手实际QcQd，谁赢？",
+        "options": [
+          "自己",
+          "对手",
+          "平分",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H14",
+      "title": "结算与先前判断分开",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "settled",
+        "pot": 0,
+        "heroStack": 135.5,
+        "villainStack": 65.5,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s",
+          "river SB bet17.5",
+          "river BTN call17.5"
+        ],
+        "candidateMass": [
+          2,
+          4,
+          0
+        ],
+        "opponentVisible": true,
+        "opponentHole": [
+          "Qc",
+          "Qd"
+        ]
+      },
+      "task": {
+        "prompt": "从整手100到135.5，净赢多少？",
+        "options": [
+          35.5,
+          52.5,
+          70,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J01",
+      "title": "可选：从同一起点预演另一条历史",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview",
+        "pot": 21,
+        "heroStack": 90,
+        "villainStack": 90,
+        "historyPath": "HC_B",
+        "history": [],
+        "candidateMass": [
+          10,
+          20,
+          20
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这条对照能直接接在已完成路线A的河牌后吗？",
+        "options": [
+          "不能，从相同翻牌起点预演",
+          "能，直接继续扣钱",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J02",
+      "title": "先下注被跟的筛选",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "preview_street_closed",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_B",
+        "history": [
+          "flop SB bet7",
+          "flop BTN call7"
+        ],
+        "candidateMass": [
+          10,
+          10,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这次翻牌先下7被跟，候选留下哪组？",
+        "options": [
+          "10、10、2",
+          "2、16、20",
+          "10、20、20",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "likelihoods": [
+          1,
+          0.5,
+          0.1
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J03",
+      "title": "转牌先过还要等人",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "BTN",
+        "phase": "preview_wait_response",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_B",
+        "history": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check"
+        ],
+        "candidateMass": [
+          10,
+          10,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "2c后自己过牌，转牌是否结束？",
+        "options": [
+          "没有，要等BTN",
+          "结束，直接发河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J04",
+      "title": "后过才关闭街并筛选",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": null,
+        "phase": "preview_street_closed",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_B",
+        "history": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check"
+        ],
+        "candidateMass": [
+          8,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN也过，88原10份按80%留下多少？",
+        "options": [
+          8,
+          2,
+          10,
+          "我不知道"
+        ]
+      },
+      "given": {
+        "likelihoods": [
+          0.8,
+          0.8,
+          1
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J05",
+      "title": "眼前一样不代表信息一样",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview_unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_B",
+        "history": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "candidateMass": [
+          8,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "两条路线河牌、钱和座位一样，候选也必须一样吗？",
+        "options": [
+          "不必须，历史回应不同",
+          "必须，只看现在即可",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J06",
+      "title": "另一历史重新比较",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview_unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_B",
+        "history": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "candidateMass": [
+          8,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "本对照完整比较选什么？",
+        "options": [
+          "过牌",
+          "下注17.5",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": {
+          "checkEVBB": 19.444444444444446,
+          "bet17_5EVBB": 15.555555555555557
+        },
+        "weights": [
+          8,
+          8,
+          2
+        ]
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "J07",
+      "title": "关闭后恢复原题与参考",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭B预演，原A比较恢复哪组？",
+        "options": [
+          "2、8、2",
+          "8、8、2",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "K01",
+      "title": "可选：空白不是完全没变",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "4s出现后，四手牌的最佳五张完全没变吗？",
+        "options": [
+          "不是，有踢脚变化，但这三组胜负关系保持",
+          "是，空白牌完全不影响五张",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "physicalFacts": {
+          "88": [
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c"
+              ],
+              "value": [
+                3,
+                8,
+                10,
+                3
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "3d",
+                "8c",
+                "8d"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "4s"
+              ],
+              "value": [
+                3,
+                8,
+                10,
+                4
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "4s",
+                "8c",
+                "8d"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "Qh"
+              ],
+              "value": [
+                3,
+                8,
+                12,
+                10
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "Qh",
+                "8c",
+                "8d"
+              ]
+            }
+          ],
+          "hero": [
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c"
+              ],
+              "value": [
+                1,
+                13,
+                10,
+                8,
+                3
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "3d",
+                "Kc",
+                "Kd"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "4s"
+              ],
+              "value": [
+                1,
+                13,
+                10,
+                8,
+                4
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "4s",
+                "Kc",
+                "Kd"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "Qh"
+              ],
+              "value": [
+                1,
+                13,
+                12,
+                10,
+                8
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "Qh",
+                "Kc",
+                "Kd"
+              ]
+            }
+          ],
+          "QQ": [
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c"
+              ],
+              "value": [
+                1,
+                12,
+                10,
+                8,
+                3
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "3d",
+                "Qc",
+                "Qd"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "4s"
+              ],
+              "value": [
+                1,
+                12,
+                10,
+                8,
+                4
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "4s",
+                "Qc",
+                "Qd"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "Qh"
+              ],
+              "value": [
+                3,
+                12,
+                10,
+                8
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "Qh",
+                "Qc",
+                "Qd"
+              ]
+            }
+          ],
+          "JT": [
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c"
+              ],
+              "value": [
+                1,
+                10,
+                11,
+                8,
+                3
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "3d",
+                "Js",
+                "Tc"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "4s"
+              ],
+              "value": [
+                1,
+                10,
+                11,
+                8,
+                4
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "4s",
+                "Js",
+                "Tc"
+              ]
+            },
+            {
+              "board": [
+                "Ts",
+                "8h",
+                "3d",
+                "2c",
+                "Qh"
+              ],
+              "value": [
+                1,
+                10,
+                12,
+                11,
+                8
+              ],
+              "bestFive": [
+                "Ts",
+                "8h",
+                "Qh",
+                "Js",
+                "Tc"
+              ]
+            }
+          ]
+        }
+      },
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "K02",
+      "title": "只替换这一张河牌",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "Qh"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview_card_replacement",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A_until_turn_then_Qh_preview",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "preview dealQh instead of4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "假设最后一张换Qh，候选QQ成什么？",
+        "options": [
+          "三条Q",
+          "仍是一对Q",
+          "一对K",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "K03",
+      "title": "看对手改善而非只看自己",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "Qh"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview_card_replacement",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A_until_turn_then_Qh_preview",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "preview dealQh instead of4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "在Qh预演上，自己KK面对这手QQ还领先吗？",
+        "options": [
+          "不领先，三条Q赢一对K",
+          "仍领先，因为K大于Q",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "K04",
+      "title": "事实变化不自动生成策略",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "Qh"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "preview_card_replacement",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A_until_turn_then_Qh_preview",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "preview dealQh instead of4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "换Qh后，能直接沿用原4s牌面的EV数字判下注吗？",
+        "options": [
+          "不能，需匹配新牌面的完整回应比较",
+          "能，只要池和后手一样",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "K05",
+      "title": "回真实河牌与原范围",
+      "state": {
+        "board": [
+          "Ts",
+          "8h",
+          "3d",
+          "2c",
+          "4s"
+        ],
+        "hero": [
+          "Kc",
+          "Kd"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "actor": "SB",
+        "phase": "unopened",
+        "pot": 35,
+        "heroStack": 83,
+        "villainStack": 83,
+        "historyPath": "HC_A",
+        "history": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "candidateMass": [
+          2,
+          8,
+          2
+        ],
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭Qh预演，当前实际河牌恢复哪张？",
+        "options": [
+          "4s",
+          "Qh",
+          "两张都保留",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_history_facts_and_given_model_not_real_opponent_inference",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "answers": [
+    {
+      "id": "H01",
+      "expected": "SB自己",
+      "explanation": "SB没位置。此处换成KK作者模型，前面各动作是教学前序，不称最优。"
+    },
+    {
+      "id": "H02",
+      "expected": "不能，要等BTN",
+      "explanation": "先行动过牌不关闭整街；也不等于弃牌。"
+    },
+    {
+      "id": "H03",
+      "expected": "没有，仍有非零可能",
+      "explanation": "给定88有20%过牌概率，10份留下2份；不是看到一次过牌就估出20%。"
+    },
+    {
+      "id": "H04",
+      "expected": 16,
+      "explanation": "留下16，不是恢复20；这些圆点代表相对质量，不是16种不同QQ。"
+    },
+    {
+      "id": "H05",
+      "expected": "不恢复，继承2、16、20",
+      "explanation": "三候选均不含2c，物理排除不删它们；之前过牌筛选仍保留。"
+    },
+    {
+      "id": "H06",
+      "expected": "BTN对手",
+      "explanation": "池28、自己83、对手90；对手尚未回应，先不改成跟注后范围。"
+    },
+    {
+      "id": "H07",
+      "expected": "2、8、2",
+      "explanation": "在已留2、16、20上再乘1、1/2、1/10。跟注不等于只剩对子，也不把之前筛选清空。"
+    },
+    {
+      "id": "H08",
+      "expected": "SB自己",
+      "explanation": "河牌不等于结束；SB仍先行动，眼前池35、双方83。"
+    },
+    {
+      "id": "H09",
+      "expected": "输88，赢QQ和JT",
+      "explanation": "88在这块牌面成三条8；QQ和JT分别是一对Q、一对T。"
+    },
+    {
+      "id": "H10",
+      "expected": "下注17.5",
+      "explanation": "给定范围1:4:1，过牌175/6，下注385/12，下注较高。不是先过后打必继续下注。"
+    },
+    {
+      "id": "H11",
+      "expected": "等BTN回应",
+      "explanation": "池52.5、自己65.5；对手可能按题设跟或弃，尚未亮牌。"
+    },
+    {
+      "id": "H12",
+      "expected": "不在",
+      "explanation": "88全跟、QQ一半跟、JT全弃：2、8、2更新为2、4、0。实际发生后才改范围，本街完成。"
+    },
+    {
+      "id": "H13",
+      "expected": "自己",
+      "explanation": "KK赢QQ；所有先前候选都只是可能牌，不是提前知道QQ。"
+    },
+    {
+      "id": "H14",
+      "expected": 35.5,
+      "explanation": "河牌段83到135.5得52.5，整手得35.5；收回70及事前平均收益都不是这个数字。"
+    },
+    {
+      "id": "J01",
+      "expected": "不能，从相同翻牌起点预演",
+      "explanation": "A与B互斥；比较不修改实际A。"
+    },
+    {
+      "id": "J02",
+      "expected": "10、10、2",
+      "explanation": "从原10、20、20乘1、1/2、1/10；不是用A的过牌概率。"
+    },
+    {
+      "id": "J03",
+      "expected": "没有，要等BTN",
+      "explanation": "仍需对手回应，不能在先行动过牌后直接换街。"
+    },
+    {
+      "id": "J04",
+      "expected": 8,
+      "explanation": "这次转牌过牌用给定80%，留下8；整组成为8、8、2。"
+    },
+    {
+      "id": "J05",
+      "expected": "不必须，历史回应不同",
+      "explanation": "A是1:4:1，B是4:4:1。改变的不是公共牌，而是各候选走到这里的给定概率。"
+    },
+    {
+      "id": "J06",
+      "expected": "过牌",
+      "explanation": "B中过牌175/9、下注140/9；强端88比例更高。不能背先打后过必过牌。"
+    },
+    {
+      "id": "J07",
+      "expected": "2、8、2",
+      "explanation": "回原H10反馈，包括其范围与比较，不带入B的过牌答案，不重复计分或发牌。"
+    },
+    {
+      "id": "K01",
+      "expected": "不是，有踢脚变化，但这三组胜负关系保持",
+      "explanation": "KK、QQ、JT的低位踢脚由3变4；88也换了配牌。但KK仍输88、赢QQ与JT。空白只相对这组候选说。"
+    },
+    {
+      "id": "K02",
+      "expected": "三条Q",
+      "explanation": "QcQd与Qh组成三条Q；只预演替换河牌，不在实际五张公共牌后多发第六张。"
+    },
+    {
+      "id": "K03",
+      "expected": "不领先，三条Q赢一对K",
+      "explanation": "比较完整牌型先于对子点数。自己的牌仍是一对K，对方却从一对升到三条。"
+    },
+    {
+      "id": "K04",
+      "expected": "不能，需匹配新牌面的完整回应比较",
+      "explanation": "这里只核对牌力变化，不填新策略；旧数值用的是QQ仍输KK时的终局收益，新牌面已经不同。"
+    },
+    {
+      "id": "K05",
+      "expected": "4s",
+      "explanation": "回H08原反馈，牌、钱、候选、历史与曝光状态恢复；没有实际发Qh，也不把QQ成三条留在真实4s上。"
+    }
+  ],
+  "returnFrame": {
+    "id": "S09",
+    "title": "这一轮重新比较",
+    "state": {
+      "street": "turn",
+      "potBB": 29.4,
+      "stacksBB": {
+        "UTG": 100,
+        "HJ": 100,
+        "CO": 100,
+        "BTN": 85.8,
+        "SB": 85.8,
+        "BB": 99
+      },
+      "streetPaidBB": {
+        "UTG": 0,
+        "HJ": 0,
+        "CO": 0,
+        "BTN": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "board": [
+        "Ah",
+        "9c",
+        "2h",
+        "7s"
+      ],
+      "heroSeat": "SB",
+      "heroHole": [
+        "Ac",
+        "Qd"
+      ],
+      "opponentSeat": "BTN",
+      "opponentHoleVisible": false,
+      "actor": "SB",
+      "mode": "active",
+      "foldedSeats": [
+        "UTG",
+        "HJ",
+        "CO",
+        "BB"
+      ],
+      "history": [
+        {
+          "street": "preflop",
+          "actor": "SB",
+          "action": "post",
+          "addedBB": 0.5,
+          "totalStreetPaidBB": 0.5
+        },
+        {
+          "street": "preflop",
+          "actor": "BB",
+          "action": "post",
+          "addedBB": 1,
+          "totalStreetPaidBB": 1
+        },
+        {
+          "street": "preflop",
+          "actor": "UTG",
+          "action": "fold",
+          "addedBB": 0,
+          "totalStreetPaidBB": 0
+        },
+        {
+          "street": "preflop",
+          "actor": "HJ",
+          "action": "fold",
+          "addedBB": 0,
+          "totalStreetPaidBB": 0
+        },
+        {
+          "street": "preflop",
+          "actor": "CO",
+          "action": "fold",
+          "addedBB": 0,
+          "totalStreetPaidBB": 0
+        },
+        {
+          "street": "preflop",
+          "actor": "BTN",
+          "action": "raise_to",
+          "addedBB": 2.5,
+          "totalStreetPaidBB": 2.5
+        },
+        {
+          "street": "preflop",
+          "actor": "SB",
+          "action": "raise_to",
+          "addedBB": 9.5,
+          "totalStreetPaidBB": 10
+        },
+        {
+          "street": "preflop",
+          "actor": "BB",
+          "action": "fold",
+          "addedBB": 0,
+          "totalStreetPaidBB": 1
+        },
+        {
+          "street": "preflop",
+          "actor": "BTN",
+          "action": "call_to",
+          "addedBB": 7.5,
+          "totalStreetPaidBB": 10
+        },
+        {
+          "street": "flop",
+          "actor": "SB",
+          "action": "bet",
+          "addedBB": 4.2,
+          "totalStreetPaidBB": 4.2
+        },
+        {
+          "street": "flop",
+          "actor": "BTN",
+          "action": "call_to",
+          "addedBB": 4.2,
+          "totalStreetPaidBB": 4.2
+        }
+      ]
+    },
+    "task": {
+      "prompt": "比较转牌选择，应该看哪一组信息？",
+      "options": [
+        "当前范围、新牌、池与后手及各方案后续",
+        "只沿用翻牌按钮",
+        "只看自己是不是顶对",
+        "我不知道"
+      ]
+    },
+    "navigationLabel": "compare.unopened",
+    "afterAnswer": {
+      "nextFrame": "S10",
+      "ledgerEvents": []
+    },
+    "perspective": {
+      "handSegment": "H01",
+      "viewerSeat": "SB",
+      "actingSeat": "SB",
+      "ownCardOwner": "SB",
+      "taskKind": "identify_needed_inputs",
+      "selectsOpponentPolicy": false,
+      "gradesIndependentStrategy": false,
+      "actualOpponentCards": "hidden"
+    }
+  },
+  "verification": {
+    "masses": {
+      "HC_A": [
+        [
+          10,
+          20,
+          20
+        ],
+        [
+          2,
+          16,
+          20
+        ],
+        [
+          2,
+          8,
+          2
+        ]
+      ],
+      "HC_B": [
+        [
+          10,
+          20,
+          20
+        ],
+        [
+          10,
+          10,
+          2
+        ],
+        [
+          8,
+          8,
+          2
+        ]
+      ]
+    },
+    "matchingPhysicalRiver": true,
+    "wholeParentFrameRestored": true,
+    "firstActualOpponentReveal": "H13",
+    "currentMenusRestricted": true,
+    "newCardFacts": {
+      "88": [
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c"
+          ],
+          "value": [
+            3,
+            8,
+            10,
+            3
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "3d",
+            "8c",
+            "8d"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "value": [
+            3,
+            8,
+            10,
+            4
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "4s",
+            "8c",
+            "8d"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "Qh"
+          ],
+          "value": [
+            3,
+            8,
+            12,
+            10
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "Qh",
+            "8c",
+            "8d"
+          ]
+        }
+      ],
+      "hero": [
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c"
+          ],
+          "value": [
+            1,
+            13,
+            10,
+            8,
+            3
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "3d",
+            "Kc",
+            "Kd"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "value": [
+            1,
+            13,
+            10,
+            8,
+            4
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "4s",
+            "Kc",
+            "Kd"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "Qh"
+          ],
+          "value": [
+            1,
+            13,
+            12,
+            10,
+            8
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "Qh",
+            "Kc",
+            "Kd"
+          ]
+        }
+      ],
+      "QQ": [
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c"
+          ],
+          "value": [
+            1,
+            12,
+            10,
+            8,
+            3
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "3d",
+            "Qc",
+            "Qd"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "value": [
+            1,
+            12,
+            10,
+            8,
+            4
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "4s",
+            "Qc",
+            "Qd"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "Qh"
+          ],
+          "value": [
+            3,
+            12,
+            10,
+            8
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "Qh",
+            "Qc",
+            "Qd"
+          ]
+        }
+      ],
+      "JT": [
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c"
+          ],
+          "value": [
+            1,
+            10,
+            11,
+            8,
+            3
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "3d",
+            "Js",
+            "Tc"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "value": [
+            1,
+            10,
+            11,
+            8,
+            4
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "4s",
+            "Js",
+            "Tc"
+          ]
+        },
+        {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "Qh"
+          ],
+          "value": [
+            1,
+            10,
+            12,
+            11,
+            8
+          ],
+          "bestFive": [
+            "Ts",
+            "8h",
+            "Qh",
+            "Js",
+            "Tc"
+          ]
+        }
+      ]
+    },
+    "goldenFiveCardVectors": 12,
+    "highRiverPreviewStrategyProvided": false
+  },
+  "release": {
+    "fullOriginalAQStrategy": false,
+    "actualOpponentFrequencies": false,
+    "unseenAssessment": false,
+    "learnerVerified": false,
+    "NL50Reference": false
+  }
+}

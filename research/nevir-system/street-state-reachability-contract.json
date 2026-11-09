@@ -1,0 +1,49 @@
+{
+  "id": "STREET_STATE_REACHABILITY_CONTRACT_V1",
+  "status": "declarative_reachability_matrix_not_complete",
+  "axes": {
+    "streets": ["flop","turn","river"],
+    "roles": ["preflop_last_raiser","preflop_caller","blind_defender","responder"],
+    "positions": ["IP","OOP"],
+    "decisionStates": ["unopened","facing_bet","facing_raise","allin","terminal"],
+    "successorKinds": ["response","new_card","settlement"]
+  },
+  "nodeStatuses": ["not_open","fact","demonstration","course_policy","reference_policy","learner_verified"],
+  "requiredSuccessorFields": [
+    "parentNode","actionId","actionAmount","actor","rangeBefore","rangeAfter",
+    "normalizationDenominator","nextStreet","nextBoardCard","nextActor",
+    "nextDecisionState","successorId","supportStatus","terminalOrContinue"
+  ],
+  "coverageChecks": [
+    "entry_from_L0",
+    "preflop_to_range_handoff",
+    "flop_unopened",
+    "flop_facing_bet",
+    "flop_facing_raise",
+    "positive_action_turn_successors",
+    "turn_to_river_successors",
+    "legal_new_card_identity",
+    "terminal_ledger",
+    "parent_frame_return",
+    "unreachable_stop_list"
+  ],
+  "releaseRules": {
+    "roleCoverageCannotSubstituteForOtherRole": true,
+    "streetCoverageCannotSubstituteForOtherStreet": true,
+    "decisionStateMustBeExplicit": true,
+    "deletedActionMustBeDeclared": true,
+    "missingSuccessorBlocksExactLesson": true,
+    "noDefaultResponseFilling": true,
+    "unopenedDoesNotCoverFacingBet": true,
+    "preflopLastRaiserDoesNotCoverPreflopCaller": true
+  },
+  "currentAudit": {
+    "existingLastRaiserQuestions": 85,
+    "existingCallerQuestions": 0,
+    "completeTargetPolicyCells": 0,
+    "A72C2toC5Reference": false,
+    "reachabilityAuditReport": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

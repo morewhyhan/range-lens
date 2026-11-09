@@ -1,0 +1,30 @@
+{
+  "id":"PREFLOP_SNAPSHOT_CONTRACT_V1",
+  "status":"snapshot_schema_ready_A72_sample_not_verified",
+  "requiredFields":["snapshotId","gameIdentity","seatState","fullHistory","chartIdentity","scenarioIdentity","selectedAction","rangeOwner","perComboWeights","normalizationDenominator","jointCompatibilityStatus","knownCards","physicalFilterStatus","parentSnapshot","changeReason","successorBoundary","inputFingerprint","releaseIdentity"],
+  "identities":["fact","demonstration","course_policy","reference_policy"],
+  "formulas":{"legalWeight":"w_legal(h)=w_pre(h)*I(noKnownCardConflict)","legalMass":"sum_h(w_legal(h))","actionWeight":"w_after(h|a)=w_before(h)*p(a|h,node)","normalizedActionWeight":"q_after(h|a)=w_after(h|a)/sum_h(w_after(h|a))","jointRule":"apply physical and action conditions on legal joint private-hand pairs before marginalizing"},
+  "sample":{
+    "snapshotId":"A72_BTN_SB_PREFLOP_SNAPSHOT_V1",
+    "gameIdentity":{"players":6,"format":"cash","effectiveStackBB":100,"rakeIdentity":"zero_rake_research_candidate"},
+    "seatState":{"hero":"SB","opponent":"BTN","foldedSeats":["UTG","HJ","CO","BB"]},
+    "fullHistory":["BTN_open_2.5BB","SB_3bet_to_10BB","BTN_call_to_10BB"],
+    "chartIdentity":["open-BTN","threebet-SB"],
+    "scenarioIdentity":"BTN_open_SB_3bet_BTN_call",
+    "selectedAction":{"BTN":"open","SB":"threebet","BTN_response":"call","identity":"history_declared_not_solver_policy"},
+    "rangeOwner":["BTN","SB"],
+    "perComboWeights":{"status":"not_generated","reason":"matched_action_policy_and_joint_range_not_available"},
+    "normalizationDenominator":{"status":"not_generated"},
+    "jointCompatibilityStatus":"physical_fact_candidate_only",
+    "knownCards":{"heroHole":["Ac","Qd"],"flop":["Ah","9c","2h"],"deadCards":[]},
+    "physicalFilterStatus":{"status":"prepared","example":"AcKc_is_impossible_for_opponent","actionFilter":"not_available"},
+    "parentSnapshot":null,
+    "changeReason":"preflop_action_to_flop_physical_filter",
+    "successorBoundary":"enter_p1_context_after_fact_or_demonstration",
+    "inputFingerprint":"9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+    "releaseIdentity":"starting_range_fact"
+  },
+  "invalidation":{"changedFields":["chartIdentity","scenarioIdentity","selectedAction","fullHistory","knownCards","inputFingerprint"],"action":"invalidate_children_and_recompile"},
+  "hardRules":{"buttonTextIsNotSnapshot":true,"physicalFilterDoesNotMeanActionFilter":true,"independentMarginalMultiplicationForbidden":true,"missingWeightsBlocksExactStrategy":true,"parentHashMustRestore":true},
+  "currentStatus":{"schemaWritten":true,"A72InputIdentityPrepared":true,"A72PerComboWeightsVerified":false,"A72JointRangeVerified":false,"A72MatchedReference":false,"runtimeImplemented":false,"learnerTrial":false,"NL50Evidence":false}
+}

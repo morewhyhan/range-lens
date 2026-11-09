@@ -1,0 +1,370 @@
+{
+  "status": "public_given_model_questions_not_frozen_exam",
+  "computedConditionalRangeProvided": true,
+  "questions": [
+    {
+      "id": "DE-93c622e20a2c03be",
+      "body": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "4c"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "state": {
+          "pot": 63,
+          "heroStack": 79.5,
+          "villainStack": 58.5,
+          "heroPut": 0,
+          "villainPut": 21,
+          "toCall": 21,
+          "foldedStacks": 399
+        },
+        "actor": "SB",
+        "observedHistory": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21",
+          "SB call",
+          "deal 4c",
+          "SB check",
+          "BTN bet"
+        ],
+        "currentRange": {
+          "holdings": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ]
+        },
+        "opponentCardsRevealed": false,
+        "defenseExecutionNode": {
+          "board": [
+            "Ks",
+            "7s",
+            "2d",
+            "3d",
+            "4c"
+          ],
+          "hero": [
+            "As",
+            "Qs"
+          ],
+          "heroSeat": "SB",
+          "villainSeat": "BTN",
+          "range": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "KJ",
+              "hole": [
+                "Kc",
+                "Jc"
+              ],
+              "relativeWeight": 16
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ],
+          "state": {
+            "pot": 63,
+            "heroStack": 79.5,
+            "villainStack": 58.5,
+            "heroPut": 0,
+            "villainPut": 21,
+            "toCall": 21,
+            "foldedStacks": 399
+          },
+          "history": [
+            "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+            "Flop Ks 7s 2d: SB checks, BTN checks",
+            "Turn 3d: SB checks, BTN bets 10.5 into 21",
+            "SB call",
+            "deal 4c",
+            "SB check",
+            "BTN bet"
+          ],
+          "phase": "river_facing_bet",
+          "basePot": 42,
+          "streetHeroStart": 79.5,
+          "streetVillainStart": 79.5,
+          "model": {
+            "raise": [
+              {
+                "holding": "KK",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "KJ",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "JT",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              }
+            ],
+            "jam": [
+              {
+                "holding": "KK",
+                "callProbability": 1
+              },
+              {
+                "holding": "KJ",
+                "callProbability": 1
+              },
+              {
+                "holding": "JT",
+                "callProbability": 1
+              }
+            ]
+          },
+          "events": [
+            {
+              "type": "opponent_bet",
+              "to": 21,
+              "add": 21
+            }
+          ]
+        },
+        "candidatePlans": [
+          {
+            "choiceId": "p0",
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "choiceId": "p1",
+            "action": "call",
+            "amount": 21,
+            "label": "跟21"
+          }
+        ],
+        "unknownOption": {
+          "choiceId": "unknown",
+          "label": "我不知道"
+        },
+        "taskKind": "compare_given_finite_plans"
+      }
+    },
+    {
+      "id": "DE-f4b5ac15e011f00d",
+      "body": {
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d",
+          "2s"
+        ],
+        "hero": [
+          "As",
+          "Qs"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "state": {
+          "pot": 63,
+          "heroStack": 79.5,
+          "villainStack": 58.5,
+          "heroPut": 0,
+          "villainPut": 21,
+          "toCall": 21,
+          "foldedStacks": 399
+        },
+        "actor": "SB",
+        "observedHistory": [
+          "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+          "Flop Ks 7s 2d: SB checks, BTN checks",
+          "Turn 3d: SB checks, BTN bets 10.5 into 21",
+          "SB call",
+          "deal 2s",
+          "SB check",
+          "BTN bet"
+        ],
+        "currentRange": {
+          "holdings": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ]
+        },
+        "opponentCardsRevealed": false,
+        "defenseExecutionNode": {
+          "board": [
+            "Ks",
+            "7s",
+            "2d",
+            "3d",
+            "2s"
+          ],
+          "hero": [
+            "As",
+            "Qs"
+          ],
+          "heroSeat": "SB",
+          "villainSeat": "BTN",
+          "range": [
+            {
+              "id": "KK",
+              "hole": [
+                "Kh",
+                "Kd"
+              ],
+              "relativeWeight": 4
+            },
+            {
+              "id": "JT",
+              "hole": [
+                "Js",
+                "Ts"
+              ],
+              "relativeWeight": 4
+            }
+          ],
+          "state": {
+            "pot": 63,
+            "heroStack": 79.5,
+            "villainStack": 58.5,
+            "heroPut": 0,
+            "villainPut": 21,
+            "toCall": 21,
+            "foldedStacks": 399
+          },
+          "history": [
+            "UTG/HJ/CO fold; BTN opens to 2.5; SB raises to 10; BB folds; BTN calls",
+            "Flop Ks 7s 2d: SB checks, BTN checks",
+            "Turn 3d: SB checks, BTN bets 10.5 into 21",
+            "SB call",
+            "deal 2s",
+            "SB check",
+            "BTN bet"
+          ],
+          "phase": "river_facing_bet",
+          "basePot": 42,
+          "streetHeroStart": 79.5,
+          "streetVillainStart": 79.5,
+          "model": {
+            "raise": [
+              {
+                "holding": "KK",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "KJ",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              },
+              {
+                "holding": "JT",
+                "fold": 0,
+                "call": 0,
+                "jam": 1
+              }
+            ],
+            "jam": [
+              {
+                "holding": "KK",
+                "callProbability": 1
+              },
+              {
+                "holding": "KJ",
+                "callProbability": 1
+              },
+              {
+                "holding": "JT",
+                "callProbability": 1
+              }
+            ]
+          },
+          "events": [
+            {
+              "type": "opponent_bet",
+              "to": 21,
+              "add": 21
+            }
+          ]
+        },
+        "candidatePlans": [
+          {
+            "choiceId": "p0",
+            "action": "fold",
+            "label": "弃牌"
+          },
+          {
+            "choiceId": "p1",
+            "action": "call",
+            "amount": 21,
+            "label": "跟21"
+          }
+        ],
+        "unknownOption": {
+          "choiceId": "unknown",
+          "label": "我不知道"
+        },
+        "taskKind": "compare_given_finite_plans"
+      }
+    }
+  ]
+}

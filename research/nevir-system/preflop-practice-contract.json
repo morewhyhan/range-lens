@@ -1,0 +1,108 @@
+{
+  "status": "declarative_preflop_practice_contract_not_implemented",
+  "source": "52_翻前图表专项训练与自动出题合同.md",
+  "scope": {
+    "charts": 15,
+    "cellsPerChart": 169,
+    "groups": ["open", "threebet", "bb"],
+    "sixMax": true,
+    "effectiveStackBB": 100,
+    "noNewPreflopRangeExpansion": true
+  },
+  "modes": [
+    "scenario",
+    "grid",
+    "exact_action",
+    "edge_internal",
+    "migration",
+    "starting_range_bridge"
+  ],
+  "layers": [
+    {
+      "id": "F1",
+      "label": "场景定位",
+      "answerType": "scenarioIdentity",
+      "requires": ["game", "seats", "effectiveStack", "history", "actor", "scaleOrProfile"],
+      "next": "F2"
+    },
+    {
+      "id": "F2",
+      "label": "读169格",
+      "answerType": "gridCoordinateAndComboClass",
+      "requires": ["chartId", "rankAxis", "suitClass", "cellCoordinate"],
+      "next": "F3"
+    },
+    {
+      "id": "F3",
+      "label": "精确动作",
+      "answerType": "weightedActionCell",
+      "requires": ["chartVersion", "cellActionWeights"],
+      "next": "F4"
+    },
+    {
+      "id": "F4",
+      "label": "边界与内部",
+      "answerType": "adjacentCellComparison",
+      "requires": ["currentCell", "comparisonCell", "cellStatuses"],
+      "next": "F5"
+    },
+    {
+      "id": "F5",
+      "label": "场景迁移",
+      "answerType": "changedFieldThenWeightedAction",
+      "requires": ["baselineScenario", "changedFields", "targetChartOrScale"],
+      "next": "starting_range_bridge"
+    }
+  ],
+  "queue": {
+    "deterministic": true,
+    "replayableBySessionSeed": true,
+    "edgeDefinition": "mixed cells and explicitly marked source-boundary cells",
+    "noRandomFrequencyApproximation": true,
+    "order": [
+      "coordinate_sweep",
+      "mixed_and_source_boundary",
+      "adjacent_positions",
+      "bb_profile_scale_pairs",
+      "starting_range_bridge"
+    ],
+    "exposurePolicy": "edge_priority_changes_exposure_only_not_answer_weights",
+    "mustIncludePureCells": true
+  },
+  "cellStatuses": ["pure", "mixed", "source_boundary"],
+  "answerRules": {
+    "pure": "match the single source action exactly",
+    "mixed": "select every source action and its declared weight exactly",
+    "sourceBoundary": "compare the source-marked cells without inventing a new threshold",
+    "unknownCountsAsError": true,
+    "wrongShowsLocalExplanation": true,
+    "correctAdvancesImmediately": true,
+    "modeCountersAreIndependent": true,
+    "noLongTermStorage": true,
+    "noDatabase": true
+  },
+  "entryGate": {
+    "requires": [
+      "scenario",
+      "position",
+      "history",
+      "effectiveStack",
+      "scaleOrProfile",
+      "chartSourceAndVersion",
+      "rangeOwner",
+      "perComboWeights",
+      "physicalRemoval",
+      "postflopNodePolicyOrReference"
+    ],
+    "missingPostflopReference": "allow_starting_range_fact_or_demonstration_only",
+    "incompatibleVersions": "stop_and_explain_difference",
+    "preflopPassDoesNotImplyPostflopPass": true
+  },
+  "currentStatus": {
+    "selectorImplemented": false,
+    "all15ChartsStrategyCovered": false,
+    "completePostflopResponses": false,
+    "learnerEvidence": false,
+    "nl50Evidence": false
+  }
+}

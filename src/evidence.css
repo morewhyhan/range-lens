@@ -1,0 +1,8 @@
+.evidence-panel{margin-top:18px;padding:14px 15px;border-radius:14px;background:#e7e8ec;color:#6f727e;text-align:left}
+.evidence-panel>div{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px}
+.evidence-panel strong{font-size:12px;font-weight:600;color:#565b68}
+.evidence-panel p{font-size:11px;line-height:1.75;margin:9px 0;color:#777a86}
+.evidence-panel small{font-size:10px;line-height:1.7;color:#9699a4}
+.evidence-matched{background:#e3eee8}.evidence-matched strong{color:#4f7d62}
+.evidence-conditional{background:#eee8dc}.evidence-conditional strong{color:#8b724d}
+.evidence-closed{background:#f1e7e8}.evidence-closed strong{color:#9a666d}

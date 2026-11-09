@@ -1,0 +1,1167 @@
+{
+  "id": "PRINCIPLE_TRANSFER_READINESS_AUDIT_V1",
+  "status": "paper_principle_loop_and_three_cards_registered_exact_transfer_field_and_trial_missing",
+  "purpose": "检查每个单元是否从具体案例交付到原理、单变量对照和未见迁移；明确候选字段不等于已经声明的唯一变化，也不等于学习者已经迁移。",
+  "sources": [
+    "principle-loop-unit-crosswalk.json",
+    "principle-unit-closure.json",
+    "unit-three-card-skeleton.json",
+    "unit-outcome-matrix.json",
+    "unit-release-readiness-ledger.json"
+  ],
+  "rules": {
+    "everyUnitHasPrinciple": true,
+    "everyUnitHasBaseContrastTransfer": true,
+    "contrastMustNameExactlyOneChangedField": true,
+    "transferMustNameExactlyOneChangedField": true,
+    "unchangedFieldsMustBeHeld": true,
+    "sourceIdentityHeld": true,
+    "observedTransferSeparateFromCardSkeleton": true,
+    "caseAccuracyDoesNotEqualTransfer": true
+  },
+  "counts": {
+    "units": 35,
+    "baseCards": 35,
+    "contrastCards": 35,
+    "transferCards": 35,
+    "unitsWithPrinciple": 35,
+    "unitsWithRequiredOutputs": 35,
+    "unitsWithExactContrastField": 0,
+    "unitsWithExactTransferField": 0,
+    "unitsWithObservedTransfer": 0,
+    "unitsWithSuccessorOrStop": 35,
+    "failures": 0
+  },
+  "rows": [
+    {
+      "unitId": "1.1",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.2",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.3",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.4",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.5",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.6",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.7",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "1.8",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.1",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.2",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.3",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.4",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.5",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.6",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "2.7",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.1",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.2",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.3",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.4",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.5",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "3.6",
+      "parentFrame": "p4_compare",
+      "principleIds": [
+        "P07",
+        "P08"
+      ],
+      "transferField": "actionPurpose",
+      "candidateChangedFields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.1",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.2",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.3",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.4",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.5",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "4.6",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "transferField": "rangeBefore",
+      "candidateChangedFields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.1",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.2",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.3",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.4",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.5",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.6",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.7",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    },
+    {
+      "unitId": "5.8",
+      "parentFrame": "p6_update",
+      "principleIds": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "transferField": "board",
+      "candidateChangedFields": [
+        "board",
+        "heroHole"
+      ],
+      "checks": {
+        "primaryPrincipleDeclared": true,
+        "parentFrameDeclared": true,
+        "requiredOutputsDeclared": true,
+        "baseRegistered": true,
+        "contrastRegistered": true,
+        "transferRegistered": true,
+        "contrastHasCandidates": true,
+        "transferHasCandidates": true,
+        "contrastHasExactChangedField": false,
+        "transferHasExactChangedField": false,
+        "sourceIdentityPreserved": true,
+        "successorOrStopDeclared": true,
+        "learnerTransferObserved": false
+      },
+      "status": "candidate_field_pending_exact_selection"
+    }
+  ],
+  "currentEvidence": {
+    "paperLoopRegistered": true,
+    "all35PrincipleBindings": true,
+    "all105CardSlots": true,
+    "exactChangedFieldsCompiled": false,
+    "learnerTransferObserved": false,
+    "NL50Evidence": false
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "35项已有三卡骨架和候选变化字段，但尚未为每项选定并验证唯一变化字段，也没有学习者首答迁移证据。"
+  }
+}

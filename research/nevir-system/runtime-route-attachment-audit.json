@@ -1,0 +1,54 @@
+{
+  "id": "RUNTIME_ROUTE_ATTACHMENT_AUDIT_V1",
+  "status": "runtime_uses_legacy_module_surface_canonical_nested_route_not_attached",
+  "purpose": "区分纸面黄金路径已经对齐与现有React运行时尚未接入的事实，防止模块平铺或旧连续片段被误当成新的L0-L4到p1-p7主线。",
+  "sources": [
+    "first-pass-golden-path.json",
+    "first-lesson-visible-state-machine.json",
+    "src/main.jsx",
+    "src/learning-ui.jsx",
+    "src/session.js",
+    "src/curriculum.js"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "runtimeFindings": {
+    "readsGoldenPath": false,
+    "readsStateMachine": false,
+    "hasLegacyFlatModuleSurface": true,
+    "hasLegacyLearningSelectionSurface": true,
+    "hasOldRouteChoiceSurface": true,
+    "hasSeparateRouteMode": true
+  },
+  "requiredMigration": [
+    "让运行时只读取一个规范化的首遍路线课包",
+    "把旧MODULES平铺入口降为父帧内按需入口，不作为首页主线",
+    "把L0-L4与p1-p7的交接字段接入同一会话状态",
+    "答错原位返回，子层关闭后恢复父帧",
+    "缺参考或缺后继时显示停止卡而不是生成默认动作"
+  ],
+  "currentEvidence": {
+    "paperRouteAligned": true,
+    "runtimeCanonicalRouteAttached": false,
+    "runtimeImplemented": false,
+    "participantObserved": false,
+    "NL50Evidence": false
+  },
+  "releaseRules": {
+    "legacyFlatSurfaceCannotCountAsCanonicalRoute": true,
+    "runtimeAttachmentRequiredBeforeBeginnerClaim": true,
+    "noAppModificationInThisAudit": true
+  }
+}

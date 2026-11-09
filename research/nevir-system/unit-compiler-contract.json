@@ -1,0 +1,55 @@
+{
+  "id": "UNIT_COMPILER_CONTRACT_V1",
+  "status": "declarative_compiler_contract_not_implemented",
+  "inputIdentities": ["SourceSpec","ReferenceSpec","CoursePolicy","GameFrame","RangeSnapshot","SuccessorGraph","VisualSpec"],
+  "compileOrder": ["identity","fact","reference","course_policy","difference","teaching","prompt","release"],
+  "answerPrecisions": ["fact","demonstration","course_rule","reference_frequency","reference_policy"],
+  "unitMinimumFields": [
+    "unitId","parentRouteNode","entryCondition","sourceIdentity","referenceIdentity","coursePolicyIdentity",
+    "gameFrame","visibleInputs","factAnswer","policyAnswer","referenceAnswer","answerPrecision",
+    "normalization","rangeBefore","rangeAfterByAction","successorIds","question","allowedActions",
+    "helpLevels","errorLayer","returnTo","unknownCountsAsError","transferVariants","releaseStatus","gap"
+  ],
+  "questionKinds": ["locator","relation","execution","transfer"],
+  "queueOrder": ["locator","relation","execution","action_update","adjacent_transfer","full_route_return"],
+  "samplingRules": {
+    "edgeRatioMayBeConfigured": true,
+    "samplingRatioDoesNotChangePolicyWeights": true,
+    "unknownOrUnreleasedExcludedFromExactGrade": true,
+    "randomFrequencyApproximationForbidden": true
+  },
+  "rangeEquations": {
+    "before": "entityWeight * physicalFilter",
+    "afterReference": "before * referenceActionFrequency",
+    "afterCourse": "before * coursePolicyActionWeight",
+    "view": "after / sum(after)",
+    "delta": "afterCourse - afterReference"
+  },
+  "transferKinds": ["surface_isomorphic","adjacent_field","decision_state","successor_transfer"],
+  "releaseStates": ["not_open","fact","demonstration","guided","independent_candidate","target_reference_ready"],
+  "hardGates": {
+    "missingReferenceBlocksReferencePrecision": true,
+    "missingSuccessorBlocksContinuousLesson": true,
+    "changedPolicyRequiresAncestorRecompile": true,
+    "publicPromptContainsNoAnswer": true,
+    "firstAnswerPreserved": true,
+    "unknownCountsAsWrong": true
+  },
+  "currentStatus": {
+    "compilerImplemented": false,
+    "all35UnitsTargetReady": false,
+    "a72ThreeStreetTargetReady": false,
+    "qqqIsCourseProof": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "joinedManifest": {
+    "file": "unit-course-manifest.json",
+    "generator": "scripts/research-nevir-compile-unit-manifest.mjs",
+    "purpose": "在真正编译课包前，把35项的路线、身份、字段、原理卡和释放证据合并成单一检查面。",
+    "status": "compiled_not_released",
+    "mustRemainConservative": true,
+    "zeroCanonicalFieldCompleteIsValid": true,
+    "zeroExactStrategyReadyIsValid": true
+  }
+}

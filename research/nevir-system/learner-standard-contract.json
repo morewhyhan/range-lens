@@ -1,0 +1,73 @@
+{
+  "id": "LEARNER_STANDARD_CONTRACT_V1",
+  "status": "declarative_end_to_end_learning_standard_not_trialed",
+  "lowBaselineMeans": "low_cognitive_load_not_age_guarantee",
+  "primaryRoute": [
+    "locate",
+    "board",
+    "hand",
+    "opponent_range",
+    "compare_actions",
+    "execute_and_ledger",
+    "update",
+    "settle_and_transfer"
+  ],
+  "screenContract": {
+    "onePrimaryQuestion": true,
+    "onePrimaryAction": true,
+    "requiredInputsRemainVisible": true,
+    "answerStates": ["correct", "wrong", "insufficient_evidence_no_exact_grade"],
+    "mustShowCausalLayer": true,
+    "mustShowRangeBeforeAfterWhenRelevant": true,
+    "parentFrameRestoredOnChildClose": true,
+    "firstAnswerPreserved": true,
+    "missingSuccessorStops": true
+  },
+  "coverageAxes": {
+    "streets": ["flop", "turn", "river", "settlement"],
+    "roles": ["preflop_last_raiser", "preflop_caller", "blind_defender", "responder"],
+    "positions": ["IP", "OOP"],
+    "decisionStates": ["unopened", "facing_bet", "facing_raise", "allin", "terminal"],
+    "questions": ["board", "hand", "range", "action", "ledger", "update"],
+    "successors": ["response", "new_card", "settlement"]
+  },
+  "firstPassEvidence": [
+    "order_recall",
+    "layer_location",
+    "error_recovery",
+    "one_variable_transfer"
+  ],
+  "assistanceProgression": [
+    "map",
+    "guided",
+    "independent",
+    "adjacent",
+    "delayed",
+    "continuous"
+  ],
+  "nl50EvidenceGates": [
+    "source_admission",
+    "complete_course_package",
+    "low_baseline_structure_trial",
+    "strategy_and_adjacent_transfer",
+    "continuous_three_street_trial",
+    "frozen_target_benchmark_and_live_decision_audit"
+  ],
+  "failureRepairOrder": [
+    "one_question_check",
+    "visible_inputs_check",
+    "parent_frame_check",
+    "causal_explanation_check",
+    "single_variable_retry_before_more_examples"
+  ],
+  "currentStatus": {
+    "routeContractWritten": true,
+    "coverageContractWritten": true,
+    "firstPassEvidenceTrialed": false,
+    "all35UnitLineageComplete": false,
+    "completeCoursePackage": false,
+    "strategyTransferEvidence": false,
+    "continuousThreeStreetTrial": false,
+    "NL50Evidence": false
+  }
+}

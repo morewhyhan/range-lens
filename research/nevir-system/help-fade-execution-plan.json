@@ -1,0 +1,38 @@
+{
+  "id": "HELP_FADE_SIX_ROUND_EXECUTION_PLAN_V1",
+  "status": "paper_progression_package_not_trialed",
+  "purpose": "把首遍后的帮助撤除、单变量迁移、延迟回忆和连续执行接成一条不可跳级路线。",
+  "route": ["R1","R2","R3","R4","R5","R6"],
+  "rounds": [
+    {"id":"R1","label":"demonstration_map","visible":["route","stepName","currentField","oneContrast","childButton"],"primaryTask":"follow_one_complete_hand","unlockAfter":null,"evidence":["route_seen","parent_restore"],"helpAllowed":"full","rollback":"same_parent"},
+    {"id":"R2","label":"guided_local","visible":["stepName","requiredInputs","oneContrast"],"primaryTask":"complete_one_parent_output","unlockAfter":"R1","evidence":["assisted_current_parent_completion","first_answer_recorded"],"helpAllowed":"relationship_prompt","rollback":"restore_one_relation_prompt"},
+    {"id":"R3","label":"untitled_local","visible":["board","history","money","legalActions"],"primaryTask":"locate_layer_then_complete_unseen_same_mechanism","unlockAfter":"R2","evidence":["unseen_same_mechanism","layer_location"],"helpAllowed":"necessary_facts_only","rollback":"restore_step_name"},
+    {"id":"R4","label":"single_variable_transfer","visible":["same_parent","one_changed_field","necessary_inputs"],"primaryTask":"name_changed_field_then_replay","unlockAfter":"R3","evidence":["exactly_one_changed_field","first_attempt_before_explanation"],"helpAllowed":"no_target_label","rollback":"restore_changed_field_comparison"},
+    {"id":"R5","label":"delayed_recall","visible":["unseen_state","necessary_inputs"],"primaryTask":"recover_order_layer_and_return_point_after_intervening_items","unlockAfter":"R4","evidence":["delayed_order_recall","delayed_layer_location","delayed_error_recovery"],"helpAllowed":"facts_only","rollback":"restore_one_relation_prompt"},
+    {"id":"R6","label":"continuous_unseen","visible":["new_hand","facts_tools","current_parent"],"primaryTask":"execute_new_hand_to_settlement","unlockAfter":"R5","evidence":["ledger_conservation","range_snapshot_chain","successor_or_stop","settlement_independent_of_result"],"helpAllowed":"error_only","rollback":"return_to_broken_parent"}
+  ],
+  "helpFadeOrder":["hide_answer_color","hide_step_title","hide_one_known_conclusion","learner_selects_needed_view","hide_target_mechanism"],
+  "representatives":["REP_1_5","REP_2_1","REP_3_1","REP_4_5","REP_5_7"],
+  "sessionFields":["parentFrame","firstAnswer","helpUsed","retryAnswer","errorLayer","returnTo","round","independent"],
+  "hardRules": {
+    "noRoundSkipping": true,
+    "oneHelpChangeAtATime": true,
+    "necessaryInputsNeverHidden": true,
+    "sameParentAfterError": true,
+    "firstAnswerSeparateFromRetry": true,
+    "sameQuestionRetryIsNotIndependent": true,
+    "oneVariableTransferRequired": true,
+    "missingSuccessorBlocksR6": true,
+    "sessionOnlyState": true,
+    "R6DoesNotProveNL50": true
+  },
+  "currentEvidence": {
+    "paperPlan": true,
+    "runtimeImplemented": false,
+    "beginnerTrial": false,
+    "R1toR6LearnerEvidence": false,
+    "calibratedSpacing": false,
+    "completeSuccessorChain": false,
+    "NL50Evidence": false
+  }
+}

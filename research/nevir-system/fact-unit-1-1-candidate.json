@@ -1,0 +1,76 @@
+{
+  "id": "FACT_UNIT_1_1_VALUE_LARGE_V1",
+  "status": "fact_candidate_not_strategy_ready",
+  "releaseIdentity": "independent_fact_candidate",
+  "unitId": "1.1",
+  "parentFrame": "compare.unopened",
+  "groupId": "compare.unopened",
+  "routeStop": "L6",
+  "street": "river",
+  "role": {
+    "heroSeat": "BTN",
+    "villainSeat": "BB",
+    "relation": "hero_is_current_actor_after_villain_check",
+    "evidence": "explicit source context; no inferred strategy role"
+  },
+  "actionState": "river_unopened_after_villain_check",
+  "sourceIdentity": {
+    "kind": "finite_author_specified_model",
+    "file": "size-comparison-evidence.json",
+    "pointer": "examples/valueLarge",
+    "sourceStatus": "mathematical_mechanism_family_not_NL50_strategy",
+    "boundary": "Exact weights, responses and EVs are author-specified finite-model inputs; they are not an acquired solver range or a complete target policy."
+  },
+  "factInputs": {
+    "gameFrame": {
+      "players": 6,
+      "street": "river",
+      "heroSeat": "BTN",
+      "villainSeat": "BB",
+      "board": ["Ks", "7h", "2d", "3c", "9h"],
+      "hero": ["Qs", "Qc"],
+      "potBB": 10,
+      "activeStackBB": 95.25,
+      "legalGrossHistory": "100BB: BTN opens 2.5, BB calls, SB dead 0.5. Flop BB checks, BTN bets 2.25, BB calls. Turn both check. River BB checks. Earlier actions are observed teaching history, not claimed optimal.",
+      "menu": ["check", "bet_5", "bet_10"],
+      "opponentResponse": "Fixed call/fold rules for this complete model; no raises",
+      "rake": "none"
+    },
+    "model": {
+      "name": "valueLarge",
+      "relativeMass": {"66": 0, "JJ": 1, "KJ": 0, "KK": 0, "QQ": 0, "AJ": 0},
+      "handGroupFacts": {
+        "JJ": {"role": "worse_inelastic", "callsSmall": true, "callsLarge": true, "equity": 1}
+      },
+      "actionFacts": {
+        "check": {"evBB": 10, "calledMass": null, "calledEquity": null},
+        "small": {"betBB": 5, "evBB": 15, "calledMass": 1, "calledEquity": 1},
+        "large": {"betBB": 10, "evBB": 20, "calledMass": 1, "calledEquity": 1}
+      }
+    }
+  },
+  "question": {
+    "kind": "locator",
+    "prompt": "在这个明确声明的有限模型中，哪一组对手牌被设为面对5BB和10BB都跟注？",
+    "options": ["JJ", "66", "KJ", "KK", "AJ", "我不知道"],
+    "answer": "JJ",
+    "answerIdentity": "fact",
+    "precision": "model_group_response_fact"
+  },
+  "explanation": "模型把相对权重1全部放在JJ，并明确规定JJ对5BB和10BB都跟注；因此这道题只能检查模型中记录的响应事实，不能推出真实范围里JJ的通用策略。动作栏中的EV是同一有限模型的计算结果：过牌10BB、5BB下注15BB、10BB下注20BB。",
+  "errorReturn": "答错或选择‘我不知道’时，显示上述模型事实和来源边界，保留在同一river_unopened父帧，不进入未提供的范围更新或后继动作。",
+  "coursePolicy": null,
+  "referencePolicy": null,
+  "rangeBefore": null,
+  "rangeAfter": null,
+  "legalSuccessors": [],
+  "stopReason": "no_complete_range_or_successor_reference",
+  "transferVariant": null,
+  "releaseStatus": "fact_candidate",
+  "guards": {
+    "noStrategyInvented": true,
+    "noRangeInvented": true,
+    "noSolverEquivalenceClaim": true,
+    "noNL50Claim": true
+  }
+}

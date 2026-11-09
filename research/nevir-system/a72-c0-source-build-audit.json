@@ -1,0 +1,111 @@
+{
+  "id": "A72_C0_SOURCE_BUILD_AUDIT_V1",
+  "status": "source_build_verified_root_and_history_adapter_reload_pending",
+  "purpose": "把固定 solver 提交的可复现构建、根节点实际动作金额和资源边界登记为 C0 证据，不把源码可编译升级成完整适配器或已求解策略。",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "source": {
+    "repository": "b-inary/postflop-solver",
+    "revision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "crateVersion": "0.1.0",
+    "license": "AGPL-3.0-or-later",
+    "cargoTomlSha256": "70646A8472C4311666908EB315CB4F37BB9C0969C2AA6B9242A9EA48CFEF2A6C",
+    "cargoLockSha256": "C4C2FE9045FC48098C87E98FE8407AC198667227BD2D0660BF9F06F59ECC6198"
+  },
+  "buildVerification": {
+    "offline": true,
+    "baselineCommand": "cargo test --offline --all-targets",
+    "baselineStatus": "failed_on_current_toolchain",
+    "baselineFailure": {
+      "diagnostic": "implicit autoref creates a reference to the dereference of a raw pointer",
+      "count": 3,
+      "locations": [
+        "src/action_tree.rs:393",
+        "src/action_tree.rs:396",
+        "src/action_tree.rs:408"
+      ],
+      "meaning": "旧提交与当前 Rust 默认 lint 不兼容；不是策略结果，也不是输入错误。"
+    },
+    "compatibilityCommand": "RUSTFLAGS=-A dangerous-implicit-autorefs cargo test --offline --all-targets",
+    "compatibilityStatus": "passed",
+    "compatibilityResults": {
+      "libraryPassed": 38,
+      "libraryIgnored": 4,
+      "kuhnPassed": 1,
+      "leducPassed": 2,
+      "elapsedSeconds": 229.36
+    },
+    "probeCommand": "RUSTFLAGS=-A dangerous-implicit-autorefs cargo run --offline --example a72_c0_adapter_probe",
+    "probeStatus": "passed",
+    "probeSource": "research/solver-source/examples/a72_c0_adapter_probe.rs",
+    "probeSourceSha256": "E5E6BC06DA33801C2A25D9967773D5033A572BDA7A1F783A771E7BCEDAADD35C"
+  },
+  "frozenInput": {
+    "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf",
+    "board": "As7h2d",
+    "startingPotChips": 550,
+    "effectiveStackChips": 9750,
+    "rakeRate": 0.0,
+    "bunching": false,
+    "flopBetSpec": "33%, a",
+    "raiseSpec": "2.5x, a",
+    "turnAndRiverBetSpec": "75%, a",
+    "addAllinThreshold": 0.0,
+    "forceAllinThreshold": 0.0,
+    "mergingThreshold": 0.0
+  },
+  "runtimeProbe": {
+    "rootAvailableActions": [
+      "Check",
+      "Bet(182)",
+      "AllIn(9750)"
+    ],
+    "rootMenuMatchesPreflight": true,
+    "actualAmountUnits": "integer chips; 182 is the constructed 33% pot amount from a 550-chip pot",
+    "memoryUsageBytes": {
+      "uncompressed": 10174073380,
+      "compressed": 5189681440
+    },
+    "postflopGamePlayRequiresAllocatedMemory": true,
+    "historyMenuRuntimeProbe": true,
+    "historyProbeSource": "a72-c0-history-runtime-probe.json",
+    "historyProbeExampleSha256": "37BB24F0ADA554712623E5100AD29A38E120B75ABA4C2C576421C13681804074",
+    "reloadSameInputSameHash": false,
+    "solvedPolicyExport": false
+  },
+  "sourceSemantics": {
+    "actionEnumCarriesAmounts": true,
+    "availableActionsReturnsActualActionObjects": true,
+    "chanceActionsAreIsomorphicRepresentatives": true,
+    "possibleCardsMustBeUsedForChanceEnumeration": true,
+    "strategyIsActionByPrivateHandAfterSolve": true,
+    "normalizedWeightsAvailable": true,
+    "equityAndExpectedValuesAvailable": true,
+    "serializationRequiresSolvedGame": true,
+    "storageModeCanTruncateFutureStreets": true,
+    "floatPrecisionMostly32Bit": true,
+    "compressionUses16BitValuesWithScale": true
+  },
+  "independentChecks": {
+    "revisionPinned": true,
+    "licenseRecorded": true,
+    "offlineBuildWithRecordedFlag": true,
+    "rootActionAmountsMatchRequestedMenu": true,
+    "automaticMergingDisabled": true,
+    "automaticAllinThresholdsDisabled": true,
+    "isomorphicChanceCaveatRecorded": true,
+    "largeMemoryGuardRecorded": true,
+    "licenseDistributionPlanRecorded": true,
+    "fullC0AdapterClosed": false
+  },
+  "currentMissing": [
+    "solved_game_reload_same_input_hash",
+    "serialized_reference_identity",
+    "C2_per_hand_policy"
+  ],
+  "releaseRules": {
+    "sourceBuildDoesNotProveStrategy": true,
+    "rootMenuProbeDoesNotProveAllHistoryMenus": true,
+    "memoryEstimateDoesNotPermitStartingSolve": true,
+    "noExactActionGradingBeforeC2": true
+  }
+}

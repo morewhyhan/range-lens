@@ -1,0 +1,310 @@
+{
+  "id": "REFERENCE_COURSE_CLOSURE_LEDGER_V1",
+  "status": "candidate_reference_and_course_pipeline_separated_release_blocked",
+  "purpose": "把现有求解候选逐阶段接到课程编译闸门，明确原始参考、课程规则、差异账本、范围后继、教学帧、迁移和发布之间不能跳级。",
+  "sources": [
+    "qqq-v2-course-bridge-audit.json",
+    "strategy-to-course-compiler-contract.json",
+    "target-config-source-ledger.json",
+    "target-config-resolution-plan.json",
+    "course-policy-candidate-ledger.json"
+  ],
+  "candidate": {
+    "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+    "solverQuality": {
+      "iterations": 1050,
+      "metricBB": 0.005904769897460938,
+      "targetBB": 0.006,
+      "targetReached": true,
+      "selectedNodes": 14,
+      "physicalReachWeightsChecked": 12768,
+      "independentTerminalHandEVChecks": 413,
+      "forwardRolloutSamples": 80000,
+      "forwardRolloutLedgerChecks": 398446
+    },
+    "decisionNodes": 10,
+    "chanceNodes": 3,
+    "actionEdges": 35,
+    "missingActionEdges": 25,
+    "missingChanceEdges": 143
+  },
+  "targetConfiguration": {
+    "unknownOrUnfrozenFields": [
+      {
+        "field": "rakeModel",
+        "status": "required_unknown",
+        "value": null
+      },
+      {
+        "field": "threeBetSizes",
+        "status": "required_unknown",
+        "value": null
+      },
+      {
+        "field": "anteOrBlindStructure",
+        "status": "candidate_not_frozen",
+        "value": {
+          "ante": null,
+          "smallBlindBB": 0.5,
+          "bigBlindBB": 1
+        }
+      },
+      {
+        "field": "sourceVersion",
+        "status": "required_unknown",
+        "value": null
+      }
+    ],
+    "resolutionOrder": [
+      "user_constraints",
+      "seat_and_position_identity",
+      "preflop_course_scope",
+      "blind_and_rake_rule",
+      "postflop_course_action_menu",
+      "matched_solver_action_tree",
+      "source_and_configuration_fingerprint",
+      "target_review"
+    ],
+    "targetReferenceMatch": false
+  },
+  "phases": [
+    {
+      "phaseId": "P0_identity",
+      "status": "verified_for_candidate",
+      "evidence": [
+        "inputFingerprint",
+        "sourceRevision",
+        "six_max_SB_BB_QQQ_configuration"
+      ],
+      "missing": null,
+      "releases": [
+        "author_review"
+      ],
+      "blocks": []
+    },
+    {
+      "phaseId": "P1_physical_facts",
+      "status": "selected_scope_verified",
+      "evidence": [
+        "physicalReachWeightsChecked",
+        "independentTerminalHandEVChecks",
+        "range_views"
+      ],
+      "missing": null,
+      "releases": [
+        "fact_visuals_in_selected_nodes",
+        "author_review"
+      ],
+      "blocks": []
+    },
+    {
+      "phaseId": "P2_reference_policy",
+      "status": "candidate_reference_not_full_lesson_reference",
+      "evidence": [
+        "target_reached",
+        "raw_strategy",
+        "raw_EV",
+        "reload_roundtrip",
+        "forward_rollout_consistency"
+      ],
+      "missing": null,
+      "releases": [
+        "reference_inspection_only"
+      ],
+      "blocks": [
+        "course_answer",
+        "continuous_training"
+      ]
+    },
+    {
+      "phaseId": "P3_course_policy",
+      "status": "blocked_course_source_and_quantization_missing",
+      "evidence": [],
+      "missing": null,
+      "releases": [],
+      "blocks": [
+        "course_answer",
+        "simplified_action_grading"
+      ]
+    },
+    {
+      "phaseId": "P4_difference",
+      "status": "blocked_reference_course_pair_missing",
+      "evidence": [],
+      "missing": null,
+      "releases": [],
+      "blocks": [
+        "difference_ledger",
+        "simplification_loss_claim"
+      ]
+    },
+    {
+      "phaseId": "P5_range_and_successors",
+      "status": "range_views_present_successor_closure_incomplete",
+      "evidence": [
+        "range_views"
+      ],
+      "missing": {
+        "actionEdges": 25,
+        "chanceEdges": 143
+      },
+      "releases": [],
+      "blocks": [
+        "arbitrary_continuous_practice",
+        "successor_based_grading"
+      ]
+    },
+    {
+      "phaseId": "P6_teaching_frame",
+      "status": "blocked_not_compiled",
+      "evidence": [],
+      "missing": null,
+      "releases": [],
+      "blocks": [
+        "learner_route"
+      ]
+    },
+    {
+      "phaseId": "P7_transfer",
+      "status": "blocked_not_compiled",
+      "evidence": [],
+      "missing": null,
+      "releases": [],
+      "blocks": [
+        "heldout_transfer"
+      ]
+    },
+    {
+      "phaseId": "P8_release",
+      "status": "blocked_by_P3_P5_P6_P7",
+      "evidence": [],
+      "missing": null,
+      "releases": [],
+      "blocks": [
+        "learner_release",
+        "NL50_claim"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "gateId": "G0_identity",
+      "required": [
+        "inputFingerprint",
+        "sourceRevision",
+        "gameFrame",
+        "rangeFingerprint",
+        "actionTreeFingerprint",
+        "rakeModel"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G1_raw_reference",
+      "required": [
+        "referenceActionFrequency",
+        "referenceEV",
+        "referenceRangeAfter",
+        "successorGraph",
+        "solverQuality"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G2_course_policy",
+      "required": [
+        "courseSource",
+        "coursePolicyFingerprint",
+        "quantizationRule",
+        "policyScope"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G3_difference_ledger",
+      "required": [
+        "actionDelta",
+        "rangeDelta",
+        "evDelta",
+        "supportChanged",
+        "boundaryCases"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G4_range_successor",
+      "required": [
+        "rangeAfterByAction",
+        "fixedDenominatorView",
+        "nextStateSnapshots",
+        "stopReason"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G5_teaching_frame",
+      "required": [
+        "oneQuestion",
+        "onePrimaryAction",
+        "explanation",
+        "errorLayer",
+        "returnTo"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G6_transfer",
+      "required": [
+        "singleChangedField",
+        "heldoutSourceIdentity",
+        "independentAnswerKey"
+      ],
+      "passed": false
+    },
+    {
+      "gateId": "G7_release",
+      "required": [
+        "allRequiredFieldsPresent",
+        "fingerprintsMatch",
+        "learnerTrialStatusExplicit"
+      ],
+      "passed": false
+    }
+  ],
+  "firstBlockedGate": "G0_identity",
+  "counts": {
+    "phases": 9,
+    "passedGates": 0,
+    "blockedGates": 8,
+    "targetUnknownFields": 4,
+    "candidateCourseRules": 110,
+    "candidatePopulationExploits": 12
+  },
+  "allowedUses": [
+    "作者查看选定节点的范围变化",
+    "独立复核账本和牌面事实",
+    "研究课程简化候选"
+  ],
+  "forbiddenUses": [
+    "直接作为学习者精确判题",
+    "把QQQ推广为其他牌面策略",
+    "把缺失后继默认为过牌或弃牌",
+    "把内部求解指标写成NL50能力"
+  ],
+  "currentEvidence": {
+    "rawReferenceCandidate": true,
+    "matchedTargetReference": false,
+    "coursePolicyCompiled": false,
+    "differenceLedgerClosed": false,
+    "successorClosed": false,
+    "teachingFramesCompiled": false,
+    "heldoutTransferCompiled": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "第一处阻断为G0_identity；任何后续阶段不能用默认值跳过。",
+    "nextAction": "补齐inputFingerprint、sourceRevision、gameFrame、rangeFingerprint、actionTreeFingerprint、rakeModel"
+  }
+}

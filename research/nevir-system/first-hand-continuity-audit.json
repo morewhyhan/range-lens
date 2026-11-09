@@ -1,0 +1,122 @@
+{
+  "id": "FIRST_HAND_CONTINUITY_AUDIT_V1",
+  "status": "paper_continuity_audited_not_runtime",
+  "sourceFiles": [
+    "first-hand-lesson-packet.json",
+    "first-hand-lesson-v3-candidate.json",
+    "a72-range-handoff-candidate.json"
+  ],
+  "sequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "primaryHandSequence": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "R01",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17"
+  ],
+  "reviewFrame": "S18",
+  "counts": {
+    "totalFrames": 19,
+    "primaryHandFrames": 18,
+    "insertedFactFrames": 1,
+    "reviewFrames": 1,
+    "uniqueFrames": 19
+  },
+  "parentCoverage": {
+    "p1_context": [
+      "S03",
+      "S12"
+    ],
+    "p2_board": [
+      "S04"
+    ],
+    "p3_range": [
+      "R01"
+    ],
+    "p4_compare": [
+      "S05",
+      "S09",
+      "S13"
+    ],
+    "p5_execute": [
+      "S06",
+      "S10"
+    ],
+    "p6_update": [
+      "S07",
+      "S08",
+      "S11",
+      "S14"
+    ],
+    "p7_close": [
+      "S15",
+      "S16",
+      "S17"
+    ]
+  },
+  "continuityChecks": {
+    "nextPointers": true,
+    "requiredStateFields": true,
+    "insertedRangeFrameInheritsS04": true,
+    "boardNeverRegresses": true,
+    "historyNeverRegresses": true,
+    "potNeverRegressesExceptSettlement": true,
+    "heroHoleStable": true,
+    "reviewFrameExplicitlyResets": true
+  },
+  "insertedFrame": {
+    "id": "R01",
+    "parent": "p3_range",
+    "answerIdentity": "physical_fact",
+    "returnsTo": "p4_compare",
+    "strategyReferenceRequired": true,
+    "actionFilterAvailable": false
+  },
+  "currentEvidence": {
+    "paperContinuity": true,
+    "runtimeAttached": false,
+    "completeSuccessorClosure": false,
+    "matchedStrategyReference": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "releaseRules": {
+    "continuityAuditDoesNotProveStrategy": true,
+    "missingSuccessorBlocksContinuousLesson": true,
+    "physicalFactDoesNotProveActionFilter": true,
+    "reviewFrameIsNotMainHandSuccessor": true
+  }
+}

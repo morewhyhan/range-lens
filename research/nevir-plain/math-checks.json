@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "scope": "白话研究中的牌张与完整题设算例；不验证课程节点最优策略",
+  "cases": [
+    {
+      "name": "T85：仅已知公共牌时AT物理组合",
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "name": "再已知自己Ac4c后AT物理组合",
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "name": "三张同花色构成后门",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "合计仅两张该花色无后门花",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "QT5上J9的顺子补牌点数",
+      "actual": [
+        8,
+        13
+      ],
+      "expected": [
+        8,
+        13
+      ]
+    },
+    {
+      "name": "直接花听补张",
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "name": "顺子实体补张",
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "顺子与花听去重完成补张",
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "给定河牌模型：过牌、小注、大注",
+      "actual": [
+        8,
+        9,
+        6
+      ],
+      "expected": [
+        8,
+        9,
+        6
+      ]
+    },
+    {
+      "name": "仅改变JJ面对大注跟注：总收益",
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "跟注后权重总和",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "跟注后后验百分比",
+      "actual": [
+        13.79,
+        68.97,
+        17.24
+      ],
+      "expected": [
+        13.79,
+        68.97,
+        17.24
+      ]
+    },
+    {
+      "name": "20底池面对10跟注门槛",
+      "actual": 0.25,
+      "expected": 0.25
+    },
+    {
+      "name": "河牌零权益5BB诈唬、底池10、弃牌一半",
+      "actual": 2.5,
+      "expected": 2.5
+    },
+    {
+      "name": "河牌零权益5BB诈唬、底池10、仅弃两成",
+      "actual": -2,
+      "expected": -2
+    },
+    {
+      "name": "842的AA大于77",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "QT5的TT是三条",
+      "actual": "三条",
+      "expected": "三条"
+    },
+    {
+      "name": "986上T7成顺",
+      "actual": "顺子",
+      "expected": "顺子"
+    },
+    {
+      "name": "986上75成顺",
+      "actual": "顺子",
+      "expected": "顺子"
+    }
+  ]
+}

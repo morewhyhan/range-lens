@@ -1,0 +1,68 @@
+{
+  "status": "declarative_simplification_evaluation_contract_not_complete",
+  "source": "56_简化策略与GTO参考的差异评估合同.md",
+  "policyIdentities": ["ReferencePolicy","CoursePolicy","SimplificationReport"],
+  "requiredConfigFields": [
+    "game",
+    "activePlayers",
+    "positions",
+    "effectiveStack",
+    "rake",
+    "history",
+    "startingRanges",
+    "board",
+    "holeCardView",
+    "actionMenu",
+    "solverVersion",
+    "coursePolicyVersion"
+  ],
+  "evaluationLayers": [
+    {
+      "id":"physical",
+      "checks":["legalCards","bestFive","splitPot","ledgerConservation","equityCrossCheck"],
+      "blocksStrategyComparison":true
+    },
+    {
+      "id":"reference",
+      "checks":["reload","decisionIndex","zeroSupport","successorClosure","terminalRecheck","bestResponseStatus"],
+      "blocksExactLessonWhenIncomplete":true
+    },
+    {
+      "id":"action_delta",
+      "metrics":["weightedActionL1","maxPerHandDelta","supportChanges","edgeOverlap"],
+      "thresholdCalibrated":false
+    },
+    {
+      "id":"policy_value",
+      "metrics":["rootEVDelta","rootBestActionChanged","successorValueDelta","lockedOpponentScope"],
+      "thresholdCalibrated":false
+    },
+    {
+      "id":"range_and_teaching",
+      "checks":["beforeAfterRange","normalizationDenominator","physicalVsActionFilter","successorFrames","parentReturn"],
+      "thresholdCalibrated":false
+    }
+  ],
+  "transforms": {
+    "visualOnly": {"requiresReevaluation":false,"requiresSnapshotRestore":true},
+    "frequencyQuantization": {"requiresReevaluation":true,"requiresPerHandDelta":true},
+    "menuRestriction": {"requiresReevaluation":true,"requiresAncestorReevaluation":true},
+    "courseRoutePackaging": {"requiresReevaluation":false,"requiresFirstVsRetrySeparation":true}
+  },
+  "releaseGates": {
+    "coursePolicySeparateFromReference":true,
+    "missingSuccessorDowngradesExactLesson":true,
+    "singleScenarioCannotSetGlobalThreshold":true,
+    "smallPositiveEVDoesNotProveBetterThanReference":true,
+    "lockedOpponentIsNotEquilibriumProof":true,
+    "unknownIsNotStrategyAnswer":true
+  },
+  "currentEvidence": {
+    "qqqReferenceCandidate":true,
+    "qqqFullCoursePolicyComparison":false,
+    "a72MatchedThreeStreetReference":false,
+    "calibratedSimplificationThresholds":false,
+    "adultBeginnerTrial":false,
+    "nl50Evidence":false
+  }
+}

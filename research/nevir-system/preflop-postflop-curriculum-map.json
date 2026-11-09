@@ -1,0 +1,39 @@
+{
+  "status": "declarative_preflop_to_postflop_map_not_full_course",
+  "source": "50_翻前到翻后的统一课程地图与入口合同.md",
+  "tableModes": ["preflop_chart_practice","starting_range_fact","postflop_demonstration","matched_strategy_practice"],
+  "preflopStages": [
+    {"id":"P1","label":"读表","required":["position","history","effectiveStack","currentEvent"],"output":"chartAndLegalActions"},
+    {"id":"P2","label":"读格","required":["169Grid","comboClass","suitCombos"],"output":"weightedActionCell"},
+    {"id":"P3","label":"执行","required":["declaredChartVersion","declaredActionRule"],"output":"preflopSnapshot"},
+    {"id":"P4","label":"变体","required":["changedFieldsDeclared","newChartOrScaleIdentity"],"output":"newPreflopSnapshot"}
+  ],
+  "postflopStages": ["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "bridge": {
+    "preflopSnapshotFields":["game","seats","history","actor","chart","action","rangeOwner","comboMass","publicCards","nextStreet"],
+    "physicalFilterBeforePostflop": true,
+    "physicalFilterMeansOpponentAction": false,
+    "jointCompatibilityRequired": true,
+    "missingPostflopResponse": "allow_range_fact_or_demonstration_only",
+    "incompatibleChartVersions": "stop_and_show_difference"
+  },
+  "entryModes": {
+    "from_preflop_to_hand":{"requires":["preflopSnapshot","postflopReferenceOrCoursePolicy"],"default":true},
+    "frozen_postflop":{"requires":["declaredStartingRange","history","rangeVersion"],"default":false},
+    "preflop_only":{"requires":["chartVersion","scenario"],"default":false}
+  },
+  "gateRules": {
+    "preflopPassDoesNotImplyPostflopPass": true,
+    "postflopPassDoesNotReplacePreflopCoverage": true,
+    "noResponseNoExactStrategyGrade": true,
+    "noLongTermLearnerDatabase": true
+  },
+  "currentCoverage": {
+    "preflopChartFacts": true,
+    "startingRangeExamples": true,
+    "completeRoleCoverage": false,
+    "completePostflopResponses": false,
+    "matchedStrategyPractice": false,
+    "nl50Evidence": false
+  }
+}

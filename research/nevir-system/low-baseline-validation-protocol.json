@@ -1,0 +1,35 @@
+{
+  "id": "LOW_BASELINE_VALIDATION_PROTOCOL_V1",
+  "status": "f0_specified_f1_f3_not_administered",
+  "purpose": "把低基础学习者试读、结构回放、慢速执行和问题归因分成可复现的阶段。",
+  "phases": [
+    {"id":"F0_paper_walkthrough","participants":"author_and_independent_reviewer","answerable":["fields","ledger","parent_frame","provenance"],"notAnswerable":["beginner_readability","NL50"]},
+    {"id":"F1_formative_read","participants":"low_baseline_adults_with_host","answerable":["route_clarity","wording_blockers","visual_blockers","attribution_candidate"],"notAnswerable":["stable_learning","NL50"]},
+    {"id":"F2_structure_validation","participants":"new_low_baseline_participants","answerable":["order_recall","layer_location","error_recovery","handoff_completeness","single_variable_transfer"],"notAnswerable":["target_strategy_accuracy"]},
+    {"id":"F3_execution_validation","participants":"heldout_slow_and_continuous_tasks","answerable":["action_amount_reason_update","successor_continuity","delayed_transfer"],"notAnswerable":["profitability","permanent_ability"]}
+  ],
+  "recordFields":["courseVersion","taskId","seenOrHeldout","currentParentStep","firstAnswer","visibleHelpLevel","hostIntervention","retryAnswer","handoffPayload","errorLayer","returnTo","changedField","nextStepVerbalized","continuousStatePreserved","stopReason"],
+  "attributionRules": {
+    "sharedSameLayerErrorAcrossParticipants":"course_or_page_candidate",
+    "missingInputOrUnsupportedAction":"data_or_strategy_gap",
+    "clearInputAndPolicyButLayerSkipped":"learner_structure_gap",
+    "independentAmountRangeSuccessorMismatch":"reference_or_compiler_gap"
+  },
+  "passEvidence": {
+    "F0":["allSevenHandoffsPresent","35UnitsHaveParentAndStopIdentity","exactFramesHaveSource","missingSuccessorsClosed"],
+    "F1":["entryFound","noHostAnswerBeforeResponse","singleVariableRevision","unseenRetest"],
+    "F2":["orderRecall","layerLocation","errorRecovery","oneVariableTransfer","sevenHandoffsNonEmpty"],
+    "F3":["unseenSingleStep","actionAndAmountChecked","rangeOrStopChecked","continuousLedgerAndSuccessor","delayedTransfer"]
+  },
+  "stopConditions":["hostMustAnswer","multipleParentOutputsOnOneScreen","moreThanOneChangedField","answerLeakage","policyChangedMidTrial","unclassifiableError","unknownGradedAsStrategyError","successorOrLedgerDrift"],
+  "revisionOrder":["source_and_data","parent_frame_and_inputs","one_question_and_copy","more_items_last"],
+  "privacyAndStorage": {"appLongTermDatabase":false,"currentSessionEvidenceOnly":true,"researchLogOutsideApp":true},
+  "releaseRules": {
+    "F1ProducesRevisionListOnly":true,
+    "F2DoesNotProveStrategy":true,
+    "F3DoesNotProveNL50":true,
+    "missingReferenceDowngradesLesson":true,
+    "oldVersionEvidenceDoesNotTransferToNewVersion":true
+  },
+  "currentEvidence": {"F0PaperSpecified":true,"F1Administered":false,"F2Administered":false,"F3Administered":false,"learnerTrial":false,"NL50Evidence":false}
+}

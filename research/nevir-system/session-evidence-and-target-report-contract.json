@@ -1,0 +1,290 @@
+{
+  "id": "SESSION_EVIDENCE_AND_TARGET_REPORT_CONTRACT_V1",
+  "status": "paper_session_evidence_and_target_report_schema_written_runtime_and_trials_missing",
+  "purpose": "把一次练习的观察、判分、错误回退、单变量迁移、连续路线和目标级汇总统一为临时会话证据；不建立数据库、不把帮助后的改正覆盖首答，也不把一次成绩或牌局输赢当成NL50证明。",
+  "sources": [
+    "unified-learner-evidence-release-gates.json",
+    "target-readiness-and-nl50-benchmark-contract.json",
+    "low-baseline-stop-observation-crosswalk.json",
+    "first-pass-user-facing-script-contract.json",
+    "200_低基础逐停点观察与四通道证据交叉合同.md",
+    "207_目标级准备度与NL50基准证据合同.md"
+  ],
+  "sessionRecord": {
+    "required": [
+      "ephemeralSessionId",
+      "courseVersion",
+      "targetConfigurationFingerprint",
+      "startedAt",
+      "routeVersion",
+      "gateAtStart",
+      "gateAtEnd",
+      "caseIdentity",
+      "seenOrHeldout",
+      "parentStep",
+      "unitId",
+      "sourceIdentity",
+      "answerIdentity",
+      "inputFingerprint",
+      "frameRecords",
+      "eventLog",
+      "scoreVector",
+      "releaseDecision",
+      "clearedOnClose"
+    ],
+    "frameRecord": [
+      "frameId",
+      "routeIndex",
+      "parentStep",
+      "caseId",
+      "seenOrHeldout",
+      "firstAnswer",
+      "firstAnswerAt",
+      "helpLevelBeforeAnswer",
+      "hostInterventionBeforeAnswer",
+      "requiredOutput",
+      "observation",
+      "answerStatus",
+      "answerIdentity",
+      "errorLayer",
+      "returnTo",
+      "retryAnswer",
+      "handoff",
+      "stopReason"
+    ],
+    "observationFields": [
+      "firstAnswer",
+      "currentLayerSelfLocated",
+      "visualAnchorPointed",
+      "primaryActionCompleted",
+      "nextLayerOrStopSelfLocated",
+      "returnPointSelfLocated",
+      "handoffProduced",
+      "hostPromptCount",
+      "errorLayer",
+      "parentRestoreObserved",
+      "changedFieldIdentified",
+      "retryAnswer",
+      "exitReason",
+      "helpLevel",
+      "answerIdentity"
+    ],
+    "eventTypes": [
+      "session_started",
+      "frame_seen",
+      "first_answer_recorded",
+      "help_requested",
+      "answer_scored",
+      "error_layer_classified",
+      "parent_frame_restored",
+      "handoff_recorded",
+      "retry_recorded",
+      "transfer_field_changed",
+      "successor_checked",
+      "stop_card_shown",
+      "session_closed"
+    ],
+    "scoreDimensions": [
+      "routeLocation",
+      "inputFacts",
+      "handAndBoardFacts",
+      "physicalRangeFilter",
+      "actionOrCoursePolicy",
+      "amountAndLedger",
+      "rangeAfterOrStop",
+      "successorOrStop",
+      "errorLayer",
+      "helpUse",
+      "firstAnswerIndependence"
+    ],
+    "answerStatus": [
+      "correct",
+      "incorrect",
+      "unknown",
+      "not_applicable"
+    ]
+  },
+  "scoring": {
+    "firstAnswerIsAuthoritative": true,
+    "helpAfterFirstAnswerCannotRepairFirstAnswer": true,
+    "unknownIsPracticeIncorrect": true,
+    "unknownIsReportedSeparately": true,
+    "invalidCaseIsExcludedFromDenominator": true,
+    "retryIsNotIndependentAttempt": true,
+    "firstAnswerAndPostHelpAnswerBothStored": true,
+    "resultDoesNotChangeDecisionGrade": true,
+    "missingSourceStopsStrategyGrade": true,
+    "missingSuccessorStopsContinuityGrade": true,
+    "scoreVectorUsesExplicitStatus": true,
+    "noGlobalAveragePromotion": true,
+    "allDimensionsMustHaveStatusOrNotApplicable": true
+  },
+  "strata": [
+    "parentState",
+    "unitGroup",
+    "street",
+    "actionState",
+    "boardClass",
+    "handClass",
+    "edgeOrInternal",
+    "answerIdentity",
+    "seenOrHeldout",
+    "helpLevel",
+    "errorLayer"
+  ],
+  "gates": [
+    {
+      "id": "T0_structure",
+      "sourceGate": "V2_hidden_structure_recall",
+      "minimum": [
+        "routeLocation",
+        "firstAnswerIndependence",
+        "errorLayer"
+      ],
+      "proves": "路线结构和回退证据",
+      "blocks": [
+        "strategy_mastery",
+        "NL50"
+      ]
+    },
+    {
+      "id": "T1_matched_course_package",
+      "sourceGate": "V4_unseen_slow_single_step",
+      "minimum": [
+        "inputFacts",
+        "handAndBoardFacts",
+        "actionOrCoursePolicy",
+        "amountAndLedger",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "proves": "匹配课包内可判分的慢执行",
+      "blocks": [
+        "target_readiness"
+      ]
+    },
+    {
+      "id": "T2_heldout_execution",
+      "sourceGate": "V4_unseen_slow_single_step",
+      "minimum": [
+        "firstAnswerIndependence",
+        "helpUse",
+        "errorLayer",
+        "exactlyOneChangedField"
+      ],
+      "proves": "未曝光题迁移",
+      "blocks": [
+        "continuous_claim_without_successor"
+      ]
+    },
+    {
+      "id": "T3_independent_review",
+      "sourceGate": "V6_target_external_review",
+      "minimum": [
+        "answerIdentity",
+        "sourceFingerprint",
+        "differenceLedgerReview",
+        "unknownReported"
+      ],
+      "proves": "答案可被重建",
+      "blocks": [
+        "NL50"
+      ]
+    },
+    {
+      "id": "T4_real_decision_audit",
+      "sourceGate": "V6_target_external_review",
+      "minimum": [
+        "configurationFingerprint",
+        "decisionLog",
+        "resultSeparateFromDecision",
+        "externalBenchmark"
+      ],
+      "proves": "已覆盖配置下的真实决策审计",
+      "blocks": [
+        "uncovered_spots",
+        "profit_guarantee"
+      ]
+    }
+  ],
+  "aggregation": {
+    "perCase": [
+      "firstAnswerStatus",
+      "postHelpStatus",
+      "unknown",
+      "invalid",
+      "helpLevel",
+      "errorLayer",
+      "returnTo",
+      "successorOrStop"
+    ],
+    "perStratum": [
+      "attempts",
+      "independentFirstAnswers",
+      "correctFirstAnswers",
+      "incorrectFirstAnswers",
+      "unknownCount",
+      "invalidCount",
+      "helpRate",
+      "errorLayerCounts",
+      "coverage"
+    ],
+    "reportUnknownAndInvalidSeparately": true,
+    "reportEveryStratum": true,
+    "denominatorExcludesInvalidOnly": true,
+    "noPromotionFromGlobalAverage": true,
+    "noLongTermStorage": true
+  },
+  "privacyAndStorage": {
+    "storageMode": "memory_only",
+    "noDatabase": true,
+    "noLocalStorage": true,
+    "noAccount": true,
+    "clearOnReloadOrSessionClose": true,
+    "exportOnlyWhenExplicitlyRequested": true,
+    "exportedArtifactIsEvidenceSnapshotNotTrainingDatabase": true
+  },
+  "userVisibleReport": {
+    "alwaysShow": [
+      "currentCorrectOrIncorrect",
+      "unknownCountsAsIncorrect",
+      "currentReturnPoint",
+      "nextActionOrStop"
+    ],
+    "optionalAfterSession": [
+      "firstAnswerRate",
+      "helpRate",
+      "errorLayerSummary",
+      "heldoutTransferSummary",
+      "continuitySummary"
+    ],
+    "hideAuthorCodes": true,
+    "neverShow": [
+      "NL50_ready_before_all_gates",
+      "profit_guarantee",
+      "age_as_evidence"
+    ]
+  },
+  "releaseRules": {
+    "gateOrderMustBeMonotonic": true,
+    "failedGateReturnsToItsParent": true,
+    "noSkipByAnswerCount": true,
+    "noSkipBySpeed": true,
+    "noSkipByHelpedAnswer": true,
+    "noSkipByShortTermResult": true,
+    "everyHeldoutCaseRequiresFirstAnswerBeforeExplanation": true,
+    "everyContinuousCaseRequiresSuccessorOrStop": true
+  },
+  "currentEvidence": {
+    "schemaWritten": true,
+    "crosswalkToUnifiedProtocol": true,
+    "crosswalkToTargetBenchmark": true,
+    "runtimeRecordWriter": false,
+    "runtimeScorer": false,
+    "learnerTrial": false,
+    "heldoutReport": false,
+    "continuousReport": false,
+    "externalReview": false,
+    "nl50Evidence": false
+  }
+}

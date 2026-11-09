@@ -1,0 +1,1494 @@
+{
+  "id": "LEGACY_DOCUMENT_DISPOSITION_AUDIT_V1",
+  "status": "all_legacy_markdown_assigned_not_semantically_revalidated",
+  "purpose": "为未进入正式元数据路由的早期材料指定父文档、证据层和禁止用途，避免遗留材料形成第二条课程主线。",
+  "scannedMarkdownCount": 195,
+  "registeredMetadataCount": 113,
+  "unregisteredCount": 82,
+  "primaryRouteMayUseOnlyRegistered": true,
+  "legacyFiles": [
+    {
+      "file": "01_逐层推理与行动手册.md",
+      "numericId": 1,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "02_第一遍完整跟练分镜.md",
+      "numericId": 2,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "03_完整能力地图与资料缺口.md",
+      "numericId": 3,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "04_正确性与NL50验收方案.md",
+      "numericId": 4,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "05_界面递进与图表语义.md",
+      "numericId": 5,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "06_来源与研究依据.md",
+      "numericId": 6,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "07_工作清单与文档验收.md",
+      "numericId": 7,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "08_学习者慢想卡.md",
+      "numericId": 8,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_route_and_learning",
+      "canonicalParent": "86_首次完整体验脚本_用户视角.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "09_原材料命题化审查.md",
+      "numericId": 9,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "10_起始范围怎样从现有翻前图推导.md",
+      "numericId": 10,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "11_连续路线为什么断裂及补全规则.md",
+      "numericId": 11,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "12_从范围图到陌生牌局的推理桥梁.md",
+      "numericId": 12,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "13_整手导览候选_公开线路与逐步账本.md",
+      "numericId": 13,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "14_阻挡与后门怎样接到实际选择.md",
+      "numericId": 14,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "15_第一遍结构检查_可直接试读稿.md",
+      "numericId": 15,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "16_下注尺寸怎样教成可比较的选择.md",
+      "numericId": 16,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "17_原始课程与本地材料的补证地图.md",
+      "numericId": 17,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "C",
+      "kind": "legacy_source_or_fact",
+      "canonicalParent": "06_来源与研究依据.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "18_转牌怎样继承前序并回到行动.md",
+      "numericId": 18,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "19_面对下注与加注怎样完成比较.md",
+      "numericId": 19,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "20_首次整手导览的逐屏试读与准入审查.md",
+      "numericId": 20,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "21_把原文简化编成可执行动作练习.md",
+      "numericId": 21,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "22_先认牌力再用规则_弱顶对与组合牌.md",
+      "numericId": 22,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "23_怎样检验真的教会了_顺序试读与迁移合同.md",
+      "numericId": 23,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "24_相邻牌面怎样看出变化并回到策略.md",
+      "numericId": 24,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "25_同牌面怎样带着位置历史与回应继续判断.md",
+      "numericId": 25,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "26_35项怎样接回学习_逐项可执行性审计.md",
+      "numericId": 26,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "27_强牌怎样从过牌比较走到价值加注.md",
+      "numericId": 27,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "28_自己的范围怎样更新与结果怎样回看.md",
+      "numericId": 28,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "29_从整手导览到深入一处_逐帧学习脚本.md",
+      "numericId": 29,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "30_前街听牌怎样逐步走到跟弃_逐帧脚本.md",
+      "numericId": 30,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "31_完整参考怎样取得_现有范围的求解输入与准入.md",
+      "numericId": 31,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "32_新牌之后怎样接着想_嵌套更新脚本.md",
+      "numericId": 32,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "33_价值下注被加注以后_重新比较的嵌套脚本.md",
+      "numericId": 33,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "34_从题设答案走向实际判断_条件边界教学.md",
+      "numericId": 34,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "35_翻牌尺寸怎样接回原课且不冒充完整策略.md",
+      "numericId": 35,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "36_转牌到河牌的逐张图文试读稿.md",
+      "numericId": 36,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "37_怎样撤掉帮助而不把初学者丢进猜题.md",
+      "numericId": 37,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "38_把翻后变成可执行的条件地图.md",
+      "numericId": 38,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "39_第一次跟练后怎样检查有没有路径感.md",
+      "numericId": 39,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/D",
+      "kind": "legacy_teaching_script",
+      "canonicalParent": "83_最终学习标准与一遍闭环验收合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "40_按最终目标对照现有证据与剩余缺口.md",
+      "numericId": 40,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "41_首手六个决定具体需要取得什么策略资料.md",
+      "numericId": 41,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "42_简化教学怎样不改错答案_后续政策与当前选择.md",
+      "numericId": 42,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "43_行动后范围怎么变_具体图表与开源参考.md",
+      "numericId": 43,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+      "numericId": 44,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "45_A72第一份课程对照_原文到参考与练习.md",
+      "numericId": 45,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "46_完整参考怎样变成顺序教学与练习_35项出题合同.md",
+      "numericId": 46,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "47_简化策略编译与顺序课程合同.md",
+      "numericId": 47,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "48_首遍七步教学验收与错误恢复合同.md",
+      "numericId": 48,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "49_能力分级与迁移准入合同.md",
+      "numericId": 49,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C",
+      "kind": "legacy_compile_or_reference",
+      "canonicalParent": "85_35项主线挂接与发布状态矩阵.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "50_翻前到翻后的统一课程地图与入口合同.md",
+      "numericId": 50,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "51_翻前范围图来源与覆盖状态.md",
+      "numericId": 51,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "52_翻前图表专项训练与自动出题合同.md",
+      "numericId": 52,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "53_单一路径总装与首次全图导航合同.md",
+      "numericId": 53,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "54_低理解门槛与认知负荷验收合同.md",
+      "numericId": 54,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "55_35项课程单元的依赖编译与发布闸门.md",
+      "numericId": 55,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "56_简化策略与GTO参考的差异评估合同.md",
+      "numericId": 56,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "57_逐街角色与行动分支完整覆盖矩阵.md",
+      "numericId": 57,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "58_学习者一页慢想运行卡.md",
+      "numericId": 58,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "59_低基础学习者试读与课程修订闭环合同.md",
+      "numericId": 59,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "60_最终目标逐项验收与完成闸门.md",
+      "numericId": 60,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "61_视觉导航与范围图语义统一合同.md",
+      "numericId": 61,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "62_结构内化与练习递进合同.md",
+      "numericId": 62,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "A/B/D",
+      "kind": "legacy_route_or_learning",
+      "canonicalParent": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "63_最小完整首课闭环与优先补证计划.md",
+      "numericId": 63,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "64_静态课包文件格式与发布清单.md",
+      "numericId": 64,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "65_A72候选C0到C5参考请求与停止条件.md",
+      "numericId": 65,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "66_首遍一手牌逐屏运行合同.md",
+      "numericId": 66,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "67_课程单元自动编译与出题合同.md",
+      "numericId": 67,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "68_翻后五层因果地图与视觉教学合同.md",
+      "numericId": 68,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "69_低基础首遍试读主持脚本与证据合同.md",
+      "numericId": 69,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "70_翻前到翻后完整课程编排总表.md",
+      "numericId": 70,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "71_最终目标证据追踪与依赖闸门.md",
+      "numericId": 71,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "72_A72_C6到C9政策编译与首课发布合同.md",
+      "numericId": 72,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "73_A72资源受限参考切片与身份边界.md",
+      "numericId": 73,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "74_首遍语言与术语层级合同.md",
+      "numericId": 74,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "75_学习者一页总卡_慢想版.md",
+      "numericId": 75,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "76_父帧状态机与嵌套分支不串线合同.md",
+      "numericId": 76,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "77_NL50目标结果边界与验收合同.md",
+      "numericId": 77,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "78_练习队列与边缘牌覆盖合同.md",
+      "numericId": 78,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "79_层级解锁与复习进入合同.md",
+      "numericId": 79,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "80_逐街行动状态与后继可达性合同.md",
+      "numericId": 80,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "81_题目答案来源溯源与失效合同.md",
+      "numericId": 81,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    },
+    {
+      "file": "82_仓库最新能力边界与接入决策.md",
+      "numericId": 82,
+      "disposition": "legacy_evidence_drawer",
+      "routeLayer": "B/C/D",
+      "kind": "legacy_contract_or_validation",
+      "canonicalParent": "88_判分精度与公式层级合同.md",
+      "primaryEntry": false,
+      "allowedUses": [
+        "作者侧查证",
+        "必要时从父文档按需打开"
+      ],
+      "blockedUses": [
+        "作为用户首页入口",
+        "绕过当前主路线生成训练答案"
+      ],
+      "reconciliation": "以当前canonical主线、匹配参考和发布闸门为准；与主线冲突时保留历史身份并停止自动升级"
+    }
+  ],
+  "currentEvidence": {
+    "allUnregisteredFilesEnumerated": true,
+    "semanticRevalidation": false,
+    "runtimeImpact": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

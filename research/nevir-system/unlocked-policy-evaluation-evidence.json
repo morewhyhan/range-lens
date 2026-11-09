@@ -1,0 +1,73 @@
+{
+  "status": "independent_policy_evaluation_and_free_deviation_calibration_not_new_strategy",
+  "source": {
+    "file": "engine-export-probe.json",
+    "sha256": "5de918306afc9051e34b4cc96577769ac5a1ce8b8c11f1168a486785ffc8b7ec",
+    "revision": "9d1509fe5077d019825f833eed04b16d342dfda1"
+  },
+  "payoffOrigin": "Net from river start; winner receives starting pot plus matched opponent investment. Unmatched bets refunded. Both net payoffs sum to starting pot, not zero; deviation gains remove this constant.",
+  "validity": "Existing fixed river, two players, unit initial hand masses, zero rake, check/bet/fold/call finite tree, no chance or raising. Best response uses known own cards and observed history, never hidden opposing cards.",
+  "results": [
+    {
+      "case": "all_bet",
+      "sourceReportedLockedMetric": 0,
+      "baselineBB": [
+        5.796666666666666,
+        -0.2966666666666667
+      ],
+      "bestResponseBB": [
+        5.951666666666666,
+        0.9166666666666665
+      ],
+      "deviationGainBB": [
+        0.155,
+        1.2133333333333334
+      ],
+      "nashConvBB": 1.3683333333333332,
+      "unrestrictedWithinOriginalMenuExploitabilityBB": 0.6841666666666666,
+      "purePoliciesCheckedPerSeat": [
+        16,
+        16
+      ],
+      "offPathPolicy": "Uses the explicit exported policy rows on every original branch, including original zero-reach branches. These rows define a policy completion, not an optimality or real-opponent claim."
+    },
+    {
+      "case": "split_by_own_hand",
+      "sourceReportedLockedMetric": 0,
+      "baselineBB": [
+        5.19,
+        0.30999999999999994
+      ],
+      "bestResponseBB": [
+        5.951666666666666,
+        0.9166666666666665
+      ],
+      "deviationGainBB": [
+        0.7616666666666663,
+        0.6066666666666667
+      ],
+      "nashConvBB": 1.368333333333333,
+      "unrestrictedWithinOriginalMenuExploitabilityBB": 0.6841666666666665,
+      "purePoliciesCheckedPerSeat": [
+        16,
+        16
+      ],
+      "offPathPolicy": "Uses the explicit exported policy rows on every original branch, including original zero-reach branches. These rows define a policy completion, not an optimality or real-opponent claim."
+    }
+  ],
+  "checks": {
+    "terminalPhysicalPairs": 30,
+    "engineActionComparisons": 24,
+    "recursiveBestResponseMatchesExhaustivePurePolicies": true,
+    "exactGoldenDeviationGains": true
+  },
+  "notClaimed": [
+    "Full poker exploitability outside the original finite menu",
+    "Full A72 or NL50 reference",
+    "Quality of either locked source policy",
+    "Course simplification has now been validated",
+    "New training questions or learner results"
+  ],
+  "appChanged": false,
+  "learnerTrials": 0
+}

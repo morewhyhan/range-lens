@@ -1,0 +1,160 @@
+{
+  "id": "SLOW_SINGLE_STEP_EXECUTION_PROTOCOL_V1",
+  "status": "paper_slow_execution_protocol_not_trialed",
+  "purpose": "把首遍后的陌生单步练习固定成输入冻结、定位、事实、比较、执行、更新或停止的可检查循环。",
+  "phases": [
+    {"id":"F0_input_freeze","prompt":"这手牌的局面是什么？","output":["position","history","board","pot","stacks","toCall"],"return":"context"},
+    {"id":"F1_layer_locate","prompt":"现在先看哪一层？","output":["currentStep","currentParent"],"return":"route"},
+    {"id":"F2_fact","prompt":"这一层的事实是什么？","output":["factResult","factIdentity"],"return":"fact"},
+    {"id":"F3_compare","prompt":"当前有依据的选择有哪些？","output":["legalActions","price","purpose","policyIdentity"],"return":"compare"},
+    {"id":"F4_execute","prompt":"实际要做什么、投入多少？","output":["action","amount","potAfter","stacksAfter","nextActor"],"return":"ledger"},
+    {"id":"F5_update_or_stop","prompt":"这次变化后下一步是什么？","output":["changedField","rangeAfterOrStop","successorOrStop"],"return":"latestChange"}
+  ],
+  "hardRules": {
+    "noThemeLabelBeforeFirstAnswer": true,
+    "firstAnswerBeforeHelp": true,
+    "oneLayerAtATime": true,
+    "sameParentRetry": true,
+    "oneChangedFieldOnHoldout": true,
+    "ledgerRequiredForAction": true,
+    "rangeOrStopRequiredAfterAction": true,
+    "missingReferenceStopsExactAction": true,
+    "missingSuccessorStopsContinuousRoute": true,
+    "speedIsDescriptiveOnly": true,
+    "resultDoesNotProveDecision": true
+  },
+  "minimumEvidence": [
+    "unlabeledLayerLocation",
+    "currentLayerOutput",
+    "legalActionAndAmount",
+    "ledgerAndNextActor",
+    "rangeAfterOrCorrectStop",
+    "singleVariableHoldoutBeforeExplanation",
+    "firstAnswerHelpRetryErrorSeparate"
+  ],
+  "promotion": {
+    "O3_slow_execution":"minimumEvidence",
+    "O4_single_variable_transfer":["O3_slow_execution","oneVariableHoldout"],
+    "O5_continuous_route":["O4_single_variable_transfer","completeSuccessorChain","rangeConservation","ledgerConservation"]
+  },
+  "observableActionChain": {
+    "id": "MENTAL_STRUCTURE_TO_ACTION_CHAIN_V1",
+    "purpose": "把用户脑中的路线恢复，转换成一次可执行、可复核、可迁移的动作链；每一环都有可见交付物，不能用最后按钮替代前面的结构证据。",
+    "steps": [
+      {
+        "id": "A0_state_lock",
+        "route": "p1_context",
+        "runtime": "O1_context",
+        "question": "这手牌现在是什么局面？",
+        "visibleOutput": ["actor", "history", "potBB", "stacksBB", "toCallBB"],
+        "proof": "输入身份和金额与冻结题面一致",
+        "errorReturn": "p1_context"
+      },
+      {
+        "id": "A1_layer_entry",
+        "route": "p2_board",
+        "runtime": "O2_board",
+        "question": "现在先看哪一层？",
+        "visibleOutput": ["currentParent", "currentLayer", "nextLayer"],
+        "proof": "先定位，再打开事实或策略资料",
+        "errorReturn": "route_map"
+      },
+      {
+        "id": "A2_fact_read",
+        "route": "p2_board",
+        "runtime": "O3_hand",
+        "question": "牌面和自己的牌，事实是什么？",
+        "visibleOutput": ["bestFive", "handClass", "improvementCards", "blockerFacts"],
+        "proof": "事实与已知牌、牌张守恒和分母一致；不把策略词当事实",
+        "errorReturn": "p2_board"
+      },
+      {
+        "id": "A3_range_delta",
+        "route": "p3_range",
+        "runtime": "O4_range",
+        "question": "这次变化让谁的范围哪一格变了？",
+        "visibleOutput": ["rangeBefore", "physicalAfter", "actionAfterOrUnknown", "changedCells", "denominator"],
+        "proof": "物理冲突、行动筛选和未知分别标记；同坐标同分母",
+        "errorReturn": "p3_range"
+      },
+      {
+        "id": "A4_compare",
+        "route": "p4_compare",
+        "runtime": "O5_compare",
+        "question": "当前有依据的选择是什么？",
+        "visibleOutput": ["legalActions", "price", "actionPurpose", "answerIdentity"],
+        "proof": "只在课程规则或匹配参考存在时判精确动作；缺资料就停",
+        "errorReturn": "p4_compare"
+      },
+      {
+        "id": "A5_execute",
+        "route": "p5_execute",
+        "runtime": "O6_execute",
+        "question": "实际做什么，投入多少？",
+        "visibleOutput": ["selectedAction", "amountBB", "potAfterBB", "stacksAfterBB", "nextActor"],
+        "proof": "动作合法、金额公式成立、行动权交接正确",
+        "errorReturn": "p5_execute"
+      },
+      {
+        "id": "A6_update_or_stop",
+        "route": "p6_update",
+        "runtime": "O7_update",
+        "question": "这次动作后，下一步是什么？",
+        "visibleOutput": ["changedField", "rangeAfterOrStop", "ledgerAfter", "successorOrStop"],
+        "proof": "有真实后继就交接；没有后继就显示停止原因，不随机补全",
+        "errorReturn": "p6_update"
+      },
+      {
+        "id": "A7_transfer_close",
+        "route": "p7_close",
+        "runtime": "O8_close",
+        "question": "如果只改一个条件，我要回到哪一层？",
+        "visibleOutput": ["firstAnswer", "errorLayer", "returnTo", "changedField", "nextPracticeCase"],
+        "proof": "首答、帮助后答和迁移答分开；先说受影响层，再看解析",
+        "errorReturn": "nearest_missing_layer"
+      }
+    ],
+    "chainRules": {
+      "mustBeOrdered": true,
+      "oneQuestionAtATime": true,
+      "onePrimaryActionAtATime": true,
+      "eachOutputConsumedByNextStep": true,
+      "firstAnswerBeforeHelp": true,
+      "buttonOnlyDoesNotPass": true,
+      "unknownStopsExactGrade": true,
+      "parentRestoredBeforeTransfer": true
+    }
+  },
+  "evidenceRecord": {
+    "scope": "one_session_one_case",
+    "requiredFields": ["caseId", "parentFrame", "chainStep", "firstAnswer", "helpLevel", "errorLayer", "retryAnswer", "ledgerCheck", "rangeDeltaOrStop", "successorCheck", "changedField", "releaseStatus"],
+    "independence": {
+      "independent": ["firstAnswer", "currentLayer", "fact", "actionOrStop", "rangeDeltaOrStop"],
+      "helped": ["answerAfterPrompt", "answerAfterVisual", "answerAfterExplanation"],
+      "neverMerged": ["firstAnswer", "retryAnswer", "helped"]
+    },
+    "attributionOrder": ["missingInput", "stateHandoff", "visualOrCopy", "factUnderstanding", "referenceOrCoursePolicy", "learnerStructure"],
+    "releaseChecks": {
+      "O3_slow_execution": ["A0_state_lock", "A1_layer_entry", "A2_fact_read", "A4_compare", "A5_execute", "A6_update_or_stop"],
+      "O4_single_variable_transfer": ["A7_transfer_close", "oneChangedField", "sameParentRetry"],
+      "O5_continuous_route": ["completeSuccessorChain", "rangeConservation", "ledgerConservation"]
+    }
+  },
+  "releaseRules": {
+    "missingAnyChainStepBlocksExactAction": true,
+    "missingRangeDeltaOrStopBlocksO3": true,
+    "missingSuccessorBlocksO5": true,
+    "aggregateScoreCannotPromoteUnit": true,
+    "paperContractDoesNotProveLearnerAbility": true,
+    "paperContractDoesNotProveNL50": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "matchedReference": false,
+    "learnerTrial": false,
+    "unseenSingleStepVerified": false,
+    "continuousRouteVerified": false,
+    "NL50Evidence": false
+  }
+}

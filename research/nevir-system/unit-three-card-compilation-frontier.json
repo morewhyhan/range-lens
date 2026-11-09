@@ -1,0 +1,5574 @@
+{
+  "id": "UNIT_THREE_CARD_COMPILATION_FRONTIER_V1",
+  "status": "paper_105_card_author_queue_ordered_answers_and_reference_missing",
+  "purpose": "把105个三卡位接到作者侧唯一编译阶段，逐卡显示当前阶段、缺失字段、下一动作和停止边界；禁止单张卡完成后越级释放整个单元。",
+  "sources": [
+    "unit-three-card-skeleton.json",
+    "unit-field-completion-queue.json",
+    "author-course-compilation-frontier.json"
+  ],
+  "phaseOrder": [
+    "identity_source",
+    "identity_canonical",
+    "fact_frame",
+    "course_policy",
+    "reference_policy",
+    "range_snapshots",
+    "successors",
+    "teaching_transfer",
+    "release"
+  ],
+  "modeOrder": [
+    "base",
+    "contrast",
+    "transfer"
+  ],
+  "rows": [
+    {
+      "cardId": "1.1:base",
+      "unitId": "1.1",
+      "mode": "base",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.1:contrast",
+      "unitId": "1.1",
+      "mode": "contrast",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.1:transfer",
+      "unitId": "1.1",
+      "mode": "transfer",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.2:base",
+      "unitId": "1.2",
+      "mode": "base",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.2:contrast",
+      "unitId": "1.2",
+      "mode": "contrast",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.2:transfer",
+      "unitId": "1.2",
+      "mode": "transfer",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.3:base",
+      "unitId": "1.3",
+      "mode": "base",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.3:contrast",
+      "unitId": "1.3",
+      "mode": "contrast",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.3:transfer",
+      "unitId": "1.3",
+      "mode": "transfer",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.4:base",
+      "unitId": "1.4",
+      "mode": "base",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.4:contrast",
+      "unitId": "1.4",
+      "mode": "contrast",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.4:transfer",
+      "unitId": "1.4",
+      "mode": "transfer",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.5:base",
+      "unitId": "1.5",
+      "mode": "base",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.5:contrast",
+      "unitId": "1.5",
+      "mode": "contrast",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.5:transfer",
+      "unitId": "1.5",
+      "mode": "transfer",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.6:base",
+      "unitId": "1.6",
+      "mode": "base",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.6:contrast",
+      "unitId": "1.6",
+      "mode": "contrast",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.6:transfer",
+      "unitId": "1.6",
+      "mode": "transfer",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.7:base",
+      "unitId": "1.7",
+      "mode": "base",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.7:contrast",
+      "unitId": "1.7",
+      "mode": "contrast",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.7:transfer",
+      "unitId": "1.7",
+      "mode": "transfer",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.8:base",
+      "unitId": "1.8",
+      "mode": "base",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.8:contrast",
+      "unitId": "1.8",
+      "mode": "contrast",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "1.8:transfer",
+      "unitId": "1.8",
+      "mode": "transfer",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.1:base",
+      "unitId": "2.1",
+      "mode": "base",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.1:contrast",
+      "unitId": "2.1",
+      "mode": "contrast",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.1:transfer",
+      "unitId": "2.1",
+      "mode": "transfer",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.2:base",
+      "unitId": "2.2",
+      "mode": "base",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.2:contrast",
+      "unitId": "2.2",
+      "mode": "contrast",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.2:transfer",
+      "unitId": "2.2",
+      "mode": "transfer",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.3:base",
+      "unitId": "2.3",
+      "mode": "base",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.3:contrast",
+      "unitId": "2.3",
+      "mode": "contrast",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.3:transfer",
+      "unitId": "2.3",
+      "mode": "transfer",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.4:base",
+      "unitId": "2.4",
+      "mode": "base",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.4:contrast",
+      "unitId": "2.4",
+      "mode": "contrast",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.4:transfer",
+      "unitId": "2.4",
+      "mode": "transfer",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.5:base",
+      "unitId": "2.5",
+      "mode": "base",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.5:contrast",
+      "unitId": "2.5",
+      "mode": "contrast",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.5:transfer",
+      "unitId": "2.5",
+      "mode": "transfer",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.6:base",
+      "unitId": "2.6",
+      "mode": "base",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.6:contrast",
+      "unitId": "2.6",
+      "mode": "contrast",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.6:transfer",
+      "unitId": "2.6",
+      "mode": "transfer",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.7:base",
+      "unitId": "2.7",
+      "mode": "base",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.7:contrast",
+      "unitId": "2.7",
+      "mode": "contrast",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "2.7:transfer",
+      "unitId": "2.7",
+      "mode": "transfer",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.1:base",
+      "unitId": "3.1",
+      "mode": "base",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.1:contrast",
+      "unitId": "3.1",
+      "mode": "contrast",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.1:transfer",
+      "unitId": "3.1",
+      "mode": "transfer",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.2:base",
+      "unitId": "3.2",
+      "mode": "base",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.2:contrast",
+      "unitId": "3.2",
+      "mode": "contrast",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.2:transfer",
+      "unitId": "3.2",
+      "mode": "transfer",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.3:base",
+      "unitId": "3.3",
+      "mode": "base",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.3:contrast",
+      "unitId": "3.3",
+      "mode": "contrast",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.3:transfer",
+      "unitId": "3.3",
+      "mode": "transfer",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.4:base",
+      "unitId": "3.4",
+      "mode": "base",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.4:contrast",
+      "unitId": "3.4",
+      "mode": "contrast",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.4:transfer",
+      "unitId": "3.4",
+      "mode": "transfer",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.5:base",
+      "unitId": "3.5",
+      "mode": "base",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.5:contrast",
+      "unitId": "3.5",
+      "mode": "contrast",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.5:transfer",
+      "unitId": "3.5",
+      "mode": "transfer",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.6:base",
+      "unitId": "3.6",
+      "mode": "base",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.6:contrast",
+      "unitId": "3.6",
+      "mode": "contrast",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "3.6:transfer",
+      "unitId": "3.6",
+      "mode": "transfer",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.1:base",
+      "unitId": "4.1",
+      "mode": "base",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.1:contrast",
+      "unitId": "4.1",
+      "mode": "contrast",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.1:transfer",
+      "unitId": "4.1",
+      "mode": "transfer",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.2:base",
+      "unitId": "4.2",
+      "mode": "base",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.2:contrast",
+      "unitId": "4.2",
+      "mode": "contrast",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.2:transfer",
+      "unitId": "4.2",
+      "mode": "transfer",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.3:base",
+      "unitId": "4.3",
+      "mode": "base",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.3:contrast",
+      "unitId": "4.3",
+      "mode": "contrast",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.3:transfer",
+      "unitId": "4.3",
+      "mode": "transfer",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.4:base",
+      "unitId": "4.4",
+      "mode": "base",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.4:contrast",
+      "unitId": "4.4",
+      "mode": "contrast",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.4:transfer",
+      "unitId": "4.4",
+      "mode": "transfer",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.5:base",
+      "unitId": "4.5",
+      "mode": "base",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.5:contrast",
+      "unitId": "4.5",
+      "mode": "contrast",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.5:transfer",
+      "unitId": "4.5",
+      "mode": "transfer",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.6:base",
+      "unitId": "4.6",
+      "mode": "base",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.6:contrast",
+      "unitId": "4.6",
+      "mode": "contrast",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "4.6:transfer",
+      "unitId": "4.6",
+      "mode": "transfer",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.1:base",
+      "unitId": "5.1",
+      "mode": "base",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.1:contrast",
+      "unitId": "5.1",
+      "mode": "contrast",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.1:transfer",
+      "unitId": "5.1",
+      "mode": "transfer",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.2:base",
+      "unitId": "5.2",
+      "mode": "base",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.2:contrast",
+      "unitId": "5.2",
+      "mode": "contrast",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.2:transfer",
+      "unitId": "5.2",
+      "mode": "transfer",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.3:base",
+      "unitId": "5.3",
+      "mode": "base",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.3:contrast",
+      "unitId": "5.3",
+      "mode": "contrast",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.3:transfer",
+      "unitId": "5.3",
+      "mode": "transfer",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.4:base",
+      "unitId": "5.4",
+      "mode": "base",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.4:contrast",
+      "unitId": "5.4",
+      "mode": "contrast",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.4:transfer",
+      "unitId": "5.4",
+      "mode": "transfer",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.5:base",
+      "unitId": "5.5",
+      "mode": "base",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.5:contrast",
+      "unitId": "5.5",
+      "mode": "contrast",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.5:transfer",
+      "unitId": "5.5",
+      "mode": "transfer",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.6:base",
+      "unitId": "5.6",
+      "mode": "base",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "demonstration_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.6:contrast",
+      "unitId": "5.6",
+      "mode": "contrast",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.6:transfer",
+      "unitId": "5.6",
+      "mode": "transfer",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_canonical",
+      "unitNextPhase": "fact_frame",
+      "unitCurrentLevel": "fact_frame",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "fact_frame",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.7:base",
+      "unitId": "5.7",
+      "mode": "base",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.7:contrast",
+      "unitId": "5.7",
+      "mode": "contrast",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.7:transfer",
+      "unitId": "5.7",
+      "mode": "transfer",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "first_pass_representative",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.8:base",
+      "unitId": "5.8",
+      "mode": "base",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "basePrompt",
+        "baseVisibleInputs",
+        "baseRequiredOutput",
+        "baseExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "reference_policy",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "reference_policy",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "fact_or_ledger_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.8:contrast",
+      "unitId": "5.8",
+      "mode": "contrast",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "contrastCase",
+        "changedField",
+        "preservedFields",
+        "contrastDifference",
+        "contrastExplanation"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "contrast_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    },
+    {
+      "cardId": "5.8:transfer",
+      "unitId": "5.8",
+      "mode": "transfer",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "unitCurrentPhase": "identity_source",
+      "unitNextPhase": "identity_canonical",
+      "unitCurrentLevel": "identity_only",
+      "cardRequiredAuthorFields": [
+        "heldoutCase",
+        "changedField",
+        "preservedFields",
+        "transferPrompt",
+        "transferGrading",
+        "holdoutIdentity"
+      ],
+      "minimumPhases": [
+        "identity_source",
+        "identity_canonical",
+        "fact_frame"
+      ],
+      "exactGradePhases": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "firstMissingMinimumPhase": "identity_canonical",
+      "exactGradeBlockedBy": [
+        "course_policy",
+        "reference_policy",
+        "range_snapshots",
+        "successors",
+        "teaching_transfer"
+      ],
+      "cardStopReason": "stop_at_current_unit_and_return_to_parent",
+      "releaseIdentity": "heldout_transfer_candidate",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "answerContentPresent": false,
+      "cardStatus": "queued_not_compiled",
+      "learnerExposure": "deferred_inside_parent",
+      "currentEvidence": {
+        "structureRegistered": true,
+        "answerCompiled": false,
+        "matchedReference": false,
+        "coursePolicy": false,
+        "rangeAfter": false,
+        "successor": false,
+        "runtime": false,
+        "learnerTrial": false
+      }
+    }
+  ],
+  "summary": {
+    "units": 35,
+    "cards": 105,
+    "modeCounts": {
+      "base": 35,
+      "contrast": 35,
+      "transfer": 35
+    },
+    "phaseCounts": {
+      "identity_source": 48,
+      "identity_canonical": 57,
+      "fact_frame": 0,
+      "course_policy": 0,
+      "reference_policy": 0,
+      "range_snapshots": 0,
+      "successors": 0,
+      "teaching_transfer": 0,
+      "release": 0
+    },
+    "exactGradeBlockedCounts": {
+      "base": 35,
+      "contrast": 35,
+      "transfer": 35
+    },
+    "answerCompiled": 0,
+    "matchedReference": 0,
+    "coursePolicy": 0,
+    "rangeAfter": 0,
+    "successors": 0,
+    "learnerTrial": false
+  },
+  "releaseRules": {
+    "cardStructureBeforeAnswer": true,
+    "identityBeforeFact": true,
+    "factOrExplicitBoundaryBeforeContrast": true,
+    "referenceAndCoursePolicyBeforeExactGrade": true,
+    "rangeBeforeSuccessor": true,
+    "transferAfterHeldoutIdentity": true,
+    "oneCardDoesNotReleaseUnit": true,
+    "missingEvidenceStopsAtParent": true,
+    "noNeighborSubstitution": true
+  },
+  "currentEvidence": {
+    "paperFrontier": true,
+    "all105RowsQueued": true,
+    "answersCompiled": false,
+    "matchedReference": false,
+    "runtime": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,2389 @@
+{
+  "id": "PRINCIPLE_LOOP_UNIT_CROSSWALK_V1",
+  "status": "35_unit_card_manifest_compiled_without_complete_cards",
+  "sourceDocuments": [
+    "189_从案例到可迁移原理的教学闭环合同.md",
+    "principle-unit-closure.json",
+    "unit-outcome-matrix.json"
+  ],
+  "generator": {
+    "deterministic": true,
+    "rule": "derive unit identity from principle closure and outcome matrix; do not invent answers"
+  },
+  "rules": {
+    "all35UnitsListed": true,
+    "allUnitsHaveThreeCards": true,
+    "allCardsReturnToParent": true,
+    "contrastExactlyOneChangedField": true,
+    "transferHiddenLabel": true,
+    "missingEvidenceStops": true,
+    "cardCompletionDoesNotGrantStrategy": true
+  },
+  "consistencyAudit": {
+    "script": "scripts/research-nevir-principle-crosswalk-audit.mjs",
+    "status": "paper_crosswalk_consistent_not_released",
+    "primaryPrincipleRule": "must_be_in_parent_principles_or_explicit_reinforcement",
+    "parentFrameRule": {
+      "compare.unopened": "p4_compare",
+      "compare.bet": "p4_compare",
+      "compare.raise": "p4_compare",
+      "update.response": "p6_update",
+      "update.card": "p6_update"
+    },
+    "runtimeImplemented": false,
+    "learnerTrialVerified": false
+  },
+  "groupSpecs": {
+    "compare.unopened": {
+      "focus": [
+        "P07",
+        "P08"
+      ],
+      "fields": [
+        "board",
+        "heroHole",
+        "price",
+        "actionPurpose",
+        "size"
+      ],
+      "delta": [
+        "decision",
+        "ledger",
+        "range_or_stop"
+      ]
+    },
+    "compare.bet": {
+      "focus": [
+        "P07",
+        "P08"
+      ],
+      "fields": [
+        "price",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "delta": [
+        "price",
+        "decision",
+        "range_or_stop"
+      ]
+    },
+    "compare.raise": {
+      "focus": [
+        "P07",
+        "P08"
+      ],
+      "fields": [
+        "raisePrice",
+        "actionHistory",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "delta": [
+        "price",
+        "decision",
+        "range_or_stop"
+      ]
+    },
+    "update.response": {
+      "focus": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "fields": [
+        "opponentResponse",
+        "selectedAction",
+        "price",
+        "actionHistory"
+      ],
+      "delta": [
+        "range_after",
+        "ledger",
+        "actor"
+      ]
+    },
+    "update.card": {
+      "focus": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "fields": [
+        "board",
+        "heroHole"
+      ],
+      "delta": [
+        "board",
+        "hand",
+        "physical_filter",
+        "successor"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "unitId": "1.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "先点出较差而愿意跟的一组，再移动它支付的钱",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "active-plan-models.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "点出会反超的实际跑牌，再比较退出或继续",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "先指出本来赢自己且会退出的候选",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "active-plan-models.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "分别点出过牌、被跟、被加后还保留什么机会",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "同一手比较差牌付款还是全部退出",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "firstPassRepresentative": {
+        "order": 1,
+        "manifest": "first-pass-representative-card-candidates.json",
+        "baseStatus": "finite_model_demo_candidate",
+        "contrastStatus": "candidate",
+        "transferStatus": "blocked"
+      }
+    },
+    {
+      "unitId": "1.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "固定强牌，比较直接下注与诱发弱牌投入",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.7",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "把所有候选分支合起来看是否值得继续投入",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "1.8",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.unopened",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P08",
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "只改金额及对应响应，再比较差额",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole",
+          "price",
+          "actionPurpose",
+          "size"
+        ],
+        "deltaKinds": [
+          "decision",
+          "ledger",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "把可赢价值与可赢诈唬分开，再比较跟和加",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "firstPassRepresentative": {
+        "order": 2,
+        "manifest": "first-pass-representative-card-candidates.json",
+        "baseStatus": "finite_model_demo_candidate",
+        "contrastStatus": "candidate",
+        "transferStatus": "blocked"
+      }
+    },
+    {
+      "unitId": "2.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P08",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "固定价格改变诈唬份量，再固定范围改价格",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "先看成花仍输，再打开未来承压分支",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "made-plus-draw-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "点当前可赢与当前落后两组，合并去重后的终局份额，再比较全下跟弃",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "固定强牌，看差牌跟加与只继续下注的差异",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "只改对加注的弃牌分支，重新比较",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "2.7",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.bet",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "把跟/加所有后续计完，允许直接弃牌",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "price",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "3.1",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P02",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "在原筹码上摆出新的待补与跟后池",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "firstPassRepresentative": {
+        "order": 3,
+        "manifest": "first-pass-representative-card-candidates.json",
+        "baseStatus": "ledger_fact_candidate",
+        "contrastStatus": "candidate",
+        "transferStatus": "blocked"
+      }
+    },
+    {
+      "unitId": "3.2",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "保留原差牌付款者作对照，再看谁真正加注",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "3.3",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P08",
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "把再加后的未来和剩余投入重新展开",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "3.4",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "看更差牌是否仍付钱，是否失去后续诈唬",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "3.5",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "bluff-reraise-model.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "分别点被移除的继续牌与弃牌，再算整条再加线",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "3.6",
+      "parentFrame": "p4_compare",
+      "groupId": "compare.raise",
+      "principles": [
+        "P07",
+        "P08"
+      ],
+      "primaryPrinciple": "P07",
+      "source": {
+        "evidence": "first-pass-structure-packet.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "只点合法菜单；区分自己全下仍待回应",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "raisePrice",
+          "actionHistory",
+          "board",
+          "heroHole",
+          "rangeBefore"
+        ],
+        "deltaKinds": [
+          "price",
+          "decision",
+          "range_or_stop"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "action",
+          "amountOrNoBet",
+          "reason",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "4.1",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P05",
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "按实际响应留下候选，保留慢打可能",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "4.2",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P06",
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "不删除所有弱牌，按有依据的过牌概率更新",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "4.3",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P05",
+      "source": {
+        "evidence": "self-range-outcome-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "两边分别保留实际走该线的候选",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "4.4",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P05",
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "同牌钱换历史，重新筛选并比较",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "4.5",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P01",
+      "source": {
+        "evidence": "first-hand-lesson-packet.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "筹码进池、后手减少、移动行动者",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "firstPassRepresentative": {
+        "order": 4,
+        "manifest": "first-pass-representative-card-candidates.json",
+        "baseStatus": "fact_ledger_candidate",
+        "contrastStatus": "candidate",
+        "transferStatus": "blocked"
+      }
+    },
+    {
+      "unitId": "4.6",
+      "parentFrame": "p6_update",
+      "groupId": "update.response",
+      "principles": [
+        "P05",
+        "P06",
+        "P09",
+        "P10"
+      ],
+      "primaryPrinciple": "P05",
+      "source": {
+        "evidence": "self-range-outcome-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "并排比较决策前EV与某一次赢输，不倒推",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "opponentResponse",
+          "selectedAction",
+          "price",
+          "actionHistory"
+        ],
+        "deltaKinds": [
+          "range_after",
+          "ledger",
+          "actor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.1",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P03",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "只亮出新加入最佳五张的实体牌",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.2",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P11",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "只在实际留下的候选里看改善",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.3",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P04",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "分别点成顺/成花者及仍在听者",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.4",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P03",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "公共牌成对后重新拼五张",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.5",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P03",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "同一高牌让某组降级、另一组配到",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.6",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P03",
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "evidenceIdentity": "finite_model",
+        "localMaterial": "M"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "先指出没变的关系，再带回历史与价格",
+        "sourceIdentity": "finite_model",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    },
+    {
+      "unitId": "5.7",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P06",
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "含新牌的组合划除，其余继承权重",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "firstPassRepresentative": {
+        "order": 5,
+        "manifest": "first-pass-representative-card-candidates.json",
+        "baseStatus": "physical_fact_candidate",
+        "contrastStatus": "candidate",
+        "transferStatus": "blocked"
+      }
+    },
+    {
+      "unitId": "5.8",
+      "parentFrame": "p6_update",
+      "groupId": "update.card",
+      "principles": [
+        "P03",
+        "P04",
+        "P06",
+        "P11"
+      ],
+      "primaryPrinciple": "P11",
+      "source": {
+        "evidence": "blocker-teaching-evidence.json",
+        "evidenceIdentity": "fact_or_ledger",
+        "localMaterial": "F"
+      },
+      "baseCase": {
+        "required": true,
+        "question": "关闭未来补牌理由，转向当前胜负与付款/退出",
+        "sourceIdentity": "fact_or_ledger",
+        "status": "not_compiled"
+      },
+      "contrastCase": {
+        "required": true,
+        "exactlyOneChangedField": true,
+        "candidateChangedFields": [
+          "board",
+          "heroHole"
+        ],
+        "deltaKinds": [
+          "board",
+          "hand",
+          "physical_filter",
+          "successor"
+        ],
+        "status": "not_compiled"
+      },
+      "transferCase": {
+        "required": true,
+        "hideUnitLabel": true,
+        "identifyChangedFieldBeforeAnswer": true,
+        "requiredOutputs": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "status": "not_compiled"
+      },
+      "stopIfMissing": "no_complete_range_or_successor_reference",
+      "exactGradeRequires": "matched_reference_and_successor",
+      "cardCompletion": {
+        "base": false,
+        "contrast": false,
+        "transfer": false
+      },
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      }
+    }
+  ],
+  "counts": {
+    "units": 35,
+    "baseCards": 35,
+    "contrastCards": 35,
+    "transferCards": 35,
+    "fullyCompiled": 0
+  },
+  "currentEvidence": {
+    "manifestCompiled": true,
+    "all35CardsCompiled": false,
+    "matchedStrategy": false,
+    "learnerTrial": false,
+    "unseenTransfer": false,
+    "nl50Evidence": false
+  },
+  "representativeManifest": {
+    "file": "first-pass-representative-card-candidates.json",
+    "units": [
+      "1.5",
+      "2.1",
+      "3.1",
+      "4.5",
+      "5.7"
+    ],
+    "allTransferBlocked": true
+  }
+}

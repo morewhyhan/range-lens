@@ -1,0 +1,8 @@
+{
+  "provenance": "Initial measured values recovered from the prior preflight verification; not a claim to preserve original snapshot file bytes.",
+  "observedUtc": "2026-10-20T16:34:20.9974415Z",
+  "source": "Windows GlobalMemoryStatusEx; instantaneous, not a future reservation",
+  "totalPhysicalBytes": 16962281472,
+  "availablePhysicalBytes": 6137094144,
+  "loadPercent": 63
+}

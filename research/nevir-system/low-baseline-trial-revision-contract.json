@@ -1,0 +1,42 @@
+{
+  "id": "LOW_BASELINE_TRIAL_REVISION_CONTRACT_V1",
+  "status": "paper_trial_analysis_contract_not_administered",
+  "purpose": "把低基础试读观察转成单变量课程修订和未见题复测，避免主观印象或增加题量掩盖问题。",
+  "sourceDocuments": [
+    "132_低基础学习者分阶段验证与归因协议.md",
+    "69_低基础首遍试读主持脚本与证据合同.md",
+    "159_低基础试读结果与课程修订判定合同.md"
+  ],
+  "recordDimensions": ["find","firstAnswer","help","retry","transfer"],
+  "attributionOrder": ["missingInput","stateHandoff","visualOrCopy","factUnderstanding","strategyOrCompiler","learnerStructure"],
+  "revisionVariables": ["layout","copy","visualMark","helpLevel","promptField","returnPoint","sourceOrStrategyField"],
+  "hardRules": {
+    "oneRevisionVariableAtATime": true,
+    "firstAnswerSeparateFromRetry": true,
+    "hostAnswerIsNotIndependentEvidence": true,
+    "sameErrorAcrossParticipantsIsCourseCandidate": true,
+    "missingInputDowngradesLesson": true,
+    "oldVersionEvidenceDoesNotTransfer": true,
+    "speedIsDescriptiveOnly": true,
+    "unseenRetestAfterRevision": true
+  },
+  "phaseOrder": ["F0_paper_walkthrough","F1_formative_read","F2_structure_validation","F3_execution_validation","target_assessment"],
+  "decisionRules": [
+    {"condition":"one_participant_stalls","action":"record_without_immediate_course_change"},
+    {"condition":"two_or_more_same_nonstrategy_error","action":"open_page_or_copy_revision_candidate"},
+    {"condition":"missing_input_forces_action_guess","action":"downgrade_and_block_exact_lesson"},
+    {"condition":"same_error_after_revision_on_holdout","action":"recheck_structure_or_data_not_add_volume"},
+    {"condition":"correct_answer_without_next_layer","action":"record_accidental_correctness"},
+    {"condition":"host_answers","action":"no_independent_evidence"}
+  ],
+  "privacy": {"appLongTermDatabase":false,"currentSessionEvidenceOnly":true,"researchLogOutsideApp":true},
+  "currentEvidence": {
+    "paperContract": true,
+    "F0Specified": true,
+    "F1Administered": false,
+    "F2Administered": false,
+    "F3Administered": false,
+    "participantsObserved": false,
+    "NL50Evidence": false
+  }
+}

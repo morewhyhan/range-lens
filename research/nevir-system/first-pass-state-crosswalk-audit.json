@@ -1,0 +1,471 @@
+{
+  "id": "FIRST_PASS_STATE_CROSSWALK_AUDIT_V1",
+  "status": "paper_route_field_closure_consistent_not_runtime",
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "initialFrameInputs": [
+    "board",
+    "heroHole",
+    "knownCards",
+    "street",
+    "legalActions",
+    "price"
+  ],
+  "rows": [
+    {
+      "from": "L0",
+      "to": "L1",
+      "produced": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "nextRequired": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "consumedDirectly": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "consumedByCurrentEvidence": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "L1",
+      "to": "L2",
+      "produced": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "nextRequired": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "consumedDirectly": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "consumedByCurrentEvidence": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "L2",
+      "to": "L3",
+      "produced": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "nextRequired": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "consumedDirectly": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "consumedByCurrentEvidence": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "L3",
+      "to": "L4",
+      "produced": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "nextRequired": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "consumedDirectly": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "consumedByCurrentEvidence": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "L4",
+      "to": "p1",
+      "produced": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "nextRequired": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator",
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "consumedDirectly": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "consumedByCurrentEvidence": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "missingAtNext": []
+    },
+    {
+      "from": "p1",
+      "to": "p2",
+      "produced": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "heroSeat",
+        "villainSeat",
+        "toCallBB"
+      ],
+      "nextRequired": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB",
+        "heroSeat",
+        "villainSeat",
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "consumedDirectly": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "heroSeat",
+        "villainSeat",
+        "toCallBB"
+      ],
+      "consumedByCurrentEvidence": [
+        "actor"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [
+        "board",
+        "heroHole",
+        "rangeBefore"
+      ],
+      "missingAtNext": []
+    },
+    {
+      "from": "p2",
+      "to": "p3",
+      "produced": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "nextRequired": [
+        "board",
+        "heroHole",
+        "bestFive",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "rangeBefore"
+      ],
+      "consumedDirectly": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "consumedByCurrentEvidence": [
+        "bestFive"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [
+        "rangeBefore"
+      ],
+      "missingAtNext": []
+    },
+    {
+      "from": "p3",
+      "to": "p4",
+      "produced": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "rangeBeforeDenominator",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator"
+      ],
+      "nextRequired": [
+        "rangeBefore",
+        "blockedCombos",
+        "rangeBeforeDenominator",
+        "physicalRemovalReason",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator",
+        "legalActions",
+        "price"
+      ],
+      "consumedDirectly": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "rangeBeforeDenominator",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator"
+      ],
+      "consumedByCurrentEvidence": [
+        "rangeBefore",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [
+        "legalActions",
+        "price"
+      ],
+      "missingAtNext": []
+    },
+    {
+      "from": "p4",
+      "to": "p5",
+      "produced": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "nextRequired": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "policyIdentity",
+        "reason"
+      ],
+      "consumedDirectly": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "consumedByCurrentEvidence": [
+        "legalActions",
+        "price",
+        "policyIdentity"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "p5",
+      "to": "p6",
+      "produced": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "nextRequired": [
+        "action",
+        "amountOrNoBet",
+        "potAfterBB",
+        "stacksAfterBB",
+        "nextActor",
+        "ledgerAfter"
+      ],
+      "consumedDirectly": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "consumedByCurrentEvidence": [
+        "action",
+        "nextActor"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "p6",
+      "to": "p7",
+      "produced": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "nextRequired": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "consumedDirectly": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "consumedByCurrentEvidence": [
+        "changedField",
+        "responseOrCard"
+      ],
+      "terminalOutputs": [],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    },
+    {
+      "from": "p7",
+      "to": "exit_or_review",
+      "produced": [
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField",
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "nextRequired": [],
+      "consumedDirectly": [],
+      "consumedByCurrentEvidence": [
+        "oneSentenceReason",
+        "singleTransferField",
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "terminalOutputs": [
+        "stopOrSuccessor"
+      ],
+      "unconsumedOutputs": [],
+      "inheritedOrInitial": [],
+      "missingAtNext": []
+    }
+  ],
+  "checks": {
+    "allStateIdsUnique": true,
+    "allRequiredInputsDeclared": true,
+    "nextChainExact": true,
+    "everyNextInputSourced": true,
+    "everyRequiredOutputConsumedOrTerminal": true
+  },
+  "currentEvidence": {
+    "runtimeObserved": false,
+    "learnerTrialObserved": false,
+    "goalCompletionVerified": false
+  }
+}

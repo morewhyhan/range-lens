@@ -1,0 +1,128 @@
+{
+  "reportId": "desktop-package-verification-current",
+  "generatedAt": "2026-11-02T08:10:19.859Z",
+  "package": "poker-range-trainer@1.1.0",
+  "electron": "45.0.0",
+  "builder": "electron-builder 26.15.3 · NSIS 1.2.1",
+  "artifacts": [
+    {
+      "id": "portable",
+      "path": "release/扑克练习器.exe",
+      "bytes": 102623487,
+      "sha256": "DEF87B3FCE90E419684A7A76BCF3C353E9A11459AE9CA81FA3A8A8E1A8F131E6",
+      "lastWriteTime": "2026-10-22T22:18:46.685Z"
+    },
+    {
+      "id": "unpacked-exe",
+      "path": "release/win-unpacked/扑克练习器.exe",
+      "bytes": 249798144,
+      "sha256": "1D4FD4140BD184E93943D3D9DF1753B9FDF49284A7832A4BE94FFA43CC19DBB9",
+      "lastWriteTime": "2026-10-22T22:49:20.714Z"
+    },
+    {
+      "id": "asar",
+      "path": "release/win-unpacked/resources/app.asar",
+      "bytes": 7847238,
+      "sha256": "880A13C2494CBF927916DDABB84333719A6A5FC955F52A9BDF9923D87C388752",
+      "lastWriteTime": "2026-10-22T22:49:19.167Z"
+    },
+    {
+      "id": "unpacked-exe-current",
+      "path": "release/postflop-solver-v7/win-unpacked/扑克练习器.exe",
+      "bytes": 249798144,
+      "sha256": "739CBA00A33C2226A73AF73137668A2EC888B951BB671B7B7BCEC255BA27DCE7",
+      "lastWriteTime": "2026-11-02T08:05:41.779Z"
+    },
+    {
+      "id": "asar-current",
+      "path": "release/postflop-solver-v7/win-unpacked/resources/app.asar",
+      "bytes": 35311078,
+      "sha256": "DBB33D597723EB76E68D5FE85A8C6DF73B492524FA8AAD9D55F48D2D57CAFF9C",
+      "lastWriteTime": "2026-11-02T08:05:40.105Z"
+    },
+    {
+      "id": "solver-engine",
+      "path": "release/postflop-solver-v7/win-unpacked/resources/solver-engine/trainer_engine.exe",
+      "bytes": 2497024,
+      "sha256": "4ADF872E5F45EBE8D4C2A102AF9B05688D7CEEC911182CB484DBBFF60331AE20",
+      "lastWriteTime": "2026-11-01T21:07:22.806Z"
+    },
+    {
+      "id": "postflop-pilot",
+      "path": "release/postflop-solver-v7/win-unpacked/resources/solver-data/postflop-pilot/strategy.bin",
+      "bytes": 268153860,
+      "sha256": "B6FAF100F742A506C98DABB621074D792371E80F3982092C235BC90AD47501B3",
+      "lastWriteTime": "2026-11-01T11:22:55.241Z"
+    },
+    {
+      "id": "postflop-pilot-sb",
+      "path": "release/postflop-solver-v7/win-unpacked/resources/solver-data/postflop-pilot-sb/strategy.bin",
+      "bytes": 292027790,
+      "sha256": "2166554C99F294F0D6F9C1DDBA65909A905D62A3C9C010A4195C0418AD2CDE71",
+      "lastWriteTime": "2026-11-01T11:42:26.283Z"
+    }
+  ],
+  "packaging": {
+    "status": "current_directory_portable_not_rebuilt",
+    "portableFresh": false,
+    "currentDirectory": "release/postflop-solver-v7/win-unpacked",
+    "reason": "便携版早于当前真实求解快照工作区；当前主交付使用独立目录版，避免旧目录文件锁覆盖新包。",
+    "portableAttempt": {
+      "path": "release/poker-range-trainer-1.1.0-x64.nsis.7z",
+      "bytes": 102330958,
+      "sha256": "145E1C66E91DC0EE01F7EE6594CC34C89492F51CD672F8AA106E56D9F7465BD6",
+      "lastWriteTime": "2026-10-22T22:36:28.179Z"
+    }
+  },
+  "offlineAssets": true,
+  "verifiedCoverage": [
+    {
+      "id": "btn-bb-Ks9s4s-multi",
+      "board": [
+        "Ks",
+        "9s",
+        "4s"
+      ],
+      "inputFingerprint": "94c97f7fab4ad78c4fb183e88e8ee78e61da6e7346a93621be9155929b73ca2c",
+      "errorBB": 0.005457286834716797,
+      "filesVerified": true
+    },
+    {
+      "id": "btn-bb-QhQs4d-multi",
+      "board": [
+        "Qh",
+        "Qs",
+        "4d"
+      ],
+      "inputFingerprint": "5fa05e571b16a9322fd7dfd22a4015f0d8485c77b12b181fb611bc228135a333",
+      "errorBB": 0.005291728973388672,
+      "filesVerified": true
+    },
+    {
+      "id": "btn-bb-AhTd6h-multi",
+      "board": [
+        "Ah",
+        "Td",
+        "6h"
+      ],
+      "inputFingerprint": "676d7c7d7f858b2c7c647ef596e9e21f625a7b8c90e73a5e742f3dc0cec82aa8",
+      "errorBB": 0.005245647430419922,
+      "filesVerified": true
+    }
+  ],
+  "runtimeDomain": {
+    "physicalFlopInputs": 22100,
+    "sourceBackedOpeningSituations": 20,
+    "configurableThreebetPositionPairs": 15,
+    "roles": 2,
+    "onDemandIndependentSolve": true,
+    "allEquilibriaPrecomputed": false,
+    "finiteDeclaredActionModel": true
+  },
+  "persistence": "in-memory session only",
+  "runtimeProbe": {
+    "status": "packaged_runtime_verified",
+    "evidence": "research/runtime/postflop-packaged-general-current/result.json",
+    "note": "本机运行需要允许的执行环境。打包版验证包括原生IPC、真实求解后继和两种窗口尺寸；不代表学习效果已验证。"
+  }
+}

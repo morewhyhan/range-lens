@@ -1,0 +1,3755 @@
+{
+  "id": "USER_FIRST_COMPLETE_ROUTE_CONTRACT_V1",
+  "status": "paper_user_first_nested_route_closed_content_runtime_and_learner_evidence_missing",
+  "objective": "让低基础学习者只沿一条顺序嵌套路线走一次，就看懂翻前到翻后每一步的目的、交接、错误回退和35项后台能力怎样进入父帧；之后再按同一父帧逐项释放、单变量迁移和连续三街。",
+  "sources": [
+    "full-nested-learning-route.json",
+    "unit-course-manifest.json",
+    "unit-architecture-bridge.json",
+    "unit-canonical-route-bridge.json",
+    "unit-learner-release-matrix.json",
+    "unit-error-feedback-matrix.json",
+    "unit-outcome-matrix.json"
+  ],
+  "userJourney": {
+    "firstPass": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6",
+      "p7"
+    ],
+    "firstPassRepresentatives": [
+      "1.5",
+      "2.1",
+      "3.1",
+      "4.5",
+      "5.7"
+    ],
+    "afterFirstPass": [
+      "U1_structure_recall",
+      "U2_same_parent_practice",
+      "U3_slow_single_step",
+      "U4_adjacent_transfer",
+      "U5_delayed_recall",
+      "U6_continuous_three_street",
+      "U7_target_review"
+    ],
+    "releaseOrder": [
+      "map",
+      "guided",
+      "independent",
+      "adjacent",
+      "delayed",
+      "continuous"
+    ],
+    "userVisibleRule": "永远只显示当前父步骤、一个问题、一个主动作和一个下一步/停止；35项不形成首页菜单。"
+  },
+  "parentFrames": [
+    {
+      "id": "p1_context",
+      "plainLabel": "先确认现在是什么局面",
+      "question": "谁在什么位置、前面发生了什么、现在轮到谁？",
+      "handoff": "contextSnapshot",
+      "childGroups": []
+    },
+    {
+      "id": "p2_board",
+      "plainLabel": "再看牌面和自己的牌",
+      "question": "我现在组成了什么牌，下一张可能怎样改变？",
+      "handoff": "handAndBoardFacts",
+      "childGroups": [
+        "board_texture_six_class",
+        "hand_rank_ladder"
+      ]
+    },
+    {
+      "id": "p3_range",
+      "plainLabel": "看双方还可能有什么牌",
+      "question": "哪些牌仍然可能存在，哪些只是被我手里的牌拿走了？",
+      "handoff": "rangeBeforeAndPhysicalRemoval",
+      "childGroups": []
+    },
+    {
+      "id": "p4_compare",
+      "plainLabel": "比较当前选择",
+      "question": "在这些牌、这个价格和这个历史下，哪个合法选择更合算？",
+      "handoff": "courseDecisionCandidate",
+      "childGroups": [
+        "compare.unopened",
+        "compare.bet",
+        "compare.raise"
+      ]
+    },
+    {
+      "id": "p5_execute",
+      "plainLabel": "执行动作并记清金额",
+      "question": "我要按哪个动作、多少金额，把行动权交给谁？",
+      "handoff": "actionLedgerAndActor",
+      "childGroups": []
+    },
+    {
+      "id": "p6_update",
+      "plainLabel": "更新局面和范围",
+      "question": "动作、回应或新牌具体改变了哪一件事？",
+      "handoff": "rangeAfterAndSuccessorOrStop",
+      "childGroups": [
+        "update.response",
+        "update.card"
+      ]
+    },
+    {
+      "id": "p7_close",
+      "plainLabel": "收口并准备迁移",
+      "question": "我能用一句话说明这一步为什么结束、下一次改哪个字段吗？",
+      "handoff": "closeAndTransferField",
+      "childGroups": []
+    }
+  ],
+  "groupCounts": {
+    "compare.unopened": 8,
+    "compare.bet": 7,
+    "compare.raise": 6,
+    "update.response": 6,
+    "update.card": 8
+  },
+  "units": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 1,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "先点出较差而愿意跟的一组，再移动它支付的钱",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 2,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "点出会反超的实际跑牌，再比较退出或继续",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "active-plan-models.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 3,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "先指出本来赢自己且会退出的候选",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 4,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "分别点出过牌、被跟、被加后还保留什么机会",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "active-plan-models.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 5,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "同一手比较差牌付款还是全部退出",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": true,
+      "firstPassRole": "one_child_demo",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 6,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "固定强牌，比较直接下注与诱发弱牌投入",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 7,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "把所有候选分支合起来看是否值得继续投入",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "groupOrder": 1,
+      "childOrder": 8,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "只改金额及对应响应，再比较差额",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "purpose",
+        "allowedLayers": [
+          "purpose",
+          "price",
+          "range"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "size-comparison-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 1,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "把可赢价值与可赢诈唬分开，再比较跟和加",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": true,
+      "firstPassRole": "one_child_demo",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 2,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "固定价格改变诈唬份量，再固定范围改价格",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 3,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "先看成花仍输，再打开未来承压分支",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 4,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "点当前可赢与当前落后两组，合并去重后的终局份额，再比较全下跟弃",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "made-plus-draw-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 5,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "固定强牌，看差牌跟加与只继续下注的差异",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 6,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "只改对加注的弃牌分支，重新比较",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "groupOrder": 2,
+      "childOrder": 7,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "把跟/加所有后续计完，允许直接弃牌",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "price",
+          "purpose",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 1,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "在原筹码上摆出新的待补与跟后池",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": true,
+      "firstPassRole": "one_child_demo",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 2,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "保留原差牌付款者作对照，再看谁真正加注",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 3,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "把再加后的未来和剩余投入重新展开",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "defense-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 4,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "看更差牌是否仍付钱，是否失去后续诈唬",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "value-trap-tree-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 5,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "分别点被移除的继续牌与弃牌，再算整条再加线",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "bluff-reraise-model.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "groupOrder": 3,
+      "childOrder": 6,
+      "userParent": "p4",
+      "returnTo": "p4",
+      "primaryQuestion": "只点合法菜单；区分自己全下仍待回应",
+      "primaryAction": "action",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A6",
+        "outputProjection": [
+          "courseDecision",
+          "amountOrNoBet",
+          "rangeAfterOrStopReason",
+          "ledgerAfter"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "price",
+        "allowedLayers": [
+          "price",
+          "purpose",
+          "execution",
+          "successor"
+        ],
+        "returnStep": "p4_compare",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "first-pass-structure-packet.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 1,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "按实际响应留下候选，保留慢打可能",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 2,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "不删除所有弱牌，按有依据的过牌概率更新",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 3,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "两边分别保留实际走该线的候选",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "self-range-outcome-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 4,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "同牌钱换历史，重新筛选并比较",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 5,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "筹码进池、后手减少、移动行动者",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": true,
+      "firstPassRole": "one_child_demo",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "first-hand-lesson-packet.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "groupOrder": 4,
+      "childOrder": 6,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "并排比较决策前EV与某一次赢输，不倒推",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "range",
+        "allowedLayers": [
+          "range",
+          "execution",
+          "context",
+          "result"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "self-range-outcome-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 1,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "只亮出新加入最佳五张的实体牌",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 2,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "只在实际留下的候选里看改善",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 3,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "分别点成顺/成花者及仍在听者",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 4,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "公共牌成对后重新拼五张",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 5,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "同一高牌让某组降级、另一组配到",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 6,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "先指出没变的关系，再带回历史与价格",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "fact_frame",
+        "nextCompilationPhase": "identity_canonical",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "history-contrast-evidence.json",
+        "identity": "finite_model",
+        "localMaterial": "M",
+        "sourceScopedStatus": "identity_candidate_complete"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 7,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "含新牌的组合划除，其余继承权重",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": true,
+      "firstPassRole": "one_child_demo",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "turn-transfer-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "groupOrder": 5,
+      "childOrder": 8,
+      "userParent": "p6",
+      "returnTo": "p6",
+      "primaryQuestion": "关闭未来补牌理由，转向当前胜负与付款/退出",
+      "primaryAction": "changedState",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "handoff": {
+        "nextArchitectureNode": "A8",
+        "outputProjection": [
+          "changedState",
+          "rangeAfterOrStopReason",
+          "ledgerAfter",
+          "successorOrStopReason"
+        ],
+        "successorOrStop": "rangeAfterOrStopReason"
+      },
+      "errorReturn": {
+        "primaryErrorLayer": "board",
+        "allowedLayers": [
+          "board",
+          "hand",
+          "range",
+          "successor"
+        ],
+        "returnStep": "p6_update",
+        "retrySequence": [
+          "mark_wrong_or_unknown_without_explanation_leak",
+          "name_one_error_layer_in_plain_language",
+          "show_one_missing_fact_or_changed_field",
+          "restore_same_parent_and_preserve_first_answer",
+          "retry_one_question_before_full_explanation"
+        ]
+      },
+      "firstPassRepresentative": false,
+      "firstPassRole": "deferred_child",
+      "release": {
+        "currentLevel": "identity_only",
+        "nextCompilationPhase": "identity_source",
+        "exactGradeRequires": "matched_reference_and_successor",
+        "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+        "stopReason": "no_complete_range_or_successor_reference",
+        "requiredForIndependent": [
+          "factInputs",
+          "coursePolicy",
+          "referencePolicy",
+          "rangeBefore",
+          "rangeAfter",
+          "legalSuccessors",
+          "explanation",
+          "transferVariant",
+          "releaseStatus"
+        ],
+        "transferRequired": true,
+        "transferStatus": "not_compiled"
+      },
+      "source": {
+        "evidence": "blocker-teaching-evidence.json",
+        "identity": "fact_or_ledger",
+        "localMaterial": "F",
+        "sourceScopedStatus": "identity_candidate_partial"
+      },
+      "canonicalFieldsMissing": [
+        "street",
+        "role",
+        "actionState",
+        "coursePolicy",
+        "referencePolicy",
+        "rangeBefore",
+        "rangeAfter",
+        "legalSuccessors",
+        "explanation",
+        "transferVariant",
+        "releaseStatus"
+      ],
+      "currentEvidence": {
+        "strategyReady": false,
+        "learnerTrial": false,
+        "unseenTransfer": false,
+        "continuousReady": false,
+        "outcomeStatus": "paper_nested_route_not_released"
+      },
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "returnsToSameParent": true,
+        "unknownCountsAsWrong": true,
+        "missingEvidenceStops": true,
+        "flatHomeVisible": false
+      }
+    }
+  ],
+  "structuralChecks": {
+    "canonicalRouteExact": true,
+    "nestedOuterToInner": true,
+    "all35Mapped": true,
+    "allFiveGroupsPresent": true,
+    "allUnitsHaveOneParent": true,
+    "allUnitsReturnToSameParent": true,
+    "allUnitsHaveOneQuestion": true,
+    "allUnitsHaveOnePrimaryAction": true,
+    "allUnitsHaveRequiredOutputs": true,
+    "allUnitsHaveErrorReturn": true,
+    "allUnitsHaveStopBoundary": true,
+    "allUnitsHaveTransferContract": true,
+    "noFlatHomeVisible": true,
+    "firstPassHasOneRepresentativePerGroup": true,
+    "deferredUnitsRemainInsideParent": true
+  },
+  "contentChecks": {
+    "allCanonicalStrategyFieldsComplete": false,
+    "allExactStrategiesReady": false,
+    "allSuccessorsReady": false,
+    "allLearnerTrialsObserved": false,
+    "allUnseenTransfersObserved": false
+  },
+  "currentEvidence": {
+    "paperRoute": true,
+    "completeStrategyCourse": false,
+    "runtimeReadsCanonicalRoute": false,
+    "learnerFirstPassObserved": false,
+    "learnerTransferObserved": false,
+    "continuousThreeStreetObserved": false,
+    "targetBenchmarkObserved": false
+  },
+  "guards": {
+    "paperRouteDoesNotEqualRuntime": true,
+    "structuralMappingDoesNotEqualExactStrategy": true,
+    "firstPassDoesNotEqual35UnitMastery": true,
+    "continuousRouteDoesNotEqualNL50": true,
+    "missingEvidenceStopsAtParent": true,
+    "unknownCountsAsWrong": true,
+    "noFlatHomeMenu": true
+  },
+  "limitations": [
+    "所有35项目前完成的是结构挂接和停止边界，不是匹配GTO策略课包。",
+    "动作、动作后范围和后继必须在参考快照与课程政策编译完成后才可精确判分。",
+    "运行时尚未读取本合同；真人首遍、迁移、连续三街和NL50目标复核均未发生。"
+  ]
+}

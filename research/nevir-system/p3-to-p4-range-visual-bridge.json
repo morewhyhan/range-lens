@@ -1,0 +1,40 @@
+{
+  "id": "P3_TO_P4_RANGE_VISUAL_BRIDGE_V1",
+  "status": "paper_visual_bridge_written_reference_missing",
+  "purpose": "把物理范围过滤、行动筛选和p4动作比较分开显示，并在同一父帧中连续交接。",
+  "route": ["p3_range","p4_compare"],
+  "sourceFrame": "a72-range-handoff-candidate.json",
+  "views": [
+    {"id":"before_action","center":"fixed_13x13_range","denominator":"visible","filter":"none","answerIdentity":"starting_range_fact"},
+    {"id":"physical_filter","center":"same_fixed_13x13_range","denominator":"same_as_before","filter":"known_card_conflict_only","answerIdentity":"physical_fact"},
+    {"id":"action_filter_locked","center":"same_fixed_13x13_range","denominator":"same_as_before","filter":"unknown_reference","answerIdentity":"missing_reference"},
+    {"id":"compare_return","center":"parent_action_choices","denominator":"parent_snapshot","filter":"no_new_filter","answerIdentity":"flow_fact_or_declared_policy"}
+  ],
+  "requiredStateFields": ["rangeOwner","viewpoint","knownCards","fullHistory","board","rangeBefore","physicalFilter","actionFilterStatus","normalizationDenominator","parentSnapshot","firstAnswer","returnTo"],
+  "semanticSeparation": {
+    "physicalConflictDistinctFromActionFilter": true,
+    "unknownDistinctFromZero": true,
+    "relativeShareIncreaseDoesNotMeanMassIncrease": true,
+    "actionFilterRequiresMatchedPolicy": true
+  },
+  "learnerChecks": ["identify_owner_and_viewpoint","identify_physical_conflict","distinguish_action_filter","return_to_p4"],
+  "errorReturns": {
+    "physical_as_action":"p3_range",
+    "mass_as_share":"p3_range",
+    "jump_to_action":"p3_range",
+    "missing_reference":"stop_at_p3"
+  },
+  "currentEvidence": {
+    "sameCoordinateAndScale": true,
+    "fixedDenominatorWritten": true,
+    "rangeFilterRuntime": false,
+    "matchedActionReference": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "releaseRules": {
+    "unknownReferenceBlocksExactActionFilter": true,
+    "bridgeDoesNotProveStrategy": true,
+    "childReturnsExactParent": true
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "status": "selected_physical_reach_and_terminal_arithmetic_verified_not_independent_full_strategy_accuracy",
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "nodes": 14,
+  "physicalReachWeightsChecked": 12768,
+  "supportedDecisionRows": 4248,
+  "unsupportedDecisionRows": 312,
+  "independentTerminalHandEVChecks": 413,
+  "terminalNumerics": {
+    "maxDoubleReferenceDifferenceUnits": 0.00003962498817600135,
+    "maxFloat32ArithmeticReplayDifferenceUnits": 0,
+    "doubleToleranceUnits": 0.00057220458984375,
+    "float32ReplayToleranceUnits": 0.0001430511474609375,
+    "unitsPerBB": 100,
+    "scope": "Arithmetic roundoff of selected check-through terminal values; not solver convergence or strategic accuracy."
+  },
+  "engineReportedIterations": 1050,
+  "engineReportedMetricBB": 0.005904769897460938,
+  "engineReportedTargetReached": true,
+  "rootAndAfterCheckReloadExactlyPreserved": true,
+  "aggregates": [
+    {
+      "id": "root",
+      "actor": 0,
+      "actions": [
+        "Check",
+        "Bet(198)",
+        "Bet(402)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 154515,
+      "frequencies": [
+        0.0010241800010417626,
+        0.5541444504702319,
+        0.4448313700040639,
+        0
+      ]
+    },
+    {
+      "id": "after_SB_check",
+      "actor": 1,
+      "actions": [
+        "Check",
+        "Bet(198)",
+        "Bet(402)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 158.25117286096793,
+      "frequencies": [
+        0.4456543065920584,
+        0.5489153899673288,
+        0.005430303103810745,
+        0
+      ]
+    },
+    {
+      "id": "after_SB_bet198",
+      "actor": 1,
+      "actions": [
+        "Fold",
+        "Call",
+        "Raise(495)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 85623.62976440787,
+      "frequencies": [
+        0.1562873876945442,
+        0.6937978845977262,
+        0.14991472888883237,
+        0
+      ]
+    },
+    {
+      "id": "after_SB_bet402",
+      "actor": 1,
+      "actions": [
+        "Fold",
+        "Call",
+        "Raise(1005)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 68733.11913617793,
+      "frequencies": [
+        0.3136819974271783,
+        0.6557908795584001,
+        0.030527121648253618,
+        0
+      ]
+    },
+    {
+      "id": "after_SB_check_BB_bet198",
+      "actor": 0,
+      "actions": [
+        "Fold",
+        "Call",
+        "Raise(495)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 86.86650426376556,
+      "frequencies": [
+        0.3616454933327251,
+        0.3562694851041356,
+        0.28208502047914374,
+        0
+      ]
+    },
+    {
+      "id": "turn_Ac",
+      "actor": 0,
+      "actions": [
+        "Check",
+        "Bet(450)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 61.674111516038536,
+      "frequencies": [
+        0.8111139084066606,
+        0.1888860964775282,
+        0
+      ]
+    },
+    {
+      "id": "turn_Ac_after_SB_check",
+      "actor": 1,
+      "actions": [
+        "Check",
+        "Bet(450)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 50.02472963928225,
+      "frequencies": [
+        0.8038040899824029,
+        0.1961959095845007,
+        0
+      ]
+    },
+    {
+      "id": "river_Ac2c",
+      "actor": 0,
+      "actions": [
+        "Check",
+        "Bet(450)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 38.88106441091118,
+      "frequencies": [
+        0.6431549115354466,
+        0.3568291625672314,
+        0.00001593105878752088
+      ]
+    },
+    {
+      "id": "river_Ac2c_after_SB_check",
+      "actor": 1,
+      "actions": [
+        "Check",
+        "Bet(450)",
+        "AllIn(9700)"
+      ],
+      "compatibleMass": 25.00654754160357,
+      "frequencies": [
+        0.5322019406238726,
+        0.4677980572671637,
+        0
+      ]
+    },
+    {
+      "id": "turn_Ac_after_B198C",
+      "actor": 0,
+      "actions": [
+        "Check",
+        "Bet(747)",
+        "AllIn(9502)"
+      ],
+      "compatibleMass": 49393.47328882471,
+      "frequencies": [
+        0.9537756634376929,
+        0.046224336926604784,
+        0
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "research/nevir-system/reference-request-sb-bb-qqq.json": "cd2ad5c2504628415a4399af8999fcc2bd610fd1f576d10b5a0b93100ff8fb8c",
+    "research/nevir-system/sb-bb-qqq-reference-result-v2.json": "eb934dc774a5a2769728450f35c415bf84e12e4040084afb0b34f3361fce417b",
+    "research/nevir-system/sb-bb-qqq-reload-export-v2.json": "9d83fd5c103d0ac926430d21ebf2df3d18737afd4796db78133ebcdfe441eb1d",
+    "research/nevir-system/sb-bb-qqq-reference-v2.bin": "c1941741af914559b0c9d82ecfdb346187bb6fcb6f1cf50ba2f8214967bb3f2f",
+    "research/solver-probe/Cargo.toml": "a885b91aa83af4ca6c7c1a17e73550c09903e2c63cc01442f68028fdea5754e3",
+    "research/solver-probe/Cargo.lock": "3eba95db2071143cb868de4c49c71216d05dd1df7cce48aa4f6794e8a952c1c0",
+    "research/solver-probe/src/bin/sb_bb_qqq_reference_v2.rs": "9cb07344a2a03319e62622a0e1c54149ea4e1cc09dcf5b5affee6f66e056b68d",
+    "research/solver-probe/src/bin/sb_bb_qqq_reload_v2.rs": "8b779086a55ed14dcac04c965d89493a0c33521b612c1c1c2dfc182fe37765c8",
+    "research/solver-probe/target/release/sb_bb_qqq_reference_v2.exe": "85f9043a0a7e5624430a44c2f57d3e3c7e30ee7dc718de716256f20bfd907fbd",
+    "research/solver-probe/target/release/sb_bb_qqq_reload_v2.exe": "114c0acb26168a35a8cf42470235578873cb44f3b350977326b5ba8972e65570"
+  },
+  "originalA72Preserved": true,
+  "sourceCourseConfigurationRecovered": false,
+  "fullIndependentBestResponseVerified": false,
+  "fullCoursePolicyEvaluated": false,
+  "NL50Reference": false,
+  "appChanged": false,
+  "learnerTrials": 0
+}

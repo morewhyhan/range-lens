@@ -1,0 +1,164 @@
+{
+  "status": "public_complete_given_model_tasks_not_frozen_holdout",
+  "context": {
+    "players": 6,
+    "initialBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "board": [
+      "Ks",
+      "9h",
+      "2d",
+      "3c",
+      "7h"
+    ],
+    "hero": [
+      "9c",
+      "9d"
+    ],
+    "history": [
+      "BTN opens2.5; SB raises to10; BB folds; BTN calls; other seats folded",
+      "Flop Ks9h2d: SB bets7; BTN calls7",
+      "Turn3c: SB checks; BTN checks",
+      "River7h: SB to act"
+    ],
+    "start": {
+      "pot": 35,
+      "heroStack": 83,
+      "villainStack": 83,
+      "heroPut": 0,
+      "villainPut": 0,
+      "minRaise": 1
+    },
+    "rake": "none",
+    "priorScope": "Given current river masses; not recovered from a complete preflop/flop/turn policy."
+  },
+  "holdings": [
+    {
+      "id": "KK",
+      "hole": [
+        "Kc",
+        "Kd"
+      ]
+    },
+    {
+      "id": "77",
+      "hole": [
+        "7c",
+        "7d"
+      ]
+    },
+    {
+      "id": "AK",
+      "hole": [
+        "Ac",
+        "Kh"
+      ]
+    },
+    {
+      "id": "QQ",
+      "hole": [
+        "Qc",
+        "Qd"
+      ]
+    },
+    {
+      "id": "QT",
+      "hole": [
+        "Qh",
+        "Tc"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "passive",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 0,
+      "airBet": 0,
+      "fold77ToHeroJam": false
+    },
+    {
+      "id": "induces",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": false
+    },
+    {
+      "id": "worse_folds_to_jam",
+      "weights": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": true
+    },
+    {
+      "id": "strong_raise",
+      "weights": [
+        8,
+        2,
+        3,
+        1,
+        3
+      ],
+      "weakBet": 1,
+      "airBet": 1,
+      "fold77ToHeroJam": false
+    }
+  ],
+  "opponentPolicy": {
+    "afterHeroCheck": "KK/77 bet17.5; AK uses weakBet; QT uses airBet; QQ checks",
+    "afterHeroBet17_5": "KK/77 raise to45; AK calls; QQ calls half and folds half; QT folds",
+    "afterHeroCheckRaise45": "KK/77 jam83; AK calls; QQ/QT fold",
+    "afterHeroJam83": "KK calls;77 calls unless profile explicitly folds77ToHeroJam; other hands fold",
+    "information": "Only own holding and public history; no access to hero hidden cards"
+  },
+  "menu": {
+    "heroRoot": [
+      "check",
+      "bet17.5"
+    ],
+    "afterVillainBet": [
+      "fold",
+      "call17.5",
+      "raise45",
+      "jam83"
+    ],
+    "afterVillainRaise": [
+      "fold",
+      "call27.5",
+      "jam83"
+    ],
+    "afterVillainJam": [
+      "fold",
+      "call38"
+    ],
+    "omitted": "All other legal sizes and opponent responses are omitted. Optimality is only against the declared fixed policies in this menu, not full-game equilibrium."
+  },
+  "tasks": [
+    "原位比较直接下注与先过牌",
+    "对手下注后分清能赢的价值牌与诈唬，再比较跟加",
+    "自己的价值下注被加到45后，重新看范围与价格",
+    "只改变77面对全下的回应，比较跟与再加"
+  ],
+  "unknownCountsAsError": true,
+  "persistence": "none; research packets only"
+}

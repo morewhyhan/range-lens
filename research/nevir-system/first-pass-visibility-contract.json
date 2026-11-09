@@ -1,0 +1,26 @@
+{
+  "id": "FIRST_PASS_VISIBILITY_CONTRACT_V1",
+  "status": "visibility_layers_written_not_trialed",
+  "purpose": "在不删除状态字段的前提下，把每个首遍步骤拆成当前可见、答后显示、暗中交接和子层详情，控制低基础用户的屏幕负荷。",
+  "sourceCrosswalk": "first-pass-runtime-output-crosswalk.json",
+  "steps": [
+    {"id":"p1_context","visibleNow":["actor","history","toCallBB","potBB","stacksBB"],"answerThen":["street","facingAction","effectiveStackBB"],"carriedHidden":["role","actionState","factInputs"],"childDetails":[],"visualBlocks":["table","history","action"],"maxNewConcepts":1},
+    {"id":"p2_board","visibleNow":["bestFive","handClass","improvementCards"],"answerThen":[],"carriedHidden":["factInputs"],"childDetails":["boardClass","pairedRelation","connectedRelation","flushRelation","newCardChange","directDraws","backdoorDraws","blockerFacts"],"visualBlocks":["cards","handSummary","improvement"],"maxNewConcepts":1},
+    {"id":"p3_range","visibleNow":["rangeOwner","physicalFilter","actionFilterStatus","normalizationDenominator"],"answerThen":["rangeAfter","beforeAfterChangedCells","viewpoint"],"carriedHidden":["sourceIdentity","rangeBefore"],"childDetails":[],"visualBlocks":["rangeGrid","filterLegend","answer"],"maxNewConcepts":1},
+    {"id":"p4_compare","visibleNow":["legalActions","price","actionPurpose"],"answerThen":["answerIdentity","worseContinuations","betterFolds","futureBranches"],"carriedHidden":["actionState","coursePolicy","referencePolicy","legalSuccessors"],"childDetails":[],"visualBlocks":["choices","price","purpose"],"maxNewConcepts":1},
+    {"id":"p5_execute","visibleNow":["selectedAction","amountBB"],"answerThen":["potAfterBB","stacksAfterBB","nextActor"],"carriedHidden":["coursePolicy","referencePolicy","factInputs"],"childDetails":[],"visualBlocks":["action","amount","ledger"],"maxNewConcepts":1},
+    {"id":"p6_update","visibleNow":["changedField","rangeAfter"],"answerThen":["ledgerAfter","futureOpportunityOrClosed","newCardEffect","nextActor","successorOrTerminal"],"carriedHidden":["legalSuccessors","factInputs"],"childDetails":["newRangeSnapshot"],"visualBlocks":["change","range","next"],"maxNewConcepts":1},
+    {"id":"p7_close","visibleNow":["settlement","decisionResultSeparation","errorLayer"],"answerThen":["nextRoundEntry","routeRecall","oneVariableTransferTarget"],"carriedHidden":["errorReturn","transferVariant","releaseStatus"],"childDetails":[],"visualBlocks":["result","error","next"],"maxNewConcepts":1}
+  ],
+  "rules": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "maxVisualBlocks": 3,
+    "oneNewUnmasteredConcept": true,
+    "hiddenIsCarriedNotDeleted": true,
+    "answerThenAfterFirstAttempt": true,
+    "childDetailsOnDemand": true,
+    "unknownHasExplicitStopState": true
+  },
+  "currentEvidence": {"paperContract": true,"runtimeImplemented": false,"adultBeginnerTrial": false,"routeComprehensionEvidence": false}
+}

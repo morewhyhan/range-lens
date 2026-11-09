@@ -1,0 +1,3175 @@
+{
+  "status": "author_reference_keys_not_learner_performance",
+  "questionsTotal": 85,
+  "defaultTrainingFeedback": "immediate",
+  "frozenTest": false,
+  "learnerDataStored": false,
+  "references": [
+    {
+      "id": "M-c797f3b3a39357ac",
+      "inputFingerprint": "c797f3b3a39357aca2103039bfdcb67e7b8e3cb2e5b1bb7cbc76543092754d6f",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 96
+        }
+      ],
+      "bestEV": 96,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "passive",
+          "node": "after_xraise_villain_jam",
+          "originShiftBB": 45
+        },
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "induces",
+          "node": "after_xraise_villain_jam",
+          "originShiftBB": 45
+        },
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "worse_folds_to_jam",
+          "node": "after_xraise_villain_jam",
+          "originShiftBB": 45
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_allin"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-2a6236ea7b5acbbb",
+      "inputFingerprint": "2a6236ea7b5acbbbaec7b1750e4b6605e1133f831a59ac3e8762a21b55d591c4",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 29.166666666666668
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 51
+        },
+        {
+          "choiceId": "p3",
+          "evBB": 51
+        }
+      ],
+      "bestEV": 51,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        },
+        {
+          "choiceId": "p3"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "passive",
+          "node": "after_check_villain_bet17.5",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-7c3585a9a1a4ef4e",
+      "inputFingerprint": "7c3585a9a1a4ef4ed1616ad7e2e79d3df54357e87b00a3d5cc9cdc66b49febef",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 55.833333333333336
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 68.5
+        }
+      ],
+      "bestEV": 68.5,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "passive",
+          "node": "after_lead_villain_raise45",
+          "originShiftBB": 17.5
+        },
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "induces",
+          "node": "after_lead_villain_raise45",
+          "originShiftBB": 17.5
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-618f335997d71c89",
+      "inputFingerprint": "618f335997d71c8907cc9d1b88869ea42501077ee8f7f61a0931e73625a41d2a",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 39.8
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 45.925
+        }
+      ],
+      "bestEV": 45.925,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "passive",
+          "node": "river_start",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-980297769b3398ff",
+      "inputFingerprint": "980297769b3398ff6b96d694a10df2eefe9591366c7c77a8087dc305543f95ab",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 44.72222222222222
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 61.166666666666664
+        },
+        {
+          "choiceId": "p3",
+          "evBB": 52
+        }
+      ],
+      "bestEV": 61.166666666666664,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "induces",
+          "node": "after_check_villain_bet17.5",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-621ea4c65f3d92aa",
+      "inputFingerprint": "621ea4c65f3d92aa3119aa46ecfabcf2acfa923b7cc7017421b22614c287556b",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 58.55
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 45.925
+        }
+      ],
+      "bestEV": 58.55,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "induces",
+          "node": "river_start",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-e5f62377d3db21c4",
+      "inputFingerprint": "e5f62377d3db21c4d45aabe05c4e4b78e6b3c103e751308bef63f9b3929e723c",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 44.72222222222222
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 61.166666666666664
+        },
+        {
+          "choiceId": "p3",
+          "evBB": 37.44444444444444
+        }
+      ],
+      "bestEV": 61.166666666666664,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "worse_folds_to_jam",
+          "node": "after_check_villain_bet17.5",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-ce099baa7c11b2b2",
+      "inputFingerprint": "ce099baa7c11b2b29a29585f381acbea1a682cba1ad0d2e5e44c1f6ba03985bd",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 55.833333333333336
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 43.16666666666667
+        }
+      ],
+      "bestEV": 55.833333333333336,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "worse_folds_to_jam",
+          "node": "after_lead_villain_raise45",
+          "originShiftBB": 17.5
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-faae2c247429810f",
+      "inputFingerprint": "faae2c247429810f7ed79ee448b75463ebf41c1fa3a4db6709e3a8b3c590d061",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 58.55
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 42.125
+        }
+      ],
+      "bestEV": 58.55,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "worse_folds_to_jam",
+          "node": "river_start",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-faf7125c4e97bd3b",
+      "inputFingerprint": "faf7125c4e97bd3bd1cf6d75b9b25a1cae5e064c6fb1d4f4a5f7cfb804cdb921",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 2.200000000000003
+        }
+      ],
+      "bestEV": 2.200000000000003,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "strong_raise",
+          "node": "after_xraise_villain_jam",
+          "originShiftBB": 45
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_allin"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-95a9e7fa48e326c2",
+      "inputFingerprint": "95a9e7fa48e326c213eb9600eb42e7a0e6d751bfb79013fca76aeeb36d376e8e",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 17.5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -1.90625
+        },
+        {
+          "choiceId": "p3",
+          "evBB": -7.0625
+        }
+      ],
+      "bestEV": 17.5,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "strong_raise",
+          "node": "after_check_villain_bet17.5",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-17013f3a2881ebdb",
+      "inputFingerprint": "17013f3a2881ebdb71486aa4a4c350be9311f3558e73f1c893b2faaff5235ced",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -2.5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -25.299999999999997
+        }
+      ],
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "strong_raise",
+          "node": "after_lead_villain_raise45",
+          "originShiftBB": 17.5
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-9003894733f3fa1f",
+      "inputFingerprint": "9003894733f3fa1f3d52f3229ab62311ba589afd5046ff93221a97169c2d8777",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 18.529411764705884
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 7.720588235294118
+        }
+      ],
+      "bestEV": 18.529411764705884,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "value-trap-tree-evidence.json",
+          "profile": "strong_raise",
+          "node": "river_start",
+          "originShiftBB": 0
+        }
+      ],
+      "family": "river_value",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-689bd0d9ae25a746",
+      "inputFingerprint": "689bd0d9ae25a7466022130e2a3e13b258d186d3547b4a530e4587d8ad32e5af",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -0.15909090909091006
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -30
+        },
+        {
+          "choiceId": "p3",
+          "evBB": -33.87662337662328
+        }
+      ],
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "defense-tree-evidence.json",
+          "profile": "pressure"
+        }
+      ],
+      "family": "turn_defense",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-1517092e089e13f9",
+      "inputFingerprint": "1517092e089e13f939da53128d5095440579071ce73b2a5ee003fd81502b6926",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 0.39772727272727604
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -19.193181818181813
+        },
+        {
+          "choiceId": "p3",
+          "evBB": -19.193181818181777
+        }
+      ],
+      "bestEV": 0.39772727272727604,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "defense-tree-evidence.json",
+          "profile": "more_bluffs"
+        }
+      ],
+      "family": "turn_defense",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-42f47374dd1800b0",
+      "inputFingerprint": "42f47374dd1800b094f802bcb4ce5d88f513c0bd9876555288af6cab5c5f47ee",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -0.15909090909091006
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 1.9155844155844202
+        },
+        {
+          "choiceId": "p3",
+          "evBB": -33.87662337662328
+        }
+      ],
+      "bestEV": 1.9155844155844202,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "defense-tree-evidence.json",
+          "profile": "fold_to_raise"
+        }
+      ],
+      "family": "turn_defense",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-1e0617626fd72882",
+      "inputFingerprint": "1e0617626fd72882d9073504c5d851c91322a9a926ceade4c6446de6f3e3b70e",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -0.15909090909091006
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -30
+        },
+        {
+          "choiceId": "p3",
+          "evBB": 14.44805194805195
+        }
+      ],
+      "bestEV": 14.44805194805195,
+      "bestActions": [
+        {
+          "choiceId": "p3"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "defense-tree-evidence.json",
+          "profile": "fold_to_shove"
+        }
+      ],
+      "family": "turn_defense",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "turn",
+        "decision": "facing_bet"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-cdbbd0d18ae19b6f",
+      "inputFingerprint": "cdbbd0d18ae19b6fce7e7f4446cd38f2f6508f2a7eef3483da0eca965a22cb13",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 8
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 9.5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 10
+        }
+      ],
+      "bestEV": 10,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "equityFallsButLargeWins"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6d41feff8a47ea6a",
+      "inputFingerprint": "6d41feff8a47ea6a227d806dcc086a4a65f3cf13b02312f7d7b3b287b0de243a",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 10
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 15
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 20
+        }
+      ],
+      "bestEV": 20,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "valueLarge"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-3f12580e3e4fc2a2",
+      "inputFingerprint": "3f12580e3e4fc2a28002c849218a85604855b9536f66e3275df0e26561dae93e",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 10
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 15
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 10
+        }
+      ],
+      "bestEV": 15,
+      "bestActions": [
+        {
+          "choiceId": "p1"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "valueSmall"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-9db0b52237b352f2",
+      "inputFingerprint": "9db0b52237b352f2b77354a9199034fe5794dc61532cc4aaa0304f45414b09c9",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": -10
+        }
+      ],
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "checkBetter"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-300597ef8d6f57a1",
+      "inputFingerprint": "300597ef8d6f57a15db7037efc21bd74f3cb3a9bfbe36b99e26b25f367737975",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 5
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 5
+        }
+      ],
+      "bestEV": 5,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        },
+        {
+          "choiceId": "p1"
+        },
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "allTie"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-bcdaa8f191db420a",
+      "inputFingerprint": "bcdaa8f191db420a5846e768a91a0429f5b1ecb0ceb806a8b6848f2eaefa6d94",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 10
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 10
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 10
+        }
+      ],
+      "bestEV": 10,
+      "bestActions": [
+        {
+          "choiceId": "p0"
+        },
+        {
+          "choiceId": "p1"
+        },
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "foldsWorseButGainsNothing"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-dd706034bb2b118d",
+      "inputFingerprint": "dd706034bb2b118dd3d4cc68fc293068af222a5bd2607c63c22d72b3aea60615",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 0
+        },
+        {
+          "choiceId": "p1",
+          "evBB": -5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 10
+        }
+      ],
+      "bestEV": 10,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "foldsBetterAndWins"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-aa9ef6c09797f43e",
+      "inputFingerprint": "aa9ef6c09797f43ef22ee8b30aff3c274e9ff4c7912b43732ea0cdbc692ebe30",
+      "domain": "finite_candidate_plans",
+      "planValues": [
+        {
+          "choiceId": "p0",
+          "evBB": 5
+        },
+        {
+          "choiceId": "p1",
+          "evBB": 5
+        },
+        {
+          "choiceId": "p2",
+          "evBB": 10
+        }
+      ],
+      "bestEV": 10,
+      "bestActions": [
+        {
+          "choiceId": "p2"
+        }
+      ],
+      "contributors": [
+        {
+          "file": "size-comparison-evidence.json",
+          "example": "tieHandFoldsToLarge"
+        }
+      ],
+      "family": "river_size",
+      "context": {
+        "position": "IP",
+        "potType": "SRP",
+        "street": "river",
+        "decision": "free"
+      },
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-d1cd9592518ba3bc",
+      "inputFingerprint": "d1cd9592518ba3bc7a61df88d22eabf7f186d72fb11fc023924724d75b0e067c",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.2666666666666667,
+      "minRaiseEV": -14.333333333333325,
+      "jamEV": -22.033333333333328,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-17838d06c6aec31e"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-4d5da055459423ed",
+      "inputFingerprint": "4d5da055459423ed23e022b350aa79083d13c3ee70a3bc7ec532e38d0079df2c",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.30000000000000004,
+      "minRaiseEV": -9.249999999999996,
+      "jamEV": -16.59999999999999,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-86791d3b0b4bae66"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6f09529eaefe02bf",
+      "inputFingerprint": "6f09529eaefe02bf2efe7ecfb31003611e9692978875808d99ebbcf982729471",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.32,
+      "minRaiseEV": -6.199999999999999,
+      "jamEV": -13.34,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-b8c38e58220ccba7"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-aa618423835901a6",
+      "inputFingerprint": "aa618423835901a6713f537c4dc6b236469b7183eb68a82e9165d5166ceb0d82",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.3333333333333333,
+      "minRaiseEV": -4.166666666666671,
+      "jamEV": -11.166666666666671,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-faa597db1f0e7ab0"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-7b12beba6921fd45",
+      "inputFingerprint": "7b12beba6921fd4541f9b07df5cd678ba800ceac974ebd8753c857c7d4d55af1",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.3466666666666667,
+      "minRaiseEV": -2.1333333333333258,
+      "jamEV": -8.993333333333325,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-f6aa784210c514ad"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-e60e54e694c07f0c",
+      "inputFingerprint": "e60e54e694c07f0ca278102194cdf7c1c47dba06016195dd55cf781c88b05673",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.36000000000000004,
+      "minRaiseEV": -0.09999999999999432,
+      "jamEV": -6.819999999999993,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-3689211a7d2a08f8"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-7254d32b66fdf5d9",
+      "inputFingerprint": "7254d32b66fdf5d9fd8dd96bd6084de425fcf7e784e3154fb75cc470fd25305b",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.3666666666666667,
+      "minRaiseEV": 0.9166666666666714,
+      "jamEV": -5.733333333333334,
+      "bestEV": 0.9166666666666714,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-7144d9baad76f88e"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-eb11d565fc245ab2",
+      "inputFingerprint": "eb11d565fc245ab26f6b37f28d5c21d6044052d272e725e72e4962a80d5ec07e",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.38,
+      "minRaiseEV": 2.9499999999999957,
+      "jamEV": -3.5600000000000023,
+      "bestEV": 2.9499999999999957,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-9620c4836ebf7dbe"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-2bb67c1a2d1320f5",
+      "inputFingerprint": "2bb67c1a2d1320f5b17c2a21c10a9e910476f044a2e5159fd514419e6283f6bb",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.39999999999999997,
+      "minRaiseEV": 5.999999999999993,
+      "jamEV": -0.30000000000000426,
+      "bestEV": 5.999999999999993,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-d7e05bbddc841d65"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-1ae32378d4065ccb",
+      "inputFingerprint": "1ae32378d4065ccb448bf322dba7d4565a8717854886f034de02c9f062d17b04",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.43333333333333335,
+      "minRaiseEV": 11.083333333333336,
+      "jamEV": 5.133333333333333,
+      "bestEV": 11.083333333333336,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-585c0e0fce68bc8b"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-ee676c25603a2c96",
+      "inputFingerprint": "ee676c25603a2c96fd07a46b01408ed76082390509c9cc9011ef58b2d7c77041",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.46666666666666656,
+      "minRaiseEV": 16.166666666666654,
+      "jamEV": 10.566666666666656,
+      "bestEV": 16.166666666666654,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-66c68254d5fe7eeb"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-7897165c0e0eb2dd",
+      "inputFingerprint": "7897165c0e0eb2dd77716c285e4af2b6370ce812f281524f25746f90af794dc7",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.5333333333333334,
+      "minRaiseEV": 26.333333333333346,
+      "jamEV": 21.433333333333348,
+      "bestEV": 26.333333333333346,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-2e0a56a31da3fa24"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-14504f8f37603040",
+      "inputFingerprint": "14504f8f37603040aee959e64863384f97625e8c9fc5112c01c1da85958ddb3c",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.6000000000000001,
+      "minRaiseEV": 36.500000000000014,
+      "jamEV": 32.30000000000001,
+      "bestEV": 36.500000000000014,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-cd825cd910adfbdf"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-18da983aad66d68d",
+      "inputFingerprint": "18da983aad66d68d99f6c6e4e91bc748a7439b20cf5e5918e376000de156a1f8",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.6666666666666666,
+      "minRaiseEV": 46.666666666666664,
+      "jamEV": 43.166666666666664,
+      "bestEV": 46.666666666666664,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-51701dee78359518"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-f926740d388ec9ca",
+      "inputFingerprint": "f926740d388ec9ca2b350371507f6d7f33c0ef9d4df74091898237fdbe12c9a4",
+      "heroVariant": "hearts",
+      "KQoFoldProbability": 0.5409836065573771,
+      "foldShare": 0.3606557377049181,
+      "minRaiseEV": 1.4210854715202004e-14,
+      "jamEV": -6.713114754098349,
+      "bestEV": 1.4210854715202004e-14,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-bbb9606043db283e"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-74c333522435d787",
+      "inputFingerprint": "74c333522435d787de79013c5b992af9571354f9533b53b3e5d933e150b0c855",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.3111111111111111,
+      "minRaiseEV": -7.555555555555554,
+      "jamEV": -14.788888888888888,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-3431d74610938ab5"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-1d42d115ba24e4b4",
+      "inputFingerprint": "1d42d115ba24e4b4a60289289380b25a2221ce14d07ac96ff8a171ed90fd8e09",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.35,
+      "minRaiseEV": -1.625,
+      "jamEV": -8.450000000000003,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-9a74b404b45fa680"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6977c83d150fca92",
+      "inputFingerprint": "6977c83d150fca92d7aefce2161887860953911c1c7c982d29bdcd72201be211",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.3733333333333333,
+      "minRaiseEV": 1.93333333333333,
+      "jamEV": -4.646666666666668,
+      "bestEV": 1.93333333333333,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-33f9d5459aed9b35"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-8b0304fd99e7c757",
+      "inputFingerprint": "8b0304fd99e7c757caab0057ad875e08543e365b27fd69972d968b21c115ed77",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.3888888888888889,
+      "minRaiseEV": 4.30555555555555,
+      "jamEV": -2.1111111111111143,
+      "bestEV": 4.30555555555555,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-0c137ea1b478852e"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-5bf956c6068257eb",
+      "inputFingerprint": "5bf956c6068257ebfdc7e30ad8e03c0ea92f836f4dcb969a61ddf68eea2db293",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.40444444444444444,
+      "minRaiseEV": 6.67777777777777,
+      "jamEV": 0.42444444444443974,
+      "bestEV": 6.67777777777777,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-412eeb2c77121b4a"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-a40db6e60c5ae8c0",
+      "inputFingerprint": "a40db6e60c5ae8c073a38395257c72f9ebfea8929deddd03d8d5fce583ede1ac",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.42000000000000004,
+      "minRaiseEV": 9.050000000000004,
+      "jamEV": 2.960000000000008,
+      "bestEV": 9.050000000000004,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-7407bb1dfd9ab916"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-cc81b316270b2e6e",
+      "inputFingerprint": "cc81b316270b2e6ef2e650ac3b7c2064afc453566d53e274742153b4ddbba0e6",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.4277777777777778,
+      "minRaiseEV": 10.236111111111114,
+      "jamEV": 4.227777777777781,
+      "bestEV": 10.236111111111114,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-95499751e19da499"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6ccceb9c15e45dd4",
+      "inputFingerprint": "6ccceb9c15e45dd45359b077fa8a6314037ea8b74d896307793fb4ee747caa63",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.4433333333333333,
+      "minRaiseEV": 12.608333333333327,
+      "jamEV": 6.763333333333328,
+      "bestEV": 12.608333333333327,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-adc0fb757c1dd616"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-44a1caf58ed9d67b",
+      "inputFingerprint": "44a1caf58ed9d67b767a1029595932db1ca4da87d8f207e68239f7b9cfcc50cd",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.4666666666666667,
+      "minRaiseEV": 16.166666666666668,
+      "jamEV": 10.56666666666667,
+      "bestEV": 16.166666666666668,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-91be3d10aef7a12a"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-94158140e7c66938",
+      "inputFingerprint": "94158140e7c669382e98ac446255b2d47be1ba1d3c3c98eee8c4340daabf0168",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.5055555555555555,
+      "minRaiseEV": 22.097222222222218,
+      "jamEV": 16.90555555555555,
+      "bestEV": 22.097222222222218,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-4ffadcf56ca1a2cb"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-58954f95749bdee9",
+      "inputFingerprint": "58954f95749bdee9d16ecf976bc12be1b5ceffcb59f25575438734e8029f2d81",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.5444444444444444,
+      "minRaiseEV": 28.02777777777777,
+      "jamEV": 23.244444444444436,
+      "bestEV": 28.02777777777777,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-39e84e4692e1a699"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-292ab348d707728e",
+      "inputFingerprint": "292ab348d707728ea7a04f585b392efa3f0f1bc86d4ae1259c2b5fb28e27827e",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.6222222222222222,
+      "minRaiseEV": 39.888888888888886,
+      "jamEV": 35.92222222222222,
+      "bestEV": 39.888888888888886,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-6ecf9913d1420718"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-790a30ad86183b23",
+      "inputFingerprint": "790a30ad86183b23a51cbc84ed3faf899878625a9fb2f9c8a5f6ccb74fd9368b",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.7,
+      "minRaiseEV": 51.75,
+      "jamEV": 48.599999999999994,
+      "bestEV": 51.75,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-fcb6a7fb3fab00bd"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-99d023853421fa8f",
+      "inputFingerprint": "99d023853421fa8f5e0aafc0e9b0bb10b99ec61bf16655d9f02e0e29f40646ec",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.7777777777777778,
+      "minRaiseEV": 63.61111111111111,
+      "jamEV": 61.27777777777777,
+      "bestEV": 63.61111111111111,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-eb6b610f2941e234"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-81467d6d538f3ca8",
+      "inputFingerprint": "81467d6d538f3ca81645c6b2deb0d3771b9ea517bd223ebe7c00d4e61333bbb7",
+      "heroVariant": "clubs",
+      "KQoFoldProbability": 0.4637002341920375,
+      "foldShare": 0.36065573770491804,
+      "minRaiseEV": 0,
+      "jamEV": -6.713114754098363,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-db0ad00ccfb460c8"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-9e6d8d7fbaec3b41",
+      "inputFingerprint": "9e6d8d7fbaec3b41d1dae6abd6bbe58eb4233a81cd52e4dcd83754b6cbd97335",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.28,
+      "minRaiseEV": -12.299999999999997,
+      "jamEV": -19.859999999999992,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-dbaeb993b23c31d9"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-52fa769f1e06517f",
+      "inputFingerprint": "52fa769f1e06517f3abd4713a1bae4f38430d6063e31970530a33023939a2ccf",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.315,
+      "minRaiseEV": -6.962500000000006,
+      "jamEV": -14.155000000000008,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-bb1655ac9cf41ff2"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-9054ea6f9aede516",
+      "inputFingerprint": "9054ea6f9aede5169ddc66f31875159c33f1b81731777525147b903c93b0147e",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.33599999999999997,
+      "minRaiseEV": -3.760000000000005,
+      "jamEV": -10.732000000000006,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-55c4e534318d8640"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-b80c88aa65f1e65a",
+      "inputFingerprint": "b80c88aa65f1e65ac29c6407f68939ec6a34cf89e571a609ff5bead7b302b906",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.35,
+      "minRaiseEV": -1.625,
+      "jamEV": -8.450000000000003,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-6781f06917838fef"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-24ff4cc8113f2114",
+      "inputFingerprint": "24ff4cc8113f2114b6ee73177b90644b3bbe0f09ddf4fce6973ee64d22c41b33",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.364,
+      "minRaiseEV": 0.509999999999998,
+      "jamEV": -6.167999999999999,
+      "bestEV": 0.509999999999998,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-9ec0425f761316e8"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-ae6f8482ef793b6b",
+      "inputFingerprint": "ae6f8482ef793b6bcde9be491c793de99ee59464964ce52ddfa79b86303869a1",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.378,
+      "minRaiseEV": 2.644999999999996,
+      "jamEV": -3.886000000000003,
+      "bestEV": 2.644999999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-21c20ec1084a45f7"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-66db9c53513a867e",
+      "inputFingerprint": "66db9c53513a867ec3fb6b90be264d8e62fa978bcbf1d2579159131abc4564db",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.38500000000000006,
+      "minRaiseEV": 3.7125000000000057,
+      "jamEV": -2.7449999999999903,
+      "bestEV": 3.7125000000000057,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-bf1e434d4e513235"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-506cee0379de7076",
+      "inputFingerprint": "506cee0379de7076a3b30f77b51f36e668942ac8ba15c69109ca22a55e7a9230",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.39899999999999997,
+      "minRaiseEV": 5.847499999999997,
+      "jamEV": -0.46300000000000097,
+      "bestEV": 5.847499999999997,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-6cf9d7473e7dc200"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-7d52fe1f2a61446c",
+      "inputFingerprint": "7d52fe1f2a61446c8a30ef011a90f3c495c7bdaf997bb924db7704a498bf4c33",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.42000000000000004,
+      "minRaiseEV": 9.050000000000004,
+      "jamEV": 2.960000000000008,
+      "bestEV": 9.050000000000004,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-acd8ec7f32935193"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-76133fb727d4a5ff",
+      "inputFingerprint": "76133fb727d4a5ff5bd342fe428582267a7b75d119e83fb4a860d2b0351bb6b0",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.45499999999999996,
+      "minRaiseEV": 14.387499999999996,
+      "jamEV": 8.664999999999992,
+      "bestEV": 14.387499999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-851148e10635796a"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-57c3683da28562bf",
+      "inputFingerprint": "57c3683da28562bfa4a80b3a034553e46f542a1acfeba85ace61c200a565e263",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.48999999999999994,
+      "minRaiseEV": 19.72499999999999,
+      "jamEV": 14.36999999999999,
+      "bestEV": 19.72499999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-432a4f62633006b5"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-4ee886f1fcc21ab5",
+      "inputFingerprint": "4ee886f1fcc21ab576cba4cdd4407cae055a1bf0ba42db03c5b75eaf18d57901",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.56,
+      "minRaiseEV": 30.400000000000013,
+      "jamEV": 25.780000000000012,
+      "bestEV": 30.400000000000013,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-f4315ab56fd6bcb7"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-4aad6df320e223f6",
+      "inputFingerprint": "4aad6df320e223f6c2feaf45648c8fb4dc01982819eac0394d8249e63dadd99f",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.63,
+      "minRaiseEV": 41.074999999999996,
+      "jamEV": 37.19,
+      "bestEV": 41.074999999999996,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-589434518ff639bb"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-17759599804d6ac2",
+      "inputFingerprint": "17759599804d6ac2b31cd776ded7366a0f29503ca92896779e3edaf7bb93d2d1",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.7,
+      "minRaiseEV": 51.75,
+      "jamEV": 48.599999999999994,
+      "bestEV": 51.75,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-7d6abbefe4f9b8ef"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-3037c4477e1024ed",
+      "inputFingerprint": "3037c4477e1024ed4e012d32b357e2da47ce2ede0351025b358851383332b2c2",
+      "heroVariant": "Aheart_Qclub",
+      "KQoFoldProbability": 0.5152224824355972,
+      "foldShare": 0.36065573770491804,
+      "minRaiseEV": 0,
+      "jamEV": -6.713114754098363,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-43e70951724dd13d"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-d8b9360f52d1671b",
+      "inputFingerprint": "d8b9360f52d1671b8e1c74e1ba2be67cf988f75771cb8e1c4705d92d8bb47287",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.4,
+      "foldShare": 0.30000000000000004,
+      "minRaiseEV": -9.249999999999996,
+      "jamEV": -16.59999999999999,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-0f447b21219b4df1"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-4d6e03c17ad970b9",
+      "inputFingerprint": "4d6e03c17ad970b91d5fa624c6feed133b8d946eabbf50b28559f82070ea1109",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.45,
+      "foldShare": 0.3375,
+      "minRaiseEV": -3.53125,
+      "jamEV": -10.487499999999997,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-aa758623ec781d86"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-b12e9b5114778a03",
+      "inputFingerprint": "b12e9b5114778a03d0aa9fa5b6971cf4cd7c0bf066db6dd9003f962811c74bb9",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.48,
+      "foldShare": 0.36,
+      "minRaiseEV": -0.10000000000000142,
+      "jamEV": -6.82,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-1fd5abb034e0775c"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-9b48bc577db53d73",
+      "inputFingerprint": "9b48bc577db53d73b38f45140b64ba4504f4418c94a5ea9abe492f59153ea168",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.5,
+      "foldShare": 0.375,
+      "minRaiseEV": 2.1875,
+      "jamEV": -4.375,
+      "bestEV": 2.1875,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-c467e7fc4f54745a"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-a035ebe7c523505b",
+      "inputFingerprint": "a035ebe7c523505b7793b801a158d705f19704bb3a7794506c2586ff1f5db313",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.52,
+      "foldShare": 0.39,
+      "minRaiseEV": 4.475000000000001,
+      "jamEV": -1.9299999999999997,
+      "bestEV": 4.475000000000001,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-5c424f71ee9b8742"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-4c6f85c2e21f58b9",
+      "inputFingerprint": "4c6f85c2e21f58b9679a472eca325deb38682d900893237b371d31dc32e72dca",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.54,
+      "foldShare": 0.405,
+      "minRaiseEV": 6.762500000000003,
+      "jamEV": 0.5150000000000077,
+      "bestEV": 6.762500000000003,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-30aa94c6a30f68ed"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-2a5b1efb6f32eb18",
+      "inputFingerprint": "2a5b1efb6f32eb18a78102d9d480706e21b80dc39ac1563fd85d36571603f744",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.55,
+      "foldShare": 0.41250000000000003,
+      "minRaiseEV": 7.906250000000007,
+      "jamEV": 1.7375000000000043,
+      "bestEV": 7.906250000000007,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-c9f8a1f9379450b7"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-2d81b0be6e76202b",
+      "inputFingerprint": "2d81b0be6e76202bb4cda0c99b5e7e305daa599f7614ad38ea0920a3c9cbd24c",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.57,
+      "foldShare": 0.4275,
+      "minRaiseEV": 10.193749999999998,
+      "jamEV": 4.182499999999997,
+      "bestEV": 10.193749999999998,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-fc5d70bc2460f59f"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-3c0adb28f35927b5",
+      "inputFingerprint": "3c0adb28f35927b5180c0ac740ecdfb1b4d6a306f9ad79e40757d41b7a32a2f4",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.6,
+      "foldShare": 0.44999999999999996,
+      "minRaiseEV": 13.62499999999999,
+      "jamEV": 7.849999999999987,
+      "bestEV": 13.62499999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-cac47499c0f5b5e1"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6dfc1d62cf491e5c",
+      "inputFingerprint": "6dfc1d62cf491e5c0751259cf2a6f5ea99c8336225d32b085c9592d0b3948708",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.65,
+      "foldShare": 0.48750000000000004,
+      "minRaiseEV": 19.34375000000001,
+      "jamEV": 13.962500000000013,
+      "bestEV": 19.34375000000001,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-57833a9773fb6b67"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6201aacb49228476",
+      "inputFingerprint": "6201aacb492284760c7c9192ff1a02e548767e3d9fb71f32d0cb4728281b6abf",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.7,
+      "foldShare": 0.5249999999999999,
+      "minRaiseEV": 25.06249999999999,
+      "jamEV": 20.07499999999999,
+      "bestEV": 25.06249999999999,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-17f82066f04e1f83"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-6fe2e1d2ae9e0362",
+      "inputFingerprint": "6fe2e1d2ae9e03629b4732d4f3d9086e69193efe1e05c8ea15f59c981362ce90",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.8,
+      "foldShare": 0.6000000000000001,
+      "minRaiseEV": 36.500000000000014,
+      "jamEV": 32.30000000000001,
+      "bestEV": 36.500000000000014,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-abc05a7cb9541b44"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-697f8f61c1f20e67",
+      "inputFingerprint": "697f8f61c1f20e67d18161ba6e4a53e81ce12b70be79fe1c9cedd784356e338e",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.9,
+      "foldShare": 0.675,
+      "minRaiseEV": 47.9375,
+      "jamEV": 44.525000000000006,
+      "bestEV": 47.9375,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "new_parameter_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-f23af51710a63050"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-364790a95c4856b1",
+      "inputFingerprint": "364790a95c4856b18b1874b12fa2f0921585c566c2fb92e54afa3ff7cd2d1ac9",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 1,
+      "foldShare": 0.75,
+      "minRaiseEV": 59.375,
+      "jamEV": 56.75,
+      "bestEV": 59.375,
+      "bestActions": [
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "published_parameter_profile",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-abf51af38ca848f0"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    },
+    {
+      "id": "M-1625741597a4f233",
+      "inputFingerprint": "1625741597a4f233e7bcd7a5df8716fe969efd059c404b511b59647086e08dd0",
+      "heroVariant": "Aclub_Qheart",
+      "KQoFoldProbability": 0.4808743169398907,
+      "foldShare": 0.360655737704918,
+      "minRaiseEV": -7.105427357601002e-15,
+      "jamEV": -6.71311475409837,
+      "bestEV": 0,
+      "bestActions": [
+        {
+          "action": "fold"
+        },
+        {
+          "action": "raise",
+          "to": 72.5
+        }
+      ],
+      "parameterIdentity": "exact_indifference_boundary_same_published_mechanism",
+      "scope": "Current-node application inside one declared mechanism family, not NL50 or unseen-situation transfer.",
+      "domain": "continuous_raise_interval",
+      "family": "river_bluff",
+      "context": {
+        "position": "OOP",
+        "potType": "3bet",
+        "street": "river",
+        "decision": "facing_raise"
+      },
+      "contributors": [
+        {
+          "file": "no-answer-practice-teacher.json",
+          "sourceId": "Q-1054ad06f53e51c3"
+        }
+      ],
+      "sourceKind": "author_given_math_model",
+      "executionAdapterReady": true
+    }
+  ],
+  "samplerExample": [
+    {
+      "questionId": "M-ce099baa7c11b2b2",
+      "cell": "OOP/3bet/river/facing_raise",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-c797f3b3a39357ac",
+      "cell": "OOP/3bet/river/facing_allin",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-42f47374dd1800b0",
+      "cell": "OOP/3bet/turn/facing_bet",
+      "family": "turn_defense"
+    },
+    {
+      "questionId": "M-1517092e089e13f9",
+      "cell": "OOP/3bet/turn/facing_bet",
+      "family": "turn_defense"
+    },
+    {
+      "questionId": "M-faae2c247429810f",
+      "cell": "OOP/3bet/river/free",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-618f335997d71c89",
+      "cell": "OOP/3bet/river/free",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-58954f95749bdee9",
+      "cell": "OOP/3bet/river/facing_raise",
+      "family": "river_bluff"
+    },
+    {
+      "questionId": "M-7c3585a9a1a4ef4e",
+      "cell": "OOP/3bet/river/facing_raise",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-1e0617626fd72882",
+      "cell": "OOP/3bet/turn/facing_bet",
+      "family": "turn_defense"
+    },
+    {
+      "questionId": "M-300597ef8d6f57a1",
+      "cell": "IP/SRP/river/free",
+      "family": "river_size"
+    },
+    {
+      "questionId": "M-faae2c247429810f",
+      "cell": "OOP/3bet/river/free",
+      "family": "river_value"
+    },
+    {
+      "questionId": "M-621ea4c65f3d92aa",
+      "cell": "OOP/3bet/river/free",
+      "family": "river_value"
+    }
+  ]
+}

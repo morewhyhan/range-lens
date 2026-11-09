@@ -1,0 +1,386 @@
+{
+  "status": "public_reading_diagnostics_not_frozen_holdout",
+  "prompt": "两边分别是什么当前牌型？选出组成牌型的牌；再指出直接听牌关系。这里不考下注动作。",
+  "optionsIncludeUnknown": true,
+  "pairs": [
+    {
+      "id": "RC01",
+      "beforeBoard": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "As",
+        "Kh",
+        "2d"
+      ],
+      "beforeHole": [
+        "Kc",
+        "Qc"
+      ],
+      "afterHole": [
+        "Kc",
+        "Qc"
+      ]
+    },
+    {
+      "id": "RC02",
+      "beforeBoard": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "As",
+        "Kh",
+        "2d"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Kc"
+      ],
+      "afterHole": [
+        "Ac",
+        "Kc"
+      ]
+    },
+    {
+      "id": "RC03",
+      "beforeBoard": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "As",
+        "5h",
+        "4d"
+      ],
+      "beforeHole": [
+        "3c",
+        "2c"
+      ],
+      "afterHole": [
+        "3c",
+        "2c"
+      ]
+    },
+    {
+      "id": "RC04",
+      "beforeBoard": [
+        "As",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "As",
+        "9h",
+        "8d"
+      ],
+      "beforeHole": [
+        "Js",
+        "Tc"
+      ],
+      "afterHole": [
+        "Js",
+        "Tc"
+      ]
+    },
+    {
+      "id": "RC05",
+      "beforeBoard": [
+        "Ks",
+        "5h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Qs",
+        "5h",
+        "2d"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Kc"
+      ],
+      "afterHole": [
+        "Ac",
+        "Kc"
+      ]
+    },
+    {
+      "id": "RC06",
+      "beforeBoard": [
+        "Ks",
+        "5h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Qs",
+        "5h",
+        "2d"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Qc"
+      ],
+      "afterHole": [
+        "Ac",
+        "Qc"
+      ]
+    },
+    {
+      "id": "RC07",
+      "beforeBoard": [
+        "Ks",
+        "5h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ks",
+        "Qh",
+        "Jd"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Tc"
+      ],
+      "afterHole": [
+        "Ac",
+        "Tc"
+      ]
+    },
+    {
+      "id": "RC08",
+      "beforeBoard": [
+        "Ks",
+        "5h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ks",
+        "Qh",
+        "Jd"
+      ],
+      "beforeHole": [
+        "Qc",
+        "Jc"
+      ],
+      "afterHole": [
+        "Qc",
+        "Jc"
+      ]
+    },
+    {
+      "id": "RC09",
+      "beforeBoard": [
+        "Ks",
+        "5h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ks",
+        "Qh",
+        "Jd"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Ad"
+      ],
+      "afterHole": [
+        "Ac",
+        "Ad"
+      ]
+    },
+    {
+      "id": "RC10",
+      "beforeBoard": [
+        "8s",
+        "4h",
+        "2d"
+      ],
+      "afterBoard": [
+        "4s",
+        "5h",
+        "6d"
+      ],
+      "beforeHole": [
+        "7c",
+        "8c"
+      ],
+      "afterHole": [
+        "7c",
+        "8c"
+      ]
+    },
+    {
+      "id": "RC11",
+      "beforeBoard": [
+        "4s",
+        "5h",
+        "6d"
+      ],
+      "afterBoard": [
+        "9s",
+        "8h",
+        "7d"
+      ],
+      "beforeHole": [
+        "7c",
+        "7h"
+      ],
+      "afterHole": [
+        "7c",
+        "7h"
+      ]
+    },
+    {
+      "id": "RC12",
+      "beforeBoard": [
+        "4s",
+        "5h",
+        "6d"
+      ],
+      "afterBoard": [
+        "9s",
+        "8h",
+        "7d"
+      ],
+      "beforeHole": [
+        "8c",
+        "8d"
+      ],
+      "afterHole": [
+        "8c",
+        "8d"
+      ]
+    },
+    {
+      "id": "RC13",
+      "beforeBoard": [
+        "4s",
+        "5h",
+        "6d"
+      ],
+      "afterBoard": [
+        "9s",
+        "8h",
+        "7d"
+      ],
+      "beforeHole": [
+        "6c",
+        "6h"
+      ],
+      "afterHole": [
+        "6c",
+        "6h"
+      ]
+    },
+    {
+      "id": "RC14",
+      "beforeBoard": [
+        "Ts",
+        "2h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ts",
+        "Th",
+        "5d"
+      ],
+      "beforeHole": [
+        "Jc",
+        "Tc"
+      ],
+      "afterHole": [
+        "Jc",
+        "Tc"
+      ]
+    },
+    {
+      "id": "RC15",
+      "beforeBoard": [
+        "Qs",
+        "Qh",
+        "2d"
+      ],
+      "afterBoard": [
+        "Qs",
+        "Qh",
+        "Qd"
+      ],
+      "beforeHole": [
+        "8c",
+        "8h"
+      ],
+      "afterHole": [
+        "8c",
+        "8h"
+      ]
+    },
+    {
+      "id": "RC16",
+      "beforeBoard": [
+        "Qs",
+        "Qh",
+        "2d"
+      ],
+      "afterBoard": [
+        "Qs",
+        "Qh",
+        "Qd"
+      ],
+      "beforeHole": [
+        "Qc",
+        "Jc"
+      ],
+      "afterHole": [
+        "Qc",
+        "Jc"
+      ]
+    },
+    {
+      "id": "RC17",
+      "beforeBoard": [
+        "2s",
+        "5s",
+        "8s"
+      ],
+      "afterBoard": [
+        "2s",
+        "5s",
+        "8s"
+      ],
+      "beforeHole": [
+        "Ac",
+        "Ad"
+      ],
+      "afterHole": [
+        "As",
+        "Ad"
+      ]
+    },
+    {
+      "id": "RC18",
+      "beforeBoard": [
+        "2s",
+        "5s",
+        "8s"
+      ],
+      "afterBoard": [
+        "2s",
+        "5s",
+        "8s"
+      ],
+      "beforeHole": [
+        "As",
+        "Js"
+      ],
+      "afterHole": [
+        "Qs",
+        "Js"
+      ]
+    }
+  ],
+  "presentation": "Alternative flop or hole scenarios, never concatenated as real card history."
+}

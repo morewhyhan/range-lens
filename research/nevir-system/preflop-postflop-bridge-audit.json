@@ -1,0 +1,21 @@
+{
+  "id":"PREFLOP_POSTFLOP_BRIDGE_AUDIT_V1",
+  "status":"missing_action_selection_and_snapshot_bridge",
+  "currentCoverage":{
+    "P1_read_table":"partial",
+    "P2_read_cell":"partial",
+    "P3_select_action":"missing_observable_step",
+    "P3_snapshot":"paper_only",
+    "physical_filter":"paper_fact_candidate",
+    "P4_variant":"second_pass_only"
+  },
+  "requiredNodes":[
+    {"id":"B1","label":"confirm_chart_cell","question":"在这个位置、前序和尺度下，我的两张牌对应哪一个格子？这格来自哪张表？","parent":"preflop_chart","returnTo":"preflop_chart","identity":"fact"},
+    {"id":"B2","label":"select_preflop_action","question":"这格在当前表里可以做什么？本题要保存哪一个动作及其权重？","parent":"preflop_chart","returnTo":"preflop_chart","identity":"course_policy_or_reference_policy"},
+    {"id":"B3","label":"create_starting_range_snapshot","question":"这次翻前动作已经怎样变成翻后输入？","parent":"preflop_to_postflop_bridge","returnTo":"preflop_chart","identity":"starting_range_fact"},
+    {"id":"B4","label":"physical_filter","question":"已知底牌和公共牌让哪些实体组合不可能？","parent":"p3_range","returnTo":"p3_range","identity":"physical_fact"}
+  ],
+  "snapshotRequiredFields":["chartIdentity","scenarioIdentity","selectedAction","actionWeightRule","preflopSnapshotHash","rangeOwner","jointCompatibilityStatus","physicalFilterStatus","nextStreet"],
+  "hardRules":{"missingSelectedActionBlocksSnapshot":true,"missingSnapshotHashBlocksExactPostflop":true,"physicalFilterDoesNotMeanOpponentAction":true,"preflopPassDoesNotImplyPostflopPass":true,"P4VariantStaysOutOfFirstPass":true},
+  "currentStatus":{"B1Written":true,"B2Written":true,"B3Written":true,"B4Written":true,"B2MatchedReference":false,"B3JointRangeVerified":false,"bridgeRuntime":false,"learnerTrial":false,"NL50Evidence":false}
+}

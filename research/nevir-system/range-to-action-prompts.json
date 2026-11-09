@@ -1,0 +1,470 @@
+{
+  "status": "author_paper_exercise_inputs",
+  "frozen": false,
+  "questions": [
+    {
+      "id": "RA-6774363b73a67c91",
+      "body": {
+        "phase": "update_then_choose",
+        "current": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "observedHistory": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "priorAtFlop": [
+          {
+            "id": "88",
+            "hole": [
+              "8c",
+              "8d"
+            ],
+            "relativeWeight": 1
+          },
+          {
+            "id": "QQ",
+            "hole": [
+              "Qc",
+              "Qd"
+            ],
+            "relativeWeight": 2
+          },
+          {
+            "id": "JT",
+            "hole": [
+              "Js",
+              "Tc"
+            ],
+            "relativeWeight": 2
+          }
+        ],
+        "observedOpponentActionLikelihoods": [
+          {
+            "observationNumber": 1,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 0.2,
+              "QQ": 0.8,
+              "JT": 1
+            }
+          },
+          {
+            "observationNumber": 2,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 1,
+              "QQ": 0.5,
+              "JT": 0.1
+            }
+          }
+        ],
+        "riverResponse": {
+          "afterCheck": "BTN always checks; showdown",
+          "afterBet17_5": {
+            "88": {
+              "call": 1,
+              "fold": 0
+            },
+            "QQ": {
+              "call": 0.5,
+              "fold": 0.5
+            },
+            "JT": {
+              "call": 0,
+              "fold": 1
+            }
+          },
+          "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+        },
+        "assumptions": {
+          "source": "author-given model; not recovered real opponent frequencies",
+          "priorMeaning": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+          "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+        },
+        "task": "先填写三组留下的相对质量，再从过牌与下注17.5选择。",
+        "availableChoices": [
+          {
+            "id": "check",
+            "label": "过牌"
+          },
+          {
+            "id": "bet17_5",
+            "label": "下注17.5"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RA-74e1380e05b3ed15",
+      "body": {
+        "phase": "choose_without_supplied_posterior",
+        "current": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "observedHistory": [
+          "flop SB check",
+          "flop BTN check",
+          "deal2c",
+          "turn SB bet7",
+          "turn BTN call7",
+          "deal4s"
+        ],
+        "priorAtFlop": [
+          {
+            "id": "88",
+            "hole": [
+              "8c",
+              "8d"
+            ],
+            "relativeWeight": 1
+          },
+          {
+            "id": "QQ",
+            "hole": [
+              "Qc",
+              "Qd"
+            ],
+            "relativeWeight": 2
+          },
+          {
+            "id": "JT",
+            "hole": [
+              "Js",
+              "Tc"
+            ],
+            "relativeWeight": 2
+          }
+        ],
+        "observedOpponentActionLikelihoods": [
+          {
+            "observationNumber": 1,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 0.2,
+              "QQ": 0.8,
+              "JT": 1
+            }
+          },
+          {
+            "observationNumber": 2,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 1,
+              "QQ": 0.5,
+              "JT": 0.1
+            }
+          }
+        ],
+        "riverResponse": {
+          "afterCheck": "BTN always checks; showdown",
+          "afterBet17_5": {
+            "88": {
+              "call": 1,
+              "fold": 0
+            },
+            "QQ": {
+              "call": 0.5,
+              "fold": 0.5
+            },
+            "JT": {
+              "call": 0,
+              "fold": 1
+            }
+          },
+          "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+        },
+        "assumptions": {
+          "source": "author-given model; not recovered real opponent frequencies",
+          "priorMeaning": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+          "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+        },
+        "task": "当前比例不提供；依据原候选和实际两次回应，自行更新后选过牌或下注17.5。可以使用计算器。",
+        "availableChoices": [
+          {
+            "id": "check",
+            "label": "过牌"
+          },
+          {
+            "id": "bet17_5",
+            "label": "下注17.5"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RA-79cb08e45fe3420b",
+      "body": {
+        "phase": "update_then_choose",
+        "current": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "observedHistory": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "priorAtFlop": [
+          {
+            "id": "88",
+            "hole": [
+              "8c",
+              "8d"
+            ],
+            "relativeWeight": 1
+          },
+          {
+            "id": "QQ",
+            "hole": [
+              "Qc",
+              "Qd"
+            ],
+            "relativeWeight": 2
+          },
+          {
+            "id": "JT",
+            "hole": [
+              "Js",
+              "Tc"
+            ],
+            "relativeWeight": 2
+          }
+        ],
+        "observedOpponentActionLikelihoods": [
+          {
+            "observationNumber": 1,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 1,
+              "QQ": 0.5,
+              "JT": 0.1
+            }
+          },
+          {
+            "observationNumber": 2,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 0.8,
+              "QQ": 0.8,
+              "JT": 1
+            }
+          }
+        ],
+        "riverResponse": {
+          "afterCheck": "BTN always checks; showdown",
+          "afterBet17_5": {
+            "88": {
+              "call": 1,
+              "fold": 0
+            },
+            "QQ": {
+              "call": 0.5,
+              "fold": 0.5
+            },
+            "JT": {
+              "call": 0,
+              "fold": 1
+            }
+          },
+          "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+        },
+        "assumptions": {
+          "source": "author-given model; not recovered real opponent frequencies",
+          "priorMeaning": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+          "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+        },
+        "task": "先填写三组留下的相对质量，再从过牌与下注17.5选择。",
+        "availableChoices": [
+          {
+            "id": "check",
+            "label": "过牌"
+          },
+          {
+            "id": "bet17_5",
+            "label": "下注17.5"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RA-72d989b58dac7987",
+      "body": {
+        "phase": "choose_without_supplied_posterior",
+        "current": {
+          "board": [
+            "Ts",
+            "8h",
+            "3d",
+            "2c",
+            "4s"
+          ],
+          "hero": [
+            "Kc",
+            "Kd"
+          ],
+          "actor": "SB",
+          "potBB": 35,
+          "heroStackBB": 83,
+          "villainStackBB": 83,
+          "toCallBB": 0
+        },
+        "observedHistory": [
+          "flop SB bet7",
+          "flop BTN call7",
+          "deal2c",
+          "turn SB check",
+          "turn BTN check",
+          "deal4s"
+        ],
+        "priorAtFlop": [
+          {
+            "id": "88",
+            "hole": [
+              "8c",
+              "8d"
+            ],
+            "relativeWeight": 1
+          },
+          {
+            "id": "QQ",
+            "hole": [
+              "Qc",
+              "Qd"
+            ],
+            "relativeWeight": 2
+          },
+          {
+            "id": "JT",
+            "hole": [
+              "Js",
+              "Tc"
+            ],
+            "relativeWeight": 2
+          }
+        ],
+        "observedOpponentActionLikelihoods": [
+          {
+            "observationNumber": 1,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 1,
+              "QQ": 0.5,
+              "JT": 0.1
+            }
+          },
+          {
+            "observationNumber": 2,
+            "conditionalOn": "this holding and the actual preceding history",
+            "probabilities": {
+              "88": 0.8,
+              "QQ": 0.8,
+              "JT": 1
+            }
+          }
+        ],
+        "riverResponse": {
+          "afterCheck": "BTN always checks; showdown",
+          "afterBet17_5": {
+            "88": {
+              "call": 1,
+              "fold": 0
+            },
+            "QQ": {
+              "call": 0.5,
+              "fold": 0.5
+            },
+            "JT": {
+              "call": 0,
+              "fold": 1
+            }
+          },
+          "restriction": "Only check and bet17.5 are compared; no opponent raise, no other river bet size. Restricted teaching model, not poker legality or GTO."
+        },
+        "assumptions": {
+          "source": "author-given model; not recovered real opponent frequencies",
+          "priorMeaning": "Given at flop, conditional on hero cards; three physical candidates, not complete course ranges",
+          "chance": "Uniform legal dealing; both selected later cards legal for every candidate, so the common runout likelihood cancels in this conditional comparison."
+        },
+        "task": "当前比例不提供；依据原候选和实际两次回应，自行更新后选过牌或下注17.5。可以使用计算器。",
+        "availableChoices": [
+          {
+            "id": "check",
+            "label": "过牌"
+          },
+          {
+            "id": "bet17_5",
+            "label": "下注17.5"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    }
+  ]
+}

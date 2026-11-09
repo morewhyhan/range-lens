@@ -1,0 +1,544 @@
+{
+  "status": "source_condition_contrasts_and_physical_facts_not_complete_policy_or_learner_result",
+  "source": {
+    "note": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+    "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e",
+    "sections": [
+      "3.4",
+      "3.7",
+      "3.8"
+    ],
+    "rows": [
+      {
+        "id": "D01",
+        "sheet": "牌面分支与原因",
+        "row": 15,
+        "fields": {
+          "B": "D01\n单A → A带K\n\n差别：对手的高张是否变成对子",
+          "D": "同是KQ：上图只有K高；下图已配到K，变成第二对。你的AK也从顶对变成两对。换掉一张7，改变的是双方整批手牌的强弱，不只是牌面名字。",
+          "E": "IP 3bet：课程AK2偏小注高频；A72只在后街例中给过B33前序。可以理解为“小注路线均有依据”，不能推成两面所有牌都相同频率。IP SRP的A72还明确区分KQ过牌、部分弱高张/好后门下注。\n\n依据：S1 §3.6；S3 §3.5；S4小注前序"
+        }
+      },
+      {
+        "id": "D02",
+        "sheet": "牌面分支与原因",
+        "row": 16,
+        "fields": {
+          "B": "D02\n小牌分散 → 低牌连上\n\n差别：有A也可能已有顺子",
+          "D": "32在上图只是配到2；在下图用A作1，已拼成A2345。A98也要单独查连接：JT可听7或Q成顺。因此“有A”不能自动消除对手的低牌威胁。",
+          "E": "先检查对手翻前会不会带着32s/JTs进来：BB宽跟注与3bet跟注不是一回事。合理推导是重新筛选下注牌，别照抄AK2全范围小注；A54/A98的具体尺寸和频率，课程未给，不填确定值。\n\n依据：由S2 §3.6–3.7、S6低连原理推导；非原求解节点"
+        }
+      },
+      {
+        "id": "D03",
+        "sheet": "牌面分支与原因",
+        "row": 19,
+        "fields": {
+          "B": "D03\nK高 → Q高\n\n差别：优势落在哪批起手牌上",
+          "D": "同样AK：K52上是顶对强踢脚，Q52上只有A高。AQ则恰好相反。对手会用什么跟、你有多少能收价值的牌，都会变化。“K/Q高”不能直接合成一条固定指令。",
+          "E": "IP 3bet：K52原例B25高频；笔记对Q5类给B40并保留更多X。Q52是为讲区别而补的图，不是完整已求解节点。到OOP 3bet还需换表：课程K高40–67%、Q高50–67%。\n\n依据：S2 §3.3；S5 §3.1"
+        }
+      },
+      {
+        "id": "D04",
+        "sheet": "牌面分支与原因",
+        "row": 20,
+        "fields": {
+          "B": "D04\n一张高牌 → 高牌连张\n\n差别：一对之外出现成顺牌",
+          "D": "AT由A高变成TJQKA顺子；对手的QJ也会从未配对变成两对。AA仍是超对，却更不能只凭“我有AA”就认定大注被跟很舒服。",
+          "E": "课程这两例都用B25，但理由有区别：K52可让中等牌参与小注；KQJ的小注避免只留下更强的成牌/听牌。相同动作不代表同一强弱结构。QT5tt则另查具体底池，不能从KQJ推出所有高牌连面都25%。\n\n依据：S2 §3.3、3.7–3.8"
+        }
+      },
+      {
+        "id": "D05",
+        "sheet": "牌面分支与原因",
+        "row": 23,
+        "fields": {
+          "B": "D05\n彩虹 → 两同花\n\n只改变花色，听牌就变了",
+          "D": "上图AQ黑桃合计只有3张黑桃，要连来两张才成花；下图合计4张，下一张黑桃就成花。对手多了可继续的直接听花组合，大注不一定能把这些牌赶走。",
+          "E": "在课程IP 3bet节点：T72r用B67，T72tt降到B40。含义是重新选择愿意让哪些牌继续，不能简化成“有听花就加大保护”。这是尺寸变化；下注多少手牌，要另外看频率和对手反应。\n\n依据：S2 §3.4、3.7"
+        }
+      },
+      {
+        "id": "D06",
+        "sheet": "牌面分支与原因",
+        "row": 24,
+        "fields": {
+          "B": "D06\nT72 → T82\n\n只把7换成8，顺听更强",
+          "D": "上图J9只能靠8补成789TJ；下图已有8、9、T、J，来7或Q都能成顺。由一个点数可补顺，变成两个点数。T72本来也有98两头听；区别不是“有没有听牌”，而是哪些组合的听牌更强。",
+          "E": "课程IP 3bet：T72r用B67 → T82r用B40。大注被跟后，更容易撞上还能反超你的组合。于是尺寸下调。不要把“间隔小一格”机械变成所有局面的40%公式。\n\n依据：S2 §3.4、3.7；J9为解释性配牌"
+        }
+      },
+      {
+        "id": "D07",
+        "sheet": "牌面分支与原因",
+        "row": 25,
+        "fields": {
+          "B": "D07\n有顺听 → 已能成顺\n\n差别：AA面对的上限变了",
+          "D": "QJ在T82是两张高牌＋卡顺，来9才成顺；T98上已经是89TJQ顺子。J7也能成顺，76也能成顺。不能把两个牌面都只写成“有点连接”。",
+          "E": "课程IP 3bet：T82r的B40 → T98的B25。重点是强牌上限和继续范围发生变化。你拿AA也不能按T72的强超对模板盲目打大；但小注方向本身并不证明每个组合都下注。\n\n依据：S2 §3.4、3.8；T98彩虹为配色示意"
+        }
+      },
+      {
+        "id": "D08",
+        "sheet": "牌面分支与原因",
+        "row": 28,
+        "fields": {
+          "B": "D08\n低而分散 → 低连张\n\n差别：超对是不是仍很稳",
+          "D": "上图78其实配到8，是顶对；下图已成45678顺子。AA在上图可向许多更差对子收价值，下图却可能已落后。较低的点数并不等于较安全。",
+          "E": "IP 3bet：842的高对子可大注，66/77这类中等牌多X；456/467等低连例按课程先大量X。原因包括被加注后许多高张无法继续。若换成IP SRP，456反而有选择性B50路线，不能跨底池照抄X。\n\n依据：S2 §3.5–3.7；S3 §3.7；S6 §3.6"
+        }
+      },
+      {
+        "id": "D09",
+        "sheet": "牌面分支与原因",
+        "row": 29,
+        "fields": {
+          "B": "D09\n456 → 987\n\n同为连张，自己的牌也要重分",
+          "D": "上图77高于公共牌，且3或8可补顺；下图77加上公共牌7，成为暗三条。相反，88在456是超对，66在987则只是低于牌面的口袋对。每换一面，都重新判断自己能从哪些更差牌取值。",
+          "E": "课程IP SRP把456安排为选择性B50、987安排为B75路线。差异还涉及双方范围，不能由“都是低连张”抹平。此配牌专门训练重新读牌力，不表示77在两面都按该尺寸纯下注。\n\n依据：S6 §3.6；手牌对照为教学补充"
+        }
+      },
+      {
+        "id": "D10",
+        "sheet": "牌面分支与原因",
+        "row": 32,
+        "fields": {
+          "B": "D10\n低点重复 → 高点重复\n\n差别：对手Tx从两对变三条",
+          "D": "T22上，JT利用公共22与自己配到的T组成两对，仍输给AA；TT5上，JT有三条T，已经领先AA。对手常见的Tx突然进入了强牌一端。",
+          "E": "课程IP 3bet：T22用B67且高频，TT5用B40。大注被跟后是否仍能大量赢过对手，是差别所在。两例还换了单张踢脚牌，故这是结构对照，不是假装只改变一个变量的实验。\n\n依据：S3 §3.2；S2 §3.8"
+        }
+      },
+      {
+        "id": "D11",
+        "sheet": "牌面分支与原因",
+        "row": 33,
+        "fields": {
+          "B": "D11\n两张重复 → 三张重复\n\n差别：口袋对直接变成葫芦",
+          "D": "QQ2上是QQ88两对；QQQ上是QQQ88葫芦。对手若拿一张Q则是四条。三条公共牌不能当普通对子面，更不能只凭自己有葫芦就认为是最大牌。",
+          "E": "课程OOP SRP的QQQ例给高频甚至全范围下注方向，但尺寸没写清。IP/OOP 3bet没有对应完整表。保留“三条公共牌”独立分支，不借用T22的67%。\n\n依据：S7 §3.2；QQ2对照为教学补充"
+        }
+      },
+      {
+        "id": "D12",
+        "sheet": "牌面分支与原因",
+        "row": 36,
+        "fields": {
+          "B": "D12\n没该花色 → 一张该花色\n\n差别：同样AA，未来改善不同",
+          "D": "两手现在都只有一对A。下图额外有最高同花听牌，再来黑桃就可成A高花；上图没有这项直接改善。一张黑桃绝不是已经成花。",
+          "E": "IP 3bet的258M课程给B25尺寸；IP SRP也有单色小注例。但不同AA的下注/过牌、面对加注的继续能力可能不同。不能由“单色小”变成“所有手牌100%小注”。\n\n依据：S2 §3.8；S6 §3.6；底牌对照为教学补充"
+        }
+      },
+      {
+        "id": "D13",
+        "sheet": "牌面分支与原因",
+        "row": 37,
+        "fields": {
+          "B": "D13\n已经成花 → 再分花的大小\n\n差别：想收多少街价值",
+          "D": "上图在当前翻牌是最大同花；下图虽然已成花，却输给A高花、K高花。转牌若公共牌配对或出现第四张黑桃，还要重新判断，不能用翻牌标签一直打到河牌。",
+          "E": "这解释“已成花”里面也有不同价值任务；不意味着小花必须过牌、最大花必须大注。课程未给完整单色手牌表，不能用花大小编造固定尺寸。先按对应局面的小注方向，再保留未确定的组合选择。\n\n依据：由S2 §3.7–3.8和牌型规则展开"
+        }
+      }
+    ],
+    "precision": "Original note uses66%/2/3 forT72r; imported D05/D06 use67. No silent numeric normalization."
+  },
+  "scope": "All legal physical holdings, before action weighting; suit assignments authored for illustration. Not opponent range frequencies, equity or action EV.",
+  "boards": [
+    {
+      "id": "T72r",
+      "cards": [
+        "Ts",
+        "7h",
+        "2d"
+      ],
+      "physicalHoldings": 1176,
+      "madeStraightHoldings": 0,
+      "madeStraightClasses": [],
+      "directStraightDrawHoldings": 80,
+      "directStraightDrawClasses": [
+        "86",
+        "96",
+        "98",
+        "J8",
+        "J9"
+      ],
+      "directFlushDrawHoldings": 0
+    },
+    {
+      "id": "T72tt",
+      "cards": [
+        "Ts",
+        "7s",
+        "2d"
+      ],
+      "physicalHoldings": 1176,
+      "madeStraightHoldings": 0,
+      "madeStraightClasses": [],
+      "directStraightDrawHoldings": 80,
+      "directStraightDrawClasses": [
+        "86",
+        "96",
+        "98",
+        "J8",
+        "J9"
+      ],
+      "directFlushDrawHoldings": 55
+    },
+    {
+      "id": "T82r",
+      "cards": [
+        "Ts",
+        "8h",
+        "2d"
+      ],
+      "physicalHoldings": 1176,
+      "madeStraightHoldings": 0,
+      "madeStraightClasses": [],
+      "directStraightDrawHoldings": 112,
+      "directStraightDrawClasses": [
+        "76",
+        "96",
+        "97",
+        "J7",
+        "J9",
+        "Q9",
+        "QJ"
+      ],
+      "directFlushDrawHoldings": 0
+    },
+    {
+      "id": "T98r",
+      "cards": [
+        "Ts",
+        "9h",
+        "8d"
+      ],
+      "physicalHoldings": 1176,
+      "madeStraightHoldings": 48,
+      "madeStraightClasses": [
+        "76",
+        "J7",
+        "QJ"
+      ],
+      "directStraightDrawHoldings": 600,
+      "directStraightDrawClasses": [
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "72",
+        "73",
+        "74",
+        "75",
+        "77",
+        "86",
+        "87",
+        "96",
+        "97",
+        "A6",
+        "A7",
+        "AJ",
+        "AQ",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "J6",
+        "J8",
+        "J9",
+        "JJ",
+        "JT",
+        "K6",
+        "K7",
+        "KJ",
+        "KQ",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "Q6",
+        "Q7",
+        "Q8",
+        "Q9",
+        "QQ",
+        "QT",
+        "T6",
+        "T7"
+      ],
+      "directFlushDrawHoldings": 0
+    }
+  ],
+  "pairs": [
+    {
+      "id": "BC01",
+      "source": "D05",
+      "hole": [
+        "As",
+        "Qs"
+      ],
+      "before": "T72r",
+      "after": "T72tt",
+      "changed": "board7 suit h→s",
+      "prompt": "这手AQ从需要连来两张黑桃，变成下一张黑桃就成花了吗？",
+      "beforeFacts": {
+        "board": [
+          "Ts",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "As",
+          "Qs"
+        ],
+        "madeValue": [
+          0,
+          14,
+          12,
+          10,
+          7,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [],
+        "straightType": "无直接顺听",
+        "flushOutCards": [],
+        "backdoorFlushSuits": [
+          "s"
+        ]
+      },
+      "afterFacts": {
+        "board": [
+          "Ts",
+          "7s",
+          "2d"
+        ],
+        "hole": [
+          "As",
+          "Qs"
+        ],
+        "madeValue": [
+          0,
+          14,
+          12,
+          10,
+          7,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [],
+        "straightType": "无直接顺听",
+        "flushOutCards": [
+          "2s",
+          "3s",
+          "4s",
+          "5s",
+          "6s",
+          "8s",
+          "9s",
+          "Js",
+          "Ks"
+        ],
+        "backdoorFlushSuits": []
+      },
+      "strategyActionAnswer": null,
+      "answerScope": "physical facts only; source main size is not this hole combination action"
+    },
+    {
+      "id": "BC02",
+      "source": "D06",
+      "hole": [
+        "Js",
+        "9c"
+      ],
+      "before": "T72r",
+      "after": "T82r",
+      "changed": "board7h→8h",
+      "prompt": "J9下一张来哪些点数能成顺？变化前后分别点出。",
+      "beforeFacts": {
+        "board": [
+          "Ts",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Js",
+          "9c"
+        ],
+        "madeValue": [
+          0,
+          11,
+          10,
+          9,
+          7,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [
+          8
+        ],
+        "straightType": "卡顺",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "afterFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "2d"
+        ],
+        "hole": [
+          "Js",
+          "9c"
+        ],
+        "madeValue": [
+          0,
+          11,
+          10,
+          9,
+          8,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [
+          7,
+          12
+        ],
+        "straightType": "两头顺",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "strategyActionAnswer": null,
+      "answerScope": "physical facts only; source main size is not this hole combination action"
+    },
+    {
+      "id": "BC03",
+      "source": "D06",
+      "hole": [
+        "9s",
+        "8c"
+      ],
+      "before": "T72r",
+      "after": "T82r",
+      "changed": "board7h→8h",
+      "prompt": "原来的T72真的没有两头顺听吗？先看98，再看新牌面。",
+      "beforeFacts": {
+        "board": [
+          "Ts",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "9s",
+          "8c"
+        ],
+        "madeValue": [
+          0,
+          10,
+          9,
+          8,
+          7,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [
+          6,
+          11
+        ],
+        "straightType": "两头顺",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "afterFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "2d"
+        ],
+        "hole": [
+          "9s",
+          "8c"
+        ],
+        "madeValue": [
+          1,
+          8,
+          10,
+          9,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [],
+        "straightType": "无直接顺听",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "strategyActionAnswer": null,
+      "answerScope": "physical facts only; source main size is not this hole combination action"
+    },
+    {
+      "id": "BC04",
+      "source": "D07",
+      "hole": [
+        "Qs",
+        "Jc"
+      ],
+      "before": "T82r",
+      "after": "T98r",
+      "changed": "board8h→9h and2d→8d; two rank fields",
+      "prompt": "QJ是还需要一张牌，还是已经成顺？不要把两处改动说成一次发牌。",
+      "beforeFacts": {
+        "board": [
+          "Ts",
+          "8h",
+          "2d"
+        ],
+        "hole": [
+          "Qs",
+          "Jc"
+        ],
+        "madeValue": [
+          0,
+          12,
+          11,
+          10,
+          8,
+          2
+        ],
+        "straightMade": false,
+        "straightOutRanks": [
+          9
+        ],
+        "straightType": "卡顺",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "afterFacts": {
+        "board": [
+          "Ts",
+          "9h",
+          "8d"
+        ],
+        "hole": [
+          "Qs",
+          "Jc"
+        ],
+        "madeValue": [
+          4,
+          12
+        ],
+        "straightMade": true,
+        "straightOutRanks": [],
+        "straightType": "已成顺",
+        "flushOutCards": [],
+        "backdoorFlushSuits": []
+      },
+      "strategyActionAnswer": null,
+      "answerScope": "physical facts only; source main size is not this hole combination action"
+    }
+  ],
+  "independentChecks": {
+    "boards": 4,
+    "holdings": 4704,
+    "method": "Independent rank windows and suit counts compared with current evaluator draw facts"
+  }
+}

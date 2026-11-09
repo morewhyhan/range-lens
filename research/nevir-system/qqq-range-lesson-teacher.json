@@ -1,0 +1,33 @@
+{
+  "status": "author_fact_and_given_rule_keys_not_optimal_strategy",
+  "answers": [
+    {
+      "id": "QV_P1",
+      "correct": "b",
+      "feedback": "一张实体牌只能出现一次；自己拿着A♠，对方就不能同时拿A♠。不是因为对方会弃牌。",
+      "inputFingerprint": "0187976035397a4fe0b9d160e77c94db20317579e058fe2703a896d55279b4f8",
+      "unknownIsWrong": true,
+      "actualPokerActionCommitted": false,
+      "exposure": "public_after_demonstration_not_unseen_assessment"
+    },
+    {
+      "id": "QV_P2",
+      "correct": "keep",
+      "feedback": "自己已经知道自己的底牌；自己的下注没有替自己提供新的对手信息。对方如何看我们的范围是另一视角。",
+      "inputFingerprint": "8fe8661654e3c9ffda86ff4c11550575dd604d8d61b1f1cd547c2542e11bcd7a",
+      "unknownIsWrong": true,
+      "actualPokerActionCommitted": false,
+      "exposure": "public_after_demonstration_not_unseen_assessment"
+    },
+    {
+      "id": "QV_P3",
+      "correct": "a",
+      "feedback": "按本题给定规则，这手跟注概率为0，所以不留在跟注分支。它可能弃牌或加注；不能说现实中此人绝不可能跟。",
+      "inputFingerprint": "58c15b6febc65f5b799b21941831ce7e5d330bc147697748d72b0d6eb3daa631",
+      "unknownIsWrong": true,
+      "actualPokerActionCommitted": false,
+      "exposure": "public_after_demonstration_not_unseen_assessment"
+    }
+  ],
+  "learnerTrials": 0
+}

@@ -1,0 +1,39 @@
+{
+  "id": "FACT_UNIT_5_7_NEW_CARD_REMOVAL_V1",
+  "status": "fact_candidate_not_strategy_ready",
+  "releaseIdentity": "independent_fact_candidate",
+  "unitId": "5.7",
+  "parentFrame": "update.card",
+  "groupId": "update.card",
+  "routeStop": "L7",
+  "street": "turn",
+  "role": {"heroSeat":"BTN","villainSeat":"BB","relation":"BB_is_next_actor_after_turn_card","evidence":"explicit_guided_update_frame; no inferred strategy role"},
+  "actionState": "turn_dealt_before_BB_action",
+  "sourceIdentity": {
+    "kind":"guided_update_physical_fact",
+    "file":"guided-update-sequence-packet.json",
+    "pointers":["U09","U12"],
+    "supportingFile":"turn-transfer-evidence.json",
+    "sourceStatus":"fact_or_given_model_not_strategy_choice",
+    "boundary":"Qh实体冲突可直接判断；该包不提供BB过牌后的行动策略或完整后验范围。"
+  },
+  "factInputs": {
+    "gameFrame":{"players":6,"street":"turn","heroSeat":"BTN","villainSeat":"BB","board":["As","7h","2d","Qh"],"hero":["Qc","3c"],"potBB":9.16,"heroStackBB":95.67,"villainStackBB":95.67,"actor":"BB","history":"turn_dealt; BB_has_not_acted"},
+    "physicalRules":["公共牌不能同时作为任一玩家底牌","自己的已知底牌不能同时作为对手底牌","物理过滤不等于行动筛选"]
+  },
+  "questions":[
+    {"id":"Q1","kind":"physical_filter","prompt":"Qh发出后，含有Qh的候选怎么处理？","options":["两边各自含Qh的都划掉","只划对手QhTd","只划自己Qh3h","我不知道"],"answer":"两边各自含Qh的都划掉","answerIdentity":"fact","precision":"known_card_collision","explanation":"Qh已经在公共牌上，任何玩家底牌再含Qh都与已知牌冲突；这只是实体过滤。"},
+    {"id":"Q2","kind":"physical_filter_viewpoint","prompt":"给定自己Qc3c后，原QhTd还能在对手手里吗？","options":["不能","能","我不知道"],"answer":"不能","answerIdentity":"fact","precision":"known_board_collision","explanation":"Qh已经是公共牌，QhTd无论观察者拿什么都不能作为对手底牌；不能把它解释成对手主动弃牌。"}
+  ],
+  "explanation":"两题都只检查公共牌造成的实体冲突。下一步仍要回到同一p6父帧，不能把被划掉的组合当成BB已经采取某个动作后的范围。",
+  "errorReturn":"答错或选择‘我不知道’时，回到p6/A7，重新点公共牌Qh和冲突底牌；不跳到下注比较层。",
+  "coursePolicy":null,
+  "referencePolicy":null,
+  "rangeBefore":null,
+  "rangeAfter":null,
+  "legalSuccessors":[],
+  "stopReason":"no_complete_range_or_successor_reference",
+  "transferVariant":{"changedField":"board","holdoutRequired":true,"mustNotChange":["heroHole","history","potBB","stacksBB","actor"]},
+  "releaseStatus":"fact_candidate",
+  "guards":{"noStrategyInvented":true,"noRangeInvented":true,"noActionFilterFromPhysicalRemoval":true,"noSolverEquivalenceClaim":true,"noNL50Claim":true}
+}

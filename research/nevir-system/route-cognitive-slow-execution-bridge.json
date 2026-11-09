@@ -1,0 +1,544 @@
+{
+  "id": "ROUTE_COGNITIVE_SLOW_EXECUTION_BRIDGE_V1",
+  "status": "paper_route_cognitive_bridge_closed_runtime_and_trial_missing",
+  "purpose": "把用户12停点、脑内架构回放、慢速执行协议和首答观察接成一张不可跳步的教学交叉表。",
+  "sources": [
+    "first-pass-state-evidence-crosswalk.json",
+    "first-pass-mental-model-contract.json",
+    "architecture-replay-contract.json",
+    "slow-single-step-execution-contract.json",
+    "low-baseline-stop-observation-crosswalk.json"
+  ],
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "architectureNodes": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8"
+  ],
+  "slowPhases": [
+    "F0_input_freeze",
+    "F1_layer_locate",
+    "F2_fact",
+    "F3_compare",
+    "F4_execute",
+    "F5_update_or_stop"
+  ],
+  "rows": [
+    {
+      "stateId": "L0",
+      "frameId": "G0_welcome",
+      "phase": "outer_context",
+      "cognitiveJob": "先知道这是哪张桌、今天只走哪条路线。",
+      "architectureNodes": [
+        "A1"
+      ],
+      "slowPhases": [
+        "F0_input_freeze",
+        "F1_layer_locate"
+      ],
+      "centerVisual": "六人桌、有效筹码和训练目标",
+      "plainQuestion": "这是一张什么桌，今天只练哪一条路线？",
+      "primaryAction": "确认桌面并开始",
+      "handoff": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "handoffMeaning": [
+        "table",
+        "trainingGoal",
+        "startingStackBB"
+      ],
+      "nextState": "L1",
+      "errorReturn": "L0",
+      "replayPrompt": "说出桌面、目标、筹码和下一站。",
+      "stopCondition": "桌面、目标或有效筹码未确认时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "L1",
+      "frameId": "G1_context",
+      "phase": "outer_context",
+      "cognitiveJob": "把位置、历史、行动者和继续价格锁成当前局面。",
+      "architectureNodes": [
+        "A1"
+      ],
+      "slowPhases": [
+        "F0_input_freeze",
+        "F1_layer_locate"
+      ],
+      "centerVisual": "座位、行动箭头、历史、底池和待补金额",
+      "plainQuestion": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "primaryAction": "点行动者并确认待补",
+      "handoff": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "handoffMeaning": [
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "actor",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "nextState": "L2",
+      "errorReturn": "L1",
+      "replayPrompt": "不看标题指出现在谁行动、发生了什么、继续要付多少。",
+      "stopCondition": "位置、历史、行动者、底池或待补金额不完整时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "L2",
+      "frameId": "G2_preflop_chart",
+      "phase": "preflop_anchor",
+      "cognitiveJob": "在固定图表中找到自己的坐标，不提前猜动作。",
+      "architectureNodes": [
+        "A2"
+      ],
+      "slowPhases": [
+        "F1_layer_locate",
+        "F2_fact"
+      ],
+      "centerVisual": "固定翻前图表与169格坐标",
+      "plainQuestion": "我的牌在这张图的哪一格？先只找到坐标。",
+      "primaryAction": "点击固定坐标格",
+      "handoff": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "handoffMeaning": [
+        "chartIdentity",
+        "gridCell",
+        "rangeOwner"
+      ],
+      "nextState": "L3",
+      "errorReturn": "L2",
+      "replayPrompt": "给一个未见位置，指出图表、行列和范围所有者。",
+      "stopCondition": "图表身份或格子坐标未确定时停在当前层，不猜动作。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "L3",
+      "frameId": "G3_preflop_action",
+      "phase": "preflop_anchor",
+      "cognitiveJob": "把坐标格读成课程动作和权重。",
+      "architectureNodes": [
+        "A2"
+      ],
+      "slowPhases": [
+        "F2_fact",
+        "F3_compare"
+      ],
+      "centerVisual": "选中格、动作图例和动作权重",
+      "plainQuestion": "这个格子代表什么翻前课程动作？权重是多少？",
+      "primaryAction": "确认格子动作和权重",
+      "handoff": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "handoffMeaning": [
+        "preflopActionIdentity",
+        "actionWeight"
+      ],
+      "nextState": "L4",
+      "errorReturn": "L3",
+      "replayPrompt": "说明该格是哪个动作、权重如何读。",
+      "stopCondition": "动作身份、权重或来源缺失时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "L4",
+      "frameId": "G4_range_bridge",
+      "phase": "preflop_anchor",
+      "cognitiveJob": "把已知牌造成的物理排除和资料未知分开。",
+      "architectureNodes": [
+        "A4"
+      ],
+      "slowPhases": [
+        "F2_fact",
+        "F5_update_or_stop"
+      ],
+      "centerVisual": "动作前范围、已知牌物理过滤和范围分母",
+      "plainQuestion": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "primaryAction": "标记一组物理排除并确认分母",
+      "handoff": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "handoffMeaning": [
+        "rangeSnapshotHash",
+        "rangeBefore",
+        "physicalFilter",
+        "denominator"
+      ],
+      "nextState": "p1",
+      "errorReturn": "L4",
+      "replayPrompt": "指出哪些组合不可能、哪些只是没有资料，并说出停止位置。",
+      "stopCondition": "范围来源、物理过滤或分母缺失时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p1",
+      "frameId": "G5_p1_context",
+      "phase": "postflop_route",
+      "cognitiveJob": "进入翻后时先锁行动权、价格和前序范围。",
+      "architectureNodes": [
+        "A1"
+      ],
+      "slowPhases": [
+        "F0_input_freeze",
+        "F1_layer_locate"
+      ],
+      "centerVisual": "翻后牌桌、行动箭头、底池、后手和待补",
+      "plainQuestion": "翻牌后现在轮到谁？继续需要多少钱？",
+      "primaryAction": "确认行动权和价格",
+      "handoff": [
+        "actor",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "heroSeat",
+        "villainSeat",
+        "toCallBB"
+      ],
+      "handoffMeaning": [
+        "actor",
+        "history",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "nextState": "p2",
+      "errorReturn": "p1",
+      "replayPrompt": "不看标题先指出翻后行动者和继续价格。",
+      "stopCondition": "翻后行动者、历史、价格或前序范围没有确认时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p2",
+      "frameId": "G6_p2_hand",
+      "phase": "postflop_route",
+      "cognitiveJob": "先读牌面事实，再读自己的最佳五张和改善牌。",
+      "architectureNodes": [
+        "A2",
+        "A3"
+      ],
+      "slowPhases": [
+        "F2_fact"
+      ],
+      "centerVisual": "公共牌、底牌、最佳五张和牌力顺序",
+      "plainQuestion": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "primaryAction": "拼最佳五张并点牌型",
+      "handoff": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "handoffMeaning": [
+        "bestFive",
+        "handClass",
+        "improvementCards"
+      ],
+      "nextState": "p3",
+      "errorReturn": "p2",
+      "replayPrompt": "在未见牌面上先说牌型，再说哪些牌会改善；不能跳到下注。",
+      "stopCondition": "牌面、底牌、最佳五张、牌型或改善牌未确认时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p3",
+      "frameId": "G7_p3_range",
+      "phase": "postflop_route",
+      "cognitiveJob": "把物理不可能、行动筛选和分母变化分开。",
+      "architectureNodes": [
+        "A4"
+      ],
+      "slowPhases": [
+        "F2_fact",
+        "F5_update_or_stop"
+      ],
+      "centerVisual": "同坐标范围前后图、物理排除和分母",
+      "plainQuestion": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "primaryAction": "点一个组合并选择变化身份",
+      "handoff": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "rangeBeforeDenominator",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "denominator"
+      ],
+      "handoffMeaning": [
+        "rangeBefore",
+        "physicalFilter",
+        "actionFilterStatus",
+        "denominator"
+      ],
+      "nextState": "p4",
+      "errorReturn": "p3",
+      "replayPrompt": "指出一个组合是被牌面排除还是被行动筛选，并保持同一坐标。",
+      "stopCondition": "范围分母、物理过滤或行动筛选身份不完整时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p4",
+      "frameId": "G8_p4_compare",
+      "phase": "postflop_route",
+      "cognitiveJob": "在资料充分时比较合法动作；资料不足时停在政策边界。",
+      "architectureNodes": [
+        "A5"
+      ],
+      "slowPhases": [
+        "F3_compare"
+      ],
+      "centerVisual": "价格、合法动作、动作目的和政策身份",
+      "plainQuestion": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "primaryAction": "选择一个有依据的动作或停止",
+      "handoff": [
+        "legalActions",
+        "price",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "handoffMeaning": [
+        "legalActions",
+        "price",
+        "purpose",
+        "policyIdentity"
+      ],
+      "nextState": "p5",
+      "errorReturn": "p4",
+      "replayPrompt": "先说当前合法选择和价格，再说依据身份；没有依据就选择停止。",
+      "stopCondition": "没有匹配参考或明确课程政策时停在当前层，不伪造精确答案。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p5",
+      "frameId": "G9_p5_execute",
+      "phase": "postflop_route",
+      "cognitiveJob": "把选择落成动作、金额、底池、后手和下一行动者。",
+      "architectureNodes": [
+        "A6"
+      ],
+      "slowPhases": [
+        "F4_execute"
+      ],
+      "centerVisual": "动作按钮、金额、底池后变化和下一行动者",
+      "plainQuestion": "实际点什么？投入多少？接下来轮到谁？",
+      "primaryAction": "点击动作并确认金额",
+      "handoff": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "handoffMeaning": [
+        "action",
+        "amount",
+        "potAfter",
+        "stacksAfter",
+        "nextActor"
+      ],
+      "nextState": "p6",
+      "errorReturn": "p5",
+      "replayPrompt": "慢速点出动作并核对金额守恒，不能只点按钮。",
+      "stopCondition": "动作金额、底池、后手或下一行动者不守恒时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p6",
+      "frameId": "G10_p6_update",
+      "phase": "postflop_route",
+      "cognitiveJob": "只指出回应或新牌改变的字段，并找到真实后继或停止。",
+      "architectureNodes": [
+        "A7"
+      ],
+      "slowPhases": [
+        "F5_update_or_stop"
+      ],
+      "centerVisual": "一个变化高亮、动作后范围和真实后继",
+      "plainQuestion": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "primaryAction": "确认变化并进入真实后继",
+      "handoff": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter",
+        "responseOrCard"
+      ],
+      "handoffMeaning": [
+        "responseOrCard",
+        "changedField",
+        "rangeAfterOrStop",
+        "successorOrStop"
+      ],
+      "nextState": "p7",
+      "errorReturn": "p6",
+      "replayPrompt": "只改一个字段时说出受影响层和下一步。",
+      "stopCondition": "变化字段、动作后范围、账本或真实后继缺失时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextLayerSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    },
+    {
+      "stateId": "p7",
+      "frameId": "G11_p7_close",
+      "phase": "postflop_route",
+      "cognitiveJob": "把结算、决策结果、错误层和下一次练习入口分开。",
+      "architectureNodes": [
+        "A8"
+      ],
+      "slowPhases": [
+        "F5_update_or_stop"
+      ],
+      "centerVisual": "结算账本、决策与结果分栏和路线回放",
+      "plainQuestion": "这手牌到哪里结束？如果错了，错在第几层？",
+      "primaryAction": "确认结算并选择回退层",
+      "handoff": [
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField",
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "handoffMeaning": [
+        "settlement",
+        "decisionResultSeparation",
+        "errorLayer",
+        "nextEntry"
+      ],
+      "nextState": "exit_or_review",
+      "errorReturn": "p7",
+      "replayPrompt": "说出这手结束在哪里、错在第几层、下一题从哪里开始。",
+      "stopCondition": "结束原因、错误层或单变量迁移字段未表达时停在当前层。",
+      "requiredStopObservation": [
+        "primaryActionCompleted",
+        "nextOrStopSelfLocated",
+        "returnPointSelfLocated",
+        "handoffRestated"
+      ]
+    }
+  ],
+  "releaseSequence": [
+    "guided_route_12_stops",
+    "outer_inner_order_recall",
+    "unseen_layer_location",
+    "two_same_parent_error_recoveries",
+    "one_variable_holdout_before_explanation",
+    "slow_single_step_with_action_or_stop",
+    "continuous_route_only_after_successor_and_ledger_checks"
+  ],
+  "rules": {
+    "all12StopsHaveCognitiveJob": true,
+    "everyArchitectureNodeIsUsed": true,
+    "everySlowPhaseIsUsed": true,
+    "p2ReadsBoardAndHandAsOneVisibleTask": true,
+    "everyHandoffMatchesStateRequiredOutput": true,
+    "everyHandoffIsNamedBeforeNextState": true,
+    "replayRequiresOuterAndInnerLayers": true,
+    "slowExecutionRequiresFirstAnswerBeforeHelp": true,
+    "missingPolicyOrSuccessorStopsExactGrade": true,
+    "buttonOnlyDoesNotPass": true,
+    "noAggregatePromotion": true
+  },
+  "currentEvidence": {
+    "paperBridge": true,
+    "runtimeRouteAttached": false,
+    "fullGuidedTrial": false,
+    "architectureReplayObserved": false,
+    "slowExecutionObserved": false,
+    "unseenTransferObserved": false,
+    "continuousThreeStreetObserved": false,
+    "NL50Evidence": false
+  }
+}

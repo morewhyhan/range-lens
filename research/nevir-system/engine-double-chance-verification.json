@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "status": "physical_double_chance_and_nested_suit_swap_calibration_not_target_strategy",
+  "turnRows": 49,
+  "physicalRiverRows": 2352,
+  "perHandRiverRows": 14112,
+  "unsupportedHandRows": 1140,
+  "independentOrderedJointRunouts": 17820,
+  "cachedDistinctPairRunouts": 8910,
+  "turnRepresentativeCount": 23,
+  "actualPhysicalTurnCount": 49,
+  "orderedPublicRunoutsNotUniform": true,
+  "totalOrderedPublicProbability": 0.9999999999999531,
+  "rootChecks": [
+    {
+      "player": 0,
+      "hand": "AcQc",
+      "equity": 0.14393939393939395,
+      "engineEquity": 0.14393937587738037
+    },
+    {
+      "player": 0,
+      "hand": "AdQd",
+      "equity": 0.14393939393939395,
+      "engineEquity": 0.14393937587738037
+    },
+    {
+      "player": 0,
+      "hand": "AhQh",
+      "equity": 0.14393939393939395,
+      "engineEquity": 0.14393937587738037
+    },
+    {
+      "player": 1,
+      "hand": "KcJc",
+      "equity": 0.8560606060606061,
+      "engineEquity": 0.8560606241226196
+    },
+    {
+      "player": 1,
+      "hand": "KdJd",
+      "equity": 0.8560606060606061,
+      "engineEquity": 0.8560606241226196
+    },
+    {
+      "player": 1,
+      "hand": "KhJh",
+      "equity": 0.8560606060606061,
+      "engineEquity": 0.8560606241226196
+    }
+  ],
+  "fileHashes": {
+    "research/solver-probe/src/bin/double_chance_probe.rs": "deddc1db308ab5fcb3a687b0e061b0502ddf853bcdfe72b50c974692c958d645",
+    "research/solver-probe/target/release/double_chance_probe.exe": "8dc86327fc2819f3d9d0d3b693aa6536b05be13db6a12858b1c14c6dfeb8ed7d",
+    "research/nevir-system/engine-double-chance-probe.json": "49603fa1981ab88ae8f847c27f9d1ac0d33c536700eec780c1ae9781beeaa21b"
+  },
+  "fullOriginalFlopSolved": false,
+  "learnerTrials": 0,
+  "limits": [
+    "No bets: no evidence for action-conditioned double-chance EV or complete betting strategy.",
+    "This small symmetric configuration does not validate every possible nested mapping.",
+    "No original requested flop solve, NL50 reference or learner outcome."
+  ]
+}

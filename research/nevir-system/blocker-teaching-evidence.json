@@ -1,0 +1,391 @@
+{
+  "status": "facts_and_lesson_inputs_not_complete_strategy",
+  "source": {
+    "a4": {
+      "id": "N1-L17",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 17,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      }
+    },
+    "q7": {
+      "id": "N1-L18",
+      "source": {
+        "file": "C:\\Users\\why\\Desktop\\笔记 Nevir\\2.1- 翻后策略导论_中文笔记.md",
+        "line": 18,
+        "section": "3.3 在T85彩虹面简化组合选择",
+        "sha256": "8a15b9ec9b3538fb448e68067a2e0bf1d4518f995bdfe660b1ced3d3ed11b125"
+      }
+    },
+    "chart": "bb-普通中",
+    "sheet": "大盲防守",
+    "chartAssumption": "BB uses user simplified chart against BTN 2.5BB; original Nevir example opening size and full source ranges are not supplied."
+  },
+  "context": {
+    "board": [
+      "Th",
+      "8d",
+      "5c"
+    ],
+    "hero": [
+      "Ah",
+      "4h"
+    ],
+    "physicalSuitAssignment": "Author-chosen rainbow representative, consistent with source Q7 hearts has a backdoor and spades has none; not a claim to recover original screenshot."
+  },
+  "groups": [
+    {
+      "group": "AT",
+      "physicalBefore": 12,
+      "physicalAfter": 9,
+      "physicalRemoved": 3,
+      "bbChartCallMassBefore": 12,
+      "bbChartCallMassAfter": 9
+    },
+    {
+      "group": "ATs",
+      "physicalBefore": 3,
+      "physicalAfter": 3,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 3,
+      "bbChartCallMassAfter": 3
+    },
+    {
+      "group": "ATo",
+      "physicalBefore": 9,
+      "physicalAfter": 6,
+      "physicalRemoved": 3,
+      "bbChartCallMassBefore": 9,
+      "bbChartCallMassAfter": 6
+    },
+    {
+      "group": "A8",
+      "physicalBefore": 12,
+      "physicalAfter": 9,
+      "physicalRemoved": 3,
+      "bbChartCallMassBefore": 7.5,
+      "bbChartCallMassAfter": 5.5
+    },
+    {
+      "group": "A8s",
+      "physicalBefore": 3,
+      "physicalAfter": 2,
+      "physicalRemoved": 1,
+      "bbChartCallMassBefore": 3,
+      "bbChartCallMassAfter": 2
+    },
+    {
+      "group": "A8o",
+      "physicalBefore": 9,
+      "physicalAfter": 7,
+      "physicalRemoved": 2,
+      "bbChartCallMassBefore": 4.5,
+      "bbChartCallMassAfter": 3.5
+    },
+    {
+      "group": "A5",
+      "physicalBefore": 12,
+      "physicalAfter": 9,
+      "physicalRemoved": 3,
+      "bbChartCallMassBefore": 1.5,
+      "bbChartCallMassAfter": 1
+    },
+    {
+      "group": "A5s",
+      "physicalBefore": 3,
+      "physicalAfter": 2,
+      "physicalRemoved": 1,
+      "bbChartCallMassBefore": 1.5,
+      "bbChartCallMassAfter": 1
+    },
+    {
+      "group": "A5o",
+      "physicalBefore": 9,
+      "physicalAfter": 7,
+      "physicalRemoved": 2,
+      "bbChartCallMassBefore": 0,
+      "bbChartCallMassAfter": 0
+    },
+    {
+      "group": "A7",
+      "physicalBefore": 16,
+      "physicalAfter": 12,
+      "physicalRemoved": 4,
+      "bbChartCallMassBefore": 4,
+      "bbChartCallMassAfter": 3
+    },
+    {
+      "group": "A7s",
+      "physicalBefore": 4,
+      "physicalAfter": 3,
+      "physicalRemoved": 1,
+      "bbChartCallMassBefore": 4,
+      "bbChartCallMassAfter": 3
+    },
+    {
+      "group": "A7o",
+      "physicalBefore": 12,
+      "physicalAfter": 9,
+      "physicalRemoved": 3,
+      "bbChartCallMassBefore": 0,
+      "bbChartCallMassAfter": 0
+    },
+    {
+      "group": "A4",
+      "physicalBefore": 16,
+      "physicalAfter": 9,
+      "physicalRemoved": 7,
+      "bbChartCallMassBefore": 2,
+      "bbChartCallMassAfter": 1.5
+    },
+    {
+      "group": "QJs",
+      "physicalBefore": 4,
+      "physicalAfter": 4,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 0,
+      "bbChartCallMassAfter": 0
+    },
+    {
+      "group": "QJo",
+      "physicalBefore": 12,
+      "physicalAfter": 12,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 12,
+      "bbChartCallMassAfter": 12
+    },
+    {
+      "group": "J9s",
+      "physicalBefore": 4,
+      "physicalAfter": 4,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 2,
+      "bbChartCallMassAfter": 2
+    },
+    {
+      "group": "J9o",
+      "physicalBefore": 12,
+      "physicalAfter": 12,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 0,
+      "bbChartCallMassAfter": 0
+    },
+    {
+      "group": "97s",
+      "physicalBefore": 4,
+      "physicalAfter": 4,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 4,
+      "bbChartCallMassAfter": 4
+    },
+    {
+      "group": "97o",
+      "physicalBefore": 12,
+      "physicalAfter": 12,
+      "physicalRemoved": 0,
+      "bbChartCallMassBefore": 0,
+      "bbChartCallMassAfter": 0
+    }
+  ],
+  "inclusionExclusion": {
+    "before": 16,
+    "removedByAh": 4,
+    "removedBy4h": 4,
+    "overlap": 1,
+    "after": 9
+  },
+  "currentRankingExamples": [
+    {
+      "label": "AT",
+      "hole": [
+        "As",
+        "Td"
+      ],
+      "currentComparison": "hero_behind",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "A8",
+      "hole": [
+        "As",
+        "8s"
+      ],
+      "currentComparison": "hero_behind",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "A5",
+      "hole": [
+        "As",
+        "5s"
+      ],
+      "currentComparison": "hero_behind",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "22",
+      "hole": [
+        "2s",
+        "2d"
+      ],
+      "currentComparison": "hero_behind",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "A7",
+      "hole": [
+        "As",
+        "7s"
+      ],
+      "currentComparison": "hero_behind",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "QJ",
+      "hole": [
+        "Qs",
+        "Js"
+      ],
+      "currentComparison": "hero_ahead",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "J9",
+      "hole": [
+        "Js",
+        "9s"
+      ],
+      "currentComparison": "hero_ahead",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    },
+    {
+      "label": "97",
+      "hole": [
+        "9s",
+        "7s"
+      ],
+      "currentComparison": "hero_ahead",
+      "scope": "Current five-card ranking only; not future equity or a response policy."
+    }
+  ],
+  "currentRankingScope": "Physical card comparisons; example holdings are not all in the chart-derived calling range (e.g. QJs).",
+  "backdoor": {
+    "hearts": {
+      "hole": [
+        "Qh",
+        "7h"
+      ],
+      "totalTwoCardRunouts": 1081,
+      "heartFlushRunouts": 45,
+      "anyFlushRunouts": 45,
+      "probability": 0.041628122109158186,
+      "scope": "Uniform unknown cards, no action-conditioned opponent range; making a flush is not winning the pot or an action EV."
+    },
+    "spades": {
+      "hole": [
+        "Qs",
+        "7s"
+      ],
+      "totalTwoCardRunouts": 1081,
+      "heartFlushRunouts": 0,
+      "anyFlushRunouts": 0,
+      "probability": 0,
+      "scope": "Uniform unknown cards, no action-conditioned opponent range; making a flush is not winning the pot or an action EV."
+    }
+  },
+  "riverMissedHeartExample": {
+    "board": [
+      "Kh",
+      "9h",
+      "2c",
+      "7d",
+      "4s"
+    ],
+    "variants": [
+      {
+        "hole": [
+          "Qh",
+          "Jh"
+        ],
+        "remainingTwoHeartCombos": 36,
+        "scope": "Two-heart holdings that did not make a flush. Some made pairs or other showdown hands; not all are bluffs and not all took the same history."
+      },
+      {
+        "hole": [
+          "Qs",
+          "Js"
+        ],
+        "remainingTwoHeartCombos": 55,
+        "scope": "Two-heart holdings that did not make a flush. Some made pairs or other showdown hands; not all are bluffs and not all took the same history."
+      }
+    ],
+    "samePairVariants": [
+      {
+        "hole": [
+          "Qh",
+          "9s"
+        ],
+        "handValue": [
+          1,
+          9,
+          13,
+          12,
+          7
+        ],
+        "remainingTwoHeartCombos": 45
+      },
+      {
+        "hole": [
+          "Qc",
+          "9s"
+        ],
+        "handValue": [
+          1,
+          9,
+          13,
+          12,
+          7
+        ],
+        "remainingTwoHeartCombos": 55
+      }
+    ],
+    "scope": "Physical holdings only, not a betting/bluffing range."
+  },
+  "pureBluffCatchRatioCounterexample": {
+    "bluffMass": 20,
+    "valueMass": 80,
+    "blockedBluffMass": 4,
+    "blockedValueMass": 8,
+    "beforeEq": 0.2,
+    "afterEq": 0.18181818181818182,
+    "scope": "Author-specified algebra counterexample only. Not observed opponent data. Pure catch wins all bluffs and loses all value; no ties."
+  },
+  "compatibilityFindings": [
+    {
+      "id": "a7o_target",
+      "fact": "Source discusses A7o as a folding target on T85; user BB chart at BTN 2.5BB gives A7o call mass 0.",
+      "result": "Do not include A7o in this chart-derived postflop range.",
+      "notClaimed": "Not evidence that the original course is wrong; its opening size and ranges may differ."
+    },
+    {
+      "id": "qj_not_one_weight",
+      "fact": "Source says QJ among worse continuing candidates; user chart QJs raises 100% and QJo calls 100%.",
+      "result": "Coarse rank labels cannot be expanded to all suit classes with the same prior.",
+      "notClaimed": "No claim about exact source response probabilities."
+    }
+  ],
+  "releasedTaskTypes": [
+    "Physical combo removal",
+    "No double-counting of overlapping removals",
+    "Current hand ranking",
+    "Backdoor completion possibility",
+    "Chart/source compatibility identification"
+  ],
+  "notReleased": [
+    "Any-hand optimal bet/check or call/fold based only on these counts",
+    "Full postflop response matrix",
+    "NL50 certification"
+  ]
+}

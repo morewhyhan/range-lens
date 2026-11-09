@@ -1,0 +1,83 @@
+{
+  "id": "GOAL_OUTCOME_LADDER_V1",
+  "status": "paper_outcome_ladder_not_trialed",
+  "purpose": "将‘低基础学习者顺着练一次后形成整手思考架构，并逐步达到可执行与目标级别’拆成不可越级的可观察结果。",
+  "levels": [
+    {
+      "id": "O0_orientation",
+      "title": "能开始",
+      "learnerCan": ["指出六人桌仍在牌局中的位置", "指出当前行动者", "读出底池、后手和待补金额"],
+      "requiredOutputs": ["state", "actionPointer", "ledger"],
+      "evidence": "在未讲策略前独立完成一张局面定位卡",
+      "doesNotProve": ["牌力正确", "动作正确", "NL50准备度"]
+    },
+    {
+      "id": "O1_guided_route",
+      "title": "能跟完整条路线",
+      "learnerCan": ["按定位→牌面→手牌→范围→比较→执行→更新→结算顺序走完一手", "每层只回答当前问题", "错误后回到同一父帧"],
+      "requiredOutputs": ["parentFrame", "currentLayer", "returnTo", "firstAnswer", "helpLevel"],
+      "evidence": "规范L0—L4→p1—p7→回放全部到达；作者侧L0—L8映射可追溯；没有主持者替答；后继缺失时能停在明确停止点",
+      "doesNotProve": ["已经记住动作政策", "能在无提示陌生局面作答", "连续三街能力"]
+    },
+    {
+      "id": "O2_structure_recall",
+      "title": "脑中形成路线图",
+      "learnerCan": ["不看步骤标题复述七步顺序", "在未见局面指出当前处在哪一层", "说出下一步要看什么而不是直接猜按钮"],
+      "requiredOutputs": ["orderRecall", "layerLocation", "nextLayer"],
+      "evidence": "首遍结束后的顺序恢复、层级定位和一次单变量迁移全部通过",
+      "doesNotProve": ["动作答案与参考策略一致", "范围更新无误", "NL50能力"]
+    },
+    {
+      "id": "O3_slow_execution",
+      "title": "能慢慢执行一个有依据的单步",
+      "learnerCan": ["在输入、课程规则或匹配参考齐全时选择合法动作", "填写准确金额", "说出该动作改变了谁的范围或账本"],
+      "requiredOutputs": ["action", "amount", "reason", "rangeAfterOrStopReason", "ledgerAfter"],
+      "evidence": "未见单步题独立完成；事实、课程规则、参考策略身份与判分精度一致",
+      "doesNotProve": ["资料不足节点的答案", "其它位置或街次的迁移", "稳定盈利"]
+    },
+    {
+      "id": "O4_single_variable_transfer",
+      "title": "能迁移同一个原理",
+      "learnerCan": ["只改变位置、牌面、价格、回应或新牌中的一个因素", "指出需要重新检查的层", "在同一父子结构中完成新的事实或动作判断"],
+      "requiredOutputs": ["changedField", "reenteredLayer", "transferAnswer", "errorLayer"],
+      "evidence": "冻结未见题，题面不显示原题标签、答案或解析；首次作答独立记录",
+      "doesNotProve": ["多变量陌生牌局连续能力", "课程政策在所有牌面成立", "目标级别能力"]
+    },
+    {
+      "id": "O5_continuous_route",
+      "title": "能把一手牌连续走到结算",
+      "learnerCan": ["在翻牌、转牌、河牌之间保留历史", "每次回应或新牌后重新更新范围、账本和行动权", "区分结果与动作前判断"],
+      "requiredOutputs": ["streetSnapshots", "rangeUpdates", "ledgerConservation", "successorClosure", "decisionReview"],
+      "evidence": "未见三街路线完整回放；所有开放节点都有匹配后继或明确停止原因；金额和范围分母守恒",
+      "doesNotProve": ["任何真实对手都按模型行动", "长期盈利", "NL50准入"]
+    },
+    {
+      "id": "O6_target_readiness_candidate",
+      "title": "有资格进入目标级别评估",
+      "learnerCan": ["在目标配置和冻结参考下完成未见连续路线", "动作、金额、范围更新和错误定位通过独立复核", "在真实牌局审计中按同一结构记录决策"],
+      "requiredOutputs": ["matchedConfig", "heldoutScore", "transferScore", "continuousScore", "independentReview"],
+      "evidence": "目标条件的完整参考、课程简化损失边界、冻结未曝光题、低基础试读和真实决策审计全部通过",
+      "doesNotProve": ["永久盈利保证", "无需复习", "只凭训练器成绩达到NL50"]
+    }
+  ],
+  "gates": {
+    "levelsMustBeMonotonic": true,
+    "noLevelSkipping": true,
+    "firstPassOnlyClaimsUpTo": "O2_structure_recall",
+    "missingReferenceBlocks": "O3_slow_execution",
+    "missingHeldoutTransferBlocks": "O4_single_variable_transfer",
+    "missingSuccessorClosureBlocks": "O5_continuous_route",
+    "missingMatchedTargetEvidenceBlocks": "O6_target_readiness_candidate",
+    "firstAnswerPreserved": true,
+    "noLongTermDatabaseRequired": true
+  },
+  "currentEvidence": {
+    "paperRoute": true,
+    "factCandidateUnits": 1,
+    "learnerTrial": false,
+    "heldoutTransfer": false,
+    "continuousRoute": false,
+    "targetReadiness": false,
+    "NL50Evidence": false
+  }
+}

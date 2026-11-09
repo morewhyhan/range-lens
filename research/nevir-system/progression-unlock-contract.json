@@ -1,0 +1,51 @@
+{
+  "id": "PROGRESSION_UNLOCK_CONTRACT_V1",
+  "status": "declarative_unlock_contract_not_runtime_tested",
+  "states": [
+    {"id":"map","requires":["route_entered"],"next":"guided","claims":["route_seen"]},
+    {"id":"guided","requires":["demonstration_seen","one_helped_operation"],"next":"independent","claims":["assisted_operation"]},
+    {"id":"independent","requires":["unseen_same_mechanism_first_answer"],"next":"adjacent","claims":["single_layer_independence"]},
+    {"id":"adjacent","requires":["independent_pass","one_field_change_identified"],"next":"delayed","claims":["adjacent_transfer"]},
+    {"id":"delayed","requires":["intervening_parent_layer","relationship_recalled"],"next":"continuous","claims":["delayed_recall"]},
+    {"id":"continuous","requires":["history_response_new_card_settlement"],"next":"next_round","claims":["continuous_route_candidate"]}
+  ],
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7"],
+  "canonicalLearnerRouteRole": "runtime_unlock_surface",
+  "routeOrder": ["L0","L1","L2","L3","L4","L5","L6","L7","L8"],
+  "routeOrderRole": "legacy_author_macro_inventory_only",
+  "unlockRules": {
+    "oneCurrentParentAtATime": true,
+    "nextRequiresCurrentFrameCompletion": true,
+    "demonstrationCannotGrantIndependent": true,
+    "factPassCannotGrantStrategyPass": true,
+    "actionPassCannotCoverRangeError": true,
+    "policyPassCannotCoverLedgerError": true,
+    "missingReferenceStopsExactUnlock": true,
+    "policyChangeCanDowngradeState": true,
+    "noFlatDashboardUnlocks": true
+  },
+  "reviewOrder": ["known_relation","action_preserving_contrast","action_changing_contrast","delayed_recall","full_route"],
+  "continuousGates": [
+    "unseen_layer_location",
+    "board_and_best_five_fact",
+    "physical_vs_action_filter",
+    "declared_policy_action",
+    "amount_and_action_update",
+    "all_positive_successors",
+    "action_preserving_contrast",
+    "single_field_transfer",
+    "first_answer_separated"
+  ],
+  "storage": {
+    "sessionOnly": true,
+    "seededQueueReproducible": true,
+    "longTermLearnerDatabase": false
+  },
+  "currentStatus": {
+    "unlockContractWritten": true,
+    "runtimeUnlockImplemented": false,
+    "thresholdsCalibrated": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

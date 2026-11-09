@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "coreFrames": 21,
+  "optionalFrames": 8,
+  "opponentCardsCovered": true,
+  "wholeParentRestored": true,
+  "status": "guided_bluff_reraise_paper_sequence_not_UI_or_learner_verified"
+}

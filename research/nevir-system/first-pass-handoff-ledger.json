@@ -1,0 +1,684 @@
+{
+  "id": "FIRST_PASS_HANDOFF_LEDGER_V1",
+  "status": "paper_handoff_dependencies_closed_runtime_and_trial_missing",
+  "purpose": "把首遍13帧的每一步为什么现在出现、产生什么、下一步必须接收什么、哪些字段必须保留、错了回哪里，变成可核对的交接账本。",
+  "source": "first-pass-user-facing-script-contract.json",
+  "route": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "frameIds": [
+    "G0_welcome",
+    "G1_context",
+    "G2_preflop_chart",
+    "G3_preflop_action",
+    "G4_range_bridge",
+    "G5_p1_context",
+    "G6_p2_hand",
+    "G7_p3_range",
+    "G8_p4_compare",
+    "G9_p5_execute",
+    "G10_p6_update",
+    "G11_p7_close",
+    "G12_recall_transfer"
+  ],
+  "rows": [
+    {
+      "index": 1,
+      "frameId": "G0_welcome",
+      "canonicalState": "L0",
+      "whyNow": "先知道这是哪张桌、今天只走哪条路线。",
+      "primaryVisual": "six_max_table",
+      "plainQuestion": "这是一张什么桌，今天只练哪一条路线？",
+      "primaryAction": "确认桌面并开始",
+      "produces": "tableFrame",
+      "consumesFromPrevious": [
+        "routeEntry"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G1_context",
+        "required": [
+          "tableFrame"
+        ]
+      },
+      "preservedFields": [
+        "route",
+        "tableFrame"
+      ],
+      "errorReturn": "G0_welcome",
+      "stopCondition": "桌面、有效筹码或训练目标未确认时停在本帧，不进入专题选择。",
+      "missingEvidenceAction": "桌面、有效筹码或训练目标未确认时停在本帧，不进入专题选择。",
+      "cognitiveJob": "先知道这是哪张桌、今天只走哪条路线。",
+      "userInstruction": {
+        "see": [
+          "six_max_table",
+          "effective_stack",
+          "training_goal"
+        ],
+        "say": "这是一张什么桌，今天只练哪一条路线？",
+        "click": "确认桌面并开始",
+        "leave": "tableFrame→G1_context"
+      },
+      "terminal": false
+    },
+    {
+      "index": 2,
+      "frameId": "G1_context",
+      "canonicalState": "L1",
+      "whyNow": "把位置、历史、行动者和继续价格锁成当前局面。",
+      "primaryVisual": "actor_pointer",
+      "plainQuestion": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+      "primaryAction": "点行动者并确认待补",
+      "produces": "contextFrame",
+      "consumesFromPrevious": [
+        "tableFrame"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G2_preflop_chart",
+        "required": [
+          "actor",
+          "history",
+          "pot",
+          "toCall",
+          "contextFrame"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "seats",
+        "history",
+        "pot",
+        "toCall"
+      ],
+      "errorReturn": "G1_context",
+      "stopCondition": "行动者、历史、底池或待补金额不完整时停在本帧，只修正局面事实。",
+      "missingEvidenceAction": "行动者、历史、底池或待补金额不完整时停在本帧，只修正局面事实。",
+      "cognitiveJob": "把位置、历史、行动者和继续价格锁成当前局面。",
+      "userInstruction": {
+        "see": [
+          "seats",
+          "folded_seats",
+          "actor_pointer",
+          "history",
+          "pot",
+          "to_call"
+        ],
+        "say": "现在轮到谁？前面发生了什么？要继续要付多少钱？",
+        "click": "点行动者并确认待补",
+        "leave": "contextFrame→G2_preflop_chart"
+      },
+      "terminal": false
+    },
+    {
+      "index": 3,
+      "frameId": "G2_preflop_chart",
+      "canonicalState": "L2",
+      "whyNow": "在固定图表中找到自己的坐标，不提前猜动作。",
+      "primaryVisual": "fixed_169_grid",
+      "plainQuestion": "我的牌在这张图的哪一格？先只找到坐标。",
+      "primaryAction": "点击固定坐标格",
+      "produces": "preflopCell",
+      "consumesFromPrevious": [
+        "contextFrame"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G3_preflop_action",
+        "required": [
+          "preflopCell"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "oneNamedPreflopChart",
+        "heroHand"
+      ],
+      "errorReturn": "G2_preflop_chart",
+      "stopCondition": "图表身份或格子坐标未确定时停在本帧，不猜动作。",
+      "missingEvidenceAction": "图表身份或格子坐标未确定时停在本帧，不猜动作。",
+      "cognitiveJob": "在固定图表中找到自己的坐标，不提前猜动作。",
+      "userInstruction": {
+        "see": [
+          "one_named_preflop_chart",
+          "hero_hand",
+          "fixed_169_grid"
+        ],
+        "say": "我的牌在这张图的哪一格？先只找到坐标。",
+        "click": "点击固定坐标格",
+        "leave": "preflopCell→G3_preflop_action"
+      },
+      "terminal": false
+    },
+    {
+      "index": 4,
+      "frameId": "G3_preflop_action",
+      "canonicalState": "L3",
+      "whyNow": "把坐标格读成课程动作和权重。",
+      "primaryVisual": "selected_grid_cell",
+      "plainQuestion": "这个格子代表什么翻前课程动作？权重是多少？",
+      "primaryAction": "确认格子动作和权重",
+      "produces": "preflopAction",
+      "consumesFromPrevious": [
+        "preflopCell"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G4_range_bridge",
+        "required": [
+          "preflopAction",
+          "actionWeight"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopCell",
+        "actionLegend"
+      ],
+      "errorReturn": "G3_preflop_action",
+      "stopCondition": "动作身份或权重未读清时停在本帧，不把未知权重编成确定动作。",
+      "missingEvidenceAction": "动作身份或权重未读清时停在本帧，不把未知权重编成确定动作。",
+      "cognitiveJob": "把坐标格读成课程动作和权重。",
+      "userInstruction": {
+        "see": [
+          "selected_grid_cell",
+          "action_legend",
+          "action_weight"
+        ],
+        "say": "这个格子代表什么翻前课程动作？权重是多少？",
+        "click": "确认格子动作和权重",
+        "leave": "preflopAction→G4_range_bridge"
+      },
+      "terminal": false
+    },
+    {
+      "index": 5,
+      "frameId": "G4_range_bridge",
+      "canonicalState": "L4",
+      "whyNow": "把已知牌造成的物理排除和资料未知分开。",
+      "primaryVisual": "physical_filter",
+      "plainQuestion": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+      "primaryAction": "标记一组物理排除并确认分母",
+      "produces": "startingRangeFrame",
+      "consumesFromPrevious": [
+        "preflopAction"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G5_p1_context",
+        "required": [
+          "startingRangeFrame",
+          "normalizationDenominator"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "rangeDenominator",
+        "knownCards"
+      ],
+      "errorReturn": "G4_range_bridge",
+      "stopCondition": "物理过滤、范围分母或资料身份缺失时停在本帧，不推导行动弃牌。",
+      "missingEvidenceAction": "物理过滤、范围分母或资料身份缺失时停在本帧，不推导行动弃牌。",
+      "cognitiveJob": "把已知牌造成的物理排除和资料未知分开。",
+      "userInstruction": {
+        "see": [
+          "range_before",
+          "known_cards",
+          "physical_filter",
+          "range_after_or_stop"
+        ],
+        "say": "哪些组合因为已知牌不可能？哪些只是还没有资料？",
+        "click": "标记一组物理排除并确认分母",
+        "leave": "startingRangeFrame→G5_p1_context"
+      },
+      "terminal": false
+    },
+    {
+      "index": 6,
+      "frameId": "G5_p1_context",
+      "canonicalState": "p1",
+      "whyNow": "进入翻后时先锁行动权、价格和前序范围。",
+      "primaryVisual": "board",
+      "plainQuestion": "翻牌后现在轮到谁？继续需要多少钱？",
+      "primaryAction": "确认行动权和价格",
+      "produces": "contextCard",
+      "consumesFromPrevious": [
+        "startingRangeFrame"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G6_p2_hand",
+        "required": [
+          "actor",
+          "pot",
+          "toCall",
+          "contextCard",
+          "rangeBefore"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall"
+      ],
+      "errorReturn": "G5_p1_context",
+      "stopCondition": "翻后行动者、价格或历史没有确认时停在本帧，不进入牌力判断。",
+      "missingEvidenceAction": "翻后行动者、价格或历史没有确认时停在本帧，不进入牌力判断。",
+      "cognitiveJob": "进入翻后时先锁行动权、价格和前序范围。",
+      "userInstruction": {
+        "see": [
+          "board",
+          "hole_cards",
+          "history",
+          "actor_pointer",
+          "pot",
+          "stacks",
+          "to_call"
+        ],
+        "say": "翻牌后现在轮到谁？继续需要多少钱？",
+        "click": "确认行动权和价格",
+        "leave": "contextCard→G6_p2_hand"
+      },
+      "terminal": false
+    },
+    {
+      "index": 7,
+      "frameId": "G6_p2_hand",
+      "canonicalState": "p2",
+      "whyNow": "先读牌面事实，再读自己的最佳五张和改善牌。",
+      "primaryVisual": "best_five_slots",
+      "plainQuestion": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+      "primaryAction": "拼最佳五张并点牌型",
+      "produces": "handCard",
+      "consumesFromPrevious": [
+        "contextCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G7_p3_range",
+        "required": [
+          "bestFive",
+          "handClass",
+          "draws",
+          "improvementCards",
+          "handCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard"
+      ],
+      "errorReturn": "G6_p2_hand",
+      "stopCondition": "最佳五张、牌型或改善牌未确认时停在本帧，不跳到下注答案。",
+      "missingEvidenceAction": "最佳五张、牌型或改善牌未确认时停在本帧，不跳到下注答案。",
+      "cognitiveJob": "先读牌面事实，再读自己的最佳五张和改善牌。",
+      "userInstruction": {
+        "see": [
+          "board_cards",
+          "hole_cards",
+          "best_five_slots",
+          "hand_rank_ladder"
+        ],
+        "say": "我现在能组成的最好五张是什么？下一张可能怎样改善？",
+        "click": "拼最佳五张并点牌型",
+        "leave": "handCard→G7_p3_range"
+      },
+      "terminal": false
+    },
+    {
+      "index": 8,
+      "frameId": "G7_p3_range",
+      "canonicalState": "p3",
+      "whyNow": "把物理不可能、行动筛选和分母变化分开。",
+      "primaryVisual": "same_coordinate_range_before",
+      "plainQuestion": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+      "primaryAction": "点一个组合并选择变化身份",
+      "produces": "rangeDeltaCard",
+      "consumesFromPrevious": [
+        "handCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G8_p4_compare",
+        "required": [
+          "rangeBefore",
+          "physicalFilter",
+          "actionFilterStatus",
+          "rangeDeltaCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard",
+        "rangeDeltaCard"
+      ],
+      "errorReturn": "G7_p3_range",
+      "stopCondition": "范围分母、物理移除或行动筛选身份不完整时停在本帧，不开放精确策略。",
+      "missingEvidenceAction": "范围分母、物理移除或行动筛选身份不完整时停在本帧，不开放精确策略。",
+      "cognitiveJob": "把物理不可能、行动筛选和分母变化分开。",
+      "userInstruction": {
+        "see": [
+          "same_coordinate_range_before",
+          "physical_removed",
+          "action_filtered_or_unknown",
+          "denominator"
+        ],
+        "say": "哪些组合不可能、变少或留下？这里是物理变化还是行动变化？",
+        "click": "点一个组合并选择变化身份",
+        "leave": "rangeDeltaCard→G8_p4_compare"
+      },
+      "terminal": false
+    },
+    {
+      "index": 9,
+      "frameId": "G8_p4_compare",
+      "canonicalState": "p4",
+      "whyNow": "在资料充分时比较合法动作；资料不足时停在政策边界。",
+      "primaryVisual": "legal_actions",
+      "plainQuestion": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+      "primaryAction": "选择一个有依据的动作或停止",
+      "produces": "choiceCard",
+      "consumesFromPrevious": [
+        "rangeDeltaCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G9_p5_execute",
+        "required": [
+          "legalActions",
+          "actionPurpose",
+          "price",
+          "sizeCondition",
+          "choiceCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard",
+        "rangeDeltaCard",
+        "choiceCard"
+      ],
+      "errorReturn": "G8_p4_compare",
+      "stopCondition": "没有匹配参考或明确课程政策时停在本帧，只显示资料缺口，不伪造最佳动作。",
+      "missingEvidenceAction": "没有匹配参考或明确课程政策时停在本帧，只显示资料缺口，不伪造最佳动作。",
+      "cognitiveJob": "在资料充分时比较合法动作；资料不足时停在政策边界。",
+      "userInstruction": {
+        "see": [
+          "legal_actions",
+          "price",
+          "purpose",
+          "policy_identity",
+          "stop_reason_if_missing"
+        ],
+        "say": "在当前资料下，现在有哪些合法选择？每个选择解决什么问题？",
+        "click": "选择一个有依据的动作或停止",
+        "leave": "choiceCard→G9_p5_execute"
+      },
+      "terminal": false
+    },
+    {
+      "index": 10,
+      "frameId": "G9_p5_execute",
+      "canonicalState": "p5",
+      "whyNow": "把选择落成动作、金额、底池、后手和下一行动者。",
+      "primaryVisual": "action_button",
+      "plainQuestion": "实际点什么？投入多少？接下来轮到谁？",
+      "primaryAction": "点击动作并确认金额",
+      "produces": "ledgerCard",
+      "consumesFromPrevious": [
+        "choiceCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G10_p6_update",
+        "required": [
+          "selectedAction",
+          "amountBB",
+          "potAfterBB",
+          "stacksAfterBB",
+          "nextActor",
+          "ledgerCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard",
+        "rangeDeltaCard",
+        "choiceCard",
+        "ledgerCard"
+      ],
+      "errorReturn": "G9_p5_execute",
+      "stopCondition": "动作金额、底池、后手或下一行动者不守恒时停在本帧，不能进入更新。",
+      "missingEvidenceAction": "动作金额、底池、后手或下一行动者不守恒时停在本帧，不能进入更新。",
+      "cognitiveJob": "把选择落成动作、金额、底池、后手和下一行动者。",
+      "userInstruction": {
+        "see": [
+          "action_button",
+          "amount_input",
+          "pot_before_after",
+          "stacks_after",
+          "next_actor"
+        ],
+        "say": "实际点什么？投入多少？接下来轮到谁？",
+        "click": "点击动作并确认金额",
+        "leave": "ledgerCard→G10_p6_update"
+      },
+      "terminal": false
+    },
+    {
+      "index": 11,
+      "frameId": "G10_p6_update",
+      "canonicalState": "p6",
+      "whyNow": "只指出回应或新牌改变的字段，并找到真实后继或停止。",
+      "primaryVisual": "one_changed_field_highlight",
+      "plainQuestion": "回应或新牌只改变了哪一项？下一步接哪里？",
+      "primaryAction": "确认变化并进入真实后继",
+      "produces": "changeCard",
+      "consumesFromPrevious": [
+        "ledgerCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G11_p7_close",
+        "required": [
+          "changeField",
+          "successorOrStop",
+          "changeCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard",
+        "rangeDeltaCard",
+        "choiceCard",
+        "ledgerCard",
+        "changeCard"
+      ],
+      "errorReturn": "G10_p6_update",
+      "stopCondition": "变化字段、动作后范围或真实后继缺失时停在本帧，不生成下一街。",
+      "missingEvidenceAction": "变化字段、动作后范围或真实后继缺失时停在本帧，不生成下一街。",
+      "cognitiveJob": "只指出回应或新牌改变的字段，并找到真实后继或停止。",
+      "userInstruction": {
+        "see": [
+          "response_or_new_card",
+          "one_changed_field_highlight",
+          "range_after",
+          "successor_or_stop"
+        ],
+        "say": "回应或新牌只改变了哪一项？下一步接哪里？",
+        "click": "确认变化并进入真实后继",
+        "leave": "changeCard→G11_p7_close"
+      },
+      "terminal": false
+    },
+    {
+      "index": 12,
+      "frameId": "G11_p7_close",
+      "canonicalState": "p7",
+      "whyNow": "把结算、决策结果、错误层和下一次练习入口分开。",
+      "primaryVisual": "settlement_ledger",
+      "plainQuestion": "这手牌到哪里结束？如果错了，错在第几层？",
+      "primaryAction": "确认结算并选择回退层",
+      "produces": "reviewCard",
+      "consumesFromPrevious": [
+        "changeCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "G12_recall_transfer",
+        "required": [
+          "settlement",
+          "errorLayer",
+          "nextRoundEntry",
+          "reviewCard"
+        ]
+      },
+      "preservedFields": [
+        "tableFrame",
+        "contextFrame",
+        "preflopAction",
+        "startingRangeFrame",
+        "board",
+        "history",
+        "actor",
+        "pot",
+        "stacks",
+        "toCall",
+        "handCard",
+        "rangeDeltaCard",
+        "choiceCard",
+        "ledgerCard",
+        "changeCard",
+        "reviewCard"
+      ],
+      "errorReturn": "最近缺失层",
+      "stopCondition": "结算、错误层或决策与结果分离未完成时回到最近缺失层，不进入迁移。",
+      "missingEvidenceAction": "结算、错误层或决策与结果分离未完成时回到最近缺失层，不进入迁移。",
+      "cognitiveJob": "把结算、决策结果、错误层和下一次练习入口分开。",
+      "userInstruction": {
+        "see": [
+          "settlement_ledger",
+          "decision_vs_result",
+          "error_layer",
+          "route_replay"
+        ],
+        "say": "这手牌到哪里结束？如果错了，错在第几层？",
+        "click": "确认结算并选择回退层",
+        "leave": "reviewCard→G12_recall_transfer"
+      },
+      "terminal": false
+    },
+    {
+      "index": 13,
+      "frameId": "G12_recall_transfer",
+      "canonicalState": "replay_transfer",
+      "whyNow": "隐藏标题后复述外层、内层和单变量变化。",
+      "primaryVisual": "blank_outer_route_map",
+      "plainQuestion": "先说外层路线，再说翻后七步；这个陌生变化要回哪一层？",
+      "primaryAction": "复述双层路线并完成单变量迁移",
+      "produces": "nestedStructureEvidence",
+      "consumesFromPrevious": [
+        "reviewCard"
+      ],
+      "consumedByNext": {
+        "nextFrame": "next_session_or_stop",
+        "required": [
+          "outerRouteRecall",
+          "innerRouteRecall",
+          "oneVariableTransfer"
+        ]
+      },
+      "preservedFields": [
+        "outerRoute",
+        "innerRoute",
+        "returnPoint",
+        "oneVariableTransfer"
+      ],
+      "errorReturn": "对应父层",
+      "stopCondition": "不能复述路线或定位单变量变化时回到对应父层，不开放下一阶段。",
+      "missingEvidenceAction": "不能复述路线或定位单变量变化时回到对应父层，不开放下一阶段。",
+      "cognitiveJob": "隐藏标题后复述外层、内层和单变量变化。",
+      "userInstruction": {
+        "see": [
+          "blank_outer_route_map",
+          "blank_postflop_inner_route",
+          "parent_child_bracket",
+          "one_changed_field"
+        ],
+        "say": "先说外层路线，再说翻后七步，并指出陌生变化回到哪一层。",
+        "click": "复述双层路线并完成单变量迁移",
+        "leave": "通过后进入下一阶段，否则回到对应父层。"
+      },
+      "terminal": true
+    }
+  ],
+  "invariants": {
+    "oneOutputPerFrame": true,
+    "nextConsumesPrevious": true,
+    "preservedFieldsExplicit": true,
+    "stopDoesNotGuess": true,
+    "errorReturnsToSameFrameOrDeclaredReplay": true,
+    "finalReplayIsTerminal": true
+  },
+  "currentEvidence": {
+    "paperLedger": true,
+    "runtimeAttached": false,
+    "lowBaselineTrial": false,
+    "replayObserved": false
+  }
+}

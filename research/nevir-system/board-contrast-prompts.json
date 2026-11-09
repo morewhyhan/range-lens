@@ -1,0 +1,79 @@
+{
+  "status": "public_physical_contrast_practice_not_frozen_holdout",
+  "presentation": "One pair in the same restored decision; after-board is an alternative scenario, never a legal turn replacing flop.",
+  "pairs": [
+    {
+      "id": "BC01",
+      "hole": [
+        "As",
+        "Qs"
+      ],
+      "beforeBoard": [
+        "Ts",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ts",
+        "7s",
+        "2d"
+      ],
+      "prompt": "这手AQ从需要连来两张黑桃，变成下一张黑桃就成花了吗？"
+    },
+    {
+      "id": "BC02",
+      "hole": [
+        "Js",
+        "9c"
+      ],
+      "beforeBoard": [
+        "Ts",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ts",
+        "8h",
+        "2d"
+      ],
+      "prompt": "J9下一张来哪些点数能成顺？变化前后分别点出。"
+    },
+    {
+      "id": "BC03",
+      "hole": [
+        "9s",
+        "8c"
+      ],
+      "beforeBoard": [
+        "Ts",
+        "7h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ts",
+        "8h",
+        "2d"
+      ],
+      "prompt": "原来的T72真的没有两头顺听吗？先看98，再看新牌面。"
+    },
+    {
+      "id": "BC04",
+      "hole": [
+        "Qs",
+        "Jc"
+      ],
+      "beforeBoard": [
+        "Ts",
+        "8h",
+        "2d"
+      ],
+      "afterBoard": [
+        "Ts",
+        "9h",
+        "8d"
+      ],
+      "prompt": "QJ是还需要一张牌，还是已经成顺？不要把两处改动说成一次发牌。"
+    }
+  ],
+  "unknownCountsAsError": true
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ARCHITECTURE_REPLAY_RUBRIC_V1",
+  "status": "paper_rubric_not_administered",
+  "observations": {
+    "nodeIdentification":{"required":8,"independent":true,"sameQuestionRetryCounts":false},
+    "edgeRecall":{"required":7,"mustNameInputAndOutput":true,"independent":true},
+    "stateHandoff":{"required":["changedField","preservedField","successor"],"singleVariable":true},
+    "errorRecovery":{"required":"nearest_missing_node","homeResetNotAccepted":true},
+    "unseenMigration":{"required":"one_slow_replay_to_stop_or_settlement","titleMustNotRevealTheme":true}
+  },
+  "releaseStates":[
+    {"id":"route_seen","evidence":["nodeIdentification"],"allows":["guided_replay"]},
+    {"id":"structure_formed","evidence":["nodeIdentification","edgeRecall","errorRecovery","stateHandoff"],"allows":["adjacent_transfer"]},
+    {"id":"continuous_ready_candidate","evidence":["structure_formed","unseenMigration"],"allows":["continuous_trial" ]}
+  ],
+  "notEquivalent":["structure_formed_is_not_strategy_mastery","continuous_ready_candidate_is_not_NL50","correct_retry_is_not_independent_first_answer"],
+  "runtimeEvidence":{"implemented":false,"trialed":false}
+}

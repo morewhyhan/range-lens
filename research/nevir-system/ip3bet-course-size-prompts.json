@@ -1,0 +1,3525 @@
+{
+  "status": "course_size_abstraction_not_full_action_reference",
+  "questions": [
+    {
+      "id": "IPS-671869e668239baf",
+      "body": {
+        "board": [
+          "Ts",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-f34e592f22d57283",
+      "body": {
+        "board": [
+          "Ts",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-bdfa0b5150fc0b90",
+      "body": {
+        "board": [
+          "Ts",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-280587f82ffca42c",
+      "body": {
+        "board": [
+          "Ts",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-bf9ff3f690e7ffe0",
+      "body": {
+        "board": [
+          "Ts",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-de1dff7825b621f7",
+      "body": {
+        "board": [
+          "Ts",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-fa86b50697ad986f",
+      "body": {
+        "board": [
+          "Th",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-55201bda196291d2",
+      "body": {
+        "board": [
+          "Th",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-b1babe9f11f96d65",
+      "body": {
+        "board": [
+          "Th",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-836a0d62946936fc",
+      "body": {
+        "board": [
+          "Th",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-85fb0a53e5d4de14",
+      "body": {
+        "board": [
+          "Th",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9b93805b43a3efd3",
+      "body": {
+        "board": [
+          "Th",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-54c4dbbf03dab19b",
+      "body": {
+        "board": [
+          "Td",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-12f45ef629296298",
+      "body": {
+        "board": [
+          "Td",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-a4f9a3a2ffcc0e85",
+      "body": {
+        "board": [
+          "Td",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-41bc95f1f6e3d34d",
+      "body": {
+        "board": [
+          "Td",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-4fb5eb9ffa1b4da1",
+      "body": {
+        "board": [
+          "Td",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-c7939d22039df699",
+      "body": {
+        "board": [
+          "Td",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-a9ae22c22ba40de8",
+      "body": {
+        "board": [
+          "Tc",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-d8f7eddb095a2499",
+      "body": {
+        "board": [
+          "Tc",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-b3f706a85666d603",
+      "body": {
+        "board": [
+          "Tc",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-79c50dac224752c4",
+      "body": {
+        "board": [
+          "Tc",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-5227c664579de202",
+      "body": {
+        "board": [
+          "Tc",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-bd33d35bc6e46c79",
+      "body": {
+        "board": [
+          "Tc",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-621085edbf7f36e6",
+      "body": {
+        "board": [
+          "Ts",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-ae77ee514443db5b",
+      "body": {
+        "board": [
+          "Ts",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-0ec6f936c770968e",
+      "body": {
+        "board": [
+          "Ts",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-2face69ab4c98180",
+      "body": {
+        "board": [
+          "Ts",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-5610ba64f8e25365",
+      "body": {
+        "board": [
+          "Ts",
+          "6h",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-802a7a7525bfeebe",
+      "body": {
+        "board": [
+          "Ts",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-eb2351e7d3cd2ce2",
+      "body": {
+        "board": [
+          "Ts",
+          "6d",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-98c12de766624e3c",
+      "body": {
+        "board": [
+          "Ts",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-64a55a1d68fb2963",
+      "body": {
+        "board": [
+          "Ts",
+          "6c",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-cfbf03ee0dff0e45",
+      "body": {
+        "board": [
+          "Th",
+          "6s",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-55bbda0db934b597",
+      "body": {
+        "board": [
+          "Th",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-bca2623a129e48d1",
+      "body": {
+        "board": [
+          "Th",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-070b049281340f6d",
+      "body": {
+        "board": [
+          "Th",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-36493594f680e4f7",
+      "body": {
+        "board": [
+          "Th",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-a6dced1ce96ffe6f",
+      "body": {
+        "board": [
+          "Th",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-8fafc2fb14911df5",
+      "body": {
+        "board": [
+          "Th",
+          "6d",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-00f2d995fe8724bb",
+      "body": {
+        "board": [
+          "Th",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-679894fc8b69b790",
+      "body": {
+        "board": [
+          "Th",
+          "6c",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-31718e30591db426",
+      "body": {
+        "board": [
+          "Td",
+          "6s",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-98572c8ea07a451c",
+      "body": {
+        "board": [
+          "Td",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-54e18ab679fb2865",
+      "body": {
+        "board": [
+          "Td",
+          "6h",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-3e12bf99715bf9ba",
+      "body": {
+        "board": [
+          "Td",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-130785fd67cc77f8",
+      "body": {
+        "board": [
+          "Td",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-293cdc8a5e368005",
+      "body": {
+        "board": [
+          "Td",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9dd9fe17e5d07365",
+      "body": {
+        "board": [
+          "Td",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-0cd5f73c24708330",
+      "body": {
+        "board": [
+          "Td",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-d235e6a1f288eead",
+      "body": {
+        "board": [
+          "Td",
+          "6c",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-645e8a826e156740",
+      "body": {
+        "board": [
+          "Tc",
+          "6s",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9e55515a2507d761",
+      "body": {
+        "board": [
+          "Tc",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-6e1065cf0b105e28",
+      "body": {
+        "board": [
+          "Tc",
+          "6h",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-aa521ba20dd85751",
+      "body": {
+        "board": [
+          "Tc",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-0c7dc0c4ab4e6193",
+      "body": {
+        "board": [
+          "Tc",
+          "6d",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-17f92943e2cdd249",
+      "body": {
+        "board": [
+          "Tc",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-cebf1017d664a6ec",
+      "body": {
+        "board": [
+          "Tc",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-73d3f468e3cb8bcf",
+      "body": {
+        "board": [
+          "Tc",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-39f382f8cebf0ea2",
+      "body": {
+        "board": [
+          "Tc",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-d766febaf9c4393e",
+      "body": {
+        "board": [
+          "8s",
+          "5s",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-b8e7481f72c51502",
+      "body": {
+        "board": [
+          "8h",
+          "5h",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-cb7a1c245bed632c",
+      "body": {
+        "board": [
+          "8d",
+          "5d",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-71150e80d575fcf3",
+      "body": {
+        "board": [
+          "8c",
+          "5c",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-645d23af1bf34173",
+      "body": {
+        "board": [
+          "9s",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-ade7c1936c42e052",
+      "body": {
+        "board": [
+          "9s",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-b1b3bb93def873c7",
+      "body": {
+        "board": [
+          "9s",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-37b9ad744645e577",
+      "body": {
+        "board": [
+          "9s",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-5b326b1f874d2a8e",
+      "body": {
+        "board": [
+          "9s",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-4d553117d475d39c",
+      "body": {
+        "board": [
+          "9s",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-af9ba51fc70feac3",
+      "body": {
+        "board": [
+          "9h",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-1a1f824ce7ac452b",
+      "body": {
+        "board": [
+          "9h",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-3f80cc53224efe37",
+      "body": {
+        "board": [
+          "9h",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-f46e2e57d6aef90c",
+      "body": {
+        "board": [
+          "9h",
+          "6d",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-ef626aef924a4a5f",
+      "body": {
+        "board": [
+          "9h",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-d0c5cde6d7332e03",
+      "body": {
+        "board": [
+          "9h",
+          "6c",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9fbff3637ab7f6db",
+      "body": {
+        "board": [
+          "9d",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-d2c8215264cca07b",
+      "body": {
+        "board": [
+          "9d",
+          "6s",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-db2c4bcda04d9cff",
+      "body": {
+        "board": [
+          "9d",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-1e8976c4dce17e96",
+      "body": {
+        "board": [
+          "9d",
+          "6h",
+          "2c"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-262fdb47d9d65b81",
+      "body": {
+        "board": [
+          "9d",
+          "6c",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9e884997412aa05f",
+      "body": {
+        "board": [
+          "9d",
+          "6c",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-f2539b1c4f4dda93",
+      "body": {
+        "board": [
+          "9c",
+          "6s",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-ec4308ce11e21c0a",
+      "body": {
+        "board": [
+          "9c",
+          "6s",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-c6f37e114e0390ba",
+      "body": {
+        "board": [
+          "9c",
+          "6h",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-3816073c40073097",
+      "body": {
+        "board": [
+          "9c",
+          "6h",
+          "2d"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-5efb9ad67c515a0b",
+      "body": {
+        "board": [
+          "9c",
+          "6d",
+          "2s"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPS-9a93bc84f120fda0",
+      "body": {
+        "board": [
+          "9c",
+          "6d",
+          "2h"
+        ],
+        "players": 6,
+        "effectiveStartingStackBB": 100,
+        "heroSeat": "BTN",
+        "villainSeat": "CO",
+        "preflopRole": "last_raiser",
+        "potType": "3bet",
+        "street": "flop",
+        "actor": "BTN",
+        "opponentAlreadyChecked": true,
+        "taskKind": "adopted_course_primary_size_lookup_not_hand_action",
+        "prompt": "本题只练这套课程简化采用的主下注尺寸。此处采用25%、40%、67%三个档位；不判断某一手牌是否应该下注。请选择对应档位。",
+        "scope": "Only the explicitly supported named rank/texture classes in this course exercise. Not a full range strategy or new-board sizing algorithm.",
+        "choices": [
+          {
+            "id": "s25",
+            "label": "25%底池"
+          },
+          {
+            "id": "s40",
+            "label": "40%底池"
+          },
+          {
+            "id": "s67",
+            "label": "67%底池"
+          },
+          {
+            "id": "unknown",
+            "label": "我不知道"
+          }
+        ]
+      }
+    }
+  ]
+}

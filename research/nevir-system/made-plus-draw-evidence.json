@@ -1,0 +1,818 @@
+{
+  "status": "complete_declared_turn_allin_model_not_target_policy_or_learner_result",
+  "context": {
+    "players": 6,
+    "startingEffectiveBB": 100,
+    "initialStackPerSeatBB": 100,
+    "rake": 0,
+    "observedAuthorHistory": [
+      "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+      "Flop Js9d5d: SB bets30; BTN calls30",
+      "Turn2c: SB checks; BTN jams60 into81"
+    ],
+    "priorIdentity": "Author-given current conditional range, not derived from user simplified charts or real-player observations. Historical actions are legal, not recommendations.",
+    "sourceConnection": "J95 notes motivate distinguishing made hand and draw. Exact turn, range, weights and allin history are an isolated author mechanism model; no course action prescribed."
+  },
+  "root": {
+    "board": [
+      "Js",
+      "9d",
+      "5d",
+      "2c"
+    ],
+    "hero": [
+      "Jd",
+      "7d"
+    ],
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "potBB": 141,
+    "heroStackBB": 60,
+    "villainStackBB": 0,
+    "toCallBB": 60,
+    "foldedStacksBB": 399
+  },
+  "candidates": [
+    {
+      "id": "AA",
+      "hole": [
+        "Ah",
+        "Ac"
+      ],
+      "weight": 2,
+      "currentWinner": "villain",
+      "rivers": [
+        {
+          "river": "2s",
+          "share": 0
+        },
+        {
+          "river": "2h",
+          "share": 0
+        },
+        {
+          "river": "2d",
+          "share": 1
+        },
+        {
+          "river": "3s",
+          "share": 0
+        },
+        {
+          "river": "3h",
+          "share": 0
+        },
+        {
+          "river": "3d",
+          "share": 1
+        },
+        {
+          "river": "3c",
+          "share": 0
+        },
+        {
+          "river": "4s",
+          "share": 0
+        },
+        {
+          "river": "4h",
+          "share": 0
+        },
+        {
+          "river": "4d",
+          "share": 1
+        },
+        {
+          "river": "4c",
+          "share": 0
+        },
+        {
+          "river": "5s",
+          "share": 0
+        },
+        {
+          "river": "5h",
+          "share": 0
+        },
+        {
+          "river": "5c",
+          "share": 0
+        },
+        {
+          "river": "6s",
+          "share": 0
+        },
+        {
+          "river": "6h",
+          "share": 0
+        },
+        {
+          "river": "6d",
+          "share": 1
+        },
+        {
+          "river": "6c",
+          "share": 0
+        },
+        {
+          "river": "7s",
+          "share": 1
+        },
+        {
+          "river": "7h",
+          "share": 1
+        },
+        {
+          "river": "7c",
+          "share": 1
+        },
+        {
+          "river": "8s",
+          "share": 0
+        },
+        {
+          "river": "8h",
+          "share": 0
+        },
+        {
+          "river": "8d",
+          "share": 1
+        },
+        {
+          "river": "8c",
+          "share": 0
+        },
+        {
+          "river": "9s",
+          "share": 0
+        },
+        {
+          "river": "9h",
+          "share": 0
+        },
+        {
+          "river": "9c",
+          "share": 0
+        },
+        {
+          "river": "Ts",
+          "share": 0
+        },
+        {
+          "river": "Th",
+          "share": 0
+        },
+        {
+          "river": "Td",
+          "share": 1
+        },
+        {
+          "river": "Tc",
+          "share": 0
+        },
+        {
+          "river": "Jh",
+          "share": 1
+        },
+        {
+          "river": "Jc",
+          "share": 1
+        },
+        {
+          "river": "Qs",
+          "share": 0
+        },
+        {
+          "river": "Qh",
+          "share": 0
+        },
+        {
+          "river": "Qd",
+          "share": 1
+        },
+        {
+          "river": "Qc",
+          "share": 0
+        },
+        {
+          "river": "Ks",
+          "share": 0
+        },
+        {
+          "river": "Kh",
+          "share": 0
+        },
+        {
+          "river": "Kd",
+          "share": 1
+        },
+        {
+          "river": "Kc",
+          "share": 0
+        },
+        {
+          "river": "As",
+          "share": 0
+        },
+        {
+          "river": "Ad",
+          "share": 1
+        }
+      ],
+      "wins": 14,
+      "losses": 30,
+      "winCards": [
+        "2d",
+        "3d",
+        "4d",
+        "6d",
+        "7c",
+        "7h",
+        "7s",
+        "8d",
+        "Ad",
+        "Jc",
+        "Jh",
+        "Kd",
+        "Qd",
+        "Td"
+      ],
+      "lossCards": [
+        "2s",
+        "2h",
+        "3s",
+        "3h",
+        "3c",
+        "4s",
+        "4h",
+        "4c",
+        "5s",
+        "5h",
+        "5c",
+        "6s",
+        "6h",
+        "6c",
+        "8s",
+        "8h",
+        "8c",
+        "9s",
+        "9h",
+        "9c",
+        "Ts",
+        "Th",
+        "Tc",
+        "Qs",
+        "Qh",
+        "Qc",
+        "Ks",
+        "Kh",
+        "Kc",
+        "As"
+      ]
+    },
+    {
+      "id": "98",
+      "hole": [
+        "9c",
+        "8c"
+      ],
+      "weight": 1,
+      "currentWinner": "hero",
+      "rivers": [
+        {
+          "river": "2s",
+          "share": 1
+        },
+        {
+          "river": "2h",
+          "share": 1
+        },
+        {
+          "river": "2d",
+          "share": 1
+        },
+        {
+          "river": "3s",
+          "share": 1
+        },
+        {
+          "river": "3h",
+          "share": 1
+        },
+        {
+          "river": "3d",
+          "share": 1
+        },
+        {
+          "river": "3c",
+          "share": 1
+        },
+        {
+          "river": "4s",
+          "share": 1
+        },
+        {
+          "river": "4h",
+          "share": 1
+        },
+        {
+          "river": "4d",
+          "share": 1
+        },
+        {
+          "river": "4c",
+          "share": 1
+        },
+        {
+          "river": "5s",
+          "share": 1
+        },
+        {
+          "river": "5h",
+          "share": 1
+        },
+        {
+          "river": "5c",
+          "share": 1
+        },
+        {
+          "river": "6s",
+          "share": 1
+        },
+        {
+          "river": "6h",
+          "share": 1
+        },
+        {
+          "river": "6d",
+          "share": 1
+        },
+        {
+          "river": "6c",
+          "share": 1
+        },
+        {
+          "river": "7s",
+          "share": 1
+        },
+        {
+          "river": "7h",
+          "share": 1
+        },
+        {
+          "river": "7c",
+          "share": 1
+        },
+        {
+          "river": "8s",
+          "share": 0
+        },
+        {
+          "river": "8h",
+          "share": 0
+        },
+        {
+          "river": "8d",
+          "share": 1
+        },
+        {
+          "river": "9s",
+          "share": 0
+        },
+        {
+          "river": "9h",
+          "share": 0
+        },
+        {
+          "river": "Ts",
+          "share": 1
+        },
+        {
+          "river": "Th",
+          "share": 1
+        },
+        {
+          "river": "Td",
+          "share": 1
+        },
+        {
+          "river": "Tc",
+          "share": 1
+        },
+        {
+          "river": "Jh",
+          "share": 1
+        },
+        {
+          "river": "Jc",
+          "share": 1
+        },
+        {
+          "river": "Qs",
+          "share": 1
+        },
+        {
+          "river": "Qh",
+          "share": 1
+        },
+        {
+          "river": "Qd",
+          "share": 1
+        },
+        {
+          "river": "Qc",
+          "share": 1
+        },
+        {
+          "river": "Ks",
+          "share": 1
+        },
+        {
+          "river": "Kh",
+          "share": 1
+        },
+        {
+          "river": "Kd",
+          "share": 1
+        },
+        {
+          "river": "Kc",
+          "share": 1
+        },
+        {
+          "river": "As",
+          "share": 1
+        },
+        {
+          "river": "Ah",
+          "share": 1
+        },
+        {
+          "river": "Ad",
+          "share": 1
+        },
+        {
+          "river": "Ac",
+          "share": 1
+        }
+      ],
+      "wins": 40,
+      "losses": 4,
+      "winCards": [
+        "2s",
+        "2h",
+        "2d",
+        "3s",
+        "3h",
+        "3d",
+        "3c",
+        "4s",
+        "4h",
+        "4d",
+        "4c",
+        "5s",
+        "5h",
+        "5c",
+        "6s",
+        "6h",
+        "6d",
+        "6c",
+        "7s",
+        "7h",
+        "7c",
+        "8d",
+        "Ts",
+        "Th",
+        "Td",
+        "Tc",
+        "Jh",
+        "Jc",
+        "Qs",
+        "Qh",
+        "Qd",
+        "Qc",
+        "Ks",
+        "Kh",
+        "Kd",
+        "Kc",
+        "As",
+        "Ah",
+        "Ad",
+        "Ac"
+      ],
+      "lossCards": [
+        "8h",
+        "8s",
+        "9h",
+        "9s"
+      ]
+    },
+    {
+      "id": "55",
+      "hole": [
+        "5c",
+        "5h"
+      ],
+      "weight": 1,
+      "currentWinner": "villain",
+      "rivers": [
+        {
+          "river": "2s",
+          "share": 0
+        },
+        {
+          "river": "2h",
+          "share": 0
+        },
+        {
+          "river": "2d",
+          "share": 0
+        },
+        {
+          "river": "3s",
+          "share": 0
+        },
+        {
+          "river": "3h",
+          "share": 0
+        },
+        {
+          "river": "3d",
+          "share": 1
+        },
+        {
+          "river": "3c",
+          "share": 0
+        },
+        {
+          "river": "4s",
+          "share": 0
+        },
+        {
+          "river": "4h",
+          "share": 0
+        },
+        {
+          "river": "4d",
+          "share": 1
+        },
+        {
+          "river": "4c",
+          "share": 0
+        },
+        {
+          "river": "5s",
+          "share": 0
+        },
+        {
+          "river": "6s",
+          "share": 0
+        },
+        {
+          "river": "6h",
+          "share": 0
+        },
+        {
+          "river": "6d",
+          "share": 1
+        },
+        {
+          "river": "6c",
+          "share": 0
+        },
+        {
+          "river": "7s",
+          "share": 0
+        },
+        {
+          "river": "7h",
+          "share": 0
+        },
+        {
+          "river": "7c",
+          "share": 0
+        },
+        {
+          "river": "8s",
+          "share": 0
+        },
+        {
+          "river": "8h",
+          "share": 0
+        },
+        {
+          "river": "8d",
+          "share": 1
+        },
+        {
+          "river": "8c",
+          "share": 0
+        },
+        {
+          "river": "9s",
+          "share": 0
+        },
+        {
+          "river": "9h",
+          "share": 0
+        },
+        {
+          "river": "9c",
+          "share": 0
+        },
+        {
+          "river": "Ts",
+          "share": 0
+        },
+        {
+          "river": "Th",
+          "share": 0
+        },
+        {
+          "river": "Td",
+          "share": 1
+        },
+        {
+          "river": "Tc",
+          "share": 0
+        },
+        {
+          "river": "Jh",
+          "share": 0
+        },
+        {
+          "river": "Jc",
+          "share": 0
+        },
+        {
+          "river": "Qs",
+          "share": 0
+        },
+        {
+          "river": "Qh",
+          "share": 0
+        },
+        {
+          "river": "Qd",
+          "share": 1
+        },
+        {
+          "river": "Qc",
+          "share": 0
+        },
+        {
+          "river": "Ks",
+          "share": 0
+        },
+        {
+          "river": "Kh",
+          "share": 0
+        },
+        {
+          "river": "Kd",
+          "share": 1
+        },
+        {
+          "river": "Kc",
+          "share": 0
+        },
+        {
+          "river": "As",
+          "share": 0
+        },
+        {
+          "river": "Ah",
+          "share": 0
+        },
+        {
+          "river": "Ad",
+          "share": 1
+        },
+        {
+          "river": "Ac",
+          "share": 0
+        }
+      ],
+      "wins": 8,
+      "losses": 36,
+      "winCards": [
+        "3d",
+        "4d",
+        "6d",
+        "8d",
+        "Ad",
+        "Kd",
+        "Qd",
+        "Td"
+      ],
+      "lossCards": [
+        "2s",
+        "2h",
+        "2d",
+        "3s",
+        "3h",
+        "3c",
+        "4s",
+        "4h",
+        "4c",
+        "5s",
+        "6s",
+        "6h",
+        "6c",
+        "7s",
+        "7h",
+        "7c",
+        "8s",
+        "8h",
+        "8c",
+        "9s",
+        "9h",
+        "9c",
+        "Ts",
+        "Th",
+        "Tc",
+        "Jh",
+        "Jc",
+        "Qs",
+        "Qh",
+        "Qc",
+        "Ks",
+        "Kh",
+        "Kc",
+        "As",
+        "Ah",
+        "Ac"
+      ]
+    }
+  ],
+  "factChecks": {
+    "uniformLegalRiversPerCandidate": 44,
+    "knownPhysicalRiversEnumerated": 132,
+    "nominalDiamonds": [
+      "2d",
+      "3d",
+      "4d",
+      "6d",
+      "8d",
+      "Td",
+      "Qd",
+      "Kd",
+      "Ad"
+    ],
+    "manualWinSetOracles": "AA: nine diamonds plus two Js and three7s;98 loses exactly8h/8s/9h/9s;55 wins diamonds except2d."
+  },
+  "disjointOutcomes": {
+    "denominator": 176,
+    "meaning": "Weighted outcome units, not176 distinct physical river cards or separate decks.",
+    "currentAheadThenWin": 40,
+    "currentAheadThenLose": 4,
+    "currentBehindThenWin": 36,
+    "currentBehindThenLose": 96
+  },
+  "comparison": {
+    "currentAheadShare": 0.25,
+    "eventualWinShare": 0.4318181818181818,
+    "winningDiamondShare": 0.19886363636363635,
+    "wrongAddCurrentAndDiamond": 0.44886363636363635,
+    "correctUpdateIdentity": "finalWin = currentAhead - currentlyAheadButOutdrawn + currentlyBehindButImproved",
+    "menu": [
+      "fold",
+      "call60"
+    ],
+    "foldEVFromCurrentBB": 0,
+    "callEVFromCurrentBB": 26.795454545454547,
+    "finalPotBB": 201,
+    "callPrice": 0.29850746268656714,
+    "evScope": "Facing an effective allin; one river remains, no further betting, no rake, uniform legal dealing within each conditional candidate."
+  },
+  "selectedDemo": {
+    "opponentHole": [
+      "9c",
+      "8c"
+    ],
+    "river": "8s",
+    "heroLoses": true,
+    "selection": "Author-selected positive-probability counterexample, not random sampling or a frequency estimate.",
+    "revealOnlyAtShowdown": true,
+    "afterCall": {
+      "pot": 201,
+      "hero": 0,
+      "villain": 0
+    },
+    "afterAward": {
+      "pot": 0,
+      "hero": 0,
+      "villain": 201
+    },
+    "wholeHandHeroNetBB": -100,
+    "currentDecisionNetBB": -60
+  },
+  "release": {
+    "preciseReferenceOnlyWithinDeclaredModel": true,
+    "sourceMatchedTargetPolicy": false,
+    "actualOpponentRange": false,
+    "unseenAssessment": false,
+    "learnerVerified": false,
+    "NL50Verified": false
+  }
+}

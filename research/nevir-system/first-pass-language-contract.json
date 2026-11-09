@@ -1,0 +1,40 @@
+{
+  "id": "FIRST_PASS_LANGUAGE_CONTRACT_V1",
+  "status": "declarative_language_contract_not_trialed",
+  "displayLayers": ["plain_language","practice_language","technical_language"],
+  "defaultFirstPassLayer": "plain_language_plus_practice_language",
+  "terms": [
+    {"id":"range","plain":"对手可能拿的牌","visual":"13x13_range_grid","technical":"weighted legal entity combinations under current history"},
+    {"id":"weighted_range","plain":"这些牌留下的可能性高低","visual":"fixed_denominator_cells","technical":"normalized posterior mass"},
+    {"id":"physical_removal","plain":"这张牌已经被占用，所以不可能","visual":"strike_out_entity_card","technical":"known-card collision filter"},
+    {"id":"action_filter","plain":"做完这个动作后，哪些牌更常留下","visual":"before_after_arrow","technical":"prior mass times action probability then normalize"},
+    {"id":"blocker","plain":"我手里的牌让对手某些牌变少","visual":"hero_card_to_opponent_cells","technical":"known-card conditional effect"},
+    {"id":"backdoor","plain":"需要连续两张补牌才会改善","visual":"two_step_runout_path","technical":"future improvement requiring multiple cards"},
+    {"id":"equity","plain":"摊牌时平均能分到多少池","visual":"share_bar","technical":"expected split-pot share"},
+    {"id":"ev","plain":"这个动作长期平均多拿还是少拿","visual":"action_result_bars","technical":"expected net payoff from same state"},
+    {"id":"frequency","plain":"这手牌选择这个动作的比例","visual":"cell_action_mix","technical":"per-entity action probability"},
+    {"id":"price","plain":"现在继续要补多少钱","visual":"call_amount_and_final_pot","technical":"additional investment relative to contestable pot"}
+  ],
+  "requiredDistinctions": {
+    "physicalRemovalVsActionFilter": true,
+    "handStrengthVsEquityVsAction": true,
+    "courseRuleVsReferencePolicyVsRealityEstimate": true,
+    "nonzeroLowerWeightIsNotImpossible": true
+  },
+  "buttonLanguage": {
+    "mustUsePlainText": true,
+    "technicalTermCannotBeOnlyCue": true,
+    "examples": ["先看现在轮到谁","看我的牌力","看对手可能拿什么","比较这两个动作","执行并更新","回看我错在哪一层"]
+  },
+  "upgradeRules": {
+    "plainOperationBeforeTechnicalTerm": true,
+    "showTechnicalTermAfterFirstSuccessfulOperation": true,
+    "sameDefinitionAcrossUIAndAuthorLayer": true
+  },
+  "currentStatus": {
+    "contractWritten": true,
+    "beginnerTrial": false,
+    "pageImplemented": false,
+    "NL50Evidence": false
+  }
+}

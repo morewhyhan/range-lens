@@ -1,0 +1,1822 @@
+{
+  "status": "explicit_active_plan_models_not_target_strategy_or_learning_result",
+  "context": {
+    "players": 6,
+    "startingEffectiveBB": 100,
+    "heroSeat": "SB",
+    "villainSeat": "BTN",
+    "board": [
+      "Ks",
+      "7s",
+      "2d",
+      "3d"
+    ],
+    "potBB": 21,
+    "heroStackBB": 90,
+    "villainStackBB": 90,
+    "history": "Author legal observed history: BTN opens2.5, SB raises_to10, BB folds, BTN calls; flop Ks7s2d both check; turn3d before SB first action.",
+    "prior": "Current conditional candidates and weights are authored, not recovered from course or user full action-conditioned ranges.",
+    "comparisonMenu": [
+      "check_with_declared_continuation",
+      "bet10.5_with_declared_continuation"
+    ],
+    "future": "All44 legal rivers represented per candidate. Fold/call/jam responses specified; other lead sizes and river hero bets/raises omitted explicitly."
+  },
+  "protection": {
+    "hero": [
+      "Qs",
+      "Qc"
+    ],
+    "candidates": [
+      {
+        "id": "AJ",
+        "hole": [
+          "As",
+          "Jc"
+        ],
+        "weight": 3,
+        "currentWinner": "hero",
+        "rivers": [
+          {
+            "river": "2s",
+            "share": 1
+          },
+          {
+            "river": "2h",
+            "share": 1
+          },
+          {
+            "river": "2c",
+            "share": 1
+          },
+          {
+            "river": "3s",
+            "share": 1
+          },
+          {
+            "river": "3h",
+            "share": 1
+          },
+          {
+            "river": "3c",
+            "share": 1
+          },
+          {
+            "river": "4s",
+            "share": 1
+          },
+          {
+            "river": "4h",
+            "share": 1
+          },
+          {
+            "river": "4d",
+            "share": 1
+          },
+          {
+            "river": "4c",
+            "share": 1
+          },
+          {
+            "river": "5s",
+            "share": 1
+          },
+          {
+            "river": "5h",
+            "share": 1
+          },
+          {
+            "river": "5d",
+            "share": 1
+          },
+          {
+            "river": "5c",
+            "share": 1
+          },
+          {
+            "river": "6s",
+            "share": 1
+          },
+          {
+            "river": "6h",
+            "share": 1
+          },
+          {
+            "river": "6d",
+            "share": 1
+          },
+          {
+            "river": "6c",
+            "share": 1
+          },
+          {
+            "river": "7h",
+            "share": 1
+          },
+          {
+            "river": "7d",
+            "share": 1
+          },
+          {
+            "river": "7c",
+            "share": 1
+          },
+          {
+            "river": "8s",
+            "share": 1
+          },
+          {
+            "river": "8h",
+            "share": 1
+          },
+          {
+            "river": "8d",
+            "share": 1
+          },
+          {
+            "river": "8c",
+            "share": 1
+          },
+          {
+            "river": "9s",
+            "share": 1
+          },
+          {
+            "river": "9h",
+            "share": 1
+          },
+          {
+            "river": "9d",
+            "share": 1
+          },
+          {
+            "river": "9c",
+            "share": 1
+          },
+          {
+            "river": "Ts",
+            "share": 1
+          },
+          {
+            "river": "Th",
+            "share": 1
+          },
+          {
+            "river": "Td",
+            "share": 1
+          },
+          {
+            "river": "Tc",
+            "share": 1
+          },
+          {
+            "river": "Js",
+            "share": 1
+          },
+          {
+            "river": "Jh",
+            "share": 1
+          },
+          {
+            "river": "Jd",
+            "share": 1
+          },
+          {
+            "river": "Qh",
+            "share": 1
+          },
+          {
+            "river": "Qd",
+            "share": 1
+          },
+          {
+            "river": "Kh",
+            "share": 1
+          },
+          {
+            "river": "Kd",
+            "share": 1
+          },
+          {
+            "river": "Kc",
+            "share": 1
+          },
+          {
+            "river": "Ah",
+            "share": 0
+          },
+          {
+            "river": "Ad",
+            "share": 0
+          },
+          {
+            "river": "Ac",
+            "share": 0
+          }
+        ],
+        "winCards": [
+          "2s",
+          "2h",
+          "2c",
+          "3s",
+          "3h",
+          "3c",
+          "4s",
+          "4h",
+          "4d",
+          "4c",
+          "5s",
+          "5h",
+          "5d",
+          "5c",
+          "6s",
+          "6h",
+          "6d",
+          "6c",
+          "7h",
+          "7d",
+          "7c",
+          "8s",
+          "8h",
+          "8d",
+          "8c",
+          "9s",
+          "9h",
+          "9d",
+          "9c",
+          "Ts",
+          "Th",
+          "Td",
+          "Tc",
+          "Js",
+          "Jh",
+          "Jd",
+          "Qh",
+          "Qd",
+          "Kh",
+          "Kd",
+          "Kc"
+        ],
+        "equity": 0.9318181818181818
+      },
+      {
+        "id": "KK",
+        "hole": [
+          "Kh",
+          "Kd"
+        ],
+        "weight": 1,
+        "currentWinner": "villain",
+        "rivers": [
+          {
+            "river": "2s",
+            "share": 0
+          },
+          {
+            "river": "2h",
+            "share": 0
+          },
+          {
+            "river": "2c",
+            "share": 0
+          },
+          {
+            "river": "3s",
+            "share": 0
+          },
+          {
+            "river": "3h",
+            "share": 0
+          },
+          {
+            "river": "3c",
+            "share": 0
+          },
+          {
+            "river": "4s",
+            "share": 0
+          },
+          {
+            "river": "4h",
+            "share": 0
+          },
+          {
+            "river": "4d",
+            "share": 0
+          },
+          {
+            "river": "4c",
+            "share": 0
+          },
+          {
+            "river": "5s",
+            "share": 0
+          },
+          {
+            "river": "5h",
+            "share": 0
+          },
+          {
+            "river": "5d",
+            "share": 0
+          },
+          {
+            "river": "5c",
+            "share": 0
+          },
+          {
+            "river": "6s",
+            "share": 0
+          },
+          {
+            "river": "6h",
+            "share": 0
+          },
+          {
+            "river": "6d",
+            "share": 0
+          },
+          {
+            "river": "6c",
+            "share": 0
+          },
+          {
+            "river": "7h",
+            "share": 0
+          },
+          {
+            "river": "7d",
+            "share": 0
+          },
+          {
+            "river": "7c",
+            "share": 0
+          },
+          {
+            "river": "8s",
+            "share": 0
+          },
+          {
+            "river": "8h",
+            "share": 0
+          },
+          {
+            "river": "8d",
+            "share": 0
+          },
+          {
+            "river": "8c",
+            "share": 0
+          },
+          {
+            "river": "9s",
+            "share": 0
+          },
+          {
+            "river": "9h",
+            "share": 0
+          },
+          {
+            "river": "9d",
+            "share": 0
+          },
+          {
+            "river": "9c",
+            "share": 0
+          },
+          {
+            "river": "Ts",
+            "share": 0
+          },
+          {
+            "river": "Th",
+            "share": 0
+          },
+          {
+            "river": "Td",
+            "share": 0
+          },
+          {
+            "river": "Tc",
+            "share": 0
+          },
+          {
+            "river": "Js",
+            "share": 0
+          },
+          {
+            "river": "Jh",
+            "share": 0
+          },
+          {
+            "river": "Jd",
+            "share": 0
+          },
+          {
+            "river": "Jc",
+            "share": 0
+          },
+          {
+            "river": "Qh",
+            "share": 0
+          },
+          {
+            "river": "Qd",
+            "share": 0
+          },
+          {
+            "river": "Kc",
+            "share": 0
+          },
+          {
+            "river": "As",
+            "share": 0
+          },
+          {
+            "river": "Ah",
+            "share": 0
+          },
+          {
+            "river": "Ad",
+            "share": 0
+          },
+          {
+            "river": "Ac",
+            "share": 0
+          }
+        ],
+        "winCards": [],
+        "equity": 0
+      }
+    ],
+    "checkPolicy": "Turn SB checks; BTN checks. River both always check. This is a fixed plan restriction, not guaranteed by the rules.",
+    "checkEV": 14.676136363636363,
+    "weakFolds": {
+      "bet": 10.5,
+      "branches": [
+        {
+          "id": "AJ",
+          "probability": 0.75,
+          "response": {
+            "fold": 1,
+            "call": 0,
+            "jam": 0
+          },
+          "foldEVContribution": 15.75,
+          "callEVContribution": 0,
+          "jamEVContribution": 0,
+          "conditionalCallEV": null,
+          "riverRows": []
+        },
+        {
+          "id": "KK",
+          "probability": 0.25,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -2.625,
+          "conditionalCallEV": null,
+          "riverRows": []
+        }
+      ],
+      "jamMass": 0.25,
+      "jamShare": 0,
+      "jamCallNetFromRoot": -90,
+      "jamFoldNetFromRoot": -10.5,
+      "jamChoice": "fold",
+      "evFromRootBB": 13.125,
+      "riverPolicy": "both_check"
+    },
+    "weakCalls": {
+      "bet": 10.5,
+      "branches": [
+        {
+          "id": "AJ",
+          "probability": 0.75,
+          "response": {
+            "fold": 0,
+            "call": 1,
+            "jam": 0
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 21.477272727272727,
+          "jamEVContribution": 0,
+          "conditionalCallEV": 28.636363636363637,
+          "riverRows": [
+            {
+              "river": "2s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "2h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "2c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "3s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "3h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "3c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "4s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "4h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "4d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "4c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "5s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "5h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "5d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "5c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "6s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "6h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "6d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "6c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "7h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "7d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "7c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "8s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "8h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "8d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "8c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "9s",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "9h",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "9d",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "9c",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Ts",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Th",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Td",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Tc",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Js",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Jh",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Jd",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Qh",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Qd",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Kh",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Kd",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Kc",
+              "share": 1,
+              "action": "check_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Ah",
+              "share": 0,
+              "action": "check_check",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Ad",
+              "share": 0,
+              "action": "check_check",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Ac",
+              "share": 0,
+              "action": "check_check",
+              "heroNetFromCurrent": -10.5
+            }
+          ]
+        },
+        {
+          "id": "KK",
+          "probability": 0.25,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -2.625,
+          "conditionalCallEV": null,
+          "riverRows": []
+        }
+      ],
+      "jamMass": 0.25,
+      "jamShare": 0,
+      "jamCallNetFromRoot": -90,
+      "jamFoldNetFromRoot": -10.5,
+      "jamChoice": "fold",
+      "evFromRootBB": 18.852272727272727,
+      "riverPolicy": "both_check"
+    },
+    "denialGainContribution": 1.0738636363636371,
+    "strongRangeCostContribution": 2.625,
+    "lesson": "Against AJ, denying its3 winning rivers helps. Across the full declared range that benefit can be smaller than the cost of betting into KK."
+  },
+  "weak": {
+    "hero": [
+      "As",
+      "Qs"
+    ],
+    "candidates": [
+      {
+        "id": "KK",
+        "hole": [
+          "Kh",
+          "Kd"
+        ],
+        "weight": 4,
+        "currentWinner": "villain",
+        "rivers": [
+          {
+            "river": "2s",
+            "share": 0
+          },
+          {
+            "river": "2h",
+            "share": 0
+          },
+          {
+            "river": "2c",
+            "share": 0
+          },
+          {
+            "river": "3s",
+            "share": 0
+          },
+          {
+            "river": "3h",
+            "share": 0
+          },
+          {
+            "river": "3c",
+            "share": 0
+          },
+          {
+            "river": "4s",
+            "share": 1
+          },
+          {
+            "river": "4h",
+            "share": 0
+          },
+          {
+            "river": "4d",
+            "share": 0
+          },
+          {
+            "river": "4c",
+            "share": 0
+          },
+          {
+            "river": "5s",
+            "share": 1
+          },
+          {
+            "river": "5h",
+            "share": 0
+          },
+          {
+            "river": "5d",
+            "share": 0
+          },
+          {
+            "river": "5c",
+            "share": 0
+          },
+          {
+            "river": "6s",
+            "share": 1
+          },
+          {
+            "river": "6h",
+            "share": 0
+          },
+          {
+            "river": "6d",
+            "share": 0
+          },
+          {
+            "river": "6c",
+            "share": 0
+          },
+          {
+            "river": "7h",
+            "share": 0
+          },
+          {
+            "river": "7d",
+            "share": 0
+          },
+          {
+            "river": "7c",
+            "share": 0
+          },
+          {
+            "river": "8s",
+            "share": 1
+          },
+          {
+            "river": "8h",
+            "share": 0
+          },
+          {
+            "river": "8d",
+            "share": 0
+          },
+          {
+            "river": "8c",
+            "share": 0
+          },
+          {
+            "river": "9s",
+            "share": 1
+          },
+          {
+            "river": "9h",
+            "share": 0
+          },
+          {
+            "river": "9d",
+            "share": 0
+          },
+          {
+            "river": "9c",
+            "share": 0
+          },
+          {
+            "river": "Ts",
+            "share": 1
+          },
+          {
+            "river": "Th",
+            "share": 0
+          },
+          {
+            "river": "Td",
+            "share": 0
+          },
+          {
+            "river": "Tc",
+            "share": 0
+          },
+          {
+            "river": "Js",
+            "share": 1
+          },
+          {
+            "river": "Jh",
+            "share": 0
+          },
+          {
+            "river": "Jd",
+            "share": 0
+          },
+          {
+            "river": "Jc",
+            "share": 0
+          },
+          {
+            "river": "Qh",
+            "share": 0
+          },
+          {
+            "river": "Qd",
+            "share": 0
+          },
+          {
+            "river": "Qc",
+            "share": 0
+          },
+          {
+            "river": "Kc",
+            "share": 0
+          },
+          {
+            "river": "Ah",
+            "share": 0
+          },
+          {
+            "river": "Ad",
+            "share": 0
+          },
+          {
+            "river": "Ac",
+            "share": 0
+          }
+        ],
+        "winCards": [
+          "4s",
+          "5s",
+          "6s",
+          "8s",
+          "9s",
+          "Ts",
+          "Js"
+        ],
+        "equity": 0.1590909090909091
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kc",
+          "Jc"
+        ],
+        "weight": 16,
+        "currentWinner": "villain",
+        "rivers": [
+          {
+            "river": "2s",
+            "share": 1
+          },
+          {
+            "river": "2h",
+            "share": 0
+          },
+          {
+            "river": "2c",
+            "share": 0
+          },
+          {
+            "river": "3s",
+            "share": 1
+          },
+          {
+            "river": "3h",
+            "share": 0
+          },
+          {
+            "river": "3c",
+            "share": 0
+          },
+          {
+            "river": "4s",
+            "share": 1
+          },
+          {
+            "river": "4h",
+            "share": 0
+          },
+          {
+            "river": "4d",
+            "share": 0
+          },
+          {
+            "river": "4c",
+            "share": 0
+          },
+          {
+            "river": "5s",
+            "share": 1
+          },
+          {
+            "river": "5h",
+            "share": 0
+          },
+          {
+            "river": "5d",
+            "share": 0
+          },
+          {
+            "river": "5c",
+            "share": 0
+          },
+          {
+            "river": "6s",
+            "share": 1
+          },
+          {
+            "river": "6h",
+            "share": 0
+          },
+          {
+            "river": "6d",
+            "share": 0
+          },
+          {
+            "river": "6c",
+            "share": 0
+          },
+          {
+            "river": "7h",
+            "share": 0
+          },
+          {
+            "river": "7d",
+            "share": 0
+          },
+          {
+            "river": "7c",
+            "share": 0
+          },
+          {
+            "river": "8s",
+            "share": 1
+          },
+          {
+            "river": "8h",
+            "share": 0
+          },
+          {
+            "river": "8d",
+            "share": 0
+          },
+          {
+            "river": "8c",
+            "share": 0
+          },
+          {
+            "river": "9s",
+            "share": 1
+          },
+          {
+            "river": "9h",
+            "share": 0
+          },
+          {
+            "river": "9d",
+            "share": 0
+          },
+          {
+            "river": "9c",
+            "share": 0
+          },
+          {
+            "river": "Ts",
+            "share": 1
+          },
+          {
+            "river": "Th",
+            "share": 0
+          },
+          {
+            "river": "Td",
+            "share": 0
+          },
+          {
+            "river": "Tc",
+            "share": 0
+          },
+          {
+            "river": "Js",
+            "share": 1
+          },
+          {
+            "river": "Jh",
+            "share": 0
+          },
+          {
+            "river": "Jd",
+            "share": 0
+          },
+          {
+            "river": "Qh",
+            "share": 0
+          },
+          {
+            "river": "Qd",
+            "share": 0
+          },
+          {
+            "river": "Qc",
+            "share": 0
+          },
+          {
+            "river": "Kh",
+            "share": 0
+          },
+          {
+            "river": "Kd",
+            "share": 0
+          },
+          {
+            "river": "Ah",
+            "share": 1
+          },
+          {
+            "river": "Ad",
+            "share": 1
+          },
+          {
+            "river": "Ac",
+            "share": 1
+          }
+        ],
+        "winCards": [
+          "2s",
+          "3s",
+          "4s",
+          "5s",
+          "6s",
+          "8s",
+          "9s",
+          "Ts",
+          "Js",
+          "Ah",
+          "Ad",
+          "Ac"
+        ],
+        "equity": 0.2727272727272727
+      },
+      {
+        "id": "JT",
+        "hole": [
+          "Js",
+          "Ts"
+        ],
+        "weight": 1,
+        "currentWinner": "hero",
+        "rivers": [
+          {
+            "river": "2s",
+            "share": 1
+          },
+          {
+            "river": "2h",
+            "share": 1
+          },
+          {
+            "river": "2c",
+            "share": 1
+          },
+          {
+            "river": "3s",
+            "share": 1
+          },
+          {
+            "river": "3h",
+            "share": 1
+          },
+          {
+            "river": "3c",
+            "share": 1
+          },
+          {
+            "river": "4s",
+            "share": 1
+          },
+          {
+            "river": "4h",
+            "share": 1
+          },
+          {
+            "river": "4d",
+            "share": 1
+          },
+          {
+            "river": "4c",
+            "share": 1
+          },
+          {
+            "river": "5s",
+            "share": 1
+          },
+          {
+            "river": "5h",
+            "share": 1
+          },
+          {
+            "river": "5d",
+            "share": 1
+          },
+          {
+            "river": "5c",
+            "share": 1
+          },
+          {
+            "river": "6s",
+            "share": 1
+          },
+          {
+            "river": "6h",
+            "share": 1
+          },
+          {
+            "river": "6d",
+            "share": 1
+          },
+          {
+            "river": "6c",
+            "share": 1
+          },
+          {
+            "river": "7h",
+            "share": 1
+          },
+          {
+            "river": "7d",
+            "share": 1
+          },
+          {
+            "river": "7c",
+            "share": 1
+          },
+          {
+            "river": "8s",
+            "share": 1
+          },
+          {
+            "river": "8h",
+            "share": 1
+          },
+          {
+            "river": "8d",
+            "share": 1
+          },
+          {
+            "river": "8c",
+            "share": 1
+          },
+          {
+            "river": "9s",
+            "share": 1
+          },
+          {
+            "river": "9h",
+            "share": 1
+          },
+          {
+            "river": "9d",
+            "share": 1
+          },
+          {
+            "river": "9c",
+            "share": 1
+          },
+          {
+            "river": "Th",
+            "share": 0
+          },
+          {
+            "river": "Td",
+            "share": 0
+          },
+          {
+            "river": "Tc",
+            "share": 0
+          },
+          {
+            "river": "Jh",
+            "share": 0
+          },
+          {
+            "river": "Jd",
+            "share": 0
+          },
+          {
+            "river": "Jc",
+            "share": 0
+          },
+          {
+            "river": "Qh",
+            "share": 1
+          },
+          {
+            "river": "Qd",
+            "share": 1
+          },
+          {
+            "river": "Qc",
+            "share": 1
+          },
+          {
+            "river": "Kh",
+            "share": 1
+          },
+          {
+            "river": "Kd",
+            "share": 1
+          },
+          {
+            "river": "Kc",
+            "share": 1
+          },
+          {
+            "river": "Ah",
+            "share": 1
+          },
+          {
+            "river": "Ad",
+            "share": 1
+          },
+          {
+            "river": "Ac",
+            "share": 1
+          }
+        ],
+        "winCards": [
+          "2s",
+          "2h",
+          "2c",
+          "3s",
+          "3h",
+          "3c",
+          "4s",
+          "4h",
+          "4d",
+          "4c",
+          "5s",
+          "5h",
+          "5d",
+          "5c",
+          "6s",
+          "6h",
+          "6d",
+          "6c",
+          "7h",
+          "7d",
+          "7c",
+          "8s",
+          "8h",
+          "8d",
+          "8c",
+          "9s",
+          "9h",
+          "9d",
+          "9c",
+          "Qh",
+          "Qd",
+          "Qc",
+          "Kh",
+          "Kd",
+          "Kc",
+          "Ah",
+          "Ad",
+          "Ac"
+        ],
+        "equity": 0.8636363636363636
+      }
+    ],
+    "checkPolicy": "After SB check BTN bets10.5; use existing pressure model complete restricted defense continuation, whose best value is0. This differs from the protection family.",
+    "checkEV": 0,
+    "checkReference": "defense-tree-evidence.json/profiles/pressure",
+    "allReraise": {
+      "bet": 10.5,
+      "branches": [
+        {
+          "id": "KK",
+          "probability": 0.19047619047619047,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -2,
+          "conditionalCallEV": null,
+          "riverRows": []
+        },
+        {
+          "id": "KJ",
+          "probability": 0.7619047619047619,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -8,
+          "conditionalCallEV": null,
+          "riverRows": []
+        },
+        {
+          "id": "JT",
+          "probability": 0.047619047619047616,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -0.5,
+          "conditionalCallEV": null,
+          "riverRows": []
+        }
+      ],
+      "jamMass": 1,
+      "jamShare": 0.2792207792207792,
+      "jamCallNetFromRoot": -33.87662337662338,
+      "jamFoldNetFromRoot": -10.5,
+      "jamChoice": "fold",
+      "evFromRootBB": -10.5,
+      "riverPolicy": "KJ_known_on_call_pressure"
+    },
+    "someBetterFold": {
+      "bet": 10.5,
+      "branches": [
+        {
+          "id": "KK",
+          "probability": 0.19047619047619047,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -2,
+          "conditionalCallEV": null,
+          "riverRows": []
+        },
+        {
+          "id": "KJ",
+          "probability": 0.7619047619047619,
+          "response": {
+            "fold": 0.5,
+            "call": 0.5,
+            "jam": 0
+          },
+          "foldEVContribution": 8,
+          "callEVContribution": 0.36363636363636365,
+          "jamEVContribution": 0,
+          "conditionalCallEV": 0.9545454545454546,
+          "riverRows": [
+            {
+              "river": "2s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "2h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "2c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "3s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "3h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "3c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "4s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "4h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "4d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "4c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "5s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "5h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "5d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "5c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "6s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "6h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "6d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "6c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "7h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "7d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "7c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "8s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "8h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "8d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "8c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "9s",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "9h",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "9d",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "9c",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Ts",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Th",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Td",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Tc",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Js",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Jh",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Jd",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Qh",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Qd",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Qc",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Kh",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Kd",
+              "share": 0,
+              "action": "hero_check_villain_bet21_hero_fold",
+              "heroNetFromCurrent": -10.5
+            },
+            {
+              "river": "Ah",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Ad",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            },
+            {
+              "river": "Ac",
+              "share": 1,
+              "action": "hero_check_villain_check",
+              "heroNetFromCurrent": 31.5
+            }
+          ]
+        },
+        {
+          "id": "JT",
+          "probability": 0.047619047619047616,
+          "response": {
+            "fold": 0,
+            "call": 0,
+            "jam": 1
+          },
+          "foldEVContribution": 0,
+          "callEVContribution": 0,
+          "jamEVContribution": -0.5,
+          "conditionalCallEV": null,
+          "riverRows": []
+        }
+      ],
+      "jamMass": 0.23809523809523808,
+      "jamShare": 0.3,
+      "jamCallNetFromRoot": -29.700000000000003,
+      "jamFoldNetFromRoot": -10.5,
+      "jamChoice": "fold",
+      "evFromRootBB": 5.863636363636363,
+      "riverPolicy": "KJ_known_on_call_pressure"
+    },
+    "lesson": "Draw facts stay the same while declared response changes. One lead loses10.5, the other earns129/22; a draw alone does not select aggression."
+  },
+  "release": {
+    "courseRuleReplacement": false,
+    "fullContinuousActionOptimum": false,
+    "actualOpponentRange": false,
+    "NL50Reference": false,
+    "learnerVerified": false
+  }
+}

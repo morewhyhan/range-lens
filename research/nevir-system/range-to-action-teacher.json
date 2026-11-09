@@ -1,0 +1,129 @@
+{
+  "status": "author_reference_not_learner_results",
+  "keys": [
+    {
+      "id": "RA-6774363b73a67c91",
+      "inputFingerprint": "6774363b73a67c917b4d7ea760e85eade4e9a5bf33c2792aba52acbc1f5c57c4",
+      "sourcePath": "HC_A",
+      "sourceSHA256": "85b7b1b7daba7bc35d588876a6fa213429e978eb2a9900c8e2c6b6e076087506",
+      "posterior": {
+        "88": 0.16666666666666669,
+        "QQ": 0.6666666666666667,
+        "JT": 0.16666666666666669
+      },
+      "unnormalizedSteps": [
+        [
+          0.2,
+          1.6,
+          2
+        ],
+        [
+          0.2,
+          0.8,
+          0.2
+        ]
+      ],
+      "values": {
+        "check": 29.16666666666667,
+        "bet17_5": 32.083333333333336
+      },
+      "best": [
+        "bet17_5"
+      ],
+      "status": "public_author_model_not_frozen_transfer_test"
+    },
+    {
+      "id": "RA-74e1380e05b3ed15",
+      "inputFingerprint": "74e1380e05b3ed1523bd5f14254c055b17c1096ed3c732f1d2a71596ffc149d9",
+      "sourcePath": "HC_A",
+      "sourceSHA256": "85b7b1b7daba7bc35d588876a6fa213429e978eb2a9900c8e2c6b6e076087506",
+      "posterior": {
+        "88": 0.16666666666666669,
+        "QQ": 0.6666666666666667,
+        "JT": 0.16666666666666669
+      },
+      "unnormalizedSteps": [
+        [
+          0.2,
+          1.6,
+          2
+        ],
+        [
+          0.2,
+          0.8,
+          0.2
+        ]
+      ],
+      "values": {
+        "check": 29.16666666666667,
+        "bet17_5": 32.083333333333336
+      },
+      "best": [
+        "bet17_5"
+      ],
+      "status": "public_author_model_not_frozen_transfer_test"
+    },
+    {
+      "id": "RA-79cb08e45fe3420b",
+      "inputFingerprint": "79cb08e45fe3420ba639dfecb97ddb2a2d9df25528fd45ff74d09ce6b0847024",
+      "sourcePath": "HC_B",
+      "sourceSHA256": "85b7b1b7daba7bc35d588876a6fa213429e978eb2a9900c8e2c6b6e076087506",
+      "posterior": {
+        "88": 0.4444444444444445,
+        "QQ": 0.4444444444444445,
+        "JT": 0.11111111111111112
+      },
+      "unnormalizedSteps": [
+        [
+          1,
+          1,
+          0.2
+        ],
+        [
+          0.8,
+          0.8,
+          0.2
+        ]
+      ],
+      "values": {
+        "check": 19.444444444444446,
+        "bet17_5": 15.555555555555557
+      },
+      "best": [
+        "check"
+      ],
+      "status": "public_author_model_not_frozen_transfer_test"
+    },
+    {
+      "id": "RA-72d989b58dac7987",
+      "inputFingerprint": "72d989b58dac7987ce80e1bf1792e42e5c8a7d3e10f06226b18629569fb73705",
+      "sourcePath": "HC_B",
+      "sourceSHA256": "85b7b1b7daba7bc35d588876a6fa213429e978eb2a9900c8e2c6b6e076087506",
+      "posterior": {
+        "88": 0.4444444444444445,
+        "QQ": 0.4444444444444445,
+        "JT": 0.11111111111111112
+      },
+      "unnormalizedSteps": [
+        [
+          1,
+          1,
+          0.2
+        ],
+        [
+          0.8,
+          0.8,
+          0.2
+        ]
+      ],
+      "values": {
+        "check": 19.444444444444446,
+        "bet17_5": 15.555555555555557
+      },
+      "best": [
+        "check"
+      ],
+      "status": "public_author_model_not_frozen_transfer_test"
+    }
+  ]
+}

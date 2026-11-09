@@ -1,0 +1,58 @@
+{
+  "status": "declarative_low_cognitive_load_contract_not_trialed",
+  "source": "54_低理解门槛与认知负荷验收合同.md",
+  "visibilityContract": "first-pass-visibility-contract.json",
+  "visibilityContractStatus": "visibility_layers_written_not_trialed",
+  "audienceStandard": {
+    "meaning": "low poker baseline, low working memory, slow reading or operation",
+    "ageLabelIsNotEvidence": true,
+    "noCountdown": true,
+    "noSpeedThreshold": true
+  },
+  "outcomes": [
+    {"id":"route_comprehension","evidence":["order_recall","layer_location","error_recovery","one_variable_transfer"],"current":false},
+    {"id":"slow_execution","evidence":["unseen_same_mechanism","first_vs_retry","continuous_ledger"],"current":false},
+    {"id":"nl50_capability","evidence":["matched_reference","unseen_continuous_test","external_target_benchmark"],"current":false}
+  ],
+  "unitPattern": ["see","do_one_thing","contrast","carry_forward"],
+  "visibleLoad": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "oneNewUnmasteredConceptAtATime": true,
+    "necessaryInputsRemainVisible": true,
+    "optionalDetailsInChildLayer": true
+  },
+  "visualSemantics": {
+    "cardsUseRankAndSuitText": true,
+    "currentActorUsesPointerAndText": true,
+    "potAndStreetPaidAreSeparate": true,
+    "rangeCellUsesNonColorCue": true,
+    "unknownIsNotFoldAnswer": true
+  },
+  "assistanceFade": [
+    "step_title_and_actor_visible",
+    "step_title_hidden",
+    "answer_colors_hidden",
+    "one_field_changed_transfer",
+    "unseen_continuous_route"
+  ],
+  "trialProtocol": {
+    "passes": ["L0_to_L4","L5_to_L8","one_adjacent_change","one_unseen_short_route"],
+    "hostMustNotFillKnowledge": true,
+    "record": ["time","extra_explanation","errorLayer","helpCount","firstAnswer","retryAnswer","exitPoint","nextLayerRecall"],
+    "designersOwnWalkthroughIsInsufficient": true
+  },
+  "nl50Gate": {
+    "requiresMatchedReference": true,
+    "requiresUnseenContinuousTests": true,
+    "requiresExternalBenchmark": true,
+    "routeComprehensionDoesNotGrantNL50": true
+  },
+  "currentStatus": {
+    "readabilityTrial": false,
+    "adultBeginnerTrial": false,
+    "routeComprehensionEvidence": false,
+    "slowExecutionEvidence": false,
+    "nl50Evidence": false
+  }
+}

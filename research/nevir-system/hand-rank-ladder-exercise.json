@@ -1,0 +1,45 @@
+{
+  "id": "HAND_RANK_LADDER_EXERCISE_V1",
+  "status": "paper_fact_child_exercise_not_trialed",
+  "parentFrame": "p2_board",
+  "childOnly": true,
+  "userView": {
+    "layout": "single_horizontal_strip",
+    "cards": 9,
+    "labels": "plain_language_first",
+    "hideStrategyControls": true,
+    "primaryQuestion": "请从弱到强按顺序点出牌型。"
+  },
+  "orderedRanks": [
+    {"id":"high_card","label":"高牌","strength":1},
+    {"id":"one_pair","label":"一对","strength":2},
+    {"id":"two_pair","label":"两对","strength":3},
+    {"id":"three_of_a_kind","label":"三条","strength":4},
+    {"id":"straight","label":"顺子","strength":5},
+    {"id":"flush","label":"同花","strength":6},
+    {"id":"full_house","label":"葫芦","strength":7},
+    {"id":"four_of_a_kind","label":"四条","strength":8},
+    {"id":"straight_flush","label":"同花顺","strength":9}
+  ],
+  "rounds": [
+    {"id":"R1_named_order","visible":"nine_named_cards","task":"click_weak_to_strong","output":"rankOrder"},
+    {"id":"R2_icon_order","visible":"rank_icons_and_five_card_examples","task":"compare_two_examples","output":"strongerOrTie"},
+    {"id":"R3_kicker_tie","visible":"same_category_complete_five_cards","task":"compare_ranks_and_kickers","output":"bestFiveComparison"}
+  ],
+  "scoring": {
+    "rankOrderExact": true,
+    "sameCategoryUsesCompleteFiveCards": true,
+    "duplicateCardsStop": true,
+    "unknownCountsAsError": true,
+    "firstAnswerBeforeExplanation": true,
+    "strategyIsNotGradedHere": true
+  },
+  "handoff": {
+    "outputToParent": ["bestFive","handCategory","comparisonOrTie","improvementCards"],
+    "returnTo": "p2_board",
+    "parentStatePreserved": ["board","heroHole","history","firstAnswer"],
+    "nextParent": "p3_range"
+  },
+  "releaseEvidence": ["one_guided_order", "one_hidden_label_comparison", "one_same_category_kicker_comparison"],
+  "currentEvidence": {"paperSpec": true, "runtime": false, "lowBaselineTrial": false, "learnerMastery": false}
+}

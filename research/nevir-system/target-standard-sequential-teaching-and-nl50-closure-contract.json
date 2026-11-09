@@ -1,0 +1,470 @@
+{
+  "id": "TARGET_STANDARD_SEQUENTIAL_TEACHING_AND_NL50_CLOSURE_CONTRACT_V1",
+  "status": "paper_goal_standard_compiled_runtime_reference_and_learner_evidence_missing",
+  "objective": "让低基础、慢阅读、慢操作学习者沿唯一嵌套路线完成一次可复述的完整跟练，再通过慢速执行、单字段迁移、连续三街和独立复核走向目标级能力；不把结构完成误报为NL50保证。",
+  "canonicalRoute": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+  ],
+  "routeInvariant": {
+    "oneVisibleParentAtATime": true,
+    "childOpensOnlyInsideParent": true,
+    "childReturnsToSameParentSnapshot": true,
+    "noFlat35HomeMenu": true,
+    "missingEvidenceCreatesStopCard": true,
+    "firstPassMustExposeEveryCanonicalState": true
+  },
+  "visibleStopContract": [
+    "currentLayer",
+    "whyNow",
+    "centerVisual",
+    "onePrimaryQuestion",
+    "onePrimaryAction",
+    "answerShape",
+    "nextOrStop",
+    "errorReturn",
+    "helpLevel",
+    "parentFrame"
+  ],
+  "canonicalUserExperience": [
+    {
+      "id": "L0",
+      "job": "建立这手牌的整体情境",
+      "userOutput": "说出这是一次什么训练、当前要解决什么",
+      "next": "L1",
+      "plainQuestion": "这次练习要让我学会哪条路线？",
+      "whyNow": "先知道整手牌要按什么顺序看。",
+      "centerVisual": "sixMaxTable_and_routeMap",
+      "primaryAction": "confirm_training_goal",
+      "answerShape": "一句话说明目标"
+    },
+    {
+      "id": "L1",
+      "job": "定位桌面、位置和行动权",
+      "userOutput": "指出谁在什么位置、现在轮到谁",
+      "next": "L2",
+      "plainQuestion": "现在谁在什么位置，轮到谁？",
+      "whyNow": "行动权决定后面该看谁的动作。",
+      "centerVisual": "sixMaxTable_with_actorPointer",
+      "primaryAction": "select_actor_and_position",
+      "answerShape": "选择行动者"
+    },
+    {
+      "id": "L2",
+      "job": "确认翻前动作和起始范围来源",
+      "userOutput": "复述前序并确认使用哪张范围图",
+      "next": "L3",
+      "plainQuestion": "前面怎么行动，起始范围从哪张图来？",
+      "whyNow": "翻后范围必须从已经发生的翻前动作接过来。",
+      "centerVisual": "history_and_preflopChart",
+      "primaryAction": "confirm_history_and_rangeSource",
+      "answerShape": "确认前序和范围图"
+    },
+    {
+      "id": "L3",
+      "job": "读公共牌、自己的牌和牌面类型",
+      "userOutput": "指出牌面事实、牌力/听牌或未知事实",
+      "next": "L4",
+      "plainQuestion": "公共牌和我的牌现在组成什么？",
+      "whyNow": "先看真实牌力和听牌，再谈范围与动作。",
+      "centerVisual": "board_bestFive_handRank_draws",
+      "primaryAction": "select_board_and_handFacts",
+      "answerShape": "选择牌面事实"
+    },
+    {
+      "id": "L4",
+      "job": "把翻前事实交接到翻后父帧",
+      "userOutput": "确认翻后第一步要先定位而不是直接猜下注",
+      "next": "p1",
+      "plainQuestion": "翻后第一步先做什么？",
+      "whyNow": "把翻前结果交给翻后父帧，不能直接猜下注。",
+      "centerVisual": "preflop_to_postflop_handoff",
+      "primaryAction": "confirm_parent_handoff",
+      "answerShape": "确认进入翻后"
+    },
+    {
+      "id": "p1",
+      "job": "定位当前行动者和历史",
+      "userOutput": "选择当前行动者或停止原因",
+      "next": "p2",
+      "plainQuestion": "现在先轮到谁？",
+      "whyNow": "行动者和历史错了，后面所有比较都会错。",
+      "centerVisual": "table_history_actorMarker",
+      "primaryAction": "select_actor_or_stop",
+      "answerShape": "选择行动者或停止"
+    },
+    {
+      "id": "p2",
+      "job": "识别牌面、牌力和听牌",
+      "userOutput": "选择牌面类别并指出关键牌力事实",
+      "next": "p3",
+      "plainQuestion": "牌面属于哪类，我的牌力和听牌是什么？",
+      "whyNow": "当前牌面事实决定接下来要比较的对象。",
+      "centerVisual": "board_bestFive_handRank_draws",
+      "primaryAction": "select_hand_and_boardFacts",
+      "answerShape": "选择牌面/牌力事实"
+    },
+    {
+      "id": "p3",
+      "job": "建立行动前范围和物理可能性",
+      "userOutput": "指出哪些组合仍可能并读取范围图",
+      "next": "p4",
+      "plainQuestion": "哪些组合仍可能？",
+      "whyNow": "先固定行动前范围和分母，才能看动作造成的变化。",
+      "centerVisual": "fixed13x13_rangeBefore_physicalRemoval",
+      "primaryAction": "select_range_cell_or_count",
+      "answerShape": "指出组合或读取范围图"
+    },
+    {
+      "id": "p4",
+      "job": "比较双方、价格、动作目的和资料边界",
+      "userOutput": "选择比较结果或资料不足停止",
+      "next": "p5",
+      "plainQuestion": "现在应该比较什么，资料是否足够？",
+      "whyNow": "把牌力、价格、范围和课程边界放在同一比较里。",
+      "centerVisual": "legalActions_prices_and_oneComparison",
+      "primaryAction": "select_compare_or_stop",
+      "answerShape": "选择比较结果或停止"
+    },
+    {
+      "id": "p5",
+      "job": "执行课程政策允许的当前动作",
+      "userOutput": "选择一个合法动作/金额，或选择停止",
+      "next": "p6",
+      "plainQuestion": "当前动作是什么、金额是多少？",
+      "whyNow": "只有比较完成，才执行一个合法动作。",
+      "centerVisual": "legalActions_actualAmounts",
+      "primaryAction": "select_action_and_amount",
+      "answerShape": "动作和金额"
+    },
+    {
+      "id": "p6",
+      "job": "更新范围、金额、行动权和后继",
+      "userOutput": "读取动作后范围和下一张牌/回应",
+      "next": "p7",
+      "plainQuestion": "动作或新牌后什么发生变化？",
+      "whyNow": "把动作结果交给下一街，不让范围和账本断开。",
+      "centerVisual": "sameScale_beforeAfterRange_ledger_actionArrow",
+      "primaryAction": "inspect_update_and_next",
+      "answerShape": "指出变化、后继或停止"
+    },
+    {
+      "id": "p7",
+      "job": "结算、回放并生成单字段迁移",
+      "userOutput": "复述本手链条并指出下一次只改哪一项",
+      "next": "replay_or_holdout",
+      "plainQuestion": "这手怎样收口，下次只改什么？",
+      "whyNow": "回放让步骤形成结构，迁移让结构离开原案例。",
+      "centerVisual": "terminalLedger_stopOrTransferCard",
+      "primaryAction": "restate_and_choose_transferField",
+      "answerShape": "一句话回放和一个变化字段"
+    }
+  ],
+  "fullCourseReleaseSchedule": [
+    {
+      "stage": "first_pass_representatives",
+      "visibleUnits": [
+        "1.5",
+        "2.1",
+        "3.1",
+        "4.5",
+        "5.7"
+      ],
+      "entryEvidence": [
+        "current_parent_frame"
+      ],
+      "failure": "stay_in_same_parent"
+    },
+    {
+      "stage": "structure_map",
+      "visibleUnits": "all35",
+      "entryEvidence": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "failure": "return_to_missing_structure_stop"
+    },
+    {
+      "stage": "guided_units",
+      "visibleUnits": "all35",
+      "entryEvidence": [
+        "identity_source",
+        "plain_question",
+        "required_output",
+        "parent_return"
+      ],
+      "failure": "fact_demo_or_stop_only"
+    },
+    {
+      "stage": "independent_single_step",
+      "visibleUnits": "eligible_only",
+      "entryEvidence": [
+        "matched_reference",
+        "amount_checked",
+        "range_before",
+        "range_after_or_stop"
+      ],
+      "failure": "return_to_same_unit"
+    },
+    {
+      "stage": "adjacent_delayed_transfer",
+      "visibleUnits": "eligible_only",
+      "entryEvidence": [
+        "exactly_one_changed_field",
+        "preserved_fields",
+        "first_answer_before_help"
+      ],
+      "failure": "show_changed_field_contrast"
+    },
+    {
+      "stage": "continuous_three_street",
+      "visibleUnits": "successor_closed_only",
+      "entryEvidence": [
+        "successor_graph",
+        "range_conservation",
+        "ledger_conservation",
+        "stop_identity"
+      ],
+      "failure": "stop_at_current_parent"
+    }
+  ],
+  "unitGroupParents": {
+    "compare.unopened": "p4",
+    "compare.bet": "p4",
+    "compare.raise": "p4",
+    "update.response": "p6",
+    "update.card": "p6"
+  },
+  "schedulerRules": {
+    "oneChildAtATime": true,
+    "childOpensOnlyFromParent": true,
+    "failedRepresentativeBlocksNextGroup": true,
+    "noFlat35Home": true,
+    "poolRatioChangesSamplingOnly": true,
+    "emptyPoolIsUnavailable": true,
+    "neighborCannotFillMissingPool": true,
+    "missingSuccessorBlocksContinuousStage": true
+  },
+  "visualExperienceContract": {
+    "screenRegions": [
+      "routeHeader",
+      "oneCentralVisual",
+      "oneQuestionAndAction",
+      "optionalExplanation"
+    ],
+    "oneCentralVisualPerStop": true,
+    "motionSequence": [
+      "previousState",
+      "oneActionOrNewCard",
+      "nextStateAndNextActor"
+    ],
+    "animationStopsBeforeQuestion": true,
+    "same13x13CoordinateBeforeAfter": true,
+    "sameScaleBeforeAfter": true,
+    "sameDenominatorBeforeAfter": true,
+    "physicalImpossibleDistinctFromActionFiltered": true,
+    "unknownDistinctFromZero": true,
+    "colorIsNotSoleSemanticChannel": true,
+    "parentSnapshotRestoredAfterChildClose": true,
+    "centralVisualByParent": {
+      "L0_L2": "sixMaxTable_history_preflopChart",
+      "L3_p2": "board_bestFive_handRank_draws",
+      "p3": "fixedCoordinate_rangeBefore_physicalRemoval",
+      "p4_p5": "legalActions_actualAmounts_oneComparison",
+      "p6": "sameScale_beforeAfterRange_ledger_actionArrow",
+      "p7": "terminalLedger_stopOrTransferCard"
+    }
+  },
+  "principleCardContract": {
+    "cardsPerUnit": ["baseCase", "contrastCase", "transferCase"],
+    "contrastExactlyOneChangedField": true,
+    "allOtherInputsHeld": true,
+    "requiredCardOutputs": ["plainPrinciple", "visibleFacts", "decisiveVariable", "rangeOrFactSnapshot", "stateDelta", "handoffPayload", "errorReturn", "successorOrStop"],
+    "explanationOrder": ["answerOrFact", "changedField", "whyCurrentLayer", "rangeLedgerOrSuccessorDelta", "nextSimilarSpotFirstCheck", "technicalFormulaAfterPlainReason"],
+    "technicalTermsAreNotFirstNavigation": true,
+    "boardTextureDoesNotSelectAction": true,
+    "blockerIsFactAndRangeModifier": true,
+    "backdoorRequiresRangeAndFuture": true,
+    "physicalRemovalDoesNotEqualActionFilter": true,
+    "missingEvidencePublishesFactDemoOrStopOnly": true,
+    "principlePassDoesNotEqualNL50": true
+  },
+  "evidenceRubric": {
+    "dimensions": [
+      "routeComprehension",
+      "factAndMath",
+      "slowSingleStep",
+      "singleFieldTransfer",
+      "continuousThreeStreet",
+      "independentReconstruction",
+      "coveredConfigurationRealDecisionAudit"
+    ],
+    "noCompositeScorePromotion": true,
+    "firstPassMaximumClaim": "routeComprehension",
+    "missingReferenceBlocks": "slowSingleStep",
+    "missingSuccessorBlocks": "continuousThreeStreet",
+    "missingExternalBenchmarkBlocks": "NL50Discussion",
+    "speedIsNotGate": true,
+    "ageLabelIsNotEvidence": true,
+    "shortTermOutcomeIsNotDecisionGrade": true,
+    "failureReturnsToCorrespondingParent": true
+  },
+  "principleCoverageContract": {
+    "source": "first-pass-principle-coverage.json",
+    "requiredCount": 12,
+    "requiredIds": ["P01","P02","P03","P04","P05","P06","P07","P08","P09","P10","P11","P12"],
+    "requiredHandoffs": ["actor","seat","history","potBB","toCallBB","stacksBB","boardTexture","bestFive","handClass","draws","rangeBefore","normalizationDenominator","physicalFilter","actionFilterStatus","actionPurpose","decisionState","policyIdentity","legalActions","price","sizeCondition","selectedAction","amountBB","potAfterBB","stacksAfterBB","nextActor","rangeAfter","rangeAfterIdentity","newCardEffect","successorOrTerminal","settlement","decisionResultSeparation","errorLayer","nextRoundEntry"],
+    "firstPassMustIntroduceEveryPrinciple": true,
+    "recheckMustReturnToSameParent": true,
+    "principleIsNotFlatMenu": true,
+    "missingPrincipleBlocksFirstPassRelease": true
+  },
+  "languageContract": {
+    "source": "first-pass-language-contract.json",
+    "defaultFirstPassLayer": "plain_language_plus_practice_language",
+    "forbiddenPrimaryTerms": ["EV","GTO","CFR","blocker","backdoor","frequency","successor","denominator","range advantage","nut advantage"],
+    "oneQuestionPerStep": true,
+    "onePrimaryActionPerStep": true,
+    "plainLanguageBeforeTechnicalAlias": true,
+    "technicalTermCannotBeOnlyNavigationCue": true,
+    "feedbackNamesLayerAndReturnPoint": true,
+    "sameDefinitionAcrossUserAndAuthorLayer": true,
+    "physicalRemovalDistinctFromActionFilter": true,
+    "handStrengthDistinctFromEquityAndAction": true,
+    "courseRuleDistinctFromReferencePolicy": true,
+    "nonzeroLowerWeightIsNotImpossible": true
+  },
+  "releaseStages": [
+    {
+      "id": "S0_first_pass",
+      "requires": [
+        "all_canonical_states_visited",
+        "handoff_observed",
+        "stop_boundary_visible"
+      ],
+      "proves": [
+        "route_comprehension"
+      ],
+      "doesNotProve": [
+        "strategy_mastery",
+        "NL50_readiness"
+      ]
+    },
+    {
+      "id": "S1_slow_execution",
+      "requires": [
+        "first_answer_before_help",
+        "matched_or_declared_policy",
+        "amount_checked",
+        "range_after_or_stop"
+      ],
+      "proves": [
+        "single_step_execution"
+      ],
+      "doesNotProve": [
+        "continuous_three_street",
+        "real_world_profit"
+      ]
+    },
+    {
+      "id": "S2_single_field_transfer",
+      "requires": [
+        "exactly_one_changed_field",
+        "preserved_fields_checked",
+        "unseen_first_answer",
+        "correct_layer_revisit"
+      ],
+      "proves": [
+        "structural_transfer"
+      ],
+      "doesNotProve": [
+        "target_level_readiness"
+      ]
+    },
+    {
+      "id": "S3_continuous_target_review",
+      "requires": [
+        "successor_or_stop_for_every_open_node",
+        "range_and_ledger_conservation",
+        "independent_reconstruction",
+        "external_or_real_decision_review"
+      ],
+      "proves": [
+        "target_configuration_evidence"
+      ],
+      "doesNotProve": [
+        "universal_guarantee_outside_covered_configuration"
+      ]
+    }
+  ],
+  "strategyPackageRequiredFields": [
+    "configurationFingerprint",
+    "sourceIdentity",
+    "answerIdentity",
+    "rangeBefore",
+    "referencePolicy",
+    "coursePolicy",
+    "rangeAfter",
+    "successors",
+    "differenceLedger",
+    "stopReasonOrReleaseGate"
+  ],
+  "evidenceRules": {
+    "unknownIsWrongButSeparate": true,
+    "firstAnswerBeforeHelp": true,
+    "parsedAnswerCannotReplaceFirstAnswer": true,
+    "slowReadingIsNotAnError": true,
+    "outcomeCannotRewriteDecisionGrade": true,
+    "equityDoesNotImplyAction": true,
+    "solverScreenshotDoesNotEqualReferenceSnapshot": true,
+    "missingSuccessorBlocksContinuousPractice": true,
+    "paperContractDoesNotEqualLearnerEvidence": true,
+    "paperContractDoesNotEqualNL50": true
+  },
+  "targetLevelPrerequisites": [
+    "frozen_six_max_100bb_configuration",
+    "matched_reference_strategy_and_successors",
+    "separate_course_policy_and_difference_ledger",
+    "all35_units_attached_to_parent_route",
+    "low_baseline_stop_observation",
+    "unseen_single_field_transfer",
+    "continuous_three_street_replay",
+    "independent_reconstruction",
+    "covered_configuration_real_decision_audit",
+    "external_target_benchmark"
+  ],
+  "integrates": [
+    "195_最终目标发布合同.md",
+    "200_低基础逐停点观察与四通道证据交叉合同.md",
+    "201_路线脑内架构与慢执行交叉合同.md",
+    "203_35项全量练习覆盖与嵌套释放计量合同.md",
+    "206_首遍13帧用户执行脚本与双层回放合同.md",
+    "207_目标级准备度与NL50基准证据合同.md",
+    "209_单次会话证据与目标级报告合同.md",
+    "212_一遍学习、迁移、连续路线与目标级复核实验协议.md",
+    "214_A72事实题与停止题的自动出题样板.md"
+  ],
+  "currentEvidence": {
+    "paperStandardCompiled": true,
+    "runtimeNestedRoute": false,
+    "matchedReference": false,
+    "courseCompiler": false,
+    "lowBaselineTrial": false,
+    "unseenTransfer": false,
+    "continuousThreeStreet": false,
+    "independentReview": false,
+    "NL50Evidence": false
+  }
+}

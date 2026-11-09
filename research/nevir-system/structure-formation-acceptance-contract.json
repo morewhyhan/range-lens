@@ -1,0 +1,74 @@
+{
+  "id": "STRUCTURE_FORMATION_ACCEPTANCE_CONTRACT_V1",
+  "status": "paper_acceptance_contract_not_trialed",
+  "purpose": "将低基础学习者首遍形成路线结构定义为可证伪的节点、边、交接、回退和单变量迁移证据。",
+  "canonicalGraph": {
+    "nodes": ["p1_context", "p2_board", "p3_range", "p4_compare", "p5_execute", "p6_update", "p7_close"],
+    "normalEdges": ["p1_context->p2_board", "p2_board->p3_range", "p3_range->p4_compare", "p4_compare->p5_execute", "p5_execute->p6_update", "p6_update->p7_close"],
+    "updateSuccessor": "p6_update->p1_context",
+    "noSuccessor": "p6_update->stop_card",
+    "flatHomeMenu": false,
+    "oneOpenChildAtATime": true,
+    "parentRestoredOnClose": true
+  },
+  "parentFrameRequiredFields": ["entryCondition", "visibleInputs", "question", "primaryAction", "requiredOutput", "nextOrStop", "errorReturn"],
+  "firstPassEvidence": {
+    "orderRecall": {
+      "nodesRequired": 7,
+      "edgesRequired": 6,
+      "firstAnswerBeforeHelp": true,
+      "minimumPass": "7_nodes_and_6_edges"
+    },
+    "layerLocation": {
+      "unseenParentFrames": 3,
+      "minimumCorrect": 3,
+      "requiresNextLayerVerbalized": true
+    },
+    "errorRecovery": {
+      "injectedCases": 2,
+      "minimumCorrect": 2,
+      "sameParentRequired": true,
+      "parentPayloadPreserved": true
+    },
+    "oneVariableTransfer": {
+      "minimumTrials": 1,
+      "exactlyOneChangedField": true,
+      "firstAttemptBeforeExplanation": true,
+      "laterAdjacentReleaseTrials": 2
+    }
+  },
+  "unitCoverage": {
+    "backendUnits": 35,
+    "requiredFields": ["unitId", "parentFrame", "sourceIdentity", "factInputs", "coursePolicyOrStopReason", "question", "primaryAction", "requiredOutput", "errorReturn", "transferVariant", "legalSuccessorsOrStop"],
+    "learnerExposureBeforeStructureEvidence": ["1.5", "2.1", "3.1", "4.5", "5.7"],
+    "flatHomeForbidden": true,
+    "unregisteredUnitCannotBeInferredFromNeighbor": true,
+    "statuses": ["attached", "fact_ready", "policy_ready", "released"]
+  },
+  "sessionEvidence": ["courseVersion", "taskId", "firstAnswer", "helpLevel", "routeNodeBefore", "routeNodeAfter", "nextStepVerbalized", "handoffPayload", "errorLayer", "returnTo", "changedField", "passStatus"],
+  "revisionOrder": ["split_multiple_parent_questions", "expose_required_inputs", "restore_parent_frame", "remove_answer_leak", "close_source_or_successor_gap", "increase_same_mechanism_dose"],
+  "releaseMapping": [
+    {"id": "A0", "evidence": "guided_route"},
+    {"id": "A1", "evidence": "order_recall_layer_location_error_recovery_one_variable_transfer"},
+    {"id": "A2", "evidence": "unseen_slow_single_step"},
+    {"id": "A3", "evidence": "adjacent_transfer_and_delayed_recall"},
+    {"id": "A4", "evidence": "continuous_three_street"},
+    {"id": "A5", "evidence": "frozen_target_independent_review"}
+  ],
+  "hardRules": {
+    "structureIsNotStrategy": true,
+    "structureIsNotNL50": true,
+    "buttonOnlyDoesNotPass": true,
+    "helpedRetryDoesNotReplaceFirstAnswer": true,
+    "unknownStopsRatherThanInvents": true,
+    "thresholdsRequireLearnerTrialCalibration": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "completeSuccessorChain": false,
+    "NL50Evidence": false
+  }
+}

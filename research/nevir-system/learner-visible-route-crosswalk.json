@@ -1,0 +1,217 @@
+{
+  "id": "LEARNER_VISIBLE_ROUTE_UNIT_RELEASE_CROSSWALK_V1",
+  "status": "paper_crosswalk_complete_runtime_and_learner_trial_missing",
+  "parentDocument": "170_低基础首课黄金路径与逐屏交接脚本.md",
+  "routeNode": "learner_visible_route_unit_release_crosswalk",
+  "innerRoute": [
+    {
+      "id": "p1_context",
+      "plainLabel": "先确认现在是什么局面",
+      "question": "谁在什么位置、前面发生了什么、现在轮到谁？",
+      "centerVisual": "six_player_table_action_arrow_pot_stack",
+      "requiredOutputs": [
+        "actor",
+        "heroSeat",
+        "villainSeat",
+        "actionHistory",
+        "potBB",
+        "effectiveStackBB",
+        "toCallBB"
+      ],
+      "handoff": "contextSnapshot",
+      "childGroups": [],
+      "stopReasons": [
+        "identity_incomplete",
+        "actor_unknown"
+      ],
+      "errorReturn": "p1_context"
+    },
+    {
+      "id": "p2_board",
+      "plainLabel": "再看牌面和自己的牌",
+      "question": "我现在组成了什么牌，下一张可能怎样改变？",
+      "centerVisual": "board_hole_cards_best_five_and_texture",
+      "requiredOutputs": [
+        "board",
+        "heroHole",
+        "handCategory",
+        "draws",
+        "improvingCards",
+        "bestFive"
+      ],
+      "handoff": "handAndBoardFacts",
+      "childGroups": [
+        "board_texture_six_class",
+        "hand_rank_ladder"
+      ],
+      "stopReasons": [
+        "card_read_error",
+        "best_five_unknown"
+      ],
+      "errorReturn": "p2_board"
+    },
+    {
+      "id": "p3_range",
+      "plainLabel": "看双方还可能有什么牌",
+      "question": "哪些牌仍然可能存在，哪些只是被我手里的牌拿走了？",
+      "centerVisual": "same_coordinate_range_physical_removal",
+      "requiredOutputs": [
+        "rangeBefore",
+        "blockedCombos",
+        "physicalRemovalReason",
+        "actionFilterStatus",
+        "actionAfterOrUnknown",
+        "rangeBeforeDenominator"
+      ],
+      "handoff": "rangeBeforeAndPhysicalRemoval",
+      "childGroups": [],
+      "stopReasons": [
+        "range_source_missing",
+        "physical_filter_unverified"
+      ],
+      "errorReturn": "p3_range"
+    },
+    {
+      "id": "p4_compare",
+      "plainLabel": "比较当前选择",
+      "question": "在这些牌、这个价格和这个历史下，哪个合法选择更合算？",
+      "centerVisual": "price_range_action_tree_comparison",
+      "requiredOutputs": [
+        "legalActions",
+        "potOddsOrPrice",
+        "courseDecisionCandidate",
+        "reason",
+        "policyIdentity"
+      ],
+      "handoff": "courseDecisionCandidate",
+      "childGroups": [
+        "compare.unopened",
+        "compare.bet",
+        "compare.raise"
+      ],
+      "stopReasons": [
+        "no_matching_strategy_reference",
+        "illegal_action",
+        "price_missing"
+      ],
+      "errorReturn": "p4_compare"
+    },
+    {
+      "id": "p5_execute",
+      "plainLabel": "执行动作并记清金额",
+      "question": "我要按哪个动作、多少金额，把行动权交给谁？",
+      "centerVisual": "action_buttons_amount_ledger_actor",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "nextActor",
+        "ledgerAfter",
+        "potAfterBB",
+        "stacksAfterBB"
+      ],
+      "handoff": "actionLedgerAndActor",
+      "childGroups": [],
+      "stopReasons": [
+        "amount_mismatch",
+        "actor_mismatch",
+        "ledger_break"
+      ],
+      "errorReturn": "p5_execute"
+    },
+    {
+      "id": "p6_update",
+      "plainLabel": "更新局面和范围",
+      "question": "动作、回应或新牌具体改变了哪一件事？",
+      "centerVisual": "before_after_range_ledger_successor",
+      "requiredOutputs": [
+        "changedField",
+        "rangeAfterOrStopReason",
+        "successorOrTerminal",
+        "ledgerAfter"
+      ],
+      "handoff": "rangeAfterAndSuccessorOrStop",
+      "childGroups": [
+        "update.response",
+        "update.card"
+      ],
+      "stopReasons": [
+        "successor_missing",
+        "range_after_missing",
+        "ledger_not_conserved"
+      ],
+      "errorReturn": "p6_update"
+    },
+    {
+      "id": "p7_close",
+      "plainLabel": "收口并准备迁移",
+      "question": "我能用一句话说明这一步为什么结束、下一次改哪个字段吗？",
+      "centerVisual": "current_node_to_successor_or_stop_transfer_field",
+      "requiredOutputs": [
+        "oneSentenceReason",
+        "stopOrSuccessor",
+        "singleTransferField"
+      ],
+      "handoff": "closeAndTransferField",
+      "childGroups": [],
+      "stopReasons": [
+        "reason_not_expressed",
+        "transfer_field_not_isolated"
+      ],
+      "errorReturn": "p7_close"
+    }
+  ],
+  "unitRelease": {
+    "groups": [
+      {
+        "id": "compare.unopened",
+        "parent": "p4_compare",
+        "count": 8,
+        "firstPassRepresentative": "1.5"
+      },
+      {
+        "id": "compare.bet",
+        "parent": "p4_compare",
+        "count": 7,
+        "firstPassRepresentative": "2.1"
+      },
+      {
+        "id": "compare.raise",
+        "parent": "p4_compare",
+        "count": 6,
+        "firstPassRepresentative": "3.1"
+      },
+      {
+        "id": "update.response",
+        "parent": "p6_update",
+        "count": 6,
+        "firstPassRepresentative": "4.5"
+      },
+      {
+        "id": "update.card",
+        "parent": "p6_update",
+        "count": 8,
+        "firstPassRepresentative": "5.7"
+      }
+    ],
+    "allUnits": 35,
+    "flatHomeMenu": false,
+    "oneChildAtATime": true,
+    "parentRestoredBeforeNextChild": true,
+    "missingEvidenceStopsAtCurrentParent": true
+  },
+  "releaseLadder": [
+    "first_pass_guided",
+    "hidden_route_recall",
+    "same_parent_unit_practice",
+    "single_variable_transfer",
+    "unseen_slow_single_step",
+    "continuous_three_street"
+  ],
+  "currentEvidence": {
+    "paperCrosswalk": true,
+    "runtimeImplemented": false,
+    "matchedReference": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

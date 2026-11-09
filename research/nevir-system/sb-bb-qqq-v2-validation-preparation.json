@@ -1,0 +1,25 @@
+{
+  "status": "prepared_pending_completed_v2_strategy_not_validation_success",
+  "sourceHashes": {
+    "research/solver-probe/src/bin/sb_bb_qqq_reload_v2.rs": "8b779086a55ed14dcac04c965d89493a0c33521b612c1c1c2dfc182fe37765c8",
+    "scripts/verify-nevir-sb-bb-reference-v2.mjs": "f357804efbdf292c061ba72052c4fc6a7b80d64e666c08f9f0421a0f278edbbf",
+    "scripts/research-nevir-qqq-range-views-v2.mjs": "282e98e92429c48ca98e5305b4a99fcc071ec84a5a52d8798e57f270934178fc",
+    "scripts/research-nevir-qqq-root-policy-v2.mjs": "1ef10314f29402714c0b13fc0a0e0a1cc2ddd39fdef6470f64cabbb6d4431de5",
+    "scripts/research-nevir-qqq-fold-identification-v2.mjs": "a687963c59efac4fc416033914c469eb436d808f96aa5c2e92d7c3b138f0769c"
+  },
+  "rustLoaderCompiled": true,
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "expectedArtifacts": [
+    "sb-bb-qqq-reload-export-v2.json",
+    "sb-bb-qqq-reference-verification-v2.json",
+    "sb-bb-qqq-range-views-v2.json",
+    "sb-bb-qqq-root-policy-diagnostics-v2.json",
+    "sb-bb-qqq-fold-identification-v2.json"
+  ],
+  "v1FilesPreserved": true,
+  "referenceLoaded": false,
+  "NL50Reference": false,
+  "appChanged": false,
+  "loaderBinary": "research/solver-probe/target/release/sb_bb_qqq_reload_v2.exe",
+  "loaderBinarySHA256": "114c0acb26168a35a8cf42470235578873cb44f3b350977326b5ba8972e65570"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "FIRST_PASS_ARCHITECTURE_GOAL_CONTRACT_V1",
+  "status": "paper_architecture_goal_contract_not_trialed",
+  "purpose": "把一次首遍建立可复述脑内架构的标准，和慢速单步、单变量迁移、连续三街及目标级评估接成一条证据梯度。",
+  "canonicalRoute": {
+    "outer": ["L0", "L1", "L2", "L3", "L4", "p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+    "legacyMacroOuter": ["L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
+    "learnerSurface": "L0→L1→L2→L3→L4→p1→p2→p3→p4→p5→p6→p7→回放与单变量迁移",
+    "innerParent": "L4",
+    "inner": ["p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+    "flatHomeMenu": false,
+    "oneOpenChildAtATime": true,
+    "parentRestoredOnClose": true
+  },
+  "mentalModel": [
+    {"id": "routeMap", "required": ["routeNode", "nextNode", "returnNode"]},
+    {"id": "currentFrame", "required": ["visibleInputs", "question", "requiredOutput"]},
+    {"id": "changeArrow", "required": ["changedField", "handoffPayload", "successorOrStop"]}
+  ],
+  "firstPassAcceptance": {
+    "checks": ["orderRecall", "layerLocation", "errorRecovery", "oneVariableTransfer"],
+    "firstAnswerBeforeHelp": true,
+    "hiddenStepLabels": true,
+    "exactlyOneChangedField": true,
+    "allParentHandoffsConsumedByNextStep": true,
+    "buttonOnlyDoesNotPass": true
+  },
+  "complexityOrder": [
+    "routeLength",
+    "parentChildDepth",
+    "singleFactChange",
+    "successorChange",
+    "actionAndSizeSpace",
+    "continuousThreeStreet",
+    "unseenTargetHoldout"
+  ],
+  "releaseLadder": [
+    {"id": "A0", "evidence": "guided_route", "opens": ["first_pass_representatives"]},
+    {"id": "A1", "evidence": "order_layer_handoff_recovery", "opens": ["hidden_title_replay"]},
+    {"id": "A2", "evidence": "unseen_slow_single_step", "opens": ["same_parent_practice"]},
+    {"id": "A3", "evidence": "one_variable_transfer", "opens": ["adjacent_holdout"]},
+    {"id": "A4", "evidence": "continuous_three_street", "opens": ["frozen_target_holdout"]},
+    {"id": "A5", "evidence": "independent_target_review", "opens": ["real_decision_audit"]}
+  ],
+  "pageContract": {
+    "routeStrip": "current_previous_next_only",
+    "parentFrame": "one_table_one_question_one_primary_action",
+    "childLayer": "one_fact_one_chart_one_ledger_or_one_stop_reason",
+    "handoffCard": "one_changed_field_and_next_entry",
+    "stopCard": "missing_evidence_and_reason_without_invented_answer",
+    "plainLanguageLayer": "plain_language_plus_practice_language",
+    "oneNewUnmasteredConceptAtATime": true,
+    "technicalTermCannotBeOnlyCue": true,
+    "visibleObjectMustMatchPrompt": true
+  },
+  "hardRules": {
+    "noSkippingParent": true,
+    "noFlat35Home": true,
+    "unknownDistinctFromZero": true,
+    "decisionAndResultSeparated": true,
+    "complexityAddsOneAxisAtATime": true,
+    "continuousRouteRequiresSuccessorOrStop": true,
+    "targetReadinessRequiresIndependentReview": true
+  },
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "beginnerTrial": false,
+    "matchedA72Reference": false,
+    "completeSuccessorChain": false,
+    "NL50Evidence": false
+  }
+}

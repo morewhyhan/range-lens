@@ -1,0 +1,43 @@
+{
+  "id": "LEARNER_FIRST_PASS_NARRATION_CONTRACT_V1",
+  "status": "paper_narration_contract_not_trialed",
+  "purpose": "为低基础用户提供一条普通话首遍话术，并确保外层翻前路径、翻后父帧和嵌套补帧的输出能够成为下一层的输入。",
+  "outerRoute": ["L0_table_goal","L1_preflop_context","L2_preflop_grid","L3_preflop_action","L4_range_handoff"],
+  "route": ["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "nestedInsertions": ["I03","I05","I07","I08","I10","I11"],
+  "principleCoverageSource": "first-pass-principle-coverage.json",
+  "practiceQueueSource": "principle-practice-queue.json",
+  "steps": [
+    {"id":"p1_context","plainTitle":"先看现在发生什么","question":"现在轮到谁？前面发生了什么？如果继续，要补多少钱？","requiredOutputs":["actor","history","toCallBB","potBB","stacksBB"],"handoffTo":"p2_board","errorReturn":"p1_context","forbiddenShortcut":"看到自己的牌就直接猜动作"},
+    {"id":"p2_board","plainTitle":"再看我的牌","question":"我能组成的最好五张是什么？还可能变成什么？","requiredOutputs":["bestFive","handCategory","improvementCards"],"handoffTo":"p3_range","errorReturn":"p2_board","forbiddenShortcut":"从牌型直接推出下注"},
+    {"id":"p3_range","plainTitle":"看双方可能拿什么","question":"哪些组合不可能、变少或留下？","requiredOutputs":["rangeOwner","physicalFilter","actionFilterStatus","normalizationDenominator"],"handoffTo":"p4_compare","errorReturn":"p3_range","forbiddenShortcut":"把物理冲突当成行动弃牌"},
+    {"id":"p4_compare","plainTitle":"比较现在能做的事","question":"现在合法的选择和价格是什么？","requiredOutputs":["legalActions","price","actionPurpose","referenceIdentity"],"handoffTo":"p5_execute","errorReturn":"p4_compare","forbiddenShortcut":"只按牌名或单句口诀选动作"},
+    {"id":"p5_execute","plainTitle":"把动作做完整","question":"点哪个按钮？投入多少？接下来轮到谁？","requiredOutputs":["selectedAction","amountBB","potAfterBB","stacksAfterBB","nextActor"],"handoffTo":"p6_update","errorReturn":"p5_execute","forbiddenShortcut":"只点按钮不核对金额"},
+    {"id":"p6_update","plainTitle":"动作或新牌后重新看","question":"这次回应或新牌具体改变了什么？","requiredOutputs":["changedField","rangeAfter","newCardEffect","nextActor","successorIdentity"],"handoffTo":"p7_close","errorReturn":"p6_update","forbiddenShortcut":"把整手牌重置"},
+    {"id":"p7_close","plainTitle":"结算并找错层","question":"最后发生什么？如果错了，错在哪一层？","requiredOutputs":["settlement","decisionResultSeparation","errorLayer","nextRoundEntry"],"handoffTo":"exit_or_review","errorReturn":"nearest_missing_layer","forbiddenShortcut":"用输赢倒推当时动作"}
+  ],
+  "copyRules": {
+    "oneQuestionPerStep": true,
+    "onePrimaryActionPerStep": true,
+    "plainLanguageBeforeTechnicalAlias": true,
+    "technicalTermsNotSoleNavigation": true,
+    "feedbackNamesLayerAndReturnPoint": true,
+    "childReturnsExactParent": true,
+    "answerIdentityMustBeVisible": true
+  },
+  "p3Rules": {
+    "physicalConflictDistinctFromActionFilter": true,
+    "unknownReferenceStopsExactActionFilter": true,
+    "fixedCoordinateAndDenominator": true
+  },
+  "firstPassChecks": ["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "forbiddenPrimaryTerms": ["EV","frequency","range advantage","nut advantage","blocker","backdoor","GTO"],
+  "currentEvidence": {
+    "paperContract": true,
+    "runtimeImplemented": false,
+    "adultBeginnerTrial": false,
+    "unseenTransferVerified": false,
+    "matchedStrategyComplete": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,1941 @@
+{
+  "status": "course_size_abstraction_not_full_action_reference",
+  "references": [
+    {
+      "id": "IPS-671869e668239baf",
+      "inputFingerprint": "671869e668239bafc3d07b463edbb7e1f73830a64e7fa189f6d54dcff86e2791",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-f34e592f22d57283",
+      "inputFingerprint": "f34e592f22d57283c32f3c684e783dc7be96d33801828340f9bec5119bf2bf8e",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-bdfa0b5150fc0b90",
+      "inputFingerprint": "bdfa0b5150fc0b90451a4392d2a485917fc769bae401e9b6ee37a95338282710",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-280587f82ffca42c",
+      "inputFingerprint": "280587f82ffca42c38bcc48e4daa0422ba261d6001cf44bd724960df5477e915",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-bf9ff3f690e7ffe0",
+      "inputFingerprint": "bf9ff3f690e7ffe0dffc2cc48b2a1f91a7b77c8c3477bb68edf2abcc2e998e34",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-de1dff7825b621f7",
+      "inputFingerprint": "de1dff7825b621f7434d8f7935ef5fee9b283871c6193f31465355285ae86153",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-fa86b50697ad986f",
+      "inputFingerprint": "fa86b50697ad986fbee6dd4c83e462d53b02e72b0bf4ec6d03c18b7371bed414",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-55201bda196291d2",
+      "inputFingerprint": "55201bda196291d2fa80bffea50f4445f2f477b2e8fc10972f7521730c311eb6",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-b1babe9f11f96d65",
+      "inputFingerprint": "b1babe9f11f96d6506d46249774e5676d7ffc82b5d970135967a4457a4e0a17b",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-836a0d62946936fc",
+      "inputFingerprint": "836a0d62946936fc214d9978ff98fc28191d91161f4696f344217fe72bb8113a",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-85fb0a53e5d4de14",
+      "inputFingerprint": "85fb0a53e5d4de141adde0bc724d9c9339172fd509605b77b7cf5c5ef286518b",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-9b93805b43a3efd3",
+      "inputFingerprint": "9b93805b43a3efd3303beadf827c899cab753b27a85e03fcea978a566c62b832",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-54c4dbbf03dab19b",
+      "inputFingerprint": "54c4dbbf03dab19b9f79f5453408cc9b1dba232f6533989cb454b0fd8b84e29d",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-12f45ef629296298",
+      "inputFingerprint": "12f45ef6292962989bd2e38ecb95bb9e35040ad7091cfe5cb5bb39321e7d78bf",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-a4f9a3a2ffcc0e85",
+      "inputFingerprint": "a4f9a3a2ffcc0e851efd1807618163707b12be45ba5fe2b2ec27870bcf6060e6",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-41bc95f1f6e3d34d",
+      "inputFingerprint": "41bc95f1f6e3d34d908e571a4ce504eac5f5965cdd1696e52d6294648663ac21",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-4fb5eb9ffa1b4da1",
+      "inputFingerprint": "4fb5eb9ffa1b4da1f9803b389b5644c642644229d74c7a90ef0f65a4792b24b0",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-c7939d22039df699",
+      "inputFingerprint": "c7939d22039df6992f8ebddba25a315a5c19c569b2c8719c5d7500b9321eb347",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-a9ae22c22ba40de8",
+      "inputFingerprint": "a9ae22c22ba40de8a26a32278051bc5fb5fef963fe31cb7394b6527a110131e1",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-d8f7eddb095a2499",
+      "inputFingerprint": "d8f7eddb095a249991118540891583b0c6bc6c1761659f3b35cfb24518fd6d24",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-b3f706a85666d603",
+      "inputFingerprint": "b3f706a85666d603cf3c4ca72599e9dadca5c3c39e65264fe78c4af310453199",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-79c50dac224752c4",
+      "inputFingerprint": "79c50dac224752c4772a52660f27b2bf357718a9e7c0cee6f0b381d15e557ae5",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-5227c664579de202",
+      "inputFingerprint": "5227c664579de2024e0754b77f63e747481d8de8faec41ff5f813dd903f33bf5",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-bd33d35bc6e46c79",
+      "inputFingerprint": "bd33d35bc6e46c79ec0138d02fbcee8cc12f43dec67b99ab9409797322d7f73d",
+      "adoptedFamily": "T62_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 42,
+        "text": "- 10-6-2彩虹：67%大下注。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-621085edbf7f36e6",
+      "inputFingerprint": "621085edbf7f36e64eeb36db15231e0ff468e79f1ab70c07f2e1770260d082f7",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-ae77ee514443db5b",
+      "inputFingerprint": "ae77ee514443db5b707ff73ed281aec5e1f0bcaf4dad0d95769cfe56a4f1d79e",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-0ec6f936c770968e",
+      "inputFingerprint": "0ec6f936c770968e6e217c60d0338aeab29709385a2494b66ed916291f069a83",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-2face69ab4c98180",
+      "inputFingerprint": "2face69ab4c981807353b8449905499d779c7d837e7fed990cadc9d0ac0fe3fa",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-5610ba64f8e25365",
+      "inputFingerprint": "5610ba64f8e25365b98d1d4aa6c0899ba846e06de1d8db7011731d86599b5c32",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-802a7a7525bfeebe",
+      "inputFingerprint": "802a7a7525bfeebe894c98a7c20f84fb7d3cb063279b10dfd59e73f429fc53da",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-eb2351e7d3cd2ce2",
+      "inputFingerprint": "eb2351e7d3cd2ce23ddcc5fa3d5e8b9f09c777e8c0d6863aa7360bdccf3c3c3c",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-98c12de766624e3c",
+      "inputFingerprint": "98c12de766624e3c3975e68175cba012c6bcf699cd582653a446a78f0a35b885",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-64a55a1d68fb2963",
+      "inputFingerprint": "64a55a1d68fb29631b0918a89341322db882511792cf9dd20dbee1ec982e0290",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-cfbf03ee0dff0e45",
+      "inputFingerprint": "cfbf03ee0dff0e456b2fbef95728d05fb82f9a0fb1f59df3280e5789cd0e1e77",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-55bbda0db934b597",
+      "inputFingerprint": "55bbda0db934b5974af24ddf0d68d7f0d0431e86dc94c20844f548ec69482d55",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-bca2623a129e48d1",
+      "inputFingerprint": "bca2623a129e48d19b69b11c0f7e253c48982b016f50dcf75853985f650e5256",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-070b049281340f6d",
+      "inputFingerprint": "070b049281340f6dd632ced42e8d044d6f4f011e322088bd76c8468f772d2a9d",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-36493594f680e4f7",
+      "inputFingerprint": "36493594f680e4f7b1a5f7e09bef9721c7262a8f93e55b786bf0d0ed5f5e50c3",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-a6dced1ce96ffe6f",
+      "inputFingerprint": "a6dced1ce96ffe6f6fee9e022c9af1b92b7d83e760ac4bdfc18d3812711cbf1c",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-8fafc2fb14911df5",
+      "inputFingerprint": "8fafc2fb14911df534e28b60b4fd677b2f11d7152d1cffea182e7c9a6e96674b",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-00f2d995fe8724bb",
+      "inputFingerprint": "00f2d995fe8724bbee477681a64c766c04aab068800ffcb2a9f577bedee64fc1",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-679894fc8b69b790",
+      "inputFingerprint": "679894fc8b69b7902dda14d437444e5a2f2806f55c52b6cc4505f6327b9c9e15",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-31718e30591db426",
+      "inputFingerprint": "31718e30591db42676b988ba368fe444485d4bccfd84037507943a0bae5144d0",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-98572c8ea07a451c",
+      "inputFingerprint": "98572c8ea07a451cbeb42c5d97bda71b0cd0ce014b2747d06f8afd94a9f2fa7a",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-54e18ab679fb2865",
+      "inputFingerprint": "54e18ab679fb28657509fb1fe63aaa368284d1b61194abca82d0f21e0ea04de2",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-3e12bf99715bf9ba",
+      "inputFingerprint": "3e12bf99715bf9baa93ebaf8a67d633326a54be7434ab59d0e72ef4e2d708a51",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-130785fd67cc77f8",
+      "inputFingerprint": "130785fd67cc77f8d75ec5093cf3b35f23de80e5c75b9316262e738f0873d28c",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-293cdc8a5e368005",
+      "inputFingerprint": "293cdc8a5e3680057e0d95546014b6afceacfbe69ce5c4a7a1c30ee9a7a911f6",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-9dd9fe17e5d07365",
+      "inputFingerprint": "9dd9fe17e5d073654f2b5bc00d86822d27d1e4f3e5233fafeb27b70506eb1188",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-0cd5f73c24708330",
+      "inputFingerprint": "0cd5f73c24708330f2ccef36323b4d29c4462e400cf34fb4f622fb2a91f2f9b7",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-d235e6a1f288eead",
+      "inputFingerprint": "d235e6a1f288eeadfa13d2a155fecf323b9430880f75499f246302c079a0272a",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-645e8a826e156740",
+      "inputFingerprint": "645e8a826e1567408a956f9dfb6d73fd5a26dadb83db6feb792730670cbea9be",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-9e55515a2507d761",
+      "inputFingerprint": "9e55515a2507d76128e770c722eda66c980659e4292864d42367894d7f6bb670",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-6e1065cf0b105e28",
+      "inputFingerprint": "6e1065cf0b105e28ca04e8152f2f88cbdeb3a0db2b39459888816ada3cec86a7",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-aa521ba20dd85751",
+      "inputFingerprint": "aa521ba20dd8575134a7937933f05f42e2e1a198ae7bdead531f972f02609207",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-0c7dc0c4ab4e6193",
+      "inputFingerprint": "0c7dc0c4ab4e6193198db363b3236ed4254bc61ff88ca257da50070cae429c5c",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-17f92943e2cdd249",
+      "inputFingerprint": "17f92943e2cdd249e2afca177fe4157d3cdc28f535636fd2f32629b08b2055d5",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-cebf1017d664a6ec",
+      "inputFingerprint": "cebf1017d664a6ec3011366a36ee2188ad95f5006434aac742b90c23b6e493e9",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-73d3f468e3cb8bcf",
+      "inputFingerprint": "73d3f468e3cb8bcf2ea030f638d4ccc092a99e58e59f9a5b192e4d792d1ef073",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-39f382f8cebf0ea2",
+      "inputFingerprint": "39f382f8cebf0ea2f4290ae7088b0588516cbaf409cf251aa46be4fa2a643687",
+      "adoptedFamily": "T62_twotone",
+      "answer": "s40",
+      "adoptedPotFraction": 0.4,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 41,
+        "text": "- 10-6-2带同花听牌：40%中等尺寸，因为牌面有听牌，但10高牌面本身对你有优势。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "The note names this rank/texture class without locating the repeated suit. All three repeated-suit rank pairs are admitted only under this declared coarse course abstraction, not claimed globally suit-isomorphic."
+    },
+    {
+      "id": "IPS-d766febaf9c4393e",
+      "inputFingerprint": "d766febaf9c4393e3686ee2fb6e4ff5a9f2b4f9bb69b03f0c712acce4c0d2eda",
+      "adoptedFamily": "852_monotone",
+      "answer": "s25",
+      "adoptedPotFraction": 0.25,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "text": "- 2-5-8（单调牌面）：总是25%小下注，因为如果你用AA下大注并得到跟注，对手的听牌有很高权益。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-b8e7481f72c51502",
+      "inputFingerprint": "b8e7481f72c5150254cd4e77399e4d716ab5e7b54ad4a97f70697463cb25c571",
+      "adoptedFamily": "852_monotone",
+      "answer": "s25",
+      "adoptedPotFraction": 0.25,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "text": "- 2-5-8（单调牌面）：总是25%小下注，因为如果你用AA下大注并得到跟注，对手的听牌有很高权益。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-cb7a1c245bed632c",
+      "inputFingerprint": "cb7a1c245bed632c1c3b9ab70647a3c6ef329e9a01a21eb2600e32999115f509",
+      "adoptedFamily": "852_monotone",
+      "answer": "s25",
+      "adoptedPotFraction": 0.25,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "text": "- 2-5-8（单调牌面）：总是25%小下注，因为如果你用AA下大注并得到跟注，对手的听牌有很高权益。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-71150e80d575fcf3",
+      "inputFingerprint": "71150e80d575fcf3950a26af7ffbab91bee99efce5aeb981c82aeb12052ce284",
+      "adoptedFamily": "852_monotone",
+      "answer": "s25",
+      "adoptedPotFraction": 0.25,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 43,
+        "text": "- 2-5-8（单调牌面）：总是25%小下注，因为如果你用AA下大注并得到跟注，对手的听牌有很高权益。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-645d23af1bf34173",
+      "inputFingerprint": "645d23af1bf3417352d9720c06ca6103ce54ecf056df68d99c531dd2e8864b71",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-ade7c1936c42e052",
+      "inputFingerprint": "ade7c1936c42e0520aca808a28b5bde4ce5fa7264c8fd1a716e4ad0461b79acb",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-b1b3bb93def873c7",
+      "inputFingerprint": "b1b3bb93def873c7f292f80e134abcd5946b46239b2c7bcabef172f1b5c98cb2",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-37b9ad744645e577",
+      "inputFingerprint": "37b9ad744645e57729e87a70ee322d3e4df7e98228b1c9b189ec93b3df12a0b2",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-5b326b1f874d2a8e",
+      "inputFingerprint": "5b326b1f874d2a8e22d38040a88fcf360d08ee6ff2fe9446f5a5912d5ee9470c",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-4d553117d475d39c",
+      "inputFingerprint": "4d553117d475d39ca115b00c84aa178ddcbda33a9f54874b1d78bc6190533aa2",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-af9ba51fc70feac3",
+      "inputFingerprint": "af9ba51fc70feac3563f5fe7399dd8a7e7b26de1ee68f6e406ad5fac21b24ff3",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-1a1f824ce7ac452b",
+      "inputFingerprint": "1a1f824ce7ac452bd5503f3654da46470b3ec0c871c072ba0efdcf8767e7fde1",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-3f80cc53224efe37",
+      "inputFingerprint": "3f80cc53224efe37caad25233806fa0d4e954499d3e63ad76eed638f07b816be",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-f46e2e57d6aef90c",
+      "inputFingerprint": "f46e2e57d6aef90c72c037a6cf4dc80658927a949f298a25f546b22bdfc0e59f",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-ef626aef924a4a5f",
+      "inputFingerprint": "ef626aef924a4a5f530db069eba4adcdc0385a7f161396a299b5b051199ed706",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-d0c5cde6d7332e03",
+      "inputFingerprint": "d0c5cde6d7332e03d196f788d382dd5d9dd40d5e46360c8007d887c0ad0094b5",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-9fbff3637ab7f6db",
+      "inputFingerprint": "9fbff3637ab7f6db61aacd5946527def8ed05fed38e3a5638e977c76fae3265a",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-d2c8215264cca07b",
+      "inputFingerprint": "d2c8215264cca07bedf7f3740fca81fc2ed242b204e83713d208257365e3c96f",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-db2c4bcda04d9cff",
+      "inputFingerprint": "db2c4bcda04d9cff1b2291f0074100fa6116d82d0e68eb6b64013df4fb8fbce1",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-1e8976c4dce17e96",
+      "inputFingerprint": "1e8976c4dce17e9618efd0cc4d24a18a7412aa64ee1160721a3eb2a4f768020f",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-262fdb47d9d65b81",
+      "inputFingerprint": "262fdb47d9d65b8167e4078e477690302ad15b9f89409e74f0227391ddbb902c",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-9e884997412aa05f",
+      "inputFingerprint": "9e884997412aa05f10f4b321914f1255244962dee9493b17dd4f68a07e2c2f3d",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-f2539b1c4f4dda93",
+      "inputFingerprint": "f2539b1c4f4dda93420da68d76d45a06e884f25755cc7fe05b1a14b582c6e8e3",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-ec4308ce11e21c0a",
+      "inputFingerprint": "ec4308ce11e21c0aa46f43cbe078501a5c9a4433755f9b870acf153fccdd1c1e",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-c6f37e114e0390ba",
+      "inputFingerprint": "c6f37e114e0390ba92274c46c7db5f3507b0f0d99fb370bd9c3d8c5a0bf7505e",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-3816073c40073097",
+      "inputFingerprint": "3816073c400730974fa7df27a3716974c6f405cd71014f74119161e56f22659c",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-5efb9ad67c515a0b",
+      "inputFingerprint": "5efb9ad67c515a0b97edcad65b1fb0ff939ae98a4b53bfed6dcc81d7b3340de7",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    },
+    {
+      "id": "IPS-9a93bc84f120fda0",
+      "inputFingerprint": "9a93bc84f120fda047738efed0490da18dcad68170857c49d6528543509eaac4",
+      "adoptedFamily": "962_rainbow",
+      "answer": "s67",
+      "adoptedPotFraction": 0.67,
+      "source": {
+        "file": "C:/Users/why/Desktop/笔记 Nevir/2.2-有利位置3bet底池—第一部分_中文笔记.md",
+        "line": 39,
+        "text": "- 9-6-2彩虹（低连接干燥）：应该用大尺寸（如67%）。",
+        "sha256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e"
+      },
+      "evidenceKind": "execution_of_adopted_course_size_abstraction",
+      "notSupported": [
+        "which_hole_cards_bet",
+        "hand_betting_frequency",
+        "opponent_response",
+        "next_street_policy",
+        "full_solver_equilibrium"
+      ],
+      "abstractionBoundary": "Physical suit variants of the stated rank/texture class; not independent source mechanisms."
+    }
+  ]
+}

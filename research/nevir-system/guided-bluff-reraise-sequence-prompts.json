@@ -1,0 +1,2768 @@
+{
+  "status": "guided_bluff_reraise_paper_sequence_not_UI_or_learner_verified",
+  "parentLink": {
+    "source": "first-hand-lesson-packet.json",
+    "frame": "S13",
+    "mode": "review_after_first_pass",
+    "notice": "原整手结束后回看S13，再换另一手已经下注遭加的AcQc作者模型；不将本模型补成原AcQd的策略。关闭恢复原S13完整题面。",
+    "snapshotHash": "710964d391d966406e2df8d315059d89ca9bbcc9cdc609a1e19f8127d6d41869",
+    "returnHash": "710964d391d966406e2df8d315059d89ca9bbcc9cdc609a1e19f8127d6d41869",
+    "independentAssessment": false
+  },
+  "modelInput": {
+    "source": "bluff-reraise-model.json",
+    "context": {
+      "players": 6,
+      "initialEffectiveBB": 100,
+      "rake": 0,
+      "heroSeat": "SB",
+      "villainSeat": "BTN",
+      "board": [
+        "Kh",
+        "9h",
+        "2c",
+        "7d",
+        "4s"
+      ],
+      "observedAuthorHistory": [
+        "BTN opens2.5; SB raises_to10; BB folds; BTN calls",
+        "Flop Kh9h2c: SB bets7; BTN calls7",
+        "Turn7d: both check",
+        "River4s: SB bets17.5; BTN raises_to45"
+      ],
+      "current": {
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "toCall": 27.5,
+        "foldedStacks": 399
+      },
+      "prior": "Author current-raise-node board-legal AKs/KQo with unit weight per physical holding, then condition on hero cards. Not a preflop or action-conditioned course range.",
+      "response": "For every legal hero re-raise total R in[72.5,83], AKs always continues; KQo folds with the profile probability, otherwise continues. Continue means jam_to83 when R<83, or call38 at R=83. Size-independent response is an explicit author assumption, not a real-player estimate."
+    },
+    "rows": [
+      {
+        "id": "hearts",
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "currentValue": [
+          0,
+          14,
+          13,
+          12,
+          9,
+          7
+        ],
+        "legal": [
+          {
+            "group": "AKs",
+            "hole": [
+              "As",
+              "Ks"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ad",
+              "Kd"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ac",
+              "Kc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qd"
+            ]
+          }
+        ],
+        "removed": [
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qh"
+            ]
+          }
+        ],
+        "counts": {
+          "AKs": 3,
+          "KQo": 6
+        },
+        "profiles": [
+          {
+            "id": "all_KQo_fold",
+            "KQoFoldProbability": 1,
+            "foldShare": 0.6666666666666666,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 46.666666666666664,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 43.166666666666664,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.33333333333333337,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold52",
+            "KQoFoldProbability": 0.52,
+            "foldShare": 0.3466666666666667,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": -2.1333333333333258,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": -8.993333333333325,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.6533333333333333,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "fold"
+          },
+          {
+            "id": "KQo_fold55",
+            "KQoFoldProbability": 0.55,
+            "foldShare": 0.3666666666666667,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 0.9166666666666714,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": -5.733333333333334,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.6333333333333333,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          }
+        ]
+      },
+      {
+        "id": "clubs",
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "currentValue": [
+          0,
+          14,
+          13,
+          12,
+          9,
+          7
+        ],
+        "legal": [
+          {
+            "group": "AKs",
+            "hole": [
+              "As",
+              "Ks"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ad",
+              "Kd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qd"
+            ]
+          }
+        ],
+        "removed": [
+          {
+            "group": "AKs",
+            "hole": [
+              "Ac",
+              "Kc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qc"
+            ]
+          }
+        ],
+        "counts": {
+          "AKs": 2,
+          "KQo": 7
+        },
+        "profiles": [
+          {
+            "id": "all_KQo_fold",
+            "KQoFoldProbability": 1,
+            "foldShare": 0.7777777777777778,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 63.61111111111111,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 61.27777777777777,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.2222222222222222,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold52",
+            "KQoFoldProbability": 0.52,
+            "foldShare": 0.40444444444444444,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 6.67777777777777,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 0.42444444444443974,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.5955555555555556,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold55",
+            "KQoFoldProbability": 0.55,
+            "foldShare": 0.4277777777777778,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 10.236111111111114,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 4.227777777777781,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.5722222222222222,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          }
+        ]
+      },
+      {
+        "id": "Aheart_Qclub",
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "currentValue": [
+          0,
+          14,
+          13,
+          12,
+          9,
+          7
+        ],
+        "legal": [
+          {
+            "group": "AKs",
+            "hole": [
+              "As",
+              "Ks"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ad",
+              "Kd"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ac",
+              "Kc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qd"
+            ]
+          }
+        ],
+        "removed": [
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qc"
+            ]
+          }
+        ],
+        "counts": {
+          "AKs": 3,
+          "KQo": 7
+        },
+        "profiles": [
+          {
+            "id": "all_KQo_fold",
+            "KQoFoldProbability": 1,
+            "foldShare": 0.7,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 51.75,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 48.599999999999994,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.30000000000000004,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold52",
+            "KQoFoldProbability": 0.52,
+            "foldShare": 0.364,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 0.509999999999998,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": -6.167999999999999,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.636,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold55",
+            "KQoFoldProbability": 0.55,
+            "foldShare": 0.38500000000000006,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 3.7125000000000057,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": -2.7449999999999903,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.615,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          }
+        ]
+      },
+      {
+        "id": "Aclub_Qheart",
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "currentValue": [
+          0,
+          14,
+          13,
+          12,
+          9,
+          7
+        ],
+        "legal": [
+          {
+            "group": "AKs",
+            "hole": [
+              "As",
+              "Ks"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ad",
+              "Kd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qd"
+            ]
+          }
+        ],
+        "removed": [
+          {
+            "group": "AKs",
+            "hole": [
+              "Ac",
+              "Kc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qh"
+            ]
+          }
+        ],
+        "counts": {
+          "AKs": 2,
+          "KQo": 6
+        },
+        "profiles": [
+          {
+            "id": "all_KQo_fold",
+            "KQoFoldProbability": 1,
+            "foldShare": 0.75,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 59.375,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 56.75,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.25,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold52",
+            "KQoFoldProbability": 0.52,
+            "foldShare": 0.39,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 4.475000000000001,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": -1.9299999999999997,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.61,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          },
+          {
+            "id": "KQo_fold55",
+            "KQoFoldProbability": 0.55,
+            "foldShare": 0.41250000000000003,
+            "foldEV": 0,
+            "callEV": -27.5,
+            "minRaisePlan": {
+              "raiseTo": 72.5,
+              "added": 55,
+              "evFromCurrentBB": 7.906250000000007,
+              "onFold": {
+                "refundHero": 27.5,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_short_allin83_hero_folds",
+                "heroExtraCallCost": 10.5,
+                "heroCallIncrement": -10.5,
+                "ending": {
+                  "hero": 10.5,
+                  "villain": 190.5,
+                  "pot": 0
+                }
+              }
+            },
+            "allInPlan": {
+              "raiseTo": 83,
+              "added": 65.5,
+              "evFromCurrentBB": 1.7375000000000043,
+              "onFold": {
+                "refundHero": 38,
+                "matchedPot": 125,
+                "ending": {
+                  "hero": 163,
+                  "villain": 38,
+                  "pot": 0
+                }
+              },
+              "onContinue": {
+                "kind": "opponent_call38_showdown_hero_loses",
+                "heroExtraCallCost": 0,
+                "heroCallIncrement": 0,
+                "ending": {
+                  "hero": 0,
+                  "villain": 201,
+                  "pot": 0
+                }
+              }
+            },
+            "continuousProof": {
+              "formula": "F*97.5 - (1-F)*(R-17.5)",
+              "derivative": -0.5874999999999999,
+              "bestR": 72.5,
+              "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+            },
+            "grid": {
+              "sizes": 1051,
+              "stepBB": 0.01,
+              "bestR": 72.5
+            },
+            "best": "raise_to72.5"
+          }
+        ]
+      }
+    ],
+    "rulesRuntime": "bluff-reraise-rules-runtime.json"
+  },
+  "navigation": {
+    "core": [
+      "Z01",
+      "Z02",
+      "Z03",
+      "Z04",
+      "Z05",
+      "Z06",
+      "Z07",
+      "Z08",
+      "Z09",
+      "Z10",
+      "Z11",
+      "Z12",
+      "Z13",
+      "Z14",
+      "Z15",
+      "Z16",
+      "Z17",
+      "Z18",
+      "Z19",
+      "Z20",
+      "Z21"
+    ],
+    "optional": [
+      {
+        "label": "同牌力为什么选择不同",
+        "frames": [
+          "H01",
+          "H02",
+          "H03"
+        ],
+        "openAt": "Z14",
+        "returnTo": "Z14",
+        "surface": "feedback",
+        "then": "Z15"
+      },
+      {
+        "label": "只改一张牌看看",
+        "frames": [
+          "O01",
+          "O02",
+          "O03"
+        ],
+        "openAt": "Z14",
+        "returnTo": "Z14",
+        "surface": "feedback",
+        "then": "Z15"
+      },
+      {
+        "label": "如果只比较全下会漏什么",
+        "frames": [
+          "T01",
+          "T02"
+        ],
+        "openAt": "Z14",
+        "returnTo": "Z14",
+        "surface": "feedback",
+        "then": "Z15"
+      }
+    ],
+    "events": [
+      {
+        "from": "Z14",
+        "to": "Z15",
+        "event": "Actual SB raise_to72.5, add55 once"
+      },
+      {
+        "from": "Z15",
+        "to": "Z16",
+        "event": "Observed BTN allin_to83, add38 once"
+      },
+      {
+        "from": "Z17",
+        "to": "Z18",
+        "event": "Actual SB fold; refund unmatched10.5 to BTN"
+      },
+      {
+        "from": "Z18",
+        "to": "Z19",
+        "event": "Award matched180 to BTN"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "Z01",
+      "title": "先看当前牌力和街数",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "现在AcQc是A高，河牌已发满，还能靠下一张改善吗？",
+        "options": [
+          "不能，已无下一张",
+          "能，再听一张花",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z02",
+      "title": "重算面对加注的价格",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己已下17.5，对手加到45，跟注还补多少？",
+        "options": [
+          27.5,
+          45,
+          65.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z03",
+      "title": "不能默认再加就是全下",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "前次完整增量27.5，最小普通再加到多少？",
+        "options": [
+          72.5,
+          62.5,
+          83,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z04",
+      "title": "先删除本来就不可能的牌",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "只排除公共牌时，AKs能包含AhKh吗？",
+        "options": [
+          "不能，Kh已经在桌上",
+          "能，自己没拿Kh",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "boardOnlyPool": [
+          {
+            "group": "AKs",
+            "hole": [
+              "As",
+              "Ks"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ad",
+              "Kd"
+            ]
+          },
+          {
+            "group": "AKs",
+            "hole": [
+              "Ac",
+              "Kc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qd"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Ks",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kd",
+              "Qc"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qs"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qh"
+            ]
+          },
+          {
+            "group": "KQo",
+            "hole": [
+              "Kc",
+              "Qd"
+            ]
+          }
+        ],
+        "scope": "Board-only template before hero-card removal; includes blocked-by-hero examples for deletion. Not the current legal range or an actual reveal."
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z05",
+      "title": "点A查看删除的继续牌",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己Ac占掉哪手本来合法的AKs？",
+        "options": [
+          "AcKc",
+          "AhKh",
+          "没有",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z06",
+      "title": "点Q查看删除的另一组",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己Qc在KQo中删掉几手？",
+        "options": [
+          2,
+          3,
+          1,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z07",
+      "title": "把剩余候选接上回应",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "剩7手KQo，能把它们都算作一定弃牌吗？",
+        "options": [
+          "不能，题设只给52%弃，其余继续",
+          "能，KQo就是弃牌组",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "counts": {
+          "AKs": 2,
+          "KQo": 7
+        },
+        "KQoFoldProbability": 0.52,
+        "overallFoldShare": 0.40444444444444444
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z08",
+      "title": "保留弃与跟的替代",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "直接跟27.5面对这些候选，当前EV怎样？",
+        "options": [
+          -27.5,
+          0,
+          97.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z09",
+      "title": "只预演较小再加",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 152.5,
+        "heroStack": 10.5,
+        "villainStack": 38,
+        "heroPut": 72.5,
+        "villainPut": 45,
+        "actor": "BTN",
+        "toCall": 27.5,
+        "phase": "preview_wait_response",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "再加到72.5，自己本次新增多少？",
+        "options": [
+          55,
+          72.5,
+          27.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z10",
+      "title": "退出分支算退款",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 125,
+        "heroStack": 38,
+        "villainStack": 38,
+        "heroPut": 45,
+        "villainPut": 45,
+        "actor": null,
+        "toCall": 0,
+        "phase": "preview_opponent_fold_refund27.5",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "若对手弃，自己未匹配的27.5退后，匹配池多少？",
+        "options": [
+          125,
+          152.5,
+          180,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z11",
+      "title": "再加后仍可能被反击",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 190.5,
+        "heroStack": 10.5,
+        "villainStack": 0,
+        "heroPut": 72.5,
+        "villainPut": 83,
+        "actor": "SB",
+        "toCall": 10.5,
+        "phase": "preview_facing_short_allin",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "对手全下到83只加10.5，是否仍有跟弃决定？",
+        "options": [
+          "有，这是不足额全下",
+          "没有，不到完整增量就忽略",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z12",
+      "title": "别因之前投入而被迫跟",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 190.5,
+        "heroStack": 10.5,
+        "villainStack": 0,
+        "heroPut": 72.5,
+        "villainPut": 83,
+        "actor": "SB",
+        "toCall": 10.5,
+        "phase": "preview_facing_short_allin",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定继续候选全赢自己，还应因已投入55而补最后10.5吗？",
+        "options": [
+          "不，当前跟再亏10.5，弃增量0",
+          "应，已经投太多了",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z13",
+      "title": "预演关闭回原决定",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关掉预演，真实自己还剩多少？",
+        "options": [
+          65.5,
+          10.5,
+          38,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z14",
+      "title": "合并全部选择与金额",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "按本模型全部合法再加区间比较，当前选什么？",
+        "options": [
+          "弃牌",
+          "跟27.5",
+          "再加到72.5",
+          "全下83",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "values": {
+          "fold": 0,
+          "call": -27.5,
+          "minRaise": 6.67777777777777,
+          "jam": 0.42444444444443974
+        },
+        "scope": "Given answer support; optimum depends on the declared size-independent responses."
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z15",
+      "title": "现在才实际再加",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 152.5,
+        "heroStack": 10.5,
+        "villainStack": 38,
+        "heroPut": 72.5,
+        "villainPut": 45,
+        "actor": "BTN",
+        "toCall": 27.5,
+        "phase": "actual_wait_response",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己真正加到72.5后，下一步是谁？",
+        "options": [
+          "BTN对手",
+          "自己再下注",
+          "直接收池",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z16",
+      "title": "实际遇到短全下",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 190.5,
+        "heroStack": 10.5,
+        "villainStack": 0,
+        "heroPut": 72.5,
+        "villainPut": 83,
+        "actor": "SB",
+        "toCall": 10.5,
+        "phase": "actual_facing_short_allin",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "BTN这次全下到83，现在自己还补多少？",
+        "options": [
+          10.5,
+          38,
+          83,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z17",
+      "title": "在新决定执行比较",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 190.5,
+        "heroStack": 10.5,
+        "villainStack": 0,
+        "heroPut": 72.5,
+        "villainPut": 83,
+        "actor": "SB",
+        "toCall": 10.5,
+        "phase": "actual_facing_short_allin",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "给定当前范围自己无胜出份额，选什么？",
+        "options": [
+          "弃牌",
+          "跟10.5",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z18",
+      "title": "退对手未匹配的部分",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 180,
+        "heroStack": 10.5,
+        "villainStack": 10.5,
+        "heroPut": 72.5,
+        "villainPut": 72.5,
+        "actor": null,
+        "toCall": 0,
+        "phase": "actual_hero_fold_refund10.5_to_opponent",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "自己弃后，对手最后未匹配10.5怎样？",
+        "options": [
+          "退回对手，匹配池180",
+          "也算自己又输10.5",
+          "退给自己",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z19",
+      "title": "按真实账本派彩",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 10.5,
+        "villainStack": 190.5,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": null,
+        "toCall": 0,
+        "phase": "actual_settled_no_opponent_cards_revealed",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "派完池，自己还剩多少？",
+        "options": [
+          10.5,
+          0,
+          65.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z20",
+      "title": "分清当前与整手基点",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 10.5,
+        "villainStack": 190.5,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": null,
+        "toCall": 0,
+        "phase": "actual_settled_no_opponent_cards_revealed",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "整手100到10.5，净变化多少？",
+        "options": [
+          -89.5,
+          -55,
+          -100,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "Z21",
+      "title": "不靠一次成功或失败判计划",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 0,
+        "heroStack": 10.5,
+        "villainStack": 190.5,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": null,
+        "toCall": 0,
+        "phase": "actual_settled_no_opponent_cards_revealed",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "这次再加被反击后亏55，能仅凭这一支否定事前再加吗？",
+        "options": [
+          "不能，仍要比较事前全部回应",
+          "能，亏钱就是再加错了",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H01",
+      "title": "可选：同牌力的花色对照",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "preview_hero_cards",
+        "modelIdentity": "hearts_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "换成AhQh、保持52%回应时，完整比较选什么？",
+        "options": [
+          "弃牌",
+          "跟27.5",
+          "再加72.5",
+          "全下83",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "counts": {
+          "AKs": 3,
+          "KQo": 6
+        },
+        "values": {
+          "id": "KQo_fold52",
+          "KQoFoldProbability": 0.52,
+          "foldShare": 0.3466666666666667,
+          "foldEV": 0,
+          "callEV": -27.5,
+          "minRaisePlan": {
+            "raiseTo": 72.5,
+            "added": 55,
+            "evFromCurrentBB": -2.1333333333333258,
+            "onFold": {
+              "refundHero": 27.5,
+              "matchedPot": 125,
+              "ending": {
+                "hero": 163,
+                "villain": 38,
+                "pot": 0
+              }
+            },
+            "onContinue": {
+              "kind": "opponent_short_allin83_hero_folds",
+              "heroExtraCallCost": 10.5,
+              "heroCallIncrement": -10.5,
+              "ending": {
+                "hero": 10.5,
+                "villain": 190.5,
+                "pot": 0
+              }
+            }
+          },
+          "allInPlan": {
+            "raiseTo": 83,
+            "added": 65.5,
+            "evFromCurrentBB": -8.993333333333325,
+            "onFold": {
+              "refundHero": 38,
+              "matchedPot": 125,
+              "ending": {
+                "hero": 163,
+                "villain": 38,
+                "pot": 0
+              }
+            },
+            "onContinue": {
+              "kind": "opponent_call38_showdown_hero_loses",
+              "heroExtraCallCost": 0,
+              "heroCallIncrement": 0,
+              "ending": {
+                "hero": 0,
+                "villain": 201,
+                "pot": 0
+              }
+            }
+          },
+          "continuousProof": {
+            "formula": "F*97.5 - (1-F)*(R-17.5)",
+            "derivative": -0.6533333333333333,
+            "bestR": 72.5,
+            "assumption": "Opponent response probabilities constant over the whole legal size interval; continue-jam is followed by hero fold if chips remain."
+          },
+          "grid": {
+            "sizes": 1051,
+            "stepBB": 0.01,
+            "bestR": 72.5
+          },
+          "best": "fold"
+        }
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H02",
+      "title": "不要重复删已排除的牌",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "preview_hero_cards",
+        "modelIdentity": "hearts_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "Ah会再删掉AhKh这手AKs吗？",
+        "options": [
+          "不会，Kh在桌上已排除它",
+          "会，有A就少一手AKs",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "H03",
+      "title": "恢复实际主手牌",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭花色预演，真实手牌恢复什么？",
+        "options": [
+          "AcQc",
+          "AhQh",
+          "两手一起拿",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O01",
+      "title": "可选：只变A的花色",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "preview_one_card_control",
+        "modelIdentity": "Aclub_Qheart_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "相对AhQh只换AcQh，AKs与KQo剩多少？",
+        "options": [
+          "2与6",
+          "3与7",
+          "2与7",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "compareFrom": {
+          "hero": [
+            "Ah",
+            "Qh"
+          ],
+          "counts": {
+            "AKs": 3,
+            "KQo": 6
+          }
+        }
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O02",
+      "title": "可选：只变Q的花色",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "preview_one_card_control",
+        "modelIdentity": "Aheart_Qclub_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "相对AhQh只换AhQc，哪组改变？",
+        "options": [
+          "KQo从6到7，AKs仍3",
+          "AKs从3到2",
+          "两组都不变",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "compareFrom": {
+          "hero": [
+            "Ah",
+            "Qh"
+          ],
+          "counts": {
+            "AKs": 3,
+            "KQo": 6
+          }
+        }
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "O03",
+      "title": "回主候选和参考",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭单牌控制，主模型剩余是什么？",
+        "options": [
+          "AKs2、KQo7",
+          "AKs3、KQo6",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "T01",
+      "title": "可选：全下不是所有再加",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ah",
+          "Qh"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "preview_other_declared_version",
+        "modelIdentity": "hearts_KQo_fold55",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "另一明确版本AhQh且KQo55%弃，小再加+0.917、全下−5.733；能因全下负值就否定所有再加吗？",
+        "options": [
+          "不能，还存在较小合法方案",
+          "能，全下不好就都不好",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "minRaiseEV": 0.9166666666666714,
+        "jamEV": -5.733333333333334
+      },
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "T02",
+      "title": "回原全部条件",
+      "state": {
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ],
+        "hero": [
+          "Ac",
+          "Qc"
+        ],
+        "heroSeat": "SB",
+        "villainSeat": "BTN",
+        "pot": 97.5,
+        "heroStack": 65.5,
+        "villainStack": 38,
+        "heroPut": 17.5,
+        "villainPut": 45,
+        "actor": "SB",
+        "toCall": 27.5,
+        "phase": "actual_facing_raise",
+        "modelIdentity": "clubs_KQo_fold52",
+        "opponentVisible": false
+      },
+      "task": {
+        "prompt": "关闭这个版本，实际主线回应是哪项？",
+        "options": [
+          "AcQc且KQo52%弃",
+          "AhQh且KQo55%弃",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_declared_bluff_reraise_model_not_course_or_unseen_strategy",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "verification": {
+    "tableTotalBB": 600,
+    "actualOpponentCardsNeverRevealed": true,
+    "selectedResult": "A positive-probability opponent-continue branch, not a sample of actual player behavior.",
+    "wholeParentFrameRestored": true
+  },
+  "release": {
+    "fullCoursePolicy": false,
+    "empiricalFrequency": false,
+    "unseenAssessment": false,
+    "learnerVerified": false,
+    "NL50Verified": false
+  }
+}

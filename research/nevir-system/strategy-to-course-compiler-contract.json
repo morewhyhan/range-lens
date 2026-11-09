@@ -1,0 +1,182 @@
+{
+  "id": "STRATEGY_TO_COURSE_COMPILER_CONTRACT_V1",
+  "status": "paper_pipeline_not_implemented",
+  "purpose": "把匹配配置下的参考策略、用户课程简化和嵌套练习题编译成可审计的静态课包，同时保留三者身份差异。",
+  "phases": [
+    {
+      "id": "P0_identity",
+      "input": ["sourceVersion", "solverCommit", "gameFrame", "rangeFingerprint", "actionTreeFingerprint", "coursePolicyFingerprint", "sourceKind", "policyIdentity", "policyScope", "populationModel"],
+      "output": ["inputFingerprint", "identityStatus", "policyIdentity", "sourceKind", "policyScope", "populationModel"],
+      "hardChecks": ["sixMaxContextDeclared", "streetRoleActionStateDeclared", "allCardsLegal", "potStackRakeDeclared"],
+      "failure": "not_open"
+    },
+    {
+      "id": "P1_physical_facts",
+      "input": ["gameFrame", "knownHands", "board", "deadCards"],
+      "output": ["bestFive", "handClass", "legalRunouts", "physicalFilter", "ledgerFacts"],
+      "independentCrossChecks": ["holdemHandEvaluator", "equityCalculator", "localPokerEvaluator"],
+      "failure": "fact_only_or_not_open"
+    },
+    {
+      "id": "P2_reference_policy",
+      "input": ["matchedRange", "actionTree", "solverConfig", "solverOutput", "sourceKind", "policyScope"],
+      "output": ["referenceActionFrequency", "referenceEV", "referenceRangeAfter", "successorGraph", "convergenceStatus", "policyIdentity", "policyScope"],
+      "hardChecks": ["reloadPreservesRawValues", "supportedAndUnsupportedRowsSeparated", "successorClosureRecorded"],
+      "failure": "demonstration_or_course_rule_only"
+    },
+    {
+      "id": "P3_course_policy",
+      "input": ["courseSource", "courseRule", "allowedActions", "quantizationRule", "policyIdentity", "policyScope", "populationModel", "referencePolicy"],
+      "output": ["courseActionWeight", "courseRangeAfter", "courseExplanation", "coursePolicyFingerprint", "policyIdentity", "policyScope", "populationModel", "differenceLedger"],
+      "hardChecks": ["courseIdentitySeparateFromReference", "unknownRuleRemainsClosed", "quantizationIsExplicit"],
+      "failure": "fact_or_demonstration"
+    },
+    {
+      "id": "P4_difference",
+      "input": ["referencePolicy", "coursePolicy", "sameInputFingerprint", "referencePolicyIdentity", "coursePolicyIdentity", "policyScope", "populationModel"],
+      "output": ["actionDelta", "rangeDelta", "evDelta", "supportChanged", "boundaryCases", "policyImpact", "policyIdentityDelta"],
+      "hardChecks": ["sameDenominator", "sameActionMenuWhenComparing", "ancestorRecomputeOnPolicyChange"],
+      "failure": "not_comparable"
+    },
+    {
+      "id": "P5_range_and_successors",
+      "input": ["rangeBefore", "actionWeights", "physicalFilter", "successorGraph"],
+      "output": ["rangeAfterByAction", "fixedDenominatorView", "nextStateSnapshots", "stopReason"],
+      "formulas": {
+        "before": "w_before(h)=entityWeight(h)*physicalFilter(h)",
+        "after": "w_after(h,a)=w_before(h)*P(a|h,node)",
+        "view": "view(h,a)=w_after(h,a)/sum_h(w_after(h,a))",
+        "delta": "delta(h,a)=courseAfter(h,a)-referenceAfter(h,a)"
+      },
+      "hardChecks": ["physicalRemovalSeparatedFromActionFilter", "fixedDenominatorStored", "noSuccessorInvented"],
+      "failure": "stop_at_current_parent"
+    },
+    {
+      "id": "P6_teaching_frame",
+      "input": ["parentFrame", "factFrame", "courseFrame", "referenceFrame", "differenceFrame", "policyIdentity", "policyScope", "populationModel"],
+      "output": ["oneQuestion", "onePrimaryAction", "explanation", "errorLayer", "helpLevels", "returnTo", "visiblePolicyBadge"],
+      "hardChecks": ["publicPromptContainsNoAnswer", "oneOpenChildAtATime", "firstAnswerPreserved"],
+      "failure": "demonstration_or_not_open"
+    },
+    {
+      "id": "P7_transfer",
+      "input": ["releasedUnit", "singleChangedField", "heldoutSourceIdentity"],
+      "output": ["transferVariant", "changedField", "reenteredLayer", "independentAnswerKey"],
+      "hardChecks": ["exactlyOneChangedField", "noAnswerExposure", "sameMechanismOrDeclaredStateChange"],
+      "failure": "guided_only"
+    },
+    {
+      "id": "P8_release",
+      "input": ["allPhaseOutputs", "versionHashes", "learnerEvidence"],
+      "output": ["releaseIdentity", "releaseStatus", "nextEvidenceNeeded"],
+      "hardChecks": ["allRequiredFieldsPresent", "sourceAndPolicyFingerprintsMatch", "learnerTrialStatusExplicit"],
+      "failure": "not_open"
+    }
+  ],
+  "simplificationTransforms": [
+    {"id":"visual_nesting","allowed":true,"mustPreserve":["answerIdentity","parentFrame","returnTo","firstAnswer"]},
+    {"id":"frequency_quantization","allowed":true,"mustCompare":["perComboDelta","rootEVDelta","boundaryCases"],"forbiddenInference":"overallFrequencyClosenessMeansNoLoss"},
+    {"id":"action_menu_reduction","allowed":true,"mustRecompute":["affectedAncestors","successors","rangeAfter","EV"],"forbiddenInference":"removedActionWasNeverRelevant"},
+    {"id":"edge_sampling","allowed":true,"mustPreserve":["policyWeights","evaluationWeights","sourceIdentity"],"forbiddenInference":"trainingSampleRatioChangesStrategy"}
+  ],
+  "answerIdentities": ["fact", "demonstration", "course_rule", "reference_frequency", "reference_policy"],
+  "policyIdentityLadder": [
+    {
+      "id": "raw_reference",
+      "userLabel": "匹配参考策略",
+      "meaning": "固定输入、范围、动作菜单和求解质量下的原始参考策略；它不是课程动作。",
+      "requires": ["matchedInputFingerprint", "referenceSnapshot", "solverQuality", "successorOrStop"],
+      "mayGrade": ["reference_frequency", "reference_policy"],
+      "mayNotBecome": ["course_rule", "population_exploit"],
+      "missingAction": "stop_at_reference_layer"
+    },
+    {
+      "id": "simplified_reference",
+      "userLabel": "参考策略的课程简化",
+      "meaning": "从匹配参考策略经过明确量化、边缘校准和差异账本得到的课程版本。",
+      "requires": ["raw_reference", "quantizationRule", "differenceLedger", "rangeAfterByAction", "policyScope"],
+      "mayGrade": ["course_rule"],
+      "mayNotBecome": ["raw_reference"],
+      "missingAction": "stop_at_simplification_layer"
+    },
+    {
+      "id": "course_rule",
+      "userLabel": "课程明确规则",
+      "meaning": "材料明确写出的训练规则；必须标明来源、作用范围和是否为简化。",
+      "requires": ["courseSourceReference", "policyScope", "coursePolicyFingerprint"],
+      "mayGrade": ["course_rule"],
+      "mayNotBecome": ["raw_reference"],
+      "missingAction": "demonstration_or_stop"
+    },
+    {
+      "id": "population_exploit",
+      "userLabel": "特定对手模型下的剥削规则",
+      "meaning": "只在明确的人群倾向、触发条件和范围内成立；不能冒充基础GTO。",
+      "requires": ["courseSourceReference", "populationModel", "policyScope", "triggerCondition", "coursePolicyFingerprint"],
+      "mayGrade": ["course_rule"],
+      "mayNotBecome": ["raw_reference", "simplified_reference"],
+      "missingAction": "stop_until_opponent_model_is_declared"
+    },
+    {
+      "id": "illustration",
+      "userLabel": "示意案例",
+      "meaning": "用来解释机制或视觉变化的案例，不足以产生未见题唯一答案。",
+      "requires": ["declaredExample", "sourceReference", "parentReturn"],
+      "mayGrade": [],
+      "mayNotBecome": ["raw_reference", "course_rule"],
+      "missingAction": "demonstration_only"
+    },
+    {
+      "id": "fact_only",
+      "userLabel": "事实层",
+      "meaning": "牌面、牌力、实体移除、金额和合法性事实；不推出行动。",
+      "requires": ["physicalFacts"],
+      "mayGrade": ["fact"],
+      "mayNotBecome": ["course_rule", "raw_reference"],
+      "missingAction": "fact_only"
+    },
+    {
+      "id": "unknown_stop",
+      "userLabel": "资料不足，停止开放",
+      "meaning": "来源身份、作用范围、配置或后继不足，不能生成行动答案。",
+      "requires": ["stopReason", "returnToParent", "missingField"],
+      "mayGrade": [],
+      "mayNotBecome": ["raw_reference", "simplified_reference", "course_rule", "population_exploit"],
+      "missingAction": "stop_at_current_parent"
+    }
+  ],
+  "policyIdentityRules": {
+    "policyIdentityBeforeActionGrade": true,
+    "rawReferenceRequiresMatchedInput": true,
+    "simplifiedReferenceRequiresReferenceAndDifferenceLedger": true,
+    "courseRuleRequiresSourceAndScope": true,
+    "populationExploitRequiresOpponentModelAndTrigger": true,
+    "illustrationCannotBeIndependentlyGraded": true,
+    "factCannotImplyAction": true,
+    "unknownStops": true,
+    "populationExploitCannotBecomeGTO": true,
+    "policyIdentityChangeRequiresAncestorRecompile": true
+  },
+  "hardGates": {
+    "missingMatchedReferenceBlocksReferencePolicy": true,
+    "missingSuccessorBlocksContinuousLesson": true,
+    "missingCourseSourceBlocksCourseRule": true,
+    "missingPolicyIdentityBlocksActionGrade": true,
+    "populationExploitCannotBePublishedAsRawReference": true,
+    "illustrationCannotBePublishedAsAnswer": true,
+    "missingPolicyScopeBlocksRelease": true,
+    "changedPolicyRequiresAncestorRecompile": true,
+    "unknownCountsAsWrong": true,
+    "noRandomFrequencyApproximation": true,
+    "noRangeInvented": true,
+    "noNL50ClaimFromPaperOnly": true
+  },
+  "currentEvidence": {
+    "paperPipeline": true,
+    "compilerImplemented": false,
+    "matchedA72Reference": false,
+    "all35Compiled": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

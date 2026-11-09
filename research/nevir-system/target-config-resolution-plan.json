@@ -1,0 +1,340 @@
+{
+  "id": "TARGET_CONFIG_RESOLUTION_PLAN_V1",
+  "status": "paper_target_config_resolution_order_written_target_still_unfrozen",
+  "purpose": "规定目标配置每个字段的来源、补齐动作、打开的能力和阻塞的发布闸门，防止用户约束、课程候选与NL50参考混为一谈。",
+  "source": "target-config-source-ledger.json",
+  "resolutionOrder": [
+    "user_constraints",
+    "seat_and_position_identity",
+    "preflop_course_scope",
+    "blind_and_rake_rule",
+    "postflop_course_action_menu",
+    "matched_solver_action_tree",
+    "source_and_configuration_fingerprint",
+    "target_review"
+  ],
+  "rows": [
+    {
+      "field": "targetLabel",
+      "resolver": "user_goal",
+      "action": "保留NL50作为目标标签，不把标签当作配置值。",
+      "opens": [],
+      "blocks": [
+        "R8"
+      ],
+      "currentStatus": "user_goal_label_only",
+      "currentValue": "NL50",
+      "evidence": [
+        "user_goal"
+      ]
+    },
+    {
+      "field": "tableSize",
+      "resolver": "user_constraint",
+      "action": "冻结为6人现金桌，并在每个参考输入中写入。",
+      "opens": [
+        "product_scope"
+      ],
+      "blocks": [],
+      "currentStatus": "frozen_by_user",
+      "currentValue": 6,
+      "evidence": [
+        "user_constraint_six_max_cash"
+      ]
+    },
+    {
+      "field": "gameType",
+      "resolver": "user_constraint",
+      "action": "冻结为cash_holdem，排除锦标赛、短牌和奥马哈。",
+      "opens": [
+        "product_scope"
+      ],
+      "blocks": [],
+      "currentStatus": "frozen_by_user",
+      "currentValue": "cash_holdem",
+      "evidence": [
+        "user_constraint_cash_holdem"
+      ]
+    },
+    {
+      "field": "effectiveStackBB",
+      "resolver": "user_constraint_and_source_label",
+      "action": "冻结为100BB，并作为每个课程课包的输入身份。",
+      "opens": [
+        "product_scope"
+      ],
+      "blocks": [],
+      "currentStatus": "frozen_by_user_and_source_label",
+      "currentValue": 100,
+      "evidence": [
+        "user_constraint_100BB",
+        "src/data/sources.json:preflop[1].rows[22]"
+      ]
+    },
+    {
+      "field": "rakeModel",
+      "resolver": "explicit_target_configuration_or_external_room_rule",
+      "action": "取得目标平台/房间的抽水表；没有就保持未知，研究用零抽水不得升级。",
+      "opens": [
+        "target_reference_match"
+      ],
+      "blocks": [
+        "R3",
+        "R8"
+      ],
+      "currentStatus": "required_unknown",
+      "currentValue": null,
+      "evidence": []
+    },
+    {
+      "field": "seatMap",
+      "resolver": "standard_six_max_mapping_then_explicit_freeze",
+      "action": "先按UTG/HJ/CO/BTN/SB/BB建立候选座位图，再把按钮移动和行动顺序写入冻结版本。",
+      "opens": [
+        "position_input"
+      ],
+      "blocks": [
+        "R3",
+        "R8"
+      ],
+      "currentStatus": "standard_candidate_not_frozen",
+      "currentValue": [
+        "UTG",
+        "HJ",
+        "CO",
+        "BTN",
+        "SB",
+        "BB"
+      ],
+      "evidence": [
+        "src/data/sources.json:preflop[1].rows[5:9]",
+        "user_constraint_six_max_cash"
+      ]
+    },
+    {
+      "field": "positionModel",
+      "resolver": "source_chart_and_route_manifest",
+      "action": "按翻前图和翻后资料逐项登记英雄位置、对手位置、IP/OOP和行动者；缺位置的单元停在身份层。",
+      "opens": [
+        "unit_identity"
+      ],
+      "blocks": [
+        "R2",
+        "R3"
+      ],
+      "currentStatus": "source_candidate_not_frozen",
+      "currentValue": {
+        "openingPositionsPresent": [
+          "枪口 UTG",
+          "中位 HJ",
+          "关煞 CO",
+          "庄位 BTN",
+          "小盲 SB"
+        ],
+        "defensePositionsPresent": [
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "postflopExamples": [
+          "IP_3bet",
+          "OOP_3bet",
+          "IP_SRP",
+          "OOP_SRP"
+        ]
+      },
+      "evidence": [
+        "src/data/sources.json:preflop sheets",
+        "src/data/sources.json:postflop sheets"
+      ]
+    },
+    {
+      "field": "preflopActionMenu",
+      "resolver": "user_declared_preflop_scope",
+      "action": "只保留开池、3bet防守和BB防守中资料明确的动作；不扩展跟注、挤压和4bet。",
+      "opens": [
+        "preflop_course_package"
+      ],
+      "blocks": [
+        "R2"
+      ],
+      "currentStatus": "product_scope_candidate_not_frozen",
+      "currentValue": [
+        "fold",
+        "open_raise",
+        "three_bet",
+        "big_blind_call",
+        "big_blind_three_bet"
+      ],
+      "evidence": [
+        "user_preflop_scope",
+        "src/data/sources.json:preflop sheets"
+      ]
+    },
+    {
+      "field": "postflopActionMenu",
+      "resolver": "course_notes_then_matched_solver_tree",
+      "action": "先从资料确定课程允许的动作，再与固定求解行动树对齐；缺菜单时不得精确判分。",
+      "opens": [
+        "postflop_course_policy"
+      ],
+      "blocks": [
+        "R3",
+        "R4"
+      ],
+      "currentStatus": "source_candidate_not_frozen",
+      "currentValue": [
+        "check",
+        "bet",
+        "call",
+        "fold",
+        "raise",
+        "check_raise",
+        "all_in"
+      ],
+      "evidence": [
+        "src/data/sources.json:postflop sheets contain route examples only"
+      ]
+    },
+    {
+      "field": "openSizes",
+      "resolver": "source_snapshot",
+      "action": "保留资料已经明确的各位置简化开池尺寸，并记录截图/哈希，不扩展到未给尺寸。",
+      "opens": [
+        "preflop_course_package"
+      ],
+      "blocks": [
+        "R2",
+        "R3"
+      ],
+      "currentStatus": "source_candidate_not_frozen",
+      "currentValue": {
+        "枪口 UTG": "2 BB",
+        "中位 HJ": "2 BB",
+        "关煞 CO": "2.3 BB",
+        "庄位 BTN": "2.5 BB",
+        "小盲 SB": "3 BB"
+      },
+      "evidence": [
+        "src/data/sources.json:preflop[1].rows[5:9]"
+      ]
+    },
+    {
+      "field": "threeBetSizes",
+      "resolver": "solver_action_tree_and_course_scope",
+      "action": "用户练习只练范围时不增加前台设置；作者侧参考仍需固定求解器3bet尺寸。",
+      "opens": [
+        "reference_input"
+      ],
+      "blocks": [
+        "R3"
+      ],
+      "currentStatus": "required_unknown",
+      "currentValue": null,
+      "evidence": [
+        "user_scope_three_bet_defense_is_range_focused"
+      ]
+    },
+    {
+      "field": "betSizeMenu",
+      "resolver": "postflop_material_and_solver_action_tree",
+      "action": "把资料中的小注/大注/超池例子与完整行动树分开；只有两者匹配才开放动作题。",
+      "opens": [
+        "postflop_course_policy"
+      ],
+      "blocks": [
+        "R3",
+        "R4"
+      ],
+      "currentStatus": "source_candidate_not_frozen",
+      "currentValue": [
+        "25%",
+        "33%",
+        "40%",
+        "50%",
+        "67%",
+        "70%–100%",
+        "75%",
+        "100%",
+        ">100%"
+      ],
+      "evidence": [
+        "src/data/sources.json:postflop sheets partial size examples"
+      ]
+    },
+    {
+      "field": "anteOrBlindStructure",
+      "resolver": "explicit_cash_game_rule",
+      "action": "确认0.5/1BB及是否有前注；示例中的记账值只能作为候选。",
+      "opens": [
+        "ledger_validation"
+      ],
+      "blocks": [
+        "R3",
+        "R8"
+      ],
+      "currentStatus": "candidate_not_frozen",
+      "currentValue": {
+        "ante": null,
+        "smallBlindBB": 0.5,
+        "bigBlindBB": 1
+      },
+      "evidence": [
+        "research_examples_use_0_5_1_blinds"
+      ]
+    },
+    {
+      "field": "sourceVersion",
+      "resolver": "frozen_source_bundle_and_solver_commit",
+      "action": "给课程资料、图表、求解器提交和编译器规则各自记录版本与哈希。",
+      "opens": [
+        "provenance"
+      ],
+      "blocks": [
+        "R3",
+        "R4",
+        "R8"
+      ],
+      "currentStatus": "required_unknown",
+      "currentValue": null,
+      "evidence": [
+        "source_bundle_hashes_available_but_release_version_not_declared"
+      ]
+    },
+    {
+      "field": "configurationFingerprint",
+      "resolver": "derived_after_all_required_fields",
+      "action": "所有字段冻结后再生成，不提前填默认值。",
+      "opens": [
+        "target_review"
+      ],
+      "blocks": [
+        "R8"
+      ],
+      "currentStatus": "derived_only_after_all_required_fields",
+      "currentValue": null,
+      "evidence": []
+    }
+  ],
+  "rules": {
+    "noGuessing": true,
+    "candidateDoesNotEqualFrozen": true,
+    "productScopeDoesNotEqualSolverInput": true,
+    "solverInputDoesNotEqualCoursePolicy": true,
+    "missingRequiredFieldBlocksTargetReview": true,
+    "missingRakeBlocksNL50Claim": true,
+    "configurationFingerprintDerivedLast": true
+  },
+  "currentEvidence": {
+    "allRequiredFieldsPlanned": true,
+    "userConstraintsResolved": true,
+    "allRowsHaveResolver": true,
+    "targetConfigurationFrozen": false,
+    "targetReviewReady": false
+  },
+  "nextSafeWork": [
+    "把已有材料中的位置、行动者和课程尺寸逐单元迁移到canonical身份字段。",
+    "对每个翻后单元先锁课程动作菜单，再请求匹配参考策略。",
+    "在没有抽水和完整行动树之前，保持目标级审计关闭。"
+  ]
+}

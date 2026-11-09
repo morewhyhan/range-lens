@@ -1,0 +1,37 @@
+{
+  "id": "ROUTE_RELEASE_GATES_V1",
+  "status": "declarative_route_gates_not_released",
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7"],
+  "canonicalLearnerRouteRole": "runtime_release_surface",
+  "route": ["L0","L1","L2","L3","L4","L5","L6","L7","L8"],
+  "routeRole": "legacy_author_macro_gates",
+  "gates": [
+    {"id":"L0","status":"fact_or_demonstration","missing":["runtime_trial","low_baseline_trial"],"blocks":["none"]},
+    {"id":"L1","status":"fact_or_demonstration","missing":["selector_runtime","first_pass_trial"],"blocks":["precise_preflop_practice"]},
+    {"id":"L2","status":"fact_or_demonstration","missing":["full_cell_question_package","low_baseline_validation"],"blocks":["independent_boundary_practice"]},
+    {"id":"L3","status":"course_demo_only","missing":["source_bound_action_package","selector_runtime"],"blocks":["exact_action_grade"]},
+    {"id":"L4","status":"fact_or_demonstration","missing":["complete_joint_range","caller_and_defender_reference"],"blocks":["precise_postflop_strategy_grade"]},
+    {"id":"L5","status":"fact_or_demonstration","missing":["complete_role_state_successor_matrix"],"blocks":["all_role_continuous_route"]},
+    {"id":"L6","status":"fact_or_demonstration","missing":["A72_C2_C5_reference","action_after_range_reference","course_policy_diff"],"blocks":["exact_current_action_grade"]},
+    {"id":"L7","status":"fact_or_demonstration","missing":["complete_three_street_successors","caller_role_coverage","unseen_route_replay"],"blocks":["continuous_three_street_lesson"]},
+    {"id":"L8","status":"paper_trial_candidate","missing":["runtime_ui","low_baseline_trial","unseen_transfer_evidence"],"blocks":["structure_verified","NL50_evidence"]}
+  ],
+  "minimumPackageFields":["routeNode","parentFrame","publicPrompt","visibleInputs","sourceIdentity","coursePolicyIdentity","referenceIdentity","teacherAnswer","causalExplanation","rangeBefore","rangeAfter","successorStateOrStopReason"],
+  "dependencyRules":{
+    "missingReferenceBlocksExactGrade":true,
+    "missingSuccessorBlocksContinuousLesson":true,
+    "missingParentFrameBlocksNestedChild":true,
+    "QQQEngineeringCaseCannotReplaceA72CourseCase":true,
+    "lowBaselineTrialRequiredBeforeStructureClaim":true
+  },
+  "currentStatus":{
+    "paperRouteWritten":true,
+    "machineRouteChecked":true,
+    "L3ExactActionReady":false,
+    "L4CompleteJointRangeReady":false,
+    "L6MatchedReferenceReady":false,
+    "L7ContinuousReady":false,
+    "L8StructureVerified":false,
+    "NL50Evidence":false
+  }
+}

@@ -1,0 +1,1031 @@
+{
+  "status": "guided_update_sequence_not_full_strategy_or_learner_result",
+  "parentLink": {
+    "source": "first-hand-lesson-prompts.json",
+    "frame": "S08",
+    "mode": "review_after_first_pass",
+    "notice": "下面明确换另一手的更新模型；结束后回原S08，不移植新例策略或角色。",
+    "snapshotHash": "d8ef36a4839e3ddec41c46ccd918df8c9180b13ff25755ddb7e6f8eded31bce7",
+    "returnHash": "d8ef36a4839e3ddec41c46ccd918df8c9180b13ff25755ddb7e6f8eded31bce7",
+    "independentAssessment": false
+  },
+  "inputs": {
+    "own": [
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qs",
+          "3s"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qh",
+          "3h"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qd",
+          "3d"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "mass": 1
+      }
+    ],
+    "other": [
+      {
+        "id": "AT",
+        "hole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "id": "QT",
+        "hole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "id": "76",
+        "hole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      }
+    ],
+    "source": "self-range-outcome-evidence.json",
+    "priorDefinition": "Own range is the collection of possible hands across this line, not uncertainty for a player about their actual visible cards. Joint prior is explicitly defined by independent raw proposals then physical compatibility conditioning, not asserted as a real postflop distribution.",
+    "opponentActionProbabilitiesAreGiven": true
+  },
+  "navigation": {
+    "core": [
+      "U01",
+      "U02",
+      "U03",
+      "U04",
+      "U05",
+      "U06",
+      "U09",
+      "U10",
+      "U11",
+      "U12",
+      "U14"
+    ],
+    "optional": [
+      {
+        "openAt": "U06",
+        "label": "看另一种打法",
+        "frames": [
+          "U07",
+          "U08"
+        ],
+        "returnTo": "U06",
+        "surface": "feedback",
+        "then": "U09"
+      },
+      {
+        "openAt": "U12",
+        "label": "比较两版这手牌",
+        "frames": [
+          "U13"
+        ],
+        "returnTo": "U12",
+        "surface": "feedback",
+        "then": "U14"
+      }
+    ],
+    "events": [
+      {
+        "from": "U03",
+        "to": "U04",
+        "event": "Given demonstration BTN bet1.83, not an optimality answer"
+      },
+      {
+        "from": "U04",
+        "to": "U05",
+        "event": "Observed model BB call1.83"
+      },
+      {
+        "from": "U06",
+        "to": "U09",
+        "event": "Actual turnQh after street closure; once only, optional returns do not deal again"
+      }
+    ],
+    "firstAnswerLocksPersistOnOptionalReturn": true
+  },
+  "frames": [
+    {
+      "id": "U01",
+      "title": "先看自己真实拿的牌",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 5.5,
+        "heroStack": 97.5,
+        "villainStack": 97.5,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy"
+      },
+      "task": {
+        "prompt": "自己现在实际拿哪两张？",
+        "options": [
+          "Qc3c",
+          "KQ和Q3s全拿着",
+          "还不知道",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U02",
+      "title": "同一条线可能有别的牌",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 5.5,
+        "heroStack": 97.5,
+        "villainStack": 97.5,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy"
+      },
+      "task": {
+        "prompt": "这份窄教学总体包含哪两组自己的候选？",
+        "options": [
+          "KQ和Q3s",
+          "只有实际Qc3c",
+          "所有169类",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "ownPopulation": "16 KQ +4 Q3s; raw weights1 each"
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U03",
+      "title": "按题设执行自己的筛选",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BTN",
+        "pot": 5.5,
+        "heroStack": 97.5,
+        "villainStack": 97.5,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy"
+      },
+      "task": {
+        "prompt": "宽打版本规定两组都下注，下注后KQ是否仍可能在这条线？",
+        "options": [
+          "仍可能",
+          "全部不可能",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "ownBetPolicy": "BothKQ andQ3s bet; only within this restricted20-hand teaching population"
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U04",
+      "title": "这次付款实际发生",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 7.33,
+        "heroStack": 95.67,
+        "villainStack": 97.5,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy"
+      },
+      "task": {
+        "prompt": "自己按给定方案下1.83以后，接下来等谁？",
+        "options": [
+          "BB对手",
+          "自己再下",
+          "发转牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U05",
+      "title": "跟注改变钱和候选",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy",
+        "streetClosed": true
+      },
+      "task": {
+        "prompt": "BB跟1.83后，池是多少？",
+        "options": [
+          9.16,
+          7.33,
+          5.5,
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U06",
+      "title": "自己的范围也保留到后面",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy",
+        "streetClosed": true
+      },
+      "task": {
+        "prompt": "宽打版本被跟以后，自己的候选只剩Q3s了吗？",
+        "options": [
+          "不是，仍有KQ和Q3s",
+          "是",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "optionalAuthorMass": {
+          "KQ": 404,
+          "Q3s": 102
+        },
+        "massIsNotPhysicalCount": true
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U07",
+      "title": "换一个打法作比较",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "selective",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Alternative policy preview, not actual history",
+        "streetClosed": true
+      },
+      "task": {
+        "prompt": "若另一个版本只有Q3s下注，这条下注线还有KQ吗？",
+        "options": [
+          "没有",
+          "仍有",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "ownBetPolicy": "OnlyQ3s bets"
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U08",
+      "title": "回到实际版本",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": null,
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Given model after BB flop check; not a reconstructed full strategy",
+        "streetClosed": true
+      },
+      "task": {
+        "prompt": "关掉版本对照后，实际手牌与版本是哪项？",
+        "options": [
+          "Qc3c、宽打版本",
+          "KQ、精选版本",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "resumeHash": "d0130545ecd0e081eb3c80a6d077fabfb4f47bc061b451bb3761714cde773585"
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U09",
+      "title": "新牌同时占用双方候选",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "Qh发出，含Qh的候选怎么处理？",
+        "options": [
+          "两边各自含Qh的都划掉",
+          "只划对手QhTd",
+          "只划自己Qh3h",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "newCard": "Qh",
+        "struckExamples": {
+          "own": [
+            "Qh",
+            "3h"
+          ],
+          "other": [
+            "Qh",
+            "Td"
+          ]
+        }
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U10",
+      "title": "再读自己的五张",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "实际Qc3c现在是什么成牌？",
+        "options": [
+          "一对Q",
+          "一对A",
+          "两对",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U11",
+      "title": "自己改善不等于领先所有人",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "现在面对AT和76，哪项对？",
+        "options": [
+          "输AT、赢76",
+          "两手都赢",
+          "两手都输",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "candidateExamples": [
+          [
+            "Ah",
+            "Tc"
+          ],
+          [
+            "7c",
+            "6c"
+          ]
+        ],
+        "notActualRevealedHole": true
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U12",
+      "title": "切回实际手牌这一行",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "给定自己Qc3c后，原QhTd还能在对手手里吗？",
+        "options": [
+          "不能",
+          "能",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "conditionalOther": {
+          "76": 0.19047619047619047,
+          "AT": 0.7619047619047619,
+          "KJ": 0.047619047619047616
+        },
+        "scope": "Before BB turn action, never labelled after BB turn check."
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U13",
+      "title": "变化也可能不改这一行",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "本例对手回应固定，换自己的整体版本会让实际Qc3c这一行必然改变吗？",
+        "options": [
+          "不会必然改变，本例相同",
+          "一定改变",
+          "我不知道"
+        ]
+      },
+      "given": {
+        "optionalContrast": {
+          "wide": {
+            "76": 0.19047619047619047,
+            "AT": 0.7619047619047619,
+            "KJ": 0.047619047619047616
+          },
+          "selective": {
+            "76": 0.19047619047619047,
+            "AT": 0.7619047619047619,
+            "KJ": 0.047619047619047616
+          }
+        }
+      },
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    },
+    {
+      "id": "U14",
+      "title": "更新后先看谁行动",
+      "state": {
+        "board": [
+          "As",
+          "7h",
+          "2d",
+          "Qh"
+        ],
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "version": "wide",
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actor": "BB",
+        "pot": 9.16,
+        "heroStack": 95.67,
+        "villainStack": 95.67,
+        "scope": "Turn dealt; BB has not acted on turn",
+        "streetClosed": false
+      },
+      "task": {
+        "prompt": "转牌已发，BB还没行动，下一步做什么？",
+        "options": [
+          "先观察BB行动",
+          "自己立即选下注",
+          "直接发河牌",
+          "我不知道"
+        ]
+      },
+      "given": {},
+      "assessment": "guided_update_fact_or_given_model_not_strategy_choice",
+      "unknownCountsAsWrong": true
+    }
+  ],
+  "answers": [
+    {
+      "id": "U01",
+      "expected": "Qc3c",
+      "explanation": "范围是自己可能采用这条路线的候选集合，不是此刻不知道手里拿什么。"
+    },
+    {
+      "id": "U02",
+      "expected": "KQ和Q3s",
+      "explanation": "只取16个KQ与4个Q3s，不能叫完整BTN范围。"
+    },
+    {
+      "id": "U03",
+      "expected": "仍可能",
+      "explanation": "这是给定版本的支持集合，不是从牌型推出下注最佳。"
+    },
+    {
+      "id": "U04",
+      "expected": "BB对手",
+      "explanation": "池5.5→7.33，自己97.5→95.67；BB仍要回应。"
+    },
+    {
+      "id": "U05",
+      "expected": 9.16,
+      "explanation": "BB也扣1.83，本街结束；还需带着行动筛选后的候选进入新街。"
+    },
+    {
+      "id": "U06",
+      "expected": "不是，仍有KQ和Q3s",
+      "explanation": "在本模型，两组都保留非零质量；对手跟注与牌张冲突也影响权重。"
+    },
+    {
+      "id": "U07",
+      "expected": "没有",
+      "explanation": "这是另一种策略版本的预览，不是手里的Qc3c变成另一手。"
+    },
+    {
+      "id": "U08",
+      "expected": "Qc3c、宽打版本",
+      "explanation": "恢复同一被跟状态；没有把对照版本的筛选写进实际线。"
+    },
+    {
+      "id": "U09",
+      "expected": "两边各自含Qh的都划掉",
+      "explanation": "公共牌不能同时在任何一方手里；两例是各自候选，不是可以同时发出的配对。"
+    },
+    {
+      "id": "U10",
+      "expected": "一对Q",
+      "explanation": "Qh与Qc配对，最佳五张是Q、Q、A、7、3；牌力须重新读。"
+    },
+    {
+      "id": "U11",
+      "expected": "输AT、赢76",
+      "explanation": "一对Q仍输一对A，但能赢一对7；改善后要与仍可能在的具体候选比。"
+    },
+    {
+      "id": "U12",
+      "expected": "不能",
+      "explanation": "它与已发Qh冲突。此时实际手牌条件下AT:76:KJ为16:4:1；不是整个双方边际图。"
+    },
+    {
+      "id": "U13",
+      "expected": "不会必然改变，本例相同",
+      "explanation": "两版实际手牌条件分布相同；本模型没假设对手因版本而调整。"
+    },
+    {
+      "id": "U14",
+      "expected": "先观察BB行动",
+      "explanation": "BB先行动；之后才按实际回应进入自己的免费比较或面对下注。这里没有取得BB转牌回应策略，不编最佳动作。"
+    }
+  ],
+  "returnState": {
+    "street": "turn",
+    "potBB": 29.4,
+    "stacksBB": {
+      "UTG": 100,
+      "HJ": 100,
+      "CO": 100,
+      "BTN": 85.8,
+      "SB": 85.8,
+      "BB": 99
+    },
+    "streetPaidBB": {
+      "UTG": 0,
+      "HJ": 0,
+      "CO": 0,
+      "BTN": 0,
+      "SB": 0,
+      "BB": 0
+    },
+    "board": [
+      "Ah",
+      "9c",
+      "2h",
+      "7s"
+    ],
+    "heroSeat": "SB",
+    "heroHole": [
+      "Ac",
+      "Qd"
+    ],
+    "opponentSeat": "BTN",
+    "opponentHoleVisible": false,
+    "actor": "SB",
+    "mode": "active",
+    "foldedSeats": [
+      "UTG",
+      "HJ",
+      "CO",
+      "BB"
+    ],
+    "history": [
+      {
+        "street": "preflop",
+        "actor": "SB",
+        "action": "post",
+        "addedBB": 0.5,
+        "totalStreetPaidBB": 0.5
+      },
+      {
+        "street": "preflop",
+        "actor": "BB",
+        "action": "post",
+        "addedBB": 1,
+        "totalStreetPaidBB": 1
+      },
+      {
+        "street": "preflop",
+        "actor": "UTG",
+        "action": "fold",
+        "addedBB": 0,
+        "totalStreetPaidBB": 0
+      },
+      {
+        "street": "preflop",
+        "actor": "HJ",
+        "action": "fold",
+        "addedBB": 0,
+        "totalStreetPaidBB": 0
+      },
+      {
+        "street": "preflop",
+        "actor": "CO",
+        "action": "fold",
+        "addedBB": 0,
+        "totalStreetPaidBB": 0
+      },
+      {
+        "street": "preflop",
+        "actor": "BTN",
+        "action": "raise_to",
+        "addedBB": 2.5,
+        "totalStreetPaidBB": 2.5
+      },
+      {
+        "street": "preflop",
+        "actor": "SB",
+        "action": "raise_to",
+        "addedBB": 9.5,
+        "totalStreetPaidBB": 10
+      },
+      {
+        "street": "preflop",
+        "actor": "BB",
+        "action": "fold",
+        "addedBB": 0,
+        "totalStreetPaidBB": 1
+      },
+      {
+        "street": "preflop",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 7.5,
+        "totalStreetPaidBB": 10
+      },
+      {
+        "street": "flop",
+        "actor": "SB",
+        "action": "bet",
+        "addedBB": 4.2,
+        "totalStreetPaidBB": 4.2
+      },
+      {
+        "street": "flop",
+        "actor": "BTN",
+        "action": "call_to",
+        "addedBB": 4.2,
+        "totalStreetPaidBB": 4.2
+      }
+    ]
+  },
+  "scope": "Stops before BB first turn action. No after-check range, turn strategy or continuous best-action reference fabricated.",
+  "release": {
+    "appChanged": false,
+    "learnerTrials": 0,
+    "NL50Verified": false
+  }
+}

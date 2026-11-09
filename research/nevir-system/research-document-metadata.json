@@ -1,0 +1,1647 @@
+{
+  "status": "metadata_contract_audited",
+  "documents": {
+    "91_目标证据闭环与当前可执行工作包.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "G0_to_G5_goal_closure",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "goal-closure-workpack.json",
+        "84_主线发布闸门矩阵与当前缺口.md",
+        "77_NL50目标结果边界与验收合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "open_evidence_chain"
+    },
+    "92_35项嵌套教学顺序与覆盖闭环.md": {
+      "parentDocument": "85_35项主线挂接与发布状态矩阵.md",
+      "routeNode": "nested_35_queue",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "nested-35-route.json",
+        "55_35项课程单元的依赖编译与发布闸门.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_nested_route_compiled_not_released"
+    },
+    "93_七个父步骤的学会证据与迁移任务.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "p1_p7_mastery",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "parent-step-mastery-contract.json",
+        "69_低基础首遍试读主持脚本与证据合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_observable_mastery_contract_not_trialed"
+    },
+    "94_首遍逐屏语言与反馈词典.md": {
+      "parentDocument": "74_首遍语言与术语层级合同.md",
+      "routeNode": "first_pass_copy",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-copy-deck.json",
+        "61_视觉导航与范围图语义统一合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_copy_contract_not_trialed"
+    },
+    "95_首手18帧覆盖审计与范围交接补位.md": {
+      "parentDocument": "66_首遍一手牌逐屏运行合同.md",
+      "routeNode": "first_hand_coverage_audit",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-hand-coverage-audit.json",
+        "20_首次整手导览的逐屏试读与准入审查.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "missing_p3_range_handoff_frame"
+    },
+    "96_A72范围交接事实候选帧.md": {
+      "parentDocument": "95_首手18帧覆盖审计与范围交接补位.md",
+      "routeNode": "A72_p3_fact_candidate",
+      "evidenceLevel": "fact_verified",
+      "opensChildren": [
+        "a72-range-handoff-candidate.json",
+        "98_翻前起始范围快照合同与A72实例.md"
+      ],
+      "returnTo": "95_首手18帧覆盖审计与范围交接补位.md",
+      "currentStatus": "fact_candidate_not_attached_to_first_hand"
+    },
+    "97_翻前翻后交接覆盖审计与缺帧补位.md": {
+      "parentDocument": "50_翻前到翻后的统一课程地图与入口合同.md",
+      "routeNode": "preflop_postflop_bridge",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "preflop-postflop-bridge-audit.json",
+        "98_翻前起始范围快照合同与A72实例.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "missing_action_selection_and_snapshot_bridge"
+    },
+    "98_翻前起始范围快照合同与A72实例.md": {
+      "parentDocument": "97_翻前翻后交接覆盖审计与缺帧补位.md",
+      "routeNode": "preflop_snapshot",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "preflop-snapshot-contract.json",
+        "31_完整参考怎样取得_现有范围的求解输入与准入.md"
+      ],
+      "returnTo": "97_翻前翻后交接覆盖审计与缺帧补位.md",
+      "currentStatus": "snapshot_schema_ready_A72_sample_not_verified"
+    },
+    "99_首手19帧纸面候选与p3插入审查.md": {
+      "parentDocument": "95_首手18帧覆盖审计与范围交接补位.md",
+      "routeNode": "first_hand_v3_candidate",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-hand-lesson-v3-candidate.json",
+        "96_A72范围交接事实候选帧.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_candidate_with_p3_insert_not_runtime"
+    },
+    "100_首遍五组代表题选择与证据身份.md": {
+      "parentDocument": "92_35项嵌套教学顺序与覆盖闭环.md",
+      "routeNode": "first_pass_representatives",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-representative-units.json",
+        "101_五组首遍代表题面卡与教师边界.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_representatives_selected_not_trialed"
+    },
+    "101_五组首遍代表题面卡与教师边界.md": {
+      "parentDocument": "100_首遍五组代表题选择与证据身份.md",
+      "routeNode": "representative_cards",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-representative-cards.json",
+        "102_首遍代表题与19帧主线整合合同.md"
+      ],
+      "returnTo": "100_首遍五组代表题选择与证据身份.md",
+      "currentStatus": "paper_public_cards_and_teacher_boundaries_not_trialed"
+    },
+    "102_首遍代表题与19帧主线整合合同.md": {
+      "parentDocument": "99_首手19帧纸面候选与p3插入审查.md",
+      "routeNode": "representative_child_integration",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-integration-contract.json",
+        "103_首遍到内化的帮助撤除节奏.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_route_integration_not_runtime"
+    },
+    "103_首遍到内化的帮助撤除节奏.md": {
+      "parentDocument": "93_七个父步骤的学会证据与迁移任务.md",
+      "routeNode": "help_fade",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "help-fade-schedule.json",
+        "59_低基础学习者试读与课程修订闭环合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_help_fade_contract_not_trialed"
+    },
+    "104_一遍完整感与后台全面性的分层合同.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "first_pass_vs_backend_completeness",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-completeness-contract.json",
+        "70_翻前到翻后完整课程编排总表.md",
+        "92_35项嵌套教学顺序与覆盖闭环.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_layering_contract_not_trialed"
+    },
+    "105_七步可执行输出与判分接口合同.md": {
+      "parentDocument": "58_学习者一页慢想运行卡.md",
+      "routeNode": "learner_execution_outputs",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "learner-execution-output-contract.json",
+        "83_最终学习标准与一遍闭环验收合同.md",
+        "88_判分精度与公式层级合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_output_contract_not_trialed"
+    },
+    "106_35项执行字段缺口审计.md": {
+      "parentDocument": "104_一遍完整感与后台全面性的分层合同.md",
+      "routeNode": "unit_execution_field_audit",
+      "evidenceLevel": "coverage_audit",
+      "opensChildren": [
+        "unit-execution-field-audit.json",
+        "55_35项课程单元的依赖编译与发布闸门.md",
+        "67_课程单元自动编译与出题合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_units_listed_fields_incomplete"
+    },
+    "107_课程单元字段规范统一映射.md": {
+      "parentDocument": "106_35项执行字段缺口审计.md",
+      "routeNode": "course_unit_field_schema_mapping",
+      "evidenceLevel": "schema_audit",
+      "opensChildren": [
+        "course-unit-field-schema-map.json",
+        "67_课程单元自动编译与出题合同.md",
+        "105_七步可执行输出与判分接口合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "schema_mapping_written_not_migrated"
+    },
+    "108_单元1.1事实级完整课包候选.md": {
+      "parentDocument": "106_35项执行字段缺口审计.md",
+      "routeNode": "fact_unit_1_1_candidate",
+      "evidenceLevel": "fact_verified",
+      "opensChildren": [
+        "fact-unit-1-1-candidate.json",
+        "107_课程单元字段规范统一映射.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "one_fact_unit_complete_strategy_fields_still_open"
+    },
+    "109_目标结果分层与一遍体验验收.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "goal_outcome_ladder",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "goal-outcome-ladder.json",
+        "69_低基础首遍试读主持脚本与证据合同.md",
+        "77_NL50目标结果边界与验收合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_outcome_ladder_not_trialed"
+    },
+    "110_35项结果输出矩阵与发布缺口.md": {
+      "parentDocument": "104_一遍完整感与后台全面性的分层合同.md",
+      "routeNode": "unit_outcome_matrix",
+      "evidenceLevel": "coverage_audit",
+      "opensChildren": [
+        "unit-outcome-matrix.json",
+        "106_35项执行字段缺口审计.md",
+        "109_目标结果分层与一遍体验验收.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_outcome_targets_mapped_not_released"
+    },
+    "111_参考策略到简化课包的编译验收.md": {
+      "parentDocument": "107_课程单元字段规范统一映射.md",
+      "routeNode": "strategy_to_course_compiler",
+      "evidenceLevel": "schema_audit",
+      "opensChildren": [
+        "strategy-to-course-compiler-contract.json",
+        "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+        "110_35项结果输出矩阵与发布缺口.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_pipeline_not_implemented"
+    },
+    "112_首遍用户动作与脑内结构映射.md": {
+      "parentDocument": "94_首遍逐屏语言与反馈词典.md",
+      "routeNode": "first_pass_experience_map",
+      "evidenceLevel": "route_paper_ready",
+      "opensChildren": [
+        "first-pass-experience-map.json",
+        "109_目标结果分层与一遍体验验收.md",
+        "69_低基础首遍试读主持脚本与证据合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_experience_map_not_trialed"
+    },
+    "113_首手事实路线连续性审计.md": {
+      "parentDocument": "99_首手19帧纸面候选与p3插入审查.md",
+      "routeNode": "first_hand_fact_route_audit",
+      "evidenceLevel": "fact_verified",
+      "opensChildren": [
+        "first-hand-fact-route-audit.json",
+        "96_A72范围交接事实候选帧.md",
+        "112_首遍用户动作与脑内结构映射.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "fact_demonstration_route_continuity_checked_not_runtime"
+    },
+    "114_A72完整参考获取与验收规格.md": {
+      "parentDocument": "65_A72候选C0到C5参考请求与停止条件.md",
+      "routeNode": "a72_reference_acquisition_spec",
+      "evidenceLevel": "reference_request",
+      "opensChildren": [
+        "a72-reference-acquisition-spec.json",
+        "reference-request-btn-bb-a72.json",
+        "111_参考策略到简化课包的编译验收.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "request_and_acceptance_spec_prepared_reference_missing"
+    },
+    "115_参考策略可信度与误差分层.md": {
+      "parentDocument": "88_判分精度与公式层级合同.md",
+      "routeNode": "reference_quality_gates",
+      "evidenceLevel": "quality_audit",
+      "opensChildren": [
+        "reference-quality-gates.json",
+        "114_A72完整参考获取与验收规格.md",
+        "56_简化策略与GTO参考的差异评估合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "quality_ladder_written_not_calibrated"
+    },
+    "116_仓库能力到训练器的首手范围交接合同.md": {
+      "parentDocument": "111_参考策略到简化课包的编译验收.md",
+      "routeNode": "repository_to_first_hand_bridge",
+      "evidenceLevel": "research_and_bridge_schema",
+      "opensChildren": [
+        "repo-to-course-first-hand-bridge.json",
+        "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+        "97_翻前翻后交接覆盖审计与缺帧补位.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "repository_capabilities_mapped_bridge_contract_not_runtime"
+    },
+    "117_目标级学习者证据发布闸门.md": {
+      "parentDocument": "91_目标证据闭环与当前可执行工作包.md",
+      "routeNode": "learner_evidence_release_gates",
+      "evidenceLevel": "release_contract_not_trialed",
+      "opensChildren": [
+        "learner-evidence-release-gates.json",
+        "109_目标结果分层与一遍体验验收.md",
+        "110_35项结果输出矩阵与发布缺口.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "release_gates_written_not_trialed"
+    },
+    "118_35项单元身份规范化候选.md": {
+      "parentDocument": "106_35项执行字段缺口审计.md",
+      "routeNode": "unit_identity_normalization_candidate",
+      "evidenceLevel": "source_scoped_identity_candidate",
+      "opensChildren": [
+        "unit-identity-normalization-candidate.json",
+        "107_课程单元字段规范统一映射.md",
+        "110_35项结果输出矩阵与发布缺口.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "source_scoped_identity_normalized_not_strategy_ready"
+    },
+    "119_目标级单一路径运行蓝图.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "canonical_goal_route",
+      "evidenceLevel": "paper_contract_not_runtime",
+      "opensChildren": [
+        "learner-goal-route-canonical.json",
+        "66_首遍一手牌逐屏运行合同.md",
+        "93_七个父步骤的学会证据与迁移任务.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "canonical_sequential_route_written_not_trialed"
+    },
+    "120_路线规范一致性审计.md": {
+      "parentDocument": "119_目标级单一路径运行蓝图.md",
+      "routeNode": "route_consistency_audit",
+      "evidenceLevel": "route_audit_not_runtime",
+      "opensChildren": [
+        "route-consistency-audit.json",
+        "119_目标级单一路径运行蓝图.md",
+        "first-run-route-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "route_consistency_audited_all_primary_checks_exact"
+    },
+    "121_目标级终验收矩阵与当前缺口.md": {
+      "parentDocument": "60_最终目标逐项验收与完成闸门.md",
+      "routeNode": "goal_level_acceptance_matrix",
+      "evidenceLevel": "goal_audit_not_runtime",
+      "opensChildren": [
+        "goal-level-acceptance-matrix.json",
+        "117_目标级学习者证据发布闸门.md",
+        "49_能力分级与迁移准入合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "goal_audit_written_evidence_incomplete"
+    },
+    "122_低基础首遍试读执行包.md": {
+      "parentDocument": "117_目标级学习者证据发布闸门.md",
+      "routeNode": "low_baseline_first_pass_trial_packet",
+      "evidenceLevel": "paper_trial_packet_not_administered",
+      "opensChildren": [
+        "low-baseline-first-pass-trial-packet.json",
+        "low-baseline-first-pass-trial-key.json",
+        "69_低基础首遍试读主持脚本与证据合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_trial_packet_frozen_not_administered"
+    },
+    "123_首手连续状态传递审计.md": {
+      "parentDocument": "122_低基础首遍试读执行包.md",
+      "routeNode": "first_hand_continuity_audit",
+      "evidenceLevel": "paper_continuity_audit_not_runtime",
+      "opensChildren": [
+        "first-hand-continuity-audit.json",
+        "first-hand-lesson-v3-candidate.json",
+        "first-hand-fact-route-audit.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_continuity_audited_not_runtime"
+    },
+    "124_p3到p4范围视觉交接合同.md": {
+      "parentDocument": "123_首手连续状态传递审计.md",
+      "routeNode": "p3_to_p4_range_visual_bridge",
+      "evidenceLevel": "paper_visual_bridge_not_runtime",
+      "opensChildren": [
+        "p3-to-p4-range-visual-bridge.json",
+        "visual-navigation-contract.json",
+        "a72-range-handoff-candidate.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_visual_bridge_written_reference_missing"
+    },
+    "125_首遍七层用户讲解脚本与状态交接.md": {
+      "parentDocument": "124_p3到p4范围视觉交接合同.md",
+      "routeNode": "first_pass_narration_and_state_handoff",
+      "evidenceLevel": "paper_narration_contract_not_trialed",
+      "opensChildren": [
+        "learner-first-pass-narration-contract.json",
+        "first-pass-copy-deck.json",
+        "learner-execution-output-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_narration_contract_not_trialed"
+    },
+    "126_帮助撤除与六轮内化运行包.md": {
+      "parentDocument": "125_首遍七层用户讲解脚本与状态交接.md",
+      "routeNode": "help_fade_six_round_execution",
+      "evidenceLevel": "paper_progression_package_not_trialed",
+      "opensChildren": [
+        "help-fade-execution-plan.json",
+        "help-fade-schedule.json",
+        "internalization-progression-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_progression_package_not_trialed"
+    },
+    "127_首课发布闭合审计与停止清单.md": {
+      "parentDocument": "126_帮助撤除与六轮内化运行包.md",
+      "routeNode": "first_course_closure_audit",
+      "evidenceLevel": "release_audit_not_open",
+      "opensChildren": [
+        "first-course-closure-audit.json",
+        "a72-c0-c5-reference-contract.json",
+        "static-course-package-contract.json",
+        "128_A72_C0到C5参考获取运行手册.md",
+        "a72-c0-c5-execution-runbook.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "a72_stops_before_matched_strategy"
+    },
+    "128_A72_C0到C5参考获取运行手册.md": {
+      "parentDocument": "127_首课发布闭合审计与停止清单.md",
+      "routeNode": "a72_c0_c5_execution_runbook",
+      "evidenceLevel": "reference_execution_runbook_not_solved",
+      "opensChildren": [
+        "a72-c0-c5-execution-runbook.json",
+        "a72-c0-c5-reference-contract.json",
+        "flop-tree-preflight-verification.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "runbook_written_resource_guard_stops_before_C2"
+    },
+    "129_目标级脑内结构回放与可迁移验收.md": {
+      "parentDocument": "121_目标级终验收矩阵与当前缺口.md",
+      "routeNode": "goal_cognitive_replay_contract",
+      "evidenceLevel": "paper_replay_contract_not_trialed",
+      "opensChildren": [
+        "goal-cognitive-replay-contract.json",
+        "parent-step-mastery-contract.json",
+        "learner-evidence-release-gates.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_replay_contract_written_not_trialed"
+    },
+    "130_35项能力依赖图与分层解锁.md": {
+      "parentDocument": "92_35项嵌套教学顺序与覆盖闭环.md",
+      "routeNode": "unit_dependency_graph_and_layered_unlock",
+      "evidenceLevel": "paper_dependency_graph_not_released",
+      "opensChildren": [
+        "unit-dependency-graph.json",
+        "nested-35-route.json",
+        "curriculum-release-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_unit_dependency_graph_written_not_trialed"
+    },
+    "131_频率简化与边缘牌编译算法.md": {
+      "parentDocument": "111_参考策略到简化课包的编译验收.md",
+      "routeNode": "frequency_quantization_and_edge_compilation",
+      "evidenceLevel": "paper_quantization_algorithm_not_calibrated",
+      "opensChildren": [
+        "frequency-quantization-and-edge-compilation.json",
+        "strategy-to-course-compiler-contract.json",
+        "simplification-evaluation-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "quantization_algorithm_written_reference_missing"
+    },
+    "132_低基础学习者分阶段验证与归因协议.md": {
+      "parentDocument": "59_低基础学习者试读与课程修订闭环合同.md",
+      "routeNode": "low_baseline_validation_protocol",
+      "evidenceLevel": "paper_validation_protocol_not_administered",
+      "opensChildren": [
+        "low-baseline-validation-protocol.json",
+        "low-baseline-first-pass-trial-packet.json",
+        "goal-cognitive-replay-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "f0_specified_f1_f3_not_administered"
+    },
+    "133_连续三街状态账本与不变量合同.md": {
+      "parentDocument": "80_逐街行动状态与后继可达性合同.md",
+      "routeNode": "continuous_three_street_state_ledger",
+      "evidenceLevel": "paper_ledger_invariants_not_runtime",
+      "opensChildren": [
+        "continuous-state-ledger-contract.json",
+        "street-state-reachability-contract.json",
+        "first-hand-continuity-audit.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "ledger_invariants_written_runtime_unverified"
+    },
+    "134_首遍七步闭合与嵌套交接合同.md": {
+      "parentDocument": "112_首遍用户动作与脑内结构映射.md",
+      "routeNode": "first_pass_step_closure_and_nested_handoff",
+      "evidenceLevel": "paper_closure_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-step-closure-contract.json",
+        "learner-goal-route-canonical.json",
+        "unit-outcome-matrix.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "seven_step_handoff_contract_written_runtime_unverified"
+    },
+    "135_35项字段补齐队列与停止矩阵.md": {
+      "parentDocument": "106_35项执行字段缺口审计.md",
+      "routeNode": "unit_field_completion_queue",
+      "evidenceLevel": "paper_completion_queue_not_released",
+      "opensChildren": [
+        "unit-field-completion-queue.json",
+        "107_课程单元字段规范统一映射.md",
+        "55_35项课程单元的依赖编译与发布闸门.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "queue_compiled_identity_and_policy_fields_still_missing"
+    },
+    "136_参考策略与课程简化对照账本.md": {
+      "parentDocument": "111_参考策略到简化课包的编译验收.md",
+      "routeNode": "reference_course_policy_ledger",
+      "evidenceLevel": "paper_comparison_contract_not_populated",
+      "opensChildren": [
+        "reference-course-policy-ledger-contract.json",
+        "unit-reference-course-ledgers.json",
+        "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+        "135_35项字段补齐队列与停止矩阵.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "ledger_schema_written_no_unit_reference_released"
+    },
+    "137_首遍步骤与运行输出交叉合同.md": {
+      "parentDocument": "107_课程单元字段规范统一映射.md",
+      "routeNode": "first_pass_runtime_output_crosswalk",
+      "evidenceLevel": "paper_crosswalk_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-runtime-output-crosswalk.json",
+        "125_首遍七层用户讲解脚本与状态交接.md",
+        "105_七步可执行输出与判分接口合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "crosswalk_written_aliases_and_depths_frozen"
+    },
+    "138_首遍可见负荷与状态分层合同.md": {
+      "parentDocument": "137_首遍步骤与运行输出交叉合同.md",
+      "routeNode": "first_pass_visibility_and_state_layers",
+      "evidenceLevel": "paper_visibility_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-visibility-contract.json",
+        "54_低理解门槛与认知负荷验收合同.md",
+        "137_首遍步骤与运行输出交叉合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "visibility_layers_written_not_trialed"
+    },
+    "139_帮助撤除与可见状态交接合同.md": {
+      "parentDocument": "126_帮助撤除与六轮内化运行包.md",
+      "routeNode": "help_fade_visibility_bridge",
+      "evidenceLevel": "paper_help_visibility_bridge_not_trialed",
+      "opensChildren": [
+        "help-fade-visibility-bridge.json",
+        "first-pass-visibility-contract.json",
+        "help-fade-execution-plan.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "help_fade_visibility_bridge_written_not_trialed"
+    },
+    "140_指定仓库最新能力与训练器接入边界.md": {
+      "parentDocument": "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+      "routeNode": "repository_current_capability_and_training_boundary",
+      "evidenceLevel": "web_recheck_2026_10_22_not_integrated",
+      "opensChildren": [
+        "repository-current-capability.json",
+        "repository-training-bridge.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "capability_rechecked_author_side_boundary_locked"
+    },
+    "141_首遍思考骨架回放与结构建立合同.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "first_pass_architecture_replay",
+      "evidenceLevel": "paper_replay_contract_not_administered",
+      "opensChildren": [
+        "architecture-replay-contract.json",
+        "architecture-replay-rubric.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "architecture_replay_specified_not_trialed"
+    },
+    "142_35项单元到思考骨架的桥接合同.md": {
+      "parentDocument": "141_首遍思考骨架回放与结构建立合同.md",
+      "routeNode": "unit_to_architecture_bridge",
+      "evidenceLevel": "paper_all35_bridge_not_released",
+      "opensChildren": [
+        "unit-architecture-bridge.json",
+        "unit-outcome-matrix.json",
+        "unit-dependency-graph.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_architecture_attachment_written_strategy_missing"
+    },
+    "143_单元5.7事实级课包候选.md": {
+      "parentDocument": "142_35项单元到思考骨架的桥接合同.md",
+      "routeNode": "fact_unit_5_7_candidate",
+      "evidenceLevel": "fact_verified_not_strategy_ready",
+      "opensChildren": [
+        "fact-unit-5-7-candidate.json",
+        "guided-update-sequence-packet.json",
+        "turn-transfer-evidence.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "one_fact_unit_candidate_strategy_fields_still_open"
+    },
+    "144_首遍原理覆盖与结构记忆合同.md": {
+      "parentDocument": "141_首遍思考骨架回放与结构建立合同.md",
+      "routeNode": "first_pass_principle_coverage",
+      "evidenceLevel": "paper_coverage_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-principle-coverage.json",
+        "first-hand-gap-frame-cards.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "twelve_principles_have_frame_or_stop_without_learner_trial"
+    },
+    "145_原理练习剂量与间隔队列合同.md": {
+      "parentDocument": "144_首遍原理覆盖与结构记忆合同.md",
+      "routeNode": "principle_practice_dose_and_spacing",
+      "evidenceLevel": "paper_queue_defaults_not_calibrated",
+      "opensChildren": [
+        "principle-practice-queue.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "queue_algorithm_written_without_learner_calibration"
+    },
+    "146_首手19帧到12原理覆盖缺口审计.md": {
+      "parentDocument": "144_首遍原理覆盖与结构记忆合同.md",
+      "routeNode": "first_hand_frame_principle_gap_audit",
+      "evidenceLevel": "paper_crosswalk_partial_coverage_not_strategy_ready",
+      "opensChildren": [
+        "first-hand-principle-frame-audit.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "nineteen_frames_do_not_yet_cover_all_twelve_principles"
+    },
+    "147_首手缺口补帧编译规格.md": {
+      "parentDocument": "146_首手19帧到12原理覆盖缺口审计.md",
+      "routeNode": "first_hand_gap_frame_compile",
+      "evidenceLevel": "paper_insertion_spec_strategy_and_runtime_missing",
+      "opensChildren": [
+        "first-hand-gap-frame-insertions.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "six_required_insertions_specified_not_compiled"
+    },
+    "148_六个补帧的参考闭合矩阵.md": {
+      "parentDocument": "147_首手缺口补帧编译规格.md",
+      "routeNode": "gap_frame_reference_closure",
+      "evidenceLevel": "reference_closure_matrix_written_not_received",
+      "opensChildren": [
+        "gap-frame-reference-closure.json",
+        "six-node-reference-request.json",
+        "first-hand-gap-frame-cards.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "six_insertions_have_explicit_reference_requirements_but_zero_received_nodes"
+    },
+    "149_首课静态课包与嵌套补帧编译合同.md": {
+      "parentDocument": "127_首课发布闭合审计与停止清单.md",
+      "routeNode": "static_package_nested_frame_compile",
+      "evidenceLevel": "paper_package_contract_reference_missing",
+      "opensChildren": [
+        "static-course-package-contract.json",
+        "first-hand-gap-frame-insertions.json",
+        "first-hand-gap-frame-cards.json",
+        "gap-frame-reference-closure.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "gap_cards_compiled_reference_and_runtime_missing"
+    },
+    "150_完整35项嵌套路由运行合同.md": {
+      "parentDocument": "142_35项单元到思考骨架的桥接合同.md",
+      "routeNode": "full_nested_learning_route",
+      "evidenceLevel": "paper_full_sequence_compiled_not_trialed",
+      "opensChildren": [
+        "full-nested-learning-route.json",
+        "unit-architecture-bridge.json",
+        "learner-goal-route-canonical.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "route_compiled_all35_mapped_runtime_and_trial_missing"
+    },
+    "151_原理到35项练习的闭合矩阵.md": {
+      "parentDocument": "144_首遍原理覆盖与结构记忆合同.md",
+      "routeNode": "principle_to_unit_closure",
+      "evidenceLevel": "paper_principle_unit_closure_compiled_not_trialed",
+      "opensChildren": [
+        "principle-unit-closure.json",
+        "first-pass-principle-coverage.json",
+        "full-nested-learning-route.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "twelve_principles_and_all35_units_crosswalked_trial_missing"
+    },
+    "152_35项单元学习者释放矩阵.md": {
+      "parentDocument": "135_35项字段补齐队列与停止矩阵.md",
+      "routeNode": "unit_learner_release_matrix",
+      "evidenceLevel": "paper_unit_release_matrix_compiled_not_trialed",
+      "opensChildren": [
+        "unit-learner-release-matrix.json",
+        "unit-field-completion-queue.json",
+        "full-nested-learning-route.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_release_rows_compiled_strategy_and_trial_missing"
+    },
+    "153_35项匹配参考请求与停止清单.md": {
+      "parentDocument": "114_A72完整参考获取与验收规格.md",
+      "routeNode": "all35_reference_request_matrix",
+      "evidenceLevel": "reference_request_matrix_prepared_no_nodes_received",
+      "opensChildren": [
+        "all35-reference-request-matrix.json",
+        "unit-learner-release-matrix.json",
+        "a72-reference-acquisition-spec.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_requests_specified_reference_nodes_missing"
+    },
+    "154_35项错误归因与反馈回退矩阵.md": {
+      "parentDocument": "152_35项单元学习者释放矩阵.md",
+      "routeNode": "unit_error_feedback_matrix",
+      "evidenceLevel": "paper_unit_error_feedback_compiled_not_trialed",
+      "opensChildren": [
+        "unit-error-feedback-matrix.json",
+        "unit-learner-release-matrix.json",
+        "first-pass-step-closure-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_feedback_rows_compiled_runtime_and_trial_missing"
+    },
+    "155_首遍视觉结构与父子层闭合合同.md": {
+      "parentDocument": "141_首遍思考骨架回放与结构建立合同.md",
+      "routeNode": "first_pass_visual_structure_closure",
+      "evidenceLevel": "paper_visual_closure_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-visual-structure-contract.json",
+        "141_首遍思考骨架回放与结构建立合同.md",
+        "150_完整35项嵌套路由运行合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "visual_parent_child_contract_compiled_runtime_and_trial_missing"
+    },
+    "156_从首遍结构到目标级能力的释放总表.md": {
+      "parentDocument": "109_目标结果分层与一遍体验验收.md",
+      "routeNode": "outcome_release_crosswalk",
+      "evidenceLevel": "paper_release_crosswalk_not_trialed",
+      "opensChildren": [
+        "outcome-release-crosswalk.json",
+        "goal-outcome-ladder.json",
+        "learner-evidence-release-gates.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "outcome_release_crosswalk_compiled_runtime_and_trial_missing"
+    },
+    "157_自动出题与覆盖闭合合同.md": {
+      "parentDocument": "145_原理练习剂量与间隔队列合同.md",
+      "routeNode": "automatic_question_generation_closure",
+      "evidenceLevel": "paper_question_generator_contract_not_implemented",
+      "opensChildren": [
+        "automatic-question-generation-contract.json",
+        "practice-queue-contract.json",
+        "frequency-quantization-and-edge-compilation.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "question_generator_contract_compiled_runtime_and_calibration_missing"
+    },
+    "158_动作后范围变化视觉闭合合同.md": {
+      "parentDocument": "124_p3到p4范围视觉交接合同.md",
+      "routeNode": "range_delta_visual_closure",
+      "evidenceLevel": "paper_range_delta_visual_contract_not_runtime",
+      "opensChildren": [
+        "range-delta-visual-closure.json",
+        "p3-to-p4-range-visual-bridge.json",
+        "range-chart-contract-packet.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "range_delta_visual_contract_compiled_reference_and_runtime_missing"
+    },
+    "159_低基础试读结果与课程修订判定合同.md": {
+      "parentDocument": "132_低基础学习者分阶段验证与归因协议.md",
+      "routeNode": "low_baseline_trial_revision_decision",
+      "evidenceLevel": "paper_trial_analysis_contract_not_administered",
+      "opensChildren": [
+        "low-baseline-trial-revision-contract.json",
+        "low-baseline-validation-protocol.json",
+        "low-baseline-first-pass-trial-packet.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "trial_revision_contract_compiled_no_participants"
+    },
+    "160_低基础首遍最小脑内模型与完整交接合同.md": {
+      "parentDocument": "141_首遍思考骨架回放与结构建立合同.md",
+      "routeNode": "first_pass_minimum_mental_model",
+      "evidenceLevel": "paper_minimum_mental_model_not_trialed",
+      "opensChildren": [
+        "first-pass-mental-model-contract.json",
+        "architecture-replay-contract.json",
+        "first-pass-visual-structure-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "minimum_mental_model_compiled_trial_missing"
+    },
+    "161_首遍逐屏交接完整性矩阵与停止合同.md": {
+      "parentDocument": "160_低基础首遍最小脑内模型与完整交接合同.md",
+      "routeNode": "first_pass_screen_coverage_matrix",
+      "evidenceLevel": "paper_screen_coverage_matrix_not_runtime",
+      "opensChildren": [
+        "first-pass-screen-coverage-matrix.json",
+        "first-pass-mental-model-contract.json",
+        "first-pass-runtime-output-crosswalk.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "screen_coverage_matrix_compiled_trial_missing"
+    },
+    "162_低基础陌生单步慢速执行合同.md": {
+      "parentDocument": "156_从首遍结构到目标级能力的释放总表.md",
+      "routeNode": "slow_single_step_execution_protocol",
+      "evidenceLevel": "paper_slow_execution_protocol_not_trialed",
+      "opensChildren": [
+        "slow-single-step-execution-contract.json",
+        "learner-slow-think-card.json",
+        "learner-execution-output-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "slow_execution_protocol_compiled_trial_missing"
+    },
+    "163_GTO参考到课程简化课包的C0_C9闭合合同.md": {
+      "parentDocument": "111_参考策略到简化课包的编译验收.md",
+      "routeNode": "reference_to_course_package_c0_c9_closure",
+      "evidenceLevel": "paper_reference_course_closure_not_compiled",
+      "opensChildren": [
+        "reference-to-course-closure-contract.json",
+        "strategy-to-course-compiler-contract.json",
+        "reference-course-policy-ledger-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "c0_c9_closure_specified_reference_and_policy_missing"
+    },
+    "164_低基础一遍架构建立与目标级倒推验收合同.md": {
+      "parentDocument": "121_目标级终验收矩阵与当前缺口.md",
+      "routeNode": "first_pass_architecture_to_goal_readiness_contract",
+      "evidenceLevel": "paper_architecture_goal_contract_not_trialed",
+      "opensChildren": [
+        "first-pass-architecture-goal-contract.json",
+        "goal-cognitive-replay-contract.json",
+        "learner-evidence-release-gates.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "architecture_goal_contract_written_trial_missing"
+    },
+    "165_A72资源预算分层参考获取与不降级替代合同.md": {
+      "parentDocument": "128_A72_C0到C5参考获取运行手册.md",
+      "routeNode": "a72_resource_tiered_reference_acquisition",
+      "evidenceLevel": "paper_resource_tier_contract_reference_missing",
+      "opensChildren": [
+        "a72-resource-tier-contract.json",
+        "a72-c0-c5-reference-contract.json",
+        "reference-to-course-closure-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "resource_tiers_defined_full_reference_not_acquired"
+    },
+    "166_分层参考到可见局部课包的用户训练交接合同.md": {
+      "parentDocument": "165_A72资源预算分层参考获取与不降级替代合同.md",
+      "routeNode": "tiered_reference_to_visible_local_lesson_bridge",
+      "evidenceLevel": "paper_local_lesson_bridge_reference_missing",
+      "opensChildren": [
+        "tiered-reference-lesson-bridge.json",
+        "a72-resource-tier-contract.json",
+        "first-pass-architecture-goal-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "local_lesson_bridge_defined_reference_slice_missing"
+    },
+    "167_低基础结构形成的可证伪验收与遗漏检测合同.md": {
+      "parentDocument": "164_低基础一遍架构建立与目标级倒推验收合同.md",
+      "routeNode": "structure_formation_falsifiable_acceptance",
+      "evidenceLevel": "paper_acceptance_contract_not_trialed",
+      "opensChildren": [
+        "structure-formation-acceptance-contract.json",
+        "160_低基础首遍最小脑内模型与完整交接合同.md",
+        "132_低基础学习者分阶段验证与归因协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "structure_gate_compiled_learner_trial_missing"
+    },
+    "168_原始资料身份核对与16项缺口停止报告.md": {
+      "parentDocument": "118_35项单元身份规范化候选.md",
+      "routeNode": "original_source_identity_audit",
+      "evidenceLevel": "source_audit_complete_candidates_not_canonical",
+      "opensChildren": [
+        "original-source-identity-crosswalk.json",
+        "118_35项单元身份规范化候选.md",
+        "135_35项字段补齐队列与停止矩阵.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "source_audit_complete_identity_stops_preserved"
+    },
+    "169_最终标准可观察验收与NL50边界合同.md": {
+      "parentDocument": "121_目标级终验收矩阵与当前缺口.md",
+      "routeNode": "final_goal_observable_acceptance",
+      "evidenceLevel": "paper_goal_contract_not_trialed",
+      "opensChildren": [
+        "final-goal-observable-acceptance.json",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "77_NL50目标结果边界与验收合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "goal_contract_compiled_external_evidence_missing"
+    },
+    "170_低基础首课黄金路径与逐屏交接脚本.md": {
+      "parentDocument": "86_首次完整体验脚本_用户视角.md",
+      "routeNode": "first_pass_golden_path",
+      "evidenceLevel": "paper_golden_path_not_runtime",
+      "opensChildren": [
+        "first-pass-golden-path.json",
+        "125_首遍七层用户讲解脚本与状态交接.md",
+        "161_首遍逐屏交接完整性矩阵与停止合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "golden_path_compiled_runtime_and_trial_missing"
+    },
+    "171_首课后单变量迁移与陌生牌练习协议.md": {
+      "parentDocument": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "routeNode": "slow_transfer_ladder",
+      "evidenceLevel": "paper_transfer_ladder_not_trialed",
+      "opensChildren": [
+        "slow-transfer-ladder.json",
+        "162_低基础陌生单步慢速执行合同.md",
+        "158_动作后范围变化视觉闭合合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "transfer_ladder_compiled_runtime_and_learner_trial_missing"
+    },
+    "172_统一学习者证据与发布闸门协议.md": {
+      "parentDocument": "169_最终标准可观察验收与NL50边界合同.md",
+      "routeNode": "unified_learner_evidence_release_gates",
+      "evidenceLevel": "paper_unified_protocol_not_administered",
+      "opensChildren": [
+        "unified-learner-evidence-release-gates.json",
+        "122_低基础首遍试读执行包.md",
+        "132_低基础学习者分阶段验证与归因协议.md",
+        "167_低基础结构形成的可证伪验收与遗漏检测合同.md",
+        "171_首课后单变量迁移与陌生牌练习协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "unified_evidence_protocol_compiled_runtime_and_learner_trials_missing"
+    },
+    "173_最小匹配首手课包字段与闭合发布合同.md": {
+      "parentDocument": "127_首课发布闭合审计与停止清单.md",
+      "routeNode": "minimal_matched_first_hand_package",
+      "evidenceLevel": "paper_package_contract_reference_not_acquired",
+      "opensChildren": [
+        "minimal-matched-first-hand-package.json",
+        "114_A72完整参考获取与验收规格.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md",
+        "172_统一学习者证据与发布闸门协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "minimal_package_fields_frozen_reference_and_policy_missing"
+    },
+    "174_牌力顺序横向短练习合同.md": {
+      "parentDocument": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "routeNode": "p2_hand_rank_ladder",
+      "evidenceLevel": "paper_fact_child_exercise_not_trialed",
+      "opensChildren": [
+        "hand-rank-ladder-exercise.json",
+        "144_首遍原理覆盖与结构记忆合同.md",
+        "160_低基础首遍最小脑内模型与完整交接合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "hand_rank_ladder_child_specified_runtime_and_trial_missing"
+    },
+    "175_牌面六类导航短练习合同.md": {
+      "parentDocument": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "routeNode": "p2_board_texture_six_class",
+      "evidenceLevel": "paper_fact_child_exercise_not_trialed",
+      "opensChildren": [
+        "board-texture-six-class-exercise.json",
+        "144_首遍原理覆盖与结构记忆合同.md",
+        "147_首手缺口补帧编译规格.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "board_texture_child_specified_classifier_and_trial_missing"
+    },
+    "176_指定仓库当前公开能力与训练器映射报告.md": {
+      "parentDocument": "140_指定仓库最新能力与训练器接入边界.md",
+      "routeNode": "external_repository_current_capability_mapping",
+      "evidenceLevel": "online_source_review_not_integrated",
+      "opensChildren": [
+        "external-repo-current-capability-report.json",
+        "44_开源仓库能力审查_从GTO参考到课程简化训练.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "current_repo_capabilities_mapped_license_and_runtime_gates_open"
+    },
+    "177_学习者可见七步路线与35项释放交叉合同.md": {
+      "parentDocument": "170_低基础首课黄金路径与逐屏交接脚本.md",
+      "routeNode": "learner_visible_route_unit_release_crosswalk",
+      "evidenceLevel": "paper_crosswalk_runtime_and_trial_missing",
+      "opensChildren": [
+        "learner-visible-route-crosswalk.json",
+        "150_完整35项嵌套路由运行合同.md",
+        "172_统一学习者证据与发布闸门协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_crosswalk_complete_runtime_and_learner_trial_missing"
+    },
+    "83_最终学习标准与一遍闭环验收合同.md": {
+      "parentDocument": "121_目标级终验收矩阵与当前缺口.md",
+      "routeNode": "learner_standard_and_first_pass_closure",
+      "evidenceLevel": "canonical_standard_paper_not_trialed",
+      "opensChildren": [
+        "169_最终标准可观察验收与NL50边界合同.md",
+        "170_低基础首课黄金路径与逐屏交接脚本.md",
+        "172_统一学习者证据与发布闸门协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "canonical_standard_registered_runtime_and_trial_missing"
+    },
+    "84_主线发布闸门矩阵与当前缺口.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "main_route_release_gates",
+      "evidenceLevel": "canonical_gate_matrix_paper_not_trialed",
+      "opensChildren": [
+        "169_最终标准可观察验收与NL50边界合同.md",
+        "172_统一学习者证据与发布闸门协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "canonical_gate_matrix_registered_runtime_and_trial_missing"
+    },
+    "85_35项主线挂接与发布状态矩阵.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "35_unit_attachment_and_release_matrix",
+      "evidenceLevel": "canonical_backend_coverage_paper_not_strategy_ready",
+      "opensChildren": [
+        "150_完整35项嵌套路由运行合同.md",
+        "152_35项单元学习者释放矩阵.md",
+        "153_35项匹配参考请求与停止清单.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "canonical_unit_matrix_registered_reference_and_trial_missing"
+    },
+    "86_首次完整体验脚本_用户视角.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "first_complete_user_experience",
+      "evidenceLevel": "canonical_user_route_paper_not_runtime",
+      "opensChildren": [
+        "170_低基础首课黄金路径与逐屏交接脚本.md",
+        "177_学习者可见七步路线与35项释放交叉合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "canonical_user_route_registered_runtime_and_trial_missing"
+    },
+    "87_顺序嵌套教学的学习科学依据与边界.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "sequential_nested_learning_science",
+      "evidenceLevel": "canonical_learning_rationale_paper_not_trialed",
+      "opensChildren": [
+        "172_统一学习者证据与发布闸门协议.md",
+        "159_低基础试读结果与课程修订判定合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "learning_rationale_registered_trial_missing"
+    },
+    "88_判分精度与公式层级合同.md": {
+      "parentDocument": "83_最终学习标准与一遍闭环验收合同.md",
+      "routeNode": "grading_precision_and_formula_layers",
+      "evidenceLevel": "canonical_grading_contract_paper_reference_missing",
+      "opensChildren": [
+        "176_指定仓库当前公开能力与训练器映射报告.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md",
+        "115_参考策略可信度与误差分层.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "grading_contract_registered_reference_and_runtime_missing"
+    },
+    "89_声明用语与证据等级反向审计.md": {
+      "parentDocument": "88_判分精度与公式层级合同.md",
+      "routeNode": "claim_and_evidence_level_audit",
+      "evidenceLevel": "canonical_evidence_language_audit_paper",
+      "opensChildren": [
+        "169_最终标准可观察验收与NL50边界合同.md",
+        "goal-evidence-audit.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "evidence_language_audit_registered_no_completion_claim"
+    },
+    "90_研究文档阅读路线与层级索引.md": {
+      "parentDocument": "翻后教学系统_统一总纲.md",
+      "routeNode": "research_document_route_index",
+      "evidenceLevel": "canonical_document_index_paper",
+      "opensChildren": [
+        "research-document-route.json",
+        "research-document-metadata.json",
+        "legacy-document-disposition-audit.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "document_index_registered_legacy_audit_in_progress"
+    },
+    "178_全量文档归档与遗留材料处置合同.md": {
+      "parentDocument": "90_研究文档阅读路线与层级索引.md",
+      "routeNode": "all_document_disposition_and_legacy_archive",
+      "evidenceLevel": "paper_document_inventory_complete_semantic_revalidation_missing",
+      "opensChildren": [
+        "legacy-document-disposition-audit.json",
+        "research-document-metadata.json",
+        "research-document-route.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all_markdown_inventory_registered_legacy_semantics_not_revalidated"
+    },
+    "179_全项目文档一致性与当前实现边界合同.md": {
+      "parentDocument": "178_全量文档归档与遗留材料处置合同.md",
+      "routeNode": "project_wide_document_consistency_and_runtime_boundary",
+      "evidenceLevel": "paper_project_inventory_conflict_resolution_runtime_not_target",
+      "opensChildren": [
+        "project-document-inventory.json",
+        "README.md",
+        "design/翻后18项教学_实现与验收.md",
+        "170_低基础首课黄金路径与逐屏交接脚本.md",
+        "external-repo-current-capability-report.json",
+        "reference-snapshot-intake-and-match-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "project_inventory_and_runtime_target_boundary_registered"
+    },
+    "180_求解器快照到可教学课包字段合同.md": {
+      "parentDocument": "176_指定仓库当前公开能力与训练器映射报告.md",
+      "routeNode": "solver_snapshot_to_lesson_package",
+      "evidenceLevel": "local_source_snapshot_api_mapping_paper_contract_not_integrated",
+      "opensChildren": [
+        "solver-snapshot-to-lesson-package.json",
+        "173_最小匹配首手课包字段与闭合发布合同.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "solver_api_to_lesson_fields_mapped_release_gates_open"
+    },
+    "181_A72首个参考切片编译与资源阻塞处理手册.md": {
+      "parentDocument": "180_求解器快照到可教学课包字段合同.md",
+      "routeNode": "a72_first_reference_slice_compilation_and_resource_block",
+      "evidenceLevel": "paper_first_slice_execution_contract_engine_boundary_unverified",
+      "opensChildren": [
+        "a72-first-slice-compilation-contract.json",
+        "128_A72_C0到C5参考获取运行手册.md",
+        "165_A72资源预算分层参考获取与不降级替代合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "first_slice_contract_written_solver_subtree_capability_unverified"
+    },
+    "182_首课用户可见状态机与父子恢复合同.md": {
+      "parentDocument": "181_A72首个参考切片编译与资源阻塞处理手册.md",
+      "routeNode": "first_lesson_visible_state_machine_and_parent_restore",
+      "evidenceLevel": "paper_runtime_state_contract_not_implemented",
+      "opensChildren": [
+        "first-lesson-visible-state-machine.json",
+        "170_低基础首课黄金路径与逐屏交接脚本.md",
+        "177_学习者可见七步路线与35项释放交叉合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "visible_state_machine_and_restore_rules_written_runtime_missing"
+    },
+    "183_35项学习者释放闸门与帮助撤除统一合同.md": {
+      "parentDocument": "182_首课用户可见状态机与父子恢复合同.md",
+      "routeNode": "35_unit_learner_release_gates_and_help_fade",
+      "evidenceLevel": "paper_release_contract_runtime_and_learner_trial_missing",
+      "opensChildren": [
+        "unit-learner-release-gates.json",
+        "172_统一学习者证据与发布闸门协议.md",
+        "126_帮助撤除与六轮内化运行包.md",
+        "154_35项错误归因与反馈回退矩阵.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_unit_release_contract_unified_paper_only"
+    },
+    "184_35项低基础题面与视觉负荷合同.md": {
+      "parentDocument": "183_35项学习者释放闸门与帮助撤除统一合同.md",
+      "routeNode": "35_unit_low_baseline_prompt_and_visual_load",
+      "evidenceLevel": "paper_prompt_lint_runtime_and_beginner_trial_missing",
+      "opensChildren": [
+        "learner-visible-question-contract.json",
+        "94_首遍逐屏语言与反馈词典.md",
+        "54_低理解门槛与认知负荷验收合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_unit_plain_prompt_contract_compiled_trial_missing"
+    },
+    "185_学习者证据驱动题队列调度合同.md": {
+      "parentDocument": "184_35项低基础题面与视觉负荷合同.md",
+      "routeNode": "learner_evidence_driven_question_queue_scheduler",
+      "evidenceLevel": "paper_scheduler_contract_runtime_and_calibration_missing",
+      "opensChildren": [
+        "learner-evidence-driven-scheduler.json",
+        "157_自动出题与覆盖闭合合同.md",
+        "145_原理练习剂量与间隔队列合同.md",
+        "183_35项学习者释放闸门与帮助撤除统一合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "learner_queue_scheduler_compiled_runtime_missing"
+    },
+    "186_课程简化损失校准与发布阈值合同.md": {
+      "parentDocument": "185_学习者证据驱动题队列调度合同.md",
+      "routeNode": "course_simplification_loss_calibration_and_release_thresholds",
+      "evidenceLevel": "paper_calibration_contract_matched_reference_missing",
+      "opensChildren": [
+        "course-simplification-calibration.json",
+        "131_频率简化与边缘牌编译算法.md",
+        "56_简化策略与GTO参考的差异评估合同.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "simplification_calibration_protocol_written_reference_missing"
+    },
+    "187_一遍到目标级的嵌套释放总架构合同.md": {
+      "parentDocument": "186_课程简化损失校准与发布阈值合同.md",
+      "routeNode": "nested_release_architecture_from_first_pass_to_goal",
+      "evidenceLevel": "paper_architecture_invariant_runtime_and_learner_trial_missing",
+      "opensChildren": [
+        "nested-release-architecture-contract.json",
+        "160_低基础首遍最小脑内模型与完整交接合同.md",
+        "164_低基础一遍架构建立与目标级倒推验收合同.md",
+        "177_学习者可见七步路线与35项释放交叉合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "nested_release_architecture_compiled_runtime_and_learner_trial_missing"
+    },
+    "188_跨年龄低基础可理解性与操作验收合同.md": {
+      "parentDocument": "187_一遍到目标级的嵌套释放总架构合同.md",
+      "routeNode": "cross_age_low_baseline_comprehension_and_operation_acceptance",
+      "evidenceLevel": "paper_audience_floor_contract_trial_missing",
+      "opensChildren": [
+        "cross-age-low-baseline-acceptance.json",
+        "54_低理解门槛与认知负荷验收合同.md",
+        "184_35项低基础题面与视觉负荷合同.md",
+        "122_低基础首遍试读执行包.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "cross_age_comprehension_contract_written_trial_missing"
+    },
+    "189_从案例到可迁移原理的教学闭环合同.md": {
+      "parentDocument": "188_跨年龄低基础可理解性与操作验收合同.md",
+      "routeNode": "case_to_transferable_principle_teaching_loop",
+      "evidenceLevel": "paper_principle_compilation_contract_reference_and_trial_missing",
+      "opensChildren": [
+        "case-to-principle-teaching-loop.json",
+        "144_首遍原理覆盖与结构记忆合同.md",
+        "151_原理到35项练习的闭合矩阵.md",
+        "186_课程简化损失校准与发布阈值合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "principle_loop_compiled_reference_and_trial_missing"
+    },
+    "190_35项单元原理卡编译矩阵合同.md": {
+      "parentDocument": "189_从案例到可迁移原理的教学闭环合同.md",
+      "routeNode": "35_unit_principle_card_compilation_crosswalk",
+      "evidenceLevel": "paper_unit_card_manifest_reference_and_trial_missing",
+      "opensChildren": [
+        "principle-loop-unit-crosswalk.json",
+        "principle-unit-closure.json",
+        "unit-outcome-matrix.json",
+        "case-to-principle-teaching-loop.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_unit_card_manifest_compiled_without_complete_cards"
+    },
+    "191_首遍五组代表三卡候选与停止审计.md": {
+      "parentDocument": "190_35项单元原理卡编译矩阵合同.md",
+      "routeNode": "first_pass_five_representative_three_card_candidates",
+      "evidenceLevel": "paper_representative_card_candidates_source_bounded",
+      "opensChildren": [
+        "first-pass-representative-card-candidates.json",
+        "principle-loop-unit-crosswalk.json",
+        "170_低基础首课黄金路径与逐屏交接脚本.md",
+        "173_最小匹配首手课包字段与闭合发布合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "five_representative_card_candidates_audited_not_released"
+    },
+    "192_首遍五组代表参考闭合请求与发布顺序合同.md": {
+      "parentDocument": "191_首遍五组代表三卡候选与停止审计.md",
+      "routeNode": "first_pass_five_reference_closure_request",
+      "evidenceLevel": "paper_reference_request_frozen_no_matched_nodes_received",
+      "opensChildren": [
+        "five-representative-reference-closure-request.json",
+        "153_35项匹配参考请求与停止清单.md",
+        "173_最小匹配首手课包字段与闭合发布合同.md",
+        "176_指定仓库当前公开能力与训练器映射报告.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "five_representative_reference_requests_frozen_release_blocked"
+    },
+    "193_A72_C1独立物理快照复核报告.md": {
+      "parentDocument": "181_A72首个参考切片编译与资源阻塞处理手册.md",
+      "routeNode": "a72_c1_independent_physical_snapshot_audit",
+      "evidenceLevel": "independent_source_chart_and_entity_snapshot_verified_action_policy_missing",
+      "opensChildren": [
+        "a72-c1-independent-physical-snapshot.json",
+        "scripts/research-nevir-a72-c1-independent-snapshot.mjs",
+        "reference-request-btn-bb-a72.json",
+        "a72-c0-c5-execution-runbook.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "a72_c1_independent_physical_snapshot_verified_c0_and_c2_missing"
+    },
+    "194_A72_C0本地引擎源码适配审计.md": {
+      "parentDocument": "128_A72_C0到C5参考获取运行手册.md",
+      "routeNode": "a72_c0_source_build_and_adapter_audit",
+      "evidenceLevel": "local_source_build_verified_root_menu_probe_history_adapter_missing",
+      "opensChildren": [
+        "a72-c0-source-build-audit.json",
+        "../solver-source/examples/a72_c0_adapter_probe.rs",
+        "a72-c0-c5-execution-runbook.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "source_build_verified_root_menu_probe_adapter_pending"
+    },
+    "195_最终目标发布合同.md": {
+      "parentDocument": "翻后教学系统_统一总纲.md",
+      "routeNode": "final_goal_release_audit",
+      "evidenceLevel": "machine_audited_release_contract_evidence_incomplete",
+      "opensChildren": [
+        "final-goal-release-audit.json",
+        "goal-level-acceptance-matrix.json",
+        "strategy-to-course-compiler-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "goal_release_blocked_by_evidence_gates"
+    },
+    "196_求解器结果到用户范围图的教学编译合同.md": {
+      "parentDocument": "195_最终目标发布合同.md",
+      "routeNode": "solver_result_to_learner_visual_range_compilation",
+      "evidenceLevel": "paper_visual_compiler_contract_reference_and_runtime_missing",
+      "opensChildren": [
+        "solver-course-visual-compiler-contract.json",
+        "course-package-field-crosswalk.json",
+        "external-repo-current-capability-report.json",
+        "158_动作后范围变化视觉闭合合同.md",
+        "163_GTO参考到课程简化课包的C0_C9闭合合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "visual_compiler_order_written_not_implemented"
+    },
+    "197_C0_C9到用户路线映射与闭合审计.md": {
+      "parentDocument": "196_求解器结果到用户范围图的教学编译合同.md",
+      "routeNode": "c0_c9_to_visible_route_crosswalk",
+      "evidenceLevel": "paper_author_stage_to_learner_stage_crosswalk_not_runtime",
+      "opensChildren": [
+        "c0-c9-visible-route-crosswalk.json",
+        "reference-to-course-closure-contract.json",
+        "course-package-field-crosswalk.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "ten_stage_crosswalk_written_reference_and_runtime_missing"
+    },
+    "198_35项单元到C0_C9和释放闸门闭合合同.md": {
+      "parentDocument": "197_C0_C9到用户路线映射与闭合审计.md",
+      "routeNode": "unit_to_c0_c9_and_learner_release_crosswalk",
+      "evidenceLevel": "paper_35_unit_stage_and_release_crosswalk_not_released",
+      "opensChildren": [
+        "unit-c0-c9-release-crosswalk.json",
+        "unit-c0-c9-release-audit.json",
+        "unit-course-manifest.json",
+        "unit-learner-release-gates.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_unit_stage_and_release_rows_compiled_not_released"
+    },
+    "199_最终目标到用户路线逐项交叉合同.md": {
+      "parentDocument": "195_最终目标发布合同.md",
+      "routeNode": "goal_requirement_to_visible_route_crosswalk",
+      "evidenceLevel": "paper_goal_to_route_and_author_stage_crosswalk_closed_runtime_missing",
+      "opensChildren": [
+        "goal-route-requirement-crosswalk.json",
+        "goal-level-acceptance-matrix.json",
+        "learner-goal-route-canonical.json",
+        "first-pass-state-evidence-crosswalk.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "ten_goal_requirements_mapped_to_route_and_c0_c9_not_completion"
+    },
+    "200_低基础逐停点观察与四通道证据交叉合同.md": {
+      "parentDocument": "188_跨年龄低基础可理解性与操作验收合同.md",
+      "routeNode": "low_baseline_stop_observation_crosswalk",
+      "evidenceLevel": "paper_stop_observation_crosswalk_closed_trial_missing",
+      "opensChildren": [
+        "low-baseline-stop-observation-crosswalk.json",
+        "cross-age-low-baseline-acceptance.json",
+        "first-pass-state-evidence-crosswalk.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "12_stop_four_channel_observation_mapped_not_trialed"
+    },
+    "201_路线脑内架构与慢执行交叉合同.md": {
+      "parentDocument": "187_一遍到目标级的嵌套释放总架构合同.md",
+      "routeNode": "route_cognitive_slow_execution_bridge",
+      "evidenceLevel": "paper_route_cognitive_bridge_closed_runtime_and_trial_missing",
+      "opensChildren": [
+        "route-cognitive-slow-execution-bridge.json",
+        "first-pass-state-evidence-crosswalk.json",
+        "slow-single-step-execution-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "12_stop_cognitive_and_slow_execution_mapping_closed_not_trialed"
+    },
+    "202_35项单元到唯一用户停点的交叉合同.md": {
+      "parentDocument": "201_路线脑内架构与慢执行交叉合同.md",
+      "routeNode": "unit_canonical_route_bridge",
+      "evidenceLevel": "paper_35_unit_canonical_parent_bridge_closed_legacy_alias_quarantined",
+      "opensChildren": [
+        "unit-canonical-route-bridge.json",
+        "unit-course-manifest.json",
+        "unit-c0-c9-release-crosswalk.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_units_bound_to_p4_p6_legacy_l6_l7_author_only"
+    },
+    "203_35项全量练习覆盖与嵌套释放计量合同.md": {
+      "parentDocument": "202_35项单元到唯一用户停点的交叉合同.md",
+      "routeNode": "full_course_coverage_and_release_contract",
+      "evidenceLevel": "paper_35_unit_coverage_plan_compiled_pools_and_reference_missing",
+      "opensChildren": [
+        "full-course-coverage-and-release-contract.json",
+        "principle-loop-unit-crosswalk.json",
+        "automatic-question-generation-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "35_unit_three_card_coverage_specified_not_compiled"
+    },
+    "204_确定性会话出题与错误回退队列合同.md": {
+      "parentDocument": "203_35项全量练习覆盖与嵌套释放计量合同.md",
+      "routeNode": "session_question_queue_contract",
+      "evidenceLevel": "paper_deterministic_session_scheduler_specified_runtime_missing",
+      "opensChildren": [
+        "session-question-queue-contract.json",
+        "automatic-question-generation-contract.json",
+        "full-course-coverage-and-release-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "deterministic_queue_and_stop_cards_specified_not_runtime"
+    },
+    "205_答案身份来源追溯与判分边界合同.md": {
+      "parentDocument": "204_确定性会话出题与错误回退队列合同.md",
+      "routeNode": "answer_provenance_and_grading_identity_contract",
+      "evidenceLevel": "paper_answer_identity_and_source_lineage_closed_runtime_package_missing",
+      "opensChildren": [
+        "answer-provenance-and-grading-identity-contract.json",
+        "reference-course-policy-ledger-contract.json",
+        "solver-snapshot-to-lesson-package.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "six_answer_identities_and_formula_lineage_closed_not_compiled"
+    },
+    "206_首遍13帧用户执行脚本与双层回放合同.md": {
+      "parentDocument": "205_答案身份来源追溯与判分边界合同.md",
+      "routeNode": "first_pass_user_facing_script_contract",
+      "evidenceLevel": "paper_13_frame_user_script_closed_runtime_and_trial_missing",
+      "opensChildren": [
+        "first-pass-user-facing-script-contract.json",
+        "first-pass-golden-path.json",
+        "first-lesson-visible-state-machine.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "13_frame_user_script_and_replay_closed_not_trialed"
+    },
+    "207_目标级准备度与NL50基准证据合同.md": {
+      "parentDocument": "206_首遍13帧用户执行脚本与双层回放合同.md",
+      "routeNode": "target_readiness_and_nl50_benchmark_contract",
+      "evidenceLevel": "paper_target_benchmark_schema_frozen_fields_and_external_evidence_missing",
+      "opensChildren": [
+        "target-readiness-and-nl50-benchmark-contract.json",
+        "final-goal-observable-acceptance.json",
+        "04_正确性与NL50验收方案.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "target_config_and_nl50_evidence_schema_written_not_frozen"
+    },
+    "208_参考快照接入、配置匹配与发布合同.md": {
+      "parentDocument": "207_目标级准备度与NL50基准证据合同.md",
+      "routeNode": "reference_snapshot_intake_and_match_contract",
+      "evidenceLevel": "paper_reference_intake_schema_and_repo_role_boundaries_missing_matched_snapshot",
+      "opensChildren": [
+        "reference-snapshot-intake-and-match-contract.json",
+        "external-repo-current-capability-report.json",
+        "solver-snapshot-to-lesson-package.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "source_roles_and_match_contract_written_but_no_matched_release"
+    },
+    "209_单次会话证据与目标级报告合同.md": {
+      "parentDocument": "207_目标级准备度与NL50基准证据合同.md",
+      "routeNode": "session_evidence_and_target_report_contract",
+      "evidenceLevel": "paper_session_evidence_and_target_report_schema_written_runtime_and_trials_missing",
+      "opensChildren": [
+        "session-evidence-and-target-report-contract.json",
+        "unified-learner-evidence-release-gates.json",
+        "target-readiness-and-nl50-benchmark-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "session_only_evidence_schema_written_not_runtime_connected"
+    },
+    "210_35项单元参考快照请求与发布队列.md": {
+      "parentDocument": "208_参考快照接入、配置匹配与发布合同.md",
+      "routeNode": "unit_reference_snapshot_request_manifest",
+      "evidenceLevel": "35_unit_reference_requests_compiled_all_exact_strategy_and_successor_release_blocked",
+      "opensChildren": [
+        "unit-reference-snapshot-request-manifest.json",
+        "unit-course-manifest.json",
+        "unit-field-completion-queue.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "all35_requests_written_no_matched_reference_rows"
+    },
+    "211_课程简化、边缘牌与阈值校准合同.md": {
+      "parentDocument": "210_35项单元参考快照请求与发布队列.md",
+      "routeNode": "course_simplification_and_edge_calibration_contract",
+      "evidenceLevel": "paper_simplification_algorithm_and_per_unit_calibration_matrix_written_reference_and_thresholds_missing",
+      "opensChildren": [
+        "course-simplification-and-edge-calibration-contract.json",
+        "frequency-quantization-and-edge-compilation.json",
+        "course-simplification-calibration.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "simplification_contract_written_not_calibrated"
+    },
+    "212_一遍学习、迁移、连续路线与目标级复核实验协议.md": {
+      "parentDocument": "209_单次会话证据与目标级报告合同.md",
+      "routeNode": "goal_trial_and_target_benchmark_protocol",
+      "evidenceLevel": "paper_trial_protocol_compiled_runtime_trial_and_external_benchmark_missing",
+      "opensChildren": [
+        "goal-trial-and-target-benchmark-protocol.json",
+        "final-goal-observable-acceptance.json",
+        "cross-age-low-baseline-acceptance.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "experiment_sequence_written_not_administered"
+    },
+    "213_首个匹配首手课包的资源选择与停止决策.md": {
+      "parentDocument": "173_最小匹配首手课包字段与闭合发布合同.md",
+      "routeNode": "first_matched_package_resource_and_release_decision",
+      "evidenceLevel": "a72_first_package_selected_C0_C1_fact_open_C2_resource_blocked_no_strategy_release",
+      "opensChildren": [
+        "first-matched-package-resource-and-release-decision.json",
+        "a72-reference-acquisition-spec.json",
+        "a72-c0-c5-execution-runbook.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "A72_selected_fact_open_reference_resource_blocked"
+    },
+    "214_A72事实题与停止题的自动出题样板.md": {
+      "parentDocument": "157_自动出题与覆盖闭合合同.md",
+      "routeNode": "a72_fact_and_stop_question_fixtures",
+      "evidenceLevel": "paper_fact_and_stop_question_fixtures_compiled_strategy_fixture_blocked",
+      "opensChildren": [
+        "a72-fact-and-stop-question-fixtures.json",
+        "a72-c1-independent-physical-snapshot.json",
+        "automatic-question-generation-contract.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "fact_and_stop_fixture_ready_strategy_fixture_blocked"
+    },
+    "215_目标标准的顺序教学与NL50结果闭环合同.md": {
+      "parentDocument": "169_最终标准可观察验收与NL50边界合同.md",
+      "routeNode": "goal_standard_sequential_teaching_and_nl50_closure",
+      "evidenceLevel": "paper_goal_standard_compiled_runtime_reference_and_learner_evidence_missing",
+      "opensChildren": [
+        "target-standard-sequential-teaching-and-nl50-closure-contract.json",
+        "195_最终目标发布合同.md",
+        "212_一遍学习、迁移、连续路线与目标级复核实验协议.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_standard_closed_runtime_and_target_evidence_missing"
+    },
+    "216_目标标准与既有合同交叉审计.md": {
+      "parentDocument": "215_目标标准的顺序教学与NL50结果闭环合同.md",
+      "routeNode": "goal_standard_crosswalk_audit",
+      "evidenceLevel": "paper_goal_standard_crosswalk_consistent_runtime_and_learner_evidence_missing",
+      "opensChildren": [
+        "goal-standard-crosswalk-audit.json",
+        "215_目标标准的顺序教学与NL50结果闭环合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_goal_standard_crosswalk_consistent_runtime_and_learner_evidence_missing"
+    },
+    "217_用户最终标准逐条验收审计.md": {
+      "parentDocument": "215_目标标准的顺序教学与NL50结果闭环合同.md",
+      "routeNode": "user_standard_requirement_audit",
+      "evidenceLevel": "paper_user_standard_mapped_runtime_learner_and_target_evidence_missing",
+      "opensChildren": [
+        "user-standard-requirement-audit.json",
+        "215_目标标准的顺序教学与NL50结果闭环合同.md",
+        "final-goal-release-audit.json",
+        "first-hand-gap-frame-cards.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_user_standard_mapped_runtime_learner_and_target_evidence_missing"
+    },
+    "218_训练阶段别名与唯一用户进阶桥.md": {
+      "parentDocument": "187_一遍到目标级的嵌套释放总架构合同.md",
+      "routeNode": "release_stage_alias_bridge",
+      "evidenceLevel": "paper_release_aliases_unified_runtime_must_use_canonical_user_stage",
+      "opensChildren": [
+        "release-stage-alias-bridge.json",
+        "187_一遍到目标级的嵌套释放总架构合同.md",
+        "215_目标标准的顺序教学与NL50结果闭环合同.md"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_release_aliases_unified_runtime_must_use_canonical_user_stage"
+    },
+    "219_U0_U7用户进阶运行时采用合同.md": {
+      "parentDocument": "218_训练阶段别名与唯一用户进阶桥.md",
+      "routeNode": "user_stage_runtime_adoption_contract",
+      "evidenceLevel": "paper_user_stage_runtime_contract_written_not_implemented",
+      "opensChildren": [
+        "user-stage-runtime-adoption-contract.json",
+        "218_训练阶段别名与唯一用户进阶桥.md",
+        "first-lesson-visible-state-machine.json"
+      ],
+      "returnTo": "翻后教学系统_统一总纲.md",
+      "currentStatus": "paper_user_stage_runtime_contract_written_not_implemented"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "A72_RESOURCE_SLICE_CONTRACT_V1",
+  "status": "resource_plan_documented_C0_source_build_verified_C1_verified_full_strategy_unsolved",
+  "candidateId": "REF_BTN_BB_A72_100_zero_rake_research_v1",
+  "preflight": {
+    "status": "full_original_flop_graph_built_memory_estimated_not_solved",
+    "compressedBytesEstimated": 5189681440,
+    "uncompressedBytesEstimated": 10174073380,
+    "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+    "inputFingerprint": "9a16cd816771d45689df3ad2941a28659eedb1b5f54a41eea66cc87e2eb18acf"
+  },
+  "identities": [
+    "full_reference",
+    "reference_export_slice",
+    "restricted_tree_reference",
+    "altered_range_reference",
+    "conditional_lesson_model",
+    "teaching_aggregate",
+    "approximate_probe"
+  ],
+  "reductionEffects": {
+    "nodeExportOnly": "display_reduction_without_policy_change",
+    "removeActions": "restricted_tree",
+    "reduceRange": "altered_input_configuration",
+    "restrictFutureCards": "conditional_future_model",
+    "aggregateHands": "loss_of_entity_frequency",
+    "sampleRunouts": "approximation_error"
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "name": "adapter_smoke",
+      "source": "QQQ engineering candidate",
+      "opens": "engine_validation_only",
+      "courseProof": false
+    },
+    {
+      "id": "P1",
+      "name": "A72_input_reload",
+      "requires": [
+        "C0"
+      ],
+      "opens": "starting_range_fact",
+      "courseProof": false
+    },
+    {
+      "id": "P2",
+      "name": "root_probe",
+      "requires": [
+        "P1"
+      ],
+      "outputs": [
+        "buildTime",
+        "memory",
+        "iterations",
+        "convergence",
+        "perHandPolicy",
+        "perActionEV",
+        "support",
+        "exportSize"
+      ],
+      "identity": "reference_export_slice",
+      "courseProof": false
+    },
+    {
+      "id": "P3",
+      "name": "closed_conditional_lesson_slice",
+      "requires": [
+        "P1"
+      ],
+      "identity": "conditional_lesson_model",
+      "requiresDeclaredDeletedBranches": true,
+      "courseProof": false
+    },
+    {
+      "id": "P4",
+      "name": "full_A72_reference",
+      "requires": [
+        "P2"
+      ],
+      "requiresAllSuccessors": true,
+      "identity": "full_reference",
+      "courseProof": true
+    }
+  ],
+  "hardRules": {
+    "qqqCannotReplaceA72": true,
+    "sliceCannotBeCalledFullGTO": true,
+    "deletedActionsMustBeDeclared": true,
+    "missingSuccessorStopsExactLesson": true,
+    "roundedDisplayCannotGradePerHand": true,
+    "lockedConvergenceDoesNotProveLosslessSimplification": true,
+    "noDefaultResponseFilling": true,
+    "resourceFailureDoesNotUpgradeIdentity": true
+  },
+  "currentStatus": {
+    "C0": "source_build_verified_root_menu_probe_adapter_pending",
+    "C1": "independent_fact_snapshot_verified",
+    "C2": "reference_missing",
+    "P0": "not_registered_as_course",
+    "P1": "not_verified",
+    "P2": "not_solved",
+    "P3": "not_started",
+    "P4": "not_started",
+    "fullStrategy": false,
+    "coursePolicyReady": false,
+    "NL50Evidence": false
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "status": "author_scope_inventory_not_curriculum_or_learner_pass",
+  "questions": 85,
+  "authoredModelFamilies": 4,
+  "sourceValueNodeRecords": 16,
+  "deduplicatedValueNodeQuestions": 13,
+  "finitePlanQuestions": 25,
+  "continuousIntervalQuestions": 60,
+  "tiedQuestions": 7,
+  "uniqueBestButtonKinds": [
+    "call",
+    "allin",
+    "bet",
+    "raise",
+    "check",
+    "fold"
+  ],
+  "coarseCells": [
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "key": "IP/SRP/flop/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "key": "IP/SRP/flop/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "key": "IP/SRP/flop/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "key": "IP/SRP/flop/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "key": "IP/SRP/turn/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "key": "IP/SRP/turn/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "key": "IP/SRP/turn/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "key": "IP/SRP/turn/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "key": "IP/SRP/river/free",
+      "hasLocalQuestion": true
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "key": "IP/SRP/river/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "key": "IP/SRP/river/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "key": "IP/SRP/river/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "key": "IP/3bet/flop/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "key": "IP/3bet/flop/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "key": "IP/3bet/flop/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "key": "IP/3bet/flop/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "key": "IP/3bet/turn/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "key": "IP/3bet/turn/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "key": "IP/3bet/turn/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "key": "IP/3bet/turn/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "key": "IP/3bet/river/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "key": "IP/3bet/river/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "key": "IP/3bet/river/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "IP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "key": "IP/3bet/river/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "free",
+      "key": "OOP/SRP/flop/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_bet",
+      "key": "OOP/SRP/flop/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_raise",
+      "key": "OOP/SRP/flop/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "flop",
+      "decision": "facing_allin",
+      "key": "OOP/SRP/flop/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "free",
+      "key": "OOP/SRP/turn/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_bet",
+      "key": "OOP/SRP/turn/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_raise",
+      "key": "OOP/SRP/turn/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "turn",
+      "decision": "facing_allin",
+      "key": "OOP/SRP/turn/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "free",
+      "key": "OOP/SRP/river/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_bet",
+      "key": "OOP/SRP/river/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_raise",
+      "key": "OOP/SRP/river/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "SRP",
+      "street": "river",
+      "decision": "facing_allin",
+      "key": "OOP/SRP/river/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "free",
+      "key": "OOP/3bet/flop/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_bet",
+      "key": "OOP/3bet/flop/facing_bet",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_raise",
+      "key": "OOP/3bet/flop/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "flop",
+      "decision": "facing_allin",
+      "key": "OOP/3bet/flop/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "free",
+      "key": "OOP/3bet/turn/free",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_bet",
+      "key": "OOP/3bet/turn/facing_bet",
+      "hasLocalQuestion": true
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_raise",
+      "key": "OOP/3bet/turn/facing_raise",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "turn",
+      "decision": "facing_allin",
+      "key": "OOP/3bet/turn/facing_allin",
+      "hasLocalQuestion": false
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "free",
+      "key": "OOP/3bet/river/free",
+      "hasLocalQuestion": true
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_bet",
+      "key": "OOP/3bet/river/facing_bet",
+      "hasLocalQuestion": true
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_raise",
+      "key": "OOP/3bet/river/facing_raise",
+      "hasLocalQuestion": true
+    },
+    {
+      "position": "OOP",
+      "potType": "3bet",
+      "street": "river",
+      "decision": "facing_allin",
+      "key": "OOP/3bet/river/facing_allin",
+      "hasLocalQuestion": true
+    }
+  ],
+  "localQuestionCells": 6,
+  "sampler": {
+    "order": "supported context cell -> model family -> question",
+    "interpretation": "Pedagogical balance, not empirical hand frequencies.",
+    "pureBluffProbabilityUnderThisSampler": 0.08333333333333333,
+    "uniformQuestionBankPureBluffProbability": 0.7058823529411765,
+    "noSilentUnsupportedFallback": true
+  },
+  "executionAdapters": {
+    "ready": 85,
+    "unavailable": 0,
+    "finiteReadyFamilies": [
+      "river_size",
+      "river_value",
+      "turn_defense"
+    ],
+    "meaning": "Research execution only; not implemented app UI. Coverage of these declared domains is not complete poker coverage."
+  },
+  "limitations": [
+    "Only six coarse cells contain local questions; presence is not complete coverage of those cells.",
+    "No flop comparison inside this mathematical bank. Course-prescription flop exercises exist separately and have a different evidence identity.",
+    "IP3bet and OOP SRP plan comparisons are absent here.",
+    "All current models have hero as prior aggressor; caller training is not established by this bank.",
+    "Finite menu references cannot grade other legal amounts; all declared families now have local research adapters, not app UI or unrestricted action execution.",
+    "Defense questions provide showdown tables as intermediate help.",
+    "All cases are public authored examples or parameters; no frozen unseen transfer, real learner or NL50 evidence."
+  ],
+  "sourceHashes": {
+    "value-trap-tree-evidence.json": "a95b04ff7f2be61fbcacac473882162a3a25722762467d1508fbd21afabb07c2",
+    "defense-tree-evidence.json": "db355b5749822b2acdb71cfdbc742ef0b0fbe8c6a2ba1c7105ed0ab61a792df6",
+    "size-comparison-evidence.json": "f0f8408d1f39b3facd9798906fe97642fcb735c5420176d204046dd0fd5e9f7f",
+    "no-answer-practice-teacher.json": "3667e0396099507d103b14171c5b5853749c85d9065fc2f65f88c62c35cf2686"
+  }
+}

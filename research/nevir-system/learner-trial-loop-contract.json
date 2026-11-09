@@ -1,0 +1,60 @@
+{
+  "status": "declarative_learner_trial_loop_not_administered",
+  "canonicalLearnerRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7","replay_transfer"],
+  "canonicalLearnerRouteRole": "runtime_trial_surface",
+  "source": "59_低基础学习者试读与课程修订闭环合同.md",
+  "questions": [
+    "route_location",
+    "slow_execution",
+    "adjacent_transfer",
+    "error_source"
+  ],
+  "segments": [
+    {"id":"A","route":"L0-L4","focus":"preflop_scene_grid_starting_range"},
+    {"id":"B","route":"p1-p7","legacyRoute":"L5-L8","focus":"postflop_full_structure"},
+    {"id":"C","route":"L0-L4→p1-p7→replay_transfer","legacyRoute":"L0-L8","focus":"help_faded_next_layer_location"},
+    {"id":"D","route":"unseen_adjacent","focus":"one_field_change_transfer"}
+  ],
+  "hostRules": {
+    "noAnswerLeading": true,
+    "allowPauseAndReview": true,
+    "unknownIsWrongWithExplanation": true,
+    "missingReferenceMustBeDeclared": true,
+    "designerWalkthroughIsNotUserEvidence": true
+  },
+  "recordFields": [
+    "routeNode",
+    "parentFrame",
+    "visibleAssistance",
+    "firstAnswer",
+    "retryAnswer",
+    "helpUsed",
+    "timeToAction",
+    "errorLayer",
+    "verbalizedNextStep",
+    "unpromptedReturnToCard",
+    "exitOrPause",
+    "hostIntervention"
+  ],
+  "outcomeLabels": [
+    "route_comprehension",
+    "local_execution",
+    "adjacent_transfer",
+    "continuous_execution",
+    "target_benchmark"
+  ],
+  "revisionRules": {
+    "changeOneVariableBeforeRetest": true,
+    "postExplanationRetryDoesNotFreezePass": true,
+    "newVersionInvalidatesOldLearningEvidence": true,
+    "doNotAddQuestionCountToHideParentLayerIssue": true,
+    "noLongTermAppDatabase": true
+  },
+  "currentStatus": {
+    "paperWalkthrough": true,
+    "adultBeginnerTrial": false,
+    "unseenTransferSampleFrozen": false,
+    "continuousLearnerEvidence": false,
+    "nl50Evidence": false
+  }
+}

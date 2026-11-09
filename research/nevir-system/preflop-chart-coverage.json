@@ -1,0 +1,370 @@
+{
+  "status": "source_inventory_not_strategy_completion",
+  "sourceWorkbook": "C:/Users/why/Desktop/翻前策略整合版_六工作表.xlsx",
+  "sourceSheets": [
+    "开池图表",
+    "频率明细",
+    "3bet防守",
+    "3bet边缘变化",
+    "大盲防守",
+    "大盲边缘差异"
+  ],
+  "chartCount": 15,
+  "chartsByGroup": {
+    "open": 5,
+    "threebet": 4,
+    "bb": 6
+  },
+  "totalCells": 2535,
+  "physicalComboClassesPerChart": 169,
+  "physicalTwoCardCombosPerChart": 1326,
+  "openTypedFrequencyCrossCheck": "The source-extraction script asserts all 845 typed open-chart rows agree with the simplified SVG frequencies.",
+  "charts": [
+    {
+      "id": "open-UTG",
+      "group": "open",
+      "name": "UTG",
+      "source": "开池图表",
+      "image": "/sources/preflop-0-0.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 124,
+        "raise": 38
+      },
+      "mixed": 7,
+      "mass": {
+        "fold": 127.5,
+        "raise": 41.5
+      }
+    },
+    {
+      "id": "open-HJ",
+      "group": "open",
+      "name": "HJ",
+      "source": "开池图表",
+      "image": "/sources/preflop-0-1.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 113,
+        "raise": 46
+      },
+      "mixed": 10,
+      "mass": {
+        "fold": 118,
+        "raise": 51
+      }
+    },
+    {
+      "id": "open-CO",
+      "group": "open",
+      "name": "CO",
+      "source": "开池图表",
+      "image": "/sources/preflop-0-2.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 104,
+        "raise": 59
+      },
+      "mixed": 6,
+      "mass": {
+        "raise": 62,
+        "fold": 107
+      }
+    },
+    {
+      "id": "open-BTN",
+      "group": "open",
+      "name": "BTN",
+      "source": "开池图表",
+      "image": "/sources/preflop-0-3.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 80,
+        "raise": 80
+      },
+      "mixed": 9,
+      "mass": {
+        "raise": 84.5,
+        "fold": 84.5
+      }
+    },
+    {
+      "id": "open-SB",
+      "group": "open",
+      "name": "SB",
+      "source": "开池图表",
+      "image": "/sources/preflop-0-4.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 78,
+        "raise": 87
+      },
+      "mixed": 4,
+      "mass": {
+        "raise": 89,
+        "fold": 80
+      }
+    },
+    {
+      "id": "threebet-HJ",
+      "group": "threebet",
+      "name": "HJ",
+      "source": "3bet防守",
+      "image": "/sources/preflop-2-0.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 144,
+        "raise": 16
+      },
+      "mixed": 9,
+      "mass": {
+        "fold": 148.5,
+        "raise": 20.5
+      }
+    },
+    {
+      "id": "threebet-CO",
+      "group": "threebet",
+      "name": "CO",
+      "source": "3bet防守",
+      "image": "/sources/preflop-2-1.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 141,
+        "raise": 19
+      },
+      "mixed": 9,
+      "mass": {
+        "fold": 145.5,
+        "raise": 23.5
+      }
+    },
+    {
+      "id": "threebet-BTN",
+      "group": "threebet",
+      "name": "BTN",
+      "source": "3bet防守",
+      "image": "/sources/preflop-2-2.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 137,
+        "raise": 18
+      },
+      "mixed": 14,
+      "mass": {
+        "fold": 144,
+        "raise": 25
+      }
+    },
+    {
+      "id": "threebet-SB",
+      "group": "threebet",
+      "name": "SB",
+      "source": "3bet防守",
+      "image": "/sources/preflop-2-3.svg",
+      "cells": 169,
+      "actionSet": [
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "fold": 141,
+        "raise": 17
+      },
+      "mixed": 11,
+      "mass": {
+        "fold": 146.5,
+        "raise": 22.5
+      }
+    },
+    {
+      "id": "bb-普通宽",
+      "group": "bb",
+      "name": "普通宽",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-0.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 81,
+        "fold": 58,
+        "raise": 8
+      },
+      "mixed": 22,
+      "mass": {
+        "call": 92,
+        "raise": 17,
+        "fold": 60
+      }
+    },
+    {
+      "id": "bb-普通中",
+      "group": "bb",
+      "name": "普通中",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-1.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 44,
+        "fold": 89,
+        "raise": 8
+      },
+      "mixed": 28,
+      "mass": {
+        "call": 58,
+        "raise": 20.5,
+        "fold": 90.5
+      }
+    },
+    {
+      "id": "bb-普通紧",
+      "group": "bb",
+      "name": "普通紧",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-2.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 26,
+        "fold": 113,
+        "raise": 11
+      },
+      "mixed": 19,
+      "mass": {
+        "call": 35.5,
+        "raise": 17,
+        "fold": 116.5
+      }
+    },
+    {
+      "id": "bb-小盲宽",
+      "group": "bb",
+      "name": "小盲宽",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-3.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 115,
+        "fold": 17,
+        "raise": 11
+      },
+      "mixed": 26,
+      "mass": {
+        "call": 127,
+        "raise": 23,
+        "fold": 19
+      }
+    },
+    {
+      "id": "bb-小盲中",
+      "group": "bb",
+      "name": "小盲中",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-4.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 92,
+        "fold": 37,
+        "raise": 17
+      },
+      "mixed": 23,
+      "mass": {
+        "call": 102,
+        "raise": 27,
+        "fold": 40
+      }
+    },
+    {
+      "id": "bb-小盲紧",
+      "group": "bb",
+      "name": "小盲紧",
+      "source": "大盲防守",
+      "image": "/sources/preflop-4-5.svg",
+      "cells": 169,
+      "actionSet": [
+        "call",
+        "fold",
+        "raise"
+      ],
+      "pure": {
+        "call": 62,
+        "fold": 64,
+        "raise": 25
+      },
+      "mixed": 18,
+      "mass": {
+        "call": 71,
+        "raise": 34,
+        "fold": 64
+      }
+    }
+  ],
+  "interpretation": {
+    "open": "Five position charts with raise/fold simplified actions; mixed cells preserve a 50/50 teaching frequency.",
+    "threebet": "Four position charts with raise/fold simplified actions; no UTG chart is present in this extracted source.",
+    "bb": "Six opponent-profile charts with raise/call/fold simplified actions; scale/profile identity is part of the input.",
+    "notProven": [
+      "complete response ranges after facing a 3bet",
+      "complete squeeze/4bet/call policy",
+      "postflop strategy",
+      "NL50 quality",
+      "learner mastery"
+    ]
+  },
+  "appChanged": false
+}

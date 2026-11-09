@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "status": "full_declared_tree_forward_sampling_consistency_not_best_response_or_accuracy_proof",
+  "calibration": false,
+  "samples": 80000,
+  "independentActionLedgerChecks": 398446,
+  "uncalledBetFoldCases": 54352,
+  "records": [
+    {
+      "id": "joint",
+      "n": 20000,
+      "meanBB": 3.6310330000000453,
+      "standardErrorBB": 0.12727186876947913,
+      "engineExpectedBB": 3.436580446606141,
+      "differenceBB": 0.1944525533939041,
+      "intervalRadiusBB": 0.6610446207672694,
+      "intervalContainsEngineValue": true,
+      "folds": 13166,
+      "showdowns": 6834,
+      "publicDeals": 25439,
+      "allInRunoutCards": 5
+    },
+    {
+      "id": "known_0_AsKd",
+      "n": 20000,
+      "meanBB": 3.7792019999998696,
+      "standardErrorBB": 0.12521959563309656,
+      "engineExpectedBB": 3.7661810302734375,
+      "differenceBB": 0.013020969726432075,
+      "intervalRadiusBB": 0.6531612420997422,
+      "intervalContainsEngineValue": true,
+      "folds": 12885,
+      "showdowns": 7115,
+      "publicDeals": 24110,
+      "allInRunoutCards": 9
+    },
+    {
+      "id": "known_0_2s2h",
+      "n": 20000,
+      "meanBB": 2.222781000000107,
+      "standardErrorBB": 0.10443581741816806,
+      "engineExpectedBB": 2.2917776489257813,
+      "differenceBB": -0.06899664892567436,
+      "intervalRadiusBB": 0.573324698461605,
+      "intervalContainsEngineValue": true,
+      "folds": 10961,
+      "showdowns": 9039,
+      "publicDeals": 27691,
+      "allInRunoutCards": 0
+    },
+    {
+      "id": "known_1_7c6c",
+      "n": 20000,
+      "meanBB": 0.026289499999999993,
+      "standardErrorBB": 0.12146780330285903,
+      "engineExpectedBB": 0.02266357421875,
+      "differenceBB": 0.003625925781249994,
+      "intervalRadiusBB": 0.6387495153676368,
+      "intervalContainsEngineValue": true,
+      "folds": 17340,
+      "showdowns": 2660,
+      "publicDeals": 16324,
+      "allInRunoutCards": 2
+    }
+  ],
+  "intervals": {
+    "method": "Two-sided empirical Bernstein, theorem4 plus union bound across fixed cases",
+    "source": "https://arxiv.org/pdf/0907.3740",
+    "familyDelta": 0.01,
+    "assumption": "Ideal independent bounded draws; actual run uses fixed-seed SplitMix64 pseudorandom draws, not a proof of IID randomness.",
+    "notSolverTargetErrorBound": true,
+    "fixedSampleSizeNoSeedHunting": true
+  },
+  "sourceHashes": {
+    "research/nevir-system/qqq-policy-rollouts-v2-metadata.json": "3224ef19de87227677c81e5aabd225ed711afa7dddebda83f73de78952b6dd1e",
+    "research/nevir-system/qqq-policy-rollouts-v2.jsonl": "f748b0ad1cd0a585577a01013df0dc6877848016bd0f892370c422101badb2fb",
+    "research/solver-probe/src/bin/policy_rollout_probe.rs": "f45bdf4c4c6279a76e43da075b757213deb7989ebfc977067302f1e105d52405",
+    "research/solver-probe/target/release/policy_rollout_probe.exe": "ddef9fe57e92b7746bf3c9fcf37430670b40e2e74ba231739c98306e836dc01c",
+    "research/solver-probe/Cargo.lock": "3eba95db2071143cb868de4c49c71216d05dd1df7cce48aa4f6794e8a952c1c0",
+    "scripts/verify-nevir-policy-rollouts.mjs": "a3508b7f6e1fa298d874c5eae9e3983a25edc8f9bf7c81010181655ef820b143"
+  },
+  "v2ForwardSampleBatchCompletedAndConsistent": true,
+  "fullTreeExhaustivelyValidated": false,
+  "independentBestResponseVerified": false,
+  "solverTargetCertified": false,
+  "coursePolicyQualityVerified": false,
+  "learnerTrials": 0,
+  "appChanged": false
+}

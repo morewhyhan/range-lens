@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "inputFingerprint": "5fa05e571b16a9322fd7dfd22a4015f0d8485c77b12b181fb611bc228135a333",
+  "solverReportedExploitabilityBB": 0.005291728973388672,
+  "scope": "独立求解翻牌 Qh Qs 4d（对子／三条面）；继承已明确的双方翻前条件范围、底池和后手；零抽水；翻牌33%／75%，转河75%，面对下注允许弃牌／跟注／全下加注。有限动作树参考。",
+  "verifiedNodes": 114,
+  "physicalWeightChecks": 97812,
+  "edges": 150,
+  "independentTerminalChecks": 16,
+  "completeCheckAndBetCallRoutes": true,
+  "hiddenCardTrials": 12,
+  "allRuntimeHistoriesAvailable": true,
+  "independentSecondSolver": false,
+  "files": {
+    "request.json": "c51bd465d4722c1413cabcdae578879772c445cf2be3cc320fc654641b352e19",
+    "result.json": "f04eb853b43f646216204ab5d7392ad0333bddd401fe8cb02f3370d5b3949dde",
+    "strategy.bin": "1d8564bce42d0f8b06517f28d4752ab0c8fc363328ee681241c152eabfd848b3"
+  },
+  "engineSHA256": "4adf872e5f45ebe8d4c2a102af9b05688d7ceec911182cb484dbbff60331ae20"
+}

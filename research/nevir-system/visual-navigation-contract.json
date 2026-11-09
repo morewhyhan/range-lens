@@ -1,0 +1,87 @@
+{
+  "status": "declarative_visual_navigation_contract_not_implemented",
+  "source": "61_视觉导航与范围图语义统一合同.md",
+  "screenRegions": [
+    "route_header",
+    "one_central_visual",
+    "one_question_and_action",
+    "optional_explanation"
+  ],
+  "routeLabels": [
+    "preflop_scene",
+    "grid",
+    "action",
+    "starting_range",
+    "flop_context",
+    "compare",
+    "execute",
+    "update",
+    "close"
+  ],
+  "centralVisualByParent": {
+    "preflop": "table_and_169_grid",
+    "flop_read": "table_best_five_and_draws",
+    "range": "fixed_coordinate_range_view",
+    "compare_execute": "legal_actions_amounts_and_candidates",
+    "update": "previous_thumbnail_plus_one_change",
+    "close": "terminal_ledger_and_error_layer"
+  },
+  "rangeSemantics": {
+    "fixed13x13Orientation": true,
+    "sameScaleBeforeAfter": true,
+    "denominatorVisible": true,
+    "mixedUsesActionAndWeight": true,
+    "unknownHasTextAndTexture": true,
+    "physicalFilterSeparateFromActionFilter": true
+  },
+  "accessibility": {
+    "importantStatesUseTwoChannels": true,
+    "cardUsesRankAndSuit": true,
+    "actorUsesPointerAndText": true,
+    "correctAndWrongAreNotSuitColors": true,
+    "animationPauseStepBack": true
+  },
+  "motionSequence": [
+    "previous_state",
+    "one_action_or_new_card",
+    "next_state_and_next_actor"
+  ],
+  "visualReleaseChecks": [
+    "parentLayerVisibleWithoutTitle",
+    "oneCentralObject",
+    "actorPotToCallAndStacksReadable",
+    "rangeCoordinateAndDenominatorStable",
+    "filtersDistinguishable",
+    "childCloseRestoresParent",
+    "animationStopsAtQuestion",
+    "noDashboardOrFlatHomeMenu"
+  ],
+  "currentStatus": {
+    "runtimeImplemented": false,
+    "staticAuthorReviewPartial": true,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  },
+  "preflopPostflopBridge": {
+    "same13x13Coordinate": true,
+    "sequence": [
+      "preflop_chart_cell",
+      "selected_course_action",
+      "starting_range_snapshot",
+      "physical_filter",
+      "postflop_p1_context"
+    ],
+    "views": [
+      "before_action",
+      "after_action",
+      "after_known_card_filter",
+      "current_postflop_frame"
+    ],
+    "fixedScale": true,
+    "fixedDenominatorVisible": true,
+    "physicalFilterDistinctFromActionFilter": true,
+    "actionFilterRequiresMatchedPolicy": true,
+    "unknownStateText": "资料不足，不能画成弃牌",
+    "currentStatus": "paper_bridge_written_not_runtime"
+  }
+}

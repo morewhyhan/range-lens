@@ -1,0 +1,51 @@
+{
+  "id": "MINIMAL_MATCHED_FIRST_HAND_PACKAGE_V1",
+  "status": "paper_package_contract_reference_not_acquired",
+  "purpose": "用一手固定A72首手样板验证参考、课程简化、嵌套教学、范围变化和陌生迁移能否形成完整闭环。",
+  "config": {
+    "table": "six_max_cash",
+    "startingStackBB": 100,
+    "preflop": "BTN_open_2.5BB_BB_call",
+    "street": "flop",
+    "board": ["As", "7h", "2d"],
+    "actor": "BB",
+    "potBB": 5.5,
+    "effectiveStackBB": 97.5,
+    "rake": "zero_rake_research_config",
+    "bunching": false,
+    "actionTree": {
+      "flop": ["check", "bet_33pct_pot", "all_in"],
+      "turn": ["check", "bet_75pct_pot", "all_in"],
+      "river": ["check", "bet_75pct_pot", "all_in"],
+      "facingBet": ["fold", "call", "raise_2_5x", "all_in"]
+    }
+  },
+  "packageLayers": {
+    "reference": ["inputFingerprint", "solverCommit", "adapterVersion", "perComboStrategy", "ev", "reachWeight", "rangeBefore", "referenceAfter", "successors", "settlementLedger"],
+    "course": ["policyId", "quantizationRule", "courseActionByCombo", "courseAfter", "differenceLedger", "boundaryAndStopReason"],
+    "lesson": ["goldenPathFrames", "oneQuestionPerFrame", "onePrimaryAction", "parentRestore", "errorLayer", "sourceIdentity", "rangeVisualOrStop"],
+    "holdout": ["sameParentContrast", "exactlyOneChangedField", "responseUpdate", "twoFrameMicroRoute", "unseenSlowSingleStep"]
+  },
+  "releaseStages": [
+    {"id":"P0_input", "requires":["inputFingerprint","sourceRange","actionIds","licenseIdentity"], "release":"preflight_only", "stop":"not_open"},
+    {"id":"P1_fact", "requires":["cardLegality","bestFive","physicalRunouts","amountLedger","physicalFilter"], "release":"fact_only", "stop":"fact_only"},
+    {"id":"P2_reference", "requires":["perComboFrequency","perActionEV","reachWeight","successorIndex","qualityChecks"], "release":"author_reference", "stop":"reference_pending"},
+    {"id":"P3_policy", "requires":["coursePolicy","perComboCourseAction","differenceLedger","courseAfter"], "release":"course_demonstration", "stop":"policy_pending"},
+    {"id":"P4_successor", "requires":["turnSuccessors","riverSuccessors","terminalLedger","rangeDenominatorContinuity"], "release":"continuous_candidate", "stop":"stop_at_current_node"},
+    {"id":"P5_lesson", "requires":["nestedFrames","errorRouting","sourceLabels","rangeVisualOrStop"], "release":"guided_first_pass", "stop":"guided_only"},
+    {"id":"P6_transfer", "requires":["heldoutCases","singleVariableChange","independentScoring","helpFade"], "release":"unseen_single_step_candidate", "stop":"no_independent_release"},
+    {"id":"P7_trial", "requires":["firstAnswer","structureRecall","errorRecovery","continuousTrial","independentReview"], "release":"matched_strategy_practice_candidate", "stop":"trial_pending"}
+  ],
+  "currentEvidence": {
+    "inputCandidate": true,
+    "physicalFactCandidate": true,
+    "reference": false,
+    "coursePolicy": false,
+    "successorChain": false,
+    "lessonPackage": false,
+    "heldoutTransfer": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  },
+  "forbiddenSubstitutions": ["aggregateSolverScreenshot", "similarBoardAsMatchedReference", "courseRuleAsRawGTO", "physicalFilterAsActionFilter", "shortenedActionTreeAsCompleteReference", "authorWalkthroughAsLearnerTrial"]
+}

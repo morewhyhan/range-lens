@@ -1,0 +1,101 @@
+{
+  "status": "author_terminal_sensitivity_calculation_not_target_strategy_or_learner_result",
+  "source": "value-trap-tree-evidence.json",
+  "sourceNodesChecked": 4,
+  "context": {
+    "board": [
+      "Ks",
+      "9h",
+      "2d",
+      "3c",
+      "7h"
+    ],
+    "hero": [
+      "9c",
+      "9d"
+    ],
+    "heroPut": 45,
+    "villainPut": 83,
+    "toCall": 38,
+    "finalPotAfterCall": 201
+  },
+  "declaredTeachingAssumption": {
+    "77": "relative mass2",
+    "KK": "relative mass t",
+    "otherHands": "excluded by this given model",
+    "intervalOrigin": "author sensitivity ranges, not measured opponent confidence intervals"
+  },
+  "threshold": {
+    "winShare": 0.1890547263681592,
+    "kkWeight": 8.578947368421053,
+    "meaning": "call ties fold; no other future decision"
+  },
+  "cases": [
+    {
+      "kkWeightInterval": [
+        1,
+        3
+      ],
+      "fixed77Weight": 2,
+      "callEVIntervalBB": [
+        42.400000000000006,
+        96
+      ],
+      "foldEVBB": 0,
+      "conclusion": "call_strictly_better_throughout",
+      "maximumRegretBB": {
+        "fold": 96,
+        "call": 0
+      }
+    },
+    {
+      "kkWeightInterval": [
+        10,
+        12
+      ],
+      "fixed77Weight": 2,
+      "callEVIntervalBB": [
+        -9.285714285714285,
+        -4.5
+      ],
+      "foldEVBB": 0,
+      "conclusion": "fold_strictly_better_throughout",
+      "maximumRegretBB": {
+        "fold": 0,
+        "call": 9.285714285714285
+      }
+    },
+    {
+      "kkWeightInterval": [
+        7,
+        10
+      ],
+      "fixed77Weight": 2,
+      "callEVIntervalBB": [
+        -4.5,
+        6.666666666666664
+      ],
+      "foldEVBB": 0,
+      "conclusion": "ranking_changes_or_ties_within_interval",
+      "maximumRegretBB": {
+        "fold": 6.666666666666664,
+        "call": 4.5
+      }
+    }
+  ],
+  "ambiguousCaseAlternativeCriteria": {
+    "comparedPolicies": "always fold versus always call only; randomized mixtures not optimized",
+    "maximin": "fold",
+    "minimaxRegret": "call",
+    "defaultRealPlayRecommendation": null,
+    "modelPrior": null,
+    "warning": "Neither criterion is supplied by poker rules or proven appropriate for an unknown real opponent."
+  },
+  "verification": {
+    "independentEndingStackChecks": 14001,
+    "monotonicity": true,
+    "fullGameSolved": false,
+    "realLearnerTrial": false
+  },
+  "ordinaryActionQuestionPublishableForCrossingInterval": false
+}

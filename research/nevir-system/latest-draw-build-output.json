@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "frames": 16,
+  "dirtyOutLosesToFullHouse": true,
+  "freeCallEV": 1.2272727272727266,
+  "actualCallEV": -0.15909090909091006,
+  "previewRestoreHashesEqual": true,
+  "baseBest": [
+    "fold"
+  ],
+  "changedBest": [
+    "call"
+  ],
+  "status": "author_guided_pre_river_sequence_not_full_target_strategy"
+}

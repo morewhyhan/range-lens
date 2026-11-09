@@ -1,0 +1,57 @@
+{
+  "id": "FREQUENCY_QUANTIZATION_EDGE_COMPILATION_V1",
+  "status": "quantization_algorithm_written_reference_missing",
+  "purpose": "将逐手参考动作频率压缩成可解释的0/50/100课程政策，同时保留边缘牌、差异、范围和后继边界。",
+  "requiredInput": ["matched_reference_policy", "per_hand_ev", "reach_weights", "action_menu", "successor_graph", "course_policy_version"],
+  "policySpace": {
+    "values": [0, 0.5, 1],
+    "constraint": "sum(q_a)=1",
+    "unsupportedMultiActionCompression": true
+  },
+  "variables": {
+    "wBefore": "entityWeight(h)*physicalFilter(h)",
+    "referenceFrequency": "p_ref(a|h,node)",
+    "courseWeight": "q_course(a|h,node)",
+    "frequencyLoss": "sum_a(abs(p_ref(a|h,node)-q_a))",
+    "localEvLoss": "EV_ref(h,node)-sum_a(q_a*EV_ref(a|h,node))",
+    "referenceAfter": "w_before(h)*p_ref(a|h,node)",
+    "courseAfter": "w_before(h)*q_course(a|h,node)",
+    "rangeDelta": "courseAfter-referenceAfter",
+    "margin": "top1-top2",
+    "supportCount": "count_a(p_ref(a|h,node)>delta)"
+  },
+  "quantizationOrder": ["preserveSupportedAction", "minimizeFrequencyLoss", "minimizeLocalEvLoss", "retainEdgeUnresolvedOnTie"],
+  "bucketRules": {
+    "100": "singleActionCourseVectorAndSupportNotSilentlyDeleted",
+    "50": "twoActionCourseVectorEachHalfAndMinimumDeclaredLoss",
+    "0": "actionAbsentFromCourseVectorWithDifferenceRecorded",
+    "edge_unresolved": "quantizationOrSupportOrSuccessorNeedsReview"
+  },
+  "edgeSampling": {
+    "fields": ["top1", "top2", "margin", "supportCount", "localEvGap", "quantizationLoss"],
+    "score": "f(1-margin,supportCount,1-normalized(localEvGap),quantizationLoss)",
+    "drawProbability": "proportional(lambda_edge*edgeScore+lambda_core*(1-edgeScore))",
+    "samplingDoesNotChangeEvaluationWeight": true,
+    "thresholdCalibrationRequired": true
+  },
+  "releaseGates": {
+    "missingReferenceBlocksQuantization": true,
+    "missingSuccessorBlocksExactLesson": true,
+    "referenceAndCoursePolicySeparate": true,
+    "physicalFilterSeparateFromActionFilter": true,
+    "sameDenominatorForRangeViews": true,
+    "ancestorRecomputeAfterMenuChange": true,
+    "uncalibratedThresholdCannotGrade": true,
+    "edgeSamplingDoesNotChangePolicyWeight": true,
+    "noRandomFrequencyApproximation": true
+  },
+  "currentEvidence": {
+    "algorithmWritten": true,
+    "matchedReference": false,
+    "quantizationRun": false,
+    "edgeThresholdsCalibrated": false,
+    "coursePolicyCompiled": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

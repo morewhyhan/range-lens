@@ -1,0 +1,35 @@
+{
+  "id": "FIRST_RUN_STORYBOARD_V1",
+  "status": "paper_user_storyboard_not_runtime_trialed",
+  "screens": [
+    {"id":"A","route":"L0","oneTask":"identify_table_and_actor","next":"B"},
+    {"id":"B","route":"L1","oneTask":"select_preflop_chart","next":"C"},
+    {"id":"C","route":"L2-L3","oneTask":"locate_hand_and_read_action","next":"D"},
+    {"id":"D","route":"L4","oneTask":"connect_action_to_legal_ranges","next":"E"},
+    {"id":"E","route":"L5/p1","oneTask":"identify_actor_price_and_history","next":"F"},
+    {"id":"F","route":"L6/p2","oneTask":"read_best_five_and_improvement","next":"G"},
+    {"id":"G","route":"L6/p3","oneTask":"compare_range_relationship","next":"H"},
+    {"id":"H","route":"L6/p4","oneTask":"compare_legal_actions","next":"I"},
+    {"id":"I","route":"L6/p5","oneTask":"execute_legal_amount","next":"J"},
+    {"id":"J","route":"L7/p6","oneTask":"update_after_response","next":"K"},
+    {"id":"K","route":"L7/p6","oneTask":"update_after_new_card","next":"L"},
+    {"id":"L","route":"L8","oneTask":"settle_and_recover_structure","next":"release_checks"}
+  ],
+  "childLayerRules": {
+    "oneOpenChildAtATime": true,
+    "childReturnsToSameParent": true,
+    "blockerAndBackdoorAreNotHomeEntries": true,
+    "missingSuccessorStops": true
+  },
+  "postRunChecks": ["order_recall","layer_location","error_recovery","one_variable_transfer"],
+  "hiddenFromFirstRun": ["flat_35_unit_menu","solver_console","unsupported_exact_frequency","invented_successor","long_term_dashboard"],
+  "releaseGates": {
+    "allOuterStopsHaveEntryAndReturn": true,
+    "currentActionHasPolicyOrReference": true,
+    "everyResponseOrCardHasSuccessorOrStop": true,
+    "sameParentFrameRestoresRangeMoneyHistory": true,
+    "unseenChecksUseFirstAnswerSeparately": true,
+    "runtimeTrial": false,
+    "lowBaselineTrial": false
+  }
+}

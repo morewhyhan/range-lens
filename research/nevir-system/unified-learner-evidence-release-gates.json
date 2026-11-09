@@ -1,0 +1,115 @@
+{
+  "id": "UNIFIED_LEARNER_EVIDENCE_RELEASE_GATES_V1",
+  "status": "paper_unified_protocol_not_administered",
+  "purpose": "将首遍路线、结构回放、单变量迁移、陌生单步、连续三街和NL50边界统一为一个不可跳级的学习者证据闸门。",
+  "authorOnlyIdentifiers": ["V0-V6", "O0-O6", "E0-E6", "P0-P7", "C0-C9", "L0-L8", "p1-p7"],
+  "userFacingIdentifiers": "plain_language_only",
+  "authoritativeChildren": [
+    "122_低基础首遍试读执行包.md",
+    "132_低基础学习者分阶段验证与归因协议.md",
+    "167_低基础结构形成的可证伪验收与遗漏检测合同.md",
+    "169_最终标准可观察验收与NL50边界合同.md",
+    "171_首课后单变量迁移与陌生牌练习协议.md"
+  ],
+  "gates": [
+    {
+      "id": "V0_paper_closure",
+      "order": 0,
+      "userExperience": "none_author_review_only",
+      "requires": ["outer_route", "inner_route", "one_question_one_action", "plain_language_before_terms", "no_speed_gate", "parent_restore", "source_identity", "range_denominator", "successor_or_stop"],
+      "allows": ["paper_release_candidate"],
+      "blocks": ["learner_claim", "strategy_claim"]
+    },
+    {
+      "id": "V1_guided_first_pass",
+      "order": 1,
+      "userExperience": "one_complete_nested_route",
+      "requires": ["first_answer_before_explanation", "one_question_one_action", "plain_language_before_terms", "no_speed_gate", "parent_restore", "state_handoff", "missing_evidence_stop"],
+      "minimumChecks": ["current_actor", "current_layer", "next_layer", "stop_or_action"],
+      "allows": ["guided_route_evidence"],
+      "blocks": ["structure_mastery", "unseen_transfer"]
+    },
+    {
+      "id": "V2_hidden_structure_recall",
+      "order": 2,
+      "userExperience": "titles_and_answer_colors_hidden",
+      "requires": ["nine_outer_stops_in_plain_language", "seven_inner_parent_steps_in_order", "six_inner_edges", "three_unseen_layer_locations", "two_error_recoveries", "one_state_handoff"],
+      "allows": ["structure_recall_evidence"],
+      "blocks": ["strategy_mastery", "continuous_route"]
+    },
+    {
+      "id": "V3_single_variable_transfer",
+      "order": 3,
+      "userExperience": "same_parent_adjacent_contrast",
+      "requires": ["exactly_one_changed_field", "changed_field_before_explanation", "affected_layer", "same_coordinate_range_visual"],
+      "allows": ["adjacent_transfer_evidence"],
+      "blocks": ["random_mixed_practice", "continuous_route"]
+    },
+    {
+      "id": "V4_unseen_slow_single_step",
+      "order": 4,
+      "userExperience": "unseen_case_without_step_titles",
+      "requires": ["matched_reference_or_course_policy", "fact", "compare", "execute", "ledger", "range_after_or_stop", "legal_successor_or_stop"],
+      "allows": ["slow_execution_evidence"],
+      "blocks": ["target_readiness"]
+    },
+    {
+      "id": "V5_continuous_three_street",
+      "order": 5,
+      "userExperience": "flop_turn_river_with_real_successors",
+      "requires": ["history_continuity", "range_denominator_continuity", "ledger_conservation", "action_right_continuity", "settlement_replay"],
+      "allows": ["continuous_route_evidence"],
+      "blocks": ["NL50_claim_without_external_benchmark"]
+    },
+    {
+      "id": "V6_target_external_review",
+      "order": 6,
+      "userExperience": "independent_target_level_review",
+      "requires": ["frozen_six_max_100BB_config", "matched_external_reference", "heldout_decisions", "independent_reconstruction", "real_decision_audit", "external_target_benchmark"],
+      "allows": ["target_readiness_discussion"],
+      "blocks": ["guarantee_of_profit", "age_label_as_evidence"]
+    }
+  ],
+  "attemptFields": [
+    "courseVersion",
+    "gate",
+    "caseId",
+    "seenOrHeldout",
+    "currentParentStep",
+    "firstAnswer",
+    "helpLevel",
+    "hostIntervention",
+    "requiredOutput",
+    "changedField",
+    "errorLayer",
+    "returnTo",
+    "retryAnswer",
+    "nextStepVerbalized",
+    "rangeDeltaOrStopReason",
+    "ledgerAndActionRightCheck",
+    "successorCheck"
+  ],
+  "errorRouting": {
+    "pageOrCopy": "freeze_current_case_revise_one_visible_variable",
+    "sourceOrReference": "stop_current_parent_do_not_grade_strategy",
+    "structure": "replay_recent_parent_and_one_adjacent_contrast",
+    "fact": "return_to_p2_board",
+    "range": "return_to_p3_range",
+    "compare": "return_to_p4_compare",
+    "execute": "return_to_p5_execute",
+    "update": "return_to_p6_update"
+  },
+  "privacy": "session_only_no_training_database",
+  "currentEvidence": {
+    "paperProtocol": true,
+    "paperRoute": true,
+    "runtime": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "unseenTransfer": false,
+    "continuousThreeStreet": false,
+    "externalTargetBenchmark": false,
+    "NL50Evidence": false,
+    "goalCompletionVerified": false
+  }
+}

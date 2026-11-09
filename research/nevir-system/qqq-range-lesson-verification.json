@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "status": "author_four_frame_fact_and_given_rule_sequence_verified_not_strategy_or_learning_pass",
+  "frames": 4,
+  "publicFactForms": 3,
+  "strategicActionQuestions": 0,
+  "physicalReachWeightsChecked": 1700,
+  "independentRankSuitClassChecks": 507,
+  "ownActionPrivateRangeUnchanged": true,
+  "parent": "S09",
+  "maxReturnSnapshots": 1,
+  "parentFullSnapshotRestored": true,
+  "visuallyReviewedFigures": 4,
+  "initialAndPrivateWeights": [
+    361,
+    321
+  ],
+  "postGivenCallWeight": 207.51810267567635,
+  "sourceTargetReached": false,
+  "sourceHashes": {
+    "qqq-range-lesson-packet.json": "71b894a456603e77477bbe9e35f1bab1298eb69eac5f415c410611b8557a5c6f",
+    "qqq-range-lesson-prompts.json": "38e939c26987aa18980211282e4b60e7bfb126d8834ee81d69a81e6a65ff6871",
+    "qqq-range-lesson-teacher.json": "5ac7b53551a1442cf95f451f053c0a123e4ede40adacef98b399c09d3f51c307",
+    "qqq-range-image-review.json": "d1dc6965055aeafca064f7d55254ecd96898c19f317c20abdb907278a2888653",
+    "sb-bb-qqq-reload-export.json": "85b1165b49b2daae3d09896b1b8352a136f8a02bb609586a613a3323bbb7bfc6"
+  },
+  "appChanged": false,
+  "learnerTrials": 0,
+  "unseenAssessment": false
+}

@@ -1,0 +1,821 @@
+{
+  "id": "LOW_BASELINE_VISUAL_LANGUAGE_AUDIT_V1",
+  "status": "paper_low_baseline_visual_language_contract_aligned_trial_missing",
+  "purpose": "检查一遍路线和35项题面是否真的以低基础用户可见语言、稳定视觉和单动作负荷呈现；防止结构正确但屏幕仍然堆术语。",
+  "sources": [
+    "cross-age-low-baseline-acceptance.json",
+    "first-pass-visibility-contract.json",
+    "first-pass-visual-structure-contract.json",
+    "learner-visible-question-contract.json",
+    "first-pass-user-facing-script-contract.json",
+    "first-pass-explanation-deck.json",
+    "first-pass-mental-model-contract.json"
+  ],
+  "counts": {
+    "firstPassFrames": 13,
+    "visibilitySteps": 7,
+    "unitQuestions": 35,
+    "forbiddenLeaks": 0,
+    "failures": 0
+  },
+  "globalChecks": {
+    "audienceFloorIncludesChildLikeLoad": true,
+    "audienceFloorIncludesOlderAdultLoad": true,
+    "colorNotSoleCue": true,
+    "stableCoordinates": true,
+    "slowOperationNotError": true,
+    "noCountdown": true,
+    "oneQuestionGlobal": true,
+    "onePrimaryActionGlobal": true,
+    "rangeVisualRegionFixed": true,
+    "replayRequiresBothLayers": true,
+    "firstAnswerBeforeHelpGlobal": true
+  },
+  "firstPass": [
+    {
+      "frameId": "G0_welcome",
+      "canonicalState": "L0",
+      "visual": "six_max_table",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G1_context",
+      "canonicalState": "L1",
+      "visual": "actor_pointer",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G2_preflop_chart",
+      "canonicalState": "L2",
+      "visual": "fixed_169_grid",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G3_preflop_action",
+      "canonicalState": "L3",
+      "visual": "selected_grid_cell",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G4_range_bridge",
+      "canonicalState": "L4",
+      "visual": "physical_filter",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G5_p1_context",
+      "canonicalState": "p1",
+      "visual": "board",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G6_p2_hand",
+      "canonicalState": "p2",
+      "visual": "best_five_slots",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G7_p3_range",
+      "canonicalState": "p3",
+      "visual": "same_coordinate_range_before",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G8_p4_compare",
+      "canonicalState": "p4",
+      "visual": "legal_actions",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G9_p5_execute",
+      "canonicalState": "p5",
+      "visual": "action_button",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G10_p6_update",
+      "canonicalState": "p6",
+      "visual": "one_changed_field_highlight",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G11_p7_close",
+      "canonicalState": "p7",
+      "visual": "settlement_ledger",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    },
+    {
+      "frameId": "G12_recall_transfer",
+      "canonicalState": "replay_transfer",
+      "visual": "blank_outer_route_map",
+      "checks": {
+        "plainQuestionPresent": true,
+        "onePrimaryAction": true,
+        "centralVisualPresent": true,
+        "technicalDrawerDelayed": true,
+        "forbiddenTermLeak": null,
+        "firstAnswerBeforeHelp": true,
+        "errorReturnPresent": true,
+        "stopBoundaryPresent": true
+      }
+    }
+  ],
+  "visibility": [
+    {
+      "id": "p1_context",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "table",
+        "history",
+        "action"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p2_board",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "cards",
+        "handSummary",
+        "improvement"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p3_range",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "rangeGrid",
+        "filterLegend",
+        "answer"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p4_compare",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "choices",
+        "price",
+        "purpose"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p5_execute",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "action",
+        "amount",
+        "ledger"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p6_update",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "change",
+        "range",
+        "next"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    },
+    {
+      "id": "p7_close",
+      "maxNewConcepts": 1,
+      "visualBlocks": [
+        "result",
+        "error",
+        "next"
+      ],
+      "checks": {
+        "oneNewConcept": true,
+        "visualBlocksAtMostThree": true,
+        "visibleLayerDefined": true,
+        "answerThenDefined": true,
+        "hiddenFieldsCarried": true,
+        "childDetailsSeparate": true
+      }
+    }
+  ],
+  "units": [
+    {
+      "unitId": "1.1",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.2",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.3",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.4",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.5",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.6",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.7",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "1.8",
+      "groupId": "compare.unopened",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.1",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.2",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.3",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.4",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.5",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.6",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "2.7",
+      "groupId": "compare.bet",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.1",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.2",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.3",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.4",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.5",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "3.6",
+      "groupId": "compare.raise",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.1",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.2",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.3",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.4",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.5",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "4.6",
+      "groupId": "update.response",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.1",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.2",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.3",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.4",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.5",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.6",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.7",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    },
+    {
+      "unitId": "5.8",
+      "groupId": "update.card",
+      "checks": {
+        "onePrimaryAction": true,
+        "unknownButton": true,
+        "firstAnswerBeforeHelp": true,
+        "technicalAliasDelayed": true,
+        "noForbiddenTerm": true,
+        "centerVisualAtMostThreeObjects": true,
+        "parentAndReturnDeclared": true
+      }
+    }
+  ],
+  "currentEvidence": {
+    "paperAligned": true,
+    "runtimeObserved": false,
+    "lowBaselineTrialObserved": false,
+    "routeComprehensionObserved": false,
+    "slowExecutionObserved": false,
+    "NL50Evidence": false
+  },
+  "releaseGate": {
+    "passed": false,
+    "reason": "纸面语言、视觉和负荷检查全部通过，但没有真实低基础用户首答、提示次数、回退和迁移观察记录。"
+  }
+}

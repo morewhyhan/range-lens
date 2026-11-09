@@ -1,0 +1,839 @@
+{
+  "status": "author_trial_packet_not_administered",
+  "date": "2026-10-19",
+  "purpose": "V2 首次导览后的行动定位、金额与终点诊断；不测最优策略，不是NL50资格题。",
+  "scenario": {
+    "players": 6,
+    "initialBB": 100,
+    "ante": 0,
+    "preflop": "UTG/HJ/CO弃，BTN开到2.5BB，SB弃，BB跟；SB死盲0.5BB留池。",
+    "flopStartingPotBB": 5.5,
+    "activeStartingStacksBB": {
+      "BTN": 97.5,
+      "BB": 97.5
+    },
+    "moneyScope": "抽水前账本；终局毛额，未指定净抽水"
+  },
+  "learnerPrompt": {
+    "first": "下一步先点哪里？自己／对手／公共牌／底池／我不知道。",
+    "ifSelf": "只选现在合法的动作，并填待补额。不要求选最佳策略。",
+    "ifBoardOrPot": "说明接下来发生什么，以及能不能再下注。"
+  },
+  "administration": {
+    "showOneCaseAtATime": true,
+    "stepNamesHidden": true,
+    "firstResponseBeforeFollowups": true,
+    "noThinkAloudRequirementDuringFirstResponse": true,
+    "allowSlowAndHistoryReview": true,
+    "unknownCountsAsError": true,
+    "teachingAfterFirstResponse": true,
+    "priorFeedbackMayAffectLaterResponses": true,
+    "wholePacketUnaidedClaimAfterRemediation": false,
+    "unhelpedRetryNeedsFreshInstance": true,
+    "sessionOnly": true
+  },
+  "leakage": "这是公开的作者与试读候选题，不是冻结保留考试；阅读或练过后不得拿同题/花色同构声称陌生迁移。",
+  "cases": [
+    {
+      "id": "C01",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 5.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BTN",
+        "lastAggression": null,
+        "history": [
+          "大盲BB过牌"
+        ]
+      },
+      "answer": {
+        "kind": "hero_free",
+        "location": "self",
+        "branch": "compare.unopened",
+        "legalHeroActions": [
+          "check",
+          "bet"
+        ],
+        "toCallBB": 0,
+        "nextOperation": "看清后比较过牌与下注，不能直接以牌面或轮次跳到结算"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C02",
+      "hero": "BB",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "turn",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h"
+        ],
+        "potBB": 5.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": null,
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h"
+        ]
+      },
+      "answer": {
+        "kind": "hero_free",
+        "location": "self",
+        "branch": "compare.unopened",
+        "legalHeroActions": [
+          "check",
+          "bet"
+        ],
+        "toCallBB": 0,
+        "nextOperation": "看清后比较过牌与下注，不能直接以牌面或轮次跳到结算"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C03",
+      "hero": "BB",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 7.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 95.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 2
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB"
+        ]
+      },
+      "answer": {
+        "kind": "hero_facing_bet",
+        "location": "self",
+        "branch": "compare.bet",
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "toCallBB": 2,
+        "nextOperation": "根据此下注范围和价格比较合法动作；不是选首次CB尺寸"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C04",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "river",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h",
+          "2c"
+        ],
+        "potBB": 9.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 93.5
+        },
+        "streetPaidBB": {
+          "BB": 4,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BTN",
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发河牌2c",
+          "大盲BB下注4BB"
+        ]
+      },
+      "answer": {
+        "kind": "hero_facing_bet",
+        "location": "self",
+        "branch": "compare.bet",
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "toCallBB": 4,
+        "nextOperation": "根据此下注范围和价格比较合法动作；不是选首次CB尺寸"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C05",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 14.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 95.5,
+          "SB": 99.5,
+          "BB": 90.5
+        },
+        "streetPaidBB": {
+          "BB": 7,
+          "BTN": 2
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BTN",
+        "lastAggression": "raise",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB",
+          "大盲BB加注到7BB"
+        ]
+      },
+      "answer": {
+        "kind": "hero_facing_raise",
+        "location": "self",
+        "branch": "compare.raise",
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "toCallBB": 5,
+        "nextOperation": "用加注范围与新价格重新比较，不沿用原先价值下注的理由"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C06",
+      "hero": "BB",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "turn",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h"
+        ],
+        "potBB": 67.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 55.5,
+          "SB": 99.5,
+          "BB": 77.5
+        },
+        "streetPaidBB": {
+          "BB": 18,
+          "BTN": 40
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": "raise",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB",
+          "大盲BB补2BB跟注",
+          "发转牌6h",
+          "大盲BB过牌",
+          "按钮BTN下注6BB",
+          "大盲BB加注到18BB",
+          "按钮BTN加注到40BB"
+        ]
+      },
+      "answer": {
+        "kind": "hero_facing_raise",
+        "location": "self",
+        "branch": "compare.raise",
+        "legalHeroActions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "toCallBB": 22,
+        "nextOperation": "用加注范围与新价格重新比较，不沿用原先价值下注的理由"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C07",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 7.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 95.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 2
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB"
+        ]
+      },
+      "answer": {
+        "kind": "wait_for_other",
+        "location": "other",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "等待对手回应，再按其实际动作更新；不能替他作决定"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C08",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 5.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "street_closed",
+        "next": null,
+        "lastAggression": null,
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌"
+        ]
+      },
+      "answer": {
+        "kind": "deal_next",
+        "location": "board",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "发下一街，再从新局面看清；不重置前序、范围或金额"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C09",
+      "hero": "BB",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "river",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h",
+          "2c"
+        ],
+        "potBB": 5.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": null,
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发河牌2c"
+        ]
+      },
+      "answer": {
+        "kind": "hero_free",
+        "location": "self",
+        "branch": "compare.unopened",
+        "legalHeroActions": [
+          "check",
+          "bet"
+        ],
+        "toCallBB": 0,
+        "nextOperation": "看清后比较过牌与下注，不能直接以牌面或轮次跳到结算"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C10",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "turn",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h"
+        ],
+        "potBB": 200.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 0,
+          "SB": 99.5,
+          "BB": 0
+        },
+        "streetPaidBB": {
+          "BB": 97.5,
+          "BTN": 97.5
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "runout",
+        "next": null,
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB全下97.5BB",
+          "按钮BTN补97.5BB跟注"
+        ]
+      },
+      "answer": {
+        "kind": "runout",
+        "location": "board",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "发完剩余公共牌后摊牌；不再生成双方下注"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C11",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "flop",
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ],
+        "potBB": 7.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 95.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 2
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB",
+          "BB"
+        ],
+        "phase": "fold_terminal",
+        "next": null,
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN下注2BB",
+          "大盲BB弃牌"
+        ]
+      },
+      "answer": {
+        "kind": "settle_fold",
+        "location": "pot",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "退回未匹配投入并结算；不发下一张牌",
+        "settlement": {
+          "returnUncalledBB": 2,
+          "matchedPotAwardBB": 5.5,
+          "winner": "BTN",
+          "endingWinnerBB": 103
+        }
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C12",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "river",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h",
+          "2c"
+        ],
+        "potBB": 5.5,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "showdown",
+        "next": null,
+        "lastAggression": null,
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发河牌2c",
+          "大盲BB过牌",
+          "按钮BTN过牌"
+        ]
+      },
+      "answer": {
+        "kind": "settle_showdown",
+        "location": "pot",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "行动结束，比较最佳五张并结算",
+        "settlement": {
+          "winner": "BTN",
+          "grossPotBB": 5.5,
+          "endingWinnerBB": 103
+        }
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。",
+      "revealedVillainHole": [
+        "Qh",
+        "8h"
+      ]
+    },
+    {
+      "id": "C13",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "turn",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h"
+        ],
+        "potBB": 103,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 0,
+          "SB": 99.5,
+          "BB": 97.5
+        },
+        "streetPaidBB": {
+          "BB": 0,
+          "BTN": 97.5
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BB",
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB过牌",
+          "按钮BTN全下97.5BB"
+        ]
+      },
+      "answer": {
+        "kind": "wait_for_other",
+        "location": "other",
+        "legalHeroActions": [],
+        "toCallBB": null,
+        "nextOperation": "等待对手回应，再按其实际动作更新；不能替他作决定"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    },
+    {
+      "id": "C14",
+      "hero": "BTN",
+      "heroHole": [
+        "As",
+        "Kd"
+      ],
+      "state": {
+        "street": "turn",
+        "board": [
+          "Kc",
+          "8d",
+          "3s",
+          "6h"
+        ],
+        "potBB": 103,
+        "stacksBB": {
+          "UTG": 100,
+          "HJ": 100,
+          "CO": 100,
+          "BTN": 97.5,
+          "SB": 99.5,
+          "BB": 0
+        },
+        "streetPaidBB": {
+          "BB": 97.5,
+          "BTN": 0
+        },
+        "foldedSeats": [
+          "UTG",
+          "HJ",
+          "CO",
+          "SB"
+        ],
+        "phase": "betting",
+        "next": "BTN",
+        "lastAggression": "bet",
+        "history": [
+          "大盲BB过牌",
+          "按钮BTN过牌",
+          "发转牌6h",
+          "大盲BB全下97.5BB"
+        ]
+      },
+      "answer": {
+        "kind": "hero_facing_bet",
+        "location": "self",
+        "branch": "compare.bet",
+        "legalHeroActions": [
+          "fold",
+          "call"
+        ],
+        "toCallBB": 97.5,
+        "nextOperation": "根据此下注范围和价格比较合法动作；不是选首次CB尺寸"
+      },
+      "scope": "行动与流程检查，不考最优策略，不要求对手遵循某张范围图。"
+    }
+  ],
+  "scopeLimits": [
+    "只支持所列单挑、等有效筹码与完整加注例；不是一般规则引擎",
+    "已知牌合法与金额守恒不证明真实读者会做",
+    "同一结构的多题不等于足够统计样本",
+    "没有真实试读记录，V2仍未验证",
+    "无策略答案，不能用正确定位冒充V3/V4"
+  ]
+}

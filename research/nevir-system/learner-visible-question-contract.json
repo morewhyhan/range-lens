@@ -1,0 +1,1107 @@
+{
+  "id": "LEARNER_VISIBLE_QUESTION_CONTRACT_V1",
+  "status": "35_unit_plain_prompt_contract_compiled_trial_missing",
+  "purpose": "为35项建立可机器检查的低基础主问题、中心视觉和技术词隔离合同。",
+  "source": "full-nested-learning-route.json",
+  "forbiddenTechnicalTerms": [
+    "EV",
+    "GTO",
+    "CFR",
+    "blocker",
+    "backdoor",
+    "frequency",
+    "frequencies",
+    "successor",
+    "denominator",
+    "action-filter",
+    "physical-filter",
+    "range advantage",
+    "nut advantage"
+  ],
+  "globalRules": {
+    "oneQuestion": true,
+    "onePrimaryAction": true,
+    "centerVisualMaxObjects": 3,
+    "unknownButton": true,
+    "technicalTermsNotSoleNavigation": true,
+    "answerColorsNotSoleSemantics": true,
+    "childReturnsToParent": true
+  },
+  "groupVisuals": {
+    "compare.unopened": {
+      "title": "牌面、对手可能拿的牌和两个动作",
+      "objects": [
+        "board",
+        "opponent_possible_hands",
+        "legal_actions"
+      ],
+      "questionFrame": "现在没人下注，我要比较什么？"
+    },
+    "compare.bet": {
+      "title": "待补金额、底池和动作三分栏",
+      "objects": [
+        "to_call",
+        "pot",
+        "legal_actions"
+      ],
+      "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+    },
+    "compare.raise": {
+      "title": "前后价格、继续组合和加注按钮",
+      "objects": [
+        "price_before_after",
+        "continue_hands",
+        "raise_action"
+      ],
+      "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+    },
+    "update.response": {
+      "title": "动作前后图、账本和行动箭头",
+      "objects": [
+        "range_before_after",
+        "ledger",
+        "action_arrow"
+      ],
+      "questionFrame": "对手回应后，哪一件事真的改变了？"
+    },
+    "update.card": {
+      "title": "新牌高亮、最佳五张和组合划除",
+      "objects": [
+        "new_card",
+        "best_five",
+        "combo_removal"
+      ],
+      "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+    }
+  },
+  "rows": [
+    {
+      "sequence": 1,
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "先点出较差而愿意跟的一组，再移动它支付的钱",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 2,
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "点出会反超的实际跑牌，再比较退出或继续",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 3,
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "先指出本来赢自己且会退出的候选",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 4,
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "分别点出过牌、被跟、被加后还保留什么机会",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 5,
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "同一手比较差牌付款还是全部退出",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 6,
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "固定强牌，比较直接下注与诱发弱牌投入",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 7,
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "把所有候选分支合起来看是否值得继续投入",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 8,
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "只改金额及对应响应，再比较差额",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "牌面、对手可能拿的牌和两个动作",
+        "objects": [
+          "board",
+          "opponent_possible_hands",
+          "legal_actions"
+        ],
+        "questionFrame": "现在没人下注，我要比较什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 9,
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "把可赢价值与可赢诈唬分开，再比较跟和加",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 10,
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "固定价格改变诈唬份量，再固定范围改价格",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 11,
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "先看成花仍输，再打开未来承压分支",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 12,
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "点当前可赢与当前落后两组，合并去重后的终局份额，再比较全下跟弃",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 13,
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "固定强牌，看差牌跟加与只继续下注的差异",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 14,
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "只改对加注的弃牌分支，重新比较",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 15,
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "把跟/加所有后续计完，允许直接弃牌",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "待补金额、底池和动作三分栏",
+        "objects": [
+          "to_call",
+          "pot",
+          "legal_actions"
+        ],
+        "questionFrame": "对手下注后，我要付多少钱，继续的理由是什么？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 16,
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "在原筹码上摆出新的待补与跟后池",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 17,
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "保留原差牌付款者作对照，再看谁真正加注",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 18,
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "把再加后的未来和剩余投入重新展开",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 19,
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "看更差牌是否仍付钱，是否失去后续诈唬",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 20,
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "分别点被移除的继续牌与弃牌，再算整条再加线",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 21,
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentFrame": "p4_compare",
+      "returnTo": "p4_compare",
+      "plainQuestion": "只点合法菜单；区分自己全下仍待回应",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "前后价格、继续组合和加注按钮",
+        "objects": [
+          "price_before_after",
+          "continue_hands",
+          "raise_action"
+        ],
+        "questionFrame": "已经有人加注，我还要重新比较哪些牌？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 22,
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "按实际响应留下候选，保留慢打可能",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 23,
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "不删除所有弱牌，按有依据的过牌概率更新",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 24,
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "两边分别保留实际走该线的候选",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 25,
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "同牌钱换历史，重新筛选并比较",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 26,
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "筹码进池、后手减少、移动行动者",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 27,
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "并排比较当时的依据和某一次输赢，不倒推",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "动作前后图、账本和行动箭头",
+        "objects": [
+          "range_before_after",
+          "ledger",
+          "action_arrow"
+        ],
+        "questionFrame": "对手回应后，哪一件事真的改变了？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 28,
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "只亮出新加入最佳五张的实体牌",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 29,
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "只在实际留下的候选里看改善",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 30,
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "分别点成顺/成花者及仍在听者",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 31,
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "公共牌成对后重新拼五张",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 32,
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "同一高牌让某组降级、另一组配到",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 33,
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "先指出没变的关系，再带回历史与价格",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 34,
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "含新牌的组合划除，其余继承权重",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    },
+    {
+      "sequence": 35,
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentFrame": "p6_update",
+      "returnTo": "p6_update",
+      "plainQuestion": "关闭未来补牌理由，转向当前胜负与付款/退出",
+      "forbiddenTechnicalTerms": [],
+      "centerVisual": {
+        "title": "新牌高亮、最佳五张和组合划除",
+        "objects": [
+          "new_card",
+          "best_five",
+          "combo_removal"
+        ],
+        "questionFrame": "新牌出现后，哪些牌变了，哪些没有变？"
+      },
+      "onePrimaryAction": true,
+      "unknownButton": true,
+      "firstAnswerBeforeHelp": true,
+      "visibleLayer": "plain_language",
+      "technicalAliasLocation": "answer_explanation_or_evidence_drawer",
+      "currentEvidence": {
+        "paperContract": true,
+        "runtime": false,
+        "beginnerTrial": false
+      }
+    }
+  ],
+  "lint": {
+    "rowCount": 35,
+    "rowsWithForbiddenTerms": [],
+    "rowsWithMissingQuestion": [],
+    "rowsWithTooManyVisualObjects": []
+  },
+  "currentEvidence": {
+    "all35RowsCompiled": true,
+    "lintPassed": true,
+    "runtime": false,
+    "beginnerTrial": false,
+    "matchedReference": false
+  }
+}

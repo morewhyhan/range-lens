@@ -1,0 +1,29 @@
+{
+  "status": "runtime_calibration_and_independent_verification_passed_not_flop_solved",
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "sourceCleanBeforeBuild": true,
+  "command": "PowerShell process-local RUSTFLAGS='-A dangerous_implicit_autorefs'; cargo run --release --locked --manifest-path research/solver-probe/Cargo.toml",
+  "liveHandle": null,
+  "lockHash": "3d344a0ce85a1bc2a2667a9bd8b15aa1298a23beb349b316235973c3fb9158aa",
+  "manifestHash": "da66a7c1eb8d7b4c8b782e6911f66ace0432f6e80e5252957460153aa93a17f7",
+  "probeSourceHash": "f65ff0b61fe7a231f2b61f04f93aa5087e9f51ff66bbec9fabb28436296d9f8f",
+  "verificationScript": "scripts/verify-nevir-engine-runtime.mjs",
+  "runtimeResultExists": true,
+  "actualCalibrationPassed": true,
+  "requestedFullFlopSolveStarted": false,
+  "appChanged": false,
+  "previousAttempt": {
+    "command": "cargo run --release --manifest-path research/solver-probe/Cargo.toml",
+    "sessionId": 13498,
+    "exitCode": 1,
+    "reason": "Dependency acquisition completed; Rust1.96 denies dangerous_implicit_autorefs in three original action_tree.rs expressions."
+  },
+  "completedAttempt": {
+    "sessionId": 11745,
+    "exitCode": 0,
+    "sourceChanged": false,
+    "compatibilityFlag": "-A dangerous_implicit_autorefs",
+    "scope": "Allows old source to compile; not a memory safety proof."
+  },
+  "independentVerification": "engine-runtime-verification.json"
+}

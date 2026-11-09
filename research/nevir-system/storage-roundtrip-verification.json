@@ -1,0 +1,14 @@
+{
+  "appChanged": false,
+  "bytes": 11137,
+  "learnerTrials": 0,
+  "memoPreserved": true,
+  "memoryEstimate": 144948,
+  "memoryLimitRejectedSmallCap": true,
+  "metric": 0.0,
+  "ok": true,
+  "rootActionEVPreserved": true,
+  "rootStrategyPreserved": true,
+  "sourceRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "status": "tiny_compressed_strategy_file_roundtrip_not_full_reference"
+}

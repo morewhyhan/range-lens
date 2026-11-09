@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "btn-bb-Ks9s4s-multi",
+      "scene": "btn-bb",
+      "category": "M",
+      "board": [
+        "Ks",
+        "9s",
+        "4s"
+      ],
+      "folder": "btn-bb-Ks9s4s-multi"
+    },
+    {
+      "id": "btn-bb-QhQs4d-multi",
+      "scene": "btn-bb",
+      "category": "P",
+      "board": [
+        "Qh",
+        "Qs",
+        "4d"
+      ],
+      "folder": "btn-bb-QhQs4d-multi"
+    },
+    {
+      "id": "btn-bb-AhTd6h-multi",
+      "scene": "btn-bb",
+      "category": "A",
+      "board": [
+        "Ah",
+        "Td",
+        "6h"
+      ],
+      "folder": "btn-bb-AhTd6h-multi"
+    },
+    {
+      "id": "btn-bb-KsQhJd-multi",
+      "scene": "btn-bb",
+      "category": "KQ",
+      "board": [
+        "Ks",
+        "Qh",
+        "Jd"
+      ],
+      "folder": "btn-bb-KsQhJd-multi"
+    },
+    {
+      "id": "btn-bb-JhTh6c-multi",
+      "scene": "btn-bb",
+      "category": "JT",
+      "board": [
+        "Jh",
+        "Th",
+        "6c"
+      ],
+      "folder": "btn-bb-JhTh6c-multi"
+    },
+    {
+      "id": "btn-bb-9s8h6d-multi",
+      "scene": "btn-bb",
+      "category": "L",
+      "board": [
+        "9s",
+        "8h",
+        "6d"
+      ],
+      "folder": "btn-bb-9s8h6d-multi"
+    },
+    {
+      "id": "sb-bb-Ks9s4s-multi",
+      "scene": "sb-bb",
+      "category": "M",
+      "board": [
+        "Ks",
+        "9s",
+        "4s"
+      ],
+      "folder": "sb-bb-Ks9s4s-multi"
+    },
+    {
+      "id": "sb-bb-QhQs4d-multi",
+      "scene": "sb-bb",
+      "category": "P",
+      "board": [
+        "Qh",
+        "Qs",
+        "4d"
+      ],
+      "folder": "sb-bb-QhQs4d-multi"
+    },
+    {
+      "id": "sb-bb-AhTd6h-multi",
+      "scene": "sb-bb",
+      "category": "A",
+      "board": [
+        "Ah",
+        "Td",
+        "6h"
+      ],
+      "folder": "sb-bb-AhTd6h-multi"
+    },
+    {
+      "id": "sb-bb-KsQhJd-multi",
+      "scene": "sb-bb",
+      "category": "KQ",
+      "board": [
+        "Ks",
+        "Qh",
+        "Jd"
+      ],
+      "folder": "sb-bb-KsQhJd-multi"
+    },
+    {
+      "id": "sb-bb-JhTh6c-multi",
+      "scene": "sb-bb",
+      "category": "JT",
+      "board": [
+        "Jh",
+        "Th",
+        "6c"
+      ],
+      "folder": "sb-bb-JhTh6c-multi"
+    },
+    {
+      "id": "sb-bb-9s8h6d-multi",
+      "scene": "sb-bb",
+      "category": "L",
+      "board": [
+        "9s",
+        "8h",
+        "6d"
+      ],
+      "folder": "sb-bb-9s8h6d-multi"
+    }
+  ]
+}

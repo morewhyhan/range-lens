@@ -1,0 +1,55 @@
+{
+  "id": "REFERENCE_COURSE_POLICY_LEDGER_V1",
+  "status": "paper_comparison_contract_not_populated",
+  "purpose": "按同一配置逐单元记录来源、物理事实、参考策略、课程政策、差异、范围、后继和教学发布身份，防止把工具输出或孤立案例直接当成课程答案。",
+  "repositoryRoles": {
+    "equityCalculator": {"repository": "gto-wizard/equity-calculator", "layer": "physical", "canProduce": ["showdownEquity", "legalRunouts", "splitPotShare"], "cannotProduce": ["actionFrequency", "rangePolicy", "successorStrategy"]},
+    "handEvaluator": {"repository": "b-inary/holdem-hand-evaluator", "layer": "physical", "canProduce": ["bestFive", "handClass", "showdownOrdering"], "cannotProduce": ["bettingPolicy", "rangeUpdate"]},
+    "postflopSolver": {"repository": "b-inary/postflop-solver", "layer": "reference", "canProduce": ["perComboActionFrequency", "actionEV", "reachWeight", "rangeAfter", "successors"], "cannotProduce": ["courseSimplification", "learnerMastery", "NL50Readiness"]},
+    "desktopAndWasm": {"repository": "b-inary/desktop-postflop and b-inary/wasm-postflop", "layer": "presentation_reference", "canProduce": ["nodeNavigation", "rangeMatrixView", "browserOrDesktopShell"], "cannotProduce": ["precisionGradeKey", "courseSequence"]}
+  },
+  "requiredBlocks": ["identity", "physical", "reference", "course", "difference", "range", "successor", "teaching"],
+  "releaseIdentities": ["fact", "demonstration", "course_rule", "reference_frequency", "reference_policy", "not_open"],
+  "phaseOrder": ["identity", "physical", "reference", "course", "difference", "range", "successor", "teaching"],
+  "formulas": {
+    "before": "w_before(h)=entityWeight(h)*physicalFilter(h)",
+    "referenceAfter": "w_reference_after(h,a)=w_before(h)*P_reference(a|h,node)",
+    "courseAfter": "w_course_after(h,a)=w_before(h)*P_course(a|h,node)",
+    "view": "view_after(h,a)=w_after(h,a)/sum_h(w_after(h,a))",
+    "actionDelta": "P_course(a|h,node)-P_reference(a|h,node)",
+    "rangeDelta": "view_course_after(h,a)-view_reference_after(h,a)"
+  },
+  "hardGates": {
+    "sameInputFingerprintForComparison": true,
+    "physicalRemovalDistinctFromActionFilter": true,
+    "unknownDistinctFromZero": true,
+    "coursePolicyDistinctFromReferencePolicy": true,
+    "changedActionMenuRequiresAncestorRecompute": true,
+    "missingReferenceBlocksReferenceFrequency": true,
+    "missingSuccessorBlocksReferencePolicy": true,
+    "noRangeInvented": true,
+    "noSolverOutputAsLearnerEvidence": true
+  },
+  "representativeStatus": {
+    "unitId": "1.5",
+    "groupId": "compare.unopened",
+    "sourceEvidence": "size-comparison-evidence.json",
+    "identity": "candidate_partial",
+    "physical": "fact_candidate",
+    "reference": "missing",
+    "course": "course_rule_candidate",
+    "difference": "not_comparable",
+    "range": "physical_only",
+    "successor": "missing",
+    "teaching": "guided_course_rule_only",
+    "releaseStatus": "course_rule_candidate_not_released"
+  },
+  "currentEvidence": {
+    "schemaWritten": true,
+    "A72MatchedReference": false,
+    "all35LedgersPopulated": false,
+    "runtimeCompiler": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

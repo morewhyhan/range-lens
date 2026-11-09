@@ -1,0 +1,74 @@
+{
+  "status": "reference_candidate_not_releasable",
+  "inputFingerprint": "3abe4b300b8d43f59071610032dc613ce1c790253c57fcf901b2f8547378e868",
+  "engineRevision": "9d1509fe5077d019825f833eed04b16d342dfda1",
+  "root": {
+    "board": [
+      "Qs",
+      "Qh",
+      "Qd"
+    ],
+    "actions": [
+      "Check",
+      "Bet(198)",
+      "Bet(402)",
+      "AllIn(9700)"
+    ],
+    "actor": 0,
+    "combinations": 487,
+    "totalMass": 154515,
+    "policySumRange": [
+      0.999999962747097,
+      1.000000037951395
+    ],
+    "frequencies": [
+      0.0010241800010417626,
+      0.5541444504702319,
+      0.4448313700040639,
+      0
+    ],
+    "reportedFrequencies": [
+      0.0010241800010417626,
+      0.5541444504702319,
+      0.4448313700040639,
+      0
+    ],
+    "actionEVEntries": 1948,
+    "rangeSupportEntries": [
+      487,
+      425,
+      378,
+      457
+    ]
+  },
+  "verification": {
+    "physicalReachWeightsChecked": 12768,
+    "selectedDecisionRows": 4248,
+    "terminalHandEVChecks": 413,
+    "rootReloadExactlyPreserved": true
+  },
+  "releaseBlockers": [
+    "候选输出尚未通过完整独立策略验证",
+    "范围视图明确标记为不可判分",
+    "没有恢复用户课程的完整求解配置",
+    "不是NL50目标参考"
+  ],
+  "viewLayers": [
+    "policy",
+    "reach_before",
+    "reach_after",
+    "delta",
+    "successor"
+  ],
+  "rolloutEvidence": {
+    "status": "full_declared_tree_forward_sampling_consistency_not_best_response_or_accuracy_proof",
+    "samples": 80000,
+    "independentActionLedgerChecks": 398446,
+    "intervalsAllContainEngineValue": true,
+    "independentBestResponseVerified": false,
+    "solverTargetCertified": false
+  },
+  "resultSHA256": "eb934dc774a5a2769728450f35c415bf84e12e4040084afb0b34f3361fce417b",
+  "rangeViewsSHA256": "3e1409b2f7c59e918abdef4314f7b4bc0f06b52c0351059351f37e2e1f7c980c",
+  "rolloutVerificationSHA256": "9779b297fe55f6d68723dd5ce55874a3d3e81941683fe5377da5677130637657"
+}

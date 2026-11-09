@@ -1,0 +1,7 @@
+{
+  "observedUtc": "2026-10-21T09:18:02.5322611Z",
+  "source": "Windows GlobalMemoryStatusEx; instantaneous, not a future reservation",
+  "totalPhysicalBytes": 16962281472,
+  "availablePhysicalBytes": 6801666048,
+  "loadPercent": 59
+}

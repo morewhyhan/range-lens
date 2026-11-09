@@ -1,0 +1,82 @@
+{
+  "id": "FIRST_PASS_OUTER_ROUTE_TRIAL_KEY_V1",
+  "status": "paper_outer_route_answer_key_not_learner_evidence",
+  "sourcePrompts": "first-pass-outer-route-trial-prompts.json",
+  "route": ["L0", "L1", "L2", "L3", "L4"],
+  "doNotGrade": ["best_action", "solver_frequency", "profitability", "NL50_readiness"],
+  "cases": [
+    {
+      "id": "OL01",
+      "routeNode": "L0",
+      "expected": {
+        "table": "six_max_cash",
+        "startingStackBB": 100,
+        "trainingGoal": "first_pass_outer_to_inner_route"
+      },
+      "next": "L1",
+      "errorReturn": "L0",
+      "handoff": "六人现金桌｜100BB｜目标：沿L0→L4进入翻后七步",
+      "changedField": "table_goal_stack"
+    },
+    {
+      "id": "OL02",
+      "routeNode": "L1",
+      "expected": {
+        "heroSeat": "BTN",
+        "villainSeat": "BB",
+        "actionHistoryIdentity": "UTG_HJ_CO_fold_BTN_open_2_5_SB_fold_BB_call_flop_BB_check",
+        "actor": "BTN",
+        "potBB": 5.5,
+        "effectiveStackBB": 97.5,
+        "toCallBB": 0
+      },
+      "next": "L2",
+      "errorReturn": "L1",
+      "handoff": "BTN vs BB｜翻牌底池5.5BB｜轮到BTN｜待补0BB",
+      "changedField": "context_identity"
+    },
+    {
+      "id": "OL03",
+      "routeNode": "L2",
+      "expected": {
+        "chartIdentity": "open-BTN",
+        "gridCell": {"hand": "AKo", "row": 1, "col": 0},
+        "rangeOwner": "BTN"
+      },
+      "next": "L3",
+      "errorReturn": "L2",
+      "handoff": "open-BTN图｜AKo｜第1行第0列｜范围属于BTN",
+      "changedField": "chart_coordinate"
+    },
+    {
+      "id": "OL04",
+      "routeNode": "L3",
+      "expected": {
+        "preflopActionIdentity": "raise",
+        "actionWeight": 1,
+        "actionLabel": "open_raise"
+      },
+      "next": "L4",
+      "errorReturn": "L3",
+      "handoff": "开池加注｜权重100%｜交给范围交接",
+      "changedField": "preflop_action_identity"
+    },
+    {
+      "id": "OL05",
+      "routeNode": "L4",
+      "expected": {
+        "rangeSnapshotIdentity": "BTN_open_chart_plus_BB_defense_source",
+        "physicalFilter": "remove_known_hero_and_board_cards_before_action_filter",
+        "denominator": "must_be_carried_from_the_same_range_snapshot",
+        "rangeSnapshotHash": "compiler_output_required",
+        "rangeBefore": "reference_or_course_package_required",
+        "stopReasonIfMissing": "range_source_or_denominator_missing"
+      },
+      "next": "p1",
+      "errorReturn": "L4",
+      "handoff": "交给p1：范围来源、物理排除和同一分母；缺资料留在L4",
+      "changedField": "range_handoff_identity"
+    }
+  ],
+  "gradingRule": "OL01—OL04按结构字段精确判定；OL05先判是否把来源、物理排除和同一分母说清，缺少匹配范围时必须选择停止，不得猜动作或伪造组合数。"
+}

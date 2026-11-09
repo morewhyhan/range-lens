@@ -1,0 +1,16 @@
+{
+  "id":"FIRST_PASS_INTEGRATION_CONTRACT_V1",
+  "status":"paper_route_integration_not_runtime",
+  "mainRoute":"first-hand-lesson-v3-candidate.json",
+  "mainRouteSequence":["S01","S02","S03","S04","R01","S05","S06","S07","S08","S09","S10","S11","S12","S13","S14","S15","S16","S17","S18"],
+  "childBindings":[
+    {"card":"REP_1_5","anchor":"S05","parent":"p4_compare","kind":"same_state","returnTo":"S05","mutatesParent":false},
+    {"card":"REP_2_1","anchor":"S05","parent":"p4_compare","kind":"teaching_child_snapshot","returnTo":"S05","mutatesParent":false},
+    {"card":"REP_3_1","anchor":"S05","parent":"p4_compare","kind":"teaching_child_snapshot","returnTo":"S05","mutatesParent":false},
+    {"card":"REP_4_5","anchor":"S11","parent":"p6_update","kind":"same_state","returnTo":"S11","mutatesParent":false},
+    {"card":"REP_5_7","anchor":"S08","parent":"p6_update","kind":"same_state","returnTo":"S08","mutatesParent":false}
+  ],
+  "parentSnapshotFields":["parentFrameHash","routeNode","returnTo","firstAnswer","state","history","ledger","rangeView"],
+  "rules":{"oneChildAtATime":true,"childReturnsToExactAnchor":true,"childDoesNotMutateParent":true,"teachingSnapshotCannotCreateSuccessor":true,"noFlatRepresentativeMenu":true,"missingReferenceDowngradesChild":true,"childCompletionDoesNotGrantFirstPass":true},
+  "currentStatus":{"routePaperIntegrated":true,"runtimeImplemented":false,"parentRestoreRuntimeVerified":false,"matchedReference":false,"learnerTrial":false,"NL50Evidence":false}
+}

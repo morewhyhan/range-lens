@@ -1,0 +1,5424 @@
+{
+  "id": "COURSE_POLICY_CANDIDATE_LEDGER_V1",
+  "status": "paper_course_policy_candidates_extracted_not_compiled_or_released",
+  "purpose": "把原材料明确写出的课程动作候选与条件逐条提取，保留原文哈希和数值上下文，明确哪些字段仍需编译器、匹配参考或停止卡确认。",
+  "sources": [
+    "src/data/sources.json",
+    "material-policy-classification.json"
+  ],
+  "hardRules": {
+    "sourceTextHashMustMatchMaterialRow": true,
+    "explicitNumberDoesNotDecideWhetherSizeOrFrequency": true,
+    "populationExploitCannotBecomeRawReference": true,
+    "candidateIsNotExactStrategy": true,
+    "missingPolicyScopeStops": true,
+    "missingDifferenceLedgerStopsSimplificationRelease": true,
+    "missingRangeAfterOrSuccessorStopsContinuousLesson": true
+  },
+  "candidates": [
+    {
+      "candidateId": "CAND-01 有位置3bet#5",
+      "materialId": "01 有位置3bet#5",
+      "sheet": "01 有位置3bet",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "2bae103849eef22ecf4b24b086d6f09fc423bfdf74455ddb5e323b79ac5779ae",
+      "sourceText": "D:强起手范围＋后行动。很多高牌面适合小注广打；高对子优势明显且下注范围两极分化时可大注；低而密集的连张要多过牌。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#7",
+      "materialId": "01 有位置3bet#7",
+      "sheet": "01 有位置3bet",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "1c28171912d9122a95b98345131474df22fef2085a2e35aa91b30c1f1f8c3259",
+      "sourceText": "D:小注看范围，大注看强端，低连先降速。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#10",
+      "materialId": "01 有位置3bet#10",
+      "sheet": "01 有位置3bet",
+      "row": 10,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "90524db25727ed3c085cb985ca747796df125d8ff51cb459be6ed69ddf5ff11d",
+      "sourceText": "B:CO 开池 → 你 3bet → CO 跟注。翻牌 CO 先行动；他过牌后，轮到你。",
+      "explicitActions": [
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#11",
+      "materialId": "01 有位置3bet#11",
+      "sheet": "01 有位置3bet",
+      "row": 11,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "118870103e45b957c76a747073a8be13d3b7cff22d6afb1541e55412d14ded57",
+      "sourceText": "B:只有对手已过牌，才进入本页持续下注路线。2.3 的扩大频率建立在对手过牌加注不足等假设上。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#15",
+      "materialId": "01 有位置3bet#15",
+      "sheet": "01 有位置3bet",
+      "row": 15,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "5347094ebb1a490c4292e5840a4f118c1c155466aeaea738679afe90c5cdf42a",
+      "sourceText": "B:M  三同花　三张花色相同。先归这里，不再归 A 高。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#16",
+      "materialId": "01 有位置3bet#16",
+      "sheet": "01 有位置3bet",
+      "row": 16,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "1c7f718d4193ab47b50c392c2e504f63712780df0761d81fe0214c498d0a7d0c",
+      "sourceText": "B:先看自己是成花、听花还是无该花色；课程258M用B25。这里只确定主尺寸，未确定所有组合的下注频率。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:先看自己是成花、听花还是无该花色；课程258M用B25。这里只确定主尺寸，未确定所有组合的下注频率。"
+        }
+      ],
+      "boardTokens": [
+        "258M"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#17",
+      "materialId": "01 有位置3bet#17",
+      "sheet": "01 有位置3bet",
+      "row": 17,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "c22f2b0aea1c9c2abefdcadc34c488a091bdda257c3e0ee99bb80f3c75769b5e",
+      "sourceText": "B:I01\n258M\n三同花｜选主尺寸 | D:【课程】\nB25：下注 1/4 池。\n原文给了小尺寸方向，未列完整选牌频率。 | E:AA大注时，无黑桃弱牌更容易退出，成花与带大黑桃的牌较容易留下。被跟后未必占很大便宜 → 本例选小注；哪些AA下注仍需细分。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:I01 258M 三同花｜选主尺寸 | D:【课程】 B25：下注 1/4 池。 原文给了小尺寸方向，未列完整选牌频率。 | E:A"
+        },
+        {
+          "raw": "1/4 池",
+          "typed": "size_candidate",
+          "context": "B:I01 258M 三同花｜选主尺寸 | D:【课程】 B25：下注 1/4 池。 原文给了小尺寸方向，未列完整选牌频率。 | E:AA大注时，无黑桃弱"
+        }
+      ],
+      "boardTokens": [
+        "258M",
+        "AA"
+      ],
+      "handTokens": [
+        "AA"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#18",
+      "materialId": "01 有位置3bet#18",
+      "sheet": "01 有位置3bet",
+      "row": 18,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f76fcc01634a99543e851910f0d1cf41519b0f847414d1053c635906a402244",
+      "sourceText": "B:P  对子 / 三条面　两张或三张点数相同。三条面单独标出。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#20",
+      "materialId": "01 有位置3bet#20",
+      "sheet": "01 有位置3bet",
+      "row": 20,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "4eabbd47c15929ef40886d65f87d36623bea11768040baeb6b673cb841cc0a4c",
+      "sourceText": "B:I02\nT22r\n低点成对 | D:【条件剥削】\nB67：约 2/3 池，课程例中高频。\n已观察到对手少加注时，可进一步扩大。 | E:对手JT在T22是TT22两对，仍输AA；Tx和中小对子是可收价值的对象。课程已可高频大注；对手加注更少时，才进一步扩频率。\nS3 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "raise"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:I02 T22r 低点成对 | D:【条件剥削】 B67：约 2/3 池，课程例中高频。 已观察到对手少加注时，可进一步扩大。 "
+        },
+        {
+          "raw": "2/3 池",
+          "typed": "size_candidate",
+          "context": "B:I02 T22r 低点成对 | D:【条件剥削】 B67：约 2/3 池，课程例中高频。 已观察到对手少加注时，可进一步扩大。 | E:对手JT"
+        }
+      ],
+      "boardTokens": [
+        "T22r",
+        "JT",
+        "T22",
+        "AA"
+      ],
+      "handTokens": [
+        "JT",
+        "AA"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#21",
+      "materialId": "01 有位置3bet#21",
+      "sheet": "01 有位置3bet",
+      "row": 21,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "8053204422b008a8655e20185fdf71739361390caf442ecad40230049c0b840d",
+      "sourceText": "B:I03\nTT5r\n高点成对 | D:【课程】\nB40：约 40% 池。\n下注/过牌的完整组合未列出。 | E:JT在TT5已是三条T。对手跟大注后更可能留下Tx等强牌 → 超对不能继续按T22的优势理解，课程改B40。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "B:I03 TT5r 高点成对 | D:【课程】 B40：约 40% 池。 下注/过牌的完整组合未列出。 | E:JT在TT5已"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "B:I03 TT5r 高点成对 | D:【课程】 B40：约 40% 池。 下注/过牌的完整组合未列出。 | E:JT在TT5已是三条T。对"
+        },
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "跟大注后更可能留下Tx等强牌 → 超对不能继续按T22的优势理解，课程改B40。 S2 §3.8 解释中的配牌是示例，不是完整范围。"
+        }
+      ],
+      "boardTokens": [
+        "TT5r",
+        "JT",
+        "TT5",
+        "T22"
+      ],
+      "handTokens": [
+        "JT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#22",
+      "materialId": "01 有位置3bet#22",
+      "sheet": "01 有位置3bet",
+      "row": 22,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f5307e32c7a514c37cb1e3b69c9142b97ec94eb687a936f59c24907f628c4a9",
+      "sourceText": "B:A  A 高　A高单独成组，不被K/Q代替。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#23",
+      "materialId": "01 有位置3bet#23",
+      "sheet": "01 有位置3bet",
+      "row": 23,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b1101b3d8f353f398a52be7b4685f1aa52de485be7280a4b8aa78170afacfc99",
+      "sourceText": "B:AK2这类A带高张 → 小注高频；A72 → 仅有B33前序依据；A带低连张/两同花 → 重查听牌，完整策略未给。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "B:AK2这类A带高张 → 小注高频；A72 → 仅有B33前序依据；A带低连张/两同花 → 重查听牌，完整策略未给。"
+        }
+      ],
+      "boardTokens": [
+        "AK2",
+        "A72"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#24",
+      "materialId": "01 有位置3bet#24",
+      "sheet": "01 有位置3bet",
+      "row": 24,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ccb9abb0ede57ff74d0f84c0378f69e6d0869f3a45651f543d7d175489c18334",
+      "sourceText": "B:I04\nAK2r\nA＋另一高张 | D:【教学归纳】\n小注、高频。\n执行可选 B25；25%是统一小尺寸的教学取值。 | E:AK是两对，AQ/AJ是顶对；对手KQ成为第二对。小注能让较弱Kx和部分对子继续 → 不必只用最强牌下注。全范围扩频另看对手是否少加注。\nS3 §3.5；S2 §3.3\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "raise"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": " AK2r A＋另一高张 | D:【教学归纳】 小注、高频。 执行可选 B25；25%是统一小尺寸的教学取值。 | E:AK是两对，AQ/AJ是顶对；"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "r A＋另一高张 | D:【教学归纳】 小注、高频。 执行可选 B25；25%是统一小尺寸的教学取值。 | E:AK是两对，AQ/AJ是顶对；对手KQ"
+        }
+      ],
+      "boardTokens": [
+        "AK2r",
+        "25",
+        "AK",
+        "AQ",
+        "AJ",
+        "KQ"
+      ],
+      "handTokens": [
+        "25",
+        "AK",
+        "AQ",
+        "AJ",
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#25",
+      "materialId": "01 有位置3bet#25",
+      "sheet": "01 有位置3bet",
+      "row": 25,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "7a6ad6a518680eb014033bb946e5c9c5413440446d38f5a3c09aaafdf00397f4",
+      "sourceText": "B:I05\nA72r\n单A＋分散小牌 | D:【教学归纳】\n可沿用 B33 的小注路线。\n仅由转牌章节的前序例子归纳；翻牌组合表未给。 | E:AK仍能向较弱Ax收价值；QQ/JJ却已落在所有Ax后面。先分手牌任务，再采用资料出现过的小注线；不能因标题“A高”给每手牌同一指令。\nS4「翻牌1/3下注后的转牌策略」\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "B:I05 A72r 单A＋分散小牌 | D:【教学归纳】 可沿用 B33 的小注路线。 仅由转牌章节的前序例子归纳；翻牌组合表未给。 | E:A"
+        }
+      ],
+      "boardTokens": [
+        "A72r",
+        "AK",
+        "QQ",
+        "JJ"
+      ],
+      "handTokens": [
+        "AK",
+        "QQ",
+        "JJ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#26",
+      "materialId": "01 有位置3bet#26",
+      "sheet": "01 有位置3bet",
+      "row": 26,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "4a141c0e4604edd95bbf9f75c8cbea6cac9cb43eb7393a2c22dd757de0a519d3",
+      "sourceText": "B:KQ  K / Q 高　同上，最高牌是 K 或 Q。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "KQ"
+      ],
+      "handTokens": [
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#27",
+      "materialId": "01 有位置3bet#27",
+      "sheet": "01 有位置3bet",
+      "row": 27,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "a47e0e1692aed95ee0e548372f35978ca7b36db484931bcc7a3bc50baa82a860",
+      "sourceText": "B:孤立K高K52 → B25高频；Q5类 → B40且较多X；KQJ高连 → B25但理由不同。看下方对手的具体继续牌。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:孤立K高K52 → B25高频；Q5类 → B40且较多X；KQJ高连 → B25但理由不同。看下"
+        },
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "B:孤立K高K52 → B25高频；Q5类 → B40且较多X；KQJ高连 → B25但理由不同。看下方对手的具体继续牌。"
+        },
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "K高K52 → B25高频；Q5类 → B40且较多X；KQJ高连 → B25但理由不同。看下方对手的具体继续牌。"
+        }
+      ],
+      "boardTokens": [
+        "K52",
+        "Q5",
+        "KQJ"
+      ],
+      "handTokens": [
+        "Q5"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#28",
+      "materialId": "01 有位置3bet#28",
+      "sheet": "01 有位置3bet",
+      "row": 28,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "84d65ff87afa2640d07f0a5573aeaafc69a099056b1c39ce496113a414f2b637",
+      "sourceText": "B:I06\nK52r\n孤立K高 | D:【课程】\nB25，高频。\nAA/AK 属强价值；QQ 等中等牌也有小注空间。 | E:AK想让较弱Kx跟；JJ等中等牌小注时可能留下TT/99，也能令部分高张放弃。中等牌也有下注理由 → 小注可以用较宽范围。\nS2 §3.3、3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:I06 K52r 孤立K高 | D:【课程】 B25，高频。 AA/AK 属强价值；QQ 等中等牌也有小注空间。 | E:A"
+        }
+      ],
+      "boardTokens": [
+        "K52r",
+        "AA",
+        "AK",
+        "QQ",
+        "JJ",
+        "TT",
+        "99"
+      ],
+      "handTokens": [
+        "AA",
+        "AK",
+        "QQ",
+        "JJ",
+        "TT",
+        "99"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#29",
+      "materialId": "01 有位置3bet#29",
+      "sheet": "01 有位置3bet",
+      "row": 29,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "975306913827fb92d1a162277b6aa6bdf425890e8c91fd5566795bdd25688f95",
+      "sourceText": "B:I07\nKQJr\n高张连上 | D:【课程】\nB25 小注。\n牌点来自课程，r 配色用作图示。 | E:AT/T9已成顺，QJ是两对。AA仍叫超对，却不能像在K52上那样看待对手继续牌 → 课程保持小注，避免无依据放大一对底池。\nS2 §3.8\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:I07 KQJr 高张连上 | D:【课程】 B25 小注。 牌点来自课程，r 配色用作图示。 | E:AT/T9已成顺，Q"
+        }
+      ],
+      "boardTokens": [
+        "KQJr",
+        "AT",
+        "T9",
+        "QJ",
+        "AA",
+        "K52"
+      ],
+      "handTokens": [
+        "AT",
+        "T9",
+        "QJ",
+        "AA"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#30",
+      "materialId": "01 有位置3bet#30",
+      "sheet": "01 有位置3bet",
+      "row": 30,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9808cf96c05a55d168c60777152b651ee663f76ca22a7f0fe2ff2fd22d385626",
+      "sourceText": "B:JT  J / T 高　同上，最高牌是 J 或 T。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "JT"
+      ],
+      "handTokens": [
+        "JT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#31",
+      "materialId": "01 有位置3bet#31",
+      "sheet": "01 有位置3bet",
+      "row": 31,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b2cec09572cc355ec61ec93140057cd2b9513b928fd060eedd1ff61d6265e78b",
+      "sourceText": "B:先分点数和连接：T72r → B67；T82r → B40；T98 → B25。再看花色：T72tt → B40。J8r/tt课程为40%/25%，不能直接套T高。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:先分点数和连接：T72r → B67；T82r → B40；T98 → B25。再看花色：T72tt → B"
+        },
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "B:先分点数和连接：T72r → B67；T82r → B40；T98 → B25。再看花色：T72tt → B40。J8r/tt课程"
+        },
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "先分点数和连接：T72r → B67；T82r → B40；T98 → B25。再看花色：T72tt → B40。J8r/tt课程为40%/25%，不"
+        },
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "7；T82r → B40；T98 → B25。再看花色：T72tt → B40。J8r/tt课程为40%/25%，不能直接套T高。"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "T98 → B25。再看花色：T72tt → B40。J8r/tt课程为40%/25%，不能直接套T高。"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "→ B25。再看花色：T72tt → B40。J8r/tt课程为40%/25%，不能直接套T高。"
+        }
+      ],
+      "boardTokens": [
+        "T72r",
+        "T82r",
+        "T98",
+        "T72tt",
+        "J8r",
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#32",
+      "materialId": "01 有位置3bet#32",
+      "sheet": "01 有位置3bet",
+      "row": 32,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "3106d6bd9e11ca7772486d60297b412fa1f3d3b8edcbf6fc1f2d764fe240ad28",
+      "sourceText": "B:I08\nT72r\nT高较疏｜彩虹 | D:【课程】\nB67：约 2/3 池。\n高对子、强顶对是价值核心；加合适高张诈唬。 | E:AA/JJ等能领先AT/KT和许多口袋对子；98虽有顺听，但并非对手每手牌都强听牌。强超对愿意收较大价值 → 用67%主尺寸。\nS2 §3.4；S3 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:I08 T72r T高较疏｜彩虹 | D:【课程】 B67：约 2/3 池。 高对子、强顶对是价值核心；加合适高张诈唬。 | E:"
+        },
+        {
+          "raw": "2/3 池",
+          "typed": "size_candidate",
+          "context": "B:I08 T72r T高较疏｜彩虹 | D:【课程】 B67：约 2/3 池。 高对子、强顶对是价值核心；加合适高张诈唬。 | E:AA/JJ等能领"
+        },
+        {
+          "raw": "67%",
+          "typed": "frequency_or_untyped",
+          "context": "子；98虽有顺听，但并非对手每手牌都强听牌。强超对愿意收较大价值 → 用67%主尺寸。 S2 §3.4；S3 §3.7 解释中的配牌是示例，不是完整范"
+        }
+      ],
+      "boardTokens": [
+        "T72r",
+        "AA",
+        "JJ",
+        "AT",
+        "KT",
+        "98",
+        "67"
+      ],
+      "handTokens": [
+        "AA",
+        "JJ",
+        "AT",
+        "KT",
+        "98",
+        "67"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#33",
+      "materialId": "01 有位置3bet#33",
+      "sheet": "01 有位置3bet",
+      "row": 33,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "f8261617eeefe38b9475615ab24fc8da96515d723d4564f0e72947eff949dcb5",
+      "sourceText": "B:I09\nT72tt\nT高较疏｜两同花 | D:【课程】\nB40：约 40% 池。\n与上一行只改变花色。 | E:A♠Q♠由后门花变直接花听。它面对下注仍有改善空间 → 大注未必赶走它，反而可能只赶走弱对子；本例尺寸降到40%。\nS2 §3.4、3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "B:I09 T72tt T高较疏｜两同花 | D:【课程】 B40：约 40% 池。 与上一行只改变花色。 | E:A♠Q♠由后门花变直接"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "B:I09 T72tt T高较疏｜两同花 | D:【课程】 B40：约 40% 池。 与上一行只改变花色。 | E:A♠Q♠由后门花变直接花听。它面对"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "下注仍有改善空间 → 大注未必赶走它，反而可能只赶走弱对子；本例尺寸降到40%。 S2 §3.4、3.7 解释中的配牌是示例，不是完整范围。"
+        }
+      ],
+      "boardTokens": [
+        "T72tt"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "面对下注仍有改善空间 → 大注未必赶走它，反而可能只赶走弱对子"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#34",
+      "materialId": "01 有位置3bet#34",
+      "sheet": "01 有位置3bet",
+      "row": 34,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "32fad80367fae826274269f6b98bccf62f44143e98a9a881bd59b11906eea27c",
+      "sourceText": "B:I13\nT82r\nT高更靠近｜彩虹 | D:【课程】\nB40：约40%底池。\n这是较疏的T72与已可成顺的T98之间的课程例；完整选牌频率未给。 | E:J9由T72上的卡顺听8，变成T82的两头顺听7或Q。对手可继续的顺听变强 → 本例从T72的67%降到40%；不能由此反推所有空气都下注。\nS2 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "B:I13 T82r T高更靠近｜彩虹 | D:【课程】 B40：约40%底池。 这是较疏的T72与已可成顺的T98之间的课程例；完整选"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "B:I13 T82r T高更靠近｜彩虹 | D:【课程】 B40：约40%底池。 这是较疏的T72与已可成顺的T98之间的课程例；完整选牌频率未给"
+        },
+        {
+          "raw": "67%",
+          "typed": "frequency_or_untyped",
+          "context": "8，变成T82的两头顺听7或Q。对手可继续的顺听变强 → 本例从T72的67%降到40%；不能由此反推所有空气都下注。 S2 §3.4 解释中的配牌是"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "82的两头顺听7或Q。对手可继续的顺听变强 → 本例从T72的67%降到40%；不能由此反推所有空气都下注。 S2 §3.4 解释中的配牌是示例，不是"
+        }
+      ],
+      "boardTokens": [
+        "T82r",
+        "T72",
+        "T98",
+        "J9",
+        "T82",
+        "67"
+      ],
+      "handTokens": [
+        "J9",
+        "67"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#35",
+      "materialId": "01 有位置3bet#35",
+      "sheet": "01 有位置3bet",
+      "row": 35,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "47851646ae72a3dd0bf9009bbe5b051ca9f5e2d29fba6396c0b0c98069177fd9",
+      "sourceText": "B:I10\nT98r\nT高｜已能成顺 | D:【课程】\nB25 是课程给的尺寸方向。\n完整选牌频率未给，不能等同全范围下注。 | E:QJ、J7、76可成顺，JT等还有对子＋听牌。普通超对面对继续范围不再稳占优势 → 本例小注25%，完整下注组合未给。\nS2 §3.3–3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:I10 T98r T高｜已能成顺 | D:【课程】 B25 是课程给的尺寸方向。 完整选牌频率未给，不能等同全范围下注。 | E:"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "顺，JT等还有对子＋听牌。普通超对面对继续范围不再稳占优势 → 本例小注25%，完整下注组合未给。 S2 §3.3–3.4 解释中的配牌是示例，不是完"
+        }
+      ],
+      "boardTokens": [
+        "T98r",
+        "QJ",
+        "J7",
+        "76",
+        "JT",
+        "25"
+      ],
+      "handTokens": [
+        "QJ",
+        "J7",
+        "76",
+        "JT",
+        "25"
+      ],
+      "explicitConditions": [
+        "面对继续范围不再稳占优势 → 本例小注25%，完整下注组合未给"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#36",
+      "materialId": "01 有位置3bet#36",
+      "sheet": "01 有位置3bet",
+      "row": 36,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "bfaa961cee0a122160939c89ced8f10f0d12cfab2ec524382c22f1ad830616ab",
+      "sourceText": "B:L  9 高及以下　同上，最高牌不超过 9。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#38",
+      "materialId": "01 有位置3bet#38",
+      "sheet": "01 有位置3bet",
+      "row": 38,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "7960fc9233fc72fc3808559102bbcf2fd1e61aeac98e011466896d95a1f6ce95",
+      "sourceText": "B:I11\n842r\n低牌分散｜手牌两端 | D:【课程】\nB67，采用极化思路。\n高对子＋合适高张下注；66/77 等中等牌多过牌。 | E:AA/KK领先8x和许多对子，愿意价值大注；AK没成对但可利用弃牌并改善。77面对大注跟注范围不舒服，却能赢部分高张 → 多过牌。\nS2 §3.5、3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:I11 842r 低牌分散｜手牌两端 | D:【课程】 B67，采用极化思路。 高对子＋合适高张下注；66/77 等中等牌多过牌。 |"
+        }
+      ],
+      "boardTokens": [
+        "842r",
+        "66",
+        "77",
+        "AA",
+        "KK",
+        "AK"
+      ],
+      "handTokens": [
+        "66",
+        "77",
+        "AA",
+        "KK",
+        "AK"
+      ],
+      "explicitConditions": [
+        "面对大注跟注范围不舒服，却能赢部分高张 → 多过牌"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-01 有位置3bet#39",
+      "materialId": "01 有位置3bet#39",
+      "sheet": "01 有位置3bet",
+      "row": 39,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "2c0ee6976a2c61b5bc4806f78616f4ec669e664a350aa98ab2f7e79d16e26d3d",
+      "sourceText": "B:I12\n356tt\n低连＋两同花 | D:【课程】\nX：本例先整体过牌。\n保留手牌权益，到转牌重新判断。 | E:74可成顺，54有对子＋两头顺听；黑桃还带来花听。你许多AK/AQ没成牌，下注被加注会被迫弃掉以后改善机会 → 先X保留看转牌权利。\nS2 §3.6、3.8；S3 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "356tt",
+        "74",
+        "54",
+        "AK",
+        "AQ"
+      ],
+      "handTokens": [
+        "74",
+        "54",
+        "AK",
+        "AQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#5",
+      "materialId": "02 没位置3bet#5",
+      "sheet": "02 没位置3bet",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "8a68b6472540a7e19c90bb9eb5ff3b355b9d3af367ae2885ace1210c0fa6c4e8",
+      "sourceText": "D:你仍有强起手范围，但对手后行动更容易实现权益。许多牌面可高频较大持续下注；也需要有过牌后的应对。过牌加注替代持续下注，是有条件的剥削。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#7",
+      "materialId": "02 没位置3bet#7",
+      "sheet": "02 没位置3bet",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "0eb6e96477ed8b7d9128f44dd98db2ff5f191fe6ad167ae1da6d977fd7121289",
+      "sourceText": "D:A 高可小；其余看更大尺寸；低连降频；过牌后要有计划。",
+      "explicitActions": [
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#10",
+      "materialId": "02 没位置3bet#10",
+      "sheet": "02 没位置3bet",
+      "row": 10,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "34dd3acc99c9751d68860fd3050624bfbcaadc7a31e3602098eb8f872e041f4e",
+      "sourceText": "B:BTN 开池 → 你 3bet → BTN 跟注。翻牌你先行动；过牌后，仍需应对 BTN 的下注。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#11",
+      "materialId": "02 没位置3bet#11",
+      "sheet": "02 没位置3bet",
+      "row": 11,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "1ccc988af8b56574d116c1e990edae11182baf8db3ea29e83bd3bdc1f1da38b0",
+      "sourceText": "B:不能概括为“位置外一律多过牌”。T83/J93等课程案例本来可高频持续下注，确认对手漏洞后才转向更多X/R。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "T83",
+        "J93"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#15",
+      "materialId": "02 没位置3bet#15",
+      "sheet": "02 没位置3bet",
+      "row": 15,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "5347094ebb1a490c4292e5840a4f118c1c155466aeaea738679afe90c5cdf42a",
+      "sourceText": "B:M  三同花　三张花色相同。先归这里，不再归 A 高。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#16",
+      "materialId": "02 没位置3bet#16",
+      "sheet": "02 没位置3bet",
+      "row": 16,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ffbf748c96fe209fdd211f9b62e72ad15bd30877ddff18cdaf0dc6c5de8364b2",
+      "sourceText": "B:三同花虽有查找入口，本位置没有完整细表。先辨成花/听花/无该花色；不从IP的25%擅自补成范围下注。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "花虽有查找入口，本位置没有完整细表。先辨成花/听花/无该花色；不从IP的25%擅自补成范围下注。"
+        }
+      ],
+      "boardTokens": [
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [
+        "没有完整细表"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#18",
+      "materialId": "02 没位置3bet#18",
+      "sheet": "02 没位置3bet",
+      "row": 18,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f76fcc01634a99543e851910f0d1cf41519b0f847414d1053c635906a402244",
+      "sourceText": "B:P  对子 / 三条面　两张或三张点数相同。三条面单独标出。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#21",
+      "materialId": "02 没位置3bet#21",
+      "sheet": "02 没位置3bet",
+      "row": 21,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f5307e32c7a514c37cb1e3b69c9142b97ec94eb687a936f59c24907f628c4a9",
+      "sourceText": "B:A  A 高　A高单独成组，不被K/Q代替。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#22",
+      "materialId": "02 没位置3bet#22",
+      "sheet": "02 没位置3bet",
+      "row": 22,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "81eda1ddcb1c9e9c56a9a7f272076734243b0074112587eb3171785420b67a1e",
+      "sourceText": "B:课程A高是B25小尺寸例外；A72只作示意。遇A带连张/两同花时，仍要重查对手成牌和听牌，不能省略过牌分支。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:课程A高是B25小尺寸例外；A72只作示意。遇A带连张/两同花时，仍要重查对手成牌和听牌"
+        }
+      ],
+      "boardTokens": [
+        "A72"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#23",
+      "materialId": "02 没位置3bet#23",
+      "sheet": "02 没位置3bet",
+      "row": 23,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "a91a4995353ad6cfd01256b39618af97a52a23065138e526d6b468a03929dfe7",
+      "sourceText": "B:O03\nA72r\nA高｜小注例外 | D:【教学归纳】\nA 高是小注例外，可考虑 B25。\n具体A72手牌选择/频率未给。 | E:AK/AQ能向较弱Ax收价值，非Ax对子则怕A。A高被课程单独列为小注例外；A72只是图示，不能据此断言所有Ax和空气都下注。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "72r A高｜小注例外 | D:【教学归纳】 A 高是小注例外，可考虑 B25。 具体A72手牌选择/频率未给。 | E:AK/AQ能向较弱Ax收价值"
+        }
+      ],
+      "boardTokens": [
+        "A72r",
+        "A72",
+        "AK",
+        "AQ"
+      ],
+      "handTokens": [
+        "AK",
+        "AQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#24",
+      "materialId": "02 没位置3bet#24",
+      "sheet": "02 没位置3bet",
+      "row": 24,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "4a141c0e4604edd95bbf9f75c8cbea6cac9cb43eb7393a2c22dd757de0a519d3",
+      "sourceText": "B:KQ  K / Q 高　同上，最高牌是 K 或 Q。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "KQ"
+      ],
+      "handTokens": [
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#25",
+      "materialId": "02 没位置3bet#25",
+      "sheet": "02 没位置3bet",
+      "row": 25,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "92238ea300c40dacd14654a3a6111c7d701941bf4d81d28e50b76478ea9d2696",
+      "sourceText": "B:K高尺寸区间40–67%；Q高50–67%。先在区间取主尺寸，再选下注手牌；连张/听花的精确频率资料不足。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "67%",
+          "typed": "frequency_or_untyped",
+          "context": "B:K高尺寸区间40–67%；Q高50–67%。先在区间取主尺寸，再选下注手牌；连张/听花的精确频率"
+        },
+        {
+          "raw": "67%",
+          "typed": "frequency_or_untyped",
+          "context": "B:K高尺寸区间40–67%；Q高50–67%。先在区间取主尺寸，再选下注手牌；连张/听花的精确频率资料不足。"
+        }
+      ],
+      "boardTokens": [
+        "67"
+      ],
+      "handTokens": [
+        "67"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#26",
+      "materialId": "02 没位置3bet#26",
+      "sheet": "02 没位置3bet",
+      "row": 26,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b250ff00a4f6e187b866c7ab40eccdc2ad7531f27cd0ee6002d022d42dd91bbf",
+      "sourceText": "B:O04\nK52r\nK高｜尺寸区间 | D:【教学归纳】\nK 高课程范围：B40～B67。\n可用 B50 作为练习取值；精确频率待补。 | E:SB位置外下注后，对手可后行动跟住，再看转牌。较大的尺寸使边缘高张继续更贵；仍须区分AK等价值牌、听牌和适合X的中等牌。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B40",
+          "typed": "size_candidate",
+          "context": "O04 K52r K高｜尺寸区间 | D:【教学归纳】 K 高课程范围：B40～B67。 可用 B50 作为练习取值；精确频率待补。 | E:SB位置"
+        },
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "K52r K高｜尺寸区间 | D:【教学归纳】 K 高课程范围：B40～B67。 可用 B50 作为练习取值；精确频率待补。 | E:SB位置外下注后"
+        },
+        {
+          "raw": "B50",
+          "typed": "size_candidate",
+          "context": "尺寸区间 | D:【教学归纳】 K 高课程范围：B40～B67。 可用 B50 作为练习取值；精确频率待补。 | E:SB位置外下注后，对手可后行动跟"
+        }
+      ],
+      "boardTokens": [
+        "K52r",
+        "AK"
+      ],
+      "handTokens": [
+        "AK"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#27",
+      "materialId": "02 没位置3bet#27",
+      "sheet": "02 没位置3bet",
+      "row": 27,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "0a20374209381a9d33cd64828bdf9ceabb49303b032e79931f482351b14ebc67",
+      "sourceText": "B:O05\nQ52r\nQ高｜尺寸区间 | D:【教学归纳】\nQ 高课程范围：B50～B67。\n先用 B50 练习，选牌仍需看自身强度/听牌。 | E:AQ是顶对，AK却没有配对。课程对Q高给比A高大的区间；这只解决“打时多少钱”，不等于拿AK等所有没中的牌都打。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B50",
+          "typed": "size_candidate",
+          "context": "O05 Q52r Q高｜尺寸区间 | D:【教学归纳】 Q 高课程范围：B50～B67。 先用 B50 练习，选牌仍需看自身强度/听牌。 | E:AQ"
+        },
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "Q52r Q高｜尺寸区间 | D:【教学归纳】 Q 高课程范围：B50～B67。 先用 B50 练习，选牌仍需看自身强度/听牌。 | E:AQ是顶对，"
+        },
+        {
+          "raw": "B50",
+          "typed": "size_candidate",
+          "context": "尺寸区间 | D:【教学归纳】 Q 高课程范围：B50～B67。 先用 B50 练习，选牌仍需看自身强度/听牌。 | E:AQ是顶对，AK却没有配对。"
+        }
+      ],
+      "boardTokens": [
+        "Q52r",
+        "AQ",
+        "AK"
+      ],
+      "handTokens": [
+        "AQ",
+        "AK"
+      ],
+      "explicitConditions": [
+        "没有配对"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#28",
+      "materialId": "02 没位置3bet#28",
+      "sheet": "02 没位置3bet",
+      "row": 28,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9808cf96c05a55d168c60777152b651ee663f76ca22a7f0fe2ff2fd22d385626",
+      "sourceText": "B:JT  J / T 高　同上，最高牌是 J 或 T。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "JT"
+      ],
+      "handTokens": [
+        "JT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#29",
+      "materialId": "02 没位置3bet#29",
+      "sheet": "02 没位置3bet",
+      "row": 29,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "7080d24ea030ecb1df928b54ee6fba06f21646204f2d9d5c1e3b2ae299dce106",
+      "sourceText": "B:J93/T83课程可以高频大注；若对手面对你的X爱小注、又对X/R过弃，才转为更多X/R。基准动作与利用漏洞的动作分开。",
+      "explicitActions": [
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "J93",
+        "T83"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若对手面对你的X爱小注、又对X/R过弃，才转为更多X/R"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#30",
+      "materialId": "02 没位置3bet#30",
+      "sheet": "02 没位置3bet",
+      "row": 30,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "f1ff77c0dff228743ff3c57bf4585b0797b263f8dc40b4b9c3fc5beb36d46e54",
+      "sourceText": "B:O06\nJ93r\nJ高｜可高频大注 | D:【课程】\n课程例：可高频较大 CB。\nJ高给 B67～B100 的尺寸区间。 | E:QQ+和AJ仍是你的强牌，对手不少Jx、9x和口袋对子较弱。位置不好不等于没有价值可取；课程此例允许高频较大持续下注。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "J高｜可高频大注 | D:【课程】 课程例：可高频较大 CB。 J高给 B67～B100 的尺寸区间。 | E:QQ+和AJ仍是你的强牌，对手不少Jx"
+        },
+        {
+          "raw": "B100",
+          "typed": "size_candidate",
+          "context": "高频大注 | D:【课程】 课程例：可高频较大 CB。 J高给 B67～B100 的尺寸区间。 | E:QQ+和AJ仍是你的强牌，对手不少Jx、9x和口"
+        }
+      ],
+      "boardTokens": [
+        "J93r",
+        "QQ",
+        "AJ"
+      ],
+      "handTokens": [
+        "QQ",
+        "AJ"
+      ],
+      "explicitConditions": [
+        "没有价值可取"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#31",
+      "materialId": "02 没位置3bet#31",
+      "sheet": "02 没位置3bet",
+      "row": 31,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "fe1367ea97073754101aba6fdf9db7d141c39fa94e078d0497cc75e7db1bde5f",
+      "sourceText": "B:O07\nT83r\nT高｜两套前提 | D:【条件剥削】\n基准方向：高频大 CB。\n若 BTN 小注后对X/R弃牌过多：增加X，面对小注再X/R。 | E:直接大CB是课程基准。若对手见X会用弱牌小注、被X/R又弃太多，先X才能让他把弱牌的钱放进来 → 这是利用特定反应，不是无条件乱加注。\nS5 §3.2–3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "T83r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若 BTN 小注后对X/R弃牌过多：增加X，面对小注再X/R",
+        "若对手见X会用弱牌小注、被X/R又弃太多，先X才能让他把弱牌的钱放进来 → 这是利用特定反应，不是无条件乱加注"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#32",
+      "materialId": "02 没位置3bet#32",
+      "sheet": "02 没位置3bet",
+      "row": 32,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "bfaa961cee0a122160939c89ced8f10f0d12cfab2ec524382c22f1ad830616ab",
+      "sourceText": "B:L  9 高及以下　同上，最高牌不超过 9。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#33",
+      "materialId": "02 没位置3bet#33",
+      "sheet": "02 没位置3bet",
+      "row": 33,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "0dc192ed7011cdcc27649598f308625f86d4197d80fc157a6a4ab2494e29f25c",
+      "sourceText": "B:743低连接例 → 约80%X；952tt → 约40%频率下大注。差别是低张连接和继续牌组成；40%是频率，不能填成40%底池。",
+      "explicitActions": [
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "80%",
+          "typed": "frequency_or_untyped",
+          "context": "B:743低连接例 → 约80%X；952tt → 约40%频率下大注。差别是低张连接和继续牌组成；40"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "B:743低连接例 → 约80%X；952tt → 约40%频率下大注。差别是低张连接和继续牌组成；40%是频率，不能填成40%底池"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "0%X；952tt → 约40%频率下大注。差别是低张连接和继续牌组成；40%是频率，不能填成40%底池。"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": " 约40%频率下大注。差别是低张连接和继续牌组成；40%是频率，不能填成40%底池。"
+        }
+      ],
+      "boardTokens": [
+        "743",
+        "952tt"
+      ],
+      "handTokens": [
+        "43"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#34",
+      "materialId": "02 没位置3bet#34",
+      "sheet": "02 没位置3bet",
+      "row": 34,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "8e76eb0364ab663d50dc7555ba24d9fcd3170a84be95c406ce8b5bc62027f96f",
+      "sourceText": "B:O08\n743tt\n低牌靠近｜先降频 | D:【课程】\n低连接例：以X为主，少量大注。\n原文743约80%过牌；具体花色未给。 | E:65在743上已经组成34567顺子。对手可有低牌强牌，而你的大高张大量未中 → 课程先大幅增加X，避免用太多没中的高张撞上强继续范围。\nS5 §3.1\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "80%",
+          "typed": "frequency_or_untyped",
+          "context": "｜先降频 | D:【课程】 低连接例：以X为主，少量大注。 原文743约80%过牌；具体花色未给。 | E:65在743上已经组成34567顺子。对手"
+        }
+      ],
+      "boardTokens": [
+        "743tt",
+        "743",
+        "65",
+        "567"
+      ],
+      "handTokens": [
+        "43",
+        "65",
+        "67"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#35",
+      "materialId": "02 没位置3bet#35",
+      "sheet": "02 没位置3bet",
+      "row": 35,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "71e76a50b135c80db1313b21ff3b6c292cf125ba31588274fd5de1fda078065e",
+      "sourceText": "B:O09\n952tt\n低牌＋听花｜分开频率 | D:【条件剥削】\n课程基准约40%频率下大注。\n对手对X/R弃牌多时，才增加过牌加注路线。 | E:952中没有三张紧密连牌，但两同花让直接花听能继续。相比干燥T83，不能假定对手同样容易对加注弃牌 → 先保留课程约40%下注频率。\nS5 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "09 952tt 低牌＋听花｜分开频率 | D:【条件剥削】 课程基准约40%频率下大注。 对手对X/R弃牌多时，才增加过牌加注路线。 | E:952"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "能继续。相比干燥T83，不能假定对手同样容易对加注弃牌 → 先保留课程约40%下注频率。 S5 §3.6 解释中的配牌是示例，不是完整范围。"
+        }
+      ],
+      "boardTokens": [
+        "952tt",
+        "952",
+        "T83"
+      ],
+      "handTokens": [
+        "52"
+      ],
+      "explicitConditions": [
+        "没有三张紧密连牌，但两同花让直接花听能继续"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-02 没位置3bet#36",
+      "materialId": "02 没位置3bet#36",
+      "sheet": "02 没位置3bet",
+      "row": 36,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "5b5b1fbac2e6c7418c875d64c13f3c61e7a7403add67864d244c6dcda04e8794",
+      "sourceText": "B:过牌后的两条路：BTN也X → 看05的延迟下注；BTN下小注且面对X/R过弃 → 可增加X/R。面对50%及以上下注，资料提醒范围可能更强，减少无依据诈唬加注。X/C不等于在所有扑克局面中都是错误。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "50%",
+          "typed": "frequency_or_untyped",
+          "context": " 看05的延迟下注；BTN下小注且面对X/R过弃 → 可增加X/R。面对50%及以上下注，资料提醒范围可能更强，减少无依据诈唬加注。X/C不等于在所有"
+        }
+      ],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "面对X/R过弃 → 可增加X/R",
+        "面对50%及以上下注，资料提醒范围可能更强，减少无依据诈唬加注"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#5",
+      "materialId": "03 有位置单加注#5",
+      "sheet": "03 有位置单加注",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "d3a8ccaf0b2c8b83b4009e3f3740fcc90d6328dc0b51f31c9854ff1c401725f2",
+      "sourceText": "D:双方范围宽，BB保留更多低牌和连牌。你有位置，可以选一个主尺寸，再分“想下注”和“想过牌”的手牌；不能把IP 3bet的低牌面策略直接搬来。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#7",
+      "materialId": "03 有位置单加注#7",
+      "sheet": "03 有位置单加注",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "df855d1fec4a26fea4aa1c3440eabb22a1c9eec390467b45f38e6999ea85274e",
+      "sourceText": "D:高干可小；中张选牌；低连有下注但不全打；单色小。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#10",
+      "materialId": "03 有位置单加注#10",
+      "sheet": "03 有位置单加注",
+      "row": 10,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "2161b53c415604771617081172c3bbdb6ef779b1d2812e486c1129d4b5fbc050",
+      "sourceText": "B:你开池 → BB 跟注。翻牌 BB 先行动；他过牌后，轮到你。",
+      "explicitActions": [
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#11",
+      "materialId": "03 有位置单加注#11",
+      "sheet": "03 有位置单加注",
+      "row": 11,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "86eeebfe8e49a9b5d3b42f2d1a764d4ae39cf8871aee9ec4e907e503cc1c0c94",
+      "sourceText": "B:小注高频/范围下注常是人群剥削。AK2r 的GTO超池路线与小注替代路线须区分；不是全篇都在描述同一均衡。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "AK2r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#15",
+      "materialId": "03 有位置单加注#15",
+      "sheet": "03 有位置单加注",
+      "row": 15,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "5347094ebb1a490c4292e5840a4f118c1c155466aeaea738679afe90c5cdf42a",
+      "sourceText": "B:M  三同花　三张花色相同。先归这里，不再归 A 高。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#17",
+      "materialId": "03 有位置单加注#17",
+      "sheet": "03 有位置单加注",
+      "row": 17,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "b493d63dd2e505bdd42f42c32a1f0addf8c1e165d7459b9f05e5c4989151adf4",
+      "sourceText": "B:S01\nA85M\n三同花 | D:【课程】\nB25，小尺寸。\n具体组合/频率未给，别把“单色小”理解为“单色全打”。 | E:对手一张红桃可能有直接花听，两张红桃可能已经成花；无红桃弱对子面对大注容易退出。课程选25%，但三类手牌并非相同下注频率。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:S01 A85M 三同花 | D:【课程】 B25，小尺寸。 具体组合/频率未给，别把“单色小”理解为“单色全打”。 | "
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "能有直接花听，两张红桃可能已经成花；无红桃弱对子面对大注容易退出。课程选25%，但三类手牌并非相同下注频率。 S6 §3.6 解释中的配牌是示例，不是"
+        }
+      ],
+      "boardTokens": [
+        "A85M",
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [
+        "面对大注容易退出"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#18",
+      "materialId": "03 有位置单加注#18",
+      "sheet": "03 有位置单加注",
+      "row": 18,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f76fcc01634a99543e851910f0d1cf41519b0f847414d1053c635906a402244",
+      "sourceText": "B:P  对子 / 三条面　两张或三张点数相同。三条面单独标出。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#19",
+      "materialId": "03 有位置单加注#19",
+      "sheet": "03 有位置单加注",
+      "row": 19,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "664ab89dda3d46abb81e638622f029007cc95fb927cde2b9bb5814d225cde53a",
+      "sourceText": "B:K22低点成对可选B33人群简化；高点成对/三条公共牌资料不全。K22的原solver含超池，B33不是唯一GTO动作。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "B:K22低点成对可选B33人群简化；高点成对/三条公共牌资料不全。K22的原solver含超池，B"
+        },
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "3人群简化；高点成对/三条公共牌资料不全。K22的原solver含超池，B33不是唯一GTO动作。"
+        }
+      ],
+      "boardTokens": [
+        "K22"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#20",
+      "materialId": "03 有位置单加注#20",
+      "sheet": "03 有位置单加注",
+      "row": 20,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "00d85cdfd3074563f3cd3fd8e237fcb835ac7fdf5f2ed66cbd5c0d4b03dd1da3",
+      "sourceText": "B:S02\nK22r\n低点成对｜剥削小注 | D:【条件剥削】\nB33 是课程针对低级别的简化。\n有弃牌过多/加注不足证据时可较宽。 | E:Kx在K22不是三条；对手需用部分小对子/高张继续才能防守。若现实对手把这些牌弃得太多且少加注，小注就能更便宜地拿到弃牌。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "B:S02 K22r 低点成对｜剥削小注 | D:【条件剥削】 B33 是课程针对低级别的简化。 有弃牌过多/加注不足证据时可较宽。 | E:"
+        }
+      ],
+      "boardTokens": [
+        "K22r",
+        "K22"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若现实对手把这些牌弃得太多且少加注，小注就能更便宜地拿到弃牌"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#21",
+      "materialId": "03 有位置单加注#21",
+      "sheet": "03 有位置单加注",
+      "row": 21,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f5307e32c7a514c37cb1e3b69c9142b97ec94eb687a936f59c24907f628c4a9",
+      "sourceText": "B:A  A 高　A高单独成组，不被K/Q代替。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#22",
+      "materialId": "03 有位置单加注#22",
+      "sheet": "03 有位置单加注",
+      "row": 22,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "d6bacec57003ae97bd5a124c7bd5d98f6d6f46a8d976feeef9e3c06a2b016a92",
+      "sourceText": "B:AK2可用小注高频的剥削替代；A72先分手牌：Ax、需保护对子、好后门与中等摊牌牌。A低连/听花需要重选，不自动全打。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "AK2",
+        "A72"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#23",
+      "materialId": "03 有位置单加注#23",
+      "sheet": "03 有位置单加注",
+      "row": 23,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "6e3ecd31f230c47763676b80b2243662fd8fe48b952a8b19e6f1d076e3741b4f",
+      "sourceText": "B:S03\nAK2r\nA＋K｜替代方案 | D:【条件剥削】\n选小注替代路线：B25，较高频。\n这是基于对手过弃/少加注的练习方案。 | E:小注使你付较少筹码就能让对手的部分未中牌弃掉。只有这些牌弃得过多、反加注又不足，才有理由扩大频率；原solver低频超池是另一条线。\nS6 §3.2–3.3\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "03 AK2r A＋K｜替代方案 | D:【条件剥削】 选小注替代路线：B25，较高频。 这是基于对手过弃/少加注的练习方案。 | E:小注使你付较少"
+        }
+      ],
+      "boardTokens": [
+        "AK2r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#24",
+      "materialId": "03 有位置单加注#24",
+      "sheet": "03 有位置单加注",
+      "row": 24,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "648c662f280cf882f6db35c9aeec5b84673d5ff041a4b895f6fe4d44cbc6bd8f",
+      "sourceText": "B:S04\nA72r\n单A｜按手牌分任务 | D:【教学归纳】\nB33，先选牌：Ax、部分需保护对子、好后门牌。\nKQ/JJ/QQ等不要一概硬打。 | E:Ax可向弱Ax取值；Q3这类弱牌可借后门和弃牌收益下注。KQ本来能赢一些未中牌，下注却不一定让Ax弃掉 → 课程把它作为X例。\nS1 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "B:S04 A72r 单A｜按手牌分任务 | D:【教学归纳】 B33，先选牌：Ax、部分需保护对子、好后门牌。 KQ/JJ/QQ等不要一概硬"
+        }
+      ],
+      "boardTokens": [
+        "A72r",
+        "KQ",
+        "JJ",
+        "QQ",
+        "Q3"
+      ],
+      "handTokens": [
+        "KQ",
+        "JJ",
+        "QQ",
+        "Q3"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#25",
+      "materialId": "03 有位置单加注#25",
+      "sheet": "03 有位置单加注",
+      "row": 25,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "4a141c0e4604edd95bbf9f75c8cbea6cac9cb43eb7393a2c22dd757de0a519d3",
+      "sourceText": "B:KQ  K / Q 高　同上，最高牌是 K 或 Q。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "KQ"
+      ],
+      "handTokens": [
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#26",
+      "materialId": "03 有位置单加注#26",
+      "sheet": "03 有位置单加注",
+      "row": 26,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "8ef304a0843dc7f9b4ff4035cc5cc19e8c296268110ecc1101a73742841467fc",
+      "sourceText": "B:QT5tt → B75极化：强牌与有效听牌打，中等牌多X；普通K高细表不足。不能拿IP 3bet的K52/25%填空。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B75",
+          "typed": "size_candidate",
+          "context": "B:QT5tt → B75极化：强牌与有效听牌打，中等牌多X；普通K高细表不足。不能拿IP 3be"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "有效听牌打，中等牌多X；普通K高细表不足。不能拿IP 3bet的K52/25%填空。"
+        }
+      ],
+      "boardTokens": [
+        "QT5tt",
+        "K52",
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#27",
+      "materialId": "03 有位置单加注#27",
+      "sheet": "03 有位置单加注",
+      "row": 27,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "bdbff1a8606c59765f2a87e3d63ac84f24e9225ea0fcdc7038710ef717f7e4e5",
+      "sourceText": "B:S05\nQT5tt\nQ＋T＋听花｜两端下注 | D:【课程】\n选 B75 的极化路线。\n强价值＋有效听牌下注，普通中等对子多X。 | E:AQ/QT/55等价值端与有效听牌可组成大注范围；J♠9♠有两头顺听＋花听。普通中等对子不想被更强继续牌包围 → 多X，不能拿TT当中等牌。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B75",
+          "typed": "size_candidate",
+          "context": "B:S05 QT5tt Q＋T＋听花｜两端下注 | D:【课程】 选 B75 的极化路线。 强价值＋有效听牌下注，普通中等对子多X。 | E:AQ/"
+        }
+      ],
+      "boardTokens": [
+        "QT5tt",
+        "AQ",
+        "QT",
+        "55",
+        "TT"
+      ],
+      "handTokens": [
+        "AQ",
+        "QT",
+        "55",
+        "TT"
+      ],
+      "explicitConditions": [
+        "当中等牌"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#29",
+      "materialId": "03 有位置单加注#29",
+      "sheet": "03 有位置单加注",
+      "row": 29,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9808cf96c05a55d168c60777152b651ee663f76ca22a7f0fe2ff2fd22d385626",
+      "sourceText": "B:JT  J / T 高　同上，最高牌是 J 或 T。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "JT"
+      ],
+      "handTokens": [
+        "JT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#30",
+      "materialId": "03 有位置单加注#30",
+      "sheet": "03 有位置单加注",
+      "row": 30,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "fd707c1a4b2ded530d6c8d9a62223ad312a14b7c644e36279c820f768bb10eb6",
+      "sourceText": "B:T85r、J95tt主尺寸均B67，但候选牌不同：J95的KQ/KT已有卡顺；弱J、无好后门空气多X。相同尺寸≠相同下注组合。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:T85r、J95tt主尺寸均B67，但候选牌不同：J95的KQ/KT已有卡顺；弱J、无好后门空气多X。相同"
+        }
+      ],
+      "boardTokens": [
+        "T85r",
+        "J95tt",
+        "J95",
+        "KQ",
+        "KT"
+      ],
+      "handTokens": [
+        "KQ",
+        "KT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#31",
+      "materialId": "03 有位置单加注#31",
+      "sheet": "03 有位置单加注",
+      "row": 31,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "41440acc413e95555ec586cfb42675316d5dcda05f162caeccab15674dfe8581",
+      "sourceText": "B:S07\nT85r\nT＋8｜选牌下注 | D:【教学归纳】\n选 B67 单尺寸。\n两高张、合适A高/好后门可下注；77等多X。 | E:KQ等有改善机会，77却能赢一些未中的高牌、又难从更弱牌取大价值。两者虽然都没顶对，任务不同 → 一个可作诈唬候选，一个常保留X。\nS1 §3.2–3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "B:S07 T85r T＋8｜选牌下注 | D:【教学归纳】 选 B67 单尺寸。 两高张、合适A高/好后门可下注；77等多X。 | E:KQ等"
+        }
+      ],
+      "boardTokens": [
+        "T85r",
+        "77",
+        "KQ"
+      ],
+      "handTokens": [
+        "77",
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#32",
+      "materialId": "03 有位置单加注#32",
+      "sheet": "03 有位置单加注",
+      "row": 32,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "00e933310554a9d88656d3845b85f92f1d4529cfcd64ea8ba36d3e833003b47d",
+      "sourceText": "B:S08\nJ95tt\nJ＋9＋听花｜选牌下注 | D:【教学归纳】\n选 B67。\nAJ价值、KQ/KT卡顺可下注；弱J和无好后门空气更多X。 | E:KQ来T可成顺；KT来Q可成顺。它们是有真实改善机会的诈唬候选。AJ可向弱Jx取值；无好后门的空气和弱J不能只按“没中/中了”两类硬打。\nS1 §3.5\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": ":S08 J95tt J＋9＋听花｜选牌下注 | D:【教学归纳】 选 B67。 AJ价值、KQ/KT卡顺可下注；弱J和无好后门空气更多X。 | E:"
+        }
+      ],
+      "boardTokens": [
+        "J95tt",
+        "AJ",
+        "KQ",
+        "KT"
+      ],
+      "handTokens": [
+        "AJ",
+        "KQ",
+        "KT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#33",
+      "materialId": "03 有位置单加注#33",
+      "sheet": "03 有位置单加注",
+      "row": 33,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "bfaa961cee0a122160939c89ced8f10f0d12cfab2ec524382c22f1ad830616ab",
+      "sourceText": "B:L  9 高及以下　同上，最高牌不超过 9。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#34",
+      "materialId": "03 有位置单加注#34",
+      "sheet": "03 有位置单加注",
+      "row": 34,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "7fbb7e73de273ad89e8d05f24d58b2bfa4709fb9a02e7d7e45476bd665cf41cf",
+      "sourceText": "B:456 → B50选择性下注；987 → B75路线。先看自己是超对/三条/顺子，还是中等牌，不能所有“低连张”统统X。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B50",
+          "typed": "size_candidate",
+          "context": "B:456 → B50选择性下注；987 → B75路线。先看自己是超对/三条/顺子，还是中等"
+        },
+        {
+          "raw": "B75",
+          "typed": "size_candidate",
+          "context": "B:456 → B50选择性下注；987 → B75路线。先看自己是超对/三条/顺子，还是中等牌，不能所有“低连张”统统X。"
+        }
+      ],
+      "boardTokens": [
+        "456",
+        "987"
+      ],
+      "handTokens": [
+        "56",
+        "87"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#35",
+      "materialId": "03 有位置单加注#35",
+      "sheet": "03 有位置单加注",
+      "row": 35,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "b01c3e30fa0f7e42d9ac28fe91196dd4eacbcccd3289210fd6f5e3a3693e410e",
+      "sourceText": "B:S09\n456r\n低连｜选择性中注 | D:【课程】\nB50，选择性下注；课程约40%频率。\n可考虑77/88等超对、6x、有效顺子听牌。 | E:77/88是超对；87已经成顺，7x还可能带顺听。BTN与BB都保留低牌组合 → 你并非只有没中的大高张，课程仍安排部分下注，不是全范围X。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B50",
+          "typed": "size_candidate",
+          "context": "B:S09 456r 低连｜选择性中注 | D:【课程】 B50，选择性下注；课程约40%频率。 可考虑77/88等超对、6x、有效顺子"
+        },
+        {
+          "raw": "40%",
+          "typed": "frequency_or_untyped",
+          "context": "456r 低连｜选择性中注 | D:【课程】 B50，选择性下注；课程约40%频率。 可考虑77/88等超对、6x、有效顺子听牌。 | E:77/88"
+        }
+      ],
+      "boardTokens": [
+        "456r",
+        "77",
+        "88",
+        "87"
+      ],
+      "handTokens": [
+        "77",
+        "88",
+        "87"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#36",
+      "materialId": "03 有位置单加注#36",
+      "sheet": "03 有位置单加注",
+      "row": 36,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "c7d590566efece610ed88497df73a7e033c17dfa292f5dea49c501da24f0c639",
+      "sourceText": "B:S10\n987r\n中低连｜选择性大注 | D:【课程】\n课程选 B75 大注。\n高对子＋合适听牌形成进攻端，中等摊牌牌多X。 | E:JT已成顺，TT+为超对，T9有顶对＋顺听；普通8x等中等牌则更怕强继续范围。先给手牌分任务，再用课程75%的进攻路线。\nS6 §3.6\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B75",
+          "typed": "size_candidate",
+          "context": "B:S10 987r 中低连｜选择性大注 | D:【课程】 课程选 B75 大注。 高对子＋合适听牌形成进攻端，中等摊牌牌多X。 | E:JT已成"
+        },
+        {
+          "raw": "75%",
+          "typed": "frequency_or_untyped",
+          "context": "有顶对＋顺听；普通8x等中等牌则更怕强继续范围。先给手牌分任务，再用课程75%的进攻路线。 S6 §3.6 解释中的配牌是示例，不是完整范围。"
+        }
+      ],
+      "boardTokens": [
+        "987r",
+        "JT",
+        "TT",
+        "T9",
+        "75"
+      ],
+      "handTokens": [
+        "JT",
+        "TT",
+        "T9",
+        "75"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-03 有位置单加注#37",
+      "materialId": "03 有位置单加注#37",
+      "sheet": "03 有位置单加注",
+      "row": 37,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "87e7a75639daa864134371c4ac891bbe252d980e10d674fce65275707993082f",
+      "sourceText": "B:“小注后对手跟＝封顶”只是冰球原理的一项对手假设。若其强牌也会慢打，不能自动超池。面对爱X/R的对手，先缩减无权益空气的高频小注。",
+      "explicitActions": [
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "若其强牌也会慢打，不能自动超池",
+        "面对爱X/R的对手，先缩减无权益空气的高频小注"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#5",
+      "materialId": "04 没位置单加注#5",
+      "sheet": "04 没位置单加注",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ae1099c503d0564fdb041817a4f62e251f115aeaeaaceb113d185c18c22e4ac1",
+      "sourceText": "D:范围宽又先行动，对手容易用位置跟住并在后街施压。基准保留更多过牌；有证据时再针对特定下注/过牌线路增加进攻。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#7",
+      "materialId": "04 没位置单加注#7",
+      "sheet": "04 没位置单加注",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "1b7ee3abcea175e1f54e1e555684a0ece510118901e90f40de0f8c3a77b85094",
+      "sourceText": "D:先分SB–BB与前位–BTN；基准多X；剥削看线路和对手。",
+      "explicitActions": [
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#10",
+      "materialId": "04 没位置单加注#10",
+      "sheet": "04 没位置单加注",
+      "row": 10,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "8f5a9fb9fa7a149295021bac438c5ce9806b9a53d9e53aa01f06de719010bccc",
+      "sourceText": "B:你开池 → BB 跟注。主线为 SB 对 BB；前位对 BTN 的区别在本页末尾。",
+      "explicitActions": [
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#11",
+      "materialId": "04 没位置单加注#11",
+      "sheet": "04 没位置单加注",
+      "row": 11,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "98118c1d4a855eb494497cf5e213e4af5f4101c44f22fa9bed34d8dd9363df1b",
+      "sourceText": "B:以下牌例主要是SB–BB。面对被动玩家的大注，别为了抢主动而乱X/R；面对爱攻击过牌、又对加注弃牌多的玩家，才扩X/R。",
+      "explicitActions": [
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "面对被动玩家的大注，别为了抢主动而乱X/R",
+        "面对爱攻击过牌、又对加注弃牌多的玩家，才扩X/R"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#15",
+      "materialId": "04 没位置单加注#15",
+      "sheet": "04 没位置单加注",
+      "row": 15,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "5347094ebb1a490c4292e5840a4f118c1c155466aeaea738679afe90c5cdf42a",
+      "sourceText": "B:M  三同花　三张花色相同。先归这里，不再归 A 高。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#16",
+      "materialId": "04 没位置单加注#16",
+      "sheet": "04 没位置单加注",
+      "row": 16,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ec5575684018f3a7af8e1c888f5b29ac67d7a399bff19afe44183c615a1d4472",
+      "sourceText": "B:SB–BB三同花细表未给。先辨手牌花色任务；不要把IP小注频率原样复制到先行动的位置。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#18",
+      "materialId": "04 没位置单加注#18",
+      "sheet": "04 没位置单加注",
+      "row": 18,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f76fcc01634a99543e851910f0d1cf41519b0f847414d1053c635906a402244",
+      "sourceText": "B:P  对子 / 三条面　两张或三张点数相同。三条面单独标出。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#19",
+      "materialId": "04 没位置单加注#19",
+      "sheet": "04 没位置单加注",
+      "row": 19,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "51269b73e129fc717c9e509c657cf7226b86010ed4428bd0aaaa7a50bd2f5e17",
+      "sourceText": "B:QQQ三条面有高频下注方向，尺寸未明；低点对子/高点对子缺表。QQQ不能代表K22或TT5。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "QQQ",
+        "K22",
+        "TT5"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#20",
+      "materialId": "04 没位置单加注#20",
+      "sheet": "04 没位置单加注",
+      "row": 20,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "a2e6507cd7f1d9e40530de00cc19a1e42d82e13b0e07263cfd8d5b3d49e3d503",
+      "sourceText": "B:P02\nQQQr\n三条公共牌 | D:【课程】\n课程例：可高频甚至全范围下注。\n具体尺寸未给。 | E:88在QQQ上已经是QQQ88葫芦；A高和口袋对的任务不同。课程此面可高频下注，但没给尺寸；不能把“高频”误读成“下很大”。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "QQQr",
+        "88",
+        "QQQ"
+      ],
+      "handTokens": [
+        "88"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#21",
+      "materialId": "04 没位置单加注#21",
+      "sheet": "04 没位置单加注",
+      "row": 21,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9f5307e32c7a514c37cb1e3b69c9142b97ec94eb687a936f59c24907f628c4a9",
+      "sourceText": "B:A  A 高　A高单独成组，不被K/Q代替。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#22",
+      "materialId": "04 没位置单加注#22",
+      "sheet": "04 没位置单加注",
+      "row": 22,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "8206de9510cafac5e31d971832dbd1f311e625b4a1e03a16cd32bcb0cae83375",
+      "sourceText": "B:A72只有针对过弃、少加注的扩大频率方案；常规基准不等于全打。若是前位开池被BTN跟，改查本页末尾，更多X。",
+      "explicitActions": [
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "A72"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若是前位开池被BTN跟，改查本页末尾，更多X"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#23",
+      "materialId": "04 没位置单加注#23",
+      "sheet": "04 没位置单加注",
+      "row": 23,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "9f8af2e1e6f268210bee07b040b199b7e79f76158d6ef6f33fb026ecfece1eed",
+      "sourceText": "B:P03\nA72r\n单A｜剥削条件 | D:【条件剥削】\n基准不是自动全打。\n对手过弃且少加注时，课程允许扩大至范围CB；尺寸未明确固定。 | E:若对手把很多无A的高张、弱对子过度弃掉，小CB才更容易获利；若他会宽跟、会加注，空气牌不能照样自动下注。尺寸资料不完整。\nS7 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "A72r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若对手把很多无A的高张、弱对子过度弃掉，小CB才更容易获利",
+        "若他会宽跟、会加注，空气牌不能照样自动下注"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#24",
+      "materialId": "04 没位置单加注#24",
+      "sheet": "04 没位置单加注",
+      "row": 24,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "4a141c0e4604edd95bbf9f75c8cbea6cac9cb43eb7393a2c22dd757de0a519d3",
+      "sourceText": "B:KQ  K / Q 高　同上，最高牌是 K 或 Q。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "KQ"
+      ],
+      "handTokens": [
+        "KQ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#25",
+      "materialId": "04 没位置单加注#25",
+      "sheet": "04 没位置单加注",
+      "row": 25,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "660a7ced5e948de9a6756889811aaac1ae21a434fa14dc3201ac3b116896f615",
+      "sourceText": "B:QT5可针对过弃者B25；KT6tt课程却有约55%X。这里同时变了牌面与策略前提，不可归纳为“所有高张都小注”。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "B:QT5可针对过弃者B25；KT6tt课程却有约55%X。这里同时变了牌面与策略前提，不可归纳为“"
+        },
+        {
+          "raw": "55%",
+          "typed": "frequency_or_untyped",
+          "context": "B:QT5可针对过弃者B25；KT6tt课程却有约55%X。这里同时变了牌面与策略前提，不可归纳为“所有高张都小注”。"
+        }
+      ],
+      "boardTokens": [
+        "QT5",
+        "KT6tt",
+        "55"
+      ],
+      "handTokens": [
+        "55"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#26",
+      "materialId": "04 没位置单加注#26",
+      "sheet": "04 没位置单加注",
+      "row": 26,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "1757992fa44c9bd7fe95f9401b143bfd56cab8aa5cb9e6f301ebb1c8bd07edea",
+      "sourceText": "B:P04\nQT5r\nQ＋T｜过弃才加频 | D:【条件剥削】\n对过弃的紧弱/娱乐玩家：可B25，扩大频率。\n没有这种证据，保留选牌和过牌。 | E:面对25%小注，部分高张、对子、后门牌本可继续；若对手实际放弃太多，小注已足够取得弃牌收益 → 才增加下注范围。\nS7 §3.4\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B25",
+          "typed": "size_candidate",
+          "context": "r Q＋T｜过弃才加频 | D:【条件剥削】 对过弃的紧弱/娱乐玩家：可B25，扩大频率。 没有这种证据，保留选牌和过牌。 | E:面对25%小注，部"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "玩家：可B25，扩大频率。 没有这种证据，保留选牌和过牌。 | E:面对25%小注，部分高张、对子、后门牌本可继续；若对手实际放弃太多，小注已足够取得"
+        }
+      ],
+      "boardTokens": [
+        "QT5r",
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [
+        "没有这种证据，保留选牌和过牌",
+        "面对25%小注，部分高张、对子、后门牌本可继续",
+        "若对手实际放弃太多，小注已足够取得弃牌收益 → 才增加下注范围"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#27",
+      "materialId": "04 没位置单加注#27",
+      "sheet": "04 没位置单加注",
+      "row": 27,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "5039959b022d26bf24fefa1bb224ac2e905a503ef692ca22a25d8e3be0c447e8",
+      "sourceText": "B:P05\nKT6tt\nK＋T＋听花｜保留X | D:【课程】\n课程基准约55%过牌。\n其余牌有下注，组合和具体尺寸未完整给出。 | E:QJ有两头顺听，黑桃底牌可有花听，BB还能凭位置跟注。你的QQ/JJ等中等牌不愿每手都扩大底池 → 课程约55%X。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [
+        {
+          "raw": "55%",
+          "typed": "frequency_or_untyped",
+          "context": ":P05 KT6tt K＋T＋听花｜保留X | D:【课程】 课程基准约55%过牌。 其余牌有下注，组合和具体尺寸未完整给出。 | E:QJ有两头顺听"
+        },
+        {
+          "raw": "55%",
+          "typed": "frequency_or_untyped",
+          "context": "BB还能凭位置跟注。你的QQ/JJ等中等牌不愿每手都扩大底池 → 课程约55%X。 S7 §3.2 解释中的配牌是示例，不是完整范围。"
+        }
+      ],
+      "boardTokens": [
+        "KT6tt",
+        "55",
+        "QJ",
+        "QQ",
+        "JJ"
+      ],
+      "handTokens": [
+        "55",
+        "QJ",
+        "QQ",
+        "JJ"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#28",
+      "materialId": "04 没位置单加注#28",
+      "sheet": "04 没位置单加注",
+      "row": 28,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "9808cf96c05a55d168c60777152b651ee663f76ca22a7f0fe2ff2fd22d385626",
+      "sourceText": "B:JT  J / T 高　同上，最高牌是 J 或 T。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [
+        "JT"
+      ],
+      "handTokens": [
+        "JT"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#29",
+      "materialId": "04 没位置单加注#29",
+      "sheet": "04 没位置单加注",
+      "row": 29,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b62ff38327ecd7a1acbf7751a6c518622714e6a1a88d41bc2f4343f25aaa42a7",
+      "sourceText": "B:T83按课程简化先范围X。对手随后下注，进入跟/弃/加注问题；不是把OOP 3bet的T83大CB搬来。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "T83"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#30",
+      "materialId": "04 没位置单加注#30",
+      "sheet": "04 没位置单加注",
+      "row": 30,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "249ff33b5bdfad9e5aa64c1083896acf31d3440d428e003e1db2ada9e4dbe96d",
+      "sourceText": "B:P06\nT83r\nT高｜SRP基准X | D:【教学归纳】\n课程给的简化：范围X。\n对手下注后再按价值、听牌、价格判断。 | E:SB开池范围里弱高张、边缘牌比3bet范围多，BB也有宽广的继续组合。不能只看你可能有AA就整范围打 → 课程T83先X，再回应对手下注。\nS7 §3.2\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "T83r",
+        "AA",
+        "T83"
+      ],
+      "handTokens": [
+        "AA"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#31",
+      "materialId": "04 没位置单加注#31",
+      "sheet": "04 没位置单加注",
+      "row": 31,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "bfaa961cee0a122160939c89ced8f10f0d12cfab2ec524382c22f1ad830616ab",
+      "sourceText": "B:L  9 高及以下　同上，最高牌不超过 9。",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#32",
+      "materialId": "04 没位置单加注#32",
+      "sheet": "04 没位置单加注",
+      "row": 32,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "d59202006ea188eba814f632cc868164ea1e0d6a2bca7cdd0d0c5b5c8155192a",
+      "sourceText": "B:低牌/低连张普通基准缺表。可以先采用保守X练习，但它只是退路；面对下注不能自动弃牌，防守组合需另补。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "面对下注不能自动弃牌，防守组合需另补"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#34",
+      "materialId": "04 没位置单加注#34",
+      "sheet": "04 没位置单加注",
+      "row": 34,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "60fb92e2ba01980f67d57fb6a8e5cd1f09664d5ee08ee346e7efbde7af9ad5f2",
+      "sourceText": "B:单独切换：前位开池，被BTN跟注",
+      "explicitActions": [
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#35",
+      "materialId": "04 没位置单加注#35",
+      "sheet": "04 没位置单加注",
+      "row": 35,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "1f4932f179f4bf87298dbec6d4daf71dd601f4de1fda8276b08e62209b16b665",
+      "sourceText": "B:P08\nA72r\n换成前位对BTN | D:【教学归纳】\n若改成“前位开池，BTN跟注”：\n先高频X；不要套上方SB–BB的高频小CB剥削。 | E:BTN冷跟前位开池所带进来的牌，与BB宽防守不是一批。即使同为A72，不能沿用SB–BB针对弱范围的高频CB；课程在此先更多X。\nS7 §3.7\n解释中的配牌是示例，不是完整范围。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "A72r",
+        "A72"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若改成“前位开池，BTN跟注”： 先高频X"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-04 没位置单加注#36",
+      "materialId": "04 没位置单加注#36",
+      "sheet": "04 没位置单加注",
+      "row": 36,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "f245a9a768dc382f7f8a70c183e564304c7a5c2ddf6aa40f4129a5ced8dadc21",
+      "sourceText": "B:紧弱/娱乐玩家的大注偏强：少做无依据诈唬X/R。若常规玩家爱攻击你的X，且对X/R过弃，才更多慢玩强牌并扩X/R。标签不能代替具体行动证据。",
+      "explicitActions": [
+        "check",
+        "raise",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "若常规玩家爱攻击你的X，且对X/R过弃，才更多慢玩强牌并扩X/R"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#5",
+      "materialId": "05 转牌路线#5",
+      "sheet": "05 转牌路线",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "e6a5bf24ade4fd600c069f0204f9a207039b49a434631792bf23b7ac8cd21801",
+      "sourceText": "B:先找前序：小CB被跟 / 大CB被跟 / X–X / X/R被跟。再看转牌：听牌完成、配对、改善谁、空白。最后重分手牌：强价值、有效诈唬、中等摊牌。资料最充分的是IP 3bet范围CB后的部分路线。",
+      "explicitActions": [
+        "bet",
+        "check",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#7",
+      "materialId": "05 转牌路线#7",
+      "sheet": "05 转牌路线",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ed01fbdd50ff52c3077e2edce9e3f79b231357cddfea436b1d0b48648577bc22",
+      "sourceText": "B:前序 / 简写 | C:翻牌＋转牌图片 | D:当前路线 | E:为何变化 / 不可套用处",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "当前路线 | E:为何变化 / 不可套用处"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#8",
+      "materialId": "05 转牌路线#8",
+      "sheet": "05 转牌路线",
+      "row": 8,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "1dd3b49a5d8e71fda462d87625fedfa991a0e21ecd926f29133dc52717adfa31",
+      "sourceText": "B:T01\nKT5r → 2♦\n原例 | D:【课程】\nIP 3bet：翻牌B33被跟，转牌对手X。\n此空白牌可继续大注，课程讨论B70～B100。 | E:翻牌虽可广打，对手跟注范围已收紧；第二枪采用强价值＋合适诈唬的极化思路。\n边界：中等牌与未改善空气不自动全打。完整选牌频率未给。\nS4「翻牌1/3下注后的转牌策略」",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B33",
+          "typed": "size_candidate",
+          "context": "T01 KT5r → 2♦ 原例 | D:【课程】 IP 3bet：翻牌B33被跟，转牌对手X。 此空白牌可继续大注，课程讨论B70～B100。 | "
+        },
+        {
+          "raw": "B70",
+          "typed": "size_candidate",
+          "context": "P 3bet：翻牌B33被跟，转牌对手X。 此空白牌可继续大注，课程讨论B70～B100。 | E:翻牌虽可广打，对手跟注范围已收紧；第二枪采用强价值"
+        },
+        {
+          "raw": "B100",
+          "typed": "size_candidate",
+          "context": "et：翻牌B33被跟，转牌对手X。 此空白牌可继续大注，课程讨论B70～B100。 | E:翻牌虽可广打，对手跟注范围已收紧；第二枪采用强价值＋合适诈唬"
+        }
+      ],
+      "boardTokens": [
+        "KT5r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#9",
+      "materialId": "05 转牌路线#9",
+      "sheet": "05 转牌路线",
+      "row": 9,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "2efb3b3e85b5728024fb9d37bd76d6326ab07f68aa879b4803f3bba696721d7b",
+      "sourceText": "B:T02\n962r → J♣\n原例 | D:【课程】\nIP 3bet：翻牌B67被跟，对手转牌X。\nJ是课程继续较大第二枪的例子。 | E:J能改善你的高张范围，也给对手中对压力；不是“任何高牌都自动打”。\n边界：具体手牌选取由强价值/有效诈唬归纳，原文无完整组合。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B67",
+          "typed": "size_candidate",
+          "context": "T02 962r → J♣ 原例 | D:【课程】 IP 3bet：翻牌B67被跟，对手转牌X。 J是课程继续较大第二枪的例子。 | E:J能改善你的"
+        }
+      ],
+      "boardTokens": [
+        "962r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#10",
+      "materialId": "05 转牌路线#10",
+      "sheet": "05 转牌路线",
+      "row": 10,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "d277509b38e7f1f286438477d4b167e8c0acc053517cf928b244cfe39a3b9c16",
+      "sourceText": "B:T03\n962r → 7♦\n原例 | D:【课程】\n同一962大注线：转5/6/7/8/T，课程简化为X。 | E:这些牌更常改善跟注方的对子/连牌/听牌。降低第二枪，利用位置看河牌。\n边界：只用于该类前序例子；不能总结成“所有低转牌都过牌”。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "962r",
+        "962"
+      ],
+      "handTokens": [
+        "62"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#11",
+      "materialId": "05 转牌路线#11",
+      "sheet": "05 转牌路线",
+      "row": 11,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "3eb90ca0e9161b71ce6017561b9ed5710089a5778e4d87f4a2511d1261f7c878",
+      "sourceText": "B:T04\n962r → 2♦\n原例 | D:【课程】\n同一962大注线：降低第二枪频率，保留更多X。\n不能把配对当成无条件全范围下注牌。 | E:顶端牌和中等牌的价值变化不同；手牌是否改善必须重新看。\n边界：对子转牌没有完整统一表。原笔记A72→2有重复花色记录，不照抄不合法牌。\nS4「翻牌大尺寸下注后的转牌策略」",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "962r",
+        "962",
+        "A72"
+      ],
+      "handTokens": [
+        "62"
+      ],
+      "explicitConditions": [
+        "当成无条件全范围下注牌",
+        "没有完整统一表"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#12",
+      "materialId": "05 转牌路线#12",
+      "sheet": "05 转牌路线",
+      "row": 12,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "efe6134e498c81122ee088a3e560d2f1b572af50ab6cee2d32149f819cd3837a",
+      "sourceText": "B:T05\nJT2r → 9♦\n原例 | D:【课程】\n范围变化优先：减少第二枪，下注偏小。\n先区分自己已成强牌、普通一对、听牌/空气。 | E:9让KQ/87等成为顺子，对手先前跟注的连牌集中改善。\n边界：不是所有牌都X，也不是“我有一对就保护大注”；精确选牌待补。\nS4「翻牌1/3下注后的转牌策略」",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "JT2r",
+        "KQ",
+        "87"
+      ],
+      "handTokens": [
+        "KQ",
+        "87"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#13",
+      "materialId": "05 转牌路线#13",
+      "sheet": "05 转牌路线",
+      "row": 13,
+      "policyIdentity": "course_rule",
+      "sourceKind": "explicit_course_material",
+      "sourceTextHash": "bfcd6af383ec81a16f28d1fb97d373aec20aa2a3e9454453bbda763d91b38250",
+      "sourceText": "B:T06\nKT5M → 9♠\n原例 | D:【课程】\n原例是第四张同花！\n课程给减少进攻、较小尺寸的方向。 | E:一张黑桃底牌就能组成同花。强弱要按同花大小重新判断。\n边界：不要错画成“两同花翻牌→第三张”；其他完成花的牌按范围重新评估。\nS4「翻牌1/3下注后的转牌策略」",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "KT5M"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#14",
+      "materialId": "05 转牌路线#14",
+      "sheet": "05 转牌路线",
+      "row": 14,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "f6adbca66492545a368eff577281cd22609a0b9632da127900bfc766e0f4aff3",
+      "sourceText": "B:T07\n986tt → 2♦\n结构示意 | D:【条件剥削】\nIP SRP：小CB被跟，转牌对手X。\n若对手会快玩强牌、跟注后又对大注过弃，可考虑超池。 | E:“冰球原理”用翻牌反应推测范围，再施压；不能只看一声跟注就认定封顶。\n边界：>100%是超池定义；原资料无统一125%。听牌完成时停止机械超池。\nS6 §3.9",
+      "explicitActions": [
+        "bet",
+        "check",
+        "call",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": ">100%",
+          "typed": "frequency_or_untyped",
+          "context": "球原理”用翻牌反应推测范围，再施压；不能只看一声跟注就认定封顶。 边界：>100%是超池定义；原资料无统一125%。听牌完成时停止机械超池。 S6 §3."
+        },
+        {
+          "raw": "125%",
+          "typed": "frequency_or_untyped",
+          "context": "；不能只看一声跟注就认定封顶。 边界：>100%是超池定义；原资料无统一125%。听牌完成时停止机械超池。 S6 §3.9"
+        }
+      ],
+      "boardTokens": [
+        "986tt",
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [
+        "若对手会快玩强牌、跟注后又对大注过弃，可考虑超池"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#15",
+      "materialId": "05 转牌路线#15",
+      "sheet": "05 转牌路线",
+      "row": 15,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b818e0dd6bea68506c1e28a76099b2515393c155d76aff1d80c654e085be8d98",
+      "sourceText": "B:T08\nT83r → 2♦\n转牌示意 | D:【教学归纳】\nOOP 3bet：翻牌X/R被跟，空白转牌先多X。\n不要因为前面加注大就硬打第二枪。 | E:对手通过你的加注筛选后更强；翻牌剥削有利，不代表后街必须继续投入。\n边界：原文提好牌上可继续，但全下例条件不足，未编成固定指令。\nS5 §3.4",
+      "explicitActions": [
+        "check",
+        "raise",
+        "all_in"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "T83r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#16",
+      "materialId": "05 转牌路线#16",
+      "sheet": "05 转牌路线",
+      "row": 16,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "a129c85513efef119d69e0b516bed2c8c9a7b1733ac762a1fda66481dd1da432",
+      "sourceText": "B:T09\nT83r → 4♣\n线路示意 | D:【条件剥削】\nOOP 3bet：翻牌X–X。\n若该线对手转牌过弃，可做延迟下注；B70是资料讨论尺寸之一。 | E:对手过牌可能减少部分强牌，但仍可能慢打。选牌须有价值或弃牌目标。\n边界：不是任何空气见X–X必打；原文70%弃牌数据是人群统计。\nS5 §3.5",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [
+        {
+          "raw": "B70",
+          "typed": "size_candidate",
+          "context": "削】 OOP 3bet：翻牌X–X。 若该线对手转牌过弃，可做延迟下注；B70是资料讨论尺寸之一。 | E:对手过牌可能减少部分强牌，但仍可能慢打。选"
+        },
+        {
+          "raw": "70%",
+          "typed": "frequency_or_untyped",
+          "context": "可能慢打。选牌须有价值或弃牌目标。 边界：不是任何空气见X–X必打；原文70%弃牌数据是人群统计。 S5 §3.5"
+        }
+      ],
+      "boardTokens": [
+        "T83r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若该线对手转牌过弃，可做延迟下注"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#17",
+      "materialId": "05 转牌路线#17",
+      "sheet": "05 转牌路线",
+      "row": 17,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "3676cc10200ceb9659b5594bbfea99293834d78a5a2e16de7dcaf3b53b5d9991",
+      "sourceText": "B:T10\nQT5r → 2♣\n线路示意 | D:【条件剥削】\nOOP SRP：翻牌X–X。\n对在此线过弃的对手，可增加转牌下注；尺度无统一答案。 | E:材料的盈利依据是具体线路中的弃牌偏差，非单看牌面。\n边界：换成前位–BTN须用该子场景判断。对手下注时已进入防守，不能继续照CB表。\nS7 §3.6–3.7",
+      "explicitActions": [
+        "bet",
+        "check",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "QT5r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-05 转牌路线#19",
+      "materialId": "05 转牌路线#19",
+      "sheet": "05 转牌路线",
+      "row": 19,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "3e88d0661166269cc6fcfccbc5e2904b92abdfc445bf87ca9266b2d87623fee1",
+      "sourceText": "B:剩余有效筹码会限制尺寸。先看剩余筹码与底池，再谈70%或超池；不把固定百分比机械套成全下。实际决策还需要双方范围、下注史和手牌花色。",
+      "explicitActions": [
+        "bet",
+        "all_in"
+      ],
+      "numericMentions": [
+        {
+          "raw": "70%",
+          "typed": "frequency_or_untyped",
+          "context": "B:剩余有效筹码会限制尺寸。先看剩余筹码与底池，再谈70%或超池；不把固定百分比机械套成全下。实际决策还需要双方范围、下注史和手牌"
+        }
+      ],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#5",
+      "materialId": "06 河牌路线#5",
+      "sheet": "06 河牌路线",
+      "row": 5,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ea9e7753c8a7a598dd3f19e9bc997addfab39026ca392338f3427c0eb8e4d630",
+      "sourceText": "B:对手X：更差牌会跟 → 价值；更好牌会弃 → 诈唬；两者都不清楚而有摊牌价值 → 多X。面对B或R：按对手该条线路范围和价格重新评估，不能直接沿用价值下注结论。",
+      "explicitActions": [
+        "bet",
+        "check"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "面对B或R：按对手该条线路范围和价格重新评估，不能直接沿用价值下注结论"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#7",
+      "materialId": "06 河牌路线#7",
+      "sheet": "06 河牌路线",
+      "row": 7,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "b1f9408e17c0a8f299542dedbab46e4652199fb47ada4dd04cf307ee93fdc3f0",
+      "sourceText": "B:任务 / 简写 | C:公共牌＋你的手牌 | D:现在判断什么 | E:原理 / 边界",
+      "explicitActions": [],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#13",
+      "materialId": "06 河牌路线#13",
+      "sheet": "06 河牌路线",
+      "row": 13,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "97787233e2da8243f8691194f283bbe51d05736df22a486f727d4085a1886868",
+      "sourceText": "B:R06\nQT5r → 2♦ → 6♥\n线路示意 | D:【条件剥削】\nOOP SRP，翻牌和转牌都B–C。\n紧弱/娱乐玩家若跟转后河牌黏，不机械三枪诈唬。 | E:原材料认为这条线与其他“对手示弱”线路不同，转牌跟注已保留较强牌。\n边界：常规玩家可有三枪过弃倾向，但“reg”标签本身不是证据。\nS7 §3.6",
+      "explicitActions": [
+        "call",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "QT5r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "若跟转后河牌黏，不机械三枪诈唬"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#14",
+      "materialId": "06 河牌路线#14",
+      "sheet": "06 河牌路线",
+      "row": 14,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "34980392eb933ae6c4d2e50895e46c8794072a3459ee43672c1a987e70b4632e",
+      "sourceText": "B:R07\n986tt → 2♦ → 7♣\n线路示意 | D:【教学归纳】\nIP SRP：转牌超池被跟，河牌先重新评估。\n此7让四张牌连成一段，不自动再超池。 | E:对手的跟注范围和河牌强牌组成都变了；翻牌“封顶”的假设可能失效。\n边界：资料提供延续剥削思路，未给全部河牌/尺寸。精确行动未确定。\nS6 §3.9",
+      "explicitActions": [
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "986tt"
+      ],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#15",
+      "materialId": "06 河牌路线#15",
+      "sheet": "06 河牌路线",
+      "row": 15,
+      "policyIdentity": "population_exploit",
+      "sourceKind": "conditional_population_or_opponent_model",
+      "sourceTextHash": "273184543fa95a9ed0c5b103d0717937d3301430cacc260828cc10f720e9e68a",
+      "sourceText": "B:R08\nJ73r → 2♦ → 9♥\n线路示意 | D:【条件剥削】\nOOP SRP，曾有一街双方过牌。\n只在该线路对手过弃有依据时，增加河牌施压。 | E:S7指出许多含过牌的线路比三枪线更易得到弃牌。\n边界：“过牌过”不等于“没有强牌”；选诈唬仍需要更好牌会弃。\nS7 §3.6–3.8",
+      "explicitActions": [
+        "check",
+        "fold"
+      ],
+      "numericMentions": [],
+      "boardTokens": [
+        "J73r"
+      ],
+      "handTokens": [],
+      "explicitConditions": [
+        "在该线路对手过弃有依据时，增加河牌施压",
+        "没有强牌”"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "population_exploit_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "populationModel",
+        "triggerCondition",
+        "opponentResponseReference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference",
+        "simplified_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#18",
+      "materialId": "06 河牌路线#18",
+      "sheet": "06 河牌路线",
+      "row": 18,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "ed6ca82a4ebb3c78dd9520f48c2396a8c387d066db766680bfe7f4ee8d842e84",
+      "sourceText": "B:跟注赔率：只算价格，不代替范围判断",
+      "explicitActions": [
+        "call"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#20",
+      "materialId": "06 河牌路线#20",
+      "sheet": "06 河牌路线",
+      "row": 20,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "f10b02decd404de9cf0674d6ab4353f23d8867918de8a84b4e7fd098ef29fc49",
+      "sourceText": "B:当前底池P | D:已经包含对手刚下注的钱，还没放入你准备跟的金额。",
+      "explicitActions": [
+        "bet"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [
+        "当前底池P | D:已经包含对手刚下注的钱，还没放入你准备跟的金额"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#21",
+      "materialId": "06 河牌路线#21",
+      "sheet": "06 河牌路线",
+      "row": 21,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "33079179dfcd3c021f734aed82caf12cf8362ed9e1e3390e61b4621be902b5e6",
+      "sourceText": "B:还需跟注C | D:被加注时填你“还差多少”，不要再加一次已投入的钱。",
+      "explicitActions": [
+        "call",
+        "raise"
+      ],
+      "numericMentions": [],
+      "boardTokens": [],
+      "handTokens": [],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#22",
+      "materialId": "06 河牌路线#22",
+      "sheet": "06 河牌路线",
+      "row": 22,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "76c6c57cbbe31f1a510b35a7f2aa0857640c749baf8dfc229179b7219aa5f9fc",
+      "sourceText": "B:所需最低胜率 | C:=IF(OR(C20<=0,C21<=0),\"请填正数\",C21/(C20+C21)) | D:C ÷（P＋C）。示例50÷200＝25%。允许输入只用于赔率练习。",
+      "explicitActions": [],
+      "numericMentions": [
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "21/(C20+C21)) | D:C ÷（P＋C）。示例50÷200＝25%。允许输入只用于赔率练习。"
+        }
+      ],
+      "boardTokens": [
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    },
+    {
+      "candidateId": "CAND-06 河牌路线#24",
+      "materialId": "06 河牌路线#24",
+      "sheet": "06 河牌路线",
+      "row": 24,
+      "policyIdentity": "course_rule",
+      "sourceKind": "teaching_synthesis",
+      "sourceTextHash": "56ec3953bfa5d7a40fb3dfc6a6ad7189b9a0f24db73cd6778118d006d693fdf1",
+      "sourceText": "B:黄格可改。若你的实际赢牌概率高于门槛，跟注才有相应依据；门槛25%不代表对手有25%诈唬。早期街还要考虑后续下注与权益实现，不能只看这一公式。",
+      "explicitActions": [
+        "bet",
+        "call"
+      ],
+      "numericMentions": [
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "B:黄格可改。若你的实际赢牌概率高于门槛，跟注才有相应依据；门槛25%不代表对手有25%诈唬。早期街还要考虑后续下注与权益实现，不能只看这一公"
+        },
+        {
+          "raw": "25%",
+          "typed": "frequency_or_untyped",
+          "context": "改。若你的实际赢牌概率高于门槛，跟注才有相应依据；门槛25%不代表对手有25%诈唬。早期街还要考虑后续下注与权益实现，不能只看这一公式。"
+        }
+      ],
+      "boardTokens": [
+        "25"
+      ],
+      "handTokens": [
+        "25"
+      ],
+      "explicitConditions": [
+        "若你的实际赢牌概率高于门槛，跟注才有相应依据"
+      ],
+      "candidateStatus": "source_explicit_but_not_compiled",
+      "releaseBand": "course_rule_candidate",
+      "requiredCompilerChecks": [
+        "policyScope",
+        "sourceReference",
+        "actionMenuAndDenominator",
+        "frequency_vs_size_separation",
+        "differenceLedger",
+        "rangeAfterOrStop",
+        "successorOrStop",
+        "explicit_course_policy_or_matched_reference"
+      ],
+      "forbiddenPromotion": [
+        "raw_reference"
+      ],
+      "coursePolicyFingerprint": null,
+      "exactStrategyReady": false,
+      "learnerTrial": false
+    }
+  ],
+  "counts": {
+    "candidates": 122,
+    "byPolicyIdentity": {
+      "course_rule": 110,
+      "population_exploit": 12
+    },
+    "byActionMention": {
+      "bet": 73,
+      "check": 55,
+      "call": 18,
+      "raise": 21,
+      "fold": 20,
+      "all_in": 2
+    },
+    "withNumericMentions": 50,
+    "withBoardTokens": 78,
+    "withExplicitConditions": 30,
+    "exactStrategyReady": 0,
+    "coursePolicyCompiled": 0,
+    "learnerTrial": 0
+  },
+  "currentEvidence": {
+    "sourceExtractionVerified": true,
+    "sourceHashesMatched": true,
+    "policyCompilerImplemented": false,
+    "matchedReference": false,
+    "coursePolicyReleased": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}

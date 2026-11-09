@@ -1,0 +1,3073 @@
+{
+  "status": "author_itinerary_assembly_not_UI_or_learner_trial",
+  "sources": {
+    "bluff": {
+      "file": "guided-bluff-reraise-sequence-packet.json",
+      "sha256": "6834f2e5224e481e0d66ce4e710d490dfd3b95f1dd9abaf23a1e19ab2572fec1"
+    },
+    "weakLead": {
+      "file": "guided-weak-lead-sequence-packet.json",
+      "sha256": "ecf35cab38acaf472cf0a7f925017e8a2278b1fd563d7c3273b27da107c61886"
+    },
+    "protection": {
+      "file": "guided-protection-sequence-packet.json",
+      "sha256": "639acdb44de96251a1518ee98b717cde8ff384fca751fb496bf90c27f480536c"
+    },
+    "madeDraw": {
+      "file": "guided-made-draw-sequence-packet.json",
+      "sha256": "fdf777a4407a9d80036dacf45e6eae2b6ea492429f876b04978d5b7176761d15"
+    },
+    "outer": {
+      "file": "first-hand-lesson-packet.json",
+      "sha256": "cea0521393a0b5246f0aba150aebec788ec3ee1bff5679d44f989c1fba6be8b6"
+    },
+    "size": {
+      "file": "guided-size-sequence-packet.json",
+      "sha256": "4238773329d2242a3fff26abf13db55104ff06bc758a6a7a74957605e0193796"
+    },
+    "update": {
+      "file": "guided-update-sequence-packet.json",
+      "sha256": "f8ce694b8dc875788f7419b09e998c73d5b6a1bd6225f3681b5daf10f752bd49"
+    },
+    "history": {
+      "file": "guided-history-sequence-packet.json",
+      "sha256": "2895189a96a74d4b217c998a7c33ec7a725f90213aeef484501c979e093e14c0"
+    },
+    "value": {
+      "file": "guided-value-sequence-packet.json",
+      "sha256": "ccb8f537499ffe55cb011e41b6caddf05cf6e8f0e0f619129674eb50178d598a"
+    },
+    "reraise": {
+      "file": "guided-reraise-sequence-packet.json",
+      "sha256": "ba20a335ab166994e462946fee9d021bd7f6c6af965ff740a443d2d9610086aa"
+    },
+    "draw": {
+      "file": "guided-draw-sequence-packet.json",
+      "sha256": "2e6e6b3217072e14bb6ca86b2d6d52c39d9dfdd976ac8d92607342cd56fb2911"
+    },
+    "semibluff": {
+      "file": "guided-semibluff-sequence-packet.json",
+      "sha256": "1b1aca86022275b981ad5df21d30b63722b0cc1d43c65968758ed514a78f6bfe"
+    }
+  },
+  "firstPass": {
+    "frames": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18"
+    ],
+    "deepEpisodesAutomaticallyOpened": 0,
+    "scope": "17 frames of the original hand and S18 explicitly another short structure case; not 18 independent strategy decisions."
+  },
+  "canonicalRelationship": {
+    "canonicalLearnerSurface": "first-pass-golden-path.json",
+    "canonicalStructuralRoute": ["L0","L1","L2","L3","L4","p1","p2","p3","p4","p5","p6","p7"],
+    "narrativeFrameRole": "S01-S18 are a continuity and ledger demonstration packet used to populate or illustrate structural parents; they are not a second homepage or a replacement route.",
+    "compressionRule": "The learner first sees the 13-frame structural route. A narrative S-frame may open only as the current parent’s evidence or optional demonstration, then returns to that exact parent.",
+    "notAllowed": ["treat_18_frames_as_18_strategy_decisions", "show_S01_to_S18_as_flat_menu", "skip_L2_L3_L4", "use_narrative_frame_count_as_mastery_evidence"],
+    "evidenceRequired": ["first-pass-golden-path-alignment-audit.json", "first-pass-full-guided-administration-audit.json"]
+  },
+  "reviewOrder": [
+    {
+      "anchor": "S05",
+      "episode": "size",
+      "defaultFrames": 14,
+      "nestedReviewsAfterEpisode": [
+        {
+          "anchor": "B09",
+          "episode": "protection",
+          "defaultFrames": 17
+        },
+        {
+          "anchor": "B09",
+          "episode": "weakLead",
+          "defaultFrames": 17
+        }
+      ]
+    },
+    {
+      "anchor": "S08",
+      "episode": "update",
+      "defaultFrames": 11
+    },
+    {
+      "anchor": "S09",
+      "episode": "history",
+      "defaultFrames": 14
+    },
+    {
+      "anchor": "S13",
+      "episode": "value",
+      "defaultFrames": 16,
+      "nestedReviewAfterEpisode": {
+        "anchor": "V07",
+        "episode": "reraise",
+        "defaultFrames": 13
+      }
+    },
+    {
+      "anchor": "S13",
+      "episode": "bluff",
+      "defaultFrames": 21
+    },
+    {
+      "anchor": "S18",
+      "episode": "draw",
+      "defaultFrames": 16,
+      "nestedReviewsAfterEpisode": [
+        {
+          "anchor": "D06",
+          "episode": "madeDraw",
+          "defaultFrames": 14
+        },
+        {
+          "anchor": "D13",
+          "episode": "semibluff",
+          "defaultFrames": 16
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "firstPass": 18,
+    "reviewCore": 169,
+    "optional": 0
+  },
+  "maxNestedComparisonFramesOnStack": 2,
+  "visits": [
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S01",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "7e4f29ce93be9d3de837ee636c1b15a60bd52dbbc9e7f2c6adf2b29593368b8d",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S02",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "c1e1ffbf8679172c216fd9fc74e0bf2de41e029e39d561e916f2c9df283fb7ce",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S03",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "3f00609279f3397d99b0fe7571e25d46177c38a50dbc6a8329d81974022a1822",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S04",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "3f00609279f3397d99b0fe7571e25d46177c38a50dbc6a8329d81974022a1822",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S05",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "3f00609279f3397d99b0fe7571e25d46177c38a50dbc6a8329d81974022a1822",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S06",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "3f00609279f3397d99b0fe7571e25d46177c38a50dbc6a8329d81974022a1822",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S07",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "ba9a8f6c0a02a1ac4177c2b721f78e094d53b378eabe8c03932a0f2a057d4234",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S08",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "d8ef36a4839e3ddec41c46ccd918df8c9180b13ff25755ddb7e6f8eded31bce7",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S09",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "d8ef36a4839e3ddec41c46ccd918df8c9180b13ff25755ddb7e6f8eded31bce7",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S10",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "d8ef36a4839e3ddec41c46ccd918df8c9180b13ff25755ddb7e6f8eded31bce7",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S11",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "8aa2e6c6c6ba7bf582651fcbef36099c42940e3b1a4cf3df0f28364f04092021",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S12",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "d766e8624087b15e4c591f00461630ae6fc3dd045aaff1324e725d4ca7d633e1",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S13",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "d766e8624087b15e4c591f00461630ae6fc3dd045aaff1324e725d4ca7d633e1",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S14",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "6c4c4096d512256b5a7bed84aba01c7eeb104a848a07ce02da06a8566bd2d254",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S15",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "4df34f1b271e9deefefc130801a346fe32357013e12a6244687a247baa431826",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S16",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "3646cea8b40a7113c0e6aa6b47b78fddae3b58d2a64c825c62c3f126ee95c868",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S17",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "a7335c7e81733ffc218b35569dbc3ecca95ebc19c6d443cc2fc2e7529254b4c3",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S18",
+      "kind": "firstPass",
+      "depth": 0,
+      "stateHash": "5e2aa97ec5c494200c9ccdbc39e0c991f6c8c3ec8db056be818d775942116024",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "first_pass_finished_before_any_deepening",
+      "source": "outer",
+      "gradedAsFullStrategy": false
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S05",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "size",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B07",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B08",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "00c81bcac6868b73ad26c69119aa06eeedc7c3fc5ef46664f2dbf7fcb8eadc90",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "b6453658ab159dc76b16662e8f558b40e0d0dac5be98bdafbcf219917f30bf20",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "83dccaab944b0873c7019269f3c098fc9d8589973ab8494a3d1abbeaf728f5ec",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B13",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "66e39f28ac691fd51b0ad23382d7787edc2fa910194525f488c1b9c447042223",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "02f6366f5cfe67704e0dd35d1e4d231ffb134e6e7291938d55e8d0ecebd3b02a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "select_completed_size_episode_review_anchor",
+      "frame": "B09",
+      "after": "B14",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "protection",
+      "depth": 2
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P01",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P02",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P03",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P04",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P05",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P06",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P07",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P08",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P09",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "575776a6dd3659d54f395690be2e8f6ccc321ed098665b98e829b62f1b9116a6",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P10",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d730237d237880a9c3a8d4fa43fcfe81f3d91b2ee320a0e29b8f4d8561c7747b",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P11",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "9c0ccab2e63c5f34b8aefe0202202dd0250f55a6008b10b742f985293f9ba489",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P12",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "2728a32d6209a097434fec665c815d4cd19c54d582f367cbe33c5b302473b62f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P13",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "3cd69b470c6a3d67599b699caf0bf215614dff6df4de79c37cc0e1e1de6035e2",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P14",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "f80b03cae78d2acea3e9952a01657dfa0b58a932af7585c6351453d700bcdca2",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P15",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "98defcc4ecbf33ed00dec333ca8106467807e8ee2dde1bdfd1213f17674f2fea",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P16",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "6db0174705ef781d494506a138d77dc03aca90df61705992c4febafd3ffddec2",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-protection-sequence-packet.json",
+      "frame": "P17",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "6db0174705ef781d494506a138d77dc03aca90df61705992c4febafd3ffddec2",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B09",
+      "depth": 1
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "weakLead",
+      "depth": 2
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W01",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d558e794d4b10749639e2daf9faa42c45f5f1d594f31730453084b5594cb7b8b",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W02",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d558e794d4b10749639e2daf9faa42c45f5f1d594f31730453084b5594cb7b8b",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W03",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d558e794d4b10749639e2daf9faa42c45f5f1d594f31730453084b5594cb7b8b",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W04",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "59355066873c682c9aeb9ae154c161e4fffc67300b9635c29ad1cd886ec7cb97",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W05",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "e6f26529c806657fbb5faabf80d90a0b010d73a283e359ea03c1066bf4fe763f",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W06",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "5c3b5853e2a17163c9c9ec8b84241ad72470b484050b302d60da5d9867646b1e",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W07",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d558e794d4b10749639e2daf9faa42c45f5f1d594f31730453084b5594cb7b8b",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W08",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d558e794d4b10749639e2daf9faa42c45f5f1d594f31730453084b5594cb7b8b",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W09",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "ecaea19c6004d9770ed6bdc38ee4d5a1bb73ff72a6ddcc3fed1a02aee307130a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W10",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "a351607518f0c8b7acb658462751566a4f2d0b42106ece02e79d7be80001ce44",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W11",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "0ef45fa07fcd61ddf84be938c4ae96fee811a4152ff67660cdbc3bfe455838ae",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W12",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "2499af3a427120369f382d377689b02b0e4ab03a96a69e89e0a1539f3bd92025",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W13",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "61468d8d2e4c3deb55a2ee1ee252a9e7b40eabf3db5cae91cb849756df9362b9",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W14",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "207367c6a8f228eb68e0ef0ed03695402d30661aa446b811c85c07ed326ed336",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W15",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "a620d8fd7f3bd4e4b21c16cd349da602f31c9cf7ed181012f98c0bba92f9e7bb",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W16",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "a620d8fd7f3bd4e4b21c16cd349da602f31c9cf7ed181012f98c0bba92f9e7bb",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "frame": "W17",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "a620d8fd7f3bd4e4b21c16cd349da602f31c9cf7ed181012f98c0bba92f9e7bb",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B09",
+      "depth": 1
+    },
+    {
+      "event": "close_size_review",
+      "from": "B09",
+      "replayB10ToB14": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S05",
+      "depth": 0
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S08",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "update",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "c8edc504980327796a9641817838636de4242ece7176c41ea7fe5d2f74cd5f0c",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "c8edc504980327796a9641817838636de4242ece7176c41ea7fe5d2f74cd5f0c",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "c8edc504980327796a9641817838636de4242ece7176c41ea7fe5d2f74cd5f0c",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "a0544f919a95b387d861cbfc94bd824a441d1b45c852ac8fef036c0bc881295a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "d0130545ecd0e081eb3c80a6d077fabfb4f47bc061b451bb3761714cde773585",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "d0130545ecd0e081eb3c80a6d077fabfb4f47bc061b451bb3761714cde773585",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "dd85a7cda8933be3a466268dd57aae2165578f48df229ab3634cd40ebec9d9b4",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "dd85a7cda8933be3a466268dd57aae2165578f48df229ab3634cd40ebec9d9b4",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "dd85a7cda8933be3a466268dd57aae2165578f48df229ab3634cd40ebec9d9b4",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "dd85a7cda8933be3a466268dd57aae2165578f48df229ab3634cd40ebec9d9b4",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-update-sequence-packet.json",
+      "frame": "U14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "dd85a7cda8933be3a466268dd57aae2165578f48df229ab3634cd40ebec9d9b4",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S08",
+      "depth": 0
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S09",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "history",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "d310a0322560568d9dfbea375c11417206ddd62579db21b4212bae8f3c7d2944",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "23de749fc684bfcb836deafbbd593dfacf5afe1688d9f0e9ed1672e18ff18dd5",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fff66bd5159eae5aa2a12f7fc78c8456620950831d763a51f2824e8bf006e169",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fff66bd5159eae5aa2a12f7fc78c8456620950831d763a51f2824e8bf006e169",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "4549b3972a0a70be4c97301824faf2867e51fb71a83bd1605d7fc2e9dd758a5d",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "37866a1e99b1daeb4a0a1189347d351835cb019d02812763d01dbd97a85c3c8f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H07",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "f018f01814fb1ae6e8815402e4cd7c3e2212a83ee80414b0e2df2f21f7b3fbd4",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H08",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "9e1401b30b8e198a560370fde7a1fe00c7f7b9844669bdf223a5f2fe11a25f39",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "9e1401b30b8e198a560370fde7a1fe00c7f7b9844669bdf223a5f2fe11a25f39",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "9e1401b30b8e198a560370fde7a1fe00c7f7b9844669bdf223a5f2fe11a25f39",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "396c0bd5a294e74504181c33380e41145d95f6e1f007ce90929f3dcc2d4dd14e",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "3e10d43149453ebe8a2d23e2382276ce1c7b4b7e4d2de80ca28af150c08a6d2b",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H13",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "df8c71b802bbe2cee0dfedd775d476bebd0a894f4aba6e592cd8dd088fd641c5",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-history-sequence-packet.json",
+      "frame": "H14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "46ddaa62fbad1a4134a93bae65a350a85a7485c39758dafb5b003089eadf79cf",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S09",
+      "depth": 0
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S13",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "value",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V07",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "aab3c659d84b8f4e83261121845c69f983e3d769a2f9d5a53936a63f953b3d5a",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V08",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "2265cd6151272edd4ee4d8c73cc4a09f447bbc3b7fc42b49b4019bb96d993460",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "2265cd6151272edd4ee4d8c73cc4a09f447bbc3b7fc42b49b4019bb96d993460",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "2265cd6151272edd4ee4d8c73cc4a09f447bbc3b7fc42b49b4019bb96d993460",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "9b52fbc95c933ee58262ed69db6c761cc0ea803eb2b6b0dc38e15e5c0221bd09",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "044505d41ce7f1d84f5496d4fe8aec4e0d9fafc5826d5a302299f7e29626dfa3",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V13",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "044505d41ce7f1d84f5496d4fe8aec4e0d9fafc5826d5a302299f7e29626dfa3",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "a8fc40aee214842b492328f7e7fe8d6e89df47db054bff2a7c783697c7868b8a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V15",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "0037d4135acba0c96f0f0fc1b137765537273965c1fb2be359b25d48ce60d6e6",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V16",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "8720e1d7c9685f66ee945ffafe38dd99cc1fbbae1152ac501cd162797032a788",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "select_completed_value_episode_review_anchor",
+      "frame": "V07",
+      "after": "V16",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "reraise",
+      "depth": 2
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R01",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "64006e98e45a66474b255dc5374e4d459b9d2d2da864e032544234e3209c2b68",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R02",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "64006e98e45a66474b255dc5374e4d459b9d2d2da864e032544234e3209c2b68",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R03",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "991022d481ddefa5cde2ce460602c30abc2fdcef3ea493baa646abf793374455",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R04",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "474bd9cdb123a8254b310cd19d2c62ca5aed77848b6216872aabcd17f9ba5066",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R05",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "474bd9cdb123a8254b310cd19d2c62ca5aed77848b6216872aabcd17f9ba5066",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R06",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "474bd9cdb123a8254b310cd19d2c62ca5aed77848b6216872aabcd17f9ba5066",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R07",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "474bd9cdb123a8254b310cd19d2c62ca5aed77848b6216872aabcd17f9ba5066",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R08",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "e0387bd5dc0171a261ef4eb1a950219880350fa5eb439c6f6015b5bcab66c308",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R09",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "1b813f89134dd54564ef7991908ac8201b0537a7698a38b01bc24a211ccb1c38",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R10",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "dcdfde1305b9326f3b22300ffe4a88c87ac781f92024edbba67bca3a2c5f5535",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R11",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "3a583327f26c180f631c2688497388af43dbf2095c5bee4d99ca8f13db551418",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R12",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "3a583327f26c180f631c2688497388af43dbf2095c5bee4d99ca8f13db551418",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-reraise-sequence-packet.json",
+      "frame": "R13",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "3a583327f26c180f631c2688497388af43dbf2095c5bee4d99ca8f13db551418",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V07",
+      "depth": 1
+    },
+    {
+      "event": "close_value_review",
+      "from": "V07",
+      "replayV08ToV16": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S13",
+      "depth": 0
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S13",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "bluff",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z07",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z08",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "e284b60278556089b9d3f7c3dd9695dfab2fa16774d87df5828371b62f76388f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "53b0d22cf8c76b9cc59e6e9e75e738f248f6809a1f7d9be9bcc461b4e1f7ea14",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "193213ab41a66e7a3f7f05da68f7969d565c6262bac1f2080720c94c9284754f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "193213ab41a66e7a3f7f05da68f7969d565c6262bac1f2080720c94c9284754f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z13",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "7695fd559b2563d02326cd79e34c321b3fb16645156a4fcd7e61933a07955f1f",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z15",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "f3ec2687e1d98c13a7fc5898f71b5ba7beb23f1066d001d51ecda36d59be0e67",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z16",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "5172e4a4e3a2a53635cb32aeb5849aa20b172004eca6273c55759f328066ba21",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z17",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "5172e4a4e3a2a53635cb32aeb5849aa20b172004eca6273c55759f328066ba21",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z18",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "98b5a686cb50f71fff245da43a74b1bf918d86cd85c3eca16f3d1a496f1dee27",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z19",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "31eaa572a6599db81064bfbbca23debc14c1788d479e82d32d505428584756ca",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z20",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "31eaa572a6599db81064bfbbca23debc14c1788d479e82d32d505428584756ca",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "frame": "Z21",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "31eaa572a6599db81064bfbbca23debc14c1788d479e82d32d505428584756ca",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S13",
+      "depth": 0
+    },
+    {
+      "event": "select_completed_hand_review_anchor",
+      "frame": "S18",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "draw",
+      "depth": 1
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D01",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D02",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D03",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D04",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "5c58bfb972ece078eaeaf5f231cc4731b974f1522c9fc3f576e974c97d771979",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D05",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D06",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D07",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D08",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D09",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "caf68a63f560e59e30ce363b2697821e9cbdb9f106dc7ca38274304a1cd2a3b7",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D10",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "8da5e3242fc648ca54a63bff2ab495a6f7efeabee42114cbd5b6ec8fd8433c45",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D11",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "b6a8d033676b5bb212c308c7429e81182d50ac6c0585e542f140866c47d574ce",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D12",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D13",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D14",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "46adbad1c7d7e4d37941cfcd7e569dd877018a0fe958ff87599aef16811fb499",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D15",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "46adbad1c7d7e4d37941cfcd7e569dd877018a0fe958ff87599aef16811fb499",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D16",
+      "kind": "reviewCore",
+      "depth": 1,
+      "stateHash": "fa85b777e375eb506799e02118f815c5590f40779947d0243cdddaaab398af57",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "select_completed_draw_episode_review_anchor",
+      "frame": "D06",
+      "after": "D16",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "madeDraw",
+      "depth": 2
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F01",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F02",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F03",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F04",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F05",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F06",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F07",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F08",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "636036f6b3f08a9432315e6f69a351d34de40f299a5b51d25c25b7542c7e365d",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F09",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "91b619588239cdd72f06569c88c3e7e15d29b352e0542f000e49c1edddc9ba2a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F10",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "91b619588239cdd72f06569c88c3e7e15d29b352e0542f000e49c1edddc9ba2a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F11",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "cfebcb625057ce9be0741742c8c08cdae1aef75e6ee24029e3ea8bd8546bfb17",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F12",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "10a972421ceb24f6c8b03cce8bce280f5d6dc978d435386b2075eb756b622bb8",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F13",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "46aa4e9e36cfbaec06c9ab886e29cd19157eacc97557d7c309a305f72114b0cf",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-made-draw-sequence-packet.json",
+      "frame": "F14",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "46aa4e9e36cfbaec06c9ab886e29cd19157eacc97557d7c309a305f72114b0cf",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D06",
+      "depth": 1
+    },
+    {
+      "event": "select_completed_draw_episode_review_anchor",
+      "frame": "D13",
+      "after": "D16",
+      "pokerHistoryMutation": false
+    },
+    {
+      "event": "enter_teaching_comparison",
+      "child": "semibluff",
+      "depth": 2
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A01",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "05fd72898d1fc3249ad139556c8828668a0aff6dbce5163fa64f2ee50833a5ab",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A02",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "05fd72898d1fc3249ad139556c8828668a0aff6dbce5163fa64f2ee50833a5ab",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A03",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "05fd72898d1fc3249ad139556c8828668a0aff6dbce5163fa64f2ee50833a5ab",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A04",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "71e50896f904a584a4d2bd309a11b25300f05d1e4b5205cb39556f36927c024e",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A05",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "71e50896f904a584a4d2bd309a11b25300f05d1e4b5205cb39556f36927c024e",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A06",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "8a2deaa756738fd2110c94f5500dc2d6636bfc8fb8a7741c7d95f7e2fd268198",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A07",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "9ac15e51e19520f7942adb0a5598f313ac0c858ad4f771a3957a60842cb9c6c2",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A08",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "203a8df828d37b8998ca15acbaa8176f71e11bd2c7cc445af8996414afd50649",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A09",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "203a8df828d37b8998ca15acbaa8176f71e11bd2c7cc445af8996414afd50649",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A10",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "203a8df828d37b8998ca15acbaa8176f71e11bd2c7cc445af8996414afd50649",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A11",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "05fd72898d1fc3249ad139556c8828668a0aff6dbce5163fa64f2ee50833a5ab",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A12",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "05fd72898d1fc3249ad139556c8828668a0aff6dbce5163fa64f2ee50833a5ab",
+      "hasAnswerHelp": true,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A13",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "7c8c307d0dce087a32d4ca19428810c05ee12056e2441ae840146164d36af51a",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A14",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "0c8d1b4245e6f009e10ee65dba706f81bf4d59ed72971283ab5f882b7935d2b1",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A15",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d599b3c49816f90547e75804838d9009e8c17d372df3190cbcac9854d7323089",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "show_one_frame",
+      "packet": "guided-semibluff-sequence-packet.json",
+      "frame": "A16",
+      "kind": "reviewCore",
+      "depth": 2,
+      "stateHash": "d599b3c49816f90547e75804838d9009e8c17d372df3190cbcac9854d7323089",
+      "hasAnswerHelp": false,
+      "learnerResponseCollected": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D13",
+      "depth": 1
+    },
+    {
+      "event": "close_draw_review",
+      "from": "D13",
+      "replayD14ToD16": false
+    },
+    {
+      "event": "return_to_review_feedback",
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S18",
+      "depth": 0
+    }
+  ],
+  "switches": [
+    {
+      "from": "outer/S05",
+      "to": "size",
+      "notice": "原整手结束后回看S05。换另一手河牌QQ和给定模型，不将它的下10答案贴回AQ翻牌。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "userNotice": "换另一手：你从SB换到BTN，手牌是Q♠ Q♣。完成后回原题。",
+      "parentHash": "e76995e9fa5918277a1a53704e5f7013b64d06c6b0a584e901392a52ef4eafea",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "size/B09",
+      "to": "protection",
+      "notice": "尺寸段结束后回看B09，换另一手转牌QQ及其完整给定计划。关闭恢复原河牌QQ的完整比较，不移植过牌答案。",
+      "beforePerspective": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "userNotice": "换另一手：你从BTN换到SB，手牌是Q♠ Q♣。完成后回原题。",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "size/B09",
+      "to": "weakLead",
+      "notice": "从B09再看一手转牌AsQs的完整主动计划。自身手牌、候选和过牌后策略均明确换为新模型，不把差异单独归因于听牌。结束恢复原B09全部参考。",
+      "beforePerspective": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qs",
+          "Qc"
+        ],
+        "board": [
+          "Ks",
+          "7h",
+          "2d",
+          "3c",
+          "9h"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "userNotice": "换另一手：你从BTN换到SB，手牌是A♠ Q♠。完成后回原题。",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "outer/S08",
+      "to": "update",
+      "notice": "下面明确换另一手的更新模型；结束后回原S08，不移植新例策略或角色。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "BTN",
+        "ownCards": [
+          "Qc",
+          "3c"
+        ],
+        "board": [
+          "As",
+          "7h",
+          "2d"
+        ]
+      },
+      "userNotice": "换另一手：你从SB换到BTN，手牌是Q♣ 3♣。完成后回原题。",
+      "parentHash": "da5351fd103b51d910401e95e50198df22da34c16e9736e73d5cfec3a47fd5f4",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "outer/S09",
+      "to": "history",
+      "notice": "回看S09怎样带前序比较；换KK与三手候选的给定模型，不补造原AQ策略。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Kc",
+          "Kd"
+        ],
+        "board": [
+          "Ts",
+          "8h",
+          "3d"
+        ]
+      },
+      "userNotice": "换另一手：你仍坐SB，手牌是K♣ K♦。完成后回原题。",
+      "parentHash": "fb6277f2556f00c9a39fedb531910ea3bb5de1126d2c73cb04908563a718dc9e",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "outer/S13",
+      "to": "value",
+      "notice": "先完成首次整手导览，再回看S13的方法。下面是另一手作者模型，不是该AcQd原例的策略答案。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "userNotice": "换另一手：你仍坐SB，手牌是9♣ 9♦。完成后回原题。",
+      "parentHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "value/V07",
+      "to": "reraise",
+      "notice": "Change the given response model explicitly for this new line. Restore the entire original V07 frame including its58.55/45.925 support, not just the same visible cards.",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "9c",
+          "9d"
+        ],
+        "board": [
+          "Ks",
+          "9h",
+          "2d",
+          "3c",
+          "7h"
+        ]
+      },
+      "userNotice": "仍坐SB，手牌不变；换一种明确给定的对手回应，原例不改。",
+      "parentHash": "cfef91abbe3b8261e88d1c5b68a35776512bd8dd0ba6336e96d6534152bd82d9",
+      "originalPokerActionReplayed": false,
+      "kind": "response_model_change"
+    },
+    {
+      "from": "outer/S13",
+      "to": "bluff",
+      "notice": "原整手结束后回看S13，再换另一手已经下注遭加的AcQc作者模型；不将本模型补成原AcQd的策略。关闭恢复原S13完整题面。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qd"
+        ],
+        "board": [
+          "Ah",
+          "9c",
+          "2h",
+          "7s",
+          "4d"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Ac",
+          "Qc"
+        ],
+        "board": [
+          "Kh",
+          "9h",
+          "2c",
+          "7d",
+          "4s"
+        ]
+      },
+      "userNotice": "换另一手：你仍坐SB，手牌是A♣ Q♣。完成后回原题。",
+      "parentHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "outer/S18",
+      "to": "draw",
+      "notice": "原S18只练识别面对下注；下面换另一手完整给定模型，不把其答案作为原BB那手的策略。",
+      "beforePerspective": {
+        "viewerSeat": "BB",
+        "ownCards": [
+          "As",
+          "Kd"
+        ],
+        "board": [
+          "Kc",
+          "8d",
+          "3s"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "userNotice": "换另一手：你从BB换到SB，手牌是A♠ Q♠。完成后回原题。",
+      "parentHash": "41e789bbd944666ac5fbc8b45d0a7809e1a61dd88eb22ffd3c9aace45cf810fa",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "draw/D06",
+      "to": "madeDraw",
+      "notice": "原听牌段完成后回看D06，换另一手有当前对子兼听花的给定全下模型；关闭恢复原AsQs的全部D06参考，不混用范围和胜率。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "Jd",
+          "7d"
+        ],
+        "board": [
+          "Js",
+          "9d",
+          "5d",
+          "2c"
+        ]
+      },
+      "userNotice": "换另一手：你仍坐SB，手牌是J♦ 7♦。完成后回原题。",
+      "parentHash": "68930e1831f4e7a83f39b3960e21baebd70f5a905af99dbf2e52ab607ab440c9",
+      "originalPokerActionReplayed": false,
+      "kind": "different_hand"
+    },
+    {
+      "from": "draw/D13",
+      "to": "semibluff",
+      "notice": "听牌段结束后回看D13，明确切到KJ会弃或跟加注的给定回应；关闭恢复原压力模型及其弃牌较高比较。",
+      "beforePerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "afterPerspective": {
+        "viewerSeat": "SB",
+        "ownCards": [
+          "As",
+          "Qs"
+        ],
+        "board": [
+          "Ks",
+          "7s",
+          "2d",
+          "3d"
+        ]
+      },
+      "userNotice": "仍坐SB，手牌不变；换一种明确给定的对手回应，原例不改。",
+      "parentHash": "8251e9ede16ed0352683e5de52e7762fc9659357bab61ae86bb45a9bdfbb8c34",
+      "originalPokerActionReplayed": false,
+      "kind": "response_model_change"
+    }
+  ],
+  "returns": [
+    {
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B09",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "returnHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "guided-size-sequence-packet.json",
+      "frame": "B09",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "returnHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S05",
+      "parentHash": "e76995e9fa5918277a1a53704e5f7013b64d06c6b0a584e901392a52ef4eafea",
+      "returnHash": "e76995e9fa5918277a1a53704e5f7013b64d06c6b0a584e901392a52ef4eafea",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S08",
+      "parentHash": "da5351fd103b51d910401e95e50198df22da34c16e9736e73d5cfec3a47fd5f4",
+      "returnHash": "da5351fd103b51d910401e95e50198df22da34c16e9736e73d5cfec3a47fd5f4",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S09",
+      "parentHash": "fb6277f2556f00c9a39fedb531910ea3bb5de1126d2c73cb04908563a718dc9e",
+      "returnHash": "fb6277f2556f00c9a39fedb531910ea3bb5de1126d2c73cb04908563a718dc9e",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "guided-value-sequence-packet.json",
+      "frame": "V07",
+      "parentHash": "cfef91abbe3b8261e88d1c5b68a35776512bd8dd0ba6336e96d6534152bd82d9",
+      "returnHash": "cfef91abbe3b8261e88d1c5b68a35776512bd8dd0ba6336e96d6534152bd82d9",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S13",
+      "parentHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "returnHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S13",
+      "parentHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "returnHash": "d25b9731a82e8a3e9696bf8aca05f804ebe361cace59891932366dcdf07719a8",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D06",
+      "parentHash": "68930e1831f4e7a83f39b3960e21baebd70f5a905af99dbf2e52ab607ab440c9",
+      "returnHash": "68930e1831f4e7a83f39b3960e21baebd70f5a905af99dbf2e52ab607ab440c9",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "guided-draw-sequence-packet.json",
+      "frame": "D13",
+      "parentHash": "8251e9ede16ed0352683e5de52e7762fc9659357bab61ae86bb45a9bdfbb8c34",
+      "returnHash": "8251e9ede16ed0352683e5de52e7762fc9659357bab61ae86bb45a9bdfbb8c34",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    },
+    {
+      "packet": "first-hand-lesson-packet.json",
+      "frame": "S18",
+      "parentHash": "41e789bbd944666ac5fbc8b45d0a7809e1a61dd88eb22ffd3c9aace45cf810fa",
+      "returnHash": "41e789bbd944666ac5fbc8b45d0a7809e1a61dd88eb22ffd3c9aace45cf810fa",
+      "wholeFrameAndReferenceRestored": true,
+      "surface": "review_feedback",
+      "alreadySeen": true,
+      "originalPokerActionReplayed": false,
+      "firstAnswerReopened": false
+    }
+  ],
+  "optional": [
+    {
+      "packet": "guided-size-sequence-packet.json",
+      "openAt": "B09",
+      "label": "若明确只剩会跟大注的JJ，选什么？",
+      "frames": [
+        "O01"
+      ],
+      "returnTo": "B09",
+      "surface": "feedback",
+      "then": "B10",
+      "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "returnHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "O01"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-size-sequence-packet.json",
+      "openAt": "B09",
+      "label": "若明确只剩跟小注、弃大注的66，选什么？",
+      "frames": [
+        "O02"
+      ],
+      "returnTo": "B09",
+      "surface": "feedback",
+      "then": "B10",
+      "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "returnHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "O02"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-size-sequence-packet.json",
+      "openAt": "B09",
+      "label": "若明确只剩两种都跟的KK，选什么？",
+      "frames": [
+        "O03"
+      ],
+      "returnTo": "B09",
+      "surface": "feedback",
+      "then": "B10",
+      "restoreFullFrameHash": "5e5bdb582eaf4c90383bce5bf88059ae8d19e6c87b0216e3639dbbc640ad88b0",
+      "parentHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "returnHash": "a25b4d7add54dccf06f3038ae954644d75e2fa545a314ddf8898d58a210a0b17",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "O03"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-protection-sequence-packet.json",
+      "openAt": "P09",
+      "label": "如果AJ愿意付钱",
+      "frames": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "returnTo": "P09",
+      "surface": "feedback",
+      "then": "P10",
+      "parentHash": "264242891ed2dffa9d152363b9997cbdb38891901d0045309de5cbd1a44ffdc6",
+      "returnHash": "264242891ed2dffa9d152363b9997cbdb38891901d0045309de5cbd1a44ffdc6",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-weak-lead-sequence-packet.json",
+      "openAt": "W08",
+      "label": "如果所有候选都反击",
+      "frames": [
+        "N01",
+        "N02",
+        "N03"
+      ],
+      "returnTo": "W08",
+      "surface": "feedback",
+      "then": "W09",
+      "parentHash": "b3950796e445a78d22d27d043254877720c923567814865a749ae6b577c69cd4",
+      "returnHash": "b3950796e445a78d22d27d043254877720c923567814865a749ae6b577c69cd4",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "N01",
+        "N02",
+        "N03"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-update-sequence-packet.json",
+      "openAt": "U06",
+      "label": "看另一种打法",
+      "frames": [
+        "U07",
+        "U08"
+      ],
+      "returnTo": "U06",
+      "surface": "feedback",
+      "then": "U09",
+      "parentHash": "13fe14a3239784912ec7bd353a21e206f80ea4ad0bf46dd2d61694b527b7500c",
+      "returnHash": "13fe14a3239784912ec7bd353a21e206f80ea4ad0bf46dd2d61694b527b7500c",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "U07",
+        "U08"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-update-sequence-packet.json",
+      "openAt": "U12",
+      "label": "比较两版这手牌",
+      "frames": [
+        "U13"
+      ],
+      "returnTo": "U12",
+      "surface": "feedback",
+      "then": "U14",
+      "parentHash": "ace0a911aac892b38367e4a14f4df91455292e8a06dd7427c76641673051e4eb",
+      "returnHash": "ace0a911aac892b38367e4a14f4df91455292e8a06dd7427c76641673051e4eb",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "U13"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-history-sequence-packet.json",
+      "openAt": "H10",
+      "label": "为什么先前路线会改变范围",
+      "frames": [
+        "J01",
+        "J02",
+        "J03",
+        "J04",
+        "J05",
+        "J06",
+        "J07"
+      ],
+      "returnTo": "H10",
+      "surface": "feedback",
+      "then": "H11",
+      "restoreFullFrameHash": "0ea0fae6cc1975770f1c30cc8a0be1aa938fc5e54e23b2c5cd0bae30c43a5a49",
+      "parentHash": "528fcc20c23626c3af44fe5c8dbd834d488ab155e7a6e94a94a9e22920991ee5",
+      "returnHash": "528fcc20c23626c3af44fe5c8dbd834d488ab155e7a6e94a94a9e22920991ee5",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "J01",
+        "J02",
+        "J03",
+        "J04",
+        "J05",
+        "J06",
+        "J07"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-history-sequence-packet.json",
+      "openAt": "H08",
+      "label": "看看这张牌改变了什么",
+      "frames": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05"
+      ],
+      "returnTo": "H08",
+      "surface": "feedback",
+      "then": "H09",
+      "restoreFullFrameHash": "8bff438f5635250a935f2b13b5984aebecdae4080285d20eada4c5151c04cf0d",
+      "parentHash": "4f6c7f510812f3a0c4d66c96b10eb130b6a4a9e303df78bc04b040c9b5278022",
+      "returnHash": "4f6c7f510812f3a0c4d66c96b10eb130b6a4a9e303df78bc04b040c9b5278022",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-reraise-sequence-packet.json",
+      "openAt": "R07",
+      "label": "如果差牌不跟全下",
+      "frames": [
+        "C01",
+        "C02"
+      ],
+      "returnTo": "R07",
+      "surface": "feedback",
+      "then": "R08",
+      "parentHash": "5aa0a316c4119d0a52aa93b754ad4bf08bcab064d7303b070e8dd7f917b81721",
+      "returnHash": "5aa0a316c4119d0a52aa93b754ad4bf08bcab064d7303b070e8dd7f917b81721",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "C01",
+        "C02"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-reraise-sequence-packet.json",
+      "openAt": "R07",
+      "label": "如果加注范围更强",
+      "frames": [
+        "C03",
+        "C04"
+      ],
+      "returnTo": "R07",
+      "surface": "feedback",
+      "then": "R08",
+      "parentHash": "5aa0a316c4119d0a52aa93b754ad4bf08bcab064d7303b070e8dd7f917b81721",
+      "returnHash": "5aa0a316c4119d0a52aa93b754ad4bf08bcab064d7303b070e8dd7f917b81721",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "C03",
+        "C04"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "label": "同牌力为什么选择不同",
+      "frames": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "openAt": "Z14",
+      "returnTo": "Z14",
+      "surface": "feedback",
+      "then": "Z15",
+      "parentHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "returnHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "label": "只改一张牌看看",
+      "frames": [
+        "O01",
+        "O02",
+        "O03"
+      ],
+      "openAt": "Z14",
+      "returnTo": "Z14",
+      "surface": "feedback",
+      "then": "Z15",
+      "parentHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "returnHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "O01",
+        "O02",
+        "O03"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    },
+    {
+      "packet": "guided-bluff-reraise-sequence-packet.json",
+      "label": "如果只比较全下会漏什么",
+      "frames": [
+        "T01",
+        "T02"
+      ],
+      "openAt": "Z14",
+      "returnTo": "Z14",
+      "surface": "feedback",
+      "then": "Z15",
+      "parentHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "returnHash": "52b45561a4366e88c42a3165afbe9cfb085fd7ef053730c4b58665d6b1a80f18",
+      "wholeFrameAndReferenceRestored": true,
+      "optionalFrames": [
+        "T01",
+        "T02"
+      ],
+      "firstAnswerReopened": false,
+      "defaultRouteIncludesTheseFrames": false
+    }
+  ],
+  "rules": {
+    "oneFrameAtATime": true,
+    "reviewDoesNotReplayActualHand": true,
+    "answerHelpDoesNotBecomeIndependent": true,
+    "noLearnerScoresSynthesized": true,
+    "persistence": "none",
+    "continueOrExitAllowed": true
+  },
+  "readiness": {
+    "firstPassStructuralPaperCandidate": true,
+    "completeOriginalStrategyLesson": false,
+    "all35TeachingSequencesComplete": false,
+    "unseenAssessmentReady": false,
+    "realLearnerVerified": false,
+    "NL50Verified": false
+  },
+  "remaining": [
+    "Complete matched strategy inputs for the original hand.",
+    "Sequential teaching and counterexamples for remaining abilities beyond these eleven episodes.",
+    "Prepared unseen checks with reference and no exposed isomorphic neighbors.",
+    "Real novice administration and revision; application implementation only when authorized."
+  ]
+}

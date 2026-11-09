@@ -1,0 +1,138 @@
+{
+  "id": "FIRST_PASS_RUNTIME_OUTPUT_CROSSWALK_V1",
+  "status": "paper_crosswalk_contract_not_trialed",
+  "purpose": "把p1-p7用户路线、O1-O8运行输出和canonical字段接成一条可验证交叉表，同时区分首遍最低输出与独立练习完整输出。",
+  "route": ["p1_context","p2_board","p3_range","p4_compare","p5_execute","p6_update","p7_close"],
+  "runtimeRoute": ["O1_context","O2_board","O3_hand","O4_range","O5_compare","O6_execute","O7_update","O8_close"],
+  "schemaSource": "course-unit-field-schema-map.json",
+  "canonicalProjectionMode": "union_of_runtime_steps",
+  "actionChainContract": "slow-single-step-execution-contract.json#/observableActionChain",
+  "actionEvidenceContract": "slow-single-step-execution-contract.json#/evidenceRecord",
+  "mappings": [
+    {
+      "id": "p1_context",
+      "runtimeSteps": ["O1_context"],
+      "firstPassRequired": ["actor","history","toCallBB","potBB","stacksBB"],
+      "fullExecutionRequired": ["street","facingAction","effectiveStackBB"],
+      "canonical": ["street","role","actionState","factInputs"],
+      "coursePackageOutputs": ["inputFingerprint"],
+      "exactGradeRequires": ["inputFingerprint","factSnapshot"],
+      "unknownDisplay": "停止在p1，说明缺少局面身份或金额事实",
+      "errorReturn": "p1_context"
+    },
+    {
+      "id": "p2_board",
+      "runtimeSteps": ["O2_board","O3_hand"],
+      "firstPassRequired": ["bestFive","handClass","improvementCards"],
+      "fullExecutionRequired": ["boardClass","pairedRelation","connectedRelation","flushRelation","newCardChange","directDraws","backdoorDraws","blockerFacts"],
+      "canonical": ["factInputs"],
+      "coursePackageOutputs": ["factSnapshot"],
+      "exactGradeRequires": ["factSnapshot"],
+      "unknownDisplay": "只显示牌面事实和缺失字段，不显示动作建议",
+      "errorReturn": "p2_board"
+    },
+    {
+      "id": "p3_range",
+      "runtimeSteps": ["O4_range"],
+      "firstPassRequired": ["rangeOwner","rangeBefore","physicalFilter","actionFilterStatus","normalizationDenominator"],
+      "fullExecutionRequired": ["rangeBefore","rangeAfter","beforeAfterChangedCells","viewpoint"],
+      "canonical": ["sourceIdentity","rangeBefore","rangeAfter"],
+      "coursePackageOutputs": ["referenceSnapshot","rangeSnapshots"],
+      "exactGradeRequires": ["inputFingerprint","referenceSnapshot","rangeSnapshots"],
+      "unknownDisplay": "物理过滤可见；行动筛选显示资料不足纹理",
+      "errorReturn": "p3_range"
+    },
+    {
+      "id": "p4_compare",
+      "runtimeSteps": ["O5_compare"],
+      "firstPassRequired": ["legalActions","price","actionPurpose","answerIdentity"],
+      "fullExecutionRequired": ["worseContinuations","betterFolds","futureBranches"],
+      "canonical": ["actionState","coursePolicy","referencePolicy","legalSuccessors"],
+      "coursePackageOutputs": ["referenceSnapshot","coursePolicy","differenceLedger","successorGraph"],
+      "exactGradeRequires": ["coursePolicy","differenceLedger","successorGraph"],
+      "unknownDisplay": "只给示范或停止选择，不生成默认动作",
+      "errorReturn": "p4_compare"
+    },
+    {
+      "id": "p5_execute",
+      "runtimeSteps": ["O6_execute"],
+      "firstPassRequired": ["selectedAction","amountBB","potAfterBB","stacksAfterBB","nextActor"],
+      "fullExecutionRequired": [],
+      "canonical": ["coursePolicy","referencePolicy","factInputs"],
+      "coursePackageOutputs": ["coursePolicy","successorGraph"],
+      "exactGradeRequires": ["coursePolicy","successorGraph"],
+      "unknownDisplay": "动作金额或行动权不确定时锁住提交按钮并显示账本缺口",
+      "errorReturn": "p5_execute"
+    },
+    {
+      "id": "p6_update",
+      "runtimeSteps": ["O7_update"],
+      "firstPassRequired": ["changedField","rangeAfter","ledgerAfter","futureOpportunityOrClosed","newCardEffect","nextActor","successorOrTerminal"],
+      "fullExecutionRequired": ["newRangeSnapshot"],
+      "canonical": ["rangeAfter","legalSuccessors","factInputs"],
+      "coursePackageOutputs": ["rangeSnapshots","successorGraph","differenceLedger"],
+      "exactGradeRequires": ["rangeSnapshots","successorGraph"],
+      "unknownDisplay": "保留父帧，只高亮变化字段；没有后继就停止",
+      "errorReturn": "p6_update"
+    },
+    {
+      "id": "p7_close",
+      "runtimeSteps": ["O8_close"],
+      "firstPassRequired": ["settlement","decisionResultSeparation","errorLayer","nextRoundEntry"],
+      "fullExecutionRequired": ["routeRecall","oneVariableTransferTarget"],
+      "canonical": ["errorReturn","transferVariant","releaseStatus"],
+      "coursePackageOutputs": ["lessonFrames","heldoutTransfer","releaseDecision"],
+      "exactGradeRequires": ["lessonFrames","heldoutTransfer","releaseDecision"],
+      "unknownDisplay": "结果与决策分开；未见迁移或发布状态不足时不解锁下一阶段",
+      "errorReturn": "nearest_missing_layer"
+    }
+  ],
+  "aliases": {
+    "toCallOrZero": "toCallBB",
+    "handCategory": "handClass",
+    "rangeUpdate": "rangeAfter",
+    "ledgerUpdate": "ledgerAfter",
+    "allowedIdentity": "answerIdentity",
+    "referenceIdentity": "answerIdentity",
+    "errorLayerOrNone": "errorLayer",
+    "stack": "stacksBB",
+    "legalAction": "selectedAction",
+    "amount": "amountBB",
+    "potAfter": "potAfterBB",
+    "stackAfter": "stacksAfterBB",
+    "stackAfterBB": "stacksAfterBB",
+    "physicalRemoval": "physicalFilter",
+    "actionFilter": "actionFilterStatus",
+    "successorIdentity": "successorOrTerminal",
+    "newRangeSnapshot": "rangeAfter"
+  },
+  "rules": {
+    "everyPStepMapsToRuntimeStep": true,
+    "p2MayMapToTwoRuntimeSteps": true,
+    "firstPassRequiredIsSmallerThanFullExecution": true,
+    "hiddenFieldsRemainInPackage": true,
+    "missingFieldNeverInferred": true,
+    "noNewHomeMenuFromCrosswalk": true,
+    "childReturnsToOriginalParent": true,
+    "coursePackageOutputMustBeReadyBeforeExactGrade": true,
+    "unknownDisplayMustMatchMissingOutput": true,
+    "p7ReleaseDecisionCannotBeInferredFromButtonCorrectness": true,
+    "actionChainMustCloseBeforeExactGrade": true,
+    "actionChainStepCannotBeSkipped": true,
+    "actionEvidenceFirstAnswerIsSeparate": true
+  },
+  "displayContract": {
+    "oneScreenOrder": ["context","board_and_hand","range","compare","execute","update","close_and_transfer"],
+    "dataOrder": ["inputFingerprint","factSnapshot","referenceSnapshot","coursePolicy","differenceLedger","rangeSnapshots","successorGraph","lessonFrames","heldoutTransfer","releaseDecision"],
+    "actionChainOrder": ["A0_state_lock","A1_layer_entry","A2_fact_read","A3_range_delta","A4_compare","A5_execute","A6_update_or_stop","A7_transfer_close"],
+    "parentStateRestoredAfterChild": true,
+    "noSolverControlsInLearnerMainline": true,
+    "noFlat35ItemHome": true
+  },
+  "currentEvidence": {
+    "crosswalkWritten": true,
+    "runtimeImplemented": false,
+    "learnerTrial": false,
+    "matchedStrategyReference": false
+  }
+}

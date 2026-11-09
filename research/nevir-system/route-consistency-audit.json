@@ -1,0 +1,293 @@
+{
+  "id": "ROUTE_CONSISTENCY_AUDIT_V1",
+  "status": "route_consistency_audited_all_primary_checks_exact",
+  "canonicalSource": "learner-goal-route-canonical.json",
+  "canonicalOrder": {
+    "outer": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6",
+      "p7"
+    ],
+    "postflop": [
+      "p1_context",
+      "p2_board",
+      "p3_range",
+      "p4_compare",
+      "p5_execute",
+      "p6_update",
+      "p7_close"
+    ]
+  },
+  "canonicalRules": {
+    "outerMembershipDoesNotDefineOrder": true,
+    "nextChainDefinesOrder": true
+  },
+  "checkAudits": {
+    "canonical": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "firstRun": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "experience": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "mastery": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "singlePath": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "gates": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "learnerStandard": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "storyboard": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    },
+    "representatives": {
+      "ids": [
+        "order_recall",
+        "layer_location",
+        "error_recovery",
+        "one_variable_transfer"
+      ],
+      "missingCanonical": [],
+      "extra": [],
+      "exact": true
+    }
+  },
+  "chainAudits": {
+    "firstRun": [
+      "p1_context",
+      "p2_board",
+      "p3_range",
+      "p4_compare",
+      "p5_execute",
+      "p6_update",
+      "p7_close"
+    ],
+    "experience": [
+      "p1_context",
+      "p2_board",
+      "p3_range",
+      "p4_compare",
+      "p5_execute",
+      "p6_update",
+      "p7_close"
+    ],
+    "mastery": [
+      "p1_context",
+      "p2_board",
+      "p3_range",
+      "p4_compare",
+      "p5_execute",
+      "p6_update",
+      "p7_close"
+    ],
+    "canonical": [
+      "p1_context",
+      "p2_board",
+      "p3_range",
+      "p4_compare",
+      "p5_execute",
+      "p6_update",
+      "p7_close"
+    ]
+  },
+  "chainMatches": {
+    "firstRun": true,
+    "experience": true,
+    "mastery": true,
+    "canonical": true
+  },
+  "nestedRouteAudits": {
+    "representativeSequenceMatch": true,
+    "masterySequenceMatch": true,
+    "innerRouteMatch": true,
+    "noFlatHome": true,
+    "all35": true
+  },
+  "routeIdentifierAudit": {
+    "aliases": {
+      "p2_board_and_hand": "p2_board",
+      "p3_range_and_blockers": "p3_range",
+      "p7_close_and_transfer": "p7_close"
+    },
+    "sources": {
+      "mentalModel": {
+        "ids": [
+          "p1_context",
+          "p2_board",
+          "p3_range",
+          "p4_compare",
+          "p5_execute",
+          "p6_update",
+          "p7_close"
+        ],
+        "exact": true
+      },
+      "visibleRoute": {
+        "ids": [
+          "p1_context",
+          "p2_board",
+          "p3_range",
+          "p4_compare",
+          "p5_execute",
+          "p6_update",
+          "p7_close"
+        ],
+        "exact": true
+      },
+      "nestedRelease": {
+        "ids": [
+          "p1_context",
+          "p2_board",
+          "p3_range",
+          "p4_compare",
+          "p5_execute",
+          "p6_update",
+          "p7_close"
+        ],
+        "exact": true
+      },
+      "fullNested": {
+        "ids": [
+          "p1_context",
+          "p2_board",
+          "p3_range",
+          "p4_compare",
+          "p5_execute",
+          "p6_update",
+          "p7_close"
+        ],
+        "exact": true
+      },
+      "runtimeCrosswalk": {
+        "ids": [
+          "p1_context",
+          "p2_board",
+          "p3_range",
+          "p4_compare",
+          "p5_execute",
+          "p6_update",
+          "p7_close"
+        ],
+        "exact": true
+      }
+    },
+    "allCanonicalAfterNormalization": true
+  },
+  "legacyVariants": [],
+  "knownInterpretation": {
+    "checkAliases": {
+      "one_transfer": "one_variable_transfer",
+      "one_field_transfer": "one_variable_transfer",
+      "one_variable_transfer": "one_variable_transfer"
+    },
+    "layerLocationIncludesNextInput": true,
+    "oneVariableTransferIncludesSlowExecution": true,
+    "oldThreeCheckContractsAreNotFullMasteryEvidence": true,
+    "childrenArraysAreAvailabilitySetsNotOrder": true
+  },
+  "migrationRules": {
+    "runtimeReadsCanonicalRouteOnly": true,
+    "runtimeMayReadLegacyForDisplay": false,
+    "legacyContractCanPassOnlyAfterAliasNormalization": true,
+    "missingErrorRecoveryBlocksStructureRelease": true,
+    "mismatchedPostflopChainBlocksRuntimeRelease": true,
+    "mismatchedNestedRouteBlocksRuntimeRelease": true
+  },
+  "currentEvidence": {
+    "canonicalRouteExists": true,
+    "canonicalChainMatchesExperienceMap": true,
+    "canonicalChainMatchesFirstRunContract": true,
+    "canonicalChainMatchesMasteryContract": true,
+    "nestedRouteMatches": true,
+    "allRouteIdentifiersCanonicalAfterNormalization": true,
+    "innerRouteMatches": true,
+    "allLegacyCheckListsExact": true,
+    "runtimeImplemented": false,
+    "adultBeginnerTrial": false,
+    "NL50Evidence": false
+  },
+  "nextWork": [
+    "实现运行时只读取canonical next链并为每个子层保存returnTo与statePayload",
+    "用低基础成人试读验证error_recovery和one_variable_transfer是否真的可观察"
+  ]
+}

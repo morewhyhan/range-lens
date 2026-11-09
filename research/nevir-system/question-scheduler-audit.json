@@ -1,0 +1,26 @@
+{
+  "id": "QUESTION_SCHEDULER_AUDIT_V1",
+  "status": "paper_question_scheduler_contract_consistent_not_runtime",
+  "sources": [
+    "automatic-question-generation-contract.json",
+    "learner-evidence-driven-scheduler.json",
+    "learner-goal-route-canonical.json",
+    "principle-loop-unit-crosswalk.json"
+  ],
+  "checks": {
+    "allRequiredFiltersPresent": true,
+    "firstPassRouteMatchesCanonical": true,
+    "representativesMatchCrosswalk": true,
+    "deterministicRepairTransitions": true,
+    "samplingCannotRewritePolicy": true,
+    "emptyPoolStops": true,
+    "sessionOnly": true
+  },
+  "currentEvidence": {
+    "compilerImplemented": false,
+    "runtimeAttached": false,
+    "learnerTrial": false,
+    "matchedReference": false,
+    "NL50Evidence": false
+  }
+}

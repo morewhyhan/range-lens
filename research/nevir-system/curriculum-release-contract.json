@@ -1,0 +1,63 @@
+{
+  "status": "declarative_35_unit_release_contract_not_complete",
+  "source": "55_35项课程单元的依赖编译与发布闸门.md",
+  "unitGroups": [
+    {"id":"compare.unopened","units":["1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.8"],"routeStop":"L6"},
+    {"id":"compare.bet","units":["2.1","2.2","2.3","2.4","2.5","2.6","2.7"],"routeStop":"L6"},
+    {"id":"compare.raise","units":["3.1","3.2","3.3","3.4","3.5","3.6"],"routeStop":"L6"},
+    {"id":"update.response","units":["4.1","4.2","4.3","4.4","4.5","4.6"],"routeStop":"L7"},
+    {"id":"update.card","units":["5.1","5.2","5.3","5.4","5.5","5.6","5.7","5.8"],"routeStop":"L7"}
+  ],
+  "releaseStates": [
+    {"id":"not_open","requires":[],"independentStrategyGrade":false},
+    {"id":"fact","requires":["independentFactCheck"],"independentStrategyGrade":false},
+    {"id":"demonstration","requires":["declaredInputs","sourceIdentity","completeFrame"],"independentStrategyGrade":false},
+    {"id":"guided","requires":["parentFrame","localQuestion","errorRecovery"],"independentStrategyGrade":false},
+    {"id":"independent_candidate","requires":["matchedModel","hiddenAnswer","unseenSameMechanism"],"independentStrategyGrade":true},
+    {"id":"target_reference_ready","requires":["matchedReference","closedSuccessors","compiledPolicy","coverageAndTolerance"],"independentStrategyGrade":true}
+  ],
+  "compileOrder": [
+    "source_identity",
+    "fact_layer",
+    "given_model_layer",
+    "course_policy_layer",
+    "teaching_frames",
+    "parent_route_attachment",
+    "unseen_transfer"
+  ],
+  "unitMinimumFields": [
+    "id",
+    "parent",
+    "routeStop",
+    "returnTo",
+    "visibleInputs",
+    "sourceOrReferenceIdentity",
+    "learnerOperation",
+    "changedContrast",
+    "unchangedContrast",
+    "answerPrecision",
+    "errorLayer",
+    "successorState",
+    "status",
+    "gap",
+    "transferSlot"
+  ],
+  "releaseGates": {
+    "fiveGroupsPresent": true,
+    "idsUniqueAcrossGroups": true,
+    "oneNaturalMainRouteEntryPerUnit": true,
+    "unknownCannotBeFoldAnswer": true,
+    "missingSuccessorBlocksExactStrategyGrade": true,
+    "policyChangeRequiresReevaluation": true,
+    "physicalFilterDoesNotMeanActionFilter": true,
+    "noFlatUserHomeMenu": true
+  },
+  "currentStatus": {
+    "unitCount": 35,
+    "allUnitsHaveLocalMaterialOrFact": true,
+    "allUnitsHaveMatchedTargetReference": false,
+    "independentContinuousTransfer": false,
+    "adultBeginnerTrial": false,
+    "nl50Evidence": false
+  }
+}

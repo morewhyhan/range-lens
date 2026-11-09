@@ -1,0 +1,220 @@
+{
+  "appChanged": false,
+  "bestResponseComputed": false,
+  "calibration": true,
+  "calibrationNodes": [
+    {
+      "actions": [
+        "Check",
+        "Bet(500)"
+      ],
+      "actor": 0,
+      "historyIndices": [],
+      "strategy": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "terminal": false
+    },
+    {
+      "actions": [
+        "Check",
+        "Bet(500)"
+      ],
+      "actor": 1,
+      "historyIndices": [
+        0
+      ],
+      "strategy": [
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "terminal": false
+    },
+    {
+      "actions": [],
+      "actor": null,
+      "historyIndices": [
+        0,
+        0
+      ],
+      "strategy": null,
+      "terminal": true
+    },
+    {
+      "actions": [
+        "Fold",
+        "Call"
+      ],
+      "actor": 0,
+      "historyIndices": [
+        0,
+        1
+      ],
+      "strategy": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "terminal": false
+    },
+    {
+      "actions": [],
+      "actor": null,
+      "historyIndices": [
+        0,
+        1,
+        0
+      ],
+      "strategy": null,
+      "terminal": true
+    },
+    {
+      "actions": [],
+      "actor": null,
+      "historyIndices": [
+        0,
+        1,
+        1
+      ],
+      "strategy": null,
+      "terminal": true
+    },
+    {
+      "actions": [
+        "Fold",
+        "Call"
+      ],
+      "actor": 1,
+      "historyIndices": [
+        1
+      ],
+      "strategy": [
+        0.7264515161514282,
+        1.0,
+        0.2735484838485718,
+        0.0
+      ],
+      "terminal": false
+    },
+    {
+      "actions": [],
+      "actor": null,
+      "historyIndices": [
+        1,
+        0
+      ],
+      "strategy": null,
+      "terminal": true
+    },
+    {
+      "actions": [],
+      "actor": null,
+      "historyIndices": [
+        1,
+        1
+      ],
+      "strategy": null,
+      "terminal": true
+    }
+  ],
+  "cases": [
+    {
+      "comparePlayer": 0,
+      "expectedEngineUnits": 999.9984130859375,
+      "fixed": null,
+      "id": "joint",
+      "seedHex": "4e455649525f4754",
+      "trials": 5000
+    },
+    {
+      "comparePlayer": 0,
+      "expectedEngineUnits": 1136.76953125,
+      "fixed": [
+        0,
+        1
+      ],
+      "id": "known_0_AsAh",
+      "seedHex": "4e455649525f4755",
+      "trials": 5000
+    },
+    {
+      "comparePlayer": 0,
+      "expectedEngineUnits": 931.6128540039062,
+      "fixed": [
+        0,
+        0
+      ],
+      "id": "known_0_QsQh",
+      "seedHex": "4e455649525f4756",
+      "trials": 5000
+    },
+    {
+      "comparePlayer": 1,
+      "expectedEngineUnits": 0.0,
+      "fixed": [
+        1,
+        0
+      ],
+      "id": "known_1_QcQd",
+      "seedHex": "4e455649525f4757",
+      "trials": 5000
+    },
+    {
+      "comparePlayer": 1,
+      "expectedEngineUnits": -0.0152587890625,
+      "fixed": [
+        1,
+        1
+      ],
+      "id": "known_1_AsQc",
+      "seedHex": "4e455649525f4758",
+      "trials": 5000
+    }
+  ],
+  "effectiveStackUnits": 5000,
+  "elapsedSeconds": 0.1070997,
+  "engineQualityCertified": false,
+  "initialBoard": [
+    "2d",
+    "7h",
+    "Ks",
+    "3c",
+    "9h"
+  ],
+  "maxProbabilitySumError": 0.0,
+  "memo": "Tiny storage calibration, not a new target strategy",
+  "orderedHands": [
+    [
+      "QsQh",
+      "AsAh"
+    ],
+    [
+      "QdQc",
+      "AsQc"
+    ]
+  ],
+  "rawFile": "policy-rollout-calibration.jsonl",
+  "referenceFile": "storage-roundtrip-calibration.bin",
+  "rootWeightHalfUnits": [
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "samples": 25000,
+  "sampling": "SplitMix64 fixed seeds; weighted independent roots with collision rejection for joint, or weighted opponent conditional on fixed hand; uniform physical future cards excluding both hands; policy uses actor own hand only.",
+  "startingPotUnits": 1000,
+  "status": "raw_policy_samples_completed_not_independent_settlement_verified",
+  "unitsPerBB": 100,
+  "unseenLearnerTrial": false
+}

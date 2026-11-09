@@ -1,0 +1,311 @@
+{
+  "id": "TARGET_CONFIG_SOURCE_LEDGER_V1",
+  "status": "partial_target_config_known_fields_separated_from_unfrozen_benchmark_fields",
+  "purpose": "把用户已明确的产品约束、材料可证明的候选配置和NL50目标仍需冻结的字段分开。",
+  "sourceBundle": [
+    {
+      "file": "src/data/sources.json",
+      "sha256": "50b7a6b352ac5de7c248fcc48ecc6778c4d921544280d5bcc1af8523610443e8"
+    },
+    {
+      "file": "src/data/ranges.json",
+      "sha256": "3f262b0064bf83ddb581f4f268c7b6521acc86aac8e0571dade43ef6caa8d56a"
+    },
+    {
+      "file": "src/preflop.js",
+      "sha256": "d324c140deb0aa75c28edc4c61bd558ef5ee9d9b78cbe37a6b9ce906f75fc973"
+    },
+    {
+      "file": "src/context.js",
+      "sha256": "ad2214cad198a0a33a4305f2d6fe52c23709dcdf2a40b7ac18fb75fc9d0f2844"
+    }
+  ],
+  "extractedFacts": {
+    "visibleTableLabel": "图中参数来自截图可见标签：常规桌、极速、6人、100bb。矩阵左上角AA，右上三角同花，左下三角非同花，右下角22。",
+    "visibleGameLabel": "图中参数来自截图可见标签：常规桌、极速、6人、100bb。矩阵左上角AA，右上三角同花，左下三角非同花，右下角22。",
+    "openingSizeRows": [
+      {
+        "position": "枪口 UTG",
+        "sizeBB": "2 BB",
+        "sourceImage": "codex-clipboard-b6331565-7656-4192-b9fb-c7e0925ad74f.png"
+      },
+      {
+        "position": "中位 HJ",
+        "sizeBB": "2 BB",
+        "sourceImage": "codex-clipboard-41ef984d-6a8b-4551-a6b2-6f998e69699c.png"
+      },
+      {
+        "position": "关煞 CO",
+        "sizeBB": "2.3 BB",
+        "sourceImage": "codex-clipboard-a88f6397-b408-4a60-b48f-ddcc76625ca9.png"
+      },
+      {
+        "position": "庄位 BTN",
+        "sizeBB": "2.5 BB",
+        "sourceImage": "codex-clipboard-0cacbb07-bf74-4317-9757-c75c61cfaa8f.png"
+      },
+      {
+        "position": "小盲 SB",
+        "sizeBB": "3 BB",
+        "sourceImage": "codex-clipboard-1881efb0-d187-45eb-a7bc-5f37840cbaa6.png"
+      }
+    ],
+    "postflopSheetNames": [
+      "00 从这里查",
+      "牌面分支与原因",
+      "01 有位置3bet",
+      "02 没位置3bet",
+      "03 有位置单加注",
+      "04 没位置单加注",
+      "05 转牌路线",
+      "06 河牌路线",
+      "07 图解术语",
+      "08 依据与待补"
+    ]
+  },
+  "requiredFields": [
+    "targetLabel",
+    "tableSize",
+    "gameType",
+    "effectiveStackBB",
+    "rakeModel",
+    "seatMap",
+    "positionModel",
+    "preflopActionMenu",
+    "postflopActionMenu",
+    "openSizes",
+    "threeBetSizes",
+    "betSizeMenu",
+    "anteOrBlindStructure",
+    "sourceVersion",
+    "configurationFingerprint"
+  ],
+  "fields": {
+    "targetLabel": {
+      "value": "NL50",
+      "status": "user_goal_label_only",
+      "evidence": [
+        "user_goal"
+      ],
+      "note": "标签本身不能冻结牌局配置。"
+    },
+    "tableSize": {
+      "value": 6,
+      "status": "frozen_by_user",
+      "evidence": [
+        "user_constraint_six_max_cash"
+      ],
+      "note": "用户明确要求统一六人现金桌。"
+    },
+    "gameType": {
+      "value": "cash_holdem",
+      "status": "frozen_by_user",
+      "evidence": [
+        "user_constraint_cash_holdem"
+      ],
+      "note": "用户明确要求现金桌；训练资料和代码均按德州扑克处理。"
+    },
+    "effectiveStackBB": {
+      "value": 100,
+      "status": "frozen_by_user_and_source_label",
+      "evidence": [
+        "user_constraint_100BB",
+        "src/data/sources.json:preflop[1].rows[22]"
+      ],
+      "note": "用户明确要求100BB；现有翻前图资料也标注100bb。"
+    },
+    "rakeModel": {
+      "value": null,
+      "status": "required_unknown",
+      "evidence": [],
+      "note": "现有课程模型多处明确为无抽水或未声明，不能把研究用零抽水直接当NL50目标抽水。"
+    },
+    "seatMap": {
+      "value": [
+        "UTG",
+        "HJ",
+        "CO",
+        "BTN",
+        "SB",
+        "BB"
+      ],
+      "status": "standard_candidate_not_frozen",
+      "evidence": [
+        "src/data/sources.json:preflop[1].rows[5:9]",
+        "user_constraint_six_max_cash"
+      ],
+      "note": "这是六人桌常用位置候选；资料没有把座位图、按钮移动和全部行动顺序作为冻结配置发布。"
+    },
+    "positionModel": {
+      "value": {
+        "openingPositionsPresent": [
+          "枪口 UTG",
+          "中位 HJ",
+          "关煞 CO",
+          "庄位 BTN",
+          "小盲 SB"
+        ],
+        "defensePositionsPresent": [
+          "HJ",
+          "CO",
+          "BB"
+        ],
+        "postflopExamples": [
+          "IP_3bet",
+          "OOP_3bet",
+          "IP_SRP",
+          "OOP_SRP"
+        ]
+      },
+      "status": "source_candidate_not_frozen",
+      "evidence": [
+        "src/data/sources.json:preflop sheets",
+        "src/data/sources.json:postflop sheets"
+      ],
+      "note": "资料覆盖若干位置和底池类型，但目标级配置仍需明确英雄/对手位置、行动权和允许路线的完整集合。"
+    },
+    "preflopActionMenu": {
+      "value": [
+        "fold",
+        "open_raise",
+        "three_bet",
+        "big_blind_call",
+        "big_blind_three_bet"
+      ],
+      "status": "product_scope_candidate_not_frozen",
+      "evidence": [
+        "user_preflop_scope",
+        "src/data/sources.json:preflop sheets"
+      ],
+      "note": "这是按用户指定三类翻前图整理出的产品动作集合，不等于目标求解器行动树。"
+    },
+    "postflopActionMenu": {
+      "value": [
+        "check",
+        "bet",
+        "call",
+        "fold",
+        "raise",
+        "check_raise",
+        "all_in"
+      ],
+      "status": "source_candidate_not_frozen",
+      "evidence": [
+        "src/data/sources.json:postflop sheets contain route examples only"
+      ],
+      "note": "这是资料中出现过的动作候选，不是所有节点的完整合法行动树。"
+    },
+    "openSizes": {
+      "value": {
+        "枪口 UTG": "2 BB",
+        "中位 HJ": "2 BB",
+        "关煞 CO": "2.3 BB",
+        "庄位 BTN": "2.5 BB",
+        "小盲 SB": "3 BB"
+      },
+      "status": "source_candidate_not_frozen",
+      "evidence": [
+        "src/data/sources.json:preflop[1].rows[5:9]"
+      ],
+      "note": "这些是简化开池图的来源尺寸；需确认是否作为目标参考输入，不能自动扩展为其它动作尺寸。"
+    },
+    "threeBetSizes": {
+      "value": null,
+      "status": "required_unknown",
+      "evidence": [
+        "user_scope_three_bet_defense_is_range_focused"
+      ],
+      "note": "用户要求练3bet防守范围，但没有冻结目标求解器的3bet尺寸菜单。"
+    },
+    "betSizeMenu": {
+      "value": [
+        "25%",
+        "33%",
+        "40%",
+        "50%",
+        "67%",
+        "70%–100%",
+        "75%",
+        "100%",
+        ">100%"
+      ],
+      "status": "source_candidate_not_frozen",
+      "evidence": [
+        "src/data/sources.json:postflop sheets partial size examples"
+      ],
+      "note": "这是资料出现过的课程尺寸候选，不是完整目标行动树；每个尺寸的可用节点和频率仍需匹配参考。"
+    },
+    "anteOrBlindStructure": {
+      "value": {
+        "ante": null,
+        "smallBlindBB": 0.5,
+        "bigBlindBB": 1
+      },
+      "status": "candidate_not_frozen",
+      "evidence": [
+        "research_examples_use_0_5_1_blinds"
+      ],
+      "note": "现有示例多按0.5/1BB记账，但用户没有明确指定盲注/前注规则，仍需冻结。"
+    },
+    "sourceVersion": {
+      "value": null,
+      "status": "required_unknown",
+      "evidence": [
+        "source_bundle_hashes_available_but_release_version_not_declared"
+      ],
+      "note": "文件哈希可以记录当前材料快照，但还没有正式课程版本号和参考提交身份。"
+    },
+    "configurationFingerprint": {
+      "value": null,
+      "status": "derived_only_after_all_required_fields",
+      "evidence": [],
+      "note": "所有必需字段和来源版本冻结后才生成，当前不能提前伪造。"
+    }
+  },
+  "configurationGaps": [
+    "rakeModel",
+    "seatMap",
+    "positionModel",
+    "preflopActionMenu",
+    "postflopActionMenu",
+    "openSizes",
+    "threeBetSizes",
+    "betSizeMenu",
+    "anteOrBlindStructure",
+    "sourceVersion",
+    "configurationFingerprint"
+  ],
+  "decisionRules": {
+    "userConstraintCanFreezeProductBoundary": true,
+    "sourceCandidateCannotFreezeTargetBenchmark": true,
+    "zeroRakeResearchCannotFreezeNL50": true,
+    "incompleteActionMenuBlocksSolverMatch": true,
+    "missingConfigurationFingerprintBlocksTargetReview": true,
+    "noGuessedDefaults": true
+  },
+  "currentEvidence": {
+    "knownUserConstraints": [
+      "tableSize",
+      "gameType",
+      "effectiveStackBB"
+    ],
+    "candidateFields": [
+      "seatMap",
+      "positionModel",
+      "preflopActionMenu",
+      "postflopActionMenu",
+      "openSizes",
+      "betSizeMenu",
+      "anteOrBlindStructure"
+    ],
+    "requiredUnknownFields": [
+      "rakeModel",
+      "threeBetSizes",
+      "sourceVersion",
+      "configurationFingerprint"
+    ],
+    "targetConfigurationFrozen": false,
+    "matchedReference": false,
+    "targetBenchmarkReady": false
+  }
+}

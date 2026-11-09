@@ -1,0 +1,28 @@
+{
+  "id": "FIRST_PASS_SCREEN_COVERAGE_RECONCILE_AUDIT_V1",
+  "status": "paper_screen_coverage_reconciled_not_runtime",
+  "sources": [
+    "first-pass-screen-coverage-matrix.json",
+    "first-pass-golden-path.json",
+    "learner-goal-route-canonical.json"
+  ],
+  "checks": {
+    "canonicalRouteMatchesGoldenPath": true,
+    "canonicalRouteMatchesLearnerGoal": true,
+    "canonicalRowCount": 13,
+    "canonicalRowIdsMatch": true,
+    "innerRowsStayUnderL4": true,
+    "recallAfterP7": true,
+    "legacyMacroRoutePreservedForAuthoringOnly": true,
+    "runtimeAttached": false,
+    "participantObserved": false
+  },
+  "release": {
+    "learnerSurfaceAligned": true,
+    "runtimeReady": false,
+    "learnerTrialReady": false,
+    "strategyReady": false,
+    "NL50Evidence": false
+  },
+  "interpretation": "L5–L8仍可供旧合同和作者审计引用，但不得作为第二条学习者路线；运行时必须读取canonicalStructuralRoute和next链。"
+}

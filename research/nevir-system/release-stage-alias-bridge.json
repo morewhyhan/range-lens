@@ -1,0 +1,247 @@
+{
+  "id": "RELEASE_STAGE_ALIAS_BRIDGE_V1",
+  "status": "paper_release_aliases_unified_runtime_must_use_canonical_user_stage",
+  "purpose": "把P、S、V、单元releaseStage和试验phase映射到一条用户可理解的8段进阶路线，防止实现出现多套训练菜单。",
+  "sources": [
+    "nested-release-architecture-contract.json",
+    "target-standard-sequential-teaching-and-nl50-closure-contract.json",
+    "unit-learner-release-gates.json",
+    "unified-learner-evidence-release-gates.json",
+    "goal-trial-and-target-benchmark-protocol.json"
+  ],
+  "canonicalUserStages": [
+    {
+      "id": "U0_guided_route",
+      "plain": "跟着走完整路线",
+      "purpose": "沿L0—L4、p1—p7完成一次带练，知道当前层、下一步和停止边界。",
+      "authorAliases": [
+        "P0_first_pass_guided",
+        "S0_first_pass",
+        "V1_guided_first_pass",
+        "P1_low_baseline_first_pass"
+      ],
+      "unitAliases": [
+        "map",
+        "guided"
+      ]
+    },
+    {
+      "id": "U1_structure_recall",
+      "plain": "回想路线结构",
+      "purpose": "隐藏步骤标题后复述顺序、定位层、恢复父帧和错误回退。",
+      "authorAliases": [
+        "P1_structure_replay",
+        "V2_hidden_structure_recall"
+      ],
+      "unitAliases": [
+        "map"
+      ]
+    },
+    {
+      "id": "U2_same_parent_practice",
+      "plain": "在同一父步骤练同类问题",
+      "purpose": "从父帧按需打开同组单元，完成事实、比较、执行或更新的带练。",
+      "authorAliases": [
+        "P2_same_parent_units"
+      ],
+      "unitAliases": [
+        "guided"
+      ]
+    },
+    {
+      "id": "U3_slow_single_step",
+      "plain": "陌生局面慢慢做一步",
+      "purpose": "隐藏步骤标题，在资料充分的陌生节点完成事实、比较、执行、账本和范围更新。",
+      "authorAliases": [
+        "P5_unseen_slow_single_step",
+        "S1_slow_execution",
+        "V4_unseen_slow_single_step"
+      ],
+      "unitAliases": [
+        "independent"
+      ]
+    },
+    {
+      "id": "U4_adjacent_transfer",
+      "plain": "只改一个地方再做",
+      "purpose": "只改变一个字段，先指出受影响层，再完成同一父步骤的判断。",
+      "authorAliases": [
+        "P3_adjacent_transfer",
+        "S2_single_field_transfer",
+        "V3_single_variable_transfer"
+      ],
+      "unitAliases": [
+        "adjacent"
+      ]
+    },
+    {
+      "id": "U5_delayed_recall",
+      "plain": "隔几题再回想",
+      "purpose": "插入其他题后回到原单元，不依赖标题找回父帧和交接。",
+      "authorAliases": [
+        "P4_delayed_recall"
+      ],
+      "unitAliases": [
+        "delayed"
+      ]
+    },
+    {
+      "id": "U6_continuous_three_street",
+      "plain": "连续走完翻牌转牌河牌",
+      "purpose": "保持范围、账本、行动权和真实后继连续，缺资料就停。",
+      "authorAliases": [
+        "P6_continuous_three_street",
+        "S3_continuous_target_review",
+        "V5_continuous_three_street"
+      ],
+      "unitAliases": [
+        "continuous"
+      ]
+    },
+    {
+      "id": "U7_target_review",
+      "plain": "目标配置独立复核",
+      "purpose": "在冻结配置、未曝光题和外部复核下讨论目标级准备度。",
+      "authorAliases": [
+        "P7_target_audit",
+        "V6_target_external_review"
+      ],
+      "unitAliases": []
+    }
+  ],
+  "stageMap": {
+    "userFacingOrder": [
+      "U0_guided_route",
+      "U1_structure_recall",
+      "U2_same_parent_practice",
+      "U3_slow_single_step",
+      "U4_adjacent_transfer",
+      "U5_delayed_recall",
+      "U6_continuous_three_street",
+      "U7_target_review"
+    ],
+    "unitRelease": {
+      "map": [
+        "U0_guided_route",
+        "U1_structure_recall"
+      ],
+      "guided": [
+        "U0_guided_route",
+        "U2_same_parent_practice"
+      ],
+      "independent": [
+        "U3_slow_single_step"
+      ],
+      "adjacent": [
+        "U4_adjacent_transfer"
+      ],
+      "delayed": [
+        "U5_delayed_recall"
+      ],
+      "continuous": [
+        "U6_continuous_three_street"
+      ]
+    },
+    "coarseBands": {
+      "S0_first_pass": [
+        "U0_guided_route",
+        "U1_structure_recall"
+      ],
+      "S1_slow_execution": [
+        "U2_same_parent_practice",
+        "U3_slow_single_step"
+      ],
+      "S2_single_field_transfer": [
+        "U4_adjacent_transfer",
+        "U5_delayed_recall"
+      ],
+      "S3_continuous_target_review": [
+        "U6_continuous_three_street",
+        "U7_target_review"
+      ]
+    },
+    "evidenceGates": {
+      "V0_paper_closure": {
+        "userStage": null,
+        "authorOnly": true
+      },
+      "V1_guided_first_pass": {
+        "userStage": "U0_guided_route",
+        "authorOnly": false
+      },
+      "V2_hidden_structure_recall": {
+        "userStage": "U1_structure_recall",
+        "authorOnly": false
+      },
+      "V3_single_variable_transfer": {
+        "userStage": "U4_adjacent_transfer",
+        "authorOnly": false
+      },
+      "V4_unseen_slow_single_step": {
+        "userStage": "U3_slow_single_step",
+        "authorOnly": false
+      },
+      "V5_continuous_three_street": {
+        "userStage": "U6_continuous_three_street",
+        "authorOnly": false
+      },
+      "V6_target_external_review": {
+        "userStage": "U7_target_review",
+        "authorOnly": false
+      }
+    },
+    "trialPhases": {
+      "P0_instrumentation": {
+        "userStage": null,
+        "authorOnly": true
+      },
+      "P1_low_baseline_first_pass": {
+        "userStage": "U0_guided_route",
+        "authorOnly": false
+      },
+      "P2_slow_single_step": {
+        "userStage": "U3_slow_single_step",
+        "authorOnly": false
+      },
+      "P3_single_field_transfer": {
+        "userStage": "U4_adjacent_transfer",
+        "authorOnly": false
+      },
+      "P4_continuous_three_street": {
+        "userStage": "U6_continuous_three_street",
+        "authorOnly": false
+      },
+      "P5_independent_reconstruction": {
+        "userStage": "U7_target_review",
+        "authorOnly": true
+      },
+      "P6_target_condition_audit": {
+        "userStage": "U7_target_review",
+        "authorOnly": false
+      }
+    }
+  },
+  "rules": {
+    "runtimeStoresOnlyCanonicalUserStage": true,
+    "runtimeMayStoreUnitReleaseStageSeparately": true,
+    "authorAliasesNeverBecomeUserNavigation": true,
+    "numericAliasOrderDoesNotOverrideUserOrder": true,
+    "oneVisibleProgression": true,
+    "firstPassBeforeSlowExecution": true,
+    "slowExecutionBeforeTransfer": true,
+    "transferBeforeContinuous": true,
+    "continuousBeforeTargetReview": true,
+    "noStageAliasMeansExtraCourse": true
+  },
+  "currentEvidence": {
+    "paperMapping": true,
+    "runtimeUsesCanonicalStage": false,
+    "learnerTrial": false,
+    "targetEvidence": false
+  },
+  "guards": {
+    "aliasBridgeDoesNotEqualRuntime": true,
+    "aliasBridgeDoesNotEqualLearnerMastery": true,
+    "continuousDoesNotEqualNL50": true
+  }
+}

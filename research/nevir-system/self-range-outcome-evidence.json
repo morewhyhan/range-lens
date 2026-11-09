@@ -1,0 +1,5265 @@
+{
+  "status": "joint_self_range_and_outcome_teaching_models_not_target_policy_or_learner_results",
+  "selfRange": {
+    "flop": [
+      "As",
+      "7h",
+      "2d"
+    ],
+    "turn": "Qh",
+    "actualHero": [
+      "Qc",
+      "3c"
+    ],
+    "own": [
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Ks",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kh",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kd",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qs"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qh"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qd"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "KQ",
+        "hole": [
+          "Kc",
+          "Qc"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qs",
+          "3s"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qh",
+          "3h"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qd",
+          "3d"
+        ],
+        "mass": 1
+      },
+      {
+        "cls": "Q3s",
+        "hole": [
+          "Qc",
+          "3c"
+        ],
+        "mass": 1
+      }
+    ],
+    "other": [
+      {
+        "id": "AT",
+        "hole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "id": "QT",
+        "hole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "id": "76",
+        "hole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "id": "KJ",
+        "hole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      }
+    ],
+    "prior": [
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qs"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qs"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qs"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qs"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qh"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qh"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qh"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qd"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qd"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qd"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qd"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qc"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qc"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qc"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Ks",
+          "Qc"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qs"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qs"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qs"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qs"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qh"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qh"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qh"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qd"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qd"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qd"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qd"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qc"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qc"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qc"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kh",
+          "Qc"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qs"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qs"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qs"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qh"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qh"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qd"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qd"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qd"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qc"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qc"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kd",
+          "Qc"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qs"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qs"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qs"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qs"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qh"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qh"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qh"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qd"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qd"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qd"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qd"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qc"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qc"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qc"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "KQ",
+        "ownHole": [
+          "Kc",
+          "Qc"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qs",
+          "3s"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qs",
+          "3s"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qs",
+          "3s"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qs",
+          "3s"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qh",
+          "3h"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qh",
+          "3h"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qh",
+          "3h"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qd",
+          "3d"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qd",
+          "3d"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qd",
+          "3d"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qd",
+          "3d"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qc",
+          "3c"
+        ],
+        "otherId": "AT",
+        "otherHole": [
+          "Ah",
+          "Tc"
+        ],
+        "mass": 4,
+        "call": 1
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qc",
+          "3c"
+        ],
+        "otherId": "QT",
+        "otherHole": [
+          "Qh",
+          "Td"
+        ],
+        "mass": 3,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qc",
+          "3c"
+        ],
+        "otherId": "76",
+        "otherHole": [
+          "7c",
+          "6c"
+        ],
+        "mass": 2,
+        "call": 0.5
+      },
+      {
+        "ownClass": "Q3s",
+        "ownHole": [
+          "Qc",
+          "3c"
+        ],
+        "otherId": "KJ",
+        "otherHole": [
+          "Kd",
+          "Jh"
+        ],
+        "mass": 1,
+        "call": 0.25
+      }
+    ],
+    "versions": [
+      {
+        "id": "selective",
+        "ownBetPolicy": "OnlyQ3s bets",
+        "bet": [
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          }
+        ],
+        "called": [
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          }
+        ],
+        "turnSurvivors": [
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          }
+        ],
+        "dealtChanceWeighted": [
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          }
+        ],
+        "summary": {
+          "priorDisplayMass": 724,
+          "betDisplayMass": 148,
+          "calledDisplayMass": 102,
+          "turnSurvivorDisplayMass": 63,
+          "ownAfterCall": {
+            "Q3s": 25.5
+          },
+          "ownAfterTurn": {
+            "Q3s": 15.75
+          },
+          "otherAfterCall": {
+            "76": 0.1568627450980392,
+            "AT": 0.6274509803921569,
+            "QT": 0.17647058823529413,
+            "KJ": 0.0392156862745098
+          },
+          "currentActualHeroAfterCall": {
+            "76": 0.14814814814814814,
+            "AT": 0.5925925925925926,
+            "QT": 0.2222222222222222,
+            "KJ": 0.037037037037037035
+          },
+          "currentActualHeroAfterTurn": {
+            "76": 0.19047619047619047,
+            "AT": 0.7619047619047619,
+            "KJ": 0.047619047619047616
+          },
+          "invalidPairProbabilityIfMarginalsMultiplied": 0.03633217993079585,
+          "turnProbability": 0.013725490196078431
+        },
+        "money": {
+          "afterPreflop": {
+            "pot": 5.5,
+            "hero": 97.5,
+            "villain": 97.5
+          },
+          "afterBetAndCall": {
+            "pot": 9.16,
+            "hero": 95.67,
+            "villain": 95.67
+          },
+          "size": "1.83BB fixed for this author model, approximately one third; not exact1/3 or a new course optimum"
+        }
+      },
+      {
+        "id": "wide",
+        "ownBetPolicy": "BothKQ andQ3s bet; only within this restricted20-hand teaching population",
+        "bet": [
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 3,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 2,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 1,
+            "call": 0.25
+          }
+        ],
+        "called": [
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qh"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qh",
+              "3h"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "QT",
+            "otherHole": [
+              "Qh",
+              "Td"
+            ],
+            "mass": 1.5,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          }
+        ],
+        "turnSurvivors": [
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 4,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 1,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.25,
+            "call": 0.25
+          }
+        ],
+        "dealtChanceWeighted": [
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Ks",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kh",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kd",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qs"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qd"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "KQ",
+            "ownHole": [
+              "Kc",
+              "Qc"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qs",
+              "3s"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qd",
+              "3d"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "AT",
+            "otherHole": [
+              "Ah",
+              "Tc"
+            ],
+            "mass": 0.08888888888888889,
+            "call": 1
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "76",
+            "otherHole": [
+              "7c",
+              "6c"
+            ],
+            "mass": 0.022222222222222223,
+            "call": 0.5
+          },
+          {
+            "ownClass": "Q3s",
+            "ownHole": [
+              "Qc",
+              "3c"
+            ],
+            "otherId": "KJ",
+            "otherHole": [
+              "Kd",
+              "Jh"
+            ],
+            "mass": 0.005555555555555556,
+            "call": 0.25
+          }
+        ],
+        "summary": {
+          "priorDisplayMass": 724,
+          "betDisplayMass": 724,
+          "calledDisplayMass": 506,
+          "turnSurvivorDisplayMass": 312,
+          "ownAfterCall": {
+            "KQ": 101,
+            "Q3s": 25.5
+          },
+          "ownAfterTurn": {
+            "KQ": 62.25,
+            "Q3s": 15.75
+          },
+          "otherAfterCall": {
+            "76": 0.15810276679841898,
+            "AT": 0.6324110671936759,
+            "QT": 0.17786561264822134,
+            "KJ": 0.03162055335968379
+          },
+          "currentActualHeroAfterCall": {
+            "76": 0.14814814814814814,
+            "AT": 0.5925925925925926,
+            "QT": 0.2222222222222222,
+            "KJ": 0.037037037037037035
+          },
+          "currentActualHeroAfterTurn": {
+            "76": 0.19047619047619047,
+            "AT": 0.7619047619047619,
+            "KJ": 0.047619047619047616
+          },
+          "invalidPairProbabilityIfMarginalsMultiplied": 0.04268149791435579,
+          "turnProbability": 0.0137022397891963
+        },
+        "money": {
+          "afterPreflop": {
+            "pot": 5.5,
+            "hero": 97.5,
+            "villain": 97.5
+          },
+          "afterBetAndCall": {
+            "pot": 9.16,
+            "hero": 95.67,
+            "villain": 95.67
+          },
+          "size": "1.83BB fixed for this author model, approximately one third; not exact1/3 or a new course optimum"
+        }
+      }
+    ],
+    "scope": "Own range is the collection of possible hands across this line, not uncertainty for a player about their actual visible cards. Joint prior is explicitly defined by independent raw proposals then physical compatibility conditioning, not asserted as a real postflop distribution.",
+    "source": "Nevir2.4 opening discussion motivates carrying both ranges; all opponent masses, responses and narrow two-class policies here are author inputs.",
+    "chance": "Given both hidden hands and flop,45 unseen legal turn cards; Qh likelihood is1/45 for compatible pairs and0 for pairs containingQh.",
+    "ownChartEligibility": "open-BTN KQs,KQo,Q3s all100%; only eligibility checked, no complete user BB policy or full hero strategy inferred",
+    "displayMassScale": 4
+  },
+  "outcomes": {
+    "reference": "value-trap-tree-evidence.json profiles/induces",
+    "rootEVByAction": {
+      "check": 58.55,
+      "bet17.5": 45.925
+    },
+    "cases": [
+      {
+        "id": "O01",
+        "action": "check",
+        "actual": "KK",
+        "expectedNet": -83,
+        "events": [
+          "hero check",
+          "villain bet17.5",
+          "hero raise45",
+          "villain jam83",
+          "hero call38"
+        ],
+        "actualHole": [
+          "Kc",
+          "Kd"
+        ],
+        "realizedNetBB": -83,
+        "decisionEVBB": 58.55,
+        "decisionBestInGivenMenu": true,
+        "localExpectedLossBB": 0,
+        "revealRule": "Actual holding hidden until after first decision and reference grade; these four outcomes are selected demonstrations, not a random frequency sample."
+      },
+      {
+        "id": "O02",
+        "action": "check",
+        "actual": "77",
+        "expectedNet": 118,
+        "events": [
+          "hero check",
+          "villain bet17.5",
+          "hero raise45",
+          "villain jam83",
+          "hero call38"
+        ],
+        "actualHole": [
+          "7c",
+          "7d"
+        ],
+        "realizedNetBB": 118,
+        "decisionEVBB": 58.55,
+        "decisionBestInGivenMenu": true,
+        "localExpectedLossBB": 0,
+        "revealRule": "Actual holding hidden until after first decision and reference grade; these four outcomes are selected demonstrations, not a random frequency sample."
+      },
+      {
+        "id": "O03",
+        "action": "bet17.5",
+        "actual": "AK",
+        "expectedNet": 52.5,
+        "events": [
+          "hero bet17.5",
+          "villain call17.5"
+        ],
+        "actualHole": [
+          "Ac",
+          "Kh"
+        ],
+        "realizedNetBB": 52.5,
+        "decisionEVBB": 45.925,
+        "decisionBestInGivenMenu": false,
+        "localExpectedLossBB": 12.625,
+        "revealRule": "Actual holding hidden until after first decision and reference grade; these four outcomes are selected demonstrations, not a random frequency sample."
+      },
+      {
+        "id": "O04",
+        "action": "bet17.5",
+        "actual": "QT",
+        "expectedNet": 35,
+        "events": [
+          "hero bet17.5",
+          "villain fold"
+        ],
+        "actualHole": [
+          "Qh",
+          "Tc"
+        ],
+        "realizedNetBB": 35,
+        "decisionEVBB": 45.925,
+        "decisionBestInGivenMenu": false,
+        "localExpectedLossBB": 12.625,
+        "revealRule": "Actual holding hidden until after first decision and reference grade; these four outcomes are selected demonstrations, not a random frequency sample."
+      }
+    ],
+    "scope": "Decision grade holds the pre-decision model fixed. A realized loss alone does not prove the choice was right or wrong. Four selected outcomes cannot be averaged as EV or bb/100."
+  },
+  "release": {
+    "appChanged": false,
+    "learnerTrials": 0,
+    "completeTargetStrategy": false
+  }
+}

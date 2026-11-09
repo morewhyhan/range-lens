@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const p=JSON.parse(fs.readFileSync('research/nevir-system/fact-unit-5-7-candidate.json','utf8'));
+if(p.unitId!=='5.7'||p.status!=='fact_candidate_not_strategy_ready') throw new Error('wrong unit status');
+if(p.questions.length!==2||p.questions.map(x=>x.id).join(',')!=='Q1,Q2') throw new Error('question order mismatch');
+if(p.questions.some(x=>x.answerIdentity!=='fact')) throw new Error('question identity must remain fact');
+if(p.coursePolicy!==null||p.referencePolicy!==null||p.rangeBefore!==null||p.rangeAfter!==null) throw new Error('candidate must not invent strategy fields');
+if(p.legalSuccessors.length!==0||p.stopReason!=='no_complete_range_or_successor_reference') throw new Error('stop boundary missing');
+if(!p.guards.noActionFilterFromPhysicalRemoval||!p.guards.noNL50Claim) throw new Error('safety boundary missing');
+if(JSON.stringify(p.transferVariant.mustNotChange)!==JSON.stringify(['heroHole','history','potBB','stacksBB','actor'])) throw new Error('transfer invariants mismatch');
+console.log(JSON.stringify({ok:true,status:p.status,unit:p.unitId,questions:p.questions.length,identity:p.releaseStatus,successors:p.legalSuccessors.length}));

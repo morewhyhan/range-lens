@@ -1,0 +1,54 @@
+{
+  "id": "FIRST_PASS_VISUAL_STRUCTURE_CONTRACT_V1",
+  "status": "paper_visual_closure_contract_not_trialed",
+  "purpose": "把主路线、父帧、子层、视觉区域、单变量变化和首遍结构回放绑定成一个可发布合同。",
+  "sourceDocuments": [
+    "141_首遍思考骨架回放与结构建立合同.md",
+    "150_完整35项嵌套路由运行合同.md",
+    "154_35项错误归因与反馈回退矩阵.md"
+  ],
+  "firstPass": {
+    "outerRoute": ["L0", "L1", "L2", "L3", "L4", "p1", "p2", "p3", "p4", "p5", "p6", "p7"],
+    "representativeUnits": ["1.5", "2.1", "3.1", "4.5", "5.7"],
+    "oneQuestionPerFrame": true,
+    "onePrimaryActionPerFrame": true,
+    "parentFramePreserved": true,
+    "flat35ItemHome": false,
+    "unknownCountsAsWrong": true,
+    "wrongDoesNotAdvance": true
+  },
+  "visualRegions": [
+    {"id":"route","meaning":"当前主路线位置","fixed":true},
+    {"id":"facts","meaning":"桌面、牌面、行动历史、底池和后手","fixed":true},
+    {"id":"rangeDelta","meaning":"同一分母下的范围前后或停止理由","fixed":true},
+    {"id":"task","meaning":"当前唯一问题、主要动作和我不知道","fixed":true},
+    {"id":"childLayer","meaning":"当前父帧的一个缺失事实或局部对照","fixed":true}
+  ],
+  "singleChangeFields": ["context","board","hand","range","purpose","price","execution","update","successor","result"],
+  "parentRestoreFields": ["holeCards","board","actionHistory","potBB","stacksBB","rangeSnapshot","firstAnswer","currentQuestion","currentUnit"],
+  "firstPassClosureChecks": ["nodeOrderRecall","edgeStateHandoff","singleVariableLocation","sameParentErrorRecovery"],
+  "childReturnRules": {
+    "sameParent": true,
+    "preserveFirstAnswer": true,
+    "noNeighborUnitInjection": true,
+    "noHiddenBoardDeal": true,
+    "missingEvidenceStops": true,
+    "fullAnswerAfterRetry": true
+  },
+  "releaseGates": [
+    {"id":"V0","check":"route_and_representatives_match_canonical","current":true},
+    {"id":"V1","check":"every_stop_has_one_question_and_one_primary_action","current":false},
+    {"id":"V2","check":"parent_frame_restores_after_child","current":false},
+    {"id":"V3","check":"range_and_ledger_share_identity_snapshot","current":false},
+    {"id":"V4","check":"beginner_trial_observes_structure_recall","current":false},
+    {"id":"V5","check":"unseen_single_variable_transfer_passes","current":false}
+  ],
+  "currentEvidence": {
+    "paperContract": true,
+    "routeCompiled": true,
+    "runtimeImplemented": false,
+    "beginnerTrial": false,
+    "matchedReference": false,
+    "goalCompletionVerified": false
+  }
+}

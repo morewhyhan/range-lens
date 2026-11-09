@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "status": "course_size_abstraction_not_full_action_reference",
+  "questions": 88,
+  "sourceFamilies": 4,
+  "counts": {
+    "T62_rainbow": 24,
+    "T62_twotone": 36,
+    "852_monotone": 4,
+    "962_rainbow": 24
+  },
+  "sourceSHA256": "2865774363c059bcb0db75c69242bb68c6ffaa24f4db7b96fe210e3ea0f6273e",
+  "scopeLine": {
+    "line": 50,
+    "text": "- 适用场景：主要适用于有利位置（按钮）对抗关煞位或更早位置的3bet底池，筹码深度100bb。对于不利位置或更深/更浅筹码，需要调整。此外，本视频仅讨论翻牌圈，转牌和河牌策略将在下一部分（以及剥削性打法）中讲解。练习时可以先记住常见牌面的参考尺寸（如K/Q高25%、10高干燥67%、低连接干燥67%、低连接湿润小尺寸或过牌），然后在实战中结合两个问题微调。"
+  },
+  "excludedAmbiguousReferences": [
+    {
+      "line": 40,
+      "text": "- 10-10-5彩虹（对子牌面）：不太确定，但GTO显示40%中等大小。如果下太大，对手可能会太多10x牌，对你不利。",
+      "reason": "Explicit uncertainty retained; no forced unique action/size question."
+    },
+    {
+      "line": 46,
+      "text": "- 10-9-5彩虹：接近40%或67%，但GTO显示40%中等尺寸，因为你用KJ、KQ等牌下注时，它们有50%权益，不需要下太大来获得全权益。",
+      "reason": "The note compares40/67; retain as explanation rather than force a unique answer."
+    }
+  ],
+  "sameRanksChangedTexture": {
+    "rainbow": "s67",
+    "twoTone": "s40",
+    "meaning": "Adopted course rule contrast, not proof that wet boards universally use smaller bets."
+  },
+  "sourceCallerPolicyFound": false,
+  "mathematicalMixedBankNewCells": 0,
+  "learnerTrials": 0,
+  "frozen": false
+}

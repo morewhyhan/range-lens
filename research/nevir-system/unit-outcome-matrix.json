@@ -1,0 +1,1384 @@
+{
+  "id": "UNIT_OUTCOME_MATRIX_V1",
+  "status": "all35_outcome_targets_mapped_not_released",
+  "source": [
+    "nested-35-route.json",
+    "learning-unit-readiness.json",
+    "goal-outcome-ladder.json"
+  ],
+  "unitCount": 35,
+  "allUnitsListed": true,
+  "targetCounts": {
+    "O3_slow_execution": 21,
+    "O5_continuous_route": 14
+  },
+  "rows": [
+    {
+      "unitId": "1.1",
+      "label": "差牌能付钱",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 1,
+      "firstPassVisible": false,
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "先点出较差而愿意跟的一组，再移动它支付的钱",
+      "prerequisite": "先能比较五张，分清当前池和新增投入",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "补匹配真实范围、后续与完整动作菜单",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.2",
+      "label": "领先但可能被反超",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 2,
+      "firstPassVisible": false,
+      "evidence": "active-plan-models.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "点出会反超的实际跑牌，再比较退出或继续",
+      "prerequisite": "先分当前领先与未来可能反超",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有17帧局部保护跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.3",
+      "label": "落后但能赶走赢家",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 3,
+      "firstPassVisible": false,
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "先指出本来赢自己且会退出的候选",
+      "prerequisite": "先会当前胜负及弃牌/被跟互斥收益",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "有限河牌模型不能代表所有前街诈唬",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.4",
+      "label": "当前弱但能改善",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 4,
+      "firstPassVisible": false,
+      "evidence": "active-plan-models.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "分别点出过牌、被跟、被加后还保留什么机会",
+      "prerequisite": "先区别后门、直接听牌与干净补张",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有17帧主动弱牌局部跟练；仍缺完整目标策略、撤提示迁移和真人结果",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.5",
+      "label": "有摊牌赢面，但下注未必增收",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 5,
+      "firstPassVisible": false,
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "同一手比较差牌付款还是全部退出",
+      "prerequisite": "先会过牌基点与当前摊牌强弱",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "A72 KQ仅补一条课程规则，仍缺跨情境完整策略",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.6",
+      "label": "强牌考虑先过牌",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 6,
+      "firstPassVisible": false,
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "固定强牌，比较直接下注与诱发弱牌投入",
+      "prerequisite": "先明白先行动过牌仍可能面对下注",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有河牌强牌有限树，仍缺前街风险及匹配目标策略",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.7",
+      "label": "暂无合算进攻",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 7,
+      "firstPassVisible": false,
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "把所有候选分支合起来看是否值得继续投入",
+      "prerequisite": "先列完整被比较菜单与不投入基点",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "补更广的牌力和后续；未取得参考的动作不能自动排除",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "1.8",
+      "label": "同目的，不同尺寸",
+      "groupId": "compare.unopened",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 1,
+      "childOrder": 8,
+      "firstPassVisible": false,
+      "evidence": "size-comparison-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "只改金额及对应响应，再比较差额",
+      "prerequisite": "先会一个尺寸与过牌的互斥收益",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "4095权重模型不是4095个真实策略节点",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.1",
+      "label": "能赢一部分正常取值牌",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 1,
+      "firstPassVisible": false,
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "把可赢价值与可赢诈唬分开，再比较跟和加",
+      "prerequisite": "先知道下注范围中谁是取值、自己能赢谁",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "三条9能赢77/AK而输KK的有限比较已补，仍缺完整范围与其他情境",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.2",
+      "label": "主要只能赢诈唬",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 2,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "固定价格改变诈唬份量，再固定范围改价格",
+      "prerequisite": "先能摆对待补与跟后池，找可赢下注牌",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "补更多价格与匹配下注参考，不能从牌型推诈唬比例",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.3",
+      "label": "目前落后，但有可靠改善",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 3,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "先看成花仍输，再打开未来承压分支",
+      "prerequisite": "先会补张、失效补张和当前价格",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "有限44张跑牌比较尚不覆盖所有听牌和未来菜单",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.4",
+      "label": "既有当前赢面，又有改善",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 4,
+      "firstPassVisible": false,
+      "evidence": "made-plus-draw-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "点当前可赢与当前落后两组，合并去重后的终局份额，再比较全下跟弃",
+      "prerequisite": "先保留当前赢面和未来改善两个字段",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有Jd7d给定转牌全下模型和14帧局部跟练；仍缺非全下未来菜单、目标范围及独立迁移",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.5",
+      "label": "加注让差牌多付钱",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 5,
+      "firstPassVisible": false,
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "固定强牌，看差牌跟加与只继续下注的差异",
+      "prerequisite": "先会价格及加注后的弃/跟/再加",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已补受限价值树而非借听花模型，仍需匹配参考及更广菜单",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.6",
+      "label": "加注希望赶走更好牌",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 6,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "只改对加注的弃牌分支，重新比较",
+      "prerequisite": "先识别更好牌及加注后所有回应",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "模型只覆盖给定半诈唬树，不自动适用小注或任意人群",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "2.7",
+      "label": "继续没有足够收益",
+      "groupId": "compare.bet",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 2,
+      "childOrder": 7,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "把跟/加所有后续计完，允许直接弃牌",
+      "prerequisite": "先会弃牌未来增量为零及其他选择",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "须接匹配防守参考，不把一个模型的弃牌推广",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.1",
+      "label": "算清新价格",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 1,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "在原筹码上摆出新的待补与跟后池",
+      "prerequisite": "先分已下、加到与还需补",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "还需覆盖其他金额与合法再加状态，价格本身不定策略",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.2",
+      "label": "原价值牌面对强加注范围",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 2,
+      "firstPassVisible": false,
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "保留原差牌付款者作对照，再看谁真正加注",
+      "prerequisite": "先把原下注范围切换为加注范围",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已补KK/77加注比例变化的三条9比较，真实加注范围与其他牌力仍缺",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.3",
+      "label": "听牌被加注",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 3,
+      "firstPassVisible": false,
+      "evidence": "defense-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "把再加后的未来和剩余投入重新展开",
+      "prerequisite": "先会听牌真实胜出与新价格",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "既有AsQs分支仍属一套限制树，其他尺寸和组合待补",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.4",
+      "label": "再加可以多收钱",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 4,
+      "firstPassVisible": false,
+      "evidence": "value-trap-tree-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "看更差牌是否仍付钱，是否失去后续诈唬",
+      "prerequisite": "先能比较跟注与再加的完整回应",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已补77继续或弃牌的受限再加比较，仍缺完整目标策略",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.5",
+      "label": "再加用于诈唬",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 5,
+      "firstPassVisible": false,
+      "evidence": "bluff-reraise-model.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "分别点被移除的继续牌与弃牌，再算整条再加线",
+      "prerequisite": "先看新的弃牌目标与有利/不利移除",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有21帧局部跟练和给定再加区间比较；仍缺目标匹配范围、真实响应与独立迁移",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "3.6",
+      "label": "后手与合法动作变化",
+      "groupId": "compare.raise",
+      "parentRouteNode": "p4_compare",
+      "returnTo": "p4_compare",
+      "groupOrder": 3,
+      "childOrder": 6,
+      "firstPassVisible": false,
+      "evidence": "first-pass-structure-packet.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "只点合法菜单；区分自己全下仍待回应",
+      "prerequisite": "先读本街投入、有效后手和行动是否重开",
+      "minimumOutcomeLevel": "O3_slow_execution",
+      "requiredOutputs": [
+        "action",
+        "amountOrNoBet",
+        "reason",
+        "rangeAfterOrStopReason",
+        "ledgerAfter"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "14卡不等于通用规则引擎，不足额全下等完整边界待实现验证",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.1",
+      "label": "对手跟我的下注",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 1,
+      "firstPassVisible": false,
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "按实际响应留下候选，保留慢打可能",
+      "prerequisite": "先有原范围及该次跟注的依据",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "作者给定回应可复算，仍缺匹配真实逐手响应",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.2",
+      "label": "双方过牌",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 2,
+      "firstPassVisible": false,
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "不删除所有弱牌，按有依据的过牌概率更新",
+      "prerequisite": "先区别过牌与弃牌，知道谁还行动",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "不能由一次过牌推演模型中的具体百分比",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.3",
+      "label": "我的下注范围不同",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 3,
+      "firstPassVisible": false,
+      "evidence": "self-range-outcome-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "两边分别保留实际走该线的候选",
+      "prerequisite": "先明白自己范围与当前实体手牌不同",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有两版合法联合配对和实际手牌条件化；仍缺完整双方范围与真实响应",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.4",
+      "label": "前面尺寸或路线不同",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 4,
+      "firstPassVisible": false,
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "同牌钱换历史，重新筛选并比较",
+      "prerequisite": "先保留真实历史及相应响应",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "有限同价异序例不覆盖所有尺寸/加注路线",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.5",
+      "label": "账本与行动顺序更新",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 5,
+      "firstPassVisible": false,
+      "evidence": "first-hand-lesson-packet.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "筹码进池、后手减少、移动行动者",
+      "prerequisite": "先会当前投入和本街关闭条件",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "固定脚本正确不等于通用金额引擎和界面通过",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "4.6",
+      "label": "结果不倒推上步正确性",
+      "groupId": "update.response",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 4,
+      "childOrder": 6,
+      "firstPassVisible": false,
+      "evidence": "self-range-outcome-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "并排比较决策前EV与某一次赢输，不倒推",
+      "prerequisite": "先看到动作前的完整可能分支",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "已有四条答后示例与动作前判断分离，仍缺真人理解与陌生迁移验证",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.1",
+      "label": "自己改善",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 1,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "只亮出新加入最佳五张的实体牌",
+      "prerequisite": "先会最佳五张与当前改善",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "自己的成牌改善不等于策略或相对权益必改善",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.2",
+      "label": "对手留下的牌改善",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 2,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "只在实际留下的候选里看改善",
+      "prerequisite": "先继承前序候选，再处理新牌",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "明示模型不是目标玩家后验或全部后街参考",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.3",
+      "label": "听牌完成或新增",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 3,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "分别点成顺/成花者及仍在听者",
+      "prerequisite": "先区分直接听牌、成牌与补成仍输",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "相关源路线花色有绑定差异，不能搬用精确动作",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.4",
+      "label": "公共牌配对",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 4,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "公共牌成对后重新拼五张",
+      "prerequisite": "先会三条、葫芦、四条与共享公共牌",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "需匹配真实候选与响应才能判断行动",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.5",
+      "label": "来更高牌",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 5,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "同一高牌让某组降级、另一组配到",
+      "prerequisite": "先能对双方具体底牌重新配对",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "不能生成高牌必利于进攻方的规则",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.6",
+      "label": "看似空白",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 6,
+      "firstPassVisible": false,
+      "evidence": "history-contrast-evidence.json",
+      "evidenceIdentity": "finite_model",
+      "localMaterial": "M",
+      "teachingQuestion": "先指出没变的关系，再带回历史与价格",
+      "prerequisite": "先知道空白是相对哪些候选而言",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "同最终牌钱模型仅作历史机制对照，不是通用空白牌策略",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.7",
+      "label": "新牌移除组合",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 7,
+      "firstPassVisible": false,
+      "evidence": "turn-transfer-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "含新牌的组合划除，其余继承权重",
+      "prerequisite": "先区别实体冲突与行动筛选",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "不把物理删除自动称为确定策略或任意后验",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    },
+    {
+      "unitId": "5.8",
+      "label": "到河牌，未来机会结束",
+      "groupId": "update.card",
+      "parentRouteNode": "p6_update",
+      "returnTo": "p6_update",
+      "groupOrder": 5,
+      "childOrder": 8,
+      "firstPassVisible": false,
+      "evidence": "blocker-teaching-evidence.json",
+      "evidenceIdentity": "fact_or_ledger",
+      "localMaterial": "F",
+      "teachingQuestion": "关闭未来补牌理由，转向当前胜负与付款/退出",
+      "prerequisite": "先确认是河牌且仍可能有行动",
+      "minimumOutcomeLevel": "O5_continuous_route",
+      "requiredOutputs": [
+        "changedState",
+        "rangeAfterOrStopReason",
+        "ledgerAfter",
+        "successorOrStopReason"
+      ],
+      "exactGradeRequires": "matched_reference_and_successor",
+      "missingEvidenceAction": "stop_at_current_unit_and_return_to_parent",
+      "stopReasonWhenMissing": "no_complete_range_or_successor_reference",
+      "currentEvidence": {
+        "fullMatchingTargetPolicyVerified": false,
+        "learnerTrialVerified": false,
+        "status": "paper_nested_route_not_released"
+      },
+      "nextEvidenceTask": "同花移除例不补全河牌所有动作参考",
+      "guards": {
+        "oneQuestion": true,
+        "onePrimaryAction": true,
+        "opensOnlyFromParent": true,
+        "noStrategyFromLocalMaterial": true,
+        "noLevelSkip": true
+      }
+    }
+  ],
+  "rules": {
+    "firstPassDoesNotReleaseChildUnits": true,
+    "localMaterialDoesNotGrantStrategyGrade": true,
+    "missingReferenceStopsExactGrade": true,
+    "missingSuccessorStopsContinuousLesson": true,
+    "everyRowHasReturnTo": true,
+    "everyRowHasStopReason": true,
+    "all35MustPassTheirOwnEvidence": true
+  },
+  "currentEvidence": {
+    "all35Mapped": true,
+    "all35CompleteExecution": false,
+    "all35LearnerTrial": false,
+    "continuousPackage": false,
+    "NL50Evidence": false
+  }
+}

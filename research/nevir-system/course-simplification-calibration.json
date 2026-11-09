@@ -1,0 +1,124 @@
+{
+  "id": "COURSE_SIMPLIFICATION_CALIBRATION_V1",
+  "status": "simplification_calibration_protocol_written_reference_missing",
+  "purpose": "先估计参考噪声，再用动作差、政策损失、范围差和后继完整度决定课程简化是否可发布。",
+  "sources": [
+    "131_频率简化与边缘牌编译算法.md",
+    "56_简化策略与GTO参考的差异评估合同.md",
+    "163_GTO参考到课程简化课包的C0_C9闭合合同.md"
+  ],
+  "requiredIdentity": [
+    "inputFingerprint",
+    "rangeFingerprint",
+    "actionTreeFingerprint",
+    "solverCommit",
+    "solveSettings",
+    "referenceSnapshotA",
+    "referenceSnapshotB",
+    "coursePolicySnapshot"
+  ],
+  "calibrationStrata": [
+    {
+      "id": "stable_action",
+      "purpose": "estimate_solver_noise"
+    },
+    {
+      "id": "edge_mixed",
+      "purpose": "estimate_frequency_quantization_risk"
+    },
+    {
+      "id": "menu_sensitive",
+      "purpose": "test_ancestor_recompute"
+    },
+    {
+      "id": "successor_sensitive",
+      "purpose": "test_range_and_successor_closure"
+    }
+  ],
+  "metrics": {
+    "actionDistribution": "sum_h w(h)*0.5*sum_a(abs(p(h,a)-q(h,a)))",
+    "policyLoss": "sum_h w(h)*(EV_ref(h,best_ref)-sum_a(q(h,a)*EV_ref(h,a)))",
+    "rangeDifference": "sum_h(abs(w(h)*p(h,a)-w(h)*q(h,a)))/sum_h(w(h))",
+    "successorCompleteness": "positive_supported_successor_quality_with_real_successor_or_stop / all_positive_supported_quality"
+  },
+  "thresholdRule": "reference_noise_floor < course_release_tolerance < unacceptable_policy_loss",
+  "thresholdsMustBeCalibratedPerCourseVersion": true,
+  "independentCalibrationAndHoldoutRequired": true,
+  "releaseBands": [
+    {
+      "id": "fact",
+      "requires": [
+        "physical_facts"
+      ]
+    },
+    {
+      "id": "demonstration",
+      "requires": [
+        "identity",
+        "ledger",
+        "source_but_reference_or_loss_unclosed"
+      ]
+    },
+    {
+      "id": "course_safe",
+      "requires": [
+        "calibrated_action_tolerance",
+        "calibrated_policy_loss",
+        "range_difference_reported",
+        "successor_complete"
+      ]
+    },
+    {
+      "id": "edge_review",
+      "requires": [
+        "unstable_support_or_quantization_boundary"
+      ]
+    },
+    {
+      "id": "not_comparable",
+      "requires": [
+        "identity_mismatch_or_missing_reference"
+      ]
+    }
+  ],
+  "quantizationGates": {
+    "finiteCoursePolicySpace": true,
+    "lossWithinCalibratedTolerance": true,
+    "noSilentSupportDeletion": true,
+    "rangeDeltaVisible": true,
+    "successorComplete": true,
+    "edgeBoundaryMarked": true
+  },
+  "reportFields": [
+    "reportId",
+    "referenceFingerprint",
+    "coursePolicyFingerprint",
+    "calibrationStratum",
+    "noiseEstimate",
+    "actionDistribution",
+    "policyLoss",
+    "rangeDifference",
+    "successorCompleteness",
+    "affectedHands",
+    "affectedAncestors",
+    "uncertainties",
+    "releaseBand",
+    "nextEvidenceNeeded"
+  ],
+  "guards": {
+    "noGlobalAverageHidesCriticalHands": true,
+    "noFixedThresholdWithoutCalibration": true,
+    "noGTOClaimFromCourseSafe": true,
+    "noContinuousPracticeWithoutSuccessor": true,
+    "physicalConflictNotCourseLoss": true
+  },
+  "currentEvidence": {
+    "contractWritten": true,
+    "matchedA72Reference": false,
+    "independentReferenceAB": false,
+    "thresholdsCalibrated": false,
+    "coursePolicyCompiled": false,
+    "learnerTrial": false,
+    "NL50Evidence": false
+  }
+}
